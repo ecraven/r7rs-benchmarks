@@ -34,7 +34,7 @@
          (t0 (current-second))
          (j0 (current-jiffy)))
     (let loop ((i 0)
-               (result (if #f #f)))
+               (result #f))
       (cond ((< i count)
              (loop (+ i 1) (thunk)))
             ((ok? result)
