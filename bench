@@ -33,7 +33,7 @@ OSNAME="`( uname )`"
 # CPU_LIMIT=3600
 
 # ecraven changed this to 5 minutes
-CPU_LIMIT=300
+CPU_LIMIT=${CPU_LIMIT:-"300"}
 
 # The following definitions are not in use, but using them
 # might improve the script.
@@ -105,6 +105,7 @@ setup ()
 
     # For both Solaris and Linux machines.
 
+    BIGLOO=${BIGLOO:-"bigloo"}
     CHEZ=${CHEZ:-"chez-scheme"}
     CHIBI=${CHIBI:-"chibi-scheme"}
     CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
@@ -121,6 +122,7 @@ setup ()
     PETIT=${PETIT:-"../../../../PetitGit/larceny"}
     PETITE=${PETITE:-"petite"}
     PICRIN=${PICRIN:-"picrin"}
+    RACKET=${RACKET:-"plt-r6rs"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
 
 }
@@ -137,6 +139,7 @@ Usage: bench [-r runs] <system> <benchmark>
 
 <system> is the abbreviated name of the implementation to benchmark:
 
+  bigloo           for Bigloo
   chez             for Chez Scheme
   chibi            for Chibi
   chicken          for Chicken
@@ -152,6 +155,7 @@ Usage: bench [-r runs] <system> <benchmark>
   petit            for Petit Larceny
   petite           for Petite Chez
   picrin           for Picrin
+  racket           for R
   sagittarius      for Sagittarius
   all              for all of the above
 
@@ -304,7 +308,36 @@ chicken_exec ()
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Chicken
+# Definitions specific to Racket
+
+racket_comp ()
+{
+ #    ${RACKET} -compile $1
+    :
+}
+
+racket_exec ()
+{
+    # remove import statement
+    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    time ${RACKET} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Bigloo
+
+bigloo_comp ()
+{
+    ${BIGLOO} $1 -O6 -o $2
+}
+
+bigloo_exec ()
+{
+    time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chez
 
 chez_comp ()
 {
@@ -319,7 +352,7 @@ chez_exec ()
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Chicken
+# Definitions specific to Petite Chez
 
 petite_comp ()
 {
@@ -571,6 +604,26 @@ for system in $systems ; do
                  EXECCOMMANDS=""
                  ;;
 
+        racket) NAME='Racket'
+                 COMP=racket_comp
+                 EXEC=racket_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="scm"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        bigloo) NAME='Bigloo'
+                 COMP=bigloo_comp
+                 EXEC=bigloo_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+        
         chez) NAME='Chez'
               COMP=chez_comp
               EXEC=chez_exec
@@ -690,6 +743,9 @@ for system in $systems ; do
                      COMPCOMMANDS=""
                      EXECCOMMANDS=""
                      ;;
+        *) echo "Unknown Scheme"
+           exit -1
+           ;;
     esac
 
     {

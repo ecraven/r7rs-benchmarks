@@ -1,3 +1,4 @@
+(use-modules (ice-9 rdelim))
 (define-syntax import
   (syntax-rules ()
     ((import stuff ...)
@@ -9,7 +10,7 @@
 (define current-jiffy get-internal-real-time)
 (define exact inexact->exact)
 (define inexact exact->inexact)
-
+(define (square x) (* x x))
 (define (this-scheme-implementation-name) (string-append "guile-" (version)))
 (read-enable 'r7rs-symbols)
 (print-enable 'r7rs-symbols)
