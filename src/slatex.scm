@@ -151,7 +151,8 @@
     (display error-type)
     (display ": ")
     (newline)
-    (for-each (lambda (x) (write x) (newline)) error-values)
+    ;; (for-each (lambda (x) (write x) (newline)) error-values)
+    (write error-values) ;; ecraven changed from the line above, slatex.error seems to always be called with an atom as error-values
     (error #f "")))
 
 (define slatex.keyword-tokens
