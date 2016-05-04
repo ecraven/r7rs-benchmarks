@@ -180,7 +180,7 @@
   (investigate
     database
     pats)
-  database)
+  (map string->number (map symbol->string database)))
 
 (define (investigate units pats)
   (do ((units units (cdr units)))
