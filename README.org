@@ -6,14 +6,18 @@ Just run
 ./bench <scheme> <test>
 #+END_SRC
 Schemes that should work:
+- Bigloo (=bigloo=)
+- Chez (=chez=)
+- Chibi (=chibi=)
 - Chicken (=chicken=)
+- GambitC (=gambitc=)
 - Gauche (=gauche=)
 - Guile (=guile=)
 - Kawa (=kawa=)
-- MIT/GNU Scheme (=mit=)
-- Chibi (=chibi=)
-- GambitC (=gambitc=)
 - Larceny (=larceny=)
+- MIT/GNU Scheme (=mit=)
+- Petite Chez (=chez=)
+- Racket (=racket=)
 
 This should result in a file ./results.<scheme>.
 
@@ -21,5 +25,15 @@ Run
 #+BEGIN_SRC
 make csv
 #+END_SRC
-to produce a file =all.csv= with the test results (<scheme>,<test>,<seconds>).
+to produce a file =all.csv= with the test results (=<scheme>,<test>,<seconds>=).
 
+** Limiting compile-time and run-time
+The environment variable =CPU_TIME= can be set, to limit the time for compilation and for running (each individually).
+#+BEGIN_SRC
+CPU_TIME=3600 ./bench chez all
+#+END_SRC
+** Path to executables
+You can set an environment variable to specify the path to each Scheme.
+#+BEGIN_SRC
+LARCENY=/tmp/larceny/larceny MIT=/tmp/mit/mit-scheme ./bench "mit larceny" "fib ack"
+#+END_SRC
