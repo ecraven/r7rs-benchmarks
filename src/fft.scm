@@ -10,20 +10,18 @@
     ;; bit-reversal section
 
     (let loop1 ((i 0) (j 0))
-      (if (< i n)
-          (begin
-            (if (< i j)
-                (begin
-                  (let ((temp (vector-ref data i)))
-                    (vector-set! data i (vector-ref data j))
-                    (vector-set! data j temp))
-                  (let ((temp (vector-ref data (+ i 1))))
-                    (vector-set! data (+ i 1) (vector-ref data (+ j 1)))
-                    (vector-set! data (+ j 1) temp))))
-            (let loop2 ((m (quotient n 2)) (j j))
-              (if (and (>= m 2) (>= j m))
-                  (loop2 (quotient m 2) (- j m))
-                  (loop1 (+ i 2) (+ j m)))))))
+      (when (< i n)
+        (when (< i j)
+          (let ((temp (vector-ref data i)))
+            (vector-set! data i (vector-ref data j))
+            (vector-set! data j temp))
+          (let ((temp (vector-ref data (+ i 1))))
+            (vector-set! data (+ i 1) (vector-ref data (+ j 1)))
+            (vector-set! data (+ j 1) temp)))
+        (let loop2 ((m (quotient n 2)) (j j))
+          (if (and (>= m 2) (>= j m))
+              (loop2 (quotient m 2) (- j m))
+              (loop1 (+ i 2) (+ j m))))))
 
     ;; Danielson-Lanczos section
 
