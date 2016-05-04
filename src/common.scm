@@ -56,10 +56,12 @@
                (display name)
                (display ",")
                (display secs)
-               (newline))
+               (newline)
+               (flush-output-port (current-output-port)))
              result)
             (else
              (display "ERROR: returned incorrect result: ")
              (write result)
              (newline)
+             (flush-output-port (current-output-port))
              result)))))
