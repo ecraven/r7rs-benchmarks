@@ -1,2 +1,25 @@
 * r7rs-benchmarks
 Benchmarks for various Scheme implementations. Taken with kind permission from the Larceny project, based on the Gabriel and Gambit benchmarks.
+* Running the tests
+Just run 
+#+BEGIN_SRC
+./bench <scheme> <test>
+#+END_SRC
+Schemes that should work:
+- Chicken (=chicken=)
+- Gauche (=gauche=)
+- Guile (=guile=)
+- Kawa (=kawa=)
+- MIT/GNU Scheme (=mit=)
+- Chibi (=chibi=)
+- GambitC (=gambitc=)
+- Larceny (=larceny=)
+
+This should result in a file ./results.<scheme>.
+
+Run
+#+BEGIN_SRC
+make csv
+#+END_CSV
+to produce a file =all.csv= with the test results (<scheme>,<test>,<seconds>).
+
