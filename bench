@@ -105,21 +105,23 @@ setup ()
 
     # For both Solaris and Linux machines.
 
-    LARCENY=${LARCENY:-"../../../larceny"}
-    PETIT=${PETIT:-"../../../../PetitGit/larceny"}
+    CHEZ=${CHEZ:-"chez-scheme"}
     CHIBI=${CHIBI:-"chibi-scheme"}
     CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
     FOMENT=${FOMENT:-"foment"}
+    GAMBITC=${GAMBITC:-"gambitc"}
     GAUCHE=${GAUCHE:-"gosh"}
+    GUILD=${GUILD:-"guild"}
+    GUILE=${GUILE:-"guile"}
     HUSKI=${HUSKI:-"huski"}
     KAWA=${KAWA:-"kawa"}
+    LARCENY=${LARCENY:-"../../../larceny"}
+    MIT=${MIT:-"mit-scheme"}
     MOSH=${MOSH:-"mosh"}
+    PETIT=${PETIT:-"../../../../PetitGit/larceny"}
+    PETITE=${PETITE:-"petite"}
     PICRIN=${PICRIN:-"picrin"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
-    MIT=${MIT:-"mit-scheme"}
-    GUILE=${GUILE:-"guile"}
-    GUILD=${GUILD:-"guild"}
-    GAMBITC=${GAMBITC:-"gambitc"}
 
 }
 
@@ -135,20 +137,22 @@ Usage: bench [-r runs] <system> <benchmark>
 
 <system> is the abbreviated name of the implementation to benchmark:
 
+  chez             for Chez Scheme
   chibi            for Chibi
   chicken          for Chicken
   foment           for Foment
+  gambitc          for GambitC Scheme
   gauche           for Gauche
+  guile            for Guile Scheme
   husk             for Husk
   kawa             for Kawa
   larceny          for Larceny
-  mosh             for Mosh
-  picrin           for Picrin
-  petit            for Petit Larceny
-  sagittarius      for Sagittarius
   mit              for MIT/GNU Scheme
-  guile            for Guile Scheme
-  gambitc          for GambitC Scheme
+  mosh             for Mosh
+  petit            for Petit Larceny
+  petite           for Petite Chez
+  picrin           for Picrin
+  sagittarius      for Sagittarius
   all              for all of the above
 
 <benchmark> is the name of the benchmark(s) to run:
@@ -297,6 +301,36 @@ chicken_comp ()
 chicken_exec ()
 {
     time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chicken
+
+chez_comp ()
+{
+    :
+}
+
+chez_exec ()
+{
+    # remove import statement
+    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    time "${CHEZ}" --optimize-level 2 --program "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chicken
+
+petite_comp ()
+{
+    :
+}
+
+petite_exec ()
+{
+    # remove import statement
+    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    time "${PETITE}" --optimize-level 2 --program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -493,8 +527,8 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="scm"
-	         COMPCOMMANDS=""
-	         EXECCOMMANDS=""
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
                  ;;
 
         petit) NAME='Petit'
@@ -503,8 +537,8 @@ for system in $systems ; do
                COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="slfasl"
-	       COMPCOMMANDS=""
-	       EXECCOMMANDS=""
+               COMPCOMMANDS=""
+               EXECCOMMANDS=""
                ;;
 
         henchman) NAME='Henchman'
@@ -513,8 +547,8 @@ for system in $systems ; do
                   COMPOPTS=""
                   EXTENSION="scm"
                   EXTENSIONCOMP="slfasl"
-	          COMPCOMMANDS=""
-	          EXECCOMMANDS=""
+                  COMPCOMMANDS=""
+                  EXECCOMMANDS=""
                   ;;
 
         chibi) NAME='Chibi'
@@ -523,8 +557,8 @@ for system in $systems ; do
                COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="scm"
-	       COMPCOMMANDS=""
-	       EXECCOMMANDS=""
+               COMPCOMMANDS=""
+               EXECCOMMANDS=""
                ;;
 
         chicken) NAME='Chicken'
@@ -533,9 +567,29 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
-	         COMPCOMMANDS=""
-	         EXECCOMMANDS=""
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
                  ;;
+
+        chez) NAME='Chez'
+              COMP=chez_comp
+              EXEC=chez_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="scm"
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
+              ;;
+
+        petite) NAME='Petite'
+                COMP=petite_comp
+                EXEC=petite_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="scm"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
 
         gambitc) NAME='GambitC'
                  COMP=gambitc_comp
@@ -543,8 +597,8 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
-	         COMPCOMMANDS=""
-	         EXECCOMMANDS=""
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
                  ;;
 
         guile) NAME='Guile'
@@ -553,8 +607,8 @@ for system in $systems ; do
                COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="scm"
-	       COMPCOMMANDS=""
-	       EXECCOMMANDS=""
+               COMPCOMMANDS=""
+               EXECCOMMANDS=""
                ;;
 
         mit) NAME='MIT'
@@ -563,8 +617,8 @@ for system in $systems ; do
              COMPOPTS=""
              EXTENSION="scm"
              EXTENSIONCOMP="com"
-	     COMPCOMMANDS=""
-	     EXECCOMMANDS=""
+             COMPCOMMANDS=""
+             EXECCOMMANDS=""
              ;;
 
         foment) NAME='Foment'
@@ -573,8 +627,8 @@ for system in $systems ; do
                 COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-	        COMPCOMMANDS=""
-	        EXECCOMMANDS=""
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
                 ;;
 
         gauche) NAME='Gauche'
@@ -583,8 +637,8 @@ for system in $systems ; do
                 COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-	        COMPCOMMANDS=""
-	        EXECCOMMANDS=""
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
                 ;;
 
         husk) NAME='Husk'
@@ -593,8 +647,8 @@ for system in $systems ; do
               COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-	      COMPCOMMANDS=""
-	      EXECCOMMANDS=""
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
               ;;
 
         kawa) NAME='Kawa'
@@ -603,8 +657,8 @@ for system in $systems ; do
               COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-	      COMPCOMMANDS=""
-	      EXECCOMMANDS=""
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
               ;;
 
         mosh) NAME='Mosh'
@@ -613,8 +667,8 @@ for system in $systems ; do
               COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-	      COMPCOMMANDS=""
-	      EXECCOMMANDS=""
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
               ;;
 
         picrin) NAME='Picrin'
@@ -623,8 +677,8 @@ for system in $systems ; do
                 COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-	        COMPCOMMANDS=""
-	        EXECCOMMANDS=""
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
                 ;;
 
         sagittarius) NAME='Sagittarius'
@@ -633,10 +687,9 @@ for system in $systems ; do
                      COMPOPTS=""
                      EXTENSION="scm"
                      EXTENSIONCOMP="scm"
-	             COMPCOMMANDS=""
-	             EXECCOMMANDS=""
+                     COMPCOMMANDS=""
+                     EXECCOMMANDS=""
                      ;;
-
     esac
 
     {
