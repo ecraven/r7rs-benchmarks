@@ -29,7 +29,7 @@
   (display "Running ")
   (display name)
   (newline)
-  (flush-output-port)
+  (flush-output-port (current-output-port))
   (let* ((j/s (jiffies-per-second))
          (t0 (current-second))
          (j0 (current-jiffy)))
