@@ -1,5 +1,4 @@
-(import (rnrs) (rnrs mutable-pairs (6)) (rnrs lists) (rnrs r5rs)
-        (only (racket) current-seconds current-inexact-milliseconds flush-output version))
+#lang racket
 (define flush-output-port flush-output)
 (define current-jiffy current-inexact-milliseconds)
 (define (jiffies-per-second) 1000)

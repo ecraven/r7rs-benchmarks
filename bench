@@ -122,7 +122,8 @@ setup ()
     PETIT=${PETIT:-"../../../../PetitGit/larceny"}
     PETITE=${PETITE:-"petite"}
     PICRIN=${PICRIN:-"picrin"}
-    RACKET=${RACKET:-"plt-r6rs"}
+    RACKET=${RACKET:-"racket"}
+    RACKET_RACO=${RACKET_RACO:-"raco"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
 
 }
@@ -312,14 +313,13 @@ chicken_exec ()
 
 racket_comp ()
 {
- #    ${RACKET} -compile $1
-    :
+    # remove import statement
+    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    ${RACKET_RACO} make "$1"
 }
 
 racket_exec ()
 {
-    # remove import statement
-    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
     time ${RACKET} "$1" < "$2"
 }
 
