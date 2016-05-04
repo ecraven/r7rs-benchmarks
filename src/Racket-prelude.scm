@@ -1,4 +1,5 @@
 #lang racket
+(require (only-in r5rs quote quasiquote unquote unquote-splicing))
 (define flush-output-port flush-output)
 (define current-jiffy current-inexact-milliseconds)
 (define (jiffies-per-second) 1000)
@@ -8,3 +9,6 @@
   (string-append "racket-" (version)))
 (define inexact exact->inexact)
 (define exact inexact->exact)
+(define set-cdr! set-mcdr!)
+(define set-car! set-mcar!)
+(define cdr mcdr)
