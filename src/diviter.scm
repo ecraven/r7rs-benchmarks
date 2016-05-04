@@ -1,20 +1,17 @@
 ;;; DIVITER -- Benchmark which divides by 2 using lists of n ()'s.
- 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define (create-n n)
   (do ((n n (- n 1))
        (a '() (cons '() a)))
       ((= n 0) a)))
- 
+
 (define (iterative-div2 l)
   (do ((l l (cddr l))
        (a '() (cons (car l) a)))
       ((null? l) a)))
- 
+
 (define (main)
   (let* ((count (read))
          (input1 (read))

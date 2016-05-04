@@ -1,41 +1,36 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Copyright 2006 William D Clinger.
-;
-; Permission to copy this software, in whole or in part, to use this
-; software for any lawful purpose, and to redistribute this software
-; is granted subject to the restriction that all copies made of this
-; software must include this copyright notice in full.
-;
-; I also request that you send me a copy of any improvements that you
-; make to this software so that they may be incorporated within it to
-; the benefit of the Scheme community.
-;
+;;
+;; Copyright 2006 William D Clinger.
+;;
+;; Permission to copy this software, in whole or in part, to use this
+;; software for any lawful purpose, and to redistribute this software
+;; is granted subject to the restriction that all copies made of this
+;; software must include this copyright notice in full.
+;;
+;; I also request that you send me a copy of any improvements that you
+;; make to this software so that they may be incorporated within it to
+;; the benefit of the Scheme community.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Parsing benchmark.
-;
-; Reads nboyer.sch into a string before timing begins.
-;
-; The timed portion of the benchmark parses the string
-; representation of nboyer.sch 1000 times.
-;
-; The output of that parse is checked by comparing it
-; the the value returned by the read procedure.
-;
-; Usage:
-;     (parsing-benchmark n input)
-;
-; n defaults to 1000, and input defaults to "nboyer.sch".
-;
+;;
+;; Parsing benchmark.
+;;
+;; Reads nboyer.sch into a string before timing begins.
+;;
+;; The timed portion of the benchmark parses the string
+;; representation of nboyer.sch 1000 times.
+;;
+;; The output of that parse is checked by comparing it
+;; the the value returned by the read procedure.
+;;
+;; Usage:
+;;     (parsing-benchmark n input)
+;;
+;; n defaults to 1000, and input defaults to "nboyer.sch".
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
-(import (scheme base)
-        (scheme char)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+
+(import (scheme base) (scheme char) (scheme file) (scheme read) (scheme write) (scheme time))
 
 (define (parsing-benchmark . rest)
   (let* ((n (if (null? rest) 1000 (car rest)))
@@ -50,93 +45,92 @@
 
 (define (read-file-as-string name)
   (call-with-input-file
-   name
-   (lambda (in)
-     (do ((x (read-char in) (read-char in))
-          (chars '() (cons x chars)))
-         ((eof-object? x)
-          (list->string (reverse chars)))))))
+      name
+    (lambda (in)
+      (do ((x (read-char in) (read-char in))
+           (chars '() (cons x chars)))
+          ((eof-object? x)
+           (list->string (reverse chars)))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; The parser used for benchmarking.
-;
-; Given a string containing Scheme code, parses the entire
-; string and returns the last <datum> read from the string.
-;
+;;
+;; The parser used for benchmarking.
+;;
+;; Given a string containing Scheme code, parses the entire
+;; string and returns the last <datum> read from the string.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (parse-string input-string)
 
-  ; Constants and local variables.
+  ;; Constants and local variables.
 
   (let* (; Constants.
 
-         ; Any character that doesn't appear within nboyer.sch
-         ; (or the input file, if different) can be used to
-         ; represent end-of-file.
+         ;; Any character that doesn't appear within nboyer.sch
+         ;; (or the input file, if different) can be used to
+         ;; represent end-of-file.
 
          (eof #\~)
 
-         ; length of longest token allowed
-         ; (this allows static allocation in C)
+         ;; length of longest token allowed
+         ;; (this allows static allocation in C)
 
          (max_token_size 1024)
 
-         ; Encodings of error messages.
+         ;; Encodings of error messages.
 
-         (errLongToken 1)                 ; extremely long token
-         (errincompletetoken 2)      ; any lexical error, really
-         (errLexGenBug 3)                         ; can't happen
+         (errLongToken 1);; extremely long token
+         (errincompletetoken 2);; any lexical error, really
+         (errLexGenBug 3);; can't happen
 
-         ; State for one-token buffering in lexical analyzer.
+         ;; State for one-token buffering in lexical analyzer.
 
-         (kindOfNextToken 'z1)      ; valid iff nextTokenIsReady
+         (kindOfNextToken 'z1);; valid iff nextTokenIsReady
          (nextTokenIsReady #f)
 
-         (tokenValue "")  ; string associated with current token
+         (tokenValue "");; string associated with current token
 
-         (totalErrors 0)                         ; errors so far
-         (lineNumber 1)       ; rudimentary source code location
-         (lineNumberOfLastError 0)                       ; ditto
+         (totalErrors 0);; errors so far
+         (lineNumber 1);; rudimentary source code location
+         (lineNumberOfLastError 0);; ditto
 
-         ; A string buffer for the characters of the current token.
+         ;; A string buffer for the characters of the current token.
 
          (string_accumulator (make-string max_token_size))
 
-         ; Number of characters in string_accumulator.
+         ;; Number of characters in string_accumulator.
 
          (string_accumulator_length 0)
 
-         ; A single character of buffering.
-         ; nextCharacter is valid iff nextCharacterIsReady
+         ;; A single character of buffering.
+         ;; nextCharacter is valid iff nextCharacterIsReady
 
          (nextCharacter #\space)
          (nextCharacterIsReady #f)
 
-         ; Index of next character to be read from input-string.
+         ;; Index of next character to be read from input-string.
 
          (input-index 0)
 
          (input-length (string-length input-string))
-        )
+         )
 
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; LexGen generated the code for the state machine.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; LexGen generated the code for the state machine.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
     (define (scanner0)
       (let loop ((c (scanchar)))
-        (if (char-whitespace? c)
-            (begin
-              (consumechar)
-              (set! string_accumulator_length 0)
-              (loop (scanchar)))))
+        (when (char-whitespace? c)
+          (consumechar)
+          (set! string_accumulator_length 0)
+          (loop (scanchar))))
       (let ((c (scanchar)))
         (if (char=? c eof) (accept 'eof) (state0 c))))
-  
+
     (define (state0 c)
       (case c
         ((#\`) (consumechar) (accept 'backquote))
@@ -513,18 +507,18 @@
     (define (state41 c)
       (case c (else (accept 'splicing))))
 
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; End of state machine generated by LexGen.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; End of state machine generated by LexGen.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; ParseGen generated the code for the strong LL(1) parser.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; ParseGen generated the code for the strong LL(1) parser.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
     (define (parse-datum)
       (case (next-token)
         ((splicing comma backquote quote lparen vecstart)
@@ -535,19 +529,19 @@
            (identity ast1)))
         (else
          (parse-error
-           '<datum>
-           '(backquote
-              boolean
-              character
-              comma
-              id
-              lparen
-              number
-              quote
-              splicing
-              string
-              vecstart)))))
-    
+          '<datum>
+          '(backquote
+            boolean
+            character
+            comma
+            id
+            lparen
+            number
+            quote
+            splicing
+            string
+            vecstart)))))
+
     (define (parse-simple-datum)
       (case (next-token)
         ((id)
@@ -558,14 +552,14 @@
         ((boolean) (begin (consume-token!) (makeBool)))
         (else
          (parse-error
-           '<simple-datum>
-           '(boolean character id number string)))))
-    
+          '<simple-datum>
+          '(boolean character id number string)))))
+
     (define (parse-symbol)
       (case (next-token)
         ((id) (begin (consume-token!) (makeSym)))
         (else (parse-error '<symbol> '(id)))))
-    
+
     (define (parse-compound-datum)
       (case (next-token)
         ((vecstart)
@@ -574,9 +568,9 @@
          (let ((ast1 (parse-list))) (identity ast1)))
         (else
          (parse-error
-           '<compound-datum>
-           '(backquote comma lparen quote splicing vecstart)))))
-    
+          '<compound-datum>
+          '(backquote comma lparen quote splicing vecstart)))))
+
     (define (parse-list)
       (case (next-token)
         ((splicing comma backquote quote)
@@ -588,9 +582,9 @@
            (let ((ast1 (parse-list2))) (identity ast1))))
         (else
          (parse-error
-           '<list>
-           '(backquote comma lparen quote splicing)))))
-    
+          '<list>
+          '(backquote comma lparen quote splicing)))))
+
     (define (parse-list2)
       (case (next-token)
         ((id string
@@ -608,55 +602,55 @@
         ((rparen) (begin (consume-token!) (emptyList)))
         (else
          (parse-error
-           '<list2>
-           '(backquote
-              boolean
-              character
-              comma
-              id
-              lparen
-              number
-              quote
-              rparen
-              splicing
-              string
-              vecstart)))))
-    
+          '<list2>
+          '(backquote
+            boolean
+            character
+            comma
+            id
+            lparen
+            number
+            quote
+            rparen
+            splicing
+            string
+            vecstart)))))
+
     (define (parse-list3)
       (case (next-token)
         ((rparen
-           period
-           splicing
-           comma
-           backquote
-           quote
-           lparen
-           vecstart
-           boolean
-           number
-           character
-           string
-           id)
+          period
+          splicing
+          comma
+          backquote
+          quote
+          lparen
+          vecstart
+          boolean
+          number
+          character
+          string
+          id)
          (let ((ast1 (parse-data)))
            (let ((ast2 (parse-list4)))
              (pseudoAppend ast1 ast2))))
         (else
          (parse-error
-           '<list3>
-           '(backquote
-              boolean
-              character
-              comma
-              id
-              lparen
-              number
-              period
-              quote
-              rparen
-              splicing
-              string
-              vecstart)))))
-    
+          '<list3>
+          '(backquote
+            boolean
+            character
+            comma
+            id
+            lparen
+            number
+            period
+            quote
+            rparen
+            splicing
+            string
+            vecstart)))))
+
     (define (parse-list4)
       (case (next-token)
         ((period)
@@ -668,7 +662,7 @@
                  (parse-error '<list4> '(rparen))))))
         ((rparen) (begin (consume-token!) (emptyList)))
         (else (parse-error '<list4> '(period rparen)))))
-    
+
     (define (parse-abbreviation)
       (case (next-token)
         ((quote backquote comma splicing)
@@ -676,9 +670,9 @@
            (let ((ast2 (parse-datum))) (list ast1 ast2))))
         (else
          (parse-error
-           '<abbreviation>
-           '(backquote comma quote splicing)))))
-    
+          '<abbreviation>
+          '(backquote comma quote splicing)))))
+
     (define (parse-abbrev-prefix)
       (case (next-token)
         ((splicing)
@@ -689,9 +683,9 @@
         ((quote) (begin (consume-token!) (symQuote)))
         (else
          (parse-error
-           '<abbrev-prefix>
-           '(backquote comma quote splicing)))))
-    
+          '<abbrev-prefix>
+          '(backquote comma quote splicing)))))
+
     (define (parse-vector)
       (case (next-token)
         ((vecstart)
@@ -702,7 +696,7 @@
                  (begin (consume-token!) (list2vector ast1))
                  (parse-error '<vector> '(rparen))))))
         (else (parse-error '<vector> '(vecstart)))))
-    
+
     (define (parse-data)
       (case (next-token)
         ((id string
@@ -720,70 +714,70 @@
         ((rparen period) (emptyList))
         (else
          (parse-error
-           '<data>
-           '(backquote
-              boolean
-              character
-              comma
-              id
-              lparen
-              number
-              period
-              quote
-              rparen
-              splicing
-              string
-              vecstart)))))
-  
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; End of LL(1) parser generated by ParseGen.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+          '<data>
+          '(backquote
+            boolean
+            character
+            comma
+            id
+            lparen
+            number
+            period
+            quote
+            rparen
+            splicing
+            string
+            vecstart)))))
 
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; Help predicates used by the lexical analyzer's state machine.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; End of LL(1) parser generated by ParseGen.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; Help predicates used by the lexical analyzer's state machine.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     (define (isnotdoublequote? c) (not (char=? c #\")))
     (define (isnotnewline? c) (not (char=? c #\newline)))
-  
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; Lexical analyzer.
-    ;
-    ; This code is adapted from the quirk23 lexical analyzer written
-    ; by Will Clinger for a compiler course.
-    ;
-    ; The scanner and parser were generated automatically and then
-    ; printed using an R5RS Scheme pretty-printer, so they do not
-    ; preserve case.  In preparation for the case-sensitivity of
-    ; R6RS Scheme, several identifiers and constants have been
-    ; lower-cased in the hand-written code to match the generated
-    ; code.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
-    ; next-token and consume-token! are called by the parser.
-  
-    ; Returns the current token.
-  
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; Lexical analyzer.
+    ;;
+    ;; This code is adapted from the quirk23 lexical analyzer written
+    ;; by Will Clinger for a compiler course.
+    ;;
+    ;; The scanner and parser were generated automatically and then
+    ;; printed using an R5RS Scheme pretty-printer, so they do not
+    ;; preserve case.  In preparation for the case-sensitivity of
+    ;; R6RS Scheme, several identifiers and constants have been
+    ;; lower-cased in the hand-written code to match the generated
+    ;; code.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    ;; next-token and consume-token! are called by the parser.
+
+    ;; Returns the current token.
+
     (define (next-token)
       (if nextTokenIsReady
           kindOfNextToken
           (begin (set! string_accumulator_length 0)
                  (scanner0))))
-  
-    ; Consumes the current token.
-  
+
+    ;; Consumes the current token.
+
     (define (consume-token!)
       (set! nextTokenIsReady #f))
-  
-    ; Called by the lexical analyzer's state machine,
-    ; hence the unfortunate lower case.
-  
+
+    ;; Called by the lexical analyzer's state machine,
+    ;; hence the unfortunate lower case.
+
     (define (scannererror msg)
       (define msgtxt
         (cond ((= msg errLongToken)
@@ -797,29 +791,29 @@
       (set! nextTokenIsReady #f)
       (set! nextCharacterIsReady #f)
       (next-token))
-  
-    ; Accepts a token of the given kind, returning that kind.
-    ;
-    ; For some kinds of tokens, a value for the token must also be
-    ; recorded in tokenValue.
-  
+
+    ;; Accepts a token of the given kind, returning that kind.
+    ;;
+    ;; For some kinds of tokens, a value for the token must also be
+    ;; recorded in tokenValue.
+
     (define (accept t)
-      (if (memq t '(boolean character id number string))
-          (set! tokenValue
-                (substring string_accumulator 0 string_accumulator_length)))
+      (when (memq t '(boolean character id number string))
+        (set! tokenValue
+              (substring string_accumulator 0 string_accumulator_length)))
       (set! kindOfNextToken t)
       (set! nextTokenIsReady #t)
       t)
-  
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; Character i/o, so to speak.
-    ; Uses the input-string as input.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
-    ; Returns the current character from the input.
-  
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; Character i/o, so to speak.
+    ;; Uses the input-string as input.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    ;; Returns the current character from the input.
+
     (define (scanchar)
       (if nextCharacterIsReady
           nextCharacter
@@ -829,100 +823,100 @@
                             (set! input-index (+ input-index 1)))
                      (set! nextCharacter eof))
                  (set! nextCharacterIsReady #t)
-                 ; For debugging, change #f to #t below.
-                 (if #f
-                     (write-char nextCharacter))
+                 ;; For debugging, change #f to #t below.
+                 (when #f
+                   (write-char nextCharacter))
                  (scanchar))))
-  
-    ; Consumes the current character, and returns the next.
-  
+
+    ;; Consumes the current character, and returns the next.
+
     (define (consumechar)
-      (if (not nextCharacterIsReady)
-          (scanchar))
+      (unless nextCharacterIsReady
+        (scanchar))
       (if (< string_accumulator_length max_token_size)
           (begin (set! nextCharacterIsReady #f)
-                 (if (char=? nextCharacter #\newline)
-                     (set! lineNumber (+ lineNumber 1)))
+                 (when (char=? nextCharacter #\newline)
+                   (set! lineNumber (+ lineNumber 1)))
                  (string-set! string_accumulator
                               string_accumulator_length
                               nextCharacter)
                  (set! string_accumulator_length
                        (+ string_accumulator_length 1)))
           (scannererror errLongToken)))
-  
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; Action procedures called by the parser.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; Action procedures called by the parser.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
     (define (emptyList) '())
-  
+
     (define (identity x) x)
-  
+
     (define (list2vector vals) (list->vector vals))
-  
+
     (define (makeBool)
       (string=? tokenValue "#t"))
-  
+
     (define (makeChar)
       (string-ref tokenValue 0))
-  
+
     (define (makeNum)
       (string->number tokenValue))
-  
+
     (define (makeString)
-      ; Must strip off outer double quotes.
-      ; Ought to process escape characters also, but we won't.
+      ;; Must strip off outer double quotes.
+      ;; Ought to process escape characters also, but we won't.
       (substring tokenValue 1 (- (string-length tokenValue) 1)))
-  
+
     (define (makeSym)
       (string->symbol tokenValue))
-  
-    ; Like append, but allows the last argument to be a non-list.
-  
+
+    ;; Like append, but allows the last argument to be a non-list.
+
     (define (pseudoAppend vals terminus)
       (if (null? vals)
           terminus
           (cons (car vals)
                 (pseudoAppend (cdr vals) terminus))))
-  
+
     (define (symBackquote) 'quasiquote)
     (define (symQuote) 'quote)
     (define (symSplicing) 'unquote-splicing)
     (define (symUnquote) 'unquote)
-  
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; Error procedure called by the parser.
-    ; As a hack, this error procedure recovers from end-of-file.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; Error procedure called by the parser.
+    ;; As a hack, this error procedure recovers from end-of-file.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
     (define (parse-error nonterminal expected-terminals)
       (if (eq? 'eof (next-token))
           'eof
           (begin
-           (display "Syntax error in line ")
-           (display lineNumber)
-           (display " while parsing a ")
-           (write nonterminal)
-           (newline)
-           (display "  Encountered a ")
-           (display (next-token))
-           (display " while expecting something in")
-           (newline)
-           (display "  ")
-           (write expected-terminals)
-           (newline)
-           (error #f "Syntax error"))))
-  
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;
-    ; Parses repeatedly, returning the last <datum> parsed.
-    ;
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  
+            (display "Syntax error in line ")
+            (display lineNumber)
+            (display " while parsing a ")
+            (write nonterminal)
+            (newline)
+            (display "  Encountered a ")
+            (display (next-token))
+            (display " while expecting something in")
+            (newline)
+            (display "  ")
+            (write expected-terminals)
+            (newline)
+            (error #f "Syntax error"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;
+    ;; Parses repeatedly, returning the last <datum> parsed.
+    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
     (do ((x (parse-datum) (parse-datum))
          (y 'eof x))
         ((eq? x 'eof)

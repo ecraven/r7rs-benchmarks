@@ -1,19 +1,16 @@
 ;;; DESTRUC -- Destructive operation benchmark.
 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define (append-to-tail! x y)
   (if (null? x)
-    y
-    (let loop ((a x) (b (cdr x)))
-      (if (null? b)
-        (begin
-          (set-cdr! a y)
-          x)
-        (loop b (cdr b))))))
+      y
+      (let loop ((a x) (b (cdr x)))
+        (if (null? b)
+            (begin
+              (set-cdr! a y)
+              x)
+            (loop b (cdr b))))))
 
 (define (destructive n m)
   (let ((l (do ((i 10 (- i 1)) (a '() (cons '() a)))
@@ -23,10 +20,11 @@
       (cond ((null? (car l))
              (do ((l l (cdr l)))
                  ((null? l))
-               (if (null? (car l)) (set-car! l (cons '() '())))
+               (when (null? (car l))
+                 (set-car! l (cons '() '())))
                (append-to-tail! (car l)
                                 (do ((j m (- j 1)) (a '() (cons '() a)))
-                                  ((= j 0) a)))))
+                                    ((= j 0) a)))))
             (else
              (do ((l1 l (cdr l1)) (l2 (cdr l) (cdr l2)))
                  ((null? l2))

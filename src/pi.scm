@@ -1,12 +1,8 @@
 ;;; PI -- Compute PI using bignums.
 
-; See http://mathworld.wolfram.com/Pi.html for the various algorithms.
+;; See http://mathworld.wolfram.com/Pi.html for the various algorithms.
 
-(import (scheme base)
-        (scheme char)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme char) (scheme read) (scheme write) (scheme time))
 
 ;;; R6RS procedures needed by this benchmark
 
@@ -16,14 +12,14 @@
               (>= x 0))
          (quotient x y))
         ((< y 0)
-         ; x < 0, y < 0
+         ;; x < 0, y < 0
          (let* ((q (quotient x y))
                 (r (- x (* q y))))
            (if (= r 0)
                q
                (+ q 1))))
         (else
-         ; x < 0, y > 0
+         ;; x < 0, y > 0
          (let* ((q (quotient x y))
                 (r (- x (* q y))))
            (if (= r 0)
@@ -32,7 +28,7 @@
 
 ;;; End of R6RS procedures.
 
-; Utilities.
+;; Utilities.
 
 (define (width x)
   (let loop ((i 0) (n 1))
@@ -54,10 +50,10 @@
 (define (quartic-root x)
   (root x 4))
 
-;(define (square x)
-;  (* x x))
+;;(define (square x)
+;;  (* x x))
 
-; Compute pi using the 'brent-salamin' method.
+;; Compute pi using the 'brent-salamin' method.
 
 (define (pi-brent-salamin nb-digits)
   (let ((one (expt 10 nb-digits)))
@@ -71,12 +67,12 @@
             (loop new-a
                   (square-root (* a b))
                   (- t
-                            (div
-                             (* x (square (- new-a a)))
-                             one))
+                     (div
+                      (* x (square (- new-a a)))
+                      one))
                   (* 2 x)))))))
 
-; Compute pi using the quadratically converging 'borwein' method.
+;; Compute pi using the quadratically converging 'borwein' method.
 
 (define (pi-borwein2 nb-digits)
   (let* ((one (expt 10 nb-digits))
@@ -90,7 +86,7 @@
                (y qurt2)
                (p (+ (* 2 one) sqrt2)))
       (let ((new-p (div (* p (+ x one))
-                                    (+ y one))))
+                        (+ y one))))
         (if (= x one)
             new-p
             (let ((sqrt-x (square-root (* one x))))
@@ -102,7 +98,7 @@
                      (* (+ y one) sqrt-x))
                     new-p)))))))
 
-; Compute pi using the quartically converging 'borwein' method.
+;; Compute pi using the quartically converging 'borwein' method.
 
 (define (pi-borwein4 nb-digits)
   (let* ((one (expt 10 nb-digits))
@@ -122,15 +118,15 @@
                       (square (div (square (+ one t2)) one))
                       one))
                  (t4 (+ one
-                               (+ t2
-                                         (div (square t2) one)))))
+                        (+ t2
+                           (div (square t2) one)))))
             (loop t2
                   (div
                    (- (* t3 a) (* x (* t2 t4)))
                    one)
                   (* 4 x)))))))
 
-; Try it.
+;; Try it.
 
 (define (pies n m s)
   (if (< m n)

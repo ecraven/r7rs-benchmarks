@@ -1,9 +1,6 @@
 ;;; TRIANGL -- Board game benchmark.
-   
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define *board*
   (list->vector '(1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1)))
@@ -13,23 +10,23 @@
 
 (define *a*
   (list->vector '(1 2 4 3 5 6 1 3 6 2 5 4 11 12
-                  13 7 8 4 4 7 11 8 12 13 6 10
-                  15 9 14 13 13 14 15 9 10
-                  6 6)))
+                    13 7 8 4 4 7 11 8 12 13 6 10
+                    15 9 14 13 13 14 15 9 10
+                    6 6)))
 
 (define *b*
   (list->vector '(2 4 7 5 8 9 3 6 10 5 9 8
-                  12 13 14 8 9 5 2 4 7 5 8
-                  9 3 6 10 5 9 8 12 13 14
-                  8 9 5 5)))
+                    12 13 14 8 9 5 2 4 7 5 8
+                    9 3 6 10 5 9 8 12 13 14
+                    8 9 5 5)))
 
 (define *c*
   (list->vector '(4 7 11 8 12 13 6 10 15 9 14 13
-                  13 14 15 9 10 6 1 2 4 3 5 6 1
-                  3 6 2 5 4 11 12 13 7 8 4 4)))
+                    13 14 15 9 10 6 1 2 4 3 5 6 1
+                    3 6 2 5 4 11 12 13 7 8 4 4)))
 
 (define *answer* '())
- 
+
 (define (attempt i depth)
   (cond ((= depth 14)
          (set! *answer*
@@ -49,12 +46,12 @@
          (vector-set! *board* (vector-ref *b* i) 1)
          (vector-set! *board* (vector-ref *c* i) 0) #f)
         (else #f)))
- 
+
 (define (test i depth)
   (set! *answer* '())
   (attempt i depth)
   (car *answer*))
- 
+
 (define (main)
   (let* ((count (read))
          (input1 (read))

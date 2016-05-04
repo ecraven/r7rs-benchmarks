@@ -1,10 +1,6 @@
 ;;; DERIV -- Symbolic derivation.
 
-(import (scheme base)
-        (scheme cxr)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme cxr) (scheme read) (scheme write) (scheme time))
 
 ;;; Returns the wrong answer for quotients.
 ;;; Fortunately these aren't used in the benchmark.
@@ -20,9 +16,9 @@
                (map deriv (cdr a))))
         ((eq? (car a) '*)
          (list '*
-                a
-                (cons '+
-                      (map (lambda (a) (list '/ (deriv a) a)) (cdr a)))))
+               a
+               (cons '+
+                     (map (lambda (a) (list '/ (deriv a) a)) (cdr a)))))
         ((eq? (car a) '/)
          (list '-
                (list '/

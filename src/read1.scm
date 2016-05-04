@@ -4,41 +4,37 @@
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(import (scheme base)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme file) (scheme read) (scheme write) (scheme time))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; get-datum benchmark comparable to the parsing benchmark.
-;
-; Reads nboyer.sch into a string before timing begins.
-;
-; The timed portion of the benchmark parses the string
-; representation of nboyer.sch 1000 times.
-;
-; The output of that parse is checked by comparing it
-; the the value returned by the read procedure.
-;
-; Usage:
-;     (read-benchmark n input)
-;     (read-from-string-port-benchmark n input)
-;     
-;
-; n defaults to 1000, and input defaults to "nboyer.sch".
-;
+;;
+;; get-datum benchmark comparable to the parsing benchmark.
+;;
+;; Reads nboyer.sch into a string before timing begins.
+;;
+;; The timed portion of the benchmark parses the string
+;; representation of nboyer.sch 1000 times.
+;;
+;; The output of that parse is checked by comparing it
+;; the the value returned by the read procedure.
+;;
+;; Usage:
+;;     (read-benchmark n input)
+;;     (read-from-string-port-benchmark n input)
+;;
+;;
+;; n defaults to 1000, and input defaults to "nboyer.sch".
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (read-from-file-benchmark input)
   (call-with-input-file
-   input
-   (lambda (in)
-     (do ((x (read in) (read in))
-          (y #f x)
-          (i 0 (+ i 1)))
-         ((eof-object? x) y)))))
+      input
+    (lambda (in)
+      (do ((x (read in) (read in))
+           (y #f x)
+           (i 0 (+ i 1)))
+          ((eof-object? x) y)))))
 
 (define (main)
   (let* ((count (read))

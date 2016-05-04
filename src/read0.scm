@@ -8,12 +8,7 @@
 ;;; FIXME: this needs a lot of work to convert all of its tests
 ;;; to R7RS.
 
-(import (scheme base)
-        (scheme char)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme char) (scheme file) (scheme read) (scheme write) (scheme time))
 
 ;;; Fake R6RS procedure.
 
@@ -28,20 +23,20 @@
          'something-else)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Test framework.
-;
+;;
+;; Test framework.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Change to #t if you want to test extensions.
+;; Change to #t if you want to test extensions.
 
 (define *test-extensions* #f)
 
-; Implementation-specific flag that enables extensions.
+;; Implementation-specific flag that enables extensions.
 
 (define *extensions-enabler* "#!larceny")
 
-; Help procedures (mainly for using a non-R6RS reader to construct test cases)
+;; Help procedures (mainly for using a non-R6RS reader to construct test cases)
 
 (define (teststring . args)
   (define (loop revargs chars)
@@ -59,7 +54,7 @@
                  (error "teststring: this shouldn't have happened" args))))))
   (loop (reverse args) '()))
 
-; Given a string, returns the list of results parsed from the string.
+;; Given a string, returns the list of results parsed from the string.
 
 (define (testparse s)
   (let ((in (open-input-string s)))
@@ -68,24 +63,24 @@
         ((eof-object? x)
          (reverse results)))))
 
-; The failed inputs and their expected outcomes are recorded here
-; as an aid to debugging.
+;; The failed inputs and their expected outcomes are recorded here
+;; as an aid to debugging.
 
 (define test-input "")
 (define failed-inputs '())
 (define failed-expected '())
 
-; Given an input string and a description of the expected results,
-; calls testparse on the input string and compares with the expected.
-; The description of the expected results is one of:
-;
-;     a list of expected results that can be compared using equal?
-;     a unary predicate that is true of the expected results
-;     the symbol error (meaning read should raise an exception)
-;
-; Tests that should fail are preceded by #!r6rs, in an attempt
-; to disable implementation-specific extensions to the lexical
-; syntax that might otherwise be allowed by default.
+;; Given an input string and a description of the expected results,
+;; calls testparse on the input string and compares with the expected.
+;; The description of the expected results is one of:
+;;
+;;     a list of expected results that can be compared using equal?
+;;     a unary predicate that is true of the expected results
+;;     the symbol error (meaning read should raise an exception)
+;;
+;; Tests that should fail are preceded by #!r6rs, in an attempt
+;; to disable implementation-specific extensions to the lexical
+;; syntax that might otherwise be allowed by default.
 
 (define (dotest s expected)
   (set! test-input s)
@@ -120,9 +115,9 @@
   #f)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; R6RS error handling.
-;
+;;
+;; R6RS error handling.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (safely thunk token)
@@ -138,7 +133,7 @@
        (lambda (return)
          (with-exception-handler
           (lambda args (return #f))
-          (lambda () 
+          (lambda ()
             (f s)
             #t))))
       (begin
@@ -147,21 +142,21 @@
       #t))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Testing the test framework.
-;
+;;
+;; Testing the test framework.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (dotest "()" list?)
 (dotest "()" '(()))
 (dotest ")(" 'error)
 
-;(dotest "#!r6rs" '())
+;;(dotest "#!r6rs" '())
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Sanity and regression tests.
-;
+;;
+;; Sanity and regression tests.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (dotest (teststring #\\ #\x #\3 #\b #\b #\;)
@@ -176,18 +171,18 @@
 (dotest "abc;def" '(abc))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Beginnings of a more systematic test suite.
-;
-; <datum> --> <lexeme datum> | <compound datum>
-;
+;;
+;; Beginnings of a more systematic test suite.
+;;
+;; <datum> --> <lexeme datum> | <compound datum>
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; <lexeme datum> --> <boolean> | <number> | <character>
-;                  | <string> | <symbol>
-;
+;;
+;; <lexeme datum> --> <boolean> | <number> | <character>
+;;                  | <string> | <symbol>
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (dotest "#t" '(#t))
@@ -196,58 +191,58 @@
 (dotest "#F" '(#f))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; <number> --> <num 2> | <num 8> | <num 10> | <num 16>
-; <num R> --> <prefix R> <complex R>
-; <prefix R> --> <radix R> <exactness> | <exactness> <radix R>
-; <exactness> --> <empty> | #i | #I | #e | #E
-; <radix 2> --> #b | #B
-; <radix 8> --> #o | #O
-; <radix 10> --> <empty> | #d | #D
-; <radix 16> --> #x | #X
-;
-; <complex R> --> <real R> | <real R> @ <real R>
-;               | <real R> + <ureal R> i | <real R> - <ureal R> i
-;               | <real R> + <naninf> i | <real R> - <naninf> i
-;               | <real R> + i | <real R> - i
-;               | + <ureal R> i | - <ureal R> i
-;               | + <naninf> i | - <naninf> i
-;               | + i | - i
-;
-; <real R> --> <sign> <ureal R> | + <naninf> | - <naninf>
-; <sign> --> <empty> | + | -
-; <naninf> --> nan.0 | inf.0
-; <ureal R> --> <uinteger R>
-;             | <uinteger R> / <uinteger R>
-;             | <decimal R> <mantissa width>
-;
-; <uinteger R> --> <digit R>+ #*
-;
-; <decimal 10> --> <uinteger 10>
-;                | . <digit 10>+ #* <suffix>
-;                | <digit 10>+ . <digit10>* #* <suffix>
-;                | <digit 10>+ #* . #* <suffix>
-; <suffix> --> <empty> | <exponent marker> <sign> <digit 10>+
-; <exponent marker> --> e | E | s | S | f | F | d | D | l | L
-; <mantissa width> --> <empty> | <vbar> <digit 10>+
-;
-; <digit 2> --> 0 | 1
-; <digit 8> --> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
-; <digit 10> --> <digit>
-; <digit> --> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-; <digit 16> --> <hex digit>
-; <hex digit> --> <digit> | a | b | c | d | e | f | A | B | C | D | E | F
-;           
+;;
+;; <number> --> <num 2> | <num 8> | <num 10> | <num 16>
+;; <num R> --> <prefix R> <complex R>
+;; <prefix R> --> <radix R> <exactness> | <exactness> <radix R>
+;; <exactness> --> <empty> | #i | #I | #e | #E
+;; <radix 2> --> #b | #B
+;; <radix 8> --> #o | #O
+;; <radix 10> --> <empty> | #d | #D
+;; <radix 16> --> #x | #X
+;;
+;; <complex R> --> <real R> | <real R> @ <real R>
+;;               | <real R> + <ureal R> i | <real R> - <ureal R> i
+;;               | <real R> + <naninf> i | <real R> - <naninf> i
+;;               | <real R> + i | <real R> - i
+;;               | + <ureal R> i | - <ureal R> i
+;;               | + <naninf> i | - <naninf> i
+;;               | + i | - i
+;;
+;; <real R> --> <sign> <ureal R> | + <naninf> | - <naninf>
+;; <sign> --> <empty> | + | -
+;; <naninf> --> nan.0 | inf.0
+;; <ureal R> --> <uinteger R>
+;;             | <uinteger R> / <uinteger R>
+;;             | <decimal R> <mantissa width>
+;;
+;; <uinteger R> --> <digit R>+ #*
+;;
+;; <decimal 10> --> <uinteger 10>
+;;                | . <digit 10>+ #* <suffix>
+;;                | <digit 10>+ . <digit10>* #* <suffix>
+;;                | <digit 10>+ #* . #* <suffix>
+;; <suffix> --> <empty> | <exponent marker> <sign> <digit 10>+
+;; <exponent marker> --> e | E | s | S | f | F | d | D | l | L
+;; <mantissa width> --> <empty> | <vbar> <digit 10>+
+;;
+;; <digit 2> --> 0 | 1
+;; <digit 8> --> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+;; <digit 10> --> <digit>
+;; <digit> --> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+;; <digit 16> --> <hex digit>
+;; <hex digit> --> <digit> | a | b | c | d | e | f | A | B | C | D | E | F
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; FIXME
+;; FIXME
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; <character> --> #\<any character>
-;               | #\<character name>
-;               | #\x<hex scalar value>
-;
+;;
+;; <character> --> #\<any character>
+;;               | #\<character name>
+;;               | #\x<hex scalar value>
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (dotest "#\\a#\\b#\\c" '(#\a #\b #\c))
@@ -273,28 +268,28 @@
 (dotest "#\\x61 #\\x3bb #\\xffff #\\x10ffff"
         '(#\a #\x3bb #\xffff #\x10ffff))
 
-;(dotest "#\\newline #\\newline" '(#\linefeed #\linefeed))
+;;(dotest "#\\newline #\\newline" '(#\linefeed #\linefeed))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; <string> --> " <string element>* "
-; <string element> --> <any character other than " or \ or line ending>
-;                    | <line ending>
-;                    | \a | \b | \t | \n | \v | \f | \r
-;                    | \" | \\
-;                    | \<intraline whitespace>\<line ending>
-;                      <intraline whitespace>
-;                    | <inline hex escape>
-; <intraline whitespace> --> <character tabulation>
-;                    | <any character whose category is Zs>
-; <line ending> --> <linefeed>
-;                 | <carriage return>
-;                 | <carriage return> <linefeed>
-;                 | <next line>
-;                 | <carriage return> <next line>
-;                 | <line separator>
-; <inline hex escape> --> \x <hex scalar value>;
-;
+;;
+;; <string> --> " <string element>* "
+;; <string element> --> <any character other than " or \ or line ending>
+;;                    | <line ending>
+;;                    | \a | \b | \t | \n | \v | \f | \r
+;;                    | \" | \\
+;;                    | \<intraline whitespace>\<line ending>
+;;                      <intraline whitespace>
+;;                    | <inline hex escape>
+;; <intraline whitespace> --> <character tabulation>
+;;                    | <any character whose category is Zs>
+;; <line ending> --> <linefeed>
+;;                 | <carriage return>
+;;                 | <carriage return> <linefeed>
+;;                 | <next line>
+;;                 | <carriage return> <next line>
+;;                 | <line separator>
+;; <inline hex escape> --> \x <hex scalar value>;
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (dotest "\"abc\"\"def\"" '("abc" "def"))
@@ -312,7 +307,7 @@
                           #\newline #\space #\newline)))
 
 (dotest (teststring #\" #\\ #\a #\\ #\b #\\ #\t #\\ #\n
-                        #\\ #\r #\")
+                    #\\ #\r #\")
         (list (teststring #\alarm #\backspace #\tab #\newline
                           #\return)))
 
@@ -333,25 +328,25 @@
         (list (teststring #\a #\x3bb #\xffff #\x10000 #\x10ffff)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; <symbol> --> <identifier>
-; <identifier> --> <initial> <subsequent>*
-;                | <peculiar identifier>
-; <initial> --> <constituent> | <special initial> | <inline hex escape>
-; <constituent> --> <letter>
-;                 | <any character whose Unicode scalar value is
-;                    greater than 127, and whose category is
-;                    Lu, Ll, Lt, Lm, Lo, Mn, Nl, No, Pd, Pc, Po,
-;                    Sc, Sm, Sk, So, or Co>
-; <letter> --> a | ... | z | A | ... | Z
-; <special initial> --> ! | $ | % | & | * | / | : | < | = | > | ? | ^ | _ | ~
-; <subsequent> --> <initial>
-;                | <digit>
-;                | <special subsequent>
-;                | <any character whose category is Nd, Mc, or Me>
-; <special subsequent> --> + | - | . | @
-; <peculiar identifier> --> + | - | ... | -> <subsequent>*
-;
+;;
+;; <symbol> --> <identifier>
+;; <identifier> --> <initial> <subsequent>*
+;;                | <peculiar identifier>
+;; <initial> --> <constituent> | <special initial> | <inline hex escape>
+;; <constituent> --> <letter>
+;;                 | <any character whose Unicode scalar value is
+;;                    greater than 127, and whose category is
+;;                    Lu, Ll, Lt, Lm, Lo, Mn, Nl, No, Pd, Pc, Po,
+;;                    Sc, Sm, Sk, So, or Co>
+;; <letter> --> a | ... | z | A | ... | Z
+;; <special initial> --> ! | $ | % | & | * | / | : | < | = | > | ? | ^ | _ | ~
+;; <subsequent> --> <initial>
+;;                | <digit>
+;;                | <special subsequent>
+;;                | <any character whose category is Nd, Mc, or Me>
+;; <special subsequent> --> + | - | . | @
+;; <peculiar identifier> --> + | - | ... | -> <subsequent>*
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (dotest "a A z Z" (map string->symbol '("a" "A" "z" "Z")))
@@ -369,11 +364,11 @@
 
 (dotest "." 'error)
 
-;(dotest "@" 'error)    ; this was an error in R6RS, but not in R7RS
+;;(dotest "@" 'error);; this was an error in R6RS, but not in R7RS
 
 (dotest ".a" 'error)
 
-;(dotest "@b" 'error)    ; this was an error in R6RS, but not in R7RS
+;;(dotest "@b" 'error);; this was an error in R6RS, but not in R7RS
 
 (dotest "a|b" 'error)
 
@@ -389,13 +384,13 @@
         (map string->symbol (list (string #\x3bb) (string #\x10000))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Exhaustive tests on very short inputs.
-;
+;;
+;; Exhaustive tests on very short inputs.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Tests all single-character inputs within the specified
-; inclusive range of code points.
+;; Tests all single-character inputs within the specified
+;; inclusive range of code points.
 
 (define (test-single-characters lo hi)
   (define (loop cp passed failed)
@@ -422,7 +417,7 @@
                                  (else 'error)))
                           ((memq cat
                                  '(Lu Ll Lt Lm Lo Mn Nl No Pd Pc Po
-                                   Sc Sm Sk So Co))
+                                      Sc Sm Sk So Co))
                            (list (string->symbol s)))
                           ((or (char=? c #\x85)
                                (memq cat '(Zs Zl Zp)))
@@ -434,9 +429,9 @@
                   (loop (+ cp 1) passed (+ failed 1)))))))
   (loop lo 0 0))
 
-; Tests read against read on all two-character inputs with
-; the specified first character and with the second character
-; within the specified inclusive range of code points.
+;; Tests read against read on all two-character inputs with
+;; the specified first character and with the second character
+;; within the specified inclusive range of code points.
 
 (define (test-two-characters c0 lo hi)
   (define (loop cp passed failed)
@@ -472,6 +467,6 @@
      (string-append name ":" s1 ":" s2 ":" s3)
      count
      (lambda ()
-      ;(test-single-characters (hide count input1) (hide count input2))
+       ;;(test-single-characters (hide count input1) (hide count input2))
        (test-two-characters #\a (hide count input1) (hide count input2)))
      (lambda (result) (null? failed-inputs)))))

@@ -1,15 +1,12 @@
 ;;; FIBFP -- Computes fib(35) using floating point
 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define (fibfp n)
   (if (< n 2.)
-    n
-    (+ (fibfp (- n 1.))
-       (fibfp (- n 2.)))))
+      n
+      (+ (fibfp (- n 1.))
+         (fibfp (- n 2.)))))
 
 (define (main)
   (let* ((count (read))
@@ -23,4 +20,3 @@
      count
      (lambda () (fibfp (hide count input)))
      (lambda (result) (= result output)))))
-

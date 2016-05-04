@@ -1,10 +1,7 @@
 ;;; MAZEFUN -- Constructs a maze in a purely functional way,
 ;;; written by Marc Feeley.
-  
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define foldr
   (lambda (f base lst)
@@ -21,8 +18,8 @@
     (define foldl-aux
       (lambda (base lst)
         (if (null? lst)
-          base
-          (foldl-aux (f base (car lst)) (cdr lst)))))
+            base
+            (foldl-aux (f base (car lst)) (cdr lst)))))
 
     (foldl-aux base lst)))
 

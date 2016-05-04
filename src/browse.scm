@@ -1,40 +1,37 @@
 ;;; BROWSE -- Benchmark to create and browse through
 ;;; an AI-like data base of units.
 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define (lookup key table)
   (let loop ((x table))
     (if (null? x)
-      #f
-      (let ((pair (car x)))
-        (if (eq? (car pair) key)
-          pair
-          (loop (cdr x)))))))
+        #f
+        (let ((pair (car x)))
+          (if (eq? (car pair) key)
+              pair
+              (loop (cdr x)))))))
 
 (define properties '())
 
 (define (get key1 key2)
   (let ((x (lookup key1 properties)))
     (if x
-      (let ((y (lookup key2 (cdr x))))
-        (if y
-          (cdr y)
-          #f))
-      #f)))
+        (let ((y (lookup key2 (cdr x))))
+          (if y
+              (cdr y)
+              #f))
+        #f)))
 
 (define (put key1 key2 val)
   (let ((x (lookup key1 properties)))
     (if x
-      (let ((y (lookup key2 (cdr x))))
-        (if y
-          (set-cdr! y val)
-          (set-cdr! x (cons (cons key2 val) (cdr x)))))
-      (set! properties
-        (cons (list key1 (cons key2 val)) properties)))))
+        (let ((y (lookup key2 (cdr x))))
+          (if y
+              (set-cdr! y val)
+              (set-cdr! x (cons (cons key2 val) (cdr x)))))
+        (set! properties
+              (cons (list key1 (cons key2 val)) properties)))))
 
 (define *current-gensym* 0)
 
@@ -74,20 +71,20 @@
          (name (generate-symbol) (generate-symbol))
          (a '()))
         ((= n 0) a)
-        (set! a (cons name a))
-        (do ((i i (- i 1)))
-            ((zero? i))
-            (put name (generate-symbol) #f))
-        (put name
-             'pattern
-             (do ((i npats (- i 1))
-                  (ipats ipats (cdr ipats))
-                  (a '()))
-                 ((zero? i) a)
-                 (set! a (cons (car ipats) a))))
-        (do ((j (- m i) (- j 1)))
-            ((zero? j))
-            (put name (generate-symbol) #f)))))
+      (set! a (cons name a))
+      (do ((i i (- i 1)))
+          ((zero? i))
+        (put name (generate-symbol) #f))
+      (put name
+           'pattern
+           (do ((i npats (- i 1))
+                (ipats ipats (cdr ipats))
+                (a '()))
+               ((zero? i) a)
+             (set! a (cons (car ipats) a))))
+      (do ((j (- m i) (- j 1)))
+          ((zero? j))
+        (put name (generate-symbol) #f)))))
 
 (define (browse-random)
   (set! *rand* (remainder (* *rand* 17) 251))
@@ -96,18 +93,18 @@
 (define (randomize l)
   (do ((a '()))
       ((null? l) a)
-      (let ((n (remainder (browse-random) (length l))))
-        (cond ((zero? n)
-               (set! a (cons (car l) a))
-               (set! l (cdr l))
-               l)
-              (else
-               (do ((n n (- n 1))
-                    (x l (cdr x)))
-                   ((= n 1)
-                    (set! a (cons (cadr x) a))
-                    (set-cdr! x (cddr x))
-                    x)))))))
+    (let ((n (remainder (browse-random) (length l))))
+      (cond ((zero? n)
+             (set! a (cons (car l) a))
+             (set! l (cdr l))
+             l)
+            (else
+             (do ((n n (- n 1))
+                  (x l (cdr x)))
+                 ((= n 1)
+                  (set! a (cons (cadr x) a))
+                  (set-cdr! x (cddr x))
+                  x)))))))
 
 (define (my-match pat dat alist)
   (cond ((null? pat)
@@ -126,35 +123,35 @@
                                  #\?)
                             (let ((val (assq (car pat) alist)))
                               (cond (val (my-match (cons (cdr val)
-                                                      (cdr pat))
-                                                dat alist))
+                                                         (cdr pat))
+                                                   dat alist))
                                     (else (my-match (cdr pat)
-                                                 (cdr dat)
-                                                 (cons (cons (car pat)
-                                                             (car dat))
-                                                       alist))))))
+                                                    (cdr dat)
+                                                    (cons (cons (car pat)
+                                                                (car dat))
+                                                          alist))))))
                            ((eq? (string-ref (symbol->string (car pat)) 0)
                                  #\*)
                             (let ((val (assq (car pat) alist)))
                               (cond (val (my-match (append (cdr val)
-                                                        (cdr pat))
-                                                dat alist))
+                                                           (cdr pat))
+                                                   dat alist))
                                     (else
                                      (do ((l '()
                                              (append-to-tail!
-                                               l
-                                               (cons (if (null? d)
-                                                         '()
-                                                         (car d))
-                                                     '())))
+                                              l
+                                              (cons (if (null? d)
+                                                        '()
+                                                        (car d))
+                                                    '())))
                                           (e (cons '() dat) (cdr e))
                                           (d dat (if (null? d) '() (cdr d))))
                                          ((or (null? e)
                                               (my-match (cdr pat)
-                                                       d
-                                                       (cons
-                                                        (cons (car pat) l)
-                                                        alist)))
+                                                        d
+                                                        (cons
+                                                         (cons (car pat) l)
+                                                         alist)))
                                           (if (null? e) #f #t)))))))
 
                            ;; fix suggested by Manuel Serrano
@@ -165,32 +162,32 @@
                     (else (and
                            (pair? (car dat))
                            (my-match (car pat)
-                                  (car dat) alist)
+                                     (car dat) alist)
                            (my-match (cdr pat)
-                                  (cdr dat) alist)))))))
+                                     (cdr dat) alist)))))))
 
 (define database
-   (randomize
-    (init 100 10 4 '((a a a b b b b a a a a a b b a a a)
-                     (a a b b b b a a
-                                    (a a)(b b))
-                     (a a a b (b a) b a b a)))))
+  (randomize
+   (init 100 10 4 '((a a a b b b b a a a a a b b a a a)
+                    (a a b b b b a a
+                       (a a)(b b))
+                    (a a a b (b a) b a b a)))))
 
 (define (browse pats)
   (investigate
-    database
-    pats)
+   database
+   pats)
   (map string->number (map symbol->string database)))
 
 (define (investigate units pats)
   (do ((units units (cdr units)))
       ((null? units))
-      (do ((pats pats (cdr pats)))
-          ((null? pats))
-          (do ((p (get (car units) 'pattern)
-                  (cdr p)))
-              ((null? p))
-              (my-match (car pats) (car p) '())))))
+    (do ((pats pats (cdr pats)))
+        ((null? pats))
+      (do ((p (get (car units) 'pattern)
+              (cdr p)))
+          ((null? p))
+        (my-match (car pats) (car p) '())))))
 
 (define (main)
   (let* ((count (read))

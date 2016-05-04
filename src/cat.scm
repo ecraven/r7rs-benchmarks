@@ -1,30 +1,25 @@
 ;;; CAT -- One of the Kernighan and Van Wyk benchmarks.
 ;;; Rewritten by Will Clinger into more idiomatic Scheme.
 
-(import (scheme base)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme file) (scheme read) (scheme write) (scheme time))
 
 (define (catport in out)
   (let ((x (read-char in)))
-    (if (not (eof-object? x))
-        (begin
-         (write-char x out)
-         (catport in out)))))
+    (unless (eof-object? x)
+      (write-char x out)
+      (catport in out))))
 
 (define (go input-file output-file)
-  (if (file-exists? output-file)
-      (delete-file output-file))
+  (when (file-exists? output-file)
+    (delete-file output-file))
   (call-with-input-file
-   input-file
-   (lambda (in)
-     (call-with-output-file
-      output-file
-      (lambda (out)
-        (catport in out))))))
-    
+      input-file
+    (lambda (in)
+      (call-with-output-file
+          output-file
+        (lambda (out)
+          (catport in out))))))
+
 (define (main)
   (let* ((count (read))
          (input1 (read))

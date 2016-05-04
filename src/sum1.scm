@@ -1,10 +1,6 @@
 ;;; SUM1 -- One of the Kernighan and Van Wyk benchmarks.
 
-(import (scheme base)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme file) (scheme read) (scheme write) (scheme time))
 
 (define (sumport port sum-so-far)
   (let ((x (read port)))
@@ -30,4 +26,3 @@
      count
      (lambda () (go (hide count input1)))
      (lambda (result) (<= (abs (- result output)) 1e-9)))))
-

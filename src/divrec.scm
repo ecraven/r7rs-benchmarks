@@ -1,19 +1,16 @@
 ;;; DIVREC -- Benchmark which divides by 2 using lists of n ()'s.
- 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define (create-n n)
   (do ((n n (- n 1))
        (a '() (cons '() a)))
       ((= n 0) a)))
- 
+
 (define (recursive-div2 l)
   (cond ((null? l) '())
         (else (cons (car l) (recursive-div2 (cddr l))))))
-  
+
 (define (main)
   (let* ((count (read))
          (input1 (read))

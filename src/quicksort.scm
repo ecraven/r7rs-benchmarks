@@ -1,13 +1,10 @@
-; This is probably from Lars Hansen's MS thesis.
-; The quick-1 benchmark.  (Figure 35, page 132.)
+;; This is probably from Lars Hansen's MS thesis.
+;; The quick-1 benchmark.  (Figure 35, page 132.)
 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define (quick-1 v less?)
-  
+
   (define (helper left right)
     (if (< left right)
         (let ((median (partition v left right less?)))
@@ -17,25 +14,25 @@
               (begin (helper (+ median 1) right)
                      (helper left (- median 1)))))
         v))
-  
+
   (helper 0 (- (vector-length v) 1)))
 
 
 (define (partition v left right less?)
   (let ((mid (vector-ref v right)))
-    
+
     (define (uploop i)
       (let ((i (+ i 1)))
         (if (and (< i right) (less? (vector-ref v i) mid))
             (uploop i)
             i)))
-    
+
     (define (downloop j)
       (let ((j (- j 1)))
         (if (and (> j left) (less? mid (vector-ref v j)))
             (downloop j)
             j)))
-    
+
     (define (ploop i j)
       (let* ((i (uploop i))
              (j (downloop j)))
@@ -48,7 +45,7 @@
                      (vector-set! v i (vector-ref v right))
                      (vector-set! v right tmp)
                      i)))))
-    
+
     (ploop (- left 1) right)))
 
 ;;; Hansen's original code for this benchmark used Larceny's
@@ -85,13 +82,13 @@
       (a13n 810728.0)
       (a21 527612.0)
       (a23n 1370589.0)
-      (seed (vector 1.0 0.0 0.0 1.0 0.0 0.0)))  ; will be mutated
-  
-  ; uses no conversions between flonums and fixnums.
+      (seed (vector 1.0 0.0 0.0 1.0 0.0 0.0)));; will be mutated
+
+  ;; uses no conversions between flonums and fixnums.
 
   (set! random-flonum
         (lambda ()
-          (let ((seed seed))  ; make it local
+          (let ((seed seed));; make it local
             (let ((p1 (- (* a12 (vector-ref seed 1))
                          (* a13n (vector-ref seed 0))))
                   (p2 (- (* a21 (vector-ref seed 5))
@@ -111,9 +108,9 @@
                     (if (<= p1 p2)
                         (* norm (+ (- p1 p2) m1))
                         (* norm (- p1 p2))))))))))
-    
+
   (set! seed-ref (lambda () (vector->list seed)))
-  
+
   (set! seed-set! (lambda l (set! seed (list->vector l)))))
 
 (define (random n)
@@ -151,6 +148,6 @@
           (do ((i 1 (+ i 1)))
               ((= i (vector-length v))
                #t)
-            (if (not (<= (vector-ref v (- i 1))
-                         (vector-ref v i)))
-                (return #f)))))))))
+            (unless (<= (vector-ref v (- i 1))
+                        (vector-ref v i))
+              (return #f)))))))))

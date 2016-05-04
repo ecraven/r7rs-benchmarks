@@ -1,12 +1,7 @@
 ;;; RAY -- Ray-trace a simple scene with spheres, generating a ".pgm" file.
 ;;; Translated to Scheme from Paul Graham's book ANSI Common Lisp, Example 9.8
 
-(import (scheme base)
-        (scheme inexact)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme inexact) (scheme file) (scheme read) (scheme write) (scheme time))
 
 (define (make-point x y z)
   (vector x y z))
@@ -46,29 +41,29 @@
 (define eye (make-point 0.0 0.0 200.0))
 
 (define (tracer pathname res)
-  (if (file-exists? pathname)
-      (delete-file pathname))
+  (when (file-exists? pathname)
+    (delete-file pathname))
   (call-with-output-file
-   pathname
-   (lambda (p)
-     (let ((extent (* res 100)))
-       (display "P2 " p)
-       (write extent p)
-       (display " " p)
-       (write extent p)
-       (display " 255" p)
-       (newline p)
-       (do ((y 0 (+ y 1)))
-           ((= y extent))
-         (do ((x 0 (+ x 1)))
-             ((= x extent))
-           (write (color-at
-                   (+ -50.0
-                      (/ (inexact x) (inexact res)))
-                   (+ -50.0
-                      (/ (inexact y) (inexact res))))
-                  p)
-           (newline p)))))))
+      pathname
+    (lambda (p)
+      (let ((extent (* res 100)))
+        (display "P2 " p)
+        (write extent p)
+        (display " " p)
+        (write extent p)
+        (display " 255" p)
+        (newline p)
+        (do ((y 0 (+ y 1)))
+            ((= y extent))
+          (do ((x 0 (+ x 1)))
+              ((= x extent))
+            (write (color-at
+                    (+ -50.0
+                       (/ (inexact x) (inexact res)))
+                    (+ -50.0
+                       (/ (inexact y) (inexact res))))
+                   p)
+            (newline p)))))))
 
 (define (color-at x y)
   (let ((ray (unit-vector (- x (point-x eye))

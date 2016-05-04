@@ -1,11 +1,7 @@
 ;;; WC -- One of the Kernighan and Van Wyk benchmarks.
 ;;; Rewritten by Will Clinger into more idiomatic (and correct!) Scheme.
-  
-(import (scheme base)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+
+(import (scheme base) (scheme file) (scheme read) (scheme write) (scheme time))
 
 (define (wcport port)
   (define (loop nl nw nc inword?)
@@ -22,7 +18,7 @@
 
 (define (go x)
   (call-with-input-file x wcport))
- 
+
 (define (main)
   (let* ((count (read))
          (input (read))

@@ -1,49 +1,46 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Copyright 2007 William D Clinger.
-;
-; Permission to copy this software, in whole or in part, to use this
-; software for any lawful purpose, and to redistribute this software
-; is granted subject to the restriction that all copies made of this
-; software must include this copyright notice in full.
-;
-; I also request that you send me a copy of any improvements that you
-; make to this software so that they may be incorporated within it to
-; the benefit of the Scheme community.
-;
+;;
+;; Copyright 2007 William D Clinger.
+;;
+;; Permission to copy this software, in whole or in part, to use this
+;; software for any lawful purpose, and to redistribute this software
+;; is granted subject to the restriction that all copies made of this
+;; software must include this copyright notice in full.
+;;
+;; I also request that you send me a copy of any improvements that you
+;; make to this software so that they may be incorporated within it to
+;; the benefit of the Scheme community.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Tests of string <-> bytevector conversions.
-;
+;;
+;; Tests of string <-> bytevector conversions.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
-; Crude test rig, just for benchmarking.
+;; Crude test rig, just for benchmarking.
 
 (define failed-tests '())
 
 (define (test name actual expected)
-  (if (not (equal? actual expected))
-      (begin (display "******** FAILED TEST ******** ")
-             (display name)
-             (newline)
-             (set! failed-tests (cons name failed-tests)))))
+  (unless (equal? actual expected)
+    (display "******** FAILED TEST ******** ")
+    (display name)
+    (newline)
+    (set! failed-tests (cons name failed-tests))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; We're limited to Ascii strings here because the R7RS doesn't
-; actually require anything beyond Ascii.
-;
+;;
+;; We're limited to Ascii strings here because the R7RS doesn't
+;; actually require anything beyond Ascii.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; Basic sanity tests, followed by stress tests on random inputs.
-;
+;;
+;; Basic sanity tests, followed by stress tests on random inputs.
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (string-bytevector-tests
@@ -55,8 +52,8 @@
            (s2 (tostring b2)))
       (test "round trip of string conversion" (string=? s1 s2) #t)))
 
-  ; This random number generator doesn't have to be good.
-  ; It just has to be fast.
+  ;; This random number generator doesn't have to be good.
+  ;; It just has to be fast.
 
   (define random
     (letrec ((random14
@@ -78,9 +75,9 @@
         (if (< n 16384)
             (random14 n)
             (loop (quotient n 16384) (random14 16384) n)))))
- 
-  ; Returns a random bytevector of length up to n,
-  ; with all elements less than 128.
+
+  ;; Returns a random bytevector of length up to n,
+  ;; with all elements less than 128.
 
   (define (random-bytevector n)
     (let* ((n (random n))
@@ -89,7 +86,7 @@
           ((= i n) bv)
         (bytevector-u8-set! bv i (random 128)))))
 
-  ; Returns a random bytevector of even length up to n.
+  ;; Returns a random bytevector of even length up to n.
 
   (define (random-bytevector2 n)
     (let* ((n (random n))
@@ -99,7 +96,7 @@
           ((= i n) bv)
         (bytevector-u8-set! bv i (random 128)))))
 
-  ; Returns a random bytevector of multiple-of-4 length up to n.
+  ;; Returns a random bytevector of multiple-of-4 length up to n.
 
   (define (random-bytevector4 n)
     (let* ((n (random n))
@@ -116,7 +113,7 @@
     (test-roundtrip (random-bytevector *random-stress-test-max-size*)
                     utf8->string string->utf8))
 
-)
+  )
 
 (define (main)
   (let* ((count (read))
@@ -132,5 +129,5 @@
      count
      (lambda ()
        (string-bytevector-tests (hide count input1) (hide count input2))
-        (length failed-tests))
+       (length failed-tests))
      (lambda (result) (equal? result output)))))

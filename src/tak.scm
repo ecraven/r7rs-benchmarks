@@ -1,9 +1,6 @@
 ;;; TAK -- A vanilla version of the TAKeuchi function.
- 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define (tak x y z)
   (if (not (< y x))

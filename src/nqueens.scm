@@ -1,9 +1,6 @@
 ;;; NQUEENS -- Compute number of solutions to 8-queens problem.
 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 (define trace? #f)
 
@@ -15,20 +12,22 @@
 
   (define (my-try x y z)
     (if (null? x)
-      (if (null? y)
-        (begin (if trace? (begin (write z) (newline))) 1)
-        0)
-      (+ (if (ok? (car x) 1 z)
-           (my-try (append (cdr x) y) '() (cons (car x) z))
-           0)
-         (my-try (cdr x) (cons (car x) y) z))))
+        (if (null? y)
+            (when trace?
+              (write z)
+              (newline)) 1
+              0)
+        (+ (if (ok? (car x) 1 z)
+               (my-try (append (cdr x) y) '() (cons (car x) z))
+               0)
+           (my-try (cdr x) (cons (car x) y) z))))
 
   (define (ok? row dist placed)
     (if (null? placed)
-      #t
-      (and (not (= (car placed) (+ row dist)))
-           (not (= (car placed) (- row dist)))
-           (ok? row (+ dist 1) (cdr placed)))))
+        #t
+        (and (not (= (car placed) (+ row dist)))
+             (not (= (car placed) (- row dist)))
+             (ok? row (+ dist 1) (cdr placed)))))
 
   (my-try (iota1 n) '() '()))
 

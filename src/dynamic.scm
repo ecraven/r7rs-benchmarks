@@ -1,9 +1,4 @@
-(import (scheme base)
-        (scheme cxr)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme cxr) (scheme file) (scheme read) (scheme write) (scheme time))
 
 ;;; DYNAMIC -- Obtained from Andrew Wright.
 
@@ -11,9 +6,9 @@
 ;; (see the end of this file).
 
 
-;----------------------------------------------------------------------------
-; Environment management
-;----------------------------------------------------------------------------
+;;----------------------------------------------------------------------------
+;; Environment management
+;;----------------------------------------------------------------------------
 
 ;; environments are lists of pairs, the first component being the key
 
@@ -31,90 +26,90 @@
 ;; env-show: Env -> Symbol*
 
 
-; bindings
+;; bindings
 
 (define gen-binding cons)
-; generates a type binding, binding a symbol to a type variable
+;; generates a type binding, binding a symbol to a type variable
 
 (define binding-key car)
-; returns the key of a type binding
+;; returns the key of a type binding
 
 (define binding-value cdr)
-; returns the tvariable of a type binding
+;; returns the tvariable of a type binding
 
 (define (key-show key)
-  ; default show procedure for keys
+  ;; default show procedure for keys
   key)
 
 (define (value-show value)
-  ; default show procedure for values
+  ;; default show procedure for values
   value)
 
 (define (binding-show binding)
-  ; returns a printable representation of a type binding
+  ;; returns a printable representation of a type binding
   (cons (key-show (binding-key binding))
         (cons ': (value-show (binding-value binding)))))
 
 
-; environments
+;; environments
 
 (define dynamic-empty-env '())
-; returns the empty environment
+;; returns the empty environment
 
 (define (extend-env-with-binding env binding)
-  ; extends env with a binding, which hides any other binding in env
-  ; for the same key (see dynamic-lookup)
-  ; returns the extended environment
+  ;; extends env with a binding, which hides any other binding in env
+  ;; for the same key (see dynamic-lookup)
+  ;; returns the extended environment
   (cons binding env))
 
 (define (extend-env-with-env env ext-env)
-  ; extends environment env with environment ext-env 
-  ; a binding for a key in ext-env hides any binding in env for
-  ; the same key (see dynamic-lookup)
-  ; returns the extended environment
+  ;; extends environment env with environment ext-env
+  ;; a binding for a key in ext-env hides any binding in env for
+  ;; the same key (see dynamic-lookup)
+  ;; returns the extended environment
   (append ext-env env))
 
 (define dynamic-lookup (lambda (x l) (assv x l)))
-; returns the first pair in env that matches the key; returns #f
-; if no such pair exists
+;; returns the first pair in env that matches the key; returns #f
+;; if no such pair exists
 
 (define (env->list e)
-  ; converts an environment to a list of bindings
+  ;; converts an environment to a list of bindings
   e)
 
 (define (env-show env)
-  ; returns a printable list representation of a type environment
+  ;; returns a printable list representation of a type environment
   (map binding-show env))
-;----------------------------------------------------------------------------
-;       Parsing for Scheme
-;----------------------------------------------------------------------------
+;;----------------------------------------------------------------------------
+;;       Parsing for Scheme
+;;----------------------------------------------------------------------------
 
 
 ;; Needed packages: environment management
 
-;(load "env-mgmt.ss")
-;(load "pars-act.ss")
+;;(load "env-mgmt.ss")
+;;(load "pars-act.ss")
 
 ;; Lexical notions
 
 (define syntactic-keywords
-  ;; source: IEEE Scheme, 7.1, <expression keyword>, <syntactic keyword>
+;;; source: IEEE Scheme, 7.1, <expression keyword>, <syntactic keyword>
   '(lambda if set! begin cond and or case let let* letrec do
-          quasiquote else => define unquote unquote-splicing))
+           quasiquote else => define unquote unquote-splicing))
 
 
 ;; Parse routines
 
-; Datum
+;; Datum
 
-; dynamic-parse-datum: parses nonterminal <datum>
+;; dynamic-parse-datum: parses nonterminal <datum>
 
 (define (dynamic-parse-datum e)
-  ;; Source: IEEE Scheme, sect. 7.2, <datum>
-  ;; Note: "'" is parsed as 'quote, "`" as 'quasiquote, "," as
-  ;; 'unquote, ",@" as 'unquote-splicing (see sect. 4.2.5, p. 18)
-  ;; ***Note***: quasi-quotations are not permitted! (It would be
-  ;; necessary to pass the environment to dynamic-parse-datum.)
+;;; Source: IEEE Scheme, sect. 7.2, <datum>
+;;; Note: "'" is parsed as 'quote, "`" as 'quasiquote, "," as
+;;; 'unquote, ",@" as 'unquote-splicing (see sect. 4.2.5, p. 18)
+;;; ***Note***: quasi-quotations are not permitted! (It would be
+;;; necessary to pass the environment to dynamic-parse-datum.)
   (cond
    ((null? e)
     (dynamic-parse-action-null-const))
@@ -132,18 +127,18 @@
     (dynamic-parse-action-vector-const (map dynamic-parse-datum (vector->list e))))
    ((pair? e)
     (dynamic-parse-action-pair-const (dynamic-parse-datum (car e))
-                             (dynamic-parse-datum (cdr e))))
+                                     (dynamic-parse-datum (cdr e))))
    (else (error 'dynamic-parse-datum "Unknown datum: ~s" e))))
 
 
-; VarDef
+;; VarDef
 
-; dynamic-parse-formal: parses nonterminal <variable> in defining occurrence position
+;; dynamic-parse-formal: parses nonterminal <variable> in defining occurrence position
 
 (define (dynamic-parse-formal f-env e)
-  ; e is an arbitrary object, f-env is a forbidden environment;
-  ; returns: a variable definition (a binding for the symbol), plus
-  ; the value of the binding as a result
+  ;; e is an arbitrary object, f-env is a forbidden environment;
+  ;; returns: a variable definition (a binding for the symbol), plus
+  ;; the value of the binding as a result
   (if (symbol? e)
       (cond
        ((memq e syntactic-keywords)
@@ -155,18 +150,18 @@
                      dynamic-parse-action-result))))
       (error 'dynamic-parse-formal "Not an identifier: ~s" e)))
 
-; dynamic-parse-formal*
+;; dynamic-parse-formal*
 
 (define (dynamic-parse-formal* formals)
-  ;; parses a list of formals and returns a pair consisting of generated
-  ;; environment and list of parsing action results
+;;; parses a list of formals and returns a pair consisting of generated
+;;; environment and list of parsing action results
   (letrec
       ((pf*
         (lambda (f-env results formals)
-          ;; f-env: "forbidden" environment (to avoid duplicate defs)
-          ;; results: the results of the parsing actions
-          ;; formals: the unprocessed formals
-          ;; Note: generates the results of formals in reverse order!
+;;; f-env: "forbidden" environment (to avoid duplicate defs)
+;;; results: the results of the parsing actions
+;;; formals: the unprocessed formals
+;;; Note: generates the results of formals in reverse order!
           (cond
            ((null? formals)
             (cons f-env results))
@@ -184,11 +179,11 @@
       (cons (car renv-rres) (reverse (cdr renv-rres))))))
 
 
-; dynamic-parse-formals: parses <formals>
+;; dynamic-parse-formals: parses <formals>
 
 (define (dynamic-parse-formals formals)
-  ;; parses <formals>; see IEEE Scheme, sect. 7.3
-  ;; returns a pair: env and result
+;;; parses <formals>; see IEEE Scheme, sect. 7.3
+;;; returns a pair: env and result
   (letrec ((pfs (lambda (f-env formals)
                   (cond
                    ((null? formals)
@@ -216,9 +211,9 @@
     (pfs dynamic-empty-env formals)))
 
 
-; Expr
+;; Expr
 
-; dynamic-parse-expression: parses nonterminal <expression>
+;; dynamic-parse-expression: parses nonterminal <expression>
 
 (define (dynamic-parse-expression env e)
   (cond
@@ -244,10 +239,10 @@
         (else (dynamic-parse-procedure-call env op args)))))
    (else (dynamic-parse-datum e))))
 
-; dynamic-parse-expression*
+;; dynamic-parse-expression*
 
 (define (dynamic-parse-expression* env exprs)
-  ;; Parses lists of expressions (returns them in the right order!)
+;;; Parses lists of expressions (returns them in the right order!)
   (letrec ((pe*
             (lambda (results es)
               (cond
@@ -257,10 +252,10 @@
     (reverse (pe* '() exprs))))
 
 
-; dynamic-parse-expressions
+;; dynamic-parse-expressions
 
 (define (dynamic-parse-expressions env exprs)
-  ;; parses lists of arguments of a procedure call
+;;; parses lists of arguments of a procedure call
   (cond
    ((null? exprs) (dynamic-parse-action-null-arg))
    ((pair? exprs) (let* ((fst-expr (car exprs))
@@ -272,7 +267,7 @@
                 exprs))))
 
 
-; dynamic-parse-variable: parses variables (applied occurrences)
+;; dynamic-parse-variable: parses variables (applied occurrences)
 
 (define (dynamic-parse-variable env e)
   (if (symbol? e)
@@ -285,7 +280,7 @@
       (error 'dynamic-parse-variable "Not an identifier: ~s" e)))
 
 
-; dynamic-parse-procedure-call
+;; dynamic-parse-procedure-call
 
 (define (dynamic-parse-procedure-call env op args)
   (dynamic-parse-action-procedure-call
@@ -293,7 +288,7 @@
    (dynamic-parse-expressions env args)))
 
 
-; dynamic-parse-quote
+;; dynamic-parse-quote
 
 (define (dynamic-parse-quote env args)
   (if (list-of-1? args)
@@ -301,7 +296,7 @@
       (error 'dynamic-parse-quote "Not a datum (multiple arguments): ~s" args)))
 
 
-; dynamic-parse-lambda
+;; dynamic-parse-lambda
 
 (define (dynamic-parse-lambda env args)
   (if (pair? args)
@@ -316,13 +311,13 @@
       (error 'dynamic-parse-lambda "Illegal formals/body: ~s" args)))
 
 
-; dynamic-parse-body
+;; dynamic-parse-body
 
 (define (dynamic-parse-body env body)
-  ; <body> = <definition>* <expression>+
+  ;; <body> = <definition>* <expression>+
   (define (def-var* f-env body)
-    ; finds the defined variables in a body and returns an 
-    ; environment containing them
+    ;; finds the defined variables in a body and returns an
+    ;; environment containing them
     (if (pair? body)
         (let ((n-env (def-var f-env (car body))))
           (if n-env
@@ -330,23 +325,23 @@
               f-env))
         f-env))
   (define (def-var f-env clause)
-    ; finds the defined variables in a single clause and extends
-    ; f-env accordingly; returns false if it's not a definition
+    ;; finds the defined variables in a single clause and extends
+    ;; f-env accordingly; returns false if it's not a definition
     (if (pair? clause)
         (case (car clause)
           ((define) (if (pair? (cdr clause))
                         (let ((pattern (cadr clause)))
                           (cond
                            ((symbol? pattern)
-                            (extend-env-with-binding 
-                             f-env 
+                            (extend-env-with-binding
+                             f-env
                              (gen-binding pattern
                                           (dynamic-parse-action-var-def pattern))))
                            ((and (pair? pattern) (symbol? (car pattern)))
                             (extend-env-with-binding
                              f-env
                              (gen-binding (car pattern)
-                                          (dynamic-parse-action-var-def 
+                                          (dynamic-parse-action-var-def
                                            (car pattern)))))
                            (else f-env)))
                         f-env))
@@ -357,7 +352,7 @@
       (dynamic-parse-command* (def-var* env body) body)
       (error 'dynamic-parse-body "Illegal body: ~s" body)))
 
-; dynamic-parse-if
+;; dynamic-parse-if
 
 (define (dynamic-parse-if env args)
   (cond
@@ -374,7 +369,7 @@
    (else (error 'dynamic-parse-if "Not an if-expression: ~s" args))))
 
 
-; dynamic-parse-set
+;; dynamic-parse-set
 
 (define (dynamic-parse-set env args)
   (if (list-of-2? args)
@@ -384,14 +379,14 @@
       (error 'dynamic-parse-set "Not a variable/expression pair: ~s" args)))
 
 
-; dynamic-parse-begin
+;; dynamic-parse-begin
 
 (define (dynamic-parse-begin env args)
   (dynamic-parse-action-begin-expression
    (dynamic-parse-body env args)))
 
 
-; dynamic-parse-cond
+;; dynamic-parse-cond
 
 (define (dynamic-parse-cond env args)
   (if (and (pair? args) (list? args))
@@ -401,10 +396,10 @@
             args))
       (error 'dynamic-parse-cond "Not a list of cond-clauses: ~s" args)))
 
-; dynamic-parse-cond-clause
+;; dynamic-parse-cond-clause
 
 (define (dynamic-parse-cond-clause env e)
-  ;; ***Note***: Only (<test> <sequence>) is permitted!
+;;; ***Note***: Only (<test> <sequence>) is permitted!
   (if (pair? e)
       (cons
        (if (eqv? (car e) 'else)
@@ -414,7 +409,7 @@
       (error 'dynamic-parse-cond-clause "Not a cond-clause: ~s" e)))
 
 
-; dynamic-parse-and
+;; dynamic-parse-and
 
 (define (dynamic-parse-and env args)
   (if (list? args)
@@ -423,7 +418,7 @@
       (error 'dynamic-parse-and "Not a list of arguments: ~s" args)))
 
 
-; dynamic-parse-or
+;; dynamic-parse-or
 
 (define (dynamic-parse-or env args)
   (if (list? args)
@@ -432,18 +427,18 @@
       (error 'dynamic-parse-or "Not a list of arguments: ~s" args)))
 
 
-; dynamic-parse-case
+;; dynamic-parse-case
 
 (define (dynamic-parse-case env args)
   (if (and (list? args) (> (length args) 1))
       (dynamic-parse-action-case-expression
        (dynamic-parse-expression env (car args))
        (map (lambda (e)
-               (dynamic-parse-case-clause env e))
-             (cdr args)))
+              (dynamic-parse-case-clause env e))
+            (cdr args)))
       (error 'dynamic-parse-case "Not a list of clauses: ~s" args)))
 
-; dynamic-parse-case-clause
+;; dynamic-parse-case-clause
 
 (define (dynamic-parse-case-clause env e)
   (if (pair? e)
@@ -458,7 +453,7 @@
       (error 'dynamic-parse-case-clause "Not case clause: ~s" e)))
 
 
-; dynamic-parse-let
+;; dynamic-parse-let
 
 (define (dynamic-parse-let env args)
   (if (pair? args)
@@ -468,10 +463,10 @@
       (error 'dynamic-parse-let "Illegal bindings/body: ~s" args)))
 
 
-; dynamic-parse-normal-let
+;; dynamic-parse-normal-let
 
 (define (dynamic-parse-normal-let env args)
-  ;; parses "normal" let-expressions
+;;; parses "normal" let-expressions
   (let* ((bindings (car args))
          (body (cdr args))
          (env-ast (dynamic-parse-parallel-bindings env bindings))
@@ -481,10 +476,10 @@
      bresults
      (dynamic-parse-body (extend-env-with-env env nenv) body))))
 
-; dynamic-parse-named-let
+;; dynamic-parse-named-let
 
 (define (dynamic-parse-named-let env args)
-  ;; parses a named let-expression
+;;; parses a named let-expression
   (if (pair? (cdr args))
       (let* ((variable (car args))
              (bindings (cadr args))
@@ -497,31 +492,31 @@
              (bresults (cdr env-ast)))
         (dynamic-parse-action-named-let-expression
          vres bresults
-         (dynamic-parse-body (extend-env-with-env 
-                      (extend-env-with-binding env vbind)
-                      nenv) body)))
+         (dynamic-parse-body (extend-env-with-env
+                              (extend-env-with-binding env vbind)
+                              nenv) body)))
       (error 'dynamic-parse-named-let "Illegal named let-expression: ~s" args)))
 
 
-; dynamic-parse-parallel-bindings
+;; dynamic-parse-parallel-bindings
 
 (define (dynamic-parse-parallel-bindings env bindings)
-  ; returns a pair consisting of an environment
-  ; and a list of pairs (variable . asg)
-  ; ***Note***: the list of pairs is returned in reverse unzipped form!
+  ;; returns a pair consisting of an environment
+  ;; and a list of pairs (variable . asg)
+  ;; ***Note***: the list of pairs is returned in reverse unzipped form!
   (if (list-of-list-of-2s? bindings)
       (let* ((env-formals-asg
-             (dynamic-parse-formal* (map car bindings)))
-            (nenv (car env-formals-asg))
-            (bresults (cdr env-formals-asg))
-            (exprs-asg
-             (dynamic-parse-expression* env (map cadr bindings))))
+              (dynamic-parse-formal* (map car bindings)))
+             (nenv (car env-formals-asg))
+             (bresults (cdr env-formals-asg))
+             (exprs-asg
+              (dynamic-parse-expression* env (map cadr bindings))))
         (cons nenv (cons bresults exprs-asg)))
       (error 'dynamic-parse-parallel-bindings
              "Not a list of bindings: ~s" bindings)))
 
 
-; dynamic-parse-let*
+;; dynamic-parse-let*
 
 (define (dynamic-parse-let* env args)
   (if (pair? args)
@@ -535,20 +530,20 @@
          (dynamic-parse-body (extend-env-with-env env nenv) body)))
       (error 'dynamic-parse-let* "Illegal bindings/body: ~s" args)))
 
-; dynamic-parse-sequential-bindings
+;; dynamic-parse-sequential-bindings
 
 (define (dynamic-parse-sequential-bindings env bindings)
-  ; returns a pair consisting of an environment
-  ; and a list of pairs (variable . asg)
-  ;; ***Note***: the list of pairs is returned in reverse unzipped form!
+  ;; returns a pair consisting of an environment
+  ;; and a list of pairs (variable . asg)
+;;; ***Note***: the list of pairs is returned in reverse unzipped form!
   (letrec
       ((psb
         (lambda (f-env c-env var-defs expr-asgs binds)
-          ;; f-env: forbidden environment
-          ;; c-env: constructed environment
-          ;; var-defs: results of formals
-          ;; expr-asgs: results of corresponding expressions
-          ;; binds: reminding bindings to process
+;;; f-env: forbidden environment
+;;; c-env: constructed environment
+;;; var-defs: results of formals
+;;; expr-asgs: results of corresponding expressions
+;;; binds: reminding bindings to process
           (cond
            ((null? binds)
             (cons f-env (cons var-defs expr-asgs)))
@@ -577,7 +572,7 @@
                   (reverse (cddr env-vdefs-easgs)))))))
 
 
-; dynamic-parse-letrec
+;; dynamic-parse-letrec
 
 (define (dynamic-parse-letrec env args)
   (if (pair? args)
@@ -587,14 +582,14 @@
              (nenv (car env-ast))
              (bresults (cdr env-ast)))
         (dynamic-parse-action-letrec-expression
-          bresults
-          (dynamic-parse-body (extend-env-with-env env nenv) body)))
+         bresults
+         (dynamic-parse-body (extend-env-with-env env nenv) body)))
       (error 'dynamic-parse-letrec "Illegal bindings/body: ~s" args)))
 
-; dynamic-parse-recursive-bindings
+;; dynamic-parse-recursive-bindings
 
 (define (dynamic-parse-recursive-bindings env bindings)
-  ;; ***Note***: the list of pairs is returned in reverse unzipped form!
+;;; ***Note***: the list of pairs is returned in reverse unzipped form!
   (if (list-of-list-of-2s? bindings)
       (let* ((env-formals-asg
               (dynamic-parse-formal* (map car bindings)))
@@ -612,51 +607,51 @@
       (error 'dynamic-parse-recursive-bindings "Illegal bindings: ~s" bindings)))
 
 
-; dynamic-parse-do
+;; dynamic-parse-do
 
 (define (dynamic-parse-do env args)
-  ;; parses do-expressions
-  ;; ***Note***: Not implemented!
+;;; parses do-expressions
+;;; ***Note***: Not implemented!
   (error 'dynamic-parse-do "Nothing yet..."))
 
-; dynamic-parse-quasiquote
+;; dynamic-parse-quasiquote
 
 (define (dynamic-parse-quasiquote env args)
-  ;; ***Note***: Not implemented!
+;;; ***Note***: Not implemented!
   (error 'dynamic-parse-quasiquote "Nothing yet..."))
 
 
 ;; Command
 
-; dynamic-parse-command
+;; dynamic-parse-command
 
 (define (dynamic-parse-command env c)
   (if (pair? c)
       (let ((op (car c))
             (args (cdr c)))
         (case op
-         ((define) (dynamic-parse-define env args))
-;        ((begin) (dynamic-parse-command* env args))  ;; AKW
-         ((begin) (dynamic-parse-action-begin-expression (dynamic-parse-command* env args)))
-         (else (dynamic-parse-expression env c))))
+          ((define) (dynamic-parse-define env args))
+          ;;        ((begin) (dynamic-parse-command* env args));;; AKW
+          ((begin) (dynamic-parse-action-begin-expression (dynamic-parse-command* env args)))
+          (else (dynamic-parse-expression env c))))
       (dynamic-parse-expression env c)))
 
 
-; dynamic-parse-command*
+;; dynamic-parse-command*
 
 (define (dynamic-parse-command* env commands)
-  ;; parses a sequence of commands
+;;; parses a sequence of commands
   (if (list? commands)
       (map (lambda (command) (dynamic-parse-command env command)) commands)
       (error 'dynamic-parse-command* "Invalid sequence of commands: ~s" commands)))
 
 
-; dynamic-parse-define
+;; dynamic-parse-define
 
 (define (dynamic-parse-define env args)
-  ;; three cases -- see IEEE Scheme, sect. 5.2
-  ;; ***Note***: the parser admits forms (define (x . y) ...)
-  ;; ***Note***: Variables are treated as applied occurrences!
+;;; three cases -- see IEEE Scheme, sect. 5.2
+;;; ***Note***: the parser admits forms (define (x . y) ...)
+;;; ***Note***: Variables are treated as applied occurrences!
   (if (pair? args)
       (let ((pattern (car args))
             (exp-or-body (cdr args)))
@@ -682,29 +677,29 @@
 
 ;; Auxiliary routines
 
-; forall?
+;; forall?
 
 (define (forall? pred list)
   (if (null? list)
       #t
       (and (pred (car list)) (forall? pred (cdr list)))))
 
-; list-of-1?
+;; list-of-1?
 
 (define (list-of-1? l)
   (and (pair? l) (null? (cdr l))))
 
-; list-of-2?
+;; list-of-2?
 
 (define (list-of-2? l)
   (and (pair? l) (pair? (cdr l)) (null? (cddr l))))
 
-; list-of-3?
+;; list-of-3?
 
 (define (list-of-3? l)
   (and (pair? l) (pair? (cdr l)) (pair? (cddr l)) (null? (cdddr l))))
 
-; list-of-list-of-2s?
+;; list-of-list-of-2s?
 
 (define (list-of-list-of-2s? e)
   (cond
@@ -717,7 +712,7 @@
 
 ;; File processing
 
-; dynamic-parse-from-port
+;; dynamic-parse-from-port
 
 (define (dynamic-parse-from-port port)
   (let ((next-input (read port)))
@@ -727,25 +722,25 @@
          (dynamic-parse-command dynamic-empty-env next-input)
          (dynamic-parse-from-port port)))))
 
-; dynamic-parse-file
+;; dynamic-parse-file
 
 (define (dynamic-parse-file file-name)
   (let ((input-port (open-input-file file-name)))
     (dynamic-parse-from-port input-port)))
-;----------------------------------------------------------------------------
-; Implementation of Union/find data structure in Scheme
-;----------------------------------------------------------------------------
+;;----------------------------------------------------------------------------
+;; Implementation of Union/find data structure in Scheme
+;;----------------------------------------------------------------------------
 
-;; for union/find the following attributes are necessary: rank, parent 
+;; for union/find the following attributes are necessary: rank, parent
 ;; (see Tarjan, "Data structures and network algorithms", 1983)
 ;; In the Scheme realization an element is represented as a single
-;; cons cell; its address is the element itself; the car field contains 
+;; cons cell; its address is the element itself; the car field contains
 ;; the parent, the cdr field is an address for a cons
 ;; cell containing the rank (car field) and the information (cdr field)
 
 
 ;; general union/find data structure
-;; 
+;;
 ;; gen-element: Info -> Elem
 ;; find: Elem -> Elem
 ;; link: Elem! x Elem! -> Elem
@@ -755,41 +750,41 @@
 
 
 (define (gen-element info)
-  ; generates a new element: the parent field is initialized to '(),
-  ; the rank field to 0
+  ;; generates a new element: the parent field is initialized to '(),
+  ;; the rank field to 0
   (cons '() (cons 0 info)))
 
 (define info (lambda (l) (cddr l)))
-  ; returns the information stored in an element
+;; returns the information stored in an element
 
 (define (set-info! elem info)
-  ; sets the info-field of elem to info
+  ;; sets the info-field of elem to info
   (set-cdr! (cdr elem) info))
 
-; (define (find! x)
-;   ; finds the class representative of x and sets the parent field 
-;   ; directly to the class representative (a class representative has
-;   ; '() as its parent) (uses path halving)
-;   ;(display "Find!: ")
-;   ;(display (pretty-print (info x)))
-;   ;(newline)
-;   (let ((px (car x)))
-;     (if (null? px)
-;       x
-;       (let ((ppx (car px)))
-;         (if (null? ppx)
-;             px
-;             (begin
-;               (set-car! x ppx)
-;               (find! ppx)))))))
+;; (define (find! x)
+;;;; finds the class representative of x and sets the parent field
+;;;; directly to the class representative (a class representative has
+;;;; '() as its parent) (uses path halving)
+;;;;(display "Find!: ")
+;;;;(display (pretty-print (info x)))
+;;;;(newline)
+;;   (let ((px (car x)))
+;;     (if (null? px)
+;;       x
+;;       (let ((ppx (car px)))
+;;         (if (null? ppx)
+;;             px
+;;             (begin
+;;               (set-car! x ppx)
+;;               (find! ppx)))))))
 
 (define (find! elem)
-  ; finds the class representative of elem and sets the parent field 
-  ; directly to the class representative (a class representative has
-  ; '() as its parent)
-  ;(display "Find!: ")
-  ;(display (pretty-print (info elem)))
-  ;(newline)
+  ;; finds the class representative of elem and sets the parent field
+  ;; directly to the class representative (a class representative has
+  ;; '() as its parent)
+  ;;(display "Find!: ")
+  ;;(display (pretty-print (info elem)))
+  ;;(newline)
   (let ((p-elem (car elem)))
     (if (null? p-elem)
         elem
@@ -798,12 +793,12 @@
           rep-elem))))
 
 (define (link! elem-1 elem-2)
-  ; links class elements by rank
-  ; they must be distinct class representatives
-  ; returns the class representative of the merged equivalence classes
-  ;(display "Link!: ")
-  ;(display (pretty-print (list (info elem-1) (info elem-2))))
-  ;(newline)
+  ;; links class elements by rank
+  ;; they must be distinct class representatives
+  ;; returns the class representative of the merged equivalence classes
+  ;;(display "Link!: ")
+  ;;(display (pretty-print (list (info elem-1) (info elem-2))))
+  ;;(newline)
   (let ((rank-1 (cadr elem-1))
         (rank-2 (cadr elem-2)))
     (cond
@@ -820,20 +815,20 @@
 
 (define asymm-link! (lambda (l x) (set-car! l x)))
 
-;(define (asymm-link! elem-1 elem-2)
-  ; links elem-1 onto elem-2 no matter what rank; 
-  ; does not update the rank of elem-2 and does not return a value
-  ; the two arguments must be distinct
-  ;(display "AsymmLink: ")
-  ;(display (pretty-print (list (info elem-1) (info elem-2))))
-  ;(newline)
-  ;(set-car! elem-1 elem-2))
+;;(define (asymm-link! elem-1 elem-2)
+;; links elem-1 onto elem-2 no matter what rank;
+;; does not update the rank of elem-2 and does not return a value
+;; the two arguments must be distinct
+;;(display "AsymmLink: ")
+;;(display (pretty-print (list (info elem-1) (info elem-2))))
+;;(newline)
+;;(set-car! elem-1 elem-2))
 
-;----------------------------------------------------------------------------
-; Type management
-;----------------------------------------------------------------------------
+;;----------------------------------------------------------------------------
+;; Type management
+;;----------------------------------------------------------------------------
 
-; introduces type variables and types for Scheme,
+;; introduces type variables and types for Scheme,
 
 
 ;; type TVar (type variables)
@@ -869,69 +864,69 @@
 ;; array:             TVar -> TVar
 
 
-; Needed packages: union/find
+;; Needed packages: union/find
 
-;(load "union-fi.so")
+;;(load "union-fi.so")
 
-; TVar
+;; TVar
 
 (define counter 0)
-; counter for generating tvar id's
+;; counter for generating tvar id's
 
 (define (gen-id)
-  ; generates a new id (for printing purposes)
+  ;; generates a new id (for printing purposes)
   (set! counter (+ counter 1))
   counter)
 
 (define (gen-tvar)
-  ; generates a new type variable from a new symbol
-  ; uses union/find elements with two info fields
-  ; a type variable has exactly four fields:
-  ; car:     TVar (the parent field; initially null)
-  ; cadr:    Number (the rank field; is always nonnegative)
-  ; caddr:   Symbol (the type variable identifier; used only for printing)
-  ; cdddr:   Type (the leq field; initially null)
+  ;; generates a new type variable from a new symbol
+  ;; uses union/find elements with two info fields
+  ;; a type variable has exactly four fields:
+  ;; car:     TVar (the parent field; initially null)
+  ;; cadr:    Number (the rank field; is always nonnegative)
+  ;; caddr:   Symbol (the type variable identifier; used only for printing)
+  ;; cdddr:   Type (the leq field; initially null)
   (gen-element (cons (gen-id) '())))
 
 (define (gen-type tcon targs)
-  ; generates a new type variable with an associated type definition
+  ;; generates a new type variable with an associated type definition
   (gen-element (cons (gen-id) (cons tcon targs))))
 
 (define dynamic (gen-element (cons 0 '())))
-; the special type variable dynamic
-; Generic operations
+;; the special type variable dynamic
+;; Generic operations
 
 (define (tvar-id tvar)
-  ; returns the (printable) symbol representing the type variable
+  ;; returns the (printable) symbol representing the type variable
   (car (info tvar)))
 
 (define (tvar-def tvar)
-  ; returns the type definition (if any) of the type variable
+  ;; returns the type definition (if any) of the type variable
   (cdr (info tvar)))
 
 (define (set-def! tvar tcon targs)
-  ; sets the type definition part of tvar to type
+  ;; sets the type definition part of tvar to type
   (set-cdr! (info tvar) (cons tcon targs))
   '())
 
 (define (reset-def! tvar)
-  ; resets the type definition part of tvar to nil
+  ;; resets the type definition part of tvar to nil
   (set-cdr! (info tvar) '()))
 
 (define type-con (lambda (l) (car l)))
-; returns the type constructor of a type definition
+;; returns the type constructor of a type definition
 
 (define type-args (lambda (l) (cdr l)))
-; returns the type variables of a type definition
+;; returns the type variables of a type definition
 
 (define (tvar->string tvar)
-  ; converts a tvar's id to a string
+  ;; converts a tvar's id to a string
   (if (eqv? (tvar-id tvar) 0)
       "Dynamic"
       (string-append "t#" (number->string (tvar-id tvar) 10))))
 
 (define (tvar-show tv)
-  ; returns a printable list representation of type variable tv
+  ;; returns a printable list representation of type variable tv
   (let* ((tv-rep (find! tv))
          (tv-def (tvar-def tv-rep)))
     (cons (tvar->string tv-rep)
@@ -940,7 +935,7 @@
               (cons 'is (type-show tv-def))))))
 
 (define (type-show type)
-  ; returns a printable list representation of type definition type
+  ;; returns a printable list representation of type definition type
   (cond
    ((eqv? (type-con type) ptype-con)
     (let ((new-tvar (gen-tvar)))
@@ -955,9 +950,9 @@
 
 
 
-; Special type operations
+;; Special type operations
 
-; type constructor literals
+;; type constructor literals
 
 (define boolean-con 'boolean)
 (define char-con 'char)
@@ -969,11 +964,11 @@
 (define symbol-con 'symbol)
 (define vector-con 'vector)
 
-; type constants and type constructors
+;; type constants and type constructors
 
 (define (null)
-  ; ***Note***: Temporarily changed to be a pair!
-  ; (gen-type null-con '())
+  ;; ***Note***: Temporarily changed to be a pair!
+  ;; (gen-type null-con '())
   (pair (gen-tvar) (gen-tvar)))
 (define (boolean)
   (gen-type boolean-con '()))
@@ -993,7 +988,7 @@
   (gen-type procedure-con (list arg-tvar res-tvar)))
 
 
-; equivalencing of type variables
+;; equivalencing of type variables
 
 (define (equiv! tv1 tv2)
   (let* ((tv1-rep (find! tv1))
@@ -1009,21 +1004,21 @@
       (equiv-with-dynamic! tv2-rep))
      ((null? tv1-def)
       (if (null? tv2-def)
-          ; both tv1 and tv2 are distinct type variables
+          ;; both tv1 and tv2 are distinct type variables
           (link! tv1-rep tv2-rep)
-          ; tv1 is a type variable, tv2 is a (nondynamic) type
+          ;; tv1 is a type variable, tv2 is a (nondynamic) type
           (asymm-link! tv1-rep tv2-rep)))
      ((null? tv2-def)
-      ; tv1 is a (nondynamic) type, tv2 is a type variable
+      ;; tv1 is a (nondynamic) type, tv2 is a type variable
       (asymm-link! tv2-rep tv1-rep))
      ((eqv? (type-con tv1-def) (type-con tv2-def))
-      ; both tv1 and tv2 are (nondynamic) types with equal numbers of
-      ; arguments
+      ;; both tv1 and tv2 are (nondynamic) types with equal numbers of
+      ;; arguments
       (link! tv1-rep tv2-rep)
       (map equiv! (type-args tv1-def) (type-args tv2-def)))
      (else
-      ; tv1 and tv2 are types with distinct type constructors or different
-      ; numbers of arguments
+      ;; tv1 and tv2 are types with distinct type constructors or different
+      ;; numbers of arguments
       (equiv-with-dynamic! tv1-rep)
       (equiv-with-dynamic! tv2-rep))))
   '())
@@ -1036,19 +1031,19 @@
           (if (not (null? tv-def))
               (map equiv-with-dynamic! (type-args tv-def))))))
   '())
-;----------------------------------------------------------------------------
-; Polymorphic type management
-;----------------------------------------------------------------------------
+;;----------------------------------------------------------------------------
+;; Polymorphic type management
+;;----------------------------------------------------------------------------
 
-; introduces parametric polymorphic types
+;; introduces parametric polymorphic types
 
 
 ;; forall: (Tvar -> Tvar) -> TVar
 ;; fix: (Tvar -> Tvar) -> Tvar
-;;  
+;;
 ;; instantiate-type: TVar -> TVar
 
-; type constructor literal for polymorphic types
+;; type constructor literal for polymorphic types
 
 (define ptype-con 'forall)
 
@@ -1076,13 +1071,13 @@
                        (tv-func5 tv1 tv2 tv3 tv4 tv5))))))
 
 
-; (polymorphic) instantiation
+;; (polymorphic) instantiation
 
 (define (instantiate-type tv)
-  ; instantiates type tv and returns a generic instance
+  ;; instantiates type tv and returns a generic instance
   (let* ((tv-rep (find! tv))
          (tv-def (tvar-def tv-rep)))
-    (cond 
+    (cond
      ((null? tv-def)
       tv-rep)
      ((eqv? (type-con tv-def) ptype-con)
@@ -1091,7 +1086,7 @@
       tv-rep))))
 
 (define (fix tv-func)
-  ; forms a recursive type: the fixed point of type mapping tv-func
+  ;; forms a recursive type: the fixed point of type mapping tv-func
   (let* ((new-tvar (gen-tvar))
          (inst-tvar (tv-func new-tvar))
          (inst-def (tvar-def inst-tvar)))
@@ -1099,35 +1094,35 @@
         (error 'fix "Illegal recursive type: ~s"
                (list (tvar-show new-tvar) '= (tvar-show inst-tvar)))
         (begin
-          (set-def! new-tvar 
+          (set-def! new-tvar
                     (type-con inst-def)
                     (type-args inst-def))
           new-tvar))))
 
-  
-;----------------------------------------------------------------------------
-;       Constraint management 
-;----------------------------------------------------------------------------
+
+;;----------------------------------------------------------------------------
+;;       Constraint management
+;;----------------------------------------------------------------------------
 
 
-; constraints
+;; constraints
 
 (define gen-constr (lambda (a b) (cons a b)))
-; generates an equality between tvar1 and tvar2
+;; generates an equality between tvar1 and tvar2
 
 (define constr-lhs (lambda (c) (car c)))
-; returns the left-hand side of a constraint
+;; returns the left-hand side of a constraint
 
 (define constr-rhs (lambda (c) (cdr c)))
-; returns the right-hand side of a constraint
+;; returns the right-hand side of a constraint
 
 (define (constr-show c)
-  (cons (tvar-show (car c)) 
-        (cons '= 
+  (cons (tvar-show (car c))
+        (cons '=
               (cons (tvar-show (cdr c)) '()))))
 
 
-; constraint set management
+;; constraint set management
 
 (define global-constraints '())
 
@@ -1139,30 +1134,30 @@
         (cons (gen-constr lhs rhs) global-constraints))
   '())
 
-(define (glob-constr-show) 
-  ; returns printable version of global constraints
+(define (glob-constr-show)
+  ;; returns printable version of global constraints
   (map constr-show global-constraints))
 
 
-; constraint normalization
+;; constraint normalization
 
-; Needed packages: type management
+;; Needed packages: type management
 
-;(load "typ-mgmt.so")
+;;(load "typ-mgmt.so")
 
-(define (normalize-global-constraints!) 
+(define (normalize-global-constraints!)
   (normalize! global-constraints)
   (init-global-constraints!))
 
 (define (normalize! constraints)
   (map (lambda (c)
          (equiv! (constr-lhs c) (constr-rhs c))) constraints))
-; ----------------------------------------------------------------------------
-; Abstract syntax definition and parse actions
-; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+;; Abstract syntax definition and parse actions
+;; ----------------------------------------------------------------------------
 
-; Needed packages: ast-gen.ss
-;(load "ast-gen.ss")
+;; Needed packages: ast-gen.ss
+;;(load "ast-gen.ss")
 
 ;; Abstract syntax
 ;;
@@ -1228,7 +1223,7 @@
 
 ;; Abstract syntax operators
 
-; Datum
+;; Datum
 
 (define null-const 0)
 (define boolean-const 1)
@@ -1239,13 +1234,13 @@
 (define vector-const 6)
 (define pair-const 7)
 
-; Bindings
+;; Bindings
 
 (define var-def 8)
 (define null-def 29)
 (define pair-def 30)
 
-; Expr
+;; Expr
 
 (define variable 9)
 (define identifier 10)
@@ -1267,7 +1262,7 @@
 (define null-arg 31)
 (define pair-arg 32)
 
-; Command
+;; Command
 
 (define definition 26)
 (define function-definition 27)
@@ -1277,136 +1272,136 @@
 ;; Parse actions for abstract syntax construction
 
 (define (dynamic-parse-action-null-const)
-  ;; dynamic-parse-action for '()
+;;; dynamic-parse-action for '()
   (ast-gen null-const '()))
 
 (define (dynamic-parse-action-boolean-const e)
-  ;; dynamic-parse-action for #f and #t
+;;; dynamic-parse-action for #f and #t
   (ast-gen boolean-const e))
 
 (define (dynamic-parse-action-char-const e)
-  ;; dynamic-parse-action for character constants
+;;; dynamic-parse-action for character constants
   (ast-gen char-const e))
 
 (define (dynamic-parse-action-number-const e)
-  ;; dynamic-parse-action for number constants
+;;; dynamic-parse-action for number constants
   (ast-gen number-const e))
 
 (define (dynamic-parse-action-string-const e)
-  ;; dynamic-parse-action for string literals
+;;; dynamic-parse-action for string literals
   (ast-gen string-const e))
 
 (define (dynamic-parse-action-symbol-const e)
-  ;; dynamic-parse-action for symbol constants
+;;; dynamic-parse-action for symbol constants
   (ast-gen symbol-const e))
 
 (define (dynamic-parse-action-vector-const e)
-  ;; dynamic-parse-action for vector literals
+;;; dynamic-parse-action for vector literals
   (ast-gen vector-const e))
 
 (define (dynamic-parse-action-pair-const e1 e2)
-  ;; dynamic-parse-action for pairs
+;;; dynamic-parse-action for pairs
   (ast-gen pair-const (cons e1 e2)))
 
 (define (dynamic-parse-action-var-def e)
-  ;; dynamic-parse-action for defining occurrences of variables;
-  ;; e is a symbol
+;;; dynamic-parse-action for defining occurrences of variables;
+;;; e is a symbol
   (ast-gen var-def e))
 
 (define (dynamic-parse-action-null-formal)
-  ;; dynamic-parse-action for null-list of formals
+;;; dynamic-parse-action for null-list of formals
   (ast-gen null-def '()))
 
 (define (dynamic-parse-action-pair-formal d1 d2)
-  ;; dynamic-parse-action for non-null list of formals;
-  ;; d1 is the result of parsing the first formal,
-  ;; d2 the result of parsing the remaining formals
+;;; dynamic-parse-action for non-null list of formals;
+;;; d1 is the result of parsing the first formal,
+;;; d2 the result of parsing the remaining formals
   (ast-gen pair-def (cons d1 d2)))
 
 (define (dynamic-parse-action-variable e)
-  ;; dynamic-parse-action for applied occurrences of variables
-  ;; ***Note***: e is the result of a dynamic-parse-action on the
-  ;; corresponding variable definition!
+;;; dynamic-parse-action for applied occurrences of variables
+;;; ***Note***: e is the result of a dynamic-parse-action on the
+;;; corresponding variable definition!
   (ast-gen variable e))
 
 (define (dynamic-parse-action-identifier e)
-  ;; dynamic-parse-action for undeclared identifiers (free variable
-  ;; occurrences)
-  ;; ***Note***: e is a symbol (legal identifier)
+;;; dynamic-parse-action for undeclared identifiers (free variable
+;;; occurrences)
+;;; ***Note***: e is a symbol (legal identifier)
   (ast-gen identifier e))
- 
+
 (define (dynamic-parse-action-null-arg)
-  ;; dynamic-parse-action for a null list of arguments in a procedure call
+;;; dynamic-parse-action for a null list of arguments in a procedure call
   (ast-gen null-arg '()))
 
 (define (dynamic-parse-action-pair-arg a1 a2)
-  ;; dynamic-parse-action for a non-null list of arguments in a procedure call
-  ;; a1 is the result of parsing the first argument, 
-  ;; a2 the result of parsing the remaining arguments
+;;; dynamic-parse-action for a non-null list of arguments in a procedure call
+;;; a1 is the result of parsing the first argument,
+;;; a2 the result of parsing the remaining arguments
   (ast-gen pair-arg (cons a1 a2)))
 
 (define (dynamic-parse-action-procedure-call op args)
-  ;; dynamic-parse-action for procedure calls: op function, args list of arguments
+;;; dynamic-parse-action for procedure calls: op function, args list of arguments
   (ast-gen procedure-call (cons op args)))
 
 (define (dynamic-parse-action-lambda-expression formals body)
-  ;; dynamic-parse-action for lambda-abstractions
+;;; dynamic-parse-action for lambda-abstractions
   (ast-gen lambda-expression (cons formals body)))
 
 (define (dynamic-parse-action-conditional test then-branch else-branch)
-  ;; dynamic-parse-action for conditionals (if-then-else expressions)
+;;; dynamic-parse-action for conditionals (if-then-else expressions)
   (ast-gen conditional (cons test (cons then-branch else-branch))))
 
 (define (dynamic-parse-action-empty)
-  ;; dynamic-parse-action for missing or empty field
+;;; dynamic-parse-action for missing or empty field
   (ast-gen empty '()))
 
 (define (dynamic-parse-action-assignment lhs rhs)
-  ;; dynamic-parse-action for assignment
+;;; dynamic-parse-action for assignment
   (ast-gen assignment (cons lhs rhs)))
 
 (define (dynamic-parse-action-begin-expression body)
-  ;; dynamic-parse-action for begin-expression
+;;; dynamic-parse-action for begin-expression
   (ast-gen begin-expression body))
 
 (define (dynamic-parse-action-cond-expression clauses)
-  ;; dynamic-parse-action for cond-expressions
+;;; dynamic-parse-action for cond-expressions
   (ast-gen cond-expression clauses))
 
 (define (dynamic-parse-action-and-expression args)
-  ;; dynamic-parse-action for and-expressions
+;;; dynamic-parse-action for and-expressions
   (ast-gen and-expression args))
 
 (define (dynamic-parse-action-or-expression args)
-  ;; dynamic-parse-action for or-expressions
+;;; dynamic-parse-action for or-expressions
   (ast-gen or-expression args))
 
 (define (dynamic-parse-action-case-expression key clauses)
-  ;; dynamic-parse-action for case-expressions
+;;; dynamic-parse-action for case-expressions
   (ast-gen case-expression (cons key clauses)))
 
 (define (dynamic-parse-action-let-expression bindings body)
-  ;; dynamic-parse-action for let-expressions
+;;; dynamic-parse-action for let-expressions
   (ast-gen let-expression (cons bindings body)))
 
 (define (dynamic-parse-action-named-let-expression variable bindings body)
-  ;; dynamic-parse-action for named-let expressions
+;;; dynamic-parse-action for named-let expressions
   (ast-gen named-let-expression (cons variable (cons bindings body))))
 
 (define (dynamic-parse-action-let*-expression bindings body)
-  ;; dynamic-parse-action for let-expressions
+;;; dynamic-parse-action for let-expressions
   (ast-gen let*-expression (cons bindings body)))
 
 (define (dynamic-parse-action-letrec-expression bindings body)
-  ;; dynamic-parse-action for let-expressions
+;;; dynamic-parse-action for let-expressions
   (ast-gen letrec-expression (cons bindings body)))
 
 (define (dynamic-parse-action-definition variable expr)
-  ;; dynamic-parse-action for simple definitions
+;;; dynamic-parse-action for simple definitions
   (ast-gen definition (cons variable expr)))
 
 (define (dynamic-parse-action-function-definition variable formals body)
-  ;; dynamic-parse-action for function definitions
+;;; dynamic-parse-action for function definitions
   (ast-gen function-definition (cons variable (cons formals body))))
 
 
@@ -1418,8 +1413,8 @@
 ;; Pretty-printing abstract syntax trees
 
 (define (ast-show ast)
-  ;; converts abstract syntax tree to list representation (Scheme program)
-  ;; ***Note***: check translation of constructors to numbers at the top of the file
+;;; converts abstract syntax tree to list representation (Scheme program)
+;;; ***Note***: check translation of constructors to numbers at the top of the file
   (let ((syntax-op (ast-con ast))
         (syntax-arg (ast-arg ast)))
     (case syntax-op
@@ -1431,7 +1426,7 @@
       ((7) (list 'cons (ast-show (car syntax-arg)) (ast-show (cdr syntax-arg))))
       ((9) (ast-arg syntax-arg))
       ((11) (cons (ast-show (car syntax-arg)) (ast-show (cdr syntax-arg))))
-      ((12) (cons 'lambda (cons (ast-show (car syntax-arg)) 
+      ((12) (cons 'lambda (cons (ast-show (car syntax-arg))
                                 (map ast-show (cdr syntax-arg)))))
       ((13) (cons 'if (cons (ast-show (car syntax-arg))
                             (cons (ast-show (cadr syntax-arg))
@@ -1513,24 +1508,24 @@
 ;; ast*-show
 
 (define (ast*-show p)
-  ;; shows a list of abstract syntax trees
+;;; shows a list of abstract syntax trees
   (map ast-show p))
 
 
 ;; datum-show
 
 (define (datum-show ast)
-  ;; prints an abstract syntax tree as a datum
+;;; prints an abstract syntax tree as a datum
   (case (ast-con ast)
     ((0 1 2 3 4 5) (ast-arg ast))
     ((6) (list->vector (map datum-show (ast-arg ast))))
     ((7) (cons (datum-show (car (ast-arg ast))) (datum-show (cdr (ast-arg ast)))))
     (else (error 'datum-show "This should not happen!"))))
 
-; write-to-port
+;; write-to-port
 
 (define (write-to-port prog port)
-  ; writes a program to a port
+  ;; writes a program to a port
   (for-each
    (lambda (command)
      (write command port)
@@ -1538,24 +1533,24 @@
    prog)
   '())
 
-; write-file 
+;; write-file
 
 (define (write-to-file prog filename)
-  ; write a program to a file
+  ;; write a program to a file
   (let ((port (open-output-file filename)))
     (write-to-port prog port)
     (close-output-port port)
     '()))
 
-; ----------------------------------------------------------------------------
-; Typed abstract syntax tree management: constraint generation, display, etc.
-; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+;; Typed abstract syntax tree management: constraint generation, display, etc.
+;; ----------------------------------------------------------------------------
 
 
 ;; Abstract syntax operations, incl. constraint generation
 
 (define (ast-gen syntax-op arg)
-  ; generates all attributes and performs semantic side effects
+  ;; generates all attributes and performs semantic side effects
   (let ((ntvar
          (case syntax-op
            ((0 29 31) (null))
@@ -1579,8 +1574,8 @@
                        (instantiate-type (binding-value in-env))
                        (let ((new-tvar (gen-tvar)))
                          (set! dynamic-top-level-env (extend-env-with-binding
-                                              dynamic-top-level-env
-                                              (gen-binding arg new-tvar)))
+                                                      dynamic-top-level-env
+                                                      (gen-binding arg new-tvar)))
                          new-tvar))))
            ((11) (let ((new-tvar (gen-tvar)))
                    (add-constr! (procedure (ast-tvar (cdr arg)) new-tvar)
@@ -1621,7 +1616,7 @@
            ((17 18) (for-each (lambda (e)
                                 (add-constr! (boolean) (ast-tvar e)))
                               arg)
-                    (boolean))
+            (boolean))
            ((19 21 22) (let ((var-def-tvars (map ast-tvar (caar arg)))
                              (def-expr-types (map ast-tvar (cdar arg)))
                              (body-type (ast-tvar (tail (cdr arg)))))
@@ -1665,15 +1660,15 @@
 ;; tail
 
 (define (tail l)
-  ;; returns the tail of a nonempty list
+;;; returns the tail of a nonempty list
   (if (null? (cdr l))
       (car l)
       (tail (cdr l))))
 
-; convert-tvars
+;; convert-tvars
 
 (define (convert-tvars tvar-list)
-  ;; converts a list of tvars to a single tvar
+;;; converts a list of tvars to a single tvar
   (cond
    ((null? tvar-list) (null))
    ((pair? tvar-list) (pair (car tvar-list)
@@ -1684,7 +1679,7 @@
 ;; Pretty-printing abstract syntax trees
 
 (define (tast-show ast)
-  ;; converts abstract syntax tree to list representation (Scheme program)
+;;; converts abstract syntax tree to list representation (Scheme program)
   (let ((syntax-op (ast-con ast))
         (syntax-tvar (tvar-show (ast-tvar ast)))
         (syntax-arg (ast-arg ast)))
@@ -1783,7 +1778,7 @@
 ;; tast*-show
 
 (define (tast*-show p)
-  ;; shows a list of abstract syntax trees
+;;; shows a list of abstract syntax trees
   (map tast-show p))
 
 
@@ -1808,13 +1803,13 @@
   (list
    (cons tag-counter no-tag-counter)
    (cons untag-counter no-untag-counter)
-   (cons may-untag-counter no-may-untag-counter)))  
+   (cons may-untag-counter no-may-untag-counter)))
 
 
 ;; tag-show
 
 (define (tag-show tvar-rep prog)
-  ; display prog with tagging operation
+  ;; display prog with tagging operation
   (if (eqv? tvar-rep dynamic)
       (begin
         (set! tag-counter (+ tag-counter 1))
@@ -1827,7 +1822,7 @@
 ;; untag-show
 
 (define (untag-show tvar-rep prog)
-  ; display prog with untagging operation
+  ;; display prog with untagging operation
   (if (eqv? tvar-rep dynamic)
       (begin
         (set! untag-counter (+ untag-counter 1))
@@ -1837,7 +1832,7 @@
         (list 'no-untag prog))))
 
 (define (may-untag-show tvar-rep prog)
-  ; display possible untagging in actual arguments
+  ;; display possible untagging in actual arguments
   (if (eqv? tvar-rep dynamic)
       (begin
         (set! may-untag-counter (+ may-untag-counter 1))
@@ -1850,8 +1845,8 @@
 ;; tag-ast-show
 
 (define (tag-ast-show ast)
-  ;; converts typed and normalized abstract syntax tree to
-  ;; a Scheme program with explicit tagging and untagging operations
+;;; converts typed and normalized abstract syntax tree to
+;;; a Scheme program with explicit tagging and untagging operations
   (let ((syntax-op (ast-con ast))
         (syntax-tvar (find! (ast-tvar ast)))
         (syntax-arg (ast-arg ast)))
@@ -1863,7 +1858,7 @@
       ((30) (cons (tag-ast-show (car syntax-arg))
                   (tag-ast-show (cdr syntax-arg))))
       ((32) (cons (may-untag-show (find! (ast-tvar (car syntax-arg)))
-                              (tag-ast-show (car syntax-arg)))
+                                  (tag-ast-show (car syntax-arg)))
                   (tag-ast-show (cdr syntax-arg))))
       ((5) (tag-show syntax-tvar (list 'quote syntax-arg)))
       ((6) (tag-show syntax-tvar (list->vector (map tag-ast-show syntax-arg))))
@@ -1871,7 +1866,7 @@
                                        (tag-ast-show (cdr syntax-arg)))))
       ((9) (ast-arg syntax-arg))
       ((11) (let ((proc-tvar (find! (ast-tvar (car syntax-arg)))))
-              (cons (untag-show proc-tvar 
+              (cons (untag-show proc-tvar
                                 (tag-ast-show (car syntax-arg)))
                     (tag-ast-show (cdr syntax-arg)))))
       ((12) (tag-show syntax-tvar
@@ -1968,24 +1963,24 @@
                    syntax-op)))))
 
 
-; tag-ast*-show
+;; tag-ast*-show
 
 (define (tag-ast*-show p)
-  ; display list of commands/expressions with tagging/untagging
-  ; operations
+  ;; display list of commands/expressions with tagging/untagging
+  ;; operations
   (map tag-ast-show p))
-; ----------------------------------------------------------------------------
-; Top level type environment
-; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+;; Top level type environment
+;; ----------------------------------------------------------------------------
 
 
-; Needed packages: type management (monomorphic and polymorphic)
+;; Needed packages: type management (monomorphic and polymorphic)
 
-;(load "typ-mgmt.ss")
-;(load "ptyp-mgm.ss")
+;;(load "typ-mgmt.ss")
+;;(load "ptyp-mgm.ss")
 
 
-; type environment for miscellaneous
+;; type environment for miscellaneous
 
 (define misc-env
   (list
@@ -1998,7 +1993,7 @@
                                                  (boolean)))))
    ))
 
-; type environment for input/output
+;; type environment for input/output
 
 (define io-env
   (list
@@ -2015,20 +2010,20 @@
                                  (procedure (convert-tvars (list tv)) dynamic))))))
 
 
-; type environment for Booleans
+;; type environment for Booleans
 
 (define boolean-env
   (list
    (cons 'boolean? (forall (lambda (tv)
                              (procedure (convert-tvars (list tv)) (boolean)))))
-   ;(cons #f (boolean))
-   ; #f doesn't exist in Chez Scheme, but gets mapped to null!
+   ;;(cons #f (boolean))
+   ;; #f doesn't exist in Chez Scheme, but gets mapped to null!
    (cons #t (boolean))
    (cons 'not (procedure (convert-tvars (list (boolean))) (boolean)))
    ))
 
 
-; type environment for pairs and lists
+;; type environment for pairs and lists
 
 (define (list-type tv)
   (fix (lambda (tv2) (pair tv tv2))))
@@ -2254,18 +2249,18 @@
                                                (list-type tv1)))
                                         (list-type tv2)))))
    (cons 'call-with-current-continuation
-         (forall2 (lambda (tv1 tv2) 
-                   (procedure (convert-tvars
-                               (list (procedure
-                                      (convert-tvars
-                                       (list (procedure (convert-tvars
-                                                         (list tv1)) tv2)))
-                                      tv2)))
-                              tv2))))
+         (forall2 (lambda (tv1 tv2)
+                    (procedure (convert-tvars
+                                (list (procedure
+                                       (convert-tvars
+                                        (list (procedure (convert-tvars
+                                                          (list tv1)) tv2)))
+                                       tv2)))
+                               tv2))))
    ))
 
 
-; global top level environment
+;; global top level environment
 
 (define (global-env)
   (append misc-env
@@ -2286,16 +2281,16 @@
   '())
 
 (define (dynamic-top-level-env-show)
-  ; displays the top level environment
+  ;; displays the top level environment
   (map (lambda (binding)
          (cons (key-show (binding-key binding))
                (cons ': (tvar-show (binding-value binding)))))
        (env->list dynamic-top-level-env)))
-; ----------------------------------------------------------------------------
-; Dynamic type inference for Scheme
-; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+;; Dynamic type inference for Scheme
+;; ----------------------------------------------------------------------------
 
-; Needed packages:
+;; Needed packages:
 
 (define (ic!) (init-global-constraints!))
 (define (pc) (glob-constr-show))
@@ -2310,7 +2305,7 @@
 (define no-ops 0)
 
 
-(define doit 
+(define doit
   (lambda (input-file)
     (i!)
     (let ((foo (dynamic-parse-file input-file)))

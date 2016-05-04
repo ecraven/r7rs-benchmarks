@@ -1,16 +1,13 @@
 ;;; MAZE -- Constructs a maze on a hexagonal grid, written by Olin Shivers.
 
-(import (scheme base)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme read) (scheme write) (scheme time))
 
 ;;; R6RS procedures needed by this benchmark.
 
 (define (bitwise-not x)
   (- (- x) 1))
 
-(define (bitwise-and x y)    ; two arguments are enough for this benchmark
+(define (bitwise-and x y);; two arguments are enough for this benchmark
   (cond ((= x 0) 0)
         ((= y 0) 0)
         ((= x -1) y)
@@ -27,14 +24,14 @@
               (>= x 0))
          (quotient x y))
         ((< y 0)
-         ; x < 0, y < 0
+         ;; x < 0, y < 0
          (let* ((q (quotient x y))
                 (r (- x (* q y))))
            (if (= r 0)
                q
                (+ q 1))))
         (else
-         ; x < 0, y > 0
+         ;; x < 0, y > 0
          (let* ((q (quotient x y))
                 (r (- x (* q y))))
            (if (= r 0)
@@ -47,14 +44,14 @@
               (>= x 0))
          (remainder x y))
         ((< y 0)
-         ; x < 0, y < 0
+         ;; x < 0, y < 0
          (let* ((q (quotient x y))
                 (r (- x (* q y))))
            (if (= r 0)
                0
                (- r y))))
         (else
-         ; x < 0, y > 0
+         ;; x < 0, y > 0
          (let* ((q (quotient x y))
                 (r (- x (* q y))))
            (if (= r 0)
@@ -63,25 +60,25 @@
 
 ;;; End of R6RS procedures.
 
-;------------------------------------------------------------------------------
-; Was file "rand.scm".
+;;------------------------------------------------------------------------------
+;; Was file "rand.scm".
 
-; Minimal Standard Random Number Generator
-; Park & Miller, CACM 31(10), Oct 1988, 32 bit integer version.
-; better constants, as proposed by Park.
-; By Ozan Yigit
+;; Minimal Standard Random Number Generator
+;; Park & Miller, CACM 31(10), Oct 1988, 32 bit integer version.
+;; better constants, as proposed by Park.
+;; By Ozan Yigit
 
 ;;; Rehacked by Olin 4/1995.
-  
+
 (define (random-state n)
   (cons n #f))
 
 (define (rand state)
   (let ((seed (car state))
-        (A 2813) ; 48271
-        (M 8388607) ; 2147483647
-        (Q 2787) ; 44488
-        (R 2699)) ; 3399
+        (A 2813);; 48271
+        (M 8388607);; 2147483647
+        (Q 2787);; 44488
+        (R 2699));; 3399
     (let* ((hi (div seed Q))
            (lo (mod seed Q))
            (test (- (* A lo) (* R hi)))
@@ -92,49 +89,49 @@
 (define (random-int n state)
   (mod (rand state) n))
 
-; poker test
-; seed 1
-; cards 0-9 inclusive (random 10)
-; five cards per hand
-; 10000 hands
-;
-; Poker Hand     Example    Probability  Calculated
-; 5 of a kind    (aaaaa)      0.0001      0
-; 4 of a kind    (aaaab)      0.0045      0.0053
-; Full house     (aaabb)      0.009       0.0093
-; 3 of a kind    (aaabc)      0.072       0.0682
-; two pairs      (aabbc)      0.108       0.1104
-; Pair           (aabcd)      0.504       0.501
-; Bust           (abcde)      0.3024      0.3058
+;; poker test
+;; seed 1
+;; cards 0-9 inclusive (random 10)
+;; five cards per hand
+;; 10000 hands
+;;
+;; Poker Hand     Example    Probability  Calculated
+;; 5 of a kind    (aaaaa)      0.0001      0
+;; 4 of a kind    (aaaab)      0.0045      0.0053
+;; Full house     (aaabb)      0.009       0.0093
+;; 3 of a kind    (aaabc)      0.072       0.0682
+;; two pairs      (aabbc)      0.108       0.1104
+;; Pair           (aabcd)      0.504       0.501
+;; Bust           (abcde)      0.3024      0.3058
 
-; (define (random n)
-;   (let* ((M 2147483647)
-;        (slop (modulo M n)))
-;     (let loop ((r (rand)))
-;       (if (> r slop)
-;         (modulo r n)  
-;         (loop (rand))))))
-; 
-; (define (rngtest)
-;   (display "implementation ")
-;   (srand 1)
-;   (let loop ((n 0))
-;     (if (< n 10000)
-;         (begin
-;          (rand)
-;          (loop (1+ n)))))
-;   (if (= *seed* 399268537)
-;       (display "looks correct.")
-;       (begin
-;        (display "failed.")
-;        (newline)
-;        (display "   current seed ") (display *seed*)
-;        (newline)
-;        (display "   correct seed 399268537")))
-;   (newline))
+;; (define (random n)
+;;   (let* ((M 2147483647)
+;;        (slop (modulo M n)))
+;;     (let loop ((r (rand)))
+;;       (if (> r slop)
+;;         (modulo r n)
+;;         (loop (rand))))))
+;;
+;; (define (rngtest)
+;;   (display "implementation ")
+;;   (srand 1)
+;;   (let loop ((n 0))
+;;     (if (< n 10000)
+;;         (begin
+;;          (rand)
+;;          (loop (1+ n)))))
+;;   (if (= *seed* 399268537)
+;;       (display "looks correct.")
+;;       (begin
+;;        (display "failed.")
+;;        (newline)
+;;        (display "   current seed ") (display *seed*)
+;;        (newline)
+;;        (display "   correct seed 399268537")))
+;;   (newline))
 
-;------------------------------------------------------------------------------
-; Was file "uf.scm".
+;;------------------------------------------------------------------------------
+;; Was file "uf.scm".
 
 ;;; Tarjan's amortised union-find data structure.
 ;;; Copyright (c) 1995 by Olin Shivers.
@@ -163,7 +160,7 @@
 ;;; cdr = (). Set equality is determined by comparing representatives using
 ;;; EQ?. A representative's car contains the number of elements in the set.
 
-;;; The speed of the algorithm comes because when we chase links to find 
+;;; The speed of the algorithm comes because when we chase links to find
 ;;; representatives, we collapse links by changing all the cells in the path
 ;;; we followed to point directly to the representative, so that next time
 ;;; we walk the cdr-chain, we'll go directly to the representative in one hop.
@@ -175,18 +172,18 @@
 ;;; is the root of the set.
 
 (define (get-set-root s)
-  (let lp ((r s))                       ; Find the last pair
-    (let ((next (cdr r)))               ; in the list. That's
-      (cond ((pair? next) (lp next))    ; the root r.
+  (let lp ((r s));; Find the last pair
+    (let ((next (cdr r)));; in the list. That's
+      (cond ((pair? next) (lp next));; the root r.
 
             (else
-             (if (not (eq? r s))        ; Now zip down the list again,
-                 (let lp ((x s))        ; changing everyone's cdr to r.
-                   (let ((next (cdr x)))        
+             (if (not (eq? r s));; Now zip down the list again,
+                 (let lp ((x s));; changing everyone's cdr to r.
+                   (let ((next (cdr x)))
                      (cond ((not (eq? r next))
                             (set-cdr! x r)
                             (lp next))))))
-             r)))))                     ; Then return r.
+             r)))));; Then return r.
 
 (define (set-equal? s1 s2) (eq? (get-set-root s1) (get-set-root s2)))
 
@@ -206,8 +203,8 @@
            (set-cdr! r1 r2)
            (set-car! r2 n)))))
 
-;------------------------------------------------------------------------------
-; Was file "maze.scm".
+;;------------------------------------------------------------------------------
+;; Was file "maze.scm".
 
 ;;; Building mazes with union/find disjoint sets.
 ;;; Copyright (c) 1995 by Olin Shivers.
@@ -218,17 +215,17 @@
 ;;; - Union/find code
 ;;; - bitwise logical functions
 
-; (define-record wall
-;   owner         ; Cell that owns this wall.
-;   neighbor      ; The other cell bordering this wall.
-;   bit)          ; Integer -- a bit identifying this wall in OWNER's cell.
+;; (define-record wall
+;;   owner;; Cell that owns this wall.
+;;   neighbor;; The other cell bordering this wall.
+;;   bit);; Integer -- a bit identifying this wall in OWNER's cell.
 
-; (define-record cell
-;   reachable     ; Union/find set -- all reachable cells.
-;   id            ; Identifying info (e.g., the coords of the cell).
-;   (walls -1)    ; A bitset telling which walls are still standing.
-;   (parent #f)   ; For DFS spanning tree construction.
-;   (mark #f))    ; For marking the solution path.
+;; (define-record cell
+;;   reachable;; Union/find set -- all reachable cells.
+;;   id;; Identifying info (e.g., the coords of the cell).
+;;   (walls -1);; A bitset telling which walls are still standing.
+;;   (parent #f);; For DFS spanning tree construction.
+;;   (mark #f));; For marking the solution path.
 
 (define (make-wall owner neighbor bit)
   (vector 'wall owner neighbor bit))
@@ -268,7 +265,7 @@
   (let lp ((i (- (vector-length v) 1)))
     (cond ((> i 1)
            (let ((elt-i (vector-ref v i))
-                 (j (random-int i random-state)))       ; j in [0,i)
+                 (j (random-int i random-state)));; j in [0,i)
              (vector-set! v i (vector-ref v j))
              (vector-set! v j elt-i))
            (lp (- i 1)))))
@@ -279,32 +276,32 @@
 
 (define (dig-maze walls ncells)
   (call-with-current-continuation
-    (lambda (quit)
-      (vector-for-each-rev
-       (lambda (wall)                   ; For each wall,
-         (let* ((c1   (wall:owner wall)) ; find the cells on
-                (set1 (cell:reachable c1))
+   (lambda (quit)
+     (vector-for-each-rev
+      (lambda (wall);; For each wall,
+        (let* ((c1   (wall:owner wall));; find the cells on
+               (set1 (cell:reachable c1))
 
-                (c2   (wall:neighbor wall)) ; each side of the wall
-                (set2 (cell:reachable c2)))
+               (c2   (wall:neighbor wall));; each side of the wall
+               (set2 (cell:reachable c2)))
 
-           ;; If there is no path from c1 to c2, knock down the
-           ;; wall and union the two sets of reachable cells.
-           ;; If the new set of reachable cells is the whole set
-           ;; of cells, quit.
-           (if (not (set-equal? set1 set2))
-               (let ((walls (cell:walls c1))    
-                     (wall-mask (bitwise-not (wall:bit wall))))
-                 (union! set1 set2)
-                 (set-cell:walls c1 (bitwise-and walls wall-mask))
-                 (if (= (set-size set1) ncells) (quit #f))))))
-       walls))))
+;;; If there is no path from c1 to c2, knock down the
+;;; wall and union the two sets of reachable cells.
+;;; If the new set of reachable cells is the whole set
+;;; of cells, quit.
+          (if (not (set-equal? set1 set2))
+              (let ((walls (cell:walls c1))
+                    (wall-mask (bitwise-not (wall:bit wall))))
+                (union! set1 set2)
+                (set-cell:walls c1 (bitwise-and walls wall-mask))
+                (if (= (set-size set1) ncells) (quit #f))))))
+      walls))))
 
 
-;;; Some simple DFS routines useful for determining path length 
+;;; Some simple DFS routines useful for determining path length
 ;;; through the maze.
 
-;;; Build a DFS tree from ROOT. 
+;;; Build a DFS tree from ROOT.
 ;;; (DO-CHILDREN proc maze node) applies PROC to each of NODE's children.
 ;;; We assume there are no loops in the maze; if this is incorrect, the
 ;;; algorithm will diverge.
@@ -339,8 +336,8 @@
     (set-cell:mark node #t)
     (cond ((cell:parent node) => lp))))
 
-;------------------------------------------------------------------------------
-; Was file "harr.scm".
+;;------------------------------------------------------------------------------
+;; Was file "harr.scm".
 
 ;;; Hex arrays
 ;;; Copyright (c) 1995 by Olin Shivers.
@@ -377,10 +374,10 @@
 ;;;     (3c, 2r + c&1) <- (r,   c)
 
 
-; (define-record harr
-;   nrows
-;   ncols
-;   elts)
+;; (define-record harr
+;;   nrows
+;;   ncols
+;;   elts)
 
 (define (make-harr nrows ncols elts)
   (vector 'harr nrows ncols elts))
@@ -411,8 +408,8 @@
                  val)))
 
 (define (href/rc ha r c)
-    (vector-ref (harr:elts ha)
-                (+ (* (harr:ncols ha) r) c)))
+  (vector-ref (harr:elts ha)
+              (+ (* (harr:ncols ha) r) c)))
 
 ;;; Create a nrows x ncols hex array. The elt centered on coord (x, y)
 ;;; is the value returned by (PROC x y).
@@ -433,8 +430,8 @@
 (define (harr-for-each proc harr)
   (vector-for-each-rev proc (harr:elts harr)))
 
-;------------------------------------------------------------------------------
-; Was file "hex.scm".
+;;------------------------------------------------------------------------------
+;; Was file "hex.scm".
 
 ;;; Hexagonal hackery for maze generation.
 ;;; Copyright (c) 1995 by Olin Shivers.
@@ -482,38 +479,38 @@
          (ncols (harr:ncols harr))
          (xmax (* 3 (- ncols 1)))
 
-         ;; Accumulate walls.
+;;; Accumulate walls.
          (walls '())
-         (add-wall (lambda (o n b) ; owner neighbor bit
+         (add-wall (lambda (o n b);; owner neighbor bit
                      (set! walls (cons (make-wall o n b) walls)))))
-        
-    ;; Do everything but the bottom row.
+
+;;; Do everything but the bottom row.
     (do ((x (* (- ncols 1) 3) (- x 3)))
         ((< x 0))
       (do ((y (+ (* (- nrows 1) 2) (bitwise-and x 1))
               (- y 2)))
-          ((<= y 1))    ; Don't do bottom row.
-          (let ((hex (href harr x y)))
-            (if (not (zero? x))
-                (add-wall hex (href harr (- x 3) (- y 1)) south-west))
-            (add-wall hex (href harr x (- y 2)) south)
-            (if (< x xmax)
-                (add-wall hex (href harr (+ x 3) (- y 1)) south-east)))))
+          ((<= y 1));; Don't do bottom row.
+        (let ((hex (href harr x y)))
+          (if (not (zero? x))
+              (add-wall hex (href harr (- x 3) (- y 1)) south-west))
+          (add-wall hex (href harr x (- y 2)) south)
+          (if (< x xmax)
+              (add-wall hex (href harr (+ x 3) (- y 1)) south-east)))))
 
-    ;; Do the SE and SW walls of the odd columns on the bottom row.
-    ;; If the rightmost bottom hex lies in an odd column, however,
-    ;; don't add it's SE wall -- it's a corner hex, and has no SE neighbor.
+;;; Do the SE and SW walls of the odd columns on the bottom row.
+;;; If the rightmost bottom hex lies in an odd column, however,
+;;; don't add it's SE wall -- it's a corner hex, and has no SE neighbor.
     (if (> ncols 1)
         (let ((rmoc-x (+ 3 (* 6 (div (- ncols 2) 2)))))
-          ;; Do rightmost odd col.
+;;; Do rightmost odd col.
           (let ((rmoc-hex (href harr rmoc-x 1)))
-            (if (< rmoc-x xmax) ; Not  a corner -- do E wall.
+            (if (< rmoc-x xmax);; Not  a corner -- do E wall.
                 (add-wall rmoc-hex (href harr xmax 0) south-east))
             (add-wall rmoc-hex (href harr (- rmoc-x 3) 0) south-west))
 
-          (do ((x (- rmoc-x 6) ; Do the rest of the bottom row's odd cols.
+          (do ((x (- rmoc-x 6);; Do the rest of the bottom row's odd cols.
                   (- x 6)))
-              ((< x 3)) ; 3 is X coord of leftmost odd column.
+              ((< x 3));; 3 is X coord of leftmost odd column.
             (add-wall (href harr x 1) (href harr (- x 3) 0) south-west)
             (add-wall (href harr x 1) (href harr (+ x 3) 0) south-east))))
 
@@ -521,7 +518,7 @@
 
 
 ;;; Find the cell ctop from the top row, and the cell cbot from the bottom
-;;; row such that cbot is furthest from ctop. 
+;;; row such that cbot is furthest from ctop.
 ;;; Return [ctop-x, ctop-y, cbot-x, cbot-y].
 
 (define (pick-entrances harr)
@@ -536,21 +533,21 @@
           (let ((top-cell (href/rc harr (- nrows 1) tcol)))
             (reroot-maze top-cell)
             (let ((result
-                    (let bt-lp ((max-len max-len)
-                                (entrance entrance)
-                                (exit exit)
-                                (bcol (- ncols 1)))
-;                     (format #t "~a ~a ~a ~a~%" max-len entrance exit bcol)
-                      (if (< bcol 0) (vector max-len entrance exit)
-                          (let ((this-len (path-length (href/rc harr 0 bcol))))
-                            (if (> this-len max-len)
-                                (bt-lp this-len tcol bcol (- bcol 1))
-                                (bt-lp max-len  entrance exit (- bcol 1))))))))
+                   (let bt-lp ((max-len max-len)
+                               (entrance entrance)
+                               (exit exit)
+                               (bcol (- ncols 1)))
+                     ;;                     (format #t "~a ~a ~a ~a~%" max-len entrance exit bcol)
+                     (if (< bcol 0) (vector max-len entrance exit)
+                         (let ((this-len (path-length (href/rc harr 0 bcol))))
+                           (if (> this-len max-len)
+                               (bt-lp this-len tcol bcol (- bcol 1))
+                               (bt-lp max-len  entrance exit (- bcol 1))))))))
               (let ((max-len (vector-ref result 0))
                     (entrance (vector-ref result 1))
                     (exit (vector-ref result 2)))
                 (tp-lp max-len entrance exit (- tcol 1)))))))))
-                
+
 
 
 ;;; Apply PROC to each node reachable from CELL.
@@ -567,22 +564,22 @@
     (if (not (bit-test walls south))      (proc (href harr x       (- y 2))))
     (if (not (bit-test walls south-east)) (proc (href harr (+ x 3) (- y 1))))
 
-    ;; NW neighbor, if there is one (we may be in col 1, or top row/odd col)
-    (if (and (> x 0)    ; Not in first column.
-             (or (<= y maxy)            ; Not on top row or
-                 (zero? (mod x 6)))) ; not in an odd column.
+;;; NW neighbor, if there is one (we may be in col 1, or top row/odd col)
+    (if (and (> x 0);; Not in first column.
+             (or (<= y maxy);; Not on top row or
+                 (zero? (mod x 6))));; not in an odd column.
         (let ((nw (href harr (- x 3) (+ y 1))))
           (if (not (bit-test (cell:walls nw) south-east)) (proc nw))))
 
-    ;; N neighbor, if there is one (we may be on top row).
-    (if (< y maxy)              ; Not on top row
+;;; N neighbor, if there is one (we may be on top row).
+    (if (< y maxy);; Not on top row
         (let ((n (href harr x (+ y 2))))
           (if (not (bit-test (cell:walls n) south)) (proc n))))
 
-    ;; NE neighbor, if there is one (we may be in last col, or top row/odd col)
-    (if (and (< x maxx) ; Not in last column.
-             (or (<= y maxy)            ; Not on top row or
-                 (zero? (mod x 6)))) ; not in an odd column.
+;;; NE neighbor, if there is one (we may be in last col, or top row/odd col)
+    (if (and (< x maxx);; Not in last column.
+             (or (<= y maxy);; Not on top row or
+                 (zero? (mod x 6))));; not in an odd column.
         (let ((ne (href harr (+ x 3) (+ y 1))))
           (if (not (bit-test (cell:walls ne) south-west)) (proc ne))))))
 
@@ -611,8 +608,8 @@
           (exit (vector-ref result 2)))
       (print-hexmaze cells entrance))))
 
-;------------------------------------------------------------------------------
-; Was file "hexprint.scm".
+;;------------------------------------------------------------------------------
+;; Was file "hexprint.scm".
 
 ;;; Print out a hex array with characters.
 ;;; Copyright (c) 1995 by Olin Shivers.
@@ -630,14 +627,14 @@
 ;;; / \_/ \_/
 ;;; \_/ \_/ \
 ;;; / \_/ \_/
-;;; \_/ \_/ 
+;;; \_/ \_/
 
 ;;; Top part of top row looks like this:
 ;;;    _   _  _   _
 ;;;  _/ \_/ \/ \_/ \
-;;; /        
+;;; /
 
-(define output #f) ; the list of all characters written out, in reverse order.
+(define output #f);; the list of all characters written out, in reverse order.
 
 (define (write-ch c)
   (set! output (cons c output)))
@@ -647,62 +644,62 @@
          (ncols  (harr:ncols harr))
          (ncols2 (* 2 (div ncols 2))))
 
-    ;; Print out the flat tops for the top row's odd cols.
+;;; Print out the flat tops for the top row's odd cols.
     (do ((c 1 (+ c 2)))
         ((>= c ncols))
-;     (display "   ")
+      ;;     (display "   ")
       (write-ch #\space)
       (write-ch #\space)
       (write-ch #\space)
       (write-ch (if (= c entrance) #\space #\_)))
-;   (newline)
+    ;;   (newline)
     (write-ch #\newline)
 
-    ;; Print out the slanted tops for the top row's odd cols
-    ;; and the flat tops for the top row's even cols.
+;;; Print out the slanted tops for the top row's odd cols
+;;; and the flat tops for the top row's even cols.
     (write-ch #\space)
     (do ((c 0 (+ c 2)))
         ((>= c ncols2))
-;     (format #t "~a/~a\\"
-;             (if (= c entrance) #\space #\_)
-;             (dot/space harr (- nrows 1) (+ c 1)))
+      ;;     (format #t "~a/~a\\"
+      ;;             (if (= c entrance) #\space #\_)
+      ;;             (dot/space harr (- nrows 1) (+ c 1)))
       (write-ch (if (= c entrance) #\space #\_))
       (write-ch #\/)
       (write-ch (dot/space harr (- nrows 1) (+ c 1)))
       (write-ch #\\))
     (if (odd? ncols)
         (write-ch (if (= entrance (- ncols 1)) #\space #\_)))
-;   (newline)
+    ;;   (newline)
     (write-ch #\newline)
 
     (do ((r (- nrows 1) (- r 1)))
         ((< r 0))
 
-      ;; Do the bottoms for row r's odd cols.
+;;; Do the bottoms for row r's odd cols.
       (write-ch #\/)
       (do ((c 1 (+ c 2)))
           ((>= c ncols2))
-        ;; The dot/space for the even col just behind c.
+;;; The dot/space for the even col just behind c.
         (write-ch (dot/space harr r (- c 1)))
-        (display-hexbottom (cell:walls (href/rc harr r c))))    
+        (display-hexbottom (cell:walls (href/rc harr r c))))
 
       (cond ((odd? ncols)
              (write-ch (dot/space harr r (- ncols 1)))
              (write-ch #\\)))
-;     (newline)
+      ;;     (newline)
       (write-ch #\newline)
 
-      ;; Do the bottoms for row r's even cols.
+;;; Do the bottoms for row r's even cols.
       (do ((c 0 (+ c 2)))
           ((>= c ncols2))
         (display-hexbottom (cell:walls (href/rc harr r c)))
-        ;; The dot/space is for the odd col just after c, on row below.
+;;; The dot/space is for the odd col just after c, on row below.
         (write-ch (dot/space harr (- r 1) (+ c 1))))
-      
+
       (cond ((odd? ncols)
              (display-hexbottom (cell:walls (href/rc harr r (- ncols 1)))))
             ((not (zero? r)) (write-ch #\\)))
-;     (newline)
+      ;;     (newline)
       (write-ch #\newline))))
 
 (define (bit-test j bit)
@@ -730,7 +727,7 @@
 ;;; / \_/ \_/
 ;;; \_/ \_/ \_/
 
-;------------------------------------------------------------------------------
+;;------------------------------------------------------------------------------
 
 (define (run nrows ncols)
   (set! output '())

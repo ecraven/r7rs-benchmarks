@@ -7,11 +7,7 @@
 ;;; is produced, and the lines are then written to the output
 ;;; in the reverse of the order in which they were read.
 
-(import (scheme base)
-        (scheme file)
-        (scheme read)
-        (scheme write)
-        (scheme time))
+(import (scheme base) (scheme file) (scheme read) (scheme write) (scheme time))
 
 (define (tail-r-aux port file-so-far)
   (let ((x (read-line port)))
@@ -25,13 +21,14 @@
 
 (define (go input output)
   (call-with-input-file
-   input
-   (lambda (in)
-     (if (file-exists? output) (delete-file output))
-     (call-with-output-file
-      output
-      (lambda (out)
-        (echo-lines-in-reverse-order in out))))))
+      input
+    (lambda (in)
+      (when (file-exists? output)
+        (delete-file output))
+      (call-with-output-file
+          output
+        (lambda (out)
+          (echo-lines-in-reverse-order in out))))))
 
 (define (main)
   (let* ((count (read))
