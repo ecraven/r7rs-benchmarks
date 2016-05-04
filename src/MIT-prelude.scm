@@ -12,9 +12,9 @@
 (define string->utf8 identity-procedure)
 (define utf8->string identity-procedure)
 (define (make-bytevector k #!optional byte)
-  (make-string k (if (default-object? byte) #\0 (integer->char byte))))
+  (make-vector-8b k (if (default-object? byte) 0 byte)))
 (define (bytevector-u8-set! bytevector k byte)
-  (string-set! bytevector k (integer->char byte)))
+  (vector-8b-set! bytevector k byte))
 
 (define call/cc call-with-current-continuation)
 (define flush-output-port
