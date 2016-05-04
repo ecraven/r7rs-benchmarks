@@ -49,6 +49,13 @@
                (write secs2)
                (display ") for ")
                (display name)
+               (newline)
+               (display "+!CSVLINE!+")
+               (display (this-scheme-implementation-name))
+               (display ",")
+               (display name)
+               (display ",")
+               (display secs)
                (newline))
              result)
             (else
@@ -56,5 +63,3 @@
              (write result)
              (newline)
              result)))))
-
-(main)

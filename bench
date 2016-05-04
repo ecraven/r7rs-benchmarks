@@ -30,8 +30,10 @@ OSNAME="`( uname )`"
 
 # If a benchmark takes longer than an hour to run, then it's
 # probably in some kind of infinite loop.
+# CPU_LIMIT=3600
 
-CPU_LIMIT=3600
+# ecraven changed this to 5 minutes
+CPU_LIMIT=300
 
 # The following definitions are not in use, but using them
 # might improve the script.
@@ -39,8 +41,6 @@ CPU_LIMIT=3600
 HOME="`( pwd )`"
 SRC="${HOME}/src"
 INPUTS="${HOME}/inputs"
-
-TEMP="/tmp/larcenous"
 
 ################################################################
 
@@ -89,33 +89,38 @@ options=""
 
 setup ()
 {
-  case ${OSNAME} in
+    case ${OSNAME} in
 
-    "Linux")
+        "Linux")
 
-        APPS="/usr/local/bin"
-        HENCHMAN="/home/henchman/bin/larceny"
-        ;;
+            APPS="/usr/local/bin"
+            HENCHMAN="/home/henchman/bin/larceny"
+            ;;
 
-    "Darwin")
+        "Darwin")
 
-        ;;
+            ;;
 
-  esac
+    esac
 
-  # For both Solaris and Linux machines.
+    # For both Solaris and Linux machines.
 
-  LARCENY=${LARCENY:-"../../../larceny"}
-  PETIT=${PETIT:-"../../../../PetitGit/larceny"}
-  CHIBI=${CHIBI:-"chibi-scheme"}
-  CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
-  FOMENT=${FOMENT:-"foment"}
-  GAUCHE=${GAUCHE:-"gosh"}
-  HUSKI=${HUSKI:-"huski"}
-  KAWA=${KAWA:-"kawa"}
-  PICRIN=${PICRIN:-"picrin"}
-  MOSH=${MOSH:-"mosh"}
- 
+    LARCENY=${LARCENY:-"../../../larceny"}
+    PETIT=${PETIT:-"../../../../PetitGit/larceny"}
+    CHIBI=${CHIBI:-"chibi-scheme"}
+    CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
+    FOMENT=${FOMENT:-"foment"}
+    GAUCHE=${GAUCHE:-"gosh"}
+    HUSKI=${HUSKI:-"huski"}
+    KAWA=${KAWA:-"kawa"}
+    MOSH=${MOSH:-"mosh"}
+    PICRIN=${PICRIN:-"picrin"}
+    SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
+    MIT=${MIT:-"mit-scheme"}
+    GUILE=${GUILE:-"guile"}
+    GUILD=${GUILD:-"guild"}
+    GAMBITC=${GAMBITC:-"gambitc"}
+
 }
 
 setup
@@ -124,8 +129,8 @@ setup
 
 error ()
 {
-  echo $1
-  echo '
+    echo $1
+    echo '
 Usage: bench [-r runs] <system> <benchmark>
 
 <system> is the abbreviated name of the implementation to benchmark:
@@ -140,6 +145,10 @@ Usage: bench [-r runs] <system> <benchmark>
   mosh             for Mosh
   picrin           for Picrin
   petit            for Petit Larceny
+  sagittarius      for Sagittarius
+  mit              for MIT/GNU Scheme
+  guile            for Guile Scheme
+  gambitc          for GambitC Scheme
   all              for all of the above
 
 <benchmark> is the name of the benchmark(s) to run:
@@ -150,7 +159,7 @@ Usage: bench [-r runs] <system> <benchmark>
 
 runs is the number of times to run each benchmark (default is 1).'
 
-  exit
+    exit
 }
 
 # -----------------------------------------------------------------------------
@@ -160,46 +169,63 @@ runs is the number of times to run each benchmark (default is 1).'
 
 cleanup ()
 {
-  if [ "$clean" = "true" ] ; then
-     # It's true that technically speaking, we should be in the build
-     # directory when this fcn is called.  Thus, we should be able to
-     # just do rm *.  However, that's kind of dangerous, so instead,
-     # we delete files newer than the mark file that evaluate () makes.
+    if [ "$clean" = "true" ] ; then
+        # It's true that technically speaking, we should be in the build
+        # directory when this fcn is called.  Thus, we should be able to
+        # just do rm *.  However, that's kind of dangerous, so instead,
+        # we delete files newer than the mark file that evaluate () makes.
 
-     for x in * ; do
-        if [ $x -nt clean_newer_than_me ] ; then
-          rm $x
-        fi
-     done
-  fi
-  rm clean_newer_than_me
+        for x in * ; do
+            if [ $x -nt clean_newer_than_me ] ; then
+                rm $x
+            fi
+        done
+    fi
+    rm clean_newer_than_me
 }
 
 evaluate ()
 {
-# echo > clean_newer_than_me
-  sleep 1
-  {
-    echo
-    echo Testing $1 under ${NAME}
-    make_src_code $1
-    echo Compiling...
-    $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
-    i=0
-    while [ "$i" -lt "$NB_RUNS" ]
-    do
-      echo Running...
-      ulimit -t ${CPU_LIMIT}
-      $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
-      i=`expr $i + 1`
-    done
-  } 2>&1 | tee -a results.${NAME}
+    # echo > clean_newer_than_me
+    sleep 1
+    {
+        echo
+        echo Testing $1 under ${NAME}
+        make_src_code $1
+        echo Compiling...
+        ulimit -t ${CPU_LIMIT}
+        $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
+        i=0
+        while [ "$i" -lt "$NB_RUNS" ]
+        do
+            echo Running...
+            ulimit -t ${CPU_LIMIT}
+            $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
+            i=`expr $i + 1`
+        done
+    } 2>&1 | tee -a results.${NAME}
 
 }
 
 make_src_code ()
 {
-  cat "${SRC}/$1.scm" "${SRC}/common.scm" > "${TEMP}/$1.${EXTENSION}"
+    prelude="${SRC}/${NAME}-prelude.scm"
+    postlude="${SRC}/${NAME}-postlude.scm"
+
+    if [ -e "$prelude" ]
+    then
+        echo "Including prelude $prelude"
+    else
+        prelude="/dev/null"
+    fi
+    if [ -e "$postlude" ]
+    then
+        echo "Including postlude $postlude"
+    else
+        postlude="/dev/null"
+    fi
+
+    cat "$prelude" "${SRC}/$1.scm" "${SRC}/common.scm" "$postlude" "${SRC}/common-postlude.scm" > "${TEMP}/$1.${EXTENSION}"
 }
 
 # -----------------------------------------------------------------------------
@@ -211,39 +237,39 @@ make_src_code ()
 
 larceny_comp ()
 {
-  :
+    :
 }
 
 larceny_exec ()
 {
-  time "${LARCENY}" --nocontract --r7rs --program "$1" < "$2"
+    time "${LARCENY}" --nocontract --r7rs --program "$1" < "$2"
 }
 
 petit_comp ()
 {
-  rm "`dirname "$1"`"/*.slfasl
-  rm "`dirname "$1"`"/*.slfasl.c
-  rm "`dirname "$1"`"/*.slfasl.o
-  rm "`dirname "$1"`"/*.slfasl.so
-  rm "`dirname "$1"`"/*.slfasl.*.so
-  echo "(import (larceny compiler)) (compile-file \"$1\")" \
-  | time "${PETIT}" -err5rs -- -e "(repl-prompt values)"
+    rm "`dirname "$1"`"/*.slfasl
+    rm "`dirname "$1"`"/*.slfasl.c
+    rm "`dirname "$1"`"/*.slfasl.o
+    rm "`dirname "$1"`"/*.slfasl.so
+    rm "`dirname "$1"`"/*.slfasl.*.so
+    echo "(import (larceny compiler)) (compile-file \"$1\")" \
+        | time "${PETIT}" -err5rs -- -e "(repl-prompt values)"
 }
 
 petit_exec ()
 {
-  time "${PETIT}" --nocontract --r7rs --program "$1" < "$2"
+    time "${PETIT}" --nocontract --r7rs --program "$1" < "$2"
 }
 
 henchman_comp ()
 {
-  echo "(import (larceny compiler)) (compile-file \"$1\")" \
-  | time "${HENCHMAN}" -err5rs -- -e "(repl-prompt values)"
+    echo "(import (larceny compiler)) (compile-file \"$1\")" \
+        | time "${HENCHMAN}" -err5rs -- -e "(repl-prompt values)"
 }
 
 henchman_exec ()
 {
-  time "${HENCHMAN}" --nocontract --r7rs --program "$1" < "$2"
+    time "${HENCHMAN}" --nocontract --r7rs --program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -251,12 +277,12 @@ henchman_exec ()
 
 chibi_comp ()
 {
-  :
+    :
 }
 
 chibi_exec ()
 {
-  time "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+    time "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -264,13 +290,54 @@ chibi_exec ()
 
 chicken_comp ()
 {
-  OPTS="-optimize-leaf-routines -block -inline -inline-global -specialize"
-  ${CHICKEN_CSC} -extend r7rs -require-extension r7rs ${OPTS} $1 -o $2
+    OPTS="-optimize-leaf-routines -block -inline -inline-global -specialize -O3" # ecraven added -O3
+    ${CHICKEN_CSC} ${OPTS} $1 -o $2 # ecraven removed -extend r7rs -require-extension r7rs which is very very bad for performance
 }
 
 chicken_exec ()
 {
-  time "$1" < "$2"
+    time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to MIT/GNU Scheme
+
+mit_comp ()
+{
+    echo "(begin (cf \"$1\") (%exit 0))" | ${MIT} --quiet --heap 500000
+}
+
+mit_exec ()
+{
+    time ${MIT} --quiet --heap 500000 --load "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Guile Scheme
+
+guile_comp ()
+{
+    ${GUILD} compile $1
+}
+
+guile_exec ()
+{
+    time ${GUILE} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Gambit Scheme
+
+gambitc_comp ()
+{
+    # remove import statement
+    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    ${GAMBITC} -o $2 -exe $1
+}
+
+gambitc_exec ()
+{
+    time "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -278,12 +345,12 @@ chicken_exec ()
 
 foment_comp ()
 {
-  :
+    :
 }
 
 foment_exec ()
 {
-  time "${FOMENT}" "$1" < "$2"
+    time "${FOMENT}" "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -291,12 +358,12 @@ foment_exec ()
 
 gauche_comp ()
 {
-  :
+    :
 }
 
 gauche_exec ()
 {
-  time "${GAUCHE}" -r7 -b "$1" < "$2"
+    time "${GAUCHE}" -r7 -b "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -312,12 +379,12 @@ gauche_exec ()
 
 husk_comp ()
 {
-  :
+    :
 }
 
 husk_exec ()
 {
-  time "${HUSKI}" "$1" < "$2"
+    time "${HUSKI}" "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -325,12 +392,12 @@ husk_exec ()
 
 kawa_comp ()
 {
-  :
+    :
 }
 
 kawa_exec ()
 {
-  time "${KAWA}" -f "$1" < "$2"
+    time "${KAWA}" -f "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -338,12 +405,12 @@ kawa_exec ()
 
 mosh_comp ()
 {
-  :
+    :
 }
 
 mosh_exec ()
 {
-  time "${MOSH}" "$1" < "$2"
+    time "${MOSH}" "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -355,179 +422,232 @@ mosh_exec ()
 
 picrin_comp ()
 {
-  :
+    :
 }
 
 picrin_exec ()
 {
-  time "${PICRIN}" "$1" < "$2"
+    time "${PICRIN}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Sagittarius
+
+sagittarius_comp ()
+{
+    :
+}
+
+sagittarius_exec ()
+{
+    time "${SAGITTARIUS}" -r7 -d -n "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
 
 ## Arg processing...
 if [ "$#" -lt 2 ]; then
-  error '>>> At least two command line arguments are needed'
+    error '>>> At least two command line arguments are needed'
 fi
 
 
 while [ $# -gt 2 ] ; do
-   arg="$1"
-   shift
-   case $arg in
-      -r) NB_RUNS=$1    ; shift ;;
-      -c) clean=$1      ; shift ;;
-      -o) options=$1    ; shift ;;
-       *) error ">>> Unknown argument of $arg given." ;;
-   esac
+    arg="$1"
+    shift
+    case $arg in
+        -r) NB_RUNS=$1    ; shift ;;
+        -c) clean=$1      ; shift ;;
+        -o) options=$1    ; shift ;;
+        *) error ">>> Unknown argument of $arg given." ;;
+    esac
 done
 
 if [ "$#" -ne 2 ]; then
-  error '>>> Last two arguments must be <system> and <benchmark>'
+    error '>>> Last two arguments must be <system> and <benchmark>'
 fi
 
 case "$1" in
-               all) systems="$ALL_SYSTEMS" ;;
-                 *) systems="$1" ;;
+    all) systems="$ALL_SYSTEMS" ;;
+    *) systems="$1" ;;
 esac
 
 case "$2" in
-      all) benchmarks="$ALL_BENCHMARKS" ;;
-  gabriel) benchmarks="$GABRIEL_BENCHMARKS" ;;
-      kvw) benchmarks="$KVW_BENCHMARKS" ;;
+    all) benchmarks="$ALL_BENCHMARKS" ;;
+    gabriel) benchmarks="$GABRIEL_BENCHMARKS" ;;
+    kvw) benchmarks="$KVW_BENCHMARKS" ;;
     other) benchmarks="$OTHER_BENCHMARKS" ;;
-      awk) benchmarks="$AWK_BENCHMARKS" ;;
-        c) benchmarks="$C_BENCHMARKS" ;;
-     java) benchmarks="$JAVA_BENCHMARKS" ;;
-        *) benchmarks="$2" ;;
+    awk) benchmarks="$AWK_BENCHMARKS" ;;
+    c) benchmarks="$C_BENCHMARKS" ;;
+    java) benchmarks="$JAVA_BENCHMARKS" ;;
+    *) benchmarks="$2" ;;
 esac
 
 ## Run each benchmark under each system...
 for system in $systems ; do
 
-   case "$system" in
+    case "$system" in
 
-   larceny) NAME='Larceny'
-            COMP=larceny_comp
-            EXEC=larceny_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        larceny) NAME='Larceny'
+                 COMP=larceny_comp
+                 EXEC=larceny_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="scm"
+	         COMPCOMMANDS=""
+	         EXECCOMMANDS=""
+                 ;;
 
-     petit) NAME='Petit'
-            COMP=petit_comp
-            EXEC=petit_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="slfasl"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        petit) NAME='Petit'
+               COMP=petit_comp
+               EXEC=petit_exec
+               COMPOPTS=""
+               EXTENSION="scm"
+               EXTENSIONCOMP="slfasl"
+	       COMPCOMMANDS=""
+	       EXECCOMMANDS=""
+               ;;
 
-  henchman) NAME='Henchman'
-            COMP=henchman_comp
-            EXEC=henchman_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="slfasl"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        henchman) NAME='Henchman'
+                  COMP=henchman_comp
+                  EXEC=henchman_exec
+                  COMPOPTS=""
+                  EXTENSION="scm"
+                  EXTENSIONCOMP="slfasl"
+	          COMPCOMMANDS=""
+	          EXECCOMMANDS=""
+                  ;;
 
-     chibi) NAME='Chibi'
-            COMP=chibi_comp
-            EXEC=chibi_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        chibi) NAME='Chibi'
+               COMP=chibi_comp
+               EXEC=chibi_exec
+               COMPOPTS=""
+               EXTENSION="scm"
+               EXTENSIONCOMP="scm"
+	       COMPCOMMANDS=""
+	       EXECCOMMANDS=""
+               ;;
 
-   chicken) NAME='Chicken'
-            COMP=chicken_comp
-            EXEC=chicken_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="chicken"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        chicken) NAME='Chicken'
+                 COMP=chicken_comp
+                 EXEC=chicken_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="exe"
+	         COMPCOMMANDS=""
+	         EXECCOMMANDS=""
+                 ;;
 
-    foment) NAME='Foment'
-            COMP=foment_comp
-            EXEC=foment_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        gambitc) NAME='GambitC'
+                 COMP=gambitc_comp
+                 EXEC=gambitc_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="exe"
+	         COMPCOMMANDS=""
+	         EXECCOMMANDS=""
+                 ;;
 
-    gauche) NAME='Gauche'
-            COMP=gauche_comp
-            EXEC=gauche_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        guile) NAME='Guile'
+               COMP=guile_comp
+               EXEC=guile_exec
+               COMPOPTS=""
+               EXTENSION="scm"
+               EXTENSIONCOMP="scm"
+	       COMPCOMMANDS=""
+	       EXECCOMMANDS=""
+               ;;
 
-      husk) NAME='Husk'
-            COMP=husk_comp
-            EXEC=husk_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        mit) NAME='MIT'
+             COMP=mit_comp
+             EXEC=mit_exec
+             COMPOPTS=""
+             EXTENSION="scm"
+             EXTENSIONCOMP="com"
+	     COMPCOMMANDS=""
+	     EXECCOMMANDS=""
+             ;;
 
-      kawa) NAME='Kawa'
-            COMP=kawa_comp
-            EXEC=kawa_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        foment) NAME='Foment'
+                COMP=foment_comp
+                EXEC=foment_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="scm"
+	        COMPCOMMANDS=""
+	        EXECCOMMANDS=""
+                ;;
 
-      mosh) NAME='Mosh'
-            COMP=mosh_comp
-            EXEC=mosh_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        gauche) NAME='Gauche'
+                COMP=gauche_comp
+                EXEC=gauche_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="scm"
+	        COMPCOMMANDS=""
+	        EXECCOMMANDS=""
+                ;;
 
-    picrin) NAME='Picrin'
-            COMP=picrin_comp
-            EXEC=picrin_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-	    COMPCOMMANDS=""
-	    EXECCOMMANDS=""
-            ;;
+        husk) NAME='Husk'
+              COMP=husk_comp
+              EXEC=husk_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="scm"
+	      COMPCOMMANDS=""
+	      EXECCOMMANDS=""
+              ;;
 
-   esac
+        kawa) NAME='Kawa'
+              COMP=kawa_comp
+              EXEC=kawa_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="scm"
+	      COMPCOMMANDS=""
+	      EXECCOMMANDS=""
+              ;;
 
-   {
-      echo
-      echo '****************************'
-      echo Benchmarking ${NAME} on `date` under `uname -a`
-   } >> results.${NAME}
+        mosh) NAME='Mosh'
+              COMP=mosh_comp
+              EXEC=mosh_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="scm"
+	      COMPCOMMANDS=""
+	      EXECCOMMANDS=""
+              ;;
 
-   mkdir "${TEMP}" 2> /dev/null
+        picrin) NAME='Picrin'
+                COMP=picrin_comp
+                EXEC=picrin_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="scm"
+	        COMPCOMMANDS=""
+	        EXECCOMMANDS=""
+                ;;
 
-   for program in $benchmarks ; do
-      evaluate $program
-   done
+        sagittarius) NAME='Sagittarius'
+                     COMP=sagittarius_comp
+                     EXEC=sagittarius_exec
+                     COMPOPTS=""
+                     EXTENSION="scm"
+                     EXTENSIONCOMP="scm"
+	             COMPCOMMANDS=""
+	             EXECCOMMANDS=""
+                     ;;
+
+    esac
+
+    {
+        echo
+        echo '****************************'
+        echo Benchmarking ${NAME} on `date` under `uname -a`
+    } >> results.${NAME}
+    TEMP="/tmp/larcenous/${NAME}"
+    mkdir -p "${TEMP}" 2> /dev/null
+
+    for program in $benchmarks ; do
+        evaluate $program
+    done
 done
