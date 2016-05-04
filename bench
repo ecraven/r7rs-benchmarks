@@ -328,7 +328,7 @@ racket_exec ()
 
 bigloo_comp ()
 {
-    ${BIGLOO} $1 -O6 -o $2
+    ${BIGLOO} $1 -O6 -call/cc -o $2
 }
 
 bigloo_exec ()
