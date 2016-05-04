@@ -1,0 +1,533 @@
+#! /usr/bin/env bash
+
+# For running R7RS benchmarks.
+#
+# Please report any errors or extensions to the author:
+#
+#   William D Clinger (will@ccs.neu.edu)
+#
+# This script was adapted from the similar script in
+# test/Benchmarking/R6RS, which was itself loosely modelled
+# after Marc Feeley's script for benchmarking R5RS systems,
+# with additional contributions by Harvey Stein.
+#
+# Usage:
+#
+#     % cd test/Benchmarking/R7RS
+#     % ./bench <system> <benchmark>
+#
+# For the current list of systems and benchmarks, run this
+# script with no arguments.
+#
+# The benchmarks must be contained within a src subdirectory
+# of the directory in which this script is run.
+#
+# The inputs to the benchmarks must be contained within an
+# inputs subdirectory of the directory in which this script
+# is run.
+
+OSNAME="`( uname )`"
+
+# If a benchmark takes longer than an hour to run, then it's
+# probably in some kind of infinite loop.
+
+CPU_LIMIT=3600
+
+# The following definitions are not in use, but using them
+# might improve the script.
+
+HOME="`( pwd )`"
+SRC="${HOME}/src"
+INPUTS="${HOME}/inputs"
+
+TEMP="/tmp/larcenous"
+
+################################################################
+
+# These are Larceny's R6RS benchmarks revised for R7RS, with
+# the following omissions (and reasons):
+#
+#    dderiv        (used hashtables)
+#    cat2          (used UTF-8, so it's usually the same as cat)
+#    cat3          (used UTF-16, which is not portably available in R7RS small)
+#    read0         (extensive testing of R6RS lexical syntax needs conversion)
+#    read2         (used UTF-8, so it's usually the same as read1)
+#    read3         (used UTF-16, which is not portably available in R7RS small)
+#    bibfreq       (used hashtables)
+#    bibfreq2      (used hashtables)
+#    normalization (used Unicode normalization)
+#    listsort      (used R6RS list-sort)
+#    vecsort       (used R6RS vector-sort)
+#    hashtable0    (used hashtables)
+#
+# In addition, the bv2string benchmark was reduced to testing
+# conversions between strings and UTF-8.
+
+GABRIEL_BENCHMARKS="browse deriv destruc diviter divrec puzzle triangl tak takl ntakl cpstak ctak"
+
+NUM_BENCHMARKS="fib fibc fibfp sum sumfp fft mbrot mbrotZ nucleic pi pnpoly ray simplex"
+
+KVW_BENCHMARKS="ack array1 string sum1 cat tail wc"
+
+IO_BENCHMARKS="read1"
+
+OTHER_BENCHMARKS="compiler conform dynamic earley graphs lattice matrix maze mazefun nqueens paraffins parsing peval primes quicksort scheme slatex"
+
+GC_BENCHMARKS="nboyer sboyer gcbench mperm"
+
+SYNTH_BENCHMARKS="equal bv2string"
+
+ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
+
+################################################################
+
+NB_RUNS=1
+clean=true
+options=""
+
+# Where the tested systems are located on our machines.
+
+setup ()
+{
+  case ${OSNAME} in
+
+    "Linux")
+
+        APPS="/usr/local/bin"
+        HENCHMAN="/home/henchman/bin/larceny"
+        ;;
+
+    "Darwin")
+
+        ;;
+
+  esac
+
+  # For both Solaris and Linux machines.
+
+  LARCENY=${LARCENY:-"../../../larceny"}
+  PETIT=${PETIT:-"../../../../PetitGit/larceny"}
+  CHIBI=${CHIBI:-"chibi-scheme"}
+  CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
+  FOMENT=${FOMENT:-"foment"}
+  GAUCHE=${GAUCHE:-"gosh"}
+  HUSKI=${HUSKI:-"huski"}
+  KAWA=${KAWA:-"kawa"}
+  PICRIN=${PICRIN:-"picrin"}
+  MOSH=${MOSH:-"mosh"}
+ 
+}
+
+setup
+
+# -----------------------------------------------------------------------------
+
+error ()
+{
+  echo $1
+  echo '
+Usage: bench [-r runs] <system> <benchmark>
+
+<system> is the abbreviated name of the implementation to benchmark:
+
+  chibi            for Chibi
+  chicken          for Chicken
+  foment           for Foment
+  gauche           for Gauche
+  husk             for Husk
+  kawa             for Kawa
+  larceny          for Larceny
+  mosh             for Mosh
+  picrin           for Picrin
+  petit            for Petit Larceny
+  all              for all of the above
+
+<benchmark> is the name of the benchmark(s) to run:
+
+  all         for all of the usual benchmarks
+  fib         for the fib benchmark
+  "fib ack"   for the fib and ack benchmarks
+
+runs is the number of times to run each benchmark (default is 1).'
+
+  exit
+}
+
+# -----------------------------------------------------------------------------
+
+# FIXME: DANGER! DANGER! DANGER!
+# DON'T USE THIS UNTIL IT'S BEEN FIXED!
+
+cleanup ()
+{
+  if [ "$clean" = "true" ] ; then
+     # It's true that technically speaking, we should be in the build
+     # directory when this fcn is called.  Thus, we should be able to
+     # just do rm *.  However, that's kind of dangerous, so instead,
+     # we delete files newer than the mark file that evaluate () makes.
+
+     for x in * ; do
+        if [ $x -nt clean_newer_than_me ] ; then
+          rm $x
+        fi
+     done
+  fi
+  rm clean_newer_than_me
+}
+
+evaluate ()
+{
+# echo > clean_newer_than_me
+  sleep 1
+  {
+    echo
+    echo Testing $1 under ${NAME}
+    make_src_code $1
+    echo Compiling...
+    $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
+    i=0
+    while [ "$i" -lt "$NB_RUNS" ]
+    do
+      echo Running...
+      ulimit -t ${CPU_LIMIT}
+      $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
+      i=`expr $i + 1`
+    done
+  } 2>&1 | tee -a results.${NAME}
+
+}
+
+make_src_code ()
+{
+  cat "${SRC}/$1.scm" "${SRC}/common.scm" > "${TEMP}/$1.${EXTENSION}"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Larceny and Petit Larceny
+#
+# The --nocontract command-line option reduces variability
+# of timing, and probably corresponds to the default for
+# most other systems.
+
+larceny_comp ()
+{
+  :
+}
+
+larceny_exec ()
+{
+  time "${LARCENY}" --nocontract --r7rs --program "$1" < "$2"
+}
+
+petit_comp ()
+{
+  rm "`dirname "$1"`"/*.slfasl
+  rm "`dirname "$1"`"/*.slfasl.c
+  rm "`dirname "$1"`"/*.slfasl.o
+  rm "`dirname "$1"`"/*.slfasl.so
+  rm "`dirname "$1"`"/*.slfasl.*.so
+  echo "(import (larceny compiler)) (compile-file \"$1\")" \
+  | time "${PETIT}" -err5rs -- -e "(repl-prompt values)"
+}
+
+petit_exec ()
+{
+  time "${PETIT}" --nocontract --r7rs --program "$1" < "$2"
+}
+
+henchman_comp ()
+{
+  echo "(import (larceny compiler)) (compile-file \"$1\")" \
+  | time "${HENCHMAN}" -err5rs -- -e "(repl-prompt values)"
+}
+
+henchman_exec ()
+{
+  time "${HENCHMAN}" --nocontract --r7rs --program "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chibi
+
+chibi_comp ()
+{
+  :
+}
+
+chibi_exec ()
+{
+  time "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chicken
+
+chicken_comp ()
+{
+  OPTS="-optimize-leaf-routines -block -inline -inline-global -specialize"
+  ${CHICKEN_CSC} -extend r7rs -require-extension r7rs ${OPTS} $1 -o $2
+}
+
+chicken_exec ()
+{
+  time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Foment
+
+foment_comp ()
+{
+  :
+}
+
+foment_exec ()
+{
+  time "${FOMENT}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Gauche
+
+gauche_comp ()
+{
+  :
+}
+
+gauche_exec ()
+{
+  time "${GAUCHE}" -r7 -b "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Kawa
+
+# I could not get huskc to work:
+#
+# % ./huskc /tmp/larcenous/fib.scm
+#
+# /tmp/larcenous/fib.hs:14:8:
+#     Could not find module `Language.Scheme.Variables'
+#     Use -v to see a list of the files searched for.
+
+husk_comp ()
+{
+  :
+}
+
+husk_exec ()
+{
+  time "${HUSKI}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Kawa
+
+kawa_comp ()
+{
+  :
+}
+
+kawa_exec ()
+{
+  time "${KAWA}" -f "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Mosh
+
+mosh_comp ()
+{
+  :
+}
+
+mosh_exec ()
+{
+  time "${MOSH}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Picrin
+
+# Picrin (apparently) does not allow forward references within
+# procedure definitions, so it is unable to run any of these
+# benchmarks.
+
+picrin_comp ()
+{
+  :
+}
+
+picrin_exec ()
+{
+  time "${PICRIN}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+
+## Arg processing...
+if [ "$#" -lt 2 ]; then
+  error '>>> At least two command line arguments are needed'
+fi
+
+
+while [ $# -gt 2 ] ; do
+   arg="$1"
+   shift
+   case $arg in
+      -r) NB_RUNS=$1    ; shift ;;
+      -c) clean=$1      ; shift ;;
+      -o) options=$1    ; shift ;;
+       *) error ">>> Unknown argument of $arg given." ;;
+   esac
+done
+
+if [ "$#" -ne 2 ]; then
+  error '>>> Last two arguments must be <system> and <benchmark>'
+fi
+
+case "$1" in
+               all) systems="$ALL_SYSTEMS" ;;
+                 *) systems="$1" ;;
+esac
+
+case "$2" in
+      all) benchmarks="$ALL_BENCHMARKS" ;;
+  gabriel) benchmarks="$GABRIEL_BENCHMARKS" ;;
+      kvw) benchmarks="$KVW_BENCHMARKS" ;;
+    other) benchmarks="$OTHER_BENCHMARKS" ;;
+      awk) benchmarks="$AWK_BENCHMARKS" ;;
+        c) benchmarks="$C_BENCHMARKS" ;;
+     java) benchmarks="$JAVA_BENCHMARKS" ;;
+        *) benchmarks="$2" ;;
+esac
+
+## Run each benchmark under each system...
+for system in $systems ; do
+
+   case "$system" in
+
+   larceny) NAME='Larceny'
+            COMP=larceny_comp
+            EXEC=larceny_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+     petit) NAME='Petit'
+            COMP=petit_comp
+            EXEC=petit_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="slfasl"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+  henchman) NAME='Henchman'
+            COMP=henchman_comp
+            EXEC=henchman_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="slfasl"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+     chibi) NAME='Chibi'
+            COMP=chibi_comp
+            EXEC=chibi_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+   chicken) NAME='Chicken'
+            COMP=chicken_comp
+            EXEC=chicken_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="chicken"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+    foment) NAME='Foment'
+            COMP=foment_comp
+            EXEC=foment_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+    gauche) NAME='Gauche'
+            COMP=gauche_comp
+            EXEC=gauche_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+      husk) NAME='Husk'
+            COMP=husk_comp
+            EXEC=husk_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+      kawa) NAME='Kawa'
+            COMP=kawa_comp
+            EXEC=kawa_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+      mosh) NAME='Mosh'
+            COMP=mosh_comp
+            EXEC=mosh_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+    picrin) NAME='Picrin'
+            COMP=picrin_comp
+            EXEC=picrin_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+	    COMPCOMMANDS=""
+	    EXECCOMMANDS=""
+            ;;
+
+   esac
+
+   {
+      echo
+      echo '****************************'
+      echo Benchmarking ${NAME} on `date` under `uname -a`
+   } >> results.${NAME}
+
+   mkdir "${TEMP}" 2> /dev/null
+
+   for program in $benchmarks ; do
+      evaluate $program
+   done
+done
