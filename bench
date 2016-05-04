@@ -125,6 +125,7 @@ setup ()
     RACKET=${RACKET:-"racket"}
     RACKET_RACO=${RACKET_RACO:-"raco"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
+    VICARE=${VICARE:-"vicare"}
 
 }
 
@@ -158,6 +159,7 @@ Usage: bench [-r runs] <system> <benchmark>
   picrin           for Picrin
   racket           for R
   sagittarius      for Sagittarius
+  vicare           for Vicare
   all              for all of the above
 
 <benchmark> is the name of the benchmark(s) to run:
@@ -309,12 +311,27 @@ chicken_exec ()
 }
 
 # -----------------------------------------------------------------------------
+# Definitions specific to Vicare
+
+vicare_comp ()
+{
+    # remove import statement
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+    # ${VICARE} --compile $1 -o $2
+}
+
+vicare_exec ()
+{
+    time ${VICARE} --r6rs-script "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
 # Definitions specific to Racket
 
 racket_comp ()
 {
     # remove import statement
-    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' $1
     ${RACKET_RACO} make "$1"
 }
 
@@ -347,7 +364,7 @@ chez_comp ()
 chez_exec ()
 {
     # remove import statement
-    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    sed f-i -e 's/^(import (scheme.*)$//g' $1
     time "${CHEZ}" --optimize-level 2 --program "$1" < "$2"
 }
 
@@ -362,7 +379,7 @@ petite_comp ()
 petite_exec ()
 {
     # remove import statement
-    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' $1
     time "${PETITE}" --optimize-level 2 --program "$1" < "$2"
 }
 
@@ -398,7 +415,7 @@ guile_exec ()
 gambitc_comp ()
 {
     # remove import statement
-    sed -i -e 's/(import (scheme base)//g' -e 's/(scheme [a-z][a-z]*))*//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' $1
     ${GAMBITC} -o $2 -exe $1
 }
 
@@ -600,6 +617,16 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        vicare) NAME='Vicare'
+                 COMP=vicare_comp
+                 EXEC=vicare_exec
+                 COMPOPTS=""
+                 EXTENSION="sps"
+                 EXTENSIONCOMP="sps"
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
