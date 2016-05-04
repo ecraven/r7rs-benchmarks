@@ -317,12 +317,12 @@ vicare_comp ()
 {
     # remove import statement
     sed -i -e 's/^(import (scheme.*)$//g' $1
-    # ${VICARE} --compile $1 -o $2
+    ${VICARE} -c $1 -o $2
 }
 
 vicare_exec ()
 {
-    time ${VICARE} --r6rs-script "$1" < "$2"
+    time ${VICARE} --binary-program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
