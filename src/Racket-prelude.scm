@@ -1,14 +1,4 @@
-#lang racket
-(require (only-in r5rs quote quasiquote unquote unquote-splicing))
-(define flush-output-port flush-output)
-(define current-jiffy current-inexact-milliseconds)
-(define (jiffies-per-second) 1000)
-(define current-second current-seconds)
-(define (square x) (* x x))
+#lang r7rs
+(import (scheme base) (only (racket base) version))
 (define (this-scheme-implementation-name)
   (string-append "racket-" (version)))
-(define inexact exact->inexact)
-(define exact inexact->exact)
-(define set-cdr! set-mcdr!)
-(define set-car! set-mcar!)
-(define cdr mcdr)
