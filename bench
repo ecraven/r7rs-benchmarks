@@ -364,7 +364,7 @@ chez_comp ()
 chez_exec ()
 {
     # remove import statement
-    sed f-i -e 's/^(import (scheme.*)$//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' $1
     time "${CHEZ}" --optimize-level 2 --program "$1" < "$2"
 }
 
