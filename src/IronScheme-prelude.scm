@@ -1,4 +1,5 @@
-(import (except (ironscheme) time) (srfi :19) (srfi :112))
+(import (except (ironscheme) time bitwise-not div mod) (srfi :19) (srfi :112))
+(define exact-integer? integer?)
 (define (jiffies-per-second)
   1)
 (define (current-jiffy)
