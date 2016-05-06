@@ -126,6 +126,7 @@ setup ()
     RACKET=${RACKET:-"racket"}
     RACKET_RACO=${RACKET_RACO:-"raco"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
+    SCHEME48=${SCHEME48:-"scheme48"}
     VICARE=${VICARE:-"vicare"}
 
 }
@@ -161,6 +162,7 @@ Usage: bench [-r runs] <system> <benchmark>
   picrin           for Picrin
   racket           for R
   sagittarius      for Sagittarius
+  scheme48         for Scheme48
   vicare           for Vicare
   all              for all of the above
 
@@ -312,6 +314,22 @@ chicken_comp ()
 chicken_exec ()
 {
     time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chicken
+
+scheme48_comp ()
+{
+    # don't execute main
+    sed -i -e 's/^(main)$//' -e 's/(main)/(main . unneeded-command-line-parameters)/' $1
+    echo "echo -e ,set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build main $2\n,exit | ( time ${SCHEME48} )"
+    echo -e ",set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build main $2\n,exit" | ( time ${SCHEME48} )
+}
+
+scheme48_exec ()
+{
+  time ${SCHEME48} -i $1 < $2
 }
 
 # -----------------------------------------------------------------------------
@@ -639,6 +657,16 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        scheme48) NAME='Scheme48'
+                 COMP=scheme48_comp
+                 EXEC=scheme48_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="s48img"
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
