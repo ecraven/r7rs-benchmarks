@@ -6,19 +6,23 @@ Just run
 ./bench <scheme> <test>
 #+END_SRC
 Schemes that should work:
-- Bigloo (=bigloo=)
-- Chez (=chez=)
-- Chibi (=chibi=)
-- Chicken (=chicken=)
-- GambitC (=gambitc=)
-- Gauche (=gauche=)
-- Guile (=guile=)
-- Kawa (=kawa=)
-- Larceny (=larceny=)
-- MIT/GNU Scheme (=mit=)
-- Petite Chez (=chez=)
-- [[Racket]] (=racket=)
-
+- [[https://www-sop.inria.fr/indes/fp/Bigloo/][Bigloo]] (=bigloo=)
+- [[http://www.call-with-current-continuation.org/bones/][Bones]] (=bones=)
+- [[http://scheme.com/][Chez]] (=chez=)
+- [[http://synthcode.com/scheme/chibi/][Chibi]] (=chibi=)
+- [[https://www.call-cc.org/][Chicken]] (=chicken=)
+- [[https://github.com/leftmike/foment][Foment]] (=foment=)
+- [[http://gambitscheme.org/wiki/index.php/Main_Page][GambitC]] (=gambitc=)
+- [[http://practical-scheme.net/gauche/][Gauche]] (=gauche=)
+- [[http://www.gnu.org/software/guile/][Guile]] (=guile=)
+- [[http://www.gnu.org/software/kawa/][Kawa]] (=kawa=)
+- [[http://www.larcenists.org/][Larceny]] (=larceny=)
+- [[https://www.gnu.org/software/mit-scheme/][MIT/GNU]] Scheme (=mit=)
+- [[http://scheme.com/][Petite Chez]] (=chez=)
+- [[https://github.com/picrin-scheme/picrin][Picrin]] (=picrin=)
+- [[https://racket-lang.org][Racket]] (=racket=)
+- [[https://bitbucket.org/ktakashi/sagittarius-scheme/wiki/Home][Sagittarius]] (=sagittarius=)
+- [[http://marcomaggi.github.io/vicare.html][Vicare]] (=vicare=)
 This should result in a file ./results.<scheme>.
 
 Run
@@ -38,7 +42,7 @@ You can set an environment variable to specify the path to each Scheme.
 LARCENY=/tmp/larceny/larceny MIT=/tmp/mit/mit-scheme ./bench "mit larceny" "fib ack"
 #+END_SRC
 ** Notes for specific implementations
-*** <<racket>>Racket
+*** Racket
 The racket test code assumes the presence of https://github.com/lexi-lambda/racket-r7rs.git.
 
 Install the r7rs package installation-wide.
