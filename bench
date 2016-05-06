@@ -119,7 +119,7 @@ setup ()
     KAWA=${KAWA:-"kawa"}
     LARCENY=${LARCENY:-"larceny"}
     MIT=${MIT:-"mit-scheme"}
-    MOSH=${MOSH:-"mosh"}
+    MOSH=${MOSH:-"mosh-scheme"}
     PETIT=${PETIT:-"../../../../PetitGit/larceny"}
     PETITE=${PETITE:-"petite"}
     PICRIN=${PICRIN:-"picrin"}
@@ -529,7 +529,8 @@ kawa_exec ()
 
 mosh_comp ()
 {
-    :
+    # remove import statement
+    sed -i -e 's/^(import (scheme.*)$//g' $1
 }
 
 mosh_exec ()
