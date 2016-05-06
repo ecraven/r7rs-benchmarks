@@ -255,6 +255,8 @@ larceny_comp ()
 
 larceny_exec ()
 {
+    # add srfi 112 for (implementation-version)
+    sed -i 's/^(import /(import (srfi 112) /' $1
     time "${LARCENY}" --nocontract --r7rs --program "$1" < "$2"
 }
 
