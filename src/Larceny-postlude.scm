@@ -1,1 +1,2 @@
-(define (this-scheme-implementation-name) "larceny-0.98")
+(define (this-scheme-implementation-name)
+  (string-append "larceny-" (implementation-version)))
