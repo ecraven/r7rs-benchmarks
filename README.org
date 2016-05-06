@@ -17,7 +17,7 @@ Schemes that should work:
 - Larceny (=larceny=)
 - MIT/GNU Scheme (=mit=)
 - Petite Chez (=chez=)
-- Racket (=racket=)
+- [[Racket]] (=racket=)
 
 This should result in a file ./results.<scheme>.
 
@@ -36,4 +36,14 @@ CPU_TIME=3600 ./bench chez all
 You can set an environment variable to specify the path to each Scheme.
 #+BEGIN_SRC
 LARCENY=/tmp/larceny/larceny MIT=/tmp/mit/mit-scheme ./bench "mit larceny" "fib ack"
+#+END_SRC
+** Notes for specific implementations
+*** <<racket>>Racket
+The racket test code assumes the presence of https://github.com/lexi-lambda/racket-r7rs.git.
+
+Install the r7rs package installation-wide.
+
+Run as root:
+#+BEGIN_SRC
+raco pkg install -i r7rs r7rs-lib
 #+END_SRC
