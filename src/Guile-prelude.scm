@@ -14,3 +14,6 @@
 (define (this-scheme-implementation-name) (string-append "guile-" (version)))
 (read-enable 'r7rs-symbols)
 (print-enable 'r7rs-symbols)
+(use-modules (rnrs bytevectors)
+	     (rnrs base)
+	     (srfi srfi-9))

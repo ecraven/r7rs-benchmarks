@@ -81,11 +81,8 @@
       (i     node.i     node.i-set!)
       (j     node.j     node.j-set!))
 
-    (define (make-empty-node) (make-node-raw 0 0 0 0))
-
-    (define (make-node l r) (make-node-raw l r 0 0))
-
-    (let ()
+    (let ((make-empty-node (lambda () (make-node-raw 0 0 0 0)))
+	  (make-node (lambda (l r) (make-node-raw l r 0 0))))
 
       ;;  Build tree top down, assigning to older objects.
       (define (Populate iDepth thisNode)
