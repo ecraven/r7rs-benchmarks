@@ -330,8 +330,6 @@ vicare_exec ()
 
 racket_comp ()
 {
-    # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
     ${RACKET_RACO} make "$1"
 }
 
@@ -650,7 +648,7 @@ for system in $systems ; do
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
-        
+
         chez) NAME='Chez'
               COMP=chez_comp
               EXEC=chez_exec
