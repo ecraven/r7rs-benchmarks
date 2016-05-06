@@ -1,7 +1,7 @@
 .PHONY: csv clean all
 
 all:
-	./bench "bigloo bones chez chibi chicken foment gambitc gauche guile kawa larceny mit petite picrin racket sagittarius scheme48 vicare" all
+	./bench "bigloo bones chez chibi chicken foment gambitc gauche guile kawa larceny mit petite picrin racket sagittarius scheme48 vicare mosh ypsilon" all
 
 csv:
 	grep -h '+!CSVLINE' results.* | sed 's/+!CSVLINE!+//' > all.csv
