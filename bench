@@ -116,6 +116,7 @@ setup ()
     GUILD=${GUILD:-"guild"}
     GUILE=${GUILE:-"guile"}
     HUSKI=${HUSKI:-"huski"}
+    IRONSCHEME=${IRONSCHEME:-"mono /home/leppie/IronScheme/IronScheme.Console-v4.exe -nologo -emacs"}
     KAWA=${KAWA:-"kawa"}
     LARCENY=${LARCENY:-"larceny"}
     MIT=${MIT:-"mit-scheme"}
@@ -154,6 +155,7 @@ Usage: bench [-r runs] <system> <benchmark>
   gauche           for Gauche
   guile            for Guile Scheme
   husk             for Husk
+  ironscheme       for IronScheme
   kawa             for Kawa
   larceny          for Larceny
   mit              for MIT/GNU Scheme
@@ -381,6 +383,23 @@ vicare_comp ()
 vicare_exec ()
 {
     time ${VICARE} --binary-program "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to IronScheme
+
+ironscheme_comp ()
+{
+    # remove import statement
+    # sed -i -e 's/^(import (scheme.*)$//g' $1
+    # ${IRONSCHEME} -c $1 -o $2
+    :
+}
+
+ironscheme_exec ()
+{
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+    time ${IRONSCHEME} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -717,6 +736,16 @@ for system in $systems ; do
                 COMPCOMMANDS=""
                 EXECCOMMANDS=""
                 ;;
+
+        ironscheme) NAME='IronScheme'
+                    COMP=ironscheme_comp
+                    EXEC=ironscheme_exec
+                    COMPOPTS=""
+                    EXTENSION="sps"
+                    EXTENSIONCOMP="sps"
+                    COMPCOMMANDS=""
+                    EXECCOMMANDS=""
+                    ;;
 
         racket) NAME='Racket'
                 COMP=racket_comp
