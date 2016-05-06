@@ -106,6 +106,7 @@ setup ()
     # For both Solaris and Linux machines.
 
     BIGLOO=${BIGLOO:-"bigloo"}
+    BONES=${BONES:-"bones"}
     CHEZ=${CHEZ:-"chez-scheme"}
     CHIBI=${CHIBI:-"chibi-scheme"}
     CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
@@ -142,6 +143,7 @@ Usage: bench [-r runs] <system> <benchmark>
 <system> is the abbreviated name of the implementation to benchmark:
 
   bigloo           for Bigloo
+  bones            for Bones
   chez             for Chez Scheme
   chibi            for Chibi
   chicken          for Chicken
@@ -306,6 +308,26 @@ chicken_comp ()
 }
 
 chicken_exec ()
+{
+    time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Bones
+
+bones_comp ()
+{
+    # remove import statement
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+    echo "${BONES} $1 > $1.s"
+    ${BONES} $1 > $1.s
+    echo "nasm -I/usr/share/bones -f elf64 $1.s -o $1.o"
+    nasm -I/usr/share/bones/ -f elf64 $1.s -o $1.o
+    echo "gcc $1.o -o $2"
+    gcc $1.o -o $2
+}
+
+bones_exec ()
 {
     time "$1" < "$2"
 }
@@ -619,35 +641,45 @@ for system in $systems ; do
                  EXECCOMMANDS=""
                  ;;
 
+        bones) NAME='Bones'
+               COMP=bones_comp
+               EXEC=bones_exec
+               COMPOPTS=""
+               EXTENSION="scm"
+               EXTENSIONCOMP="exe"
+               COMPCOMMANDS=""
+               EXECCOMMANDS=""
+               ;;
+
         vicare) NAME='Vicare'
-                 COMP=vicare_comp
-                 EXEC=vicare_exec
-                 COMPOPTS=""
-                 EXTENSION="sps"
-                 EXTENSIONCOMP="sps"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
-                 ;;
+                COMP=vicare_comp
+                EXEC=vicare_exec
+                COMPOPTS=""
+                EXTENSION="sps"
+                EXTENSIONCOMP="sps"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
 
         racket) NAME='Racket'
-                 COMP=racket_comp
-                 EXEC=racket_exec
-                 COMPOPTS=""
-                 EXTENSION="scm"
-                 EXTENSIONCOMP="scm"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
-                 ;;
+                COMP=racket_comp
+                EXEC=racket_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="scm"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
 
         bigloo) NAME='Bigloo'
-                 COMP=bigloo_comp
-                 EXEC=bigloo_exec
-                 COMPOPTS=""
-                 EXTENSION="scm"
-                 EXTENSIONCOMP="exe"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
-                 ;;
+                COMP=bigloo_comp
+                EXEC=bigloo_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="exe"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
 
         chez) NAME='Chez'
               COMP=chez_comp
