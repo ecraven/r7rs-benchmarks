@@ -13,5 +13,8 @@
 ;; (define exact inexact->exact)
 ;; (define (square x) (* x x))
 ;; (define exact-integer? integer?)
+(import (srfi :112))
+(define (this-scheme-implementation-name) (string-append "sagittarius-" (implementation-version)))
 
-(define (this-scheme-implementation-name) (string-append "sagittarius-" (sagittarius-version)))
+
+
