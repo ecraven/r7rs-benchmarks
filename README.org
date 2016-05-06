@@ -15,6 +15,7 @@ Schemes that should work:
 - [[http://gambitscheme.org/wiki/index.php/Main_Page][GambitC]] (=gambitc=)
 - [[http://practical-scheme.net/gauche/][Gauche]] (=gauche=)
 - [[http://www.gnu.org/software/guile/][Guile]] (=guile=)
+- [[https://github.com/leppie/IronScheme][IronScheme]] (=ironscheme=)
 - [[http://www.gnu.org/software/kawa/][Kawa]] (=kawa=)
 - [[http://www.larcenists.org/][Larceny]] (=larceny=)
 - [[https://www.gnu.org/software/mit-scheme/][MIT/GNU]] Scheme (=mit=)
@@ -62,4 +63,10 @@ Install the r7rs package installation-wide.
 Run as root:
 #+BEGIN_SRC
 raco pkg install -i r7rs r7rs-lib
+#+END_SRC
+
+*** IronScheme
+Precompile system libraries (optional). It is still going to be slow.
+#+BEGIN_SRC
+echo "(compile-system-libraries)" | mono IronScheme.Console-v4.exe
 #+END_SRC
