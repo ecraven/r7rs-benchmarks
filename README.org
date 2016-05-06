@@ -43,6 +43,15 @@ You can set an environment variable to specify the path to each Scheme.
 LARCENY=/tmp/larceny/larceny MIT=/tmp/mit/mit-scheme ./bench "mit larceny" "fib ack"
 #+END_SRC
 ** Notes for specific implementations
+*** Chicken
+The chicken test code assumes the presence of
+- vector-lib
+- r7rs
+
+Install them by running
+#+BEGIN_SRC
+chicken-install vector-lib r7rs
+#+END_SRC
 *** Racket
 The racket test code assumes the presence of https://github.com/lexi-lambda/racket-r7rs.git.
 
