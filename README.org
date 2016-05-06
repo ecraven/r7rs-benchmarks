@@ -70,3 +70,11 @@ Precompile system libraries (optional). It is still going to be slow.
 #+BEGIN_SRC
 echo "(compile-system-libraries)" | mono IronScheme.Console-v4.exe
 #+END_SRC
+The default binary for IronScheme (can be changed by exporting IRONSCHEME in your shell before running bench) is called =ironscheme=.
+
+If you unpack IronScheme in your home, you can create a shell script like the following:
+#+BEGIN_SRC
+#!/bin/bash
+mono ~/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+#+END_SRC
+and put that somewhere in your =$PATH=.
