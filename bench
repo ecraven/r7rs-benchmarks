@@ -128,6 +128,7 @@ setup ()
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
     VICARE=${VICARE:-"vicare"}
+    YPSILON=${YPSILON:-"ypsilon"}
 
 }
 
@@ -164,6 +165,7 @@ Usage: bench [-r runs] <system> <benchmark>
   sagittarius      for Sagittarius
   scheme48         for Scheme48
   vicare           for Vicare
+  ypsilon          for Ypsilon
   all              for all of the above
 
 <benchmark> is the name of the benchmark(s) to run:
@@ -317,7 +319,21 @@ chicken_exec ()
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Chicken
+# Definitions specific to Ypsilon
+
+ypsilon_comp ()
+{
+    # remove import statement
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+}
+
+ypsilon_exec ()
+{
+    time ${YPSILON} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Scheme48
 
 scheme48_comp ()
 {
@@ -658,6 +674,16 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        ypsilon) NAME='Ypsilon'
+                 COMP=ypsilon_comp
+                 EXEC=ypsilon_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="scm"
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
