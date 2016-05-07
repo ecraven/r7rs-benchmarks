@@ -1,4 +1,4 @@
-(import (rnrs) (rnrs mutable-pairs) (rnrs mutable-strings) (rnrs io simple) (srfi :19))
+(import (rnrs) (rnrs mutable-pairs) (rnrs mutable-strings) (rnrs io simple) (srfi :19) (rnrs r5rs (6)))
 (define (current-second)
   (let ((d (current-date)))
     (+ (* 60 60 (date-hour d))
