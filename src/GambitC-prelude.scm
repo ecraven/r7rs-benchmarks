@@ -3,7 +3,6 @@
 	 (block)               ;; user-defined functions not set! in the file will not be redefined
 	 (not safe)            ;; Do not check for errors at runtime
 	 )
-
 (define (current-second) (truncate (current-jiffy)))
 (define (jiffies-per-second) 1)
 (define (current-jiffy) (time->seconds (current-time)))
