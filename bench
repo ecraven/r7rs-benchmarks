@@ -213,13 +213,13 @@ evaluate ()
         make_src_code $1
         echo Compiling...
         ulimit -t ${CPU_LIMIT}
-        $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}" "$1"
+        $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}" $1
         i=0
         while [ "$i" -lt "$NB_RUNS" ]
         do
             echo Running...
             ulimit -t ${CPU_LIMIT}
-            $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input" "$1"
+            $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
             i=`expr $i + 1`
         done
     } 2>&1 | tee -a results.${NAME}
@@ -391,15 +391,25 @@ vicare_exec ()
 ironscheme_comp ()
 {
     # remove import statement
-    # sed -i -e 's/^(import (scheme.*)$//g' $1
-    # ${IRONSCHEME} -c $1 -o $2
-    :
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+    # remove trailing (main)
+    sed -i -e 's/^(main)$//g' $1
+    # update library name
+    sed -i -e "s/LIBNAME/$3/g" $1
+    # create runner 
+    echo "(import ($3)) (main)" > $2
+    # delete previous lib
+    rm -f ${TEMP}/$3.dll
+    pushd ${TEMP} > /dev/null
+    echo "(compile \"$2\")" | ${IRONSCHEME}
+    popd > /dev/null
 }
 
 ironscheme_exec ()
 {
-    sed -i -e 's/^(import (scheme.*)$//g' $1
+    pushd ${TEMP} > /dev/null
     time ${IRONSCHEME} "$1" < "$2"
+    popd > /dev/null
 }
 
 # -----------------------------------------------------------------------------
@@ -741,7 +751,7 @@ for system in $systems ; do
                     COMP=ironscheme_comp
                     EXEC=ironscheme_exec
                     COMPOPTS=""
-                    EXTENSION="sps"
+                    EXTENSION="sls"
                     EXTENSIONCOMP="sps"
                     COMPCOMMANDS=""
                     EXECCOMMANDS=""
