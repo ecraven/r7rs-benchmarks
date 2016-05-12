@@ -126,6 +126,7 @@ setup ()
     PICRIN=${PICRIN:-"picrin"}
     RACKET=${RACKET:-"racket"}
     RACKET_RACO=${RACKET_RACO:-"raco"}
+    RSCHEME=${RSCHEME:-"rscheme"}
     RHIZOME_PISC=${RHIZOME_PISC:-"pisc"}
     RHIZOME_PISL=${RHIZOME_PISL:-"pisl"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
@@ -166,6 +167,7 @@ Usage: bench [-r runs] <system> <benchmark>
   picrin           for Picrin
   racket           for R
   rhizome          for rhizome
+  rscheme          for rscheme
   sagittarius      for Sagittarius
   scheme48         for Scheme48
   vicare           for Vicare
@@ -320,6 +322,20 @@ chicken_comp ()
 chicken_exec ()
 {
     time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to RScheme
+
+rscheme_comp ()
+{
+    # remove import statement
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+}
+
+rscheme_exec ()
+{
+    time ( rscheme "$1" < "$2" )
 }
 
 # -----------------------------------------------------------------------------
@@ -721,6 +737,16 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        rscheme) NAME='RScheme'
+                 COMP=rscheme_comp
+                 EXEC=rscheme_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="scm"
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
