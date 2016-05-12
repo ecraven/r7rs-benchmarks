@@ -399,7 +399,7 @@ ironscheme_comp ()
 ironscheme_exec ()
 {
     sed -i -e 's/^(import (scheme.*)$//g' $1
-    time ${IRONSCHEME} "$1" < "$2"
+    time ( ${IRONSCHEME} "$1" < "$2" )
 }
 
 # -----------------------------------------------------------------------------
