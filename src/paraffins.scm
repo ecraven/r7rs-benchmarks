@@ -4,7 +4,8 @@
 
 ;;; This benchmark uses the following R6RS procedures.
 
-(define (div x y) (quotient x y))
+(define (div x y) 
+  (quotient x y))
 
 ;;; End of (faked) R6RS procedures.
 
