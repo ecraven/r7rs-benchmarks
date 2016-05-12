@@ -126,6 +126,8 @@ setup ()
     PICRIN=${PICRIN:-"picrin"}
     RACKET=${RACKET:-"racket"}
     RACKET_RACO=${RACKET_RACO:-"raco"}
+    RHIZOME_PISC=${RHIZOME_PISC:-"pisc"}
+    RHIZOME_PISL=${RHIZOME_PISL:-"pisl"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
     VICARE=${VICARE:-"vicare"}
@@ -164,6 +166,7 @@ Usage: bench [-r runs] <system> <benchmark>
   petite           for Petite Chez
   picrin           for Picrin
   racket           for R
+  rhizome          for rhizome
   sagittarius      for Sagittarius
   scheme48         for Scheme48
   vicare           for Vicare
@@ -318,6 +321,32 @@ chicken_comp ()
 chicken_exec ()
 {
     time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Rhizome
+
+rhizome_comp ()
+{
+    # remove import statement
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+    dir=$(dirname "$1")
+    cd $dir
+    infile=$(basename "$1")
+    outfile=$(basename "$2")
+    tmpfile=${outfile%exe}c
+    modulename=${infile%.scm}
+    echo "${RHIZOME_PISC} -output $tmpfile $infile"
+    ${RHIZOME_PISC} -output $tmpfile $infile
+    echo "${RHIZOME_PISL} $modulename -o $outfile"
+    ${RHIZOME_PISL} $modulename -o $outfile
+    chmod +x $outfile
+}
+
+rhizome_exec ()
+{
+#   time pi $1 < $2
+   time "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -693,6 +722,16 @@ for system in $systems ; do
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        rhizome) NAME='Rhizome'
+                 COMP=rhizome_comp
+                 EXEC=rhizome_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="exe" # should be exe
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
