@@ -1,0 +1,16 @@
+(define (flush-output-port x) x)
+(define (jiffies-per-second) 1)
+(define (current-second) (vector-ref (rp:time) 0))
+(define current-jiffy current-second)
+(define inexact exact->inexact)
+(define exact inexact->exact)
+(define (this-scheme-implementation-name)
+  (string-append "rhizome-" "unknown"))
+(define-syntax when
+  (syntax-rules ()
+    ((when a b c ...)
+     (if a (begin b c ...)))))
+(define-syntax unless
+  (syntax-rules ()
+    ((unless a b c ...)
+     (if (not a) (begin b c ...)))))
