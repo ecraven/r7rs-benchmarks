@@ -1,6 +1,6 @@
 (define (jiffies-per-second) 1000000)
-(define (current-second) (with-module syscalls (time-microseconds (time))))
-(define current-jiffy current-second)
+(define (current-second) (with-module syscalls (time->epoch-seconds (time))))
+(define (current-jiffy) (with-module syscalls (/ (time-microseconds (time)) 1000000)))
 (define inexact exact->inexact)
 (define exact inexact->exact)
 (define (this-scheme-implementation-name)
