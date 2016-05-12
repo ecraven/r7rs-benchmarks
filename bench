@@ -434,15 +434,23 @@ vicare_exec ()
 
 ironscheme_comp ()
 {
-    # remove import statement
-    # sed -i -e 's/^(import (scheme.*)$//g' $1
-    # ${IRONSCHEME} -c $1 -o $2
     :
 }
 
 ironscheme_exec ()
 {
     sed -i -e 's/^(import (scheme.*)$//g' $1
+    # maybe a support lookup table can be added for these, and only inject if needed, like for read-line, square, exact-integer? too
+    sed -i -e 's/^(define (bitwise-not[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (bitwise-and[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (div[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (mod[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (partition[[:blank:]].*).*$/#;(excluded/g' $1
+    
+    # R6RS compat failure: gcbench
+    # failures due to Mono: cpstak, fft, pi, pnpoly, quicksort
+    # weird failures: matrix (missing quote?)
+                    
     time ( ${IRONSCHEME} "$1" < "$2" )
 }
 
