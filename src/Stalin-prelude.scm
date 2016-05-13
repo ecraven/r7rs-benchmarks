@@ -3,6 +3,14 @@
     ((import stuff ...)
      (begin) ;; do nothing
      )))
+(define-syntax when
+  (syntax-rules ()
+    ((when a b c ...)
+     (if a (begin b c ...)))))
+(define-syntax unless
+  (syntax-rules ()
+    ((unless a b c ...)
+     (if (not a) (begin b c ...)))))
 (define (jiffies-per-second) 1)
 (define (current-jiffy) (with-input-from-file "/proc/uptime" read))
 (define (current-second) (with-input-from-file "/proc/uptime" read))
@@ -18,4 +26,7 @@
 (define (flush-output-port x) x)
 (define inexact exact->inexact)
 (define exact inexact->exact)
-
+(define (error . args)
+  (display "error: ")
+  (for-each display args)
+  (newline))
