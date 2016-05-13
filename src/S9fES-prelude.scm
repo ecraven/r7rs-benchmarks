@@ -1,0 +1,20 @@
+(define-syntax import
+  (syntax-rules ()
+    ((import stuff ...)
+     (begin) ;; do nothing
+     )))
+(define (jiffies-per-second) 1)
+(define (current-jiffy) 0)
+(define (current-second) 0)
+(define (call-with-values thunk receiver)
+  (let ((values (thunk)))
+    (apply receiver values)))
+(define (values . rest)
+  (if (= (length rest) 1)
+      (car rest)
+      rest))
+(define (this-scheme-implementation-name)
+  (string-append "s9fes-" "unknown"))
+(define inexact exact->inexact)
+(define exact inexact->exact)
+

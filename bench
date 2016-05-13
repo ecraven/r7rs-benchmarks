@@ -132,6 +132,7 @@ setup ()
     RHIZOME_PISL=${RHIZOME_PISL:-"pisl"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
+    S9fES=${S9fES:-"s9"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
     VICARE=${VICARE:-"vicare"}
     YPSILON=${YPSILON:-"ypsilon"}
@@ -172,6 +173,7 @@ Usage: bench [-r runs] <system> <benchmark>
   rscheme          for RScheme
   sagittarius      for Sagittarius
   scheme48         for Scheme48
+  s9fes            for S9fES (Scheme 9 from Empty Space)
   tinyscheme       for TinyScheme
   vicare           for Vicare
   ypsilon          for Ypsilon
@@ -325,6 +327,19 @@ chicken_comp ()
 chicken_exec ()
 {
     time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to S9fES
+
+s9fes_comp ()
+{
+    :
+}
+
+s9fes_exec ()
+{
+    time ${S9fES} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -772,6 +787,16 @@ for system in $systems ; do
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
+
+        s9fes) NAME='S9fES'
+            COMP=s9fes_comp
+            EXEC=s9fes_exec
+            COMPOPTS=""
+            EXTENSION="scm"
+            EXTENSIONCOMP="scm"
+            COMPCOMMANDS=""
+            EXECCOMMANDS=""
+            ;;
 
         tinyscheme) NAME='TinyScheme'
                     COMP=tinyscheme_comp
