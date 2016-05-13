@@ -133,6 +133,7 @@ setup ()
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
     S9fES=${S9fES:-"s9"}
+    STALIN=${STALIN:-"chicken-stalin"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
     VICARE=${VICARE:-"vicare"}
     YPSILON=${YPSILON:-"ypsilon"}
@@ -174,6 +175,7 @@ Usage: bench [-r runs] <system> <benchmark>
   sagittarius      for Sagittarius
   scheme48         for Scheme48
   s9fes            for S9fES (Scheme 9 from Empty Space)
+  stalin           for Stalin
   tinyscheme       for TinyScheme
   vicare           for Vicare
   ypsilon          for Ypsilon
@@ -327,6 +329,23 @@ chicken_comp ()
 chicken_exec ()
 {
     time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Stalin
+
+stalin_comp ()
+{
+    # run through alexpander first
+    expanded=${1%%scm}exp
+    csi src/alexpander.scm -e '(alexpander-repl)' < $1 > $expanded
+    ${STALIN} -On $expanded
+}
+
+stalin_exec ()
+{
+    exe=${1%%.exe}
+    time ( "$exe" < "$2" )
 }
 
 # -----------------------------------------------------------------------------
@@ -781,6 +800,16 @@ for system in $systems ; do
         chicken) NAME='Chicken'
                  COMP=chicken_comp
                  EXEC=chicken_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        stalin) NAME='Stalin'
+                 COMP=stalin_comp
+                 EXEC=stalin_exec
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
