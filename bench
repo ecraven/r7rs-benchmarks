@@ -132,6 +132,7 @@ setup ()
     RHIZOME_PISL=${RHIZOME_PISL:-"pisl"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
+    TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
     VICARE=${VICARE:-"vicare"}
     YPSILON=${YPSILON:-"ypsilon"}
 }
@@ -171,6 +172,7 @@ Usage: bench [-r runs] <system> <benchmark>
   rscheme          for RScheme
   sagittarius      for Sagittarius
   scheme48         for Scheme48
+  tinyscheme       for TinyScheme
   vicare           for Vicare
   ypsilon          for Ypsilon
   all              for all of the above
@@ -323,6 +325,20 @@ chicken_comp ()
 chicken_exec ()
 {
     time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to TinyScheme
+
+tinyscheme_comp ()
+{
+    # remove import statement
+    sed -i -e 's/^(import (scheme.*)$//g' $1
+}
+
+tinyscheme_exec ()
+{
+    time ( ${TINYSCHEME} "$1" < "$2" )
 }
 
 # -----------------------------------------------------------------------------
@@ -756,6 +772,16 @@ for system in $systems ; do
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
+
+        tinyscheme) NAME='TinyScheme'
+                    COMP=tinyscheme_comp
+                    EXEC=tinyscheme_exec
+                    COMPOPTS=""
+                    EXTENSION="scm"
+                    EXTENSIONCOMP="scm"
+                    COMPCOMMANDS=""
+                    EXECCOMMANDS=""
+                    ;;
 
         rscheme) NAME='RScheme'
                  COMP=rscheme_comp
