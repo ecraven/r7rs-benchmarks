@@ -23,12 +23,11 @@
 ;; can understand this ridiculous code, which dates back to the original
 ;; Common Lisp.  So it probably isn't a good idea to improve upon it.
 
-#;
-(define (shorterp x y)
-  (and (not (null? y))
-       (or (null? x)
-           (shorterp (cdr x)
-                     (cdr y)))))
+;; (define (shorterp x y)
+;;   (and (not (null? y))
+;;        (or (null? x)
+;;            (shorterp (cdr x)
+;;                      (cdr y)))))
 
   ;; But SML/NJ runs this benchmark about 15 times as fast when the
   ;; code above is rewritten as follows, so I tried it for Scheme also.
