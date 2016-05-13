@@ -126,7 +126,8 @@ setup ()
     PICRIN=${PICRIN:-"picrin"}
     RACKET=${RACKET:-"racket"}
     RACKET_RACO=${RACKET_RACO:-"raco"}
-    RSCHEME=${RSCHEME:-"rscheme"}
+    RSCHEME=${RSCHEME:-"fshell"}
+    RSCHEME_RSC=${RSCHEME_RSC:-"rsc"}
     RHIZOME_PISC=${RHIZOME_PISC:-"pisc"}
     RHIZOME_PISL=${RHIZOME_PISL:-"pisl"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
@@ -331,11 +332,17 @@ rscheme_comp ()
 {
     # remove import statement
     sed -i -e 's/^(import (scheme.*)$//g' $1
+    filename=$(basename $1)
+    dirname=$(dirname $1)
+    cd $dirname
+    echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export main))" > test.mcf
+    ${RSCHEME_RSC} -p test.mcf
 }
 
 rscheme_exec ()
 {
-    time ( rscheme "$1" < "$2" )
+    echo "(with-module mlink (push-module-search-path! \".\")) ,(use test)" > run-current-test.scm
+    time ( ${RSCHEME} run-current-test.scm < "$2" )
 }
 
 # -----------------------------------------------------------------------------
@@ -360,8 +367,8 @@ rhizome_comp ()
 
 rhizome_exec ()
 {
-#   time pi $1 < $2
-   time "$1" < "$2"
+    #   time pi $1 < $2
+    time "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -391,7 +398,7 @@ scheme48_comp ()
 
 scheme48_exec ()
 {
-  time ${SCHEME48} -i $1 < $2
+    time ${SCHEME48} -i $1 < $2
 }
 
 # -----------------------------------------------------------------------------
@@ -434,15 +441,24 @@ vicare_exec ()
 
 ironscheme_comp ()
 {
-    # remove import statement
-    # sed -i -e 's/^(import (scheme.*)$//g' $1
-    # ${IRONSCHEME} -c $1 -o $2
     :
 }
 
 ironscheme_exec ()
 {
+    # remove import statement
     sed -i -e 's/^(import (scheme.*)$//g' $1
+    # maybe a support lookup table can be added for these, and only inject if needed, like for read-line, square, exact-integer? too
+    sed -i -e 's/^(define (bitwise-not[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (bitwise-and[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (div[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (mod[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (partition[[:blank:]].*).*$/#;(excluded/g' $1
+
+    # R6RS compat failure: gcbench
+    # failures due to Mono: cpstak, fft, pi, pnpoly, quicksort
+    # weird failures: matrix (missing quote?)
+
     time ( ${IRONSCHEME} "$1" < "$2" )
 }
 
@@ -772,14 +788,14 @@ for system in $systems ; do
                  ;;
 
         scheme48) NAME='Scheme48'
-                 COMP=scheme48_comp
-                 EXEC=scheme48_exec
-                 COMPOPTS=""
-                 EXTENSION="scm"
-                 EXTENSIONCOMP="s48img"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
-                 ;;
+                  COMP=scheme48_comp
+                  EXEC=scheme48_exec
+                  COMPOPTS=""
+                  EXTENSION="scm"
+                  EXTENSIONCOMP="s48img"
+                  COMPCOMMANDS=""
+                  EXECCOMMANDS=""
+                  ;;
 
         bones) NAME='Bones'
                COMP=bones_comp
