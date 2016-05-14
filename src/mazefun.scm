@@ -84,7 +84,7 @@
 
 (define initial-random 0)
 
-(define next-random
+(define next-random-number
   (lambda (current-random)
     (remainder (+ (* current-random 3581) 12751) 131072)))
 
@@ -96,7 +96,7 @@
   (lambda (lst current-random)
     (if (null? lst)
         '()
-        (let ((new-random (next-random current-random)))
+        (let ((new-random (next-random-number current-random)))
           (let ((i (remainder new-random (length lst))))
             (cons (list-read lst i)
                   (shuffle-aux (list-remove-pos lst i)

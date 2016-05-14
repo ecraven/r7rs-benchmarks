@@ -57,7 +57,7 @@
     (define select-a
       (lambda (ac lst)
         (if (null? lst)
-            (reverse! ac)
+            (xreverse! ac)
             (select-a
              (let ((head (car lst)))
                (if (test head)
@@ -66,7 +66,7 @@
              (cdr lst)))))
     (select-a '() lst)))
 
-(define reverse!
+(define xreverse!
   (letrec ((rotate
             (lambda (fo fum)
               (let ((next (cdr fo)))
@@ -87,7 +87,7 @@
     (define select-a
       (lambda (ac lst)
         (if (null? lst)
-            (reverse! ac)
+            (xreverse! ac)
             (select-a
              (let ((head (car lst)))
                (if (test head)
