@@ -123,7 +123,7 @@
   (equality-benchmark5 n 100))
 
 (define (equality-benchmarks n0 n1 n2 n3 n4 n5)
-  (and (equality-benchmark0 n0)
+  (and ; (equality-benchmark0 n0) ;; cyclic benchmark does not work on most non-R7RS schemes
        (equality-benchmark1 n1)
        (equality-benchmark2 n2)
        (equality-benchmark3 n3)
