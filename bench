@@ -384,15 +384,19 @@ rscheme_comp ()
     sed -i -e 's/^(import (scheme.*)$//g' $1
     filename=$(basename $1)
     dirname=$(dirname $1)
-    cd $dirname
-    echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export main))" > test.mcf
-    ${RSCHEME_RSC} -p test.mcf
+    echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export main))" > $dirname/test.mcf
+#    cd $dirname
+    ${RSCHEME_RSC} -p $dirname/test.mcf
 }
 
 rscheme_exec ()
 {
+    dirname=$(dirname $1)
+    cp -R inputs $dirname/
+    cd $dirname
     echo "(with-module mlink (push-module-search-path! \".\")) ,(use test)" > run-current-test.scm
     time ( ${RSCHEME} run-current-test.scm < "$2" )
+    rm -Rf test.mif test.mx test.mcf test.doc
 }
 
 # -----------------------------------------------------------------------------

@@ -8,12 +8,16 @@
 (define (this-scheme-implementation-name)
   (string-append "rscheme-" "unknown"))
 (define-syntax when
-  (syntax-form (when test body0 . body)
+  (syntax-form (test body0 . body)
                (if test
                    (begin body0 . body)
                    #f)))
 (define-syntax unless
-  (syntax-form (when test body0 . body)
+  (syntax-form (test body0 . body)
                (if (not test)
                    (begin body0 . body)
                    #f)))
+(define (square x) (* x x))
+(define (exact-integer? x)
+  (and (exact? x)
+       (integer? x)))
