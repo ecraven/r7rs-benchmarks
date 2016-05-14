@@ -18,3 +18,6 @@
 (define inexact exact->inexact)
 (define exact inexact->exact)
 (define (square n) (* n n))
+(define (exact-integer? n)
+  (and (integer? n)
+       (exact? n)))
