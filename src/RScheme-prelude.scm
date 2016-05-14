@@ -21,3 +21,6 @@
 (define (exact-integer? x)
   (and (exact? x)
        (integer? x)))
+;; file-exists? -> posix / file-accesses
+;; delete-file -> posix / unlink
+
