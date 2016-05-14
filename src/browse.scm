@@ -12,10 +12,10 @@
               pair
               (loop (cdr x)))))))
 
-(define properties '())
+(define *properties* '())
 
 (define (get key1 key2)
-  (let ((x (lookup key1 properties)))
+  (let ((x (lookup key1 *properties*)))
     (if x
         (let ((y (lookup key2 (cdr x))))
           (if y
@@ -24,14 +24,14 @@
         #f)))
 
 (define (put key1 key2 val)
-  (let ((x (lookup key1 properties)))
+  (let ((x (lookup key1 *properties*)))
     (if x
         (let ((y (lookup key2 (cdr x))))
           (if y
               (set-cdr! y val)
               (set-cdr! x (cons (cons key2 val) (cdr x)))))
-        (set! properties
-              (cons (list key1 (cons key2 val)) properties)))))
+        (set! *properties*
+              (cons (list key1 (cons key2 val)) *properties*)))))
 
 (define *current-gensym* 0)
 

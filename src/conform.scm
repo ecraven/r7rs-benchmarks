@@ -72,7 +72,7 @@
 
 ;; Selectors
 
-(define name internal-node-name)
+;;(define name internal-node-name)
 (define (make-edge-getter selector)
   (lambda (node)
     (if (or (none-node? node) (any-node? node))
@@ -297,8 +297,8 @@
         (map (lambda (class)
                (sort-list class
                           (lambda (node1 node2)
-                            (< (string-length (name node1))
-                               (string-length (name node2))))))
+                            (< (string-length (internal-node-name node1))
+                               (string-length (internal-node-name node2))))))
              classes)
         (let ((this-node (car nodes)))
           (define (add-node classes)
@@ -323,7 +323,7 @@
 ;; Reduce a graph by taking only one member of each equivalence
 ;; class and canonicalizing all outbound pointers
 
-(define (reduce graph)
+(define (xreduce graph)
   (let ((classes (classify (graph-nodes graph))))
     (canonicalize-graph graph classes)))
 
@@ -363,7 +363,7 @@
         ((conforms? node2 node1) node1)
         (else
          (let ((result
-                (make-node (string-append "(" (name node1) " ^ " (name node2) ")"))))
+                (make-node (string-append "(" (internal-node-name node1) " ^ " (internal-node-name node2) ")"))))
            (add-graph-nodes! graph result)
            (insert! (already-met graph) node1 node2 result)
            (set-blue-edges! result
@@ -384,7 +384,7 @@
         ((conforms? node2 node1) node2)
         (else
          (let ((result
-                (make-node (string-append "(" (name node1) " v " (name node2) ")"))))
+                (make-node (string-append "(" (internal-node-name node1) " v " (internal-node-name node2) ")"))))
            (add-graph-nodes! graph result)
            (insert! (already-joined graph) node1 node2 result)
            (set-blue-edges! result
@@ -413,7 +413,7 @@
       (when print?
         (display " -> ")
         (display (length (graph-nodes lattice))))
-      (let* ((new-g (reduce lattice))
+      (let* ((new-g (xreduce lattice))
              (new-count (length (graph-nodes new-g))))
         (if (= new-count count)
             (begin
@@ -453,7 +453,7 @@
 
 (define (test a0 b0 c0 d0)
   (setup a0 b0 c0 d0)
-  (map name
+  (map internal-node-name
        (graph-nodes (make-lattice (make-graph a b c d any-node none-node) #f))))
 
 (define (main)

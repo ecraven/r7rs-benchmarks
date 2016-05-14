@@ -7,7 +7,7 @@
        (list '() (cons (- n 1) list)))
       ((zero? n) list)))
 
-(define size 511)
+(define *size* 511)
 (define classmax 3)
 (define typemax 12)
 
@@ -18,7 +18,7 @@
 (define *piececount* (make-vector (+ classmax 1) 0))
 (define *class* (make-vector (+ typemax 1) 0))
 (define *piecemax* (make-vector (+ typemax 1) 0))
-(define *puzzle* (make-vector (+ size 1)))
+(define *puzzle* (make-vector (+ *size* 1)))
 (define *p* (make-vector (+ typemax 1)))
 
 (define (fit i j)
@@ -40,8 +40,8 @@
                  (vector-ref *class* i)
                  (- (vector-ref *piececount* (vector-ref *class* i)) 1))
     (do ((k j (+ k 1)))
-        ((or (> k size) (not (vector-ref *puzzle* k)))
-         (if (> k size) 0 k)))))
+        ((or (> k *size*) (not (vector-ref *puzzle* k)))
+         (if (> k *size*) 0 k)))))
 
 (define (puzzle-remove i j)
   (let ((end (vector-ref *piecemax* i)))
@@ -148,5 +148,5 @@
      (lambda () (start (hide count input1)))
      (lambda (result) (equal? result output)))))
 
-(for-each (lambda (i) (vector-set! *p* i (make-vector (+ size 1))))
+(for-each (lambda (i) (vector-set! *p* i (make-vector (+ *size* 1))))
           (my-iota (+ typemax 1)))
