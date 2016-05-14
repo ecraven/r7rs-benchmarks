@@ -1,0 +1,125 @@
+foment:
+	CPU_LIMIT=600 ./bench foment all
+
+s9fes:
+	CPU_LIMIT=600 ./bench s9fes all
+
+bigloo:
+	./bench bigloo all
+
+bones:
+	./bench bones all
+
+chez:
+	./bench chez all
+
+chibi:
+	./bench chibi all
+
+chicken:
+	./bench chicken all
+
+gambitc:
+	./bench gambitc all
+
+gauche:
+	./bench gauche all
+
+guile:
+	./bench guile all
+
+ironscheme:
+	./bench ironscheme all
+
+kawa:
+	./bench kawa all
+
+larceny:
+	./bench larceny all
+
+mit:
+	./bench mit all
+
+mosh:
+	./bench mosh all
+
+petite:
+	./bench petite all
+
+picrin:
+	./bench picrin all
+
+racket:
+	./bench racket all
+
+rhizome:
+	./bench rhizome all
+
+rscheme:
+	./bench rscheme all
+
+sagittarius:
+	./bench sagittarius all
+
+scheme48:
+	./bench scheme48 all
+
+vicare:
+	./bench vicare all
+
+ypsilon:
+	./bench ypsilon all
+
+results.Bigloo: bigloo
+
+results.Bones: bones
+
+results.Chez: chez
+
+results.Chibi: chibi
+
+results.Chicken: chicken
+
+results.Foment: foment
+
+results.GambitC: gambitc
+
+results.Gauche: gauche
+
+results.Guile: guile
+
+results.IronScheme: ironscheme
+
+results.Kawa: kawa
+
+results.Larceny: larceny
+
+results.MIT: mit
+
+results.Mosh: mosh
+
+results.Petite: petite
+
+results.Picrin: picrin
+
+results.Racket: racket
+
+results.Rhizome: rhizome
+
+results.RScheme: rscheme
+
+results.S9fES: s9fes
+
+results.Sagittarius: sagittarius
+
+results.Scheme48: scheme48
+
+results.Stalin: stalin
+
+results.TinyScheme: tinyscheme
+
+results.Vicare: vicare
+
+results.Ypsilon: ypsilon
+
+all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.Foment results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.MIT results.Mosh results.Petite results.Picrin results.Racket results.Rhizome results.RScheme results.S9fES results.Sagittarius results.Scheme48 results.Stalin results.TinyScheme results.Vicare results.Ypsilon
