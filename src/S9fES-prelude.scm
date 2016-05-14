@@ -4,8 +4,8 @@
      (begin) ;; do nothing
      )))
 (define (jiffies-per-second) 1)
-(define (current-jiffy) 0)
-(define (current-second) 0)
+(define (current-jiffy) (with-input-from-file "/proc/uptime" read))
+(define (current-second) (with-input-from-file "/proc/uptime" read))
 (define (call-with-values thunk receiver)
   (let ((values (thunk)))
     (apply receiver values)))
