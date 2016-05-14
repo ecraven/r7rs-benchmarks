@@ -17,4 +17,4 @@
   (string-append "s9fes-" "unknown"))
 (define inexact exact->inexact)
 (define exact inexact->exact)
-
+(define (square n) (* n n))
