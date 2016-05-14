@@ -12,5 +12,7 @@
     (+ (time-second t) (/ (time-nanosecond t) 1000000000))))
 (define (current-second)
   (time-second (current-time)))
+(define (write-string str port)
+  (put-string port str))
 (define (this-scheme-implementation-name)
   (string-append "ironscheme-" (ironscheme-version)))
