@@ -339,7 +339,7 @@ stalin_comp ()
     # run through alexpander first
     expanded=${1%%scm}exp
     csi src/alexpander.scm -e '(alexpander-repl)' < $1 > $expanded
-    ${STALIN} -On $expanded
+    ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 }
 
 stalin_exec ()
