@@ -110,6 +110,7 @@ setup ()
     CHEZ=${CHEZ:-"chez-scheme"}
     CHIBI=${CHIBI:-"chibi-scheme"}
     CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
+    CHICKEN_CSI=${CHICKEN_CSI:-"csi"}
     FOMENT=${FOMENT:-"foment"}
     GAMBITC=${GAMBITC:-"gambitc"}
     GAUCHE=${GAUCHE:-"gosh"}
@@ -155,7 +156,8 @@ Usage: bench [-r runs] <system> <benchmark>
   bones            for Bones
   chez             for Chez Scheme
   chibi            for Chibi
-  chicken          for Chicken
+  chicken          for Chicken (compiled)
+  chickencsi       for Chicken (interpreted)
   foment           for Foment
   gambitc          for GambitC Scheme
   gauche           for Gauche
@@ -332,6 +334,19 @@ chicken_exec ()
 }
 
 # -----------------------------------------------------------------------------
+# Definitions specific to Chicken CSI
+
+chickencsi_comp ()
+{
+    :
+}
+
+chickencsi_exec ()
+{
+    time ${CHICKEN_CSI} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
 # Definitions specific to Stalin
 
 stalin_comp ()
@@ -385,7 +400,7 @@ rscheme_comp ()
     filename=$(basename $1)
     dirname=$(dirname $1)
     echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export main))" > $dirname/test.mcf
-#    cd $dirname
+    #    cd $dirname
     ${RSCHEME_RSC} -p $dirname/test.mcf
 }
 
@@ -811,25 +826,35 @@ for system in $systems ; do
                  EXECCOMMANDS=""
                  ;;
 
-        stalin) NAME='Stalin'
-                 COMP=stalin_comp
-                 EXEC=stalin_exec
+        chickencsi) NAME='ChickenCSI'
+                 COMP=chickencsi_comp
+                 EXEC=chickencsi_exec
                  COMPOPTS=""
                  EXTENSION="scm"
-                 EXTENSIONCOMP="exe"
+                 EXTENSIONCOMP="scm"
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
 
+        stalin) NAME='Stalin'
+                COMP=stalin_comp
+                EXEC=stalin_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="exe"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
+
         s9fes) NAME='S9fES'
-            COMP=s9fes_comp
-            EXEC=s9fes_exec
-            COMPOPTS=""
-            EXTENSION="scm"
-            EXTENSIONCOMP="scm"
-            COMPCOMMANDS=""
-            EXECCOMMANDS=""
-            ;;
+               COMP=s9fes_comp
+               EXEC=s9fes_exec
+               COMPOPTS=""
+               EXTENSION="scm"
+               EXTENSIONCOMP="scm"
+               COMPCOMMANDS=""
+               EXECCOMMANDS=""
+               ;;
 
         tinyscheme) NAME='TinyScheme'
                     COMP=tinyscheme_comp
