@@ -1,7 +1,29 @@
 ;;; FFT - Fast Fourier Transform, translated from "Numerical Recipes in C"
 (import (scheme base) (scheme inexact) (scheme read) (scheme write) (scheme time))
 
-;;(define flsin sin)
+;;; We need R6RS div for this benchmark.
+
+(define (div x y)
+  (cond ((and (exact-integer? x)
+              (exact-integer? y)
+              (>= x 0))
+         (quotient x y))
+        ((< y 0)
+         ;; x < 0, y < 0
+         (let* ((q (quotient x y))
+                (r (- x (* q y))))
+           (if (= r 0)
+               q
+               (+ q 1))))
+        (else
+         ;; x < 0, y > 0
+         (let* ((q (quotient x y))
+                (r (- x (* q y))))
+           (if (= r 0)
+               q
+               (- q 1))))))
+
+;;(define sin sin)
 
 (define (four1 data)
   (let ((n (vector-length data))
@@ -18,10 +40,10 @@
           (let ((temp (vector-ref data (+ i 1))))
             (vector-set! data (+ i 1) (vector-ref data (+ j 1)))
             (vector-set! data (+ j 1) temp)))
-        (let loop2 ((m (quotient n 2)) (j j))
+        (let loop2 ((m (div n 2)) (j j))
           (if (and (>= m 2) (>= j m))
-              (loop2 (quotient m 2) (- j m))
-              (loop1 (+ i 2) (+ j m))))))
+            (loop2 (div m 2) (- j m))
+            (loop1 (+ i 2) (+ j m))))))
 
     ;; Danielson-Lanczos section
 
@@ -37,30 +59,30 @@
           (let loop4 ((wr 1.0) (wi 0.0) (m 0))
             (when (< m mmax)
               (let loop5 ((i m))
-                (when (< i n)
+                (if (< i n)
                   (let* ((j
                           (+ i mmax))
                          (tempr
                           (-
-                           (* wr (vector-ref data j))
-                           (* wi (vector-ref data (+ j 1)))))
+                            (* wr (vector-ref data j))
+                            (* wi (vector-ref data (+ j 1)))))
                          (tempi
                           (+
-                           (* wr (vector-ref data (+ j 1)))
-                           (* wi (vector-ref data j)))))
+                            (* wr (vector-ref data (+ j 1)))
+                            (* wi (vector-ref data j)))))
                     (vector-set! data j
-                                 (- (vector-ref data i) tempr))
+                      (- (vector-ref data i) tempr))
                     (vector-set! data (+ j 1)
-                                 (- (vector-ref data (+ i 1)) tempi))
+                      (- (vector-ref data (+ i 1)) tempi))
                     (vector-set! data i
-                                 (+ (vector-ref data i) tempr))
+                      (+ (vector-ref data i) tempr))
                     (vector-set! data (+ i 1)
-                                 (+ (vector-ref data (+ i 1)) tempi))
+                      (+ (vector-ref data (+ i 1)) tempi))
                     (loop5 (+ j mmax)));***))
-                  (loop4 (+ (- (* wr wpr) (* wi wpi)) wr)
-                         (+ (+ (* wi wpr) (* wr wpi)) wi)
-                         (+ m 2))))
-              ));******
+              (loop4 (+ (- (* wr wpr) (* wi wpi)) wr)
+                     (+ (+ (* wi wpr) (* wr wpi)) wi)
+                     (+ m 2))))
+          ));******
           (loop3 (* mmax 2)))))))
 
 (define data
