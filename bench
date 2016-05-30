@@ -569,7 +569,7 @@ chez_exec ()
 {
     # remove import statement
     sed -i -e 's/^(import (scheme.*)$//g' $1
-    time "${CHEZ}" --optimize-level 3 --program "$1" < "$2"
+    time "${CHEZ}" --program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -584,7 +584,7 @@ petite_exec ()
 {
     # remove import statement
     sed -i -e 's/^(import (scheme.*)$//g' $1
-    time "${PETITE}" --optimize-level 2 --program "$1" < "$2"
+    time "${PETITE}" --program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------

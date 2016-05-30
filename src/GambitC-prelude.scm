@@ -1,7 +1,6 @@
 (declare (standard-bindings)   ;; builtin functions like + will not be redefined
 	 (extended-bindings)   ;; Gambit functions like fixnum? will not be redefined
 	 (block)               ;; user-defined functions not set! in the file will not be redefined
-	 (not safe)            ;; Do not check for errors at runtime
 	 )
 (define (current-second) (truncate (current-jiffy)))
 (define (jiffies-per-second) 1)
