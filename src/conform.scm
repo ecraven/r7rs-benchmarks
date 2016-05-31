@@ -68,7 +68,7 @@
     (make-internal-node name '() '() blue-edges)))
 
 (define (copy-node node)
-  (make-internal-node (name node) '() '() (blue-edges node)))
+  (make-internal-node (internal-node-name node) '() '() (blue-edges node)))
 
 ;; Selectors
 

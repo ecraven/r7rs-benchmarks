@@ -26,16 +26,17 @@
 (define (mbrot matrix z0 step n)
   (let loop1 ((y (- n 1)))
     (when (>= y 0)
-      (let loop2 ((x (- n 1)))
-        (when (>= x 0)
-          (vector-set! (vector-ref matrix x)
-                       y
-                       (count z0
-                              step
-                              (make-rectangular (inexact x)
-                                                (inexact  y))))
-          (loop2 (- x 1))
-          (loop1 (- y 1)))))))
+        (let loop2 ((x (- n 1)))
+          (if (>= x 0)
+            (begin
+              (vector-set! (vector-ref matrix x)
+                            y
+                            (count z0
+                                   step
+                                   (make-rectangular (inexact x)
+                                                     (inexact y))))
+              (loop2 (- x 1)))
+            (loop1 (- y 1)))))))
 
 (define (test n)
   (let ((matrix (make-vector n)))
