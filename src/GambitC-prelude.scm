@@ -1,7 +1,8 @@
 (declare (standard-bindings)   ;; builtin functions like + will not be redefined
-	 (extended-bindings)   ;; Gambit functions like fixnum? will not be redefined
-	 (block)               ;; user-defined functions not set! in the file will not be redefined
-	 )
+         (extended-bindings)   ;; Gambit functions like fixnum? will not be redefined
+         (block)               ;; user-defined functions not set! in the file will not be redefined
+         (not safe))
+
 (define (current-second) (truncate (current-jiffy)))
 (define (jiffies-per-second) 1)
 (define (current-jiffy) (time->seconds (current-time)))
@@ -22,9 +23,9 @@
 
 (define (vector-map f v)
   (let* ((n (vector-length v))
-	 (result (make-vector n)))
+         (result (make-vector n)))
     (do ((i 0 (+ i 1)))
-	((= i n) result)
+        ((= i n) result)
       (vector-set! result i (f (vector-ref v i))))))
 
 (define write-string write)
