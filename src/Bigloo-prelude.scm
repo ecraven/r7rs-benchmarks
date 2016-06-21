@@ -10,4 +10,6 @@
 (define exact inexact->exact)
 (define call-with-current-continuation call/cc)
 (define (error . args) args)
+(define (exact-integer? v)
+  (and (integer? v) (exact? v)))
 #;
