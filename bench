@@ -231,23 +231,27 @@ evaluate ()
         if [ $? -ne 0 ]
         then
             echo "+!CSVLINE!+${2},$1,COMPILEERROR"
+            skiprun = "true"
         fi
         i=0
-        while [ "$i" -lt "$NB_RUNS" ]
-        do
-            echo Running...
-            ulimit -t ${CPU_LIMIT}
-            $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
-            status=$?
-            if [ $status -eq 137 ] # killed by ulimit timeout
-            then
-                echo "+!CSVLINE!+${2},$1,ULIMITKILLED"
-            elif [ $status -ne 0 ]
-            then
-                echo "+!CSVLINE!+${2},$1,CRASHED"
-            fi
-            i=`expr $i + 1`
-        done
+        if [ "$skiprun" != "true" ]
+        then
+            while [ "$i" -lt "$NB_RUNS" ]
+            do
+                echo Running...
+                ulimit -t ${CPU_LIMIT}
+                $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
+                status=$?
+                if [ $status -eq 137 ] # killed by ulimit timeout
+                then
+                    echo "+!CSVLINE!+${2},$1,ULIMITKILLED"
+                elif [ $status -ne 0 ]
+                then
+                    echo "+!CSVLINE!+${2},$1,CRASHED"
+                fi
+                i=`expr $i + 1`
+            done
+        fi
     } 2>&1 | tee -a results.${NAME}
 
 }
@@ -840,14 +844,14 @@ for system in $systems ; do
                  ;;
 
         chickencsi) NAME='ChickenCSI'
-                 COMP=chickencsi_comp
-                 EXEC=chickencsi_exec
-                 COMPOPTS=""
-                 EXTENSION="scm"
-                 EXTENSIONCOMP="scm"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
-                 ;;
+                    COMP=chickencsi_comp
+                    EXEC=chickencsi_exec
+                    COMPOPTS=""
+                    EXTENSION="scm"
+                    EXTENSIONCOMP="scm"
+                    COMPCOMMANDS=""
+                    EXECCOMMANDS=""
+                    ;;
 
         stalin) NAME='Stalin'
                 COMP=stalin_comp
