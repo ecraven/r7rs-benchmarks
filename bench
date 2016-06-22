@@ -227,12 +227,20 @@ evaluate ()
         echo Compiling...
         ulimit -t ${CPU_LIMIT}
         $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
+        if [ $? -ne 0 ]
+        then
+            echo "+!CSVLINE!+${2},$1,COMPILEERROR"
+        fi
         i=0
         while [ "$i" -lt "$NB_RUNS" ]
         do
             echo Running...
             ulimit -t ${CPU_LIMIT}
             $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
+            if [ $? -eq 137 ] # killed by ulimit timeout
+            then
+                echo "+!CSVLINE!+${2},$1,ULIMITKILLED"
+            fi
             i=`expr $i + 1`
         done
     } 2>&1 | tee -a results.${NAME}
@@ -1089,6 +1097,6 @@ for system in $systems ; do
     mkdir -p "${TEMP}" 2> /dev/null
 
     for program in $benchmarks ; do
-        evaluate $program
+        evaluate $program $system
     done
 done
