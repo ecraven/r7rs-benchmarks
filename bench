@@ -237,9 +237,14 @@ evaluate ()
             echo Running...
             ulimit -t ${CPU_LIMIT}
             $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
-            if [ $? -eq 137 ] # killed by ulimit timeout
+            status=$?
+            if [ $status -eq 137 ] # killed by ulimit timeout
             then
                 echo "+!CSVLINE!+${2},$1,ULIMITKILLED"
+            fi
+            if [ $status -ne 0 ]
+            then
+                echo "+!CSVLINE!+${2},$1,CRASHED"
             fi
             i=`expr $i + 1`
         done
