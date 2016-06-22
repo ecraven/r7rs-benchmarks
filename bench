@@ -242,8 +242,7 @@ evaluate ()
             if [ $status -eq 137 ] # killed by ulimit timeout
             then
                 echo "+!CSVLINE!+${2},$1,ULIMITKILLED"
-            fi
-            if [ $status -ne 0 ]
+            elif [ $status -ne 0 ]
             then
                 echo "+!CSVLINE!+${2},$1,CRASHED"
             fi
