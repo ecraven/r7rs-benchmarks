@@ -231,7 +231,7 @@ evaluate ()
         if [ $? -ne 0 ]
         then
             echo "+!CSVLINE!+${2},$1,COMPILEERROR"
-            skiprun = "true"
+            skiprun="true"
         fi
         i=0
         if [ "$skiprun" != "true" ]
