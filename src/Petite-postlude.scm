@@ -6,7 +6,7 @@
          (bits (if (char=? (string-ref machine-type-name (if (string=? threads "m") 2 1)) #\6)
                    "64"
                    "32")))
-    (string-append "chez-" (call-with-values scheme-version-number
+    (string-append "petite-" (call-with-values scheme-version-number
                              (lambda (a b c)
                                (string-append (number->string a)
                                               "."
