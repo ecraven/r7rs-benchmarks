@@ -11,6 +11,7 @@
 (define exact inexact->exact)
 (define inexact exact->inexact)
 (define (square x) (* x x))
+(define (write-string str out) (display str out)) ; sufficient for tail.scm
 (define (this-scheme-implementation-name) (string-append "guile-" (version)))
 (read-enable 'r7rs-symbols)
 (print-enable 'r7rs-symbols)
