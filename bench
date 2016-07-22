@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi foment gambitc gauche guile ironscheme kawa larceny mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon"
+ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone foment gambitc gauche guile ironscheme kawa larceny mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon"
 ################################################################
 
 NB_RUNS=1
@@ -112,6 +112,7 @@ setup ()
     CHIBI=${CHIBI:-"chibi-scheme"}
     CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
     CHICKEN_CSI=${CHICKEN_CSI:-"csi"}
+    CYCLONE=${CYCLONE:-"cyclone"}
     FOMENT=${FOMENT:-"foment"}
     GAMBITC=${GAMBITC:-"gambitc"}
     GAUCHE=${GAUCHE:-"gosh"}
@@ -159,6 +160,7 @@ Usage: bench [-r runs] <system> <benchmark>
   chibi            for Chibi
   chicken          for Chicken (compiled)
   chickencsi       for Chicken (interpreted)
+  cyclone          for Cyclone
   foment           for Foment
   gambitc          for GambitC Scheme
   gauche           for Gauche
@@ -361,6 +363,19 @@ chickencsi_comp ()
 chickencsi_exec ()
 {
     time ${CHICKEN_CSI} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Cyclone
+
+cyclone_comp ()
+{
+  ${CYCLONE} $1
+}
+
+cyclone_exec ()
+{
+  time `dirname $1`/`basename $1 .scm` < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -852,6 +867,16 @@ for system in $systems ; do
                     COMPCOMMANDS=""
                     EXECCOMMANDS=""
                     ;;
+
+        cyclone) NAME='Cyclone'
+                 COMP=cyclone_comp
+                 EXEC=cyclone_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="scm"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
 
         stalin) NAME='Stalin'
                 COMP=stalin_comp
