@@ -1,8 +1,8 @@
 foment:
-	CPU_LIMIT=600 ./bench foment all
+	./bench foment all
 
 s9fes:
-	CPU_LIMIT=600 ./bench s9fes all
+	./bench s9fes all
 
 bigloo:
 	./bench bigloo all
@@ -21,6 +21,9 @@ chicken:
 
 chickencsi:
 	./bench chickencsi all
+
+cyclone:
+        ./bench cyclone all
 
 gambitc:
 	./bench gambitc all
@@ -133,4 +136,6 @@ results.Vicare: vicare
 
 results.Ypsilon: ypsilon
 
-all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.ChickenCSI results.Foment results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.MIT results.Mosh results.Petite results.Picrin results.Racket results.Rhizome results.RScheme results.S9fES results.Sagittarius results.Scheme48 results.Stalin results.TinyScheme results.Vicare results.Ypsilon
+results.Cyclone: cyclone
+
+all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.ChickenCSI results.Foment results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.MIT results.Mosh results.Petite results.Picrin results.Racket results.Rhizome results.RScheme results.S9fES results.Sagittarius results.Scheme48 results.Stalin results.TinyScheme results.Vicare results.Ypsilon results.Cyclone
