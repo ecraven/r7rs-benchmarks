@@ -1,76 +1,82 @@
 
 ****************************
-Benchmarking IronScheme on Sat 26 Nov 08:51:45 CET 2016 under Linux nexion 4.7.6-1-ARCH #1 SMP PREEMPT Fri Sep 30 19:28:42 CEST 2016 x86_64 GNU/Linux
+Benchmarking IronScheme on Tue 14 Mar 15:17:41 CET 2017 under Linux nexion 4.9.11-1-ARCH #1 SMP PREEMPT Sun Feb 19 13:45:52 UTC 2017 x86_64 GNU/Linux
 
 Testing browse under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running browse:2000
-Elapsed time: 15.473554 seconds (16) for browse:2000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,browse:2000,15.473554
+Elapsed time: 30.892998 seconds (31) for browse:2000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,browse:2000,30.892998
+Execution interupted
 
-real	0m16.732s
-user	0m16.440s
-sys	0m0.213s
+real	0m33.034s
+user	0m32.510s
+sys	0m0.433s
 
 Testing deriv under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running deriv:10000000
-Elapsed time: 14.649014 seconds (14) for deriv:10000000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,deriv:10000000,14.649014
+Elapsed time: 34.401164 seconds (35) for deriv:10000000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,deriv:10000000,34.401164
+Execution interupted
 
-real	0m15.781s
-user	0m15.613s
-sys	0m0.133s
+real	0m36.536s
+user	0m36.120s
+sys	0m0.380s
 
 Testing destruc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running destruc:600:50:4000
-Elapsed time: 245.712666 seconds (245) for destruc:600:50:4000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,destruc:600:50:4000,245.712666
+/home/nex/bin/ironscheme: line 2: 10631 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	4m6.849s
-user	4m6.060s
-sys	0m0.673s
+real	5m0.669s
+user	4m59.180s
+sys	0m0.743s
++!CSVLINE!+ironscheme,destruc,ULIMITKILLED
 
 Testing diviter under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running diviter:1000:1000000
-Elapsed time: 9.352288 seconds (9) for diviter:1000:1000000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,diviter:1000:1000000,9.352288
+Elapsed time: 20.866721 seconds (21) for diviter:1000:1000000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,diviter:1000:1000000,20.866721
+Execution interupted
 
-real	0m10.559s
-user	0m10.427s
-sys	0m0.127s
+real	0m22.891s
+user	0m22.540s
+sys	0m0.260s
 
 Testing divrec under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running divrec:1000:1000000
-Elapsed time: 13.72297 seconds (14) for divrec:1000:1000000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,divrec:1000:1000000,13.72297
+Elapsed time: 25.006162 seconds (25) for divrec:1000:1000000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,divrec:1000:1000000,25.006162
+Execution interupted
+/home/nex/bin/ironscheme: line 2: 11214 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	0m14.970s
-user	0m14.820s
-sys	0m0.127s
+real	0m27.253s
+user	0m26.677s
+sys	0m0.360s
++!CSVLINE!+ironscheme,divrec,CRASHED
 
 Testing puzzle under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running puzzle:1000
-/home/nex/bin/ironscheme: line 2: 11131 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 11289 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m0.039s
-user	14m59.903s
+real	5m3.025s
+user	4m59.627s
 sys	0m0.080s
 +!CSVLINE!+ironscheme,puzzle,ULIMITKILLED
 
@@ -79,68 +85,71 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running triangl:22:1:50
-Elapsed time: 88.886192 seconds (89) for triangl:22:1:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,triangl:22:1:50,88.886192
+Elapsed time: 206.600103 seconds (206) for triangl:22:1:50
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,triangl:22:1:50,206.600103
+Execution interupted
 
-real	1m30.045s
-user	1m29.997s
-sys	0m0.043s
+real	3m28.697s
+user	3m19.700s
+sys	0m0.147s
 
 Testing tak under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running tak:40:20:11:1
-Elapsed time: 77.135809 seconds (77) for tak:40:20:11:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tak:40:20:11:1,77.135809
+Elapsed time: 169.482719 seconds (170) for tak:40:20:11:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tak:40:20:11:1,169.482719
+Execution interupted
 
-real	1m18.265s
-user	1m18.230s
-sys	0m0.030s
+real	2m51.484s
+user	2m48.620s
+sys	0m0.083s
 
 Testing takl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running takl:40:20:12:1
-Elapsed time: 12.762937 seconds (12) for takl:40:20:12:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,takl:40:20:12:1,12.762937
+Elapsed time: 24.029442 seconds (24) for takl:40:20:12:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,takl:40:20:12:1,24.029442
+Execution interupted
 
-real	0m14.016s
-user	0m13.973s
-sys	0m0.037s
+real	0m26.052s
+user	0m25.800s
+sys	0m0.077s
 
 Testing ntakl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running ntakl:40:20:12:1
-Elapsed time: 12.147385 seconds (12) for ntakl:40:20:12:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,ntakl:40:20:12:1,12.147385
+Elapsed time: 22.905911 seconds (23) for ntakl:40:20:12:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,ntakl:40:20:12:1,22.905911
 
-real	0m13.419s
-user	0m13.387s
-sys	0m0.027s
+real	0m24.942s
+user	0m24.483s
+sys	0m0.070s
 
 Testing cpstak under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running cpstak:40:20:11:1
-Stack overflow in unmanaged: IP: 0x6255a4, fault addr: 0x7fb9ded43ff8
-Stack overflow in unmanaged: IP: 0x7fb9e2b00bd6, fault addr: 0x7fb9ded42ff8
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7fb9ded41fc8
-Stack overflow in unmanaged: IP: 0x579182, fault addr: 0x7fb9ded42ff8
-Stack overflow in unmanaged: IP: 0x579182, fault addr: 0x7fb9ded42ff8
-Stack overflow in unmanaged: IP: 0x427f72, fault addr: 0x7fb9ded42ff8
-Stack overflow in unmanaged: IP: 0x4c4ea8, fault addr: 0x7fb9ded41f70
-Stack overflow in unmanaged: IP: 0x7fb9e2b00beb, fault addr: 0x7fb9ded42fd0
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7fb9ded41fc8
-Stack overflow in unmanaged: IP: 0x4a1aa6, fault addr: 0x7fb9ded42ff8
-Stack overflow in unmanaged: IP: 0x4afe17, fault addr: 0x7fb9ded42d0c
-Stack overflow in unmanaged: IP: 0x4c5128, fault addr: 0x7fb9ded41ef4
-Stack overflow in unmanaged: IP: 0x537696, fault addr: 0x7fb9ded41ce8
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7fb9ded40de8
+Stack overflow in unmanaged: IP: 0x6ea5c4, fault addr: 0x7f96d6a3bff8
+Stack overflow in unmanaged: IP: 0x7f96da6a86f4, fault addr: 0x7f96d6a3aff8
+Stack overflow in unmanaged: IP: 0x4a9ca1, fault addr: 0x7f96d6a39ff8
+Stack overflow in unmanaged: IP: 0x53d59c, fault addr: 0x7f96d6a3aff8
+Stack overflow in unmanaged: IP: 0x53d59c, fault addr: 0x7f96d6a3aff8
+Stack overflow in unmanaged: IP: 0x729aa4, fault addr: 0x7f96d6a3aff8
+Stack overflow in unmanaged: IP: 0x4cda87, fault addr: 0x7f96d6a39fb0
+Stack overflow in unmanaged: IP: 0x7f96da6a63b3, fault addr: 0x7f96d6a3aff8
+Stack overflow in unmanaged: IP: 0x4a9ca1, fault addr: 0x7f96d6a39ff8
+Stack overflow in unmanaged: IP: 0x4acab9, fault addr: 0x7f96d6a3afb8
+Stack overflow in unmanaged: IP: 0x4b8067, fault addr: 0x7f96d6a3acec
+Stack overflow in unmanaged: IP: 0x4cdde7, fault addr: 0x7f96d6a39ecc
+Stack overflow in unmanaged: IP: 0x543a56, fault addr: 0x7f96d6a39cc8
+Stack overflow in unmanaged: IP: 0x4a9c6b, fault addr: 0x7f96d6a38db8
 Unhandled CLR exception reading input:
 CLR Exception: System.NullReferenceException
 System.NullReferenceException: Object reference not set to an instance of an object
@@ -163,9 +172,9 @@ System.NullReferenceException: Object reference not set to an instance of an obj
   at IronScheme.Hosting.IronSchemeLanguageProvider+CommandLineX+<>c__DisplayClass5_0.<RunFile>b__0 () [0x00024] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
 
 
-real	0m1.359s
-user	0m1.313s
-sys	0m0.040s
+real	0m2.045s
+user	0m1.993s
+sys	0m0.043s
 +!CSVLINE!+ironscheme,cpstak,CRASHED
 
 Testing ctak under IronScheme
@@ -173,11 +182,11 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running ctak:32:16:8:1
-/home/nex/bin/ironscheme: line 2: 11397 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 12806 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m0.002s
-user	14m59.870s
-sys	0m0.093s
+real	5m4.984s
+user	4m59.260s
+sys	0m0.097s
 +!CSVLINE!+ironscheme,ctak,ULIMITKILLED
 
 Testing fib under IronScheme
@@ -185,23 +194,23 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running fib:40:5
-Elapsed time: 194.010023 seconds (194) for fib:40:5
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,fib:40:5,194.010023
+/home/nex/bin/ironscheme: line 2: 13497 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	3m15.102s
-user	3m15.067s
-sys	0m0.023s
+real	5m1.931s
+user	4m59.663s
+sys	0m0.050s
++!CSVLINE!+ironscheme,fib,ULIMITKILLED
 
 Testing fibc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running fibc:30:10
-/home/nex/bin/ironscheme: line 2: 11582 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 14035 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m0.041s
-user	14m59.913s
-sys	0m0.077s
+real	5m0.250s
+user	4m59.870s
+sys	0m0.080s
 +!CSVLINE!+ironscheme,fibc,ULIMITKILLED
 
 Testing fibfp under IronScheme
@@ -209,11 +218,11 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running fibfp:35.0:10
-/home/nex/bin/ironscheme: line 2: 11729 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 14462 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m2.177s
-user	14m59.127s
-sys	0m2.163s
+real	5m0.802s
+user	4m59.110s
+sys	0m0.830s
 +!CSVLINE!+ironscheme,fibfp,ULIMITKILLED
 
 Testing sum under IronScheme
@@ -221,23 +230,23 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running sum:10000:200000
-Elapsed time: 276.619814 seconds (276) for sum:10000:200000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,sum:10000:200000,276.619814
+/home/nex/bin/ironscheme: line 2: 14864 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	4m37.755s
-user	4m37.110s
-sys	0m0.430s
+real	5m0.105s
+user	4m59.350s
+sys	0m0.603s
++!CSVLINE!+ironscheme,sum,ULIMITKILLED
 
 Testing sumfp under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running sumfp:1000000.0:500
-/home/nex/bin/ironscheme: line 2: 11946 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 15238 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m2.321s
-user	14m59.270s
-sys	0m2.130s
+real	5m0.329s
+user	4m58.960s
+sys	0m0.973s
 +!CSVLINE!+ironscheme,sumfp,ULIMITKILLED
 
 Testing fft under IronScheme
@@ -245,20 +254,20 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running fft:65536:100
-Stack overflow in unmanaged: IP: 0x626708, fault addr: 0x7fdb39a3bff8
-Stack overflow in unmanaged: IP: 0x6665b1, fault addr: 0x7fdb39a3aff8
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7fdb39a39f78
-Stack overflow in unmanaged: IP: 0x5315b9, fault addr: 0x7fdb39a3aff8
-Stack overflow in unmanaged: IP: 0x5315b9, fault addr: 0x7fdb39a3aff8
-Stack overflow in unmanaged: IP: 0x6606f7, fault addr: 0x7fdb39a3afd8
-Stack overflow in unmanaged: IP: 0x4c4ea8, fault addr: 0x7fdb39a39f20
-Stack overflow in unmanaged: IP: 0x7fdb3d691bd2, fault addr: 0x7fdb39a3aff8
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7fdb39a39f78
-Stack overflow in unmanaged: IP: 0x4a53e5, fault addr: 0x7fdb39a3afc8
-Stack overflow in unmanaged: IP: 0x4afe17, fault addr: 0x7fdb39a3acbc
-Stack overflow in unmanaged: IP: 0x4c5108, fault addr: 0x7fdb39a39ff0
-Stack overflow in unmanaged: IP: 0x537696, fault addr: 0x7fdb39a39c98
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7fdb39a38d98
+Stack overflow in unmanaged: IP: 0x6fd1e8, fault addr: 0x7fc0b8ebfff8
+Stack overflow in unmanaged: IP: 0x58792a, fault addr: 0x7fc0b8ebeff8
+Stack overflow in unmanaged: IP: 0x4a9c6b, fault addr: 0x7fc0b8ebdfc8
+Stack overflow in unmanaged: IP: 0x53d8b8, fault addr: 0x7fc0b8ebeff8
+Stack overflow in unmanaged: IP: 0x53d8b8, fault addr: 0x7fc0b8ebeff8
+Stack overflow in unmanaged: IP: 0x730dfc, fault addr: 0x7fc0b8ebeff8
+Stack overflow in unmanaged: IP: 0x4cda87, fault addr: 0x7fc0b8ebdf70
+Stack overflow in unmanaged: IP: 0x7fc0bcb69beb, fault addr: 0x7fc0b8ebefc0
+Stack overflow in unmanaged: IP: 0x4a9c6b, fault addr: 0x7fc0b8ebdfc8
+Stack overflow in unmanaged: IP: 0x4a9486, fault addr: 0x7fc0b8ebeff8
+Stack overflow in unmanaged: IP: 0x4b8067, fault addr: 0x7fc0b8ebecac
+Stack overflow in unmanaged: IP: 0x4cddc7, fault addr: 0x7fc0b8ebdfe0
+Stack overflow in unmanaged: IP: 0x543a56, fault addr: 0x7fc0b8ebdc88
+Stack overflow in unmanaged: IP: 0x4a9c6b, fault addr: 0x7fc0b8ebcd78
 Unhandled CLR exception reading input:
 CLR Exception: System.NullReferenceException
 System.NullReferenceException: Object reference not set to an instance of an object
@@ -281,9 +290,9 @@ System.NullReferenceException: Object reference not set to an instance of an obj
   at IronScheme.Hosting.IronSchemeLanguageProvider+CommandLineX+<>c__DisplayClass5_0.<RunFile>b__0 () [0x00024] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
 
 
-real	0m2.007s
-user	0m1.967s
-sys	0m0.050s
+real	0m2.745s
+user	0m2.677s
+sys	0m0.060s
 +!CSVLINE!+ironscheme,fft,CRASHED
 
 Testing mbrot under IronScheme
@@ -291,11 +300,11 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running mbrot:75:1000
-/home/nex/bin/ironscheme: line 2: 12116 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 15711 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m1.755s
-user	14m59.287s
-sys	0m1.737s
+real	5m1.970s
+user	4m59.163s
+sys	0m0.763s
 +!CSVLINE!+ironscheme,mbrot,ULIMITKILLED
 
 Testing mbrotZ under IronScheme
@@ -303,11 +312,11 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running mbrotZ:75:1000
-/home/nex/bin/ironscheme: line 2: 12263 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 16279 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m1.905s
-user	14m59.263s
-sys	0m1.830s
+real	5m0.454s
+user	4m59.057s
+sys	0m0.880s
 +!CSVLINE!+ironscheme,mbrotZ,ULIMITKILLED
 
 Testing nucleic under IronScheme
@@ -315,12 +324,12 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running nucleic:50
-Elapsed time: 464.991065 seconds (465) for nucleic:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nucleic:50,464.991065
+/home/nex/bin/ironscheme: line 2: 16640 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	7m47.183s
-user	7m44.913s
-sys	0m1.653s
+real	5m2.007s
+user	4m59.093s
+sys	0m0.887s
++!CSVLINE!+ironscheme,nucleic,ULIMITKILLED
 
 Testing pi under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -329,25 +338,135 @@ Running...
 ﻿﻿Running pi:50:500:50:2
 Stacktrace:
 
+/proc/self/maps:
+00400000-008e6000 r-xp 00000000 08:02 2396095                            /usr/bin/mono-sgen
+00ae6000-00ae7000 r--p 004e6000 08:02 2396095                            /usr/bin/mono-sgen
+00ae7000-00af3000 rw-p 004e7000 08:02 2396095                            /usr/bin/mono-sgen
+00af3000-00b27000 rw-p 00000000 00:00 0 
+0166f000-043c8000 rw-p 00000000 00:00 0                                  [heap]
+402c2000-40553000 rwxp 00000000 00:00 0 
+412e7000-412f7000 rwxp 00000000 00:00 0 
+7f5754000000-7f57544f7000 rw-p 00000000 00:00 0 
+7f57544f7000-7f5758000000 ---p 00000000 00:00 0 
+7f575c000000-7f575c021000 rw-p 00000000 00:00 0 
+7f575c021000-7f5760000000 ---p 00000000 00:00 0 
+7f5760b74000-7f5760bf4000 rw-p 00000000 00:00 0 
+7f5760bf8000-7f5760c78000 rw-p 00000000 00:00 0 
+7f5760c7c000-7f5760cfc000 rw-p 00000000 00:00 0 
+7f5760d00000-7f5760e00000 rw-p 00000000 00:00 0 
+7f5760e5c000-7f5760edc000 rw-p 00000000 00:00 0 
+7f5760ee0000-7f5760f60000 rw-p 00000000 00:00 0 
+7f5760f64000-7f5760fe4000 rw-p 00000000 00:00 0 
+7f5760fe8000-7f5761068000 rw-p 00000000 00:00 0 
+7f576106c000-7f57610ec000 rw-p 00000000 00:00 0 
+7f57610f0000-7f5761170000 rw-p 00000000 00:00 0 
+7f5761174000-7f57611f4000 rw-p 00000000 00:00 0 
+7f57611f8000-7f5761278000 rw-p 00000000 00:00 0 
+7f576127c000-7f57612fc000 rw-p 00000000 00:00 0 
+7f5761300000-7f5761400000 rw-p 00000000 00:00 0 
+7f576146c000-7f57614ec000 rw-p 00000000 00:00 0 
+7f57614f0000-7f5761570000 rw-p 00000000 00:00 0 
+7f5761574000-7f57615f4000 rw-p 00000000 00:00 0 
+7f57615f8000-7f5761678000 rw-p 00000000 00:00 0 
+7f576167c000-7f57616fc000 rw-p 00000000 00:00 0 
+7f5761700000-7f5761800000 rw-p 00000000 00:00 0 
+7f5761874000-7f57618f4000 rw-p 00000000 00:00 0 
+7f57618f8000-7f5761978000 rw-p 00000000 00:00 0 
+7f576197c000-7f57619fc000 rw-p 00000000 00:00 0 
+7f5761a00000-7f5761b00000 rw-p 00000000 00:00 0 
+7f5761b0c000-7f5761b8c000 rw-p 00000000 00:00 0 
+7f5761b90000-7f5761c10000 rw-p 00000000 00:00 0 
+7f5761c13000-7f5761c1c000 ---p 00000000 00:00 0 
+7f5761c1c000-7f5762158000 rw-p 00000000 00:00 0 
+7f576215c000-7f57621dc000 rw-p 00000000 00:00 0 
+7f57621e0000-7f5762260000 rw-p 00000000 00:00 0 
+7f576227c000-7f57622fc000 rw-p 00000000 00:00 0 
+7f5762300000-7f5762400000 rw-p 00000000 00:00 0 
+7f5762413000-7f5762465000 r--p 00000000 08:02 524700                     /usr/lib/mono/gac/Mono.Security/4.0.0.0__0738eb9f132ed756/Mono.Security.dll
+7f5762465000-7f57624fc000 rw-p 00000000 00:00 0 
+7f5762500000-7f5762600000 rw-p 00000000 00:00 0 
+7f5762618000-7f5762619000 rw-p 00000000 00:00 0 
+7f576262c000-7f5762651000 rw-p 00000000 00:00 0 
+7f5762651000-7f5762864000 r--p 00000000 08:03 1095797                    /home/nex/tmp/IronScheme/IronScheme.dll
+7f5762864000-7f5762aea000 r--p 00000000 08:02 283163                     /usr/lib/mono/gac/System/4.0.0.0__b77a5c561934e089/System.dll
+7f5762aea000-7f5762af3000 ---p 00000000 00:00 0 
+7f5762af3000-7f5762ddf000 rw-p 00000000 00:00 0 
+7f5762ddf000-7f57635df000 r-xp 00000000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7f57635df000-7f57637de000 ---p 00800000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7f57637de000-7f57637df000 r--p 007ff000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7f57637df000-7f57637e0000 rw-p 00800000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7f57637e0000-7f57647ff000 rw-p 00000000 00:00 0 
+7f57647ff000-7f5764800000 ---p 00000000 00:00 0 
+7f5764800000-7f5765401000 rw-p 00000000 00:00 0 
+7f5765401000-7f576540b000 rw-p 00000000 00:00 0 
+7f576540b000-7f576541b000 rwxp 00000000 00:00 0 
+7f576541b000-7f5765425000 rw-p 00000000 00:00 0 
+7f5765425000-7f57657ca000 r--p 00000000 08:02 275710                     /usr/lib/mono/4.5/mscorlib.dll
+7f57657ca000-7f57657d3000 r--p 00000000 08:03 1095794                    /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe
+7f57657d3000-7f57657d4000 rw-p 00000000 00:00 0 
+7f57657d4000-7f5765833000 ---p 00000000 00:00 0 
+7f5765833000-7f57659c8000 r-xp 00000000 08:02 2362536                    /usr/lib/libc-2.24.so
+7f57659c8000-7f5765bc7000 ---p 00195000 08:02 2362536                    /usr/lib/libc-2.24.so
+7f5765bc7000-7f5765bcb000 r--p 00194000 08:02 2362536                    /usr/lib/libc-2.24.so
+7f5765bcb000-7f5765bcd000 rw-p 00198000 08:02 2362536                    /usr/lib/libc-2.24.so
+7f5765bcd000-7f5765bd1000 rw-p 00000000 00:00 0 
+7f5765bd1000-7f5765be7000 r-xp 00000000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7f5765be7000-7f5765de6000 ---p 00016000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7f5765de6000-7f5765de7000 r--p 00015000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7f5765de7000-7f5765de8000 rw-p 00016000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7f5765de8000-7f5765e00000 r-xp 00000000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7f5765e00000-7f5765fff000 ---p 00018000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7f5765fff000-7f5766000000 r--p 00017000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7f5766000000-7f5766001000 rw-p 00018000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7f5766001000-7f5766005000 rw-p 00000000 00:00 0 
+7f5766005000-7f5766007000 r-xp 00000000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7f5766007000-7f5766207000 ---p 00002000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7f5766207000-7f5766208000 r--p 00002000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7f5766208000-7f5766209000 rw-p 00003000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7f5766209000-7f5766210000 r-xp 00000000 08:02 2362630                    /usr/lib/librt-2.24.so
+7f5766210000-7f576640f000 ---p 00007000 08:02 2362630                    /usr/lib/librt-2.24.so
+7f576640f000-7f5766410000 r--p 00006000 08:02 2362630                    /usr/lib/librt-2.24.so
+7f5766410000-7f5766411000 rw-p 00007000 08:02 2362630                    /usr/lib/librt-2.24.so
+7f5766411000-7f5766514000 r-xp 00000000 08:02 2362627                    /usr/lib/libm-2.24.so
+7f5766514000-7f5766713000 ---p 00103000 08:02 2362627                    /usr/lib/libm-2.24.so
+7f5766713000-7f5766714000 r--p 00102000 08:02 2362627                    /usr/lib/libm-2.24.so
+7f5766714000-7f5766715000 rw-p 00103000 08:02 2362627                    /usr/lib/libm-2.24.so
+7f5766715000-7f5766738000 r-xp 00000000 08:02 2362535                    /usr/lib/ld-2.24.so
+7f5766738000-7f5766741000 rw-p 00000000 00:00 0 
+7f5766741000-7f5766742000 r--p 00000000 08:02 2361341                    /usr/share/locale/en_GB/LC_MESSAGES/libc.mo
+7f5766742000-7f5766748000 rw-p 00000000 00:00 0 
+7f5766748000-7f5766749000 rw-s 00000000 00:14 48072                      /dev/shm/mono.17156
+7f5766749000-7f5766930000 r--p 00000000 08:02 2405461                    /usr/lib/locale/locale-archive
+7f5766930000-7f5766937000 rw-p 00000000 00:00 0 
+7f5766937000-7f5766938000 r--p 00022000 08:02 2362535                    /usr/lib/ld-2.24.so
+7f5766938000-7f5766939000 rw-p 00023000 08:02 2362535                    /usr/lib/ld-2.24.so
+7f5766939000-7f576693a000 rw-p 00000000 00:00 0 
+7fffaaeb1000-7fffaaeb9000 ---p 00000000 00:00 0 
+7fffab68e000-7fffab6b0000 rw-p 00000000 00:00 0                          [stack]
+7fffab738000-7fffab73a000 r--p 00000000 00:00 0                          [vvar]
+7fffab73a000-7fffab73c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 Native stacktrace:
 
-	mono() [0x4b18ff]
-	mono() [0x50769e]
-	mono() [0x4297b3]
-	/usr/lib/libpthread.so.0(+0x11080) [0x7fd620eac080]
-	mono() [0x60f799]
-	mono() [0x6119d2]
-	mono() [0x613e6a]
-	mono() [0x6071c4]
-	mono() [0x5f3621]
-	[0x40875f2e]
+	mono() [0x4b9c49]
+	mono() [0x512afe]
+	mono() [0x42b573]
+	/usr/lib/libpthread.so.0(+0x11080) [0x7f5765df9080]
+	mono() [0x6e4e40]
+	mono() [0x6e569f]
+	mono() [0x6e7a0a]
+	mono() [0x6ea2c2]
+	mono() [0x6dc5c4]
+	mono() [0x6dca66]
+	mono() [0x60ab99]
+	[0x402c9ed8]
 
 Debug info from gdb:
 
-[New LWP 12494]
-[New LWP 12495]
-[New LWP 12496]
+[New LWP 17157]
+[New LWP 17158]
+[New LWP 17159]
 warning: File "/usr/bin/mono-sgen-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
 To enable execution of this file add
 	add-auto-load-safe-path /usr/bin/mono-sgen-gdb.py
@@ -360,68 +479,85 @@ For more information about this security protection see the
 	info "(gdb)Auto-loading safe path"
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/usr/lib/libthread_db.so.1".
-0x00007fd620919426 in sigsuspend () from /usr/lib/libc.so.6
+0x00007f5765866426 in sigsuspend () from /usr/lib/libc.so.6
   Id   Target Id         Frame 
-* 1    Thread 0x7fd6219e3740 (LWP 12493) "Main" 0x00007fd620919426 in sigsuspend () from /usr/lib/libc.so.6
-  2    Thread 0x7fd6203ff700 (LWP 12494) "SGen worker" 0x00007fd620ea810f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-  3    Thread 0x7fd61ddcf700 (LWP 12495) "Finalizer" 0x00007fd620eaa4f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
-  4    Thread 0x7fd61d1d7700 (LWP 12496) "Main" 0x00007fd620eabafb in waitpid () from /usr/lib/libpthread.so.0
+* 1    Thread 0x7f5766930740 (LWP 17156) "mono" 0x00007f5765866426 in sigsuspend () from /usr/lib/libc.so.6
+  2    Thread 0x7f5764fff700 (LWP 17157) "SGen worker" 0x00007f5765df510f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+  3    Thread 0x7f5762cea700 (LWP 17158) "Finalizer" 0x00007f5765df74f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
+  4    Thread 0x7f57620d7700 (LWP 17159) "mono" 0x00007f5765df8afb in waitpid () from /usr/lib/libpthread.so.0
 
-Thread 4 (Thread 0x7fd61d1d7700 (LWP 12496)):
-#0  0x00007fd620eabafb in waitpid () from /usr/lib/libpthread.so.0
-#1  0x00000000004b19d6 in ?? ()
-#2  0x000000000050769e in ?? ()
-#3  0x00000000004297b3 in ?? ()
+Thread 4 (Thread 0x7f57620d7700 (LWP 17159)):
+#0  0x00007f5765df8afb in waitpid () from /usr/lib/libpthread.so.0
+#1  0x00000000004b9d1e in ?? ()
+#2  0x0000000000512afe in ?? ()
+#3  0x000000000042b573 in ?? ()
 #4  <signal handler called>
-#5  0x000000000060f799 in ?? ()
-#6  0x00000000006119d2 in ?? ()
-#7  0x0000000000613e6a in ?? ()
-#8  0x00000000006071c4 in ?? ()
-#9  0x00000000005f3621 in ?? ()
-#10 0x0000000040875f2e in ?? ()
-#11 0x00007fd6207bf0e0 in ?? ()
-#12 0x00007fd610000e00 in ?? ()
-#13 0x0000000000000050 in ?? ()
-#14 0x00000000020e1d10 in ?? ()
-#15 0x00007fd6100008e0 in ?? ()
-#16 0x00007fd610001950 in ?? ()
-#17 0x00007fd61de40430 in ?? ()
-#18 0x00007fd61d1d5b50 in ?? ()
-#19 0x00007fd61d1d5aa0 in ?? ()
-#20 0x0000000040874e64 in ?? ()
-#21 0x0000000000000000 in ?? ()
+#5  0x00000000006e4e40 in ?? ()
+#6  0x00000000006e569f in ?? ()
+#7  0x00000000006e7a0a in ?? ()
+#8  0x00000000006ea2c2 in ?? ()
+#9  0x00000000006dc5c4 in ?? ()
+#10 0x00000000006dca66 in ?? ()
+#11 0x000000000060ab99 in ?? ()
+#12 0x00000000402c9ed8 in ?? ()
+#13 0x00007f57650ae258 in ?? ()
+#14 0x00007f5754000dd0 in ?? ()
+#15 0x00007f57540008c0 in ?? ()
+#16 0x0000000001c9caf8 in ?? ()
+#17 0x0000000000000020 in ?? ()
+#18 0x00007f5754001d90 in ?? ()
+#19 0x00007f57624bee30 in ?? ()
+#20 0x00007f57650ae278 in ?? ()
+#21 0x00007f57620d5ac0 in ?? ()
+#22 0x00000000402c2ea4 in ?? ()
+#23 0x00007f57650ae0d8 in ?? ()
+#24 0x000000000000000f in ?? ()
+#25 0x000000000000000b in ?? ()
+#26 0x00007f57621fc190 in ?? ()
+#27 0x00007f57650ae0d8 in ?? ()
+#28 0x00007f57650ae1e0 in ?? ()
+#29 0x00007f57650ae0d8 in ?? ()
+#30 0x00000000403bd3eb in ?? ()
+#31 0x00007f57650ae0d8 in ?? ()
+#32 0x000000000000000f in ?? ()
+#33 0x000000000000001f in ?? ()
+#34 0x00007f57650ae0d8 in ?? ()
+#35 0x00007f57624c6fb0 in ?? ()
+#36 0x00000000403bd2a0 in ?? ()
+#37 0x0000000000000000 in ?? ()
 
-Thread 3 (Thread 0x7fd61ddcf700 (LWP 12495)):
-#0  0x00007fd620eaa4f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
-#1  0x00007fd620eaa5a4 in __new_sem_wait_slow.constprop.0 () from /usr/lib/libpthread.so.0
-#2  0x00000000005c47eb in ?? ()
-#3  0x00000000005a3c9c in ?? ()
-#4  0x000000000065f0aa in ?? ()
-#5  0x00007fd620ea2454 in start_thread () from /usr/lib/libpthread.so.0
-#6  0x00007fd6209ce7df in clone () from /usr/lib/libc.so.6
+Thread 3 (Thread 0x7f5762cea700 (LWP 17158)):
+#0  0x00007f5765df74f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
+#1  0x00007f5765df75a4 in __new_sem_wait_slow.constprop.0 () from /usr/lib/libpthread.so.0
+#2  0x00000000005d8b47 in ?? ()
+#3  0x00000000005b3fd8 in ?? ()
+#4  0x000000000072e56f in ?? ()
+#5  0x00007f5765def454 in start_thread () from /usr/lib/libpthread.so.0
+#6  0x00007f576591b7df in clone () from /usr/lib/libc.so.6
 
-Thread 2 (Thread 0x7fd6203ff700 (LWP 12494)):
-#0  0x00007fd620ea810f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-#1  0x000000000062d89f in ?? ()
-#2  0x00007fd620ea2454 in start_thread () from /usr/lib/libpthread.so.0
-#3  0x00007fd6209ce7df in clone () from /usr/lib/libc.so.6
+Thread 2 (Thread 0x7f5764fff700 (LWP 17157)):
+#0  0x00007f5765df510f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+#1  0x000000000070467f in ?? ()
+#2  0x00007f5765def454 in start_thread () from /usr/lib/libpthread.so.0
+#3  0x00007f576591b7df in clone () from /usr/lib/libc.so.6
 
-Thread 1 (Thread 0x7fd6219e3740 (LWP 12493)):
-#0  0x00007fd620919426 in sigsuspend () from /usr/lib/libc.so.6
-#1  0x00000000005f22fc in ?? ()
-#2  0x00000000005f249f in ?? ()
+Thread 1 (Thread 0x7f5766930740 (LWP 17156)):
+#0  0x00007f5765866426 in sigsuspend () from /usr/lib/libc.so.6
+#1  0x00000000006098c4 in ?? ()
+#2  0x0000000000609a7f in ?? ()
 #3  <signal handler called>
-#4  0x00007fd620ea810d in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-#5  0x00000000006340ac in ?? ()
-#6  0x000000000064a732 in ?? ()
-#7  0x00000000005a382f in ?? ()
-#8  0x00000000005a5024 in ?? ()
-#9  0x0000000040a38cc8 in ?? ()
-#10 0x0000000000000002 in ?? ()
-#11 0x00007fd6207bf9e0 in ?? ()
-#12 0x00007fd6207bfa18 in ?? ()
-#13 0x00007fd6207bf730 in ?? ()
-#14 0x0000000000000000 in ?? ()
+#4  0x00007f5765df510d in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+#5  0x000000000073449b in ?? ()
+#6  0x00000000007350fd in ?? ()
+#7  0x000000000071ac59 in ?? ()
+#8  0x00000000005b3a9f in ?? ()
+#9  0x00000000005b5ad1 in ?? ()
+#10 0x0000000040487538 in ?? ()
+#11 0x0000000000000002 in ?? ()
+#12 0x00007f57653bf9d8 in ?? ()
+#13 0x00007f57653bfa10 in ?? ()
+#14 0x00007f57653bf730 in ?? ()
+#15 0x0000000000000000 in ?? ()
 
 =================================================================
 Got a SIGSEGV while executing native code. This usually indicates
@@ -429,11 +565,11 @@ a fatal error in the mono runtime or one of the native libraries
 used by your application.
 =================================================================
 
-/home/nex/bin/ironscheme: line 2: 12493 Aborted                 (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 17156 Aborted                 (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	0m1.599s
-user	0m1.407s
-sys	0m0.117s
+real	0m2.813s
+user	0m2.133s
+sys	0m0.163s
 +!CSVLINE!+ironscheme,pi,CRASHED
 
 Testing pnpoly under IronScheme
@@ -441,11 +577,11 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running pnpoly:1000000
-/home/nex/bin/ironscheme: line 2: 12532 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 17193 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m2.161s
-user	14m59.183s
-sys	0m2.093s
+real	5m5.136s
+user	4m59.190s
+sys	0m0.777s
 +!CSVLINE!+ironscheme,pnpoly,ULIMITKILLED
 
 Testing ray under IronScheme
@@ -455,27 +591,138 @@ Running...
 ﻿﻿Running ray:50
 Stacktrace:
 
+/proc/self/maps:
+00400000-008e6000 r-xp 00000000 08:02 2396095                            /usr/bin/mono-sgen
+00ae6000-00ae7000 r--p 004e6000 08:02 2396095                            /usr/bin/mono-sgen
+00ae7000-00af3000 rw-p 004e7000 08:02 2396095                            /usr/bin/mono-sgen
+00af3000-00b27000 rw-p 00000000 00:00 0 
+014f1000-0424a000 rw-p 00000000 00:00 0                                  [heap]
+40565000-40575000 rwxp 00000000 00:00 0 
+40cc2000-40f53000 rwxp 00000000 00:00 0 
+7fe29c000000-7fe29c4f9000 rw-p 00000000 00:00 0 
+7fe29c4f9000-7fe2a0000000 ---p 00000000 00:00 0 
+7fe2a4000000-7fe2a4021000 rw-p 00000000 00:00 0 
+7fe2a4021000-7fe2a8000000 ---p 00000000 00:00 0 
+7fe2a8774000-7fe2a87f4000 rw-p 00000000 00:00 0 
+7fe2a87f8000-7fe2a8878000 rw-p 00000000 00:00 0 
+7fe2a887c000-7fe2a88fc000 rw-p 00000000 00:00 0 
+7fe2a8900000-7fe2a8a00000 rw-p 00000000 00:00 0 
+7fe2a8a5c000-7fe2a8adc000 rw-p 00000000 00:00 0 
+7fe2a8ae0000-7fe2a8b60000 rw-p 00000000 00:00 0 
+7fe2a8b64000-7fe2a8be4000 rw-p 00000000 00:00 0 
+7fe2a8be8000-7fe2a8c68000 rw-p 00000000 00:00 0 
+7fe2a8c6c000-7fe2a8cec000 rw-p 00000000 00:00 0 
+7fe2a8cf0000-7fe2a8d70000 rw-p 00000000 00:00 0 
+7fe2a8d74000-7fe2a8df4000 rw-p 00000000 00:00 0 
+7fe2a8df8000-7fe2a8e78000 rw-p 00000000 00:00 0 
+7fe2a8e7c000-7fe2a8efc000 rw-p 00000000 00:00 0 
+7fe2a8f00000-7fe2a9000000 rw-p 00000000 00:00 0 
+7fe2a906c000-7fe2a90ec000 rw-p 00000000 00:00 0 
+7fe2a90f0000-7fe2a9170000 rw-p 00000000 00:00 0 
+7fe2a9174000-7fe2a91f4000 rw-p 00000000 00:00 0 
+7fe2a91f8000-7fe2a9278000 rw-p 00000000 00:00 0 
+7fe2a927c000-7fe2a92fc000 rw-p 00000000 00:00 0 
+7fe2a9300000-7fe2a9400000 rw-p 00000000 00:00 0 
+7fe2a9474000-7fe2a94f4000 rw-p 00000000 00:00 0 
+7fe2a94f8000-7fe2a9578000 rw-p 00000000 00:00 0 
+7fe2a957c000-7fe2a95fc000 rw-p 00000000 00:00 0 
+7fe2a9600000-7fe2a9700000 rw-p 00000000 00:00 0 
+7fe2a9734000-7fe2a97b4000 rw-p 00000000 00:00 0 
+7fe2a97b8000-7fe2a9838000 rw-p 00000000 00:00 0 
+7fe2a983c000-7fe2a98bc000 rw-p 00000000 00:00 0 
+7fe2a98bf000-7fe2a98c8000 ---p 00000000 00:00 0 
+7fe2a98c8000-7fe2a9e04000 rw-p 00000000 00:00 0 
+7fe2a9e08000-7fe2a9e88000 rw-p 00000000 00:00 0 
+7fe2a9e8c000-7fe2a9f0c000 rw-p 00000000 00:00 0 
+7fe2a9f2a000-7fe2a9f7c000 r--p 00000000 08:02 524700                     /usr/lib/mono/gac/Mono.Security/4.0.0.0__0738eb9f132ed756/Mono.Security.dll
+7fe2a9f7c000-7fe2a9ffc000 rw-p 00000000 00:00 0 
+7fe2aa000000-7fe2aa100000 rw-p 00000000 00:00 0 
+7fe2aa136000-7fe2aa14d000 rw-p 00000000 00:00 0 
+7fe2aa15d000-7fe2aa15e000 rw-p 00000000 00:00 0 
+7fe2aa171000-7fe2aa302000 rw-p 00000000 00:00 0 
+7fe2aa302000-7fe2aa31e000 rw-p 00000000 00:00 0 
+7fe2aa31e000-7fe2aa531000 r--p 00000000 08:03 1095797                    /home/nex/tmp/IronScheme/IronScheme.dll
+7fe2aa531000-7fe2aa7b7000 r--p 00000000 08:02 283163                     /usr/lib/mono/gac/System/4.0.0.0__b77a5c561934e089/System.dll
+7fe2aa7b7000-7fe2aa7c0000 ---p 00000000 00:00 0 
+7fe2aa7c0000-7fe2aaa39000 rw-p 00000000 00:00 0 
+7fe2aaa39000-7fe2aaa3a000 rw-p 00000000 00:00 0 
+7fe2aaa3a000-7fe2ab23a000 r-xp 00000000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7fe2ab23a000-7fe2ab439000 ---p 00800000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7fe2ab439000-7fe2ab43a000 r--p 007ff000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7fe2ab43a000-7fe2ab43b000 rw-p 00800000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7fe2ab43b000-7fe2ab45a000 rw-p 00000000 00:00 0 
+7fe2ab45a000-7fe2ab7ff000 r--p 00000000 08:02 275710                     /usr/lib/mono/4.5/mscorlib.dll
+7fe2ab7ff000-7fe2ac7ff000 rw-p 00000000 00:00 0 
+7fe2ac7ff000-7fe2ac800000 ---p 00000000 00:00 0 
+7fe2ac800000-7fe2ad401000 rw-p 00000000 00:00 0 
+7fe2ad401000-7fe2ad403000 rw-p 00000000 00:00 0 
+7fe2ad403000-7fe2ad413000 rwxp 00000000 00:00 0 
+7fe2ad413000-7fe2ad48f000 rw-p 00000000 00:00 0 
+7fe2ad48f000-7fe2ad498000 r--p 00000000 08:03 1095794                    /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe
+7fe2ad498000-7fe2ad499000 rw-p 00000000 00:00 0 
+7fe2ad499000-7fe2ad4f8000 ---p 00000000 00:00 0 
+7fe2ad4f8000-7fe2ad68d000 r-xp 00000000 08:02 2362536                    /usr/lib/libc-2.24.so
+7fe2ad68d000-7fe2ad88c000 ---p 00195000 08:02 2362536                    /usr/lib/libc-2.24.so
+7fe2ad88c000-7fe2ad890000 r--p 00194000 08:02 2362536                    /usr/lib/libc-2.24.so
+7fe2ad890000-7fe2ad892000 rw-p 00198000 08:02 2362536                    /usr/lib/libc-2.24.so
+7fe2ad892000-7fe2ad896000 rw-p 00000000 00:00 0 
+7fe2ad896000-7fe2ad8ac000 r-xp 00000000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7fe2ad8ac000-7fe2adaab000 ---p 00016000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7fe2adaab000-7fe2adaac000 r--p 00015000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7fe2adaac000-7fe2adaad000 rw-p 00016000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7fe2adaad000-7fe2adac5000 r-xp 00000000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7fe2adac5000-7fe2adcc4000 ---p 00018000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7fe2adcc4000-7fe2adcc5000 r--p 00017000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7fe2adcc5000-7fe2adcc6000 rw-p 00018000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7fe2adcc6000-7fe2adcca000 rw-p 00000000 00:00 0 
+7fe2adcca000-7fe2adccc000 r-xp 00000000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7fe2adccc000-7fe2adecc000 ---p 00002000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7fe2adecc000-7fe2adecd000 r--p 00002000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7fe2adecd000-7fe2adece000 rw-p 00003000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7fe2adece000-7fe2aded5000 r-xp 00000000 08:02 2362630                    /usr/lib/librt-2.24.so
+7fe2aded5000-7fe2ae0d4000 ---p 00007000 08:02 2362630                    /usr/lib/librt-2.24.so
+7fe2ae0d4000-7fe2ae0d5000 r--p 00006000 08:02 2362630                    /usr/lib/librt-2.24.so
+7fe2ae0d5000-7fe2ae0d6000 rw-p 00007000 08:02 2362630                    /usr/lib/librt-2.24.so
+7fe2ae0d6000-7fe2ae1d9000 r-xp 00000000 08:02 2362627                    /usr/lib/libm-2.24.so
+7fe2ae1d9000-7fe2ae3d8000 ---p 00103000 08:02 2362627                    /usr/lib/libm-2.24.so
+7fe2ae3d8000-7fe2ae3d9000 r--p 00102000 08:02 2362627                    /usr/lib/libm-2.24.so
+7fe2ae3d9000-7fe2ae3da000 rw-p 00103000 08:02 2362627                    /usr/lib/libm-2.24.so
+7fe2ae3da000-7fe2ae3fd000 r-xp 00000000 08:02 2362535                    /usr/lib/ld-2.24.so
+7fe2ae3fd000-7fe2ae402000 rw-p 00000000 00:00 0 
+7fe2ae402000-7fe2ae403000 r--p 00000000 08:02 2361341                    /usr/share/locale/en_GB/LC_MESSAGES/libc.mo
+7fe2ae403000-7fe2ae40d000 rw-p 00000000 00:00 0 
+7fe2ae40d000-7fe2ae40e000 rw-s 00000000 00:14 49108                      /dev/shm/mono.17581
+7fe2ae40e000-7fe2ae5f5000 r--p 00000000 08:02 2405461                    /usr/lib/locale/locale-archive
+7fe2ae5f5000-7fe2ae5fc000 rw-p 00000000 00:00 0 
+7fe2ae5fc000-7fe2ae5fd000 r--p 00022000 08:02 2362535                    /usr/lib/ld-2.24.so
+7fe2ae5fd000-7fe2ae5fe000 rw-p 00023000 08:02 2362535                    /usr/lib/ld-2.24.so
+7fe2ae5fe000-7fe2ae5ff000 rw-p 00000000 00:00 0 
+7ffc0d93d000-7ffc0d945000 ---p 00000000 00:00 0 
+7ffc0e11a000-7ffc0e13c000 rw-p 00000000 00:00 0                          [stack]
+7ffc0e186000-7ffc0e188000 r--p 00000000 00:00 0                          [vvar]
+7ffc0e188000-7ffc0e18a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 Native stacktrace:
 
-	mono() [0x4b18ff]
-	mono() [0x50769e]
-	mono() [0x4297b3]
-	/usr/lib/libpthread.so.0(+0x11080) [0x7f7061dfe080]
-	mono() [0x60f020]
-	mono() [0x60f7af]
-	mono() [0x6119d2]
-	mono() [0x613e6a]
-	mono() [0x6071c4]
-	mono() [0x607666]
-	mono() [0x5f34a9]
-	[0x40e4f6c8]
+	mono() [0x4b9c49]
+	mono() [0x512afe]
+	mono() [0x42b573]
+	/usr/lib/libpthread.so.0(+0x11080) [0x7fe2adabe080]
+	mono() [0x6e4e40]
+	mono() [0x6e569f]
+	mono() [0x6e7a0a]
+	mono() [0x6ea2c2]
+	mono() [0x6dc5c4]
+	mono() [0x6dca66]
+	mono() [0x60ab99]
+	[0x40cc9ed8]
 
 Debug info from gdb:
 
-[New LWP 12684]
-[New LWP 12685]
-[New LWP 12686]
+[New LWP 17582]
+[New LWP 17583]
+[New LWP 17584]
 warning: File "/usr/bin/mono-sgen-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
 To enable execution of this file add
 	add-auto-load-safe-path /usr/bin/mono-sgen-gdb.py
@@ -488,75 +735,76 @@ For more information about this security protection see the
 	info "(gdb)Auto-loading safe path"
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/usr/lib/libthread_db.so.1".
-0x00007f706186b426 in sigsuspend () from /usr/lib/libc.so.6
+0x00007fe2ad52b426 in sigsuspend () from /usr/lib/libc.so.6
   Id   Target Id         Frame 
-* 1    Thread 0x7f7062935740 (LWP 12683) "Main" 0x00007f706186b426 in sigsuspend () from /usr/lib/libc.so.6
-  2    Thread 0x7f7060fff700 (LWP 12684) "SGen worker" 0x00007f7061dfa10f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-  3    Thread 0x7f705ecfa700 (LWP 12685) "Finalizer" 0x00007f7061dfc4f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
-  4    Thread 0x7f705e0d7700 (LWP 12686) "Main" 0x00007f7061dfdafb in waitpid () from /usr/lib/libpthread.so.0
+* 1    Thread 0x7fe2ae5f5740 (LWP 17581) "mono" 0x00007fe2ad52b426 in sigsuspend () from /usr/lib/libc.so.6
+  2    Thread 0x7fe2acfff700 (LWP 17582) "SGen worker" 0x00007fe2adaba10f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+  3    Thread 0x7fe2aa9b7700 (LWP 17583) "Finalizer" 0x00007fe2adabc4f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
+  4    Thread 0x7fe2a9d83700 (LWP 17584) "mono" 0x00007fe2adabdafb in waitpid () from /usr/lib/libpthread.so.0
 
-Thread 4 (Thread 0x7f705e0d7700 (LWP 12686)):
-#0  0x00007f7061dfdafb in waitpid () from /usr/lib/libpthread.so.0
-#1  0x00000000004b19d6 in ?? ()
-#2  0x000000000050769e in ?? ()
-#3  0x00000000004297b3 in ?? ()
+Thread 4 (Thread 0x7fe2a9d83700 (LWP 17584)):
+#0  0x00007fe2adabdafb in waitpid () from /usr/lib/libpthread.so.0
+#1  0x00000000004b9d1e in ?? ()
+#2  0x0000000000512afe in ?? ()
+#3  0x000000000042b573 in ?? ()
 #4  <signal handler called>
-#5  0x000000000060f020 in ?? ()
-#6  0x000000000060f7af in ?? ()
-#7  0x00000000006119d2 in ?? ()
-#8  0x0000000000613e6a in ?? ()
-#9  0x00000000006071c4 in ?? ()
-#10 0x0000000000607666 in ?? ()
-#11 0x00000000005f34a9 in ?? ()
-#12 0x0000000040e4f6c8 in ?? ()
-#13 0x00007f706100b498 in ?? ()
-#14 0x00007f7050000e00 in ?? ()
-#15 0x00007f70500008e0 in ?? ()
-#16 0x00007f705007ede8 in ?? ()
+#5  0x00000000006e4e40 in ?? ()
+#6  0x00000000006e569f in ?? ()
+#7  0x00000000006e7a0a in ?? ()
+#8  0x00000000006ea2c2 in ?? ()
+#9  0x00000000006dc5c4 in ?? ()
+#10 0x00000000006dca66 in ?? ()
+#11 0x000000000060ab99 in ?? ()
+#12 0x0000000040cc9ed8 in ?? ()
+#13 0x00007fe2ad0385f0 in ?? ()
+#14 0x00007fe29c000dd0 in ?? ()
+#15 0x00007fe29c0008c0 in ?? ()
+#16 0x00007fe29c1c9550 in ?? ()
 #17 0x0000000000000018 in ?? ()
-#18 0x00007f7050001950 in ?? ()
-#19 0x00007f705e0d52e0 in ?? ()
-#20 0x00007f706100b4b0 in ?? ()
-#21 0x00007f705e0d5290 in ?? ()
-#22 0x0000000040e48ea4 in ?? ()
-#23 0x00007f70610394d0 in ?? ()
-#24 0x00007f705e4c7040 in ?? ()
-#25 0x0000000000000001 in ?? ()
-#26 0x00007f706100b408 in ?? ()
-#27 0x00007f706100b408 in ?? ()
+#18 0x00007fe29c001d90 in ?? ()
+#19 0x0000000000000001 in ?? ()
+#20 0x00007fe2ad038608 in ?? ()
+#21 0x00007fe2a9d80e90 in ?? ()
+#22 0x0000000040cc2ea4 in ?? ()
+#23 0x00007fe2ad0334c0 in ?? ()
+#24 0x00007fe2aa1c74d8 in ?? ()
+#25 0x00007fe2ad0384b0 in ?? ()
+#26 0x00007fe2ad23de78 in ?? ()
+#27 0x00007fe2ad23de10 in ?? ()
 #28 0x0000000000000000 in ?? ()
 
-Thread 3 (Thread 0x7f705ecfa700 (LWP 12685)):
-#0  0x00007f7061dfc4f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
-#1  0x00007f7061dfc5a4 in __new_sem_wait_slow.constprop.0 () from /usr/lib/libpthread.so.0
-#2  0x00000000005c47eb in ?? ()
-#3  0x00000000005a3c9c in ?? ()
-#4  0x000000000065f0aa in ?? ()
-#5  0x00007f7061df4454 in start_thread () from /usr/lib/libpthread.so.0
-#6  0x00007f70619207df in clone () from /usr/lib/libc.so.6
+Thread 3 (Thread 0x7fe2aa9b7700 (LWP 17583)):
+#0  0x00007fe2adabc4f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
+#1  0x00007fe2adabc5a4 in __new_sem_wait_slow.constprop.0 () from /usr/lib/libpthread.so.0
+#2  0x00000000005d8b47 in ?? ()
+#3  0x00000000005b3fd8 in ?? ()
+#4  0x000000000072e56f in ?? ()
+#5  0x00007fe2adab4454 in start_thread () from /usr/lib/libpthread.so.0
+#6  0x00007fe2ad5e07df in clone () from /usr/lib/libc.so.6
 
-Thread 2 (Thread 0x7f7060fff700 (LWP 12684)):
-#0  0x00007f7061dfa10f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-#1  0x000000000062d89f in ?? ()
-#2  0x00007f7061df4454 in start_thread () from /usr/lib/libpthread.so.0
-#3  0x00007f70619207df in clone () from /usr/lib/libc.so.6
+Thread 2 (Thread 0x7fe2acfff700 (LWP 17582)):
+#0  0x00007fe2adaba10f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+#1  0x000000000070467f in ?? ()
+#2  0x00007fe2adab4454 in start_thread () from /usr/lib/libpthread.so.0
+#3  0x00007fe2ad5e07df in clone () from /usr/lib/libc.so.6
 
-Thread 1 (Thread 0x7f7062935740 (LWP 12683)):
-#0  0x00007f706186b426 in sigsuspend () from /usr/lib/libc.so.6
-#1  0x00000000005f22fc in ?? ()
-#2  0x00000000005f249f in ?? ()
+Thread 1 (Thread 0x7fe2ae5f5740 (LWP 17581)):
+#0  0x00007fe2ad52b426 in sigsuspend () from /usr/lib/libc.so.6
+#1  0x00000000006098c4 in ?? ()
+#2  0x0000000000609a7f in ?? ()
 #3  <signal handler called>
-#4  0x00007f7061dfa10d in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-#5  0x00000000006340ac in ?? ()
-#6  0x000000000064a732 in ?? ()
-#7  0x00000000005a382f in ?? ()
-#8  0x00000000005a5024 in ?? ()
-#9  0x000000004100dcc8 in ?? ()
-#10 0x0000000000000002 in ?? ()
-#11 0x00007f70613bf9e0 in ?? ()
-#12 0x00007f70613bfa18 in ?? ()
-#13 0x00007f70613bf730 in ?? ()
-#14 0x0000000000000000 in ?? ()
+#4  0x00007fe2adaba10d in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+#5  0x000000000073449b in ?? ()
+#6  0x00000000007350fd in ?? ()
+#7  0x000000000071ac59 in ?? ()
+#8  0x00000000005b3a9f in ?? ()
+#9  0x00000000005b5ad1 in ?? ()
+#10 0x0000000040e87538 in ?? ()
+#11 0x0000000000000002 in ?? ()
+#12 0x00007fe2ad3bf9d8 in ?? ()
+#13 0x00007fe2ad3bfa10 in ?? ()
+#14 0x00007fe2ad3bf730 in ?? ()
+#15 0x0000000000000000 in ?? ()
 
 =================================================================
 Got a SIGSEGV while executing native code. This usually indicates
@@ -564,11 +812,11 @@ a fatal error in the mono runtime or one of the native libraries
 used by your application.
 =================================================================
 
-/home/nex/bin/ironscheme: line 2: 12683 Aborted                 (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 17581 Aborted                 (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	0m1.760s
-user	0m1.633s
-sys	0m0.110s
+real	0m5.023s
+user	0m4.677s
+sys	0m0.147s
 +!CSVLINE!+ironscheme,ray,CRASHED
 
 Testing simplex under IronScheme
@@ -576,23 +824,23 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running simplex:1000000
-Elapsed time: 582.17236 seconds (582) for simplex:1000000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,simplex:1000000,582.17236
+/home/nex/bin/ironscheme: line 2: 17618 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	9m43.343s
-user	9m41.533s
-sys	0m1.327s
+real	5m0.238s
+user	4m58.963s
+sys	0m0.980s
++!CSVLINE!+ironscheme,simplex,ULIMITKILLED
 
 Testing ack under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running ack:3:12:2
-/home/nex/bin/ironscheme: line 2: 12823 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 17903 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m0.064s
-user	14m59.433s
-sys	0m0.543s
+real	5m17.086s
+user	4m58.853s
+sys	0m0.660s
 +!CSVLINE!+ironscheme,ack,ULIMITKILLED
 
 Testing array1 under IronScheme
@@ -600,84 +848,92 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running array1:1000000:500
-Elapsed time: 158.550066 seconds (159) for array1:1000000:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,array1:1000000:500,158.550066
+/home/nex/bin/ironscheme: line 2: 18277 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	2m39.727s
-user	2m39.743s
-sys	0m2.297s
+real	4m59.940s
+user	4m57.230s
+sys	0m2.753s
++!CSVLINE!+ironscheme,array1,ULIMITKILLED
 
 Testing string under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running string:500000:25
-Elapsed time: 0.960525 seconds (1) for string:500000:25
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,string:500000:25,0.960525
+Elapsed time: 1.740601 seconds (1) for string:500000:25
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,string:500000:25,1.740601
 
-real	0m2.146s
-user	0m1.927s
-sys	0m0.287s
+real	0m3.791s
+user	0m3.247s
+sys	0m0.403s
 
 Testing sum1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running sum1:25
-Elapsed time: 684.822821 seconds (685) for sum1:25
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,sum1:25,684.822821
+/home/nex/bin/ironscheme: line 2: 18566 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	11m26.082s
-user	11m19.433s
-sys	0m7.317s
+real	5m20.328s
+user	4m57.297s
+sys	0m3.140s
++!CSVLINE!+ironscheme,sum1,ULIMITKILLED
 
 Testing cat under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running cat:50
-Elapsed time: 85.773042 seconds (86) for cat:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,cat:50,85.773042
+Elapsed time: 183.935328 seconds (184) for cat:50
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,cat:50,183.935328
+Execution interupted
 
-real	1m26.859s
-user	1m25.840s
-sys	0m0.817s
+real	3m5.980s
+user	3m2.920s
+sys	0m2.843s
 
 Testing tail under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running tail:25
-Elapsed time: 1.318423 seconds (1) for tail:25
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tail:25,1.318423
+Elapsed time: 2.711933 seconds (2) for tail:25
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tail:25,2.711933
+Execution interupted
+/home/nex/bin/ironscheme: line 2: 19585 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	0m2.418s
-user	0m2.323s
-sys	0m0.123s
+real	0m4.979s
+user	0m4.603s
+sys	0m0.270s
++!CSVLINE!+ironscheme,tail,CRASHED
 
 Testing wc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running wc:inputs/bib:50
-Elapsed time: 85.089668 seconds (86) for wc:inputs/bib:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,wc:inputs/bib:50,85.089668
+Elapsed time: 191.062843 seconds (191) for wc:inputs/bib:50
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,wc:inputs/bib:50,191.062843
+Execution interupted
+/home/nex/bin/ironscheme: line 2: 19613 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	1m26.271s
-user	1m25.340s
-sys	0m0.750s
+real	3m13.294s
+user	3m10.717s
+sys	0m2.190s
++!CSVLINE!+ironscheme,wc,CRASHED
 
 Testing read1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running read1:2500
-Elapsed time: 65.561034 seconds (65) for read1:2500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,read1:2500,65.561034
+Elapsed time: 138.098206 seconds (138) for read1:2500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,read1:2500,138.098206
+Execution interupted
 
-real	1m6.796s
-user	0m58.937s
-sys	0m8.030s
+real	2m20.077s
+user	2m2.960s
+sys	0m17.080s
 
 Testing compiler under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -693,9 +949,9 @@ System.InvalidProgramException: Invalid IL code in eval-core(067):::gen-label-en
 
 
 
-real	0m4.068s
-user	0m3.917s
-sys	0m0.160s
+real	0m11.257s
+user	0m10.837s
+sys	0m0.410s
 +!CSVLINE!+ironscheme,compiler,CRASHED
 
 Testing conform under IronScheme
@@ -703,44 +959,45 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running conform:500
-Elapsed time: 21.74539 seconds (21) for conform:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,conform:500,21.74539
+Elapsed time: 50.316168 seconds (50) for conform:500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,conform:500,50.316168
 
-real	0m22.939s
-user	0m22.843s
-sys	0m0.117s
+real	0m52.699s
+user	0m52.233s
+sys	0m0.340s
 
 Testing dynamic under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running dynamic:500
-Elapsed time: 62.968361 seconds (63) for dynamic:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,dynamic:500,62.968361
+Elapsed time: 136.959131 seconds (137) for dynamic:500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,dynamic:500,136.959131
+Execution interupted
 
-real	1m4.317s
-user	1m0.100s
-sys	0m4.763s
+real	2m19.970s
+user	2m10.607s
+sys	0m9.903s
 
 Testing earley under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running earley:1
-Stack overflow in unmanaged: IP: 0x6255a4, fault addr: 0x7f66ed943ff8
-Stack overflow in unmanaged: IP: 0x7f66f1724bd6, fault addr: 0x7f66ed942ff8
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7f66ed941fc8
-Stack overflow in unmanaged: IP: 0x579182, fault addr: 0x7f66ed942ff8
-Stack overflow in unmanaged: IP: 0x579182, fault addr: 0x7f66ed942ff8
-Stack overflow in unmanaged: IP: 0x427f72, fault addr: 0x7f66ed942ff8
-Stack overflow in unmanaged: IP: 0x4c4ea8, fault addr: 0x7f66ed941f70
-Stack overflow in unmanaged: IP: 0x7f66f1724beb, fault addr: 0x7f66ed942fd0
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7f66ed941fc8
-Stack overflow in unmanaged: IP: 0x4a1aa6, fault addr: 0x7f66ed942ff8
-Stack overflow in unmanaged: IP: 0x4afe17, fault addr: 0x7f66ed942d0c
-Stack overflow in unmanaged: IP: 0x4c5128, fault addr: 0x7f66ed941ef4
-Stack overflow in unmanaged: IP: 0x537696, fault addr: 0x7f66ed941ce8
-Stack overflow in unmanaged: IP: 0x4a207b, fault addr: 0x7f66ed940de8
+Stack overflow in unmanaged: IP: 0x6fd1e2, fault addr: 0x7f00ee49bff8
+Stack overflow in unmanaged: IP: 0x739ddb, fault addr: 0x7f00ee49aff8
+Stack overflow in unmanaged: IP: 0x4a9c6b, fault addr: 0x7f00ee499fd8
+Stack overflow in unmanaged: IP: 0x53d8c9, fault addr: 0x7f00ee49aff8
+Stack overflow in unmanaged: IP: 0x53d8c9, fault addr: 0x7f00ee49aff8
+Stack overflow in unmanaged: IP: 0x730e07, fault addr: 0x7f00ee49afd8
+Stack overflow in unmanaged: IP: 0x4cda87, fault addr: 0x7f00ee499f80
+Stack overflow in unmanaged: IP: 0x7f00f214cbeb, fault addr: 0x7f00ee49afd0
+Stack overflow in unmanaged: IP: 0x4a9c6b, fault addr: 0x7f00ee499fd8
+Stack overflow in unmanaged: IP: 0x4a9489, fault addr: 0x7f00ee49aff8
+Stack overflow in unmanaged: IP: 0x4b8067, fault addr: 0x7f00ee49acbc
+Stack overflow in unmanaged: IP: 0x4cddc7, fault addr: 0x7f00ee499ff0
+Stack overflow in unmanaged: IP: 0x543a56, fault addr: 0x7f00ee499c98
+Stack overflow in unmanaged: IP: 0x4a9c6b, fault addr: 0x7f00ee498d88
 Unhandled CLR exception reading input:
 CLR Exception: System.NullReferenceException
 System.NullReferenceException: Object reference not set to an instance of an object
@@ -763,9 +1020,9 @@ System.NullReferenceException: Object reference not set to an instance of an obj
   at IronScheme.Hosting.IronSchemeLanguageProvider+CommandLineX+<>c__DisplayClass5_0.<RunFile>b__0 () [0x00024] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
 
 
-real	0m17.388s
-user	0m17.180s
-sys	0m0.247s
+real	0m14.267s
+user	0m13.917s
+sys	0m0.287s
 +!CSVLINE!+ironscheme,earley,CRASHED
 
 Testing graphs under IronScheme
@@ -773,24 +1030,28 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running graphs:7:3
-Elapsed time: 76.17513 seconds (77) for graphs:7:3
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,graphs:7:3,76.17513
+Elapsed time: 155.141339 seconds (155) for graphs:7:3
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,graphs:7:3,155.141339
+Execution interupted
 
-real	1m17.348s
-user	1m16.637s
-sys	0m0.660s
+real	2m37.673s
+user	2m36.570s
+sys	0m1.123s
 
 Testing lattice under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running lattice:44:10
-Elapsed time: 34.151375 seconds (34) for lattice:44:10
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,lattice:44:10,34.151375
+Elapsed time: 75.704197 seconds (76) for lattice:44:10
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,lattice:44:10,75.704197
+Execution interupted
+/home/nex/bin/ironscheme: line 2: 20366 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	0m35.297s
-user	0m35.197s
-sys	0m0.080s
+real	1m17.867s
+user	1m17.527s
+sys	0m0.173s
++!CSVLINE!+ironscheme,lattice,CRASHED
 
 Testing matrix under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -800,93 +1061,98 @@ Running...
 &lexical
 &message: "invalid syntax"
 &irritants: ("2500\n5\n5\n\n(((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 -1 -1) (1 -1 1 -1 -1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 -1) (1 -1 1 -1 -1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 -1) (1 -1 1 -1 1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 1) (1 -1 1 1 -1) (1 -1 -1 -1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 1) (1 -1 1 1 1) (1 -1 -1 -1 -1)))))\n")
+Execution interupted
+/home/nex/bin/ironscheme: line 2: 20451 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	0m1.285s
-user	0m1.237s
-sys	0m0.033s
+real	0m2.408s
+user	0m2.110s
+sys	0m0.127s
++!CSVLINE!+ironscheme,matrix,CRASHED
 
 Testing maze under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running maze:20:7:10000
-Elapsed time: 196.701565 seconds (196) for maze:20:7:10000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,maze:20:7:10000,196.701565
+/home/nex/bin/ironscheme: line 2: 20476 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	3m18.028s
-user	3m17.443s
-sys	0m0.523s
+real	5m0.040s
+user	4m58.720s
+sys	0m1.247s
++!CSVLINE!+ironscheme,maze,ULIMITKILLED
 
 Testing mazefun under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running mazefun:11:11:10000
-Elapsed time: 110.407144 seconds (110) for mazefun:11:11:10000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mazefun:11:11:10000,110.407144
+Elapsed time: 244.083759 seconds (244) for mazefun:11:11:10000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mazefun:11:11:10000,244.083759
+Execution interupted
 
-real	1m51.586s
-user	1m51.350s
-sys	0m0.193s
+real	4m7.536s
+user	4m6.890s
+sys	0m0.610s
 
 Testing nqueens under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running nqueens:13:10
-Elapsed time: 202.514823 seconds (203) for nqueens:13:10
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nqueens:13:10,202.514823
+/home/nex/bin/ironscheme: line 2: 20923 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	3m23.700s
-user	3m23.567s
-sys	0m0.097s
+real	5m0.018s
+user	4m59.753s
+sys	0m0.200s
++!CSVLINE!+ironscheme,nqueens,ULIMITKILLED
 
 Testing paraffins under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running paraffins:23:10
-Elapsed time: 25.22213 seconds (25) for paraffins:23:10
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,paraffins:23:10,25.22213
+Error: Garbage collector could not allocate 16384 bytes of memory for major heap section.
 
-real	0m26.450s
-user	0m24.973s
-sys	0m2.880s
+real	0m25.345s
+user	0m14.447s
+sys	0m1.267s
++!CSVLINE!+ironscheme,paraffins,CRASHED
 
 Testing parsing under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running parsing:2500
-Elapsed time: 51.142537 seconds (51) for parsing:2500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,parsing:2500,51.142537
+Elapsed time: 138.135266 seconds (138) for parsing:2500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,parsing:2500,138.135266
 
-real	0m52.347s
-user	0m52.157s
-sys	0m0.197s
+real	2m20.495s
+user	1m48.647s
+sys	0m0.787s
 
 Testing peval under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running peval:2000
-Elapsed time: 22.058889 seconds (22) for peval:2000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,peval:2000,22.058889
+Elapsed time: 46.903739 seconds (47) for peval:2000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,peval:2000,46.903739
+Execution interupted
 
-real	0m23.266s
-user	0m23.060s
-sys	0m0.177s
+real	0m49.116s
+user	0m48.640s
+sys	0m0.407s
 
 Testing primes under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running primes:1000:10000
-/home/nex/bin/ironscheme: line 2: 13602 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 21384 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m1.194s
-user	14m58.647s
-sys	0m2.257s
+real	5m11.675s
+user	4m59.020s
+sys	0m0.977s
 +!CSVLINE!+ironscheme,primes,ULIMITKILLED
 
 Testing quicksort under IronScheme
@@ -895,26 +1161,134 @@ Compiling...
 Running...
 ﻿﻿Stacktrace:
 
+/proc/self/maps:
+00400000-008e6000 r-xp 00000000 08:02 2396095                            /usr/bin/mono-sgen
+00ae6000-00ae7000 r--p 004e6000 08:02 2396095                            /usr/bin/mono-sgen
+00ae7000-00af3000 rw-p 004e7000 08:02 2396095                            /usr/bin/mono-sgen
+00af3000-00b27000 rw-p 00000000 00:00 0 
+026a0000-053f9000 rw-p 00000000 00:00 0                                  [heap]
+40514000-40761000 rwxp 00000000 00:00 0 
+41aca000-41b0e000 rwxp 00000000 00:00 0 
+41b2e000-41b3e000 rwxp 00000000 00:00 0 
+7ff218000000-7ff2184f9000 rw-p 00000000 00:00 0 
+7ff2184f9000-7ff21c000000 ---p 00000000 00:00 0 
+7ff21e4f8000-7ff21e578000 rw-p 00000000 00:00 0 
+7ff21e57c000-7ff21e5fc000 rw-p 00000000 00:00 0 
+7ff21e600000-7ff21e700000 rw-p 00000000 00:00 0 
+7ff21e75c000-7ff21e7dc000 rw-p 00000000 00:00 0 
+7ff21e7e0000-7ff21e860000 rw-p 00000000 00:00 0 
+7ff21e864000-7ff21e8e4000 rw-p 00000000 00:00 0 
+7ff21e8e8000-7ff21e968000 rw-p 00000000 00:00 0 
+7ff21e96c000-7ff21e9ec000 rw-p 00000000 00:00 0 
+7ff21e9f0000-7ff21ea70000 rw-p 00000000 00:00 0 
+7ff21ea74000-7ff21eaf4000 rw-p 00000000 00:00 0 
+7ff21eaf8000-7ff21eb78000 rw-p 00000000 00:00 0 
+7ff21eb7c000-7ff21ebfc000 rw-p 00000000 00:00 0 
+7ff21ec00000-7ff21ed00000 rw-p 00000000 00:00 0 
+7ff21ed6c000-7ff21edec000 rw-p 00000000 00:00 0 
+7ff21edf0000-7ff21ee70000 rw-p 00000000 00:00 0 
+7ff21ee74000-7ff21eef4000 rw-p 00000000 00:00 0 
+7ff21eef8000-7ff21ef78000 rw-p 00000000 00:00 0 
+7ff21ef7c000-7ff21effc000 rw-p 00000000 00:00 0 
+7ff21f000000-7ff21f100000 rw-p 00000000 00:00 0 
+7ff21f174000-7ff21f1f4000 rw-p 00000000 00:00 0 
+7ff21f1f8000-7ff21f278000 rw-p 00000000 00:00 0 
+7ff21f27c000-7ff21f2fc000 rw-p 00000000 00:00 0 
+7ff21f300000-7ff21f400000 rw-p 00000000 00:00 0 
+7ff21f43b000-7ff21f444000 ---p 00000000 00:00 0 
+7ff21f444000-7ff21fa00000 rw-p 00000000 00:00 0 
+7ff21fa06000-7ff21fa58000 r--p 00000000 08:02 524700                     /usr/lib/mono/gac/Mono.Security/4.0.0.0__0738eb9f132ed756/Mono.Security.dll
+7ff21fa58000-7ff21fad8000 rw-p 00000000 00:00 0 
+7ff21fadc000-7ff21fb5c000 rw-p 00000000 00:00 0 
+7ff21fb7c000-7ff21fbfc000 rw-p 00000000 00:00 0 
+7ff21fc00000-7ff21fd00000 rw-p 00000000 00:00 0 
+7ff21fd49000-7ff21fdec000 rw-p 00000000 00:00 0 
+7ff21fded000-7ff220000000 r--p 00000000 08:03 1095797                    /home/nex/tmp/IronScheme/IronScheme.dll
+7ff220000000-7ff220021000 rw-p 00000000 00:00 0 
+7ff220021000-7ff224000000 ---p 00000000 00:00 0 
+7ff224020000-7ff224021000 rw-p 00000000 00:00 0 
+7ff224027000-7ff2241b1000 rw-p 00000000 00:00 0 
+7ff2241b1000-7ff2241b3000 rw-p 00000000 00:00 0 
+7ff2241b3000-7ff224439000 r--p 00000000 08:02 283163                     /usr/lib/mono/gac/System/4.0.0.0__b77a5c561934e089/System.dll
+7ff224439000-7ff224442000 ---p 00000000 00:00 0 
+7ff224442000-7ff22463a000 rw-p 00000000 00:00 0 
+7ff22463a000-7ff224e3a000 r-xp 00000000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7ff224e3a000-7ff225039000 ---p 00800000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7ff225039000-7ff22503a000 r--p 007ff000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7ff22503a000-7ff22503b000 rw-p 00800000 08:02 275398                     /usr/lib/mono/4.5/mscorlib.dll.so
+7ff22503b000-7ff22505a000 rw-p 00000000 00:00 0 
+7ff22505a000-7ff2253ff000 r--p 00000000 08:02 275710                     /usr/lib/mono/4.5/mscorlib.dll
+7ff2253ff000-7ff2263ff000 rw-p 00000000 00:00 0 
+7ff2263ff000-7ff226400000 ---p 00000000 00:00 0 
+7ff226400000-7ff227001000 rw-p 00000000 00:00 0 
+7ff227001000-7ff22702a000 rw-p 00000000 00:00 0 
+7ff22702a000-7ff22703a000 rwxp 00000000 00:00 0 
+7ff22703a000-7ff227136000 rw-p 00000000 00:00 0 
+7ff227136000-7ff22713f000 r--p 00000000 08:03 1095794                    /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe
+7ff22713f000-7ff227140000 rw-p 00000000 00:00 0 
+7ff227140000-7ff22719f000 ---p 00000000 00:00 0 
+7ff22719f000-7ff227334000 r-xp 00000000 08:02 2362536                    /usr/lib/libc-2.24.so
+7ff227334000-7ff227533000 ---p 00195000 08:02 2362536                    /usr/lib/libc-2.24.so
+7ff227533000-7ff227537000 r--p 00194000 08:02 2362536                    /usr/lib/libc-2.24.so
+7ff227537000-7ff227539000 rw-p 00198000 08:02 2362536                    /usr/lib/libc-2.24.so
+7ff227539000-7ff22753d000 rw-p 00000000 00:00 0 
+7ff22753d000-7ff227553000 r-xp 00000000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7ff227553000-7ff227752000 ---p 00016000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7ff227752000-7ff227753000 r--p 00015000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7ff227753000-7ff227754000 rw-p 00016000 08:02 2400947                    /usr/lib/libgcc_s.so.1
+7ff227754000-7ff22776c000 r-xp 00000000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7ff22776c000-7ff22796b000 ---p 00018000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7ff22796b000-7ff22796c000 r--p 00017000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7ff22796c000-7ff22796d000 rw-p 00018000 08:02 2362501                    /usr/lib/libpthread-2.24.so
+7ff22796d000-7ff227971000 rw-p 00000000 00:00 0 
+7ff227971000-7ff227973000 r-xp 00000000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7ff227973000-7ff227b73000 ---p 00002000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7ff227b73000-7ff227b74000 r--p 00002000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7ff227b74000-7ff227b75000 rw-p 00003000 08:02 2362626                    /usr/lib/libdl-2.24.so
+7ff227b75000-7ff227b7c000 r-xp 00000000 08:02 2362630                    /usr/lib/librt-2.24.so
+7ff227b7c000-7ff227d7b000 ---p 00007000 08:02 2362630                    /usr/lib/librt-2.24.so
+7ff227d7b000-7ff227d7c000 r--p 00006000 08:02 2362630                    /usr/lib/librt-2.24.so
+7ff227d7c000-7ff227d7d000 rw-p 00007000 08:02 2362630                    /usr/lib/librt-2.24.so
+7ff227d7d000-7ff227e80000 r-xp 00000000 08:02 2362627                    /usr/lib/libm-2.24.so
+7ff227e80000-7ff22807f000 ---p 00103000 08:02 2362627                    /usr/lib/libm-2.24.so
+7ff22807f000-7ff228080000 r--p 00102000 08:02 2362627                    /usr/lib/libm-2.24.so
+7ff228080000-7ff228081000 rw-p 00103000 08:02 2362627                    /usr/lib/libm-2.24.so
+7ff228081000-7ff2280a4000 r-xp 00000000 08:02 2362535                    /usr/lib/ld-2.24.so
+7ff2280a4000-7ff2280ad000 rw-p 00000000 00:00 0 
+7ff2280ad000-7ff2280ae000 r--p 00000000 08:02 2361341                    /usr/share/locale/en_GB/LC_MESSAGES/libc.mo
+7ff2280ae000-7ff2280b4000 rw-p 00000000 00:00 0 
+7ff2280b4000-7ff2280b5000 rw-s 00000000 00:14 62687                      /dev/shm/mono.21826
+7ff2280b5000-7ff22829c000 r--p 00000000 08:02 2405461                    /usr/lib/locale/locale-archive
+7ff22829c000-7ff2282a3000 rw-p 00000000 00:00 0 
+7ff2282a3000-7ff2282a4000 r--p 00022000 08:02 2362535                    /usr/lib/ld-2.24.so
+7ff2282a4000-7ff2282a5000 rw-p 00023000 08:02 2362535                    /usr/lib/ld-2.24.so
+7ff2282a5000-7ff2282a6000 rw-p 00000000 00:00 0 
+7ffd5c643000-7ffd5c64b000 ---p 00000000 00:00 0 
+7ffd5ce20000-7ffd5ce42000 rw-p 00000000 00:00 0                          [stack]
+7ffd5cef1000-7ffd5cef3000 r--p 00000000 00:00 0                          [vvar]
+7ffd5cef3000-7ffd5cef5000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 Native stacktrace:
 
-	mono() [0x4b18ff]
-	mono() [0x50769e]
-	mono() [0x4297b3]
-	/usr/lib/libpthread.so.0(+0x11080) [0x7fcc33973080]
-	mono() [0x60f020]
-	mono() [0x60f7af]
-	mono() [0x6119d2]
-	mono() [0x613e6a]
-	mono() [0x6071c4]
-	mono() [0x5f3621]
-	[0x4115913e]
+	mono() [0x4b9c49]
+	mono() [0x512afe]
+	mono() [0x42b573]
+	/usr/lib/libpthread.so.0(+0x11080) [0x7ff227765080]
+	mono() [0x6e4e40]
+	mono() [0x6e569f]
+	mono() [0x6e7a0a]
+	mono() [0x6ea2c2]
+	mono() [0x6dc5c4]
+	mono() [0x6dca66]
+	mono() [0x60ab99]
+	[0x41ad1ed8]
 
 Debug info from gdb:
 
-[New LWP 13753]
-[New LWP 13754]
-[New LWP 13755]
+[New LWP 21827]
+[New LWP 21828]
+[New LWP 21829]
 warning: File "/usr/bin/mono-sgen-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
 To enable execution of this file add
 	add-auto-load-safe-path /usr/bin/mono-sgen-gdb.py
@@ -927,79 +1301,88 @@ For more information about this security protection see the
 	info "(gdb)Auto-loading safe path"
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/usr/lib/libthread_db.so.1".
-0x00007fcc333e0426 in sigsuspend () from /usr/lib/libc.so.6
+0x00007ff2271d2426 in sigsuspend () from /usr/lib/libc.so.6
   Id   Target Id         Frame 
-* 1    Thread 0x7fcc344aa740 (LWP 13752) "Main" 0x00007fcc333e0426 in sigsuspend () from /usr/lib/libc.so.6
-  2    Thread 0x7fcc32bff700 (LWP 13753) "SGen worker" 0x00007fcc3396f10f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-  3    Thread 0x7fcc3324e700 (LWP 13754) "Finalizer" 0x00007fcc339714f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
-  4    Thread 0x7fcc2baff700 (LWP 13755) "Main" 0x00007fcc33972afb in waitpid () from /usr/lib/libpthread.so.0
+* 1    Thread 0x7ff22829c740 (LWP 21826) "mono" 0x00007ff2271d2426 in sigsuspend () from /usr/lib/libc.so.6
+  2    Thread 0x7ff226bff700 (LWP 21827) "SGen worker" 0x00007ff22776110f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+  3    Thread 0x7ff224639700 (LWP 21828) "Finalizer" 0x00007ff2277634f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
+  4    Thread 0x7ff21f8ff700 (LWP 21829) "mono" 0x00007ff227764afb in waitpid () from /usr/lib/libpthread.so.0
 
-Thread 4 (Thread 0x7fcc2baff700 (LWP 13755)):
-#0  0x00007fcc33972afb in waitpid () from /usr/lib/libpthread.so.0
-#1  0x00000000004b19d6 in ?? ()
-#2  0x000000000050769e in ?? ()
-#3  0x00000000004297b3 in ?? ()
+Thread 4 (Thread 0x7ff21f8ff700 (LWP 21829)):
+#0  0x00007ff227764afb in waitpid () from /usr/lib/libpthread.so.0
+#1  0x00000000004b9d1e in ?? ()
+#2  0x0000000000512afe in ?? ()
+#3  0x000000000042b573 in ?? ()
 #4  <signal handler called>
-#5  0x000000000060f020 in ?? ()
-#6  0x000000000060f7af in ?? ()
-#7  0x00000000006119d2 in ?? ()
-#8  0x0000000000613e6a in ?? ()
-#9  0x00000000006071c4 in ?? ()
-#10 0x00000000005f3621 in ?? ()
-#11 0x000000004115913e in ?? ()
-#12 0x00007fcc32f79b88 in ?? ()
-#13 0x00007fcc24000e00 in ?? ()
-#14 0x0000000000000030 in ?? ()
-#15 0x000000000195af10 in ?? ()
-#16 0x00007fcc240008e0 in ?? ()
-#17 0x00007fcc24001950 in ?? ()
-#18 0xfffffffffffffff0 in ?? ()
-#19 0x00007fcc2bafd660 in ?? ()
-#20 0x00007fcc2bafd5b0 in ?? ()
-#21 0x0000000041156e64 in ?? ()
-#22 0x00007fcc32f79b10 in ?? ()
-#23 0x0000000000000004 in ?? ()
-#24 0x00007fcc32f79bb8 in ?? ()
-#25 0x00000000005cbeef in ?? ()
-#26 0x00000000005cef5c in ?? ()
-#27 0x000000004133401b in ?? ()
-#28 0x0000000000000002 in ?? ()
-#29 0x00007fcc32f79b60 in ?? ()
-#30 0x0000000000000001 in ?? ()
+#5  0x00000000006e4e40 in ?? ()
+#6  0x00000000006e569f in ?? ()
+#7  0x00000000006e7a0a in ?? ()
+#8  0x00000000006ea2c2 in ?? ()
+#9  0x00000000006dc5c4 in ?? ()
+#10 0x00000000006dca66 in ?? ()
+#11 0x000000000060ab99 in ?? ()
+#12 0x0000000041ad1ed8 in ?? ()
+#13 0x00007ff226c0b498 in ?? ()
+#14 0x00007ff218000dd0 in ?? ()
+#15 0x00007ff2180008c0 in ?? ()
+#16 0x0000000002af4ab8 in ?? ()
+#17 0x0000000000000020 in ?? ()
+#18 0x00007ff218001d90 in ?? ()
+#19 0x00007ff226c0b450 in ?? ()
+#20 0x00007ff226c0b4b8 in ?? ()
+#21 0x00007ff21f8fd850 in ?? ()
+#22 0x0000000041acaea4 in ?? ()
+#23 0x000118b14f400000 in ?? ()
+#24 0x000000000000041d in ?? ()
+#25 0x41d118b14f400000 in ?? ()
+#26 0x00007ff226f82530 in ?? ()
+#27 0x00007ff21f8fd990 in ?? ()
+#28 0x00007ff21f8fd998 in ?? ()
+#29 0x000000000000041d in ?? ()
+#30 0x00000000405cafaf in ?? ()
 #31 0x0000000000000001 in ?? ()
-#32 0x0000000000000000 in ?? ()
+#32 0x000000000000001e in ?? ()
+#33 0x000000000000001e in ?? ()
+#34 0x0000000040754850 in ?? ()
+#35 0x00007ff226c001b0 in ?? ()
+#36 0x00007ff21f8fdeb0 in ?? ()
+#37 0x0000000000000001 in ?? ()
+#38 0x00007ff21fae8130 in ?? ()
+#39 0x00007ff226c001b0 in ?? ()
+#40 0x0000000000000000 in ?? ()
 
-Thread 3 (Thread 0x7fcc3324e700 (LWP 13754)):
-#0  0x00007fcc339714f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
-#1  0x00007fcc339715a4 in __new_sem_wait_slow.constprop.0 () from /usr/lib/libpthread.so.0
-#2  0x00000000005c47eb in ?? ()
-#3  0x00000000005a3c9c in ?? ()
-#4  0x000000000065f0aa in ?? ()
-#5  0x00007fcc33969454 in start_thread () from /usr/lib/libpthread.so.0
-#6  0x00007fcc334957df in clone () from /usr/lib/libc.so.6
+Thread 3 (Thread 0x7ff224639700 (LWP 21828)):
+#0  0x00007ff2277634f7 in do_futex_wait.constprop () from /usr/lib/libpthread.so.0
+#1  0x00007ff2277635a4 in __new_sem_wait_slow.constprop.0 () from /usr/lib/libpthread.so.0
+#2  0x00000000005d8b47 in ?? ()
+#3  0x00000000005b3fd8 in ?? ()
+#4  0x000000000072e56f in ?? ()
+#5  0x00007ff22775b454 in start_thread () from /usr/lib/libpthread.so.0
+#6  0x00007ff2272877df in clone () from /usr/lib/libc.so.6
 
-Thread 2 (Thread 0x7fcc32bff700 (LWP 13753)):
-#0  0x00007fcc3396f10f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-#1  0x000000000062d89f in ?? ()
-#2  0x00007fcc33969454 in start_thread () from /usr/lib/libpthread.so.0
-#3  0x00007fcc334957df in clone () from /usr/lib/libc.so.6
+Thread 2 (Thread 0x7ff226bff700 (LWP 21827)):
+#0  0x00007ff22776110f in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+#1  0x000000000070467f in ?? ()
+#2  0x00007ff22775b454 in start_thread () from /usr/lib/libpthread.so.0
+#3  0x00007ff2272877df in clone () from /usr/lib/libc.so.6
 
-Thread 1 (Thread 0x7fcc344aa740 (LWP 13752)):
-#0  0x00007fcc333e0426 in sigsuspend () from /usr/lib/libc.so.6
-#1  0x00000000005f22fc in ?? ()
-#2  0x00000000005f249f in ?? ()
+Thread 1 (Thread 0x7ff22829c740 (LWP 21826)):
+#0  0x00007ff2271d2426 in sigsuspend () from /usr/lib/libc.so.6
+#1  0x00000000006098c4 in ?? ()
+#2  0x0000000000609a7f in ?? ()
 #3  <signal handler called>
-#4  0x00007fcc3396f10d in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
-#5  0x00000000006340ac in ?? ()
-#6  0x000000000064a732 in ?? ()
-#7  0x00000000005a382f in ?? ()
-#8  0x00000000005a5024 in ?? ()
-#9  0x000000004131acc8 in ?? ()
-#10 0x0000000000000002 in ?? ()
-#11 0x00007fcc32fbf9e0 in ?? ()
-#12 0x00007fcc32fbfa18 in ?? ()
-#13 0x00007fcc32fbf730 in ?? ()
-#14 0x0000000000000000 in ?? ()
+#4  0x00007ff22776110d in pthread_cond_wait@@GLIBC_2.3.2 () from /usr/lib/libpthread.so.0
+#5  0x000000000073449b in ?? ()
+#6  0x00000000007350fd in ?? ()
+#7  0x000000000071ac59 in ?? ()
+#8  0x00000000005b3a9f in ?? ()
+#9  0x00000000005b5ad1 in ?? ()
+#10 0x0000000040695538 in ?? ()
+#11 0x0000000000000002 in ?? ()
+#12 0x00007ff226fbf9d8 in ?? ()
+#13 0x00007ff226fbfa10 in ?? ()
+#14 0x00007ff226fbf730 in ?? ()
+#15 0x0000000000000000 in ?? ()
 
 =================================================================
 Got a SIGSEGV while executing native code. This usually indicates
@@ -1007,11 +1390,11 @@ a fatal error in the mono runtime or one of the native libraries
 used by your application.
 =================================================================
 
-/home/nex/bin/ironscheme: line 2: 13752 Aborted                 (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 21826 Aborted                 (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	0m1.691s
-user	0m1.560s
-sys	0m0.110s
+real	0m2.736s
+user	0m2.270s
+sys	0m0.143s
 +!CSVLINE!+ironscheme,quicksort,CRASHED
 
 Testing scheme under IronScheme
@@ -1019,48 +1402,52 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running scheme:100000
-Elapsed time: 29.850139 seconds (30) for scheme:100000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,scheme:100000,29.850139
+Elapsed time: 60.201982 seconds (61) for scheme:100000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,scheme:100000,60.201982
+Execution interupted
 
-real	0m31.115s
-user	0m31.017s
-sys	0m0.080s
+real	1m2.503s
+user	1m2.323s
+sys	0m0.163s
 
 Testing slatex under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running slatex:500
-Elapsed time: 26.79672 seconds (27) for slatex:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,slatex:500,26.79672
+Elapsed time: 55.102604 seconds (55) for slatex:500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,slatex:500,55.102604
+Execution interupted
 
-real	0m28.164s
-user	0m26.053s
-sys	0m1.977s
+real	0m57.486s
+user	0m53.270s
+sys	0m3.870s
 
 Testing nboyer under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running nboyer:5:1
-Elapsed time: 14.724312 seconds (15) for nboyer:5:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nboyer:5:1,14.724312
+Elapsed time: 28.566823 seconds (29) for nboyer:5:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nboyer:5:1,28.566823
+Execution interupted
 
-real	0m16.002s
-user	0m16.407s
-sys	0m0.370s
+real	0m30.862s
+user	0m30.973s
+sys	0m0.480s
 
 Testing sboyer under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running sboyer:5:1
-Elapsed time: 8.801146 seconds (9) for sboyer:5:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,sboyer:5:1,8.801146
+Elapsed time: 19.317176 seconds (20) for sboyer:5:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,sboyer:5:1,19.317176
+Execution interupted
 
-real	0m10.004s
-user	0m9.970s
-sys	0m0.090s
+real	0m21.448s
+user	0m21.280s
+sys	0m0.153s
 
 Testing gcbench under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -1076,43 +1463,46 @@ Running...
   file-name: "/tmp/larcenous/IronScheme/gcbench.sps"
   character: "(95,8) - (95,21)"
 &trace: #<syntax make-node-raw ((95,8) - (95,21) of /tmp/larcenous/IronScheme/gcbench.sps)>
+Execution interupted
 
-real	0m0.995s
-user	0m0.973s
-sys	0m0.017s
+real	0m1.711s
+user	0m1.647s
+sys	0m0.050s
 
 Testing mperm under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running mperm:20:10:2:1
-Elapsed time: 115.541313 seconds (116) for mperm:20:10:2:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mperm:20:10:2:1,115.541313
+Elapsed time: 238.664459 seconds (239) for mperm:20:10:2:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mperm:20:10:2:1,238.664459
+Execution interupted
 
-real	2m2.380s
-user	2m2.147s
-sys	0m3.040s
+real	4m12.466s
+user	4m9.383s
+sys	0m4.523s
 
 Testing equal under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running equal:100:100:8:1000:2000:5000
-Elapsed time: 13.385481 seconds (13) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,equal:100:100:8:1000:2000:5000,13.385481
+Elapsed time: 17.617245 seconds (18) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,equal:100:100:8:1000:2000:5000,17.617245
+Execution interupted
 
-real	0m14.517s
-user	0m14.253s
-sys	0m0.320s
+real	0m19.791s
+user	0m19.147s
+sys	0m0.633s
 
 Testing bv2string under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 Running...
 ﻿﻿Running bv2string:1000:1000:100
-/home/nex/bin/ironscheme: line 2: 13942 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 22504 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
 
-real	15m1.773s
-user	14m59.010s
-sys	0m1.957s
+real	5m0.182s
+user	4m59.020s
+sys	0m0.930s
 +!CSVLINE!+ironscheme,bv2string,ULIMITKILLED
