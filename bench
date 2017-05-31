@@ -113,6 +113,7 @@ setup ()
     CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
     CHICKEN_CSI=${CHICKEN_CSI:-"csi"}
     CYCLONE=${CYCLONE:-"cyclone"}
+    FEMTOLISP=${FEMTOLISP:-"flisp"}
     FOMENT=${FOMENT:-"foment"}
     GAMBITC=${GAMBITC:-"gambitc"}
     GAUCHE=${GAUCHE:-"gosh"}
@@ -661,6 +662,19 @@ gambitc_exec ()
 }
 
 # -----------------------------------------------------------------------------
+# Definitions specific to femtolisp
+
+femtolisp_comp ()
+{
+    :
+}
+
+femtolisp_exec ()
+{
+    time "${FEMTOLISP}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
 # Definitions specific to Foment
 
 foment_comp ()
@@ -1047,6 +1061,16 @@ for system in $systems ; do
              COMPCOMMANDS=""
              EXECCOMMANDS=""
              ;;
+
+        femtolisp) NAME='Femtolisp'
+                   COMP=femtolisp_comp
+                   EXEC=femtolisp_exec
+                   COMPOPTS=""
+                   EXTENSION="scm"
+                   EXTENSIONCOMP="scm"
+                   COMPCOMMANDS=""
+                   EXECCOMMANDS=""
+                   ;;
 
         foment) NAME='Foment'
                 COMP=foment_comp
