@@ -23,10 +23,10 @@
 (define (set-symbol-value! s v) (set-top-level-value! s v))
 (define (eval x)
   ((compile-thunk (expand
-		   (if (and (pair? x)
-			    (equal? (car x) "noexpand"))
-		       (cadr x)
-		       x)))))
+                   (if (and (pair? x)
+                            (equal? (car x) "noexpand"))
+                       (cadr x)
+                       x)))))
 (define (command-line) *argv*)
 
 (define gensym
@@ -158,21 +158,21 @@
 (define get-datum read)
 (define (put-datum port x)
   (with-bindings ((*print-readably* #t))
-		 (write x port)))
+                 (write x port)))
 
 (define (put-u8 port o) (io.write port (uint8 o)))
 (define (put-string port s (start 0) (count #f))
   (let* ((start (string.inc s 0 start))
-	 (end (if count
-		  (string.inc s start count)
-		  (sizeof s))))
+         (end (if count
+                  (string.inc s start count)
+                  (sizeof s))))
     (io.write port s start (- end start))))
 
 (define (io.skipws s)
   (let ((c (io.peekc s)))
     (if (and (not (eof-object? c)) (char-whitespace? c))
-	(begin (io.getc s)
-	       (io.skipws s)))))
+        (begin (io.getc s)
+               (io.skipws s)))))
 
 (define (with-output-to-file name thunk)
   (let ((f (file name :write :create :truncate)))
@@ -189,12 +189,12 @@
 (define (call-with-input-file name proc)
   (let ((f (open-input-file name)))
     (prog1 (proc f)
-	   (io.close f))))
+           (io.close f))))
 
 (define (call-with-output-file name proc)
   (let ((f (open-output-file name)))
     (prog1 (proc f)
-	   (io.close f))))
+           (io.close f))))
 
 (define (file-exists? f) (path.exists? f))
 (define (delete-file name) (void)) ; TODO
@@ -222,8 +222,8 @@
 
 (define (assp pred lst)
   (cond ((atom? lst) #f)
-	((pred       (caar lst)) (car lst))
-	(else        (assp pred  (cdr lst)))))
+        ((pred       (caar lst)) (car lst))
+        (else        (assp pred  (cdr lst)))))
 
 (define (for-all proc l . ls)
   (or (null? l)
@@ -234,7 +234,7 @@
 (define (exists proc l . ls)
   (and (not (null? l))
        (or (apply proc (car l) (map car ls))
-	   (apply exists proc (cdr l) (map cdr ls)))))
+           (apply exists proc (cdr l) (map cdr ls)))))
 (define ormap exists)
 
 (define cons* list*)
@@ -252,27 +252,27 @@
 (define (dynamic-wind before thunk after)
   (before)
   (unwind-protect (thunk)
-		  (after)))
+                  (after)))
 
 (let ((*properties* (table)))
   (set! putprop
-	(lambda (sym key val)
-	  (let ((sp (get *properties* sym #f)))
-	    (if (not sp)
-		(let ((t (table)))
-		  (put! *properties* sym t)
-		  (set! sp t)))
-	    (put! sp key val))))
+        (lambda (sym key val)
+          (let ((sp (get *properties* sym #f)))
+            (if (not sp)
+                (let ((t (table)))
+                  (put! *properties* sym t)
+                  (set! sp t)))
+            (put! sp key val))))
 
   (set! getprop
-	(lambda (sym key)
-	  (let ((sp (get *properties* sym #f)))
-	    (and sp (get sp key #f)))))
+        (lambda (sym key)
+          (let ((sp (get *properties* sym #f)))
+            (and sp (get sp key #f)))))
 
   (set! remprop
-	(lambda (sym key)
-	  (let ((sp (get *properties* sym #f)))
-	    (and sp (has? sp key) (del! sp key))))))
+        (lambda (sym key)
+          (let ((sp (get *properties* sym #f)))
+            (and sp (has? sp key) (del! sp key))))))
 
 ; --- gambit
 
@@ -285,7 +285,7 @@
 (define (include f) (load f))
 (define (with-exception-catcher hand thk)
   (trycatch (thk)
-	    (lambda (e) (hand e))))
+            (lambda (e) (hand e))))
 
 (define (current-exception-handler)
   ; close enough

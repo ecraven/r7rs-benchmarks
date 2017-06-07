@@ -1,17 +1,17 @@
 
 ****************************
-Benchmarking Chibi on Tue 14 Mar 14:55:52 CET 2017 under Linux nexion 4.9.11-1-ARCH #1 SMP PREEMPT Sun Feb 19 13:45:52 UTC 2017 x86_64 GNU/Linux
+Benchmarking Chibi on Tue 6 Jun 18:32:38 CEST 2017 under Linux nexion 4.11.3-1-ARCH #1 SMP PREEMPT Sun May 28 10:40:17 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running browse:2000
-./bench: line 337:  6242 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338:  6681 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.288s
-user	4m59.920s
-sys	0m0.023s
+real	5m0.601s
+user	4m59.785s
+sys	0m0.050s
 +!CSVLINE!+chibi,browse,ULIMITKILLED
 
 Testing deriv under Chibi
@@ -19,95 +19,95 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running deriv:10000000
-Elapsed time: 129.743 seconds (129.743) for deriv:10000000
-+!CSVLINE!+chibi-unknown,deriv:10000000,129.743
+Elapsed time: 122.567 seconds (122.567) for deriv:10000000
++!CSVLINE!+chibi-unknown,deriv:10000000,122.567
 
-real	2m9.953s
-user	2m8.933s
-sys	0m0.010s
+real	2m2.750s
+user	2m2.055s
+sys	0m0.013s
 
 Testing destruc under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running destruc:600:50:4000
-Elapsed time: 116.757 seconds (116.757) for destruc:600:50:4000
-+!CSVLINE!+chibi-unknown,destruc:600:50:4000,116.757
+Elapsed time: 114.321 seconds (114.322) for destruc:600:50:4000
++!CSVLINE!+chibi-unknown,destruc:600:50:4000,114.321
 
-real	1m56.980s
-user	1m55.873s
-sys	0m0.017s
+real	1m54.570s
+user	1m53.629s
+sys	0m0.037s
 
 Testing diviter under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running diviter:1000:1000000
-Elapsed time: 72.473 seconds (72.473) for diviter:1000:1000000
-+!CSVLINE!+chibi-unknown,diviter:1000:1000000,72.473
+Elapsed time: 75.58 seconds (75.58) for diviter:1000:1000000
++!CSVLINE!+chibi-unknown,diviter:1000:1000000,75.58
 
-real	1m12.688s
-user	1m12.453s
-sys	0m0.007s
+real	1m15.833s
+user	1m15.428s
+sys	0m0.033s
 
 Testing divrec under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running divrec:1000:1000000
-Elapsed time: 61.503 seconds (61.503) for divrec:1000:1000000
-+!CSVLINE!+chibi-unknown,divrec:1000:1000000,61.503
+Elapsed time: 59.35 seconds (59.349) for divrec:1000:1000000
++!CSVLINE!+chibi-unknown,divrec:1000:1000000,59.35
 
-real	1m1.686s
-user	1m1.663s
-sys	0m0.000s
+real	0m59.566s
+user	0m59.300s
+sys	0m0.010s
 
 Testing puzzle under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running puzzle:1000
-Elapsed time: 287.13 seconds (287.13) for puzzle:1000
-+!CSVLINE!+chibi-unknown,puzzle:1000,287.13
+Elapsed time: 282.896 seconds (282.897) for puzzle:1000
++!CSVLINE!+chibi-unknown,puzzle:1000,282.896
 
-real	4m47.303s
-user	4m41.250s
-sys	0m0.057s
+real	4m43.086s
+user	4m41.751s
+sys	0m0.023s
 
 Testing triangl under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running triangl:22:1:50
-Elapsed time: 107.285 seconds (107.285) for triangl:22:1:50
-+!CSVLINE!+chibi-unknown,triangl:22:1:50,107.285
+Elapsed time: 102.866 seconds (102.865) for triangl:22:1:50
++!CSVLINE!+chibi-unknown,triangl:22:1:50,102.866
 
-real	1m47.488s
-user	1m45.737s
-sys	0m0.010s
+real	1m43.033s
+user	1m41.484s
+sys	0m0.013s
 
 Testing tak under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running tak:40:20:11:1
-Elapsed time: 62.886 seconds (62.887) for tak:40:20:11:1
-+!CSVLINE!+chibi-unknown,tak:40:20:11:1,62.886
+Elapsed time: 60.948 seconds (60.948) for tak:40:20:11:1
++!CSVLINE!+chibi-unknown,tak:40:20:11:1,60.948
 
-real	1m3.067s
-user	1m2.653s
-sys	0m0.010s
+real	1m1.126s
+user	1m1.002s
+sys	0m0.003s
 
 Testing takl under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running takl:40:20:12:1
-./bench: line 337: 10162 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 10530 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.663s
-user	4m59.893s
-sys	0m0.000s
+real	5m1.847s
+user	4m59.589s
+sys	0m0.040s
 +!CSVLINE!+chibi,takl,ULIMITKILLED
 
 Testing ntakl under Chibi
@@ -115,35 +115,35 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 113.985 seconds (113.985) for ntakl:40:20:12:1
-+!CSVLINE!+chibi-unknown,ntakl:40:20:12:1,113.985
+Elapsed time: 114.881 seconds (114.881) for ntakl:40:20:12:1
++!CSVLINE!+chibi-unknown,ntakl:40:20:12:1,114.881
 
-real	1m54.168s
-user	1m53.943s
-sys	0m0.000s
+real	1m55.027s
+user	1m48.485s
+sys	0m0.066s
 
 Testing cpstak under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 231.017 seconds (231.017) for cpstak:40:20:11:1
-+!CSVLINE!+chibi-unknown,cpstak:40:20:11:1,231.017
+Elapsed time: 230.105 seconds (230.105) for cpstak:40:20:11:1
++!CSVLINE!+chibi-unknown,cpstak:40:20:11:1,230.105
 
-real	3m51.188s
-user	3m50.340s
-sys	0m0.000s
+real	3m50.254s
+user	3m47.801s
+sys	0m0.077s
 
 Testing ctak under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running ctak:32:16:8:1
-./bench: line 337: 11351 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 12510 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m7.739s
-user	4m59.150s
-sys	0m0.137s
+real	5m3.666s
+user	4m59.504s
+sys	0m0.093s
 +!CSVLINE!+chibi,ctak,ULIMITKILLED
 
 Testing fib under Chibi
@@ -151,23 +151,23 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running fib:40:5
-Elapsed time: 87.891 seconds (87.891) for fib:40:5
-+!CSVLINE!+chibi-unknown,fib:40:5,87.891
+Elapsed time: 81.071 seconds (81.071) for fib:40:5
++!CSVLINE!+chibi-unknown,fib:40:5,81.071
 
-real	1m28.147s
-user	1m22.990s
-sys	0m0.033s
+real	1m21.292s
+user	1m20.048s
+sys	0m0.017s
 
 Testing fibc under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running fibc:30:10
-./bench: line 337: 12053 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 13375 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m3.788s
-user	4m59.580s
-sys	0m0.033s
+real	5m3.856s
+user	4m59.667s
+sys	0m0.093s
 +!CSVLINE!+chibi,fibc,ULIMITKILLED
 
 Testing fibfp under Chibi
@@ -175,35 +175,35 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running fibfp:35.0:10
-Elapsed time: 52.657 seconds (52.657) for fibfp:35.0:10
-+!CSVLINE!+chibi-unknown,fibfp:35.0:10,52.657
+Elapsed time: 54.504 seconds (54.504) for fibfp:35.0:10
++!CSVLINE!+chibi-unknown,fibfp:35.0:10,54.504
 
-real	0m52.820s
-user	0m51.457s
-sys	0m0.003s
+real	0m54.677s
+user	0m53.958s
+sys	0m0.037s
 
 Testing sum under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running sum:10000:200000
-Elapsed time: 109.674 seconds (109.674) for sum:10000:200000
-+!CSVLINE!+chibi-unknown,sum:10000:200000,109.674
+Elapsed time: 111.935 seconds (111.935) for sum:10000:200000
++!CSVLINE!+chibi-unknown,sum:10000:200000,111.935
 
-real	1m49.835s
-user	1m48.183s
-sys	0m0.003s
+real	1m52.129s
+user	1m51.003s
+sys	0m0.023s
 
 Testing sumfp under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running sumfp:1000000.0:500
-Elapsed time: 106.587 seconds (106.587) for sumfp:1000000.0:500
-+!CSVLINE!+chibi-unknown,sumfp:1000000.0:500,106.587
+Elapsed time: 116.433 seconds (116.433) for sumfp:1000000.0:500
++!CSVLINE!+chibi-unknown,sumfp:1000000.0:500,116.433
 
-real	1m46.765s
-user	1m45.737s
+real	1m56.592s
+user	1m55.771s
 sys	0m0.020s
 
 Testing fft under Chibi
@@ -211,35 +211,35 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running fft:65536:100
-Elapsed time: 64.932 seconds (64.932) for fft:65536:100
-+!CSVLINE!+chibi-unknown,fft:65536:100,64.932
+Elapsed time: 63.944 seconds (63.943) for fft:65536:100
++!CSVLINE!+chibi-unknown,fft:65536:100,63.944
 
-real	1m5.110s
-user	1m4.777s
-sys	0m0.003s
+real	1m4.160s
+user	1m3.621s
+sys	0m0.013s
 
 Testing mbrot under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running mbrot:75:1000
-Elapsed time: 240.419 seconds (240.418) for mbrot:75:1000
-+!CSVLINE!+chibi-unknown,mbrot:75:1000,240.419
+Elapsed time: 264.734 seconds (264.734) for mbrot:75:1000
++!CSVLINE!+chibi-unknown,mbrot:75:1000,264.734
 
-real	4m0.581s
-user	3m58.683s
-sys	0m0.013s
+real	4m24.912s
+user	3m46.999s
+sys	0m0.157s
 
 Testing mbrotZ under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running mbrotZ:75:1000
-./bench: line 337: 14013 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 15074 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.069s
-user	4m59.940s
-sys	0m0.003s
+real	5m1.636s
+user	4m59.714s
+sys	0m0.050s
 +!CSVLINE!+chibi,mbrotZ,ULIMITKILLED
 
 Testing nucleic under Chibi
@@ -247,143 +247,143 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running nucleic:50
-Elapsed time: 88.557 seconds (88.557) for nucleic:50
-+!CSVLINE!+chibi-unknown,nucleic:50,88.557
+Elapsed time: 90.108 seconds (90.109) for nucleic:50
++!CSVLINE!+chibi-unknown,nucleic:50,90.108
 
-real	1m28.764s
-user	1m28.733s
-sys	0m0.000s
+real	1m30.319s
+user	1m30.239s
+sys	0m0.010s
 
 Testing pi under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running pi:50:500:50:2
-Elapsed time: 270.299 seconds (270.299) for pi:50:500:50:2
-+!CSVLINE!+chibi-unknown,pi:50:500:50:2,270.299
+Elapsed time: 259.828 seconds (259.828) for pi:50:500:50:2
++!CSVLINE!+chibi-unknown,pi:50:500:50:2,259.828
 
-real	4m30.461s
-user	4m29.260s
-sys	0m0.003s
+real	4m20.006s
+user	4m19.081s
+sys	0m0.077s
 
 Testing pnpoly under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running pnpoly:1000000
-Elapsed time: 282.752 seconds (282.752) for pnpoly:1000000
-+!CSVLINE!+chibi-unknown,pnpoly:1000000,282.752
+Elapsed time: 276.537 seconds (276.538) for pnpoly:1000000
++!CSVLINE!+chibi-unknown,pnpoly:1000000,276.537
 
-real	4m42.910s
-user	4m42.780s
-sys	0m0.000s
+real	4m36.693s
+user	4m31.262s
+sys	0m0.033s
 
 Testing ray under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running ray:50
-Elapsed time: 129.029 seconds (129.029) for ray:50
-+!CSVLINE!+chibi-unknown,ray:50,129.029
+Elapsed time: 124.673 seconds (124.673) for ray:50
++!CSVLINE!+chibi-unknown,ray:50,124.673
 
-real	2m9.199s
-user	2m8.923s
-sys	0m0.020s
+real	2m4.844s
+user	2m3.876s
+sys	0m0.057s
 
 Testing simplex under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running simplex:1000000
-Elapsed time: 204.719 seconds (204.72) for simplex:1000000
-+!CSVLINE!+chibi-unknown,simplex:1000000,204.719
+Elapsed time: 196.144 seconds (196.144) for simplex:1000000
++!CSVLINE!+chibi-unknown,simplex:1000000,196.144
 
-real	3m24.889s
-user	3m24.613s
-sys	0m0.007s
+real	3m16.303s
+user	3m15.974s
+sys	0m0.003s
 
 Testing ack under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running ack:3:12:2
-Elapsed time: 77.931 seconds (77.931) for ack:3:12:2
-+!CSVLINE!+chibi-unknown,ack:3:12:2,77.931
+Elapsed time: 76.623 seconds (76.623) for ack:3:12:2
++!CSVLINE!+chibi-unknown,ack:3:12:2,76.623
 
-real	1m18.092s
-user	1m17.637s
-sys	0m0.000s
+real	1m16.800s
+user	1m16.591s
+sys	0m0.020s
 
 Testing array1 under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running array1:1000000:500
-Elapsed time: 73.86 seconds (73.861) for array1:1000000:500
-+!CSVLINE!+chibi-unknown,array1:1000000:500,73.86
+Elapsed time: 70.059 seconds (70.059) for array1:1000000:500
++!CSVLINE!+chibi-unknown,array1:1000000:500,70.059
 
-real	1m14.049s
-user	1m13.790s
-sys	0m0.000s
+real	1m10.242s
+user	1m9.891s
+sys	0m0.010s
 
 Testing string under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running string:500000:25
-Elapsed time: 7.161 seconds (7.16) for string:500000:25
-+!CSVLINE!+chibi-unknown,string:500000:25,7.161
+Elapsed time: 7.051 seconds (7.05) for string:500000:25
++!CSVLINE!+chibi-unknown,string:500000:25,7.051
 
-real	0m7.325s
-user	0m7.077s
-sys	0m0.000s
+real	0m7.250s
+user	0m7.110s
+sys	0m0.007s
 
 Testing sum1 under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running sum1:25
-Elapsed time: 39.562 seconds (39.562) for sum1:25
-+!CSVLINE!+chibi-unknown,sum1:25,39.562
+Elapsed time: 39.071 seconds (39.071) for sum1:25
++!CSVLINE!+chibi-unknown,sum1:25,39.071
 
-real	0m39.735s
-user	0m38.287s
-sys	0m0.347s
+real	0m39.270s
+user	0m38.707s
+sys	0m0.459s
 
 Testing cat under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running cat:50
-Elapsed time: 67.707 seconds (67.707) for cat:50
-+!CSVLINE!+chibi-unknown,cat:50,67.707
+Elapsed time: 69.289 seconds (69.289) for cat:50
++!CSVLINE!+chibi-unknown,cat:50,69.289
 
-real	1m7.873s
-user	1m7.040s
-sys	0m0.323s
+real	1m9.470s
+user	1m8.130s
+sys	0m0.412s
 
 Testing tail under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running tail:25
-Elapsed time: 119.149 seconds (119.149) for tail:25
-+!CSVLINE!+chibi-unknown,tail:25,119.149
+Elapsed time: 542.663 seconds (542.664) for tail:25
++!CSVLINE!+chibi-unknown,tail:25,542.663
 
-real	1m59.312s
-user	1m59.040s
-sys	0m0.137s
+real	9m2.886s
+user	2m0.936s
+sys	0m1.210s
 
 Testing wc under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running wc:inputs/bib:50
-./bench: line 337: 16417 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 20254 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.190s
-user	4m59.793s
-sys	0m0.157s
+real	5m0.812s
+user	4m59.695s
+sys	0m0.147s
 +!CSVLINE!+chibi,wc,ULIMITKILLED
 
 Testing read1 under Chibi
@@ -391,59 +391,59 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running read1:2500
-Elapsed time: 132.729 seconds (132.729) for read1:2500
-+!CSVLINE!+chibi-unknown,read1:2500,132.729
+Elapsed time: 132.75 seconds (132.75) for read1:2500
++!CSVLINE!+chibi-unknown,read1:2500,132.75
 
-real	2m12.894s
-user	2m10.713s
-sys	0m0.753s
+real	2m12.929s
+user	2m11.832s
+sys	0m0.780s
 
 Testing compiler under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running compiler:2000
-Elapsed time: 125.141 seconds (125.141) for compiler:2000
-+!CSVLINE!+chibi-unknown,compiler:2000,125.141
+Elapsed time: 134.297 seconds (134.296) for compiler:2000
++!CSVLINE!+chibi-unknown,compiler:2000,134.297
 
-real	2m5.781s
-user	1m59.813s
-sys	0m0.010s
+real	2m15.059s
+user	2m14.655s
+sys	0m0.013s
 
 Testing conform under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running conform:500
-Elapsed time: 167.775 seconds (167.775) for conform:500
-+!CSVLINE!+chibi-unknown,conform:500,167.775
+Elapsed time: 183.789 seconds (183.789) for conform:500
++!CSVLINE!+chibi-unknown,conform:500,183.789
 
-real	2m47.942s
-user	2m46.650s
-sys	0m0.000s
+real	3m3.973s
+user	2m50.969s
+sys	0m0.040s
 
 Testing dynamic under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running dynamic:500
-Elapsed time: 231.019 seconds (231.019) for dynamic:500
-+!CSVLINE!+chibi-unknown,dynamic:500,231.019
+Elapsed time: 266.411 seconds (266.411) for dynamic:500
++!CSVLINE!+chibi-unknown,dynamic:500,266.411
 
-real	3m51.225s
-user	3m50.537s
-sys	0m0.430s
+real	4m26.843s
+user	4m2.291s
+sys	0m2.234s
 
 Testing earley under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running earley:1
-./bench: line 337: 17843 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 21267 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m14.417s
-user	4m59.060s
-sys	0m0.033s
+real	9m54.416s
+user	4m57.941s
+sys	0m0.810s
 +!CSVLINE!+chibi,earley,ULIMITKILLED
 
 Testing graphs under Chibi
@@ -451,11 +451,11 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running graphs:7:3
-./bench: line 337: 18132 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 21737 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m1.762s
-user	4m59.827s
-sys	0m0.003s
+real	5m0.581s
+user	4m59.847s
+sys	0m0.040s
 +!CSVLINE!+chibi,graphs,ULIMITKILLED
 
 Testing lattice under Chibi
@@ -463,11 +463,11 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running lattice:44:10
-./bench: line 337: 18430 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 21917 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m24.015s
-user	4m59.087s
-sys	0m0.040s
+real	5m0.827s
+user	4m59.311s
+sys	0m0.127s
 +!CSVLINE!+chibi,lattice,ULIMITKILLED
 
 Testing matrix under Chibi
@@ -475,59 +475,59 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running matrix:5:5:2500
-Elapsed time: 240.83 seconds (240.829) for matrix:5:5:2500
-+!CSVLINE!+chibi-unknown,matrix:5:5:2500,240.83
+Elapsed time: 241.72 seconds (241.72) for matrix:5:5:2500
++!CSVLINE!+chibi-unknown,matrix:5:5:2500,241.72
 
-real	4m1.020s
-user	4m0.923s
-sys	0m0.000s
+real	4m1.897s
+user	4m1.029s
+sys	0m0.013s
 
 Testing maze under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running maze:20:7:10000
-Elapsed time: 95.366 seconds (95.366) for maze:20:7:10000
-+!CSVLINE!+chibi-unknown,maze:20:7:10000,95.366
+Elapsed time: 442.658 seconds (442.658) for maze:20:7:10000
++!CSVLINE!+chibi-unknown,maze:20:7:10000,442.658
 
-real	1m35.549s
-user	1m35.520s
-sys	0m0.000s
+real	7m22.858s
+user	1m34.370s
+sys	0m0.955s
 
 Testing mazefun under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 128.652 seconds (128.653) for mazefun:11:11:10000
-+!CSVLINE!+chibi-unknown,mazefun:11:11:10000,128.652
+Elapsed time: 126.559 seconds (126.559) for mazefun:11:11:10000
++!CSVLINE!+chibi-unknown,mazefun:11:11:10000,126.559
 
-real	2m8.831s
-user	2m8.790s
-sys	0m0.000s
+real	2m6.750s
+user	2m6.453s
+sys	0m0.010s
 
 Testing nqueens under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running nqueens:13:10
-Elapsed time: 196.477 seconds (196.477) for nqueens:13:10
-+!CSVLINE!+chibi-unknown,nqueens:13:10,196.477
+Elapsed time: 189.24 seconds (189.24) for nqueens:13:10
++!CSVLINE!+chibi-unknown,nqueens:13:10,189.24
 
-real	3m16.651s
-user	3m16.587s
-sys	0m0.000s
+real	3m9.419s
+user	3m8.680s
+sys	0m0.010s
 
 Testing paraffins under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running paraffins:23:10
-./bench: line 337: 20029 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 23155 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.433s
-user	4m59.893s
-sys	0m0.037s
+real	5m1.798s
+user	4m59.744s
+sys	0m0.090s
 +!CSVLINE!+chibi,paraffins,ULIMITKILLED
 
 Testing parsing under Chibi
@@ -535,11 +535,11 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running parsing:2500
-./bench: line 337: 20340 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 23451 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.083s
-user	4m59.933s
-sys	0m0.000s
+real	7m5.420s
+user	4m59.568s
+sys	0m0.373s
 +!CSVLINE!+chibi,parsing,ULIMITKILLED
 
 Testing peval under Chibi
@@ -547,83 +547,83 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running peval:2000
-Elapsed time: 226.913 seconds (226.914) for peval:2000
-+!CSVLINE!+chibi-unknown,peval:2000,226.913
+Elapsed time: 206.698 seconds (206.698) for peval:2000
++!CSVLINE!+chibi-unknown,peval:2000,206.698
 
-real	3m47.124s
-user	3m47.037s
-sys	0m0.000s
+real	3m26.943s
+user	3m24.359s
+sys	0m0.050s
 
 Testing primes under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running primes:1000:10000
-Elapsed time: 21.522 seconds (21.522) for primes:1000:10000
-+!CSVLINE!+chibi-unknown,primes:1000:10000,21.522
+Elapsed time: 24.206 seconds (24.206) for primes:1000:10000
++!CSVLINE!+chibi-unknown,primes:1000:10000,24.206
 
-real	0m21.724s
-user	0m21.700s
-sys	0m0.010s
+real	0m24.421s
+user	0m23.967s
+sys	0m0.004s
 
 Testing quicksort under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running quicksort:10000:2500
-Elapsed time: 256.919 seconds (256.919) for quicksort:10000:2500
-+!CSVLINE!+chibi-unknown,quicksort:10000:2500,256.919
+Elapsed time: 260.133 seconds (260.133) for quicksort:10000:2500
++!CSVLINE!+chibi-unknown,quicksort:10000:2500,260.133
 
-real	4m17.135s
-user	4m17.060s
-sys	0m0.007s
+real	4m20.373s
+user	4m19.187s
+sys	0m0.030s
 
 Testing scheme under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running scheme:100000
-Elapsed time: 128.902 seconds (128.902) for scheme:100000
-+!CSVLINE!+chibi-unknown,scheme:100000,128.902
+Elapsed time: 137.654 seconds (137.655) for scheme:100000
++!CSVLINE!+chibi-unknown,scheme:100000,137.654
 
-real	2m9.103s
-user	2m9.070s
-sys	0m0.000s
+real	2m17.858s
+user	2m17.513s
+sys	0m0.010s
 
 Testing slatex under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running slatex:500
-Elapsed time: 200.137 seconds (200.138) for slatex:500
-+!CSVLINE!+chibi-unknown,slatex:500,200.137
+Elapsed time: 159.005 seconds (159.005) for slatex:500
++!CSVLINE!+chibi-unknown,slatex:500,159.005
 
-real	3m20.343s
-user	2m35.510s
-sys	0m3.543s
+real	2m39.237s
+user	2m32.245s
+sys	0m3.240s
 
 Testing nboyer under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running nboyer:5:1
-Elapsed time: 40.341 seconds (40.34) for nboyer:5:1
-+!CSVLINE!+chibi-unknown,nboyer:5:1,40.341
+Elapsed time: 41.899 seconds (41.899) for nboyer:5:1
++!CSVLINE!+chibi-unknown,nboyer:5:1,41.899
 
-real	0m41.004s
-user	0m40.907s
-sys	0m0.073s
+real	0m42.538s
+user	0m42.467s
+sys	0m0.053s
 
 Testing sboyer under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running sboyer:5:1
-Elapsed time: 39.305 seconds (39.305) for sboyer:5:1
-+!CSVLINE!+chibi-unknown,sboyer:5:1,39.305
+Elapsed time: 41.274 seconds (41.274) for sboyer:5:1
++!CSVLINE!+chibi-unknown,sboyer:5:1,41.274
 
-real	0m39.602s
-user	0m39.560s
+real	0m41.585s
+user	0m41.508s
 sys	0m0.020s
 
 Testing gcbench under Chibi
@@ -633,11 +633,11 @@ Running...
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
 Running gcbench:20:1
-./bench: line 337: 21403 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 338: 24695 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m11.618s
-user	4m59.910s
-sys	0m0.070s
+real	5m1.397s
+user	4m59.671s
+sys	0m0.080s
 +!CSVLINE!+chibi,gcbench,ULIMITKILLED
 
 Testing mperm under Chibi
@@ -645,33 +645,33 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 155.28 seconds (155.28) for mperm:20:10:2:1
-+!CSVLINE!+chibi-unknown,mperm:20:10:2:1,155.28
+Elapsed time: 155.397 seconds (155.396) for mperm:20:10:2:1
++!CSVLINE!+chibi-unknown,mperm:20:10:2:1,155.397
 
-real	2m45.984s
-user	2m45.437s
-sys	0m0.140s
+real	2m46.706s
+user	2m44.640s
+sys	0m0.473s
 
 Testing equal under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 35.145 seconds (35.145) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+chibi-unknown,equal:100:100:8:1000:2000:5000,35.145
+Elapsed time: 38.91 seconds (38.91) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+chibi-unknown,equal:100:100:8:1000:2000:5000,38.91
 
-real	0m35.386s
-user	0m35.353s
-sys	0m0.020s
+real	0m39.191s
+user	0m38.929s
+sys	0m0.027s
 
 Testing bv2string under Chibi
 Including postlude /home/nex/src/r7rs-benchmarks/src/Chibi-postlude.scm
 Compiling...
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 12.726 seconds (12.727) for bv2string:1000:1000:100
-+!CSVLINE!+chibi-unknown,bv2string:1000:1000:100,12.726
+Elapsed time: 13.21 seconds (13.21) for bv2string:1000:1000:100
++!CSVLINE!+chibi-unknown,bv2string:1000:1000:100,13.21
 
-real	0m12.918s
-user	0m12.907s
-sys	0m0.000s
+real	0m13.384s
+user	0m13.324s
+sys	0m0.003s
