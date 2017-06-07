@@ -1,8 +1,8 @@
 ;;; BROWSE -- Benchmark to create and browse through
 ;;; an AI-like data base of units.
-
+;;;; pre-import
 (import (scheme base) (scheme read) (scheme write) (scheme time))
-
+;;;; post-import
 (define (lookup key table)
   (let loop ((x table))
     (if (null? x)
@@ -189,10 +189,114 @@
           ((null? p))
         (my-match (car pats) (car p) '())))))
 
+
+
+
+
 (define (main)
-  (let* ((count (read))
-         (input1 (read))
-         (output (read))
+  (let* ((count 2000) ;; (read)
+         (input1 '((*a ?b *b ?b a *a a *b *a)
+ (*a *b *b *a (*a) (*b))
+ (? ? * (b a) * ? ?))) ;; (read)
+         (output '(837 177
+       1090
+       617
+       661
+       749
+       628
+       56
+       826
+       408
+       1035
+       474
+       320
+       452
+       672
+       991
+       155
+       122
+       793
+       221
+       716
+       727
+       848
+       309
+       144
+       936
+       100
+       881
+       287
+       430
+       23
+       771
+       232
+       804
+       958
+       650
+       1068
+       1057
+       463
+       276
+       1046
+       1002
+       199
+       34
+       738
+       210
+       540
+       397
+       342
+       364
+       782
+       683
+       89
+       375
+       166
+       595
+       892
+       705
+       507
+       639
+       331
+       188
+       243
+       441
+       1013
+       1079
+       67
+       298
+       386
+       573
+       859
+       133
+       760
+       12
+       529
+       815
+       111
+       496
+       45
+       265
+       925
+       903
+       254
+       78
+       551
+       606
+       485
+       518
+       419
+       870
+       562
+       1
+       353
+       980
+       694
+       914
+       969
+       947
+       584
+       1024));; (read)
          (s2 (number->string count))
          (s1 "")
          (name "browse"))
