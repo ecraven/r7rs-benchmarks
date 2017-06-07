@@ -10,6 +10,10 @@
 (define exact inexact->exact)
 (define inexact exact->inexact)
 (define (exact-integer? x) (and (exact? x) (integer? x)))
+;; thanks to gambiteer https://github.com/ecraven/r7rs-benchmarks/issues/20
+(define (exact-integer-sqrt y)
+  (let ((s-r (##exact-int.sqrt y)))
+    (values (car s-r) (cdr s-r))))
 
 (define-macro (when condition  . body)
   `(if ,condition

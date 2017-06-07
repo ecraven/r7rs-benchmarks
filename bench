@@ -71,7 +71,7 @@ KVW_BENCHMARKS="ack array1 string sum1 cat tail wc"
 
 IO_BENCHMARKS="read1"
 
-OTHER_BENCHMARKS="compiler conform dynamic earley graphs lattice matrix maze mazefun nqueens paraffins parsing peval primes quicksort scheme slatex"
+OTHER_BENCHMARKS="compiler conform dynamic earley graphs lattice matrix maze mazefun nqueens paraffins parsing peval primes quicksort scheme slatex chudnovsky"
 
 GC_BENCHMARKS="nboyer sboyer gcbench mperm"
 
@@ -230,6 +230,7 @@ evaluate ()
         make_src_code $1
         echo Compiling...
         ulimit -t ${CPU_LIMIT}
+        echo $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
         $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
         if [ $? -ne 0 ]
         then
