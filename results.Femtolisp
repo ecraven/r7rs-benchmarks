@@ -1,10 +1,11 @@
 
 ****************************
-Benchmarking Femtolisp on Tue 6 Jun 22:16:24 CEST 2017 under Linux nexion 4.11.3-1-ARCH #1 SMP PREEMPT Sun May 28 10:40:17 CEST 2017 x86_64 GNU/Linux
+Benchmarking Femtolisp on Thu 8 Jun 17:51:51 CEST 2017 under Linux nexion 4.11.3-1-ARCH #1 SMP PREEMPT Sun May 28 10:40:17 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/browse.scm /tmp/larcenous/Femtolisp/browse.scm
 Running...
 Running browse:2000
 type error: get: expected table, got |837|
@@ -48,62 +49,67 @@ in file /tmp/larcenous/Femtolisp/browse.scm
 #3 (browse ((*a ?b *b ?b a *a a *b *a)
 	 (*a *b *b *a (*a) (*b)) (? ? * (b a) * ? ?)))
 
-real	0m0.052s
-user	0m0.025s
+real	0m0.016s
+user	0m0.015s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,browse,CRASHED
 
 Testing deriv under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/deriv.scm /tmp/larcenous/Femtolisp/deriv.scm
 Running...
 Running deriv:10000000
-Elapsed time: 18.7474699020385742 seconds (18.7474699020385742) for deriv:10000000
-+!CSVLINE!+femtolisp-unknown,deriv:10000000,18.7474699020385742
+Elapsed time: 10.1854100227355957 seconds (10.1854100227355957) for deriv:10000000
++!CSVLINE!+femtolisp-unknown,deriv:10000000,10.1854100227355957
 
-real	0m18.763s
-user	0m18.715s
+real	0m10.195s
+user	0m10.191s
 sys	0m0.003s
 
 Testing destruc under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/destruc.scm /tmp/larcenous/Femtolisp/destruc.scm
 Running...
 Running destruc:600:50:4000
-Elapsed time: 45.4747829437255859 seconds (45.4747838973999023) for destruc:600:50:4000
-+!CSVLINE!+femtolisp-unknown,destruc:600:50:4000,45.4747829437255859
+Elapsed time: 25.4880819320678711 seconds (25.4880828857421875) for destruc:600:50:4000
++!CSVLINE!+femtolisp-unknown,destruc:600:50:4000,25.4880819320678711
 
-real	0m45.490s
-user	0m45.428s
-sys	0m0.017s
+real	0m25.498s
+user	0m25.498s
+sys	0m0.000s
 
 Testing diviter under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/diviter.scm /tmp/larcenous/Femtolisp/diviter.scm
 Running...
 Running diviter:1000:1000000
-Elapsed time: 32.2078700065612793 seconds (32.2078700065612793) for diviter:1000:1000000
-+!CSVLINE!+femtolisp-unknown,diviter:1000:1000000,32.2078700065612793
+Elapsed time: 21.2629380226135254 seconds (21.2629380226135254) for diviter:1000:1000000
++!CSVLINE!+femtolisp-unknown,diviter:1000:1000000,21.2629380226135254
 
-real	0m32.229s
-user	0m32.158s
-sys	0m0.033s
+real	0m21.273s
+user	0m21.272s
+sys	0m0.000s
 
 Testing divrec under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/divrec.scm /tmp/larcenous/Femtolisp/divrec.scm
 Running...
 Running divrec:1000:1000000
-Elapsed time: 31.6565170288085938 seconds (31.6565179824829102) for divrec:1000:1000000
-+!CSVLINE!+femtolisp-unknown,divrec:1000:1000000,31.6565170288085938
+Elapsed time: 18.9634799957275391 seconds (18.9634809494018555) for divrec:1000:1000000
++!CSVLINE!+femtolisp-unknown,divrec:1000:1000000,18.9634799957275391
 
-real	0m31.671s
-user	0m31.657s
+real	0m18.973s
+user	0m18.973s
 sys	0m0.000s
 
 Testing puzzle under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/puzzle.scm /tmp/larcenous/Femtolisp/puzzle.scm
 Running...
 Running puzzle:1000
 eval: variable call-with-current-continuation has no value
@@ -111,150 +117,162 @@ in file /tmp/larcenous/Femtolisp/puzzle.scm
 #0 (trial/lambda 0)
 #1 (start/lambda 73 77)
 
-real	0m0.021s
-user	0m0.021s
+real	0m0.015s
+user	0m0.015s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,puzzle,CRASHED
 
 Testing triangl under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/triangl.scm /tmp/larcenous/Femtolisp/triangl.scm
 Running...
 Running triangl:22:1:50
-Elapsed time: 47.2254369258880615 seconds (47.2254369258880615) for triangl:22:1:50
-+!CSVLINE!+femtolisp-unknown,triangl:22:1:50,47.2254369258880615
+Elapsed time: 28.8181190490722656 seconds (28.8181190490722656) for triangl:22:1:50
++!CSVLINE!+femtolisp-unknown,triangl:22:1:50,28.8181190490722656
 
-real	0m47.252s
-user	0m47.103s
-sys	0m0.053s
+real	0m28.828s
+user	0m28.827s
+sys	0m0.000s
 
 Testing tak under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/tak.scm /tmp/larcenous/Femtolisp/tak.scm
 Running...
 Running tak:40:20:11:1
-Elapsed time: 33.5962200164794922 seconds (33.596221923828125) for tak:40:20:11:1
-+!CSVLINE!+femtolisp-unknown,tak:40:20:11:1,33.5962200164794922
+Elapsed time: 20.1920230388641357 seconds (20.1920239925384521) for tak:40:20:11:1
++!CSVLINE!+femtolisp-unknown,tak:40:20:11:1,20.1920230388641357
 
-real	0m33.611s
-user	0m33.542s
-sys	0m0.037s
+real	0m20.201s
+user	0m20.201s
+sys	0m0.000s
 
 Testing takl under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/takl.scm /tmp/larcenous/Femtolisp/takl.scm
 Running...
 Running takl:40:20:12:1
-Elapsed time: 102.3991219997406006 seconds (102.399122953414917) for takl:40:20:12:1
-+!CSVLINE!+femtolisp-unknown,takl:40:20:12:1,102.3991219997406006
+Elapsed time: 68.2659270763397217 seconds (68.2659270763397217) for takl:40:20:12:1
++!CSVLINE!+femtolisp-unknown,takl:40:20:12:1,68.2659270763397217
 
-real	1m42.419s
-user	1m42.356s
-sys	0m0.027s
+real	1m8.275s
+user	1m8.268s
+sys	0m0.007s
 
 Testing ntakl under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ntakl.scm /tmp/larcenous/Femtolisp/ntakl.scm
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 68.1973519325256348 seconds (68.1973528861999512) for ntakl:40:20:12:1
-+!CSVLINE!+femtolisp-unknown,ntakl:40:20:12:1,68.1973519325256348
+Elapsed time: 49.6593849658966064 seconds (49.6593849658966064) for ntakl:40:20:12:1
++!CSVLINE!+femtolisp-unknown,ntakl:40:20:12:1,49.6593849658966064
 
-real	1m8.213s
-user	1m8.207s
-sys	0m0.000s
+real	0m49.669s
+user	0m49.665s
+sys	0m0.003s
 
 Testing cpstak under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/cpstak.scm /tmp/larcenous/Femtolisp/cpstak.scm
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 54.892258882522583 seconds (54.892258882522583) for cpstak:40:20:11:1
-+!CSVLINE!+femtolisp-unknown,cpstak:40:20:11:1,54.892258882522583
+Elapsed time: 38.9513390064239502 seconds (38.9513390064239502) for cpstak:40:20:11:1
++!CSVLINE!+femtolisp-unknown,cpstak:40:20:11:1,38.9513390064239502
 
-real	0m54.906s
-user	0m54.903s
+real	0m38.961s
+user	0m38.960s
 sys	0m0.000s
 
 Testing ctak under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ctak.scm /tmp/larcenous/Femtolisp/ctak.scm
 Running...
 Running ctak:32:16:8:1
 eval: variable call-with-current-continuation has no value
 in file /tmp/larcenous/Femtolisp/ctak.scm
 #0 (ctak 32 16 8)
 
-real	0m0.014s
-user	0m0.014s
-sys	0m0.000s
+real	0m0.010s
+user	0m0.007s
+sys	0m0.003s
 +!CSVLINE!+femtolisp,ctak,CRASHED
 
 Testing fib under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fib.scm /tmp/larcenous/Femtolisp/fib.scm
 Running...
 Running fib:40:5
-Elapsed time: 60.2918109893798828 seconds (60.2918131351470947) for fib:40:5
-+!CSVLINE!+femtolisp-unknown,fib:40:5,60.2918109893798828
+Elapsed time: 44.9503052234649658 seconds (44.9503061771392822) for fib:40:5
++!CSVLINE!+femtolisp-unknown,fib:40:5,44.9503052234649658
 
-real	1m0.307s
-user	1m0.302s
-sys	0m0.000s
+real	0m44.960s
+user	0m44.956s
+sys	0m0.003s
 
 Testing fibc under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fibc.scm /tmp/larcenous/Femtolisp/fibc.scm
 Running...
 Running fibc:30:10
 eval: variable call-with-current-continuation has no value
 in file /tmp/larcenous/Femtolisp/fibc.scm
 #0 (fibc 30 #fn("6000r1|;" []))
 
-real	0m0.015s
-user	0m0.012s
-sys	0m0.003s
+real	0m0.009s
+user	0m0.009s
+sys	0m0.000s
 +!CSVLINE!+femtolisp,fibc,CRASHED
 
 Testing fibfp under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fibfp.scm /tmp/larcenous/Femtolisp/fibfp.scm
 Running...
 Running fibfp:35:10
-Elapsed time: 30.8464598655700684 seconds (30.8464598655700684) for fibfp:35:10
-+!CSVLINE!+femtolisp-unknown,fibfp:35:10,30.8464598655700684
+Elapsed time: 19.8736951351165771 seconds (19.8736960887908936) for fibfp:35:10
++!CSVLINE!+femtolisp-unknown,fibfp:35:10,19.8736951351165771
 
-real	0m30.862s
-user	0m30.860s
-sys	0m0.000s
+real	0m19.902s
+user	0m19.898s
+sys	0m0.003s
 
 Testing sum under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sum.scm /tmp/larcenous/Femtolisp/sum.scm
 Running...
 Running sum:10000:200000
-Elapsed time: 69.1631898880004883 seconds (69.1631898880004883) for sum:10000:200000
-+!CSVLINE!+femtolisp-unknown,sum:10000:200000,69.1631898880004883
+Elapsed time: 51.3712420463562012 seconds (51.3712430000305176) for sum:10000:200000
++!CSVLINE!+femtolisp-unknown,sum:10000:200000,51.3712420463562012
 
-real	1m9.178s
-user	1m9.173s
+real	0m51.387s
+user	0m51.386s
 sys	0m0.000s
 
 Testing sumfp under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sumfp.scm /tmp/larcenous/Femtolisp/sumfp.scm
 Running...
 Running sumfp:1000000:500
-Elapsed time: 54.9750559329986572 seconds (54.9750559329986572) for sumfp:1000000:500
-+!CSVLINE!+femtolisp-unknown,sumfp:1000000:500,54.9750559329986572
+Elapsed time: 33.8314051628112793 seconds (33.8314070701599121) for sumfp:1000000:500
++!CSVLINE!+femtolisp-unknown,sumfp:1000000:500,33.8314051628112793
 
-real	0m54.990s
-user	0m54.976s
-sys	0m0.003s
+real	0m33.859s
+user	0m33.859s
+sys	0m0.000s
 
 Testing fft under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fft.scm /tmp/larcenous/Femtolisp/fft.scm
 Running...
 Running fft:65536:100
 eval: variable exact-integer? has no value
@@ -263,16 +281,17 @@ in file /tmp/larcenous/Femtolisp/fft.scm
 #1 (four1/lambda/lambda/lambda
  0 0)
 #2 (four1/lambda 65536 6.2831853071795898)
-#3 (run [./bench: line 673: 29944 Segmentation fault      (core dumped) "${FEMTOLISP}" "$1" < "$2"
+#3 (run [./bench: line 674:  4775 Segmentation fault      (core dumped) "${FEMTOLISP}" "$1" < "$2"
 
-real	0m0.029s
-user	0m0.015s
-sys	0m0.006s
+real	0m0.057s
+user	0m0.011s
+sys	0m0.004s
 +!CSVLINE!+femtolisp,fft,CRASHED
 
 Testing mbrot under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mbrot.scm /tmp/larcenous/Femtolisp/mbrot.scm
 Running...
 arg-error: apply: too few arguments
 in file /tmp/larcenous/Femtolisp/mbrot.scm
@@ -520,14 +539,15 @@ in file /tmp/larcenous/Femtolisp/mbrot.scm
 					    (loop2 (- x 1)))
 				     (loop1 (- y 1))))))))
 
-real	0m0.022s
-user	0m0.018s
-sys	0m0.004s
+real	0m0.016s
+user	0m0.016s
+sys	0m0.000s
 +!CSVLINE!+femtolisp,mbrot,CRASHED
 
 Testing mbrotZ under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mbrotZ.scm /tmp/larcenous/Femtolisp/mbrotZ.scm
 Running...
 arg-error: apply: too few arguments
 in file /tmp/larcenous/Femtolisp/mbrotZ.scm
@@ -795,14 +815,15 @@ in file /tmp/larcenous/Femtolisp/mbrotZ.scm
 					    (loop2 (- x 1)))
 				     (loop1 (- y 1))))))))
 
-real	0m0.027s
-user	0m0.025s
+real	0m0.015s
+user	0m0.015s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,mbrotZ,CRASHED
 
 Testing nucleic under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/nucleic.scm /tmp/larcenous/Femtolisp/nucleic.scm
 Running...
 Running nucleic:50
 eval: variable atan has no value
@@ -2960,38 +2981,41 @@ in file /tmp/larcenous/Femtolisp/nucleic.scm
    [2.278 -0.108 -0.028] [3.4420999999999999 5.5743999999999998 -1.5482]]])
 #7 (run ())
 
-real	0m0.132s
-user	0m0.122s
+real	0m0.078s
+user	0m0.068s
 sys	0m0.010s
 +!CSVLINE!+femtolisp,nucleic,CRASHED
 
 Testing pi under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/pi.scm /tmp/larcenous/Femtolisp/pi.scm
 Running...
 parse-error: read: overflow in numeric constant 314159265358979323846264338327950288419716939937507
 in file /tmp/larcenous/Femtolisp/pi.scm
 
-real	0m0.017s
-user	0m0.017s
+real	0m0.012s
+user	0m0.012s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,pi,CRASHED
 
 Testing pnpoly under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/pnpoly.scm /tmp/larcenous/Femtolisp/pnpoly.scm
 Running...
 Running pnpoly:1000000
-Elapsed time: 122.5717217922210693 seconds (122.5717241764068604) for pnpoly:1000000
-+!CSVLINE!+femtolisp-unknown,pnpoly:1000000,122.5717217922210693
+Elapsed time: 88.6374509334564209 seconds (88.6374509334564209) for pnpoly:1000000
++!CSVLINE!+femtolisp-unknown,pnpoly:1000000,88.6374509334564209
 
-real	2m2.587s
-user	2m1.901s
+real	1m28.649s
+user	1m28.648s
 sys	0m0.000s
 
 Testing ray under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ray.scm /tmp/larcenous/Femtolisp/ray.scm
 Running...
 Running ray:50
 eval: variable sqrt has no value
@@ -3007,86 +3031,93 @@ in file /tmp/larcenous/Femtolisp/ray.scm
  #<io stream>)
 #6 (run 1 "outputs/ray.output")
 
-real	0m0.020s
-user	0m0.020s
+real	0m0.012s
+user	0m0.012s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,ray,CRASHED
 
 Testing simplex under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/simplex.scm /tmp/larcenous/Femtolisp/simplex.scm
 Running...
 Running simplex:1000000
-Elapsed time: 85.5239131450653076 seconds (85.523914098739624) for simplex:1000000
-+!CSVLINE!+femtolisp-unknown,simplex:1000000,85.5239131450653076
+Elapsed time: 72.1290819644927979 seconds (72.1290819644927979) for simplex:1000000
++!CSVLINE!+femtolisp-unknown,simplex:1000000,72.1290819644927979
 
-real	1m25.547s
-user	1m25.544s
-sys	0m0.000s
+real	1m12.143s
+user	1m12.139s
+sys	0m0.003s
 
 Testing ack under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ack.scm /tmp/larcenous/Femtolisp/ack.scm
 Running...
 Running ack:3:12:2
-Elapsed time: 45.7351768016815186 seconds (45.7351779937744141) for ack:3:12:2
-+!CSVLINE!+femtolisp-unknown,ack:3:12:2,45.7351768016815186
+Elapsed time: 39.7026331424713135 seconds (39.7026340961456299) for ack:3:12:2
++!CSVLINE!+femtolisp-unknown,ack:3:12:2,39.7026331424713135
 
-real	0m45.749s
-user	0m45.748s
+real	0m39.714s
+user	0m39.713s
 sys	0m0.000s
 
 Testing array1 under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/array1.scm /tmp/larcenous/Femtolisp/array1.scm
 Running...
 Running array1:1000000:500
-Elapsed time: 56.7686910629272461 seconds (56.7686920166015625) for array1:1000000:500
-+!CSVLINE!+femtolisp-unknown,array1:1000000:500,56.7686910629272461
+Elapsed time: 53.8066871166229248 seconds (53.8066871166229248) for array1:1000000:500
++!CSVLINE!+femtolisp-unknown,array1:1000000:500,53.8066871166229248
 
-real	0m56.785s
-user	0m56.781s
-sys	0m0.003s
+real	0m53.817s
+user	0m53.809s
+sys	0m0.007s
 
 Testing string under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/string.scm /tmp/larcenous/Femtolisp/string.scm
 Running...
 Running string:500000:25
-Elapsed time: 0.9722521305084229 seconds (0.9722521305084229) for string:500000:25
-+!CSVLINE!+femtolisp-unknown,string:500000:25,0.9722521305084229
+Elapsed time: 0.917482852935791 seconds (0.9174838066101074) for string:500000:25
++!CSVLINE!+femtolisp-unknown,string:500000:25,0.917482852935791
 
-real	0m0.997s
-user	0m0.884s
-sys	0m0.113s
+real	0m0.936s
+user	0m0.856s
+sys	0m0.080s
 
 Testing sum1 under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sum1.scm /tmp/larcenous/Femtolisp/sum1.scm
 Running...
 Running sum1:25
-Elapsed time: 0.9116280078887939 seconds (0.9116280078887939) for sum1:25
-+!CSVLINE!+femtolisp-unknown,sum1:25,0.9116280078887939
+Elapsed time: 0.8499071598052979 seconds (0.8499081134796143) for sum1:25
++!CSVLINE!+femtolisp-unknown,sum1:25,0.8499071598052979
 
-real	0m0.926s
-user	0m0.922s
-sys	0m0.003s
+real	0m0.879s
+user	0m0.879s
+sys	0m0.000s
 
 Testing cat under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/cat.scm /tmp/larcenous/Femtolisp/cat.scm
 Running...
 Running cat:50
-Elapsed time: 27.2837331295013428 seconds (27.2837331295013428) for cat:50
-+!CSVLINE!+femtolisp-unknown,cat:50,27.2837331295013428
+Elapsed time: 25.1040489673614502 seconds (25.1040489673614502) for cat:50
++!CSVLINE!+femtolisp-unknown,cat:50,25.1040489673614502
 
-real	0m27.298s
-user	0m27.161s
-sys	0m0.137s
+real	0m25.113s
+user	0m25.043s
+sys	0m0.070s
 
 Testing tail under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/tail.scm /tmp/larcenous/Femtolisp/tail.scm
 Running...
 Running tail:25
 eval: variable write-string has no value
@@ -3134,37 +3165,40 @@ in file /tmp/larcenous/Femtolisp/tail.scm
  #<io stream>)
 
 real	0m0.011s
-user	0m0.011s
-sys	0m0.000s
+user	0m0.008s
+sys	0m0.003s
 +!CSVLINE!+femtolisp,tail,CRASHED
 
 Testing wc under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/wc.scm /tmp/larcenous/Femtolisp/wc.scm
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 35.4881820678710938 seconds (35.4881830215454102) for wc:inputs/bib:50
-+!CSVLINE!+femtolisp-unknown,wc:inputs/bib:50,35.4881820678710938
+Elapsed time: 34.012545108795166 seconds (34.0125460624694824) for wc:inputs/bib:50
++!CSVLINE!+femtolisp-unknown,wc:inputs/bib:50,34.012545108795166
 
-real	0m35.498s
-user	0m35.451s
-sys	0m0.047s
+real	0m34.022s
+user	0m34.015s
+sys	0m0.007s
 
 Testing read1 under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/read1.scm /tmp/larcenous/Femtolisp/read1.scm
 Running...
 Running read1:2500
-Elapsed time: 1.2508430480957031 seconds (1.2508430480957031) for read1:2500
-+!CSVLINE!+femtolisp-unknown,read1:2500,1.2508430480957031
+Elapsed time: 1.203056812286377 seconds (1.203056812286377) for read1:2500
++!CSVLINE!+femtolisp-unknown,read1:2500,1.203056812286377
 
-real	0m1.261s
-user	0m1.237s
-sys	0m0.023s
+real	0m1.216s
+user	0m1.212s
+sys	0m0.004s
 
 Testing compiler under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/compiler.scm /tmp/larcenous/Femtolisp/compiler.scm
 Running...
 eval: variable string-set! has no value
 in file /tmp/larcenous/Femtolisp/compiler.scm
@@ -3172,51 +3206,55 @@ in file /tmp/larcenous/Femtolisp/compiler.scm
  "QUOTE" "     " 4)
 #1 (lambda)
 
-real	0m0.016s
-user	0m0.016s
+real	0m0.015s
+user	0m0.015s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,compiler,CRASHED
 
 Testing conform under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/conform.scm /tmp/larcenous/Femtolisp/conform.scm
 Running...
 Running conform:500
-Elapsed time: 39.6916630268096924 seconds (39.6916639804840088) for conform:500
-+!CSVLINE!+femtolisp-unknown,conform:500,39.6916630268096924
+Elapsed time: 38.0407500267028809 seconds (38.0407500267028809) for conform:500
++!CSVLINE!+femtolisp-unknown,conform:500,38.0407500267028809
 
-real	0m39.707s
-user	0m39.707s
+real	0m38.056s
+user	0m38.055s
 sys	0m0.000s
 
 Testing dynamic under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/dynamic.scm /tmp/larcenous/Femtolisp/dynamic.scm
 Running...
 arg-error: symbol: too few arguments
 in file /tmp/larcenous/Femtolisp/dynamic.scm
 #0 (lambda)
 
-real	0m0.029s
-user	0m0.026s
+real	0m0.030s
+user	0m0.027s
 sys	0m0.003s
 +!CSVLINE!+femtolisp,dynamic,CRASHED
 
 Testing earley under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/earley.scm /tmp/larcenous/Femtolisp/earley.scm
 Running...
 Running earley:1
-Elapsed time: 30.6212570667266846 seconds (30.621258020401001) for earley:1
-+!CSVLINE!+femtolisp-unknown,earley:1,30.6212570667266846
+Elapsed time: 28.1991279125213623 seconds (28.1991288661956787) for earley:1
++!CSVLINE!+femtolisp-unknown,earley:1,28.1991279125213623
 
-real	0m30.661s
-user	0m30.508s
-sys	0m0.153s
+real	0m28.235s
+user	0m28.125s
+sys	0m0.110s
 
 Testing graphs under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/graphs.scm /tmp/larcenous/Femtolisp/graphs.scm
 Running...
 Running graphs:7:3
 aref: index 0 out of bounds for []
@@ -9372,26 +9410,28 @@ in file /tmp/larcenous/Femtolisp/graphs.scm
  0 0 ())
 #21 (main/lambda/lambda/lambda/lambda/lambda/lambda/lambda)
 
-real	0m1.632s
-user	0m1.582s
-sys	0m0.050s
+real	0m1.539s
+user	0m1.512s
+sys	0m0.027s
 +!CSVLINE!+femtolisp,graphs,CRASHED
 
 Testing lattice under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/lattice.scm /tmp/larcenous/Femtolisp/lattice.scm
 Running...
 Running lattice:44:10
-Elapsed time: 113.4101929664611816 seconds (113.4101941585540771) for lattice:44:10
-+!CSVLINE!+femtolisp-unknown,lattice:44:10,113.4101929664611816
+Elapsed time: 108.4953680038452148 seconds (108.4953680038452148) for lattice:44:10
++!CSVLINE!+femtolisp-unknown,lattice:44:10,108.4953680038452148
 
-real	1m53.422s
-user	1m53.420s
+real	1m48.507s
+user	1m48.505s
 sys	0m0.000s
 
 Testing matrix under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/matrix.scm /tmp/larcenous/Femtolisp/matrix.scm
 Running...
 Running matrix:5:5:2500
 eval: variable expt has no value
@@ -9403,14 +9443,15 @@ in file /tmp/larcenous/Femtolisp/matrix.scm
   (-1 -1))
 #2 (lambda 5 5)
 
-real	0m0.016s
-user	0m0.013s
-sys	0m0.003s
+real	0m0.018s
+user	0m0.018s
+sys	0m0.000s
 +!CSVLINE!+femtolisp,matrix,CRASHED
 
 Testing maze under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/maze.scm /tmp/larcenous/Femtolisp/maze.scm
 Running...
 Running maze:20:7:10000
 eval: variable exact-integer? has no value
@@ -9432,50 +9473,54 @@ in file /tmp/larcenous/Femtolisp/maze.scm
 #6 (pmaze 20 7)
 #7 (run 20 7)
 
-real	0m0.019s
-user	0m0.019s
+real	0m0.021s
+user	0m0.021s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,maze,CRASHED
 
 Testing mazefun under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mazefun.scm /tmp/larcenous/Femtolisp/mazefun.scm
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 26.539003849029541 seconds (26.539003849029541) for mazefun:11:11:10000
-+!CSVLINE!+femtolisp-unknown,mazefun:11:11:10000,26.539003849029541
+Elapsed time: 25.1839089393615723 seconds (25.1839089393615723) for mazefun:11:11:10000
++!CSVLINE!+femtolisp-unknown,mazefun:11:11:10000,25.1839089393615723
 
-real	0m26.556s
-user	0m26.555s
+real	0m25.195s
+user	0m25.195s
 sys	0m0.000s
 
 Testing nqueens under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/nqueens.scm /tmp/larcenous/Femtolisp/nqueens.scm
 Running...
 Running nqueens:13:10
-Elapsed time: 59.6609108448028564 seconds (59.6609108448028564) for nqueens:13:10
-+!CSVLINE!+femtolisp-unknown,nqueens:13:10,59.6609108448028564
+Elapsed time: 56.3256540298461914 seconds (56.3256540298461914) for nqueens:13:10
++!CSVLINE!+femtolisp-unknown,nqueens:13:10,56.3256540298461914
 
-real	0m59.671s
-user	0m59.666s
-sys	0m0.003s
+real	0m56.336s
+user	0m56.335s
+sys	0m0.000s
 
 Testing paraffins under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/paraffins.scm /tmp/larcenous/Femtolisp/paraffins.scm
 Running...
 Running paraffins:23:10
-Elapsed time: 4.6712830066680908 seconds (4.6712841987609863) for paraffins:23:10
-+!CSVLINE!+femtolisp-unknown,paraffins:23:10,4.6712830066680908
+Elapsed time: 4.2724947929382324 seconds (4.2724947929382324) for paraffins:23:10
++!CSVLINE!+femtolisp-unknown,paraffins:23:10,4.2724947929382324
 
-real	0m4.694s
-user	0m4.610s
-sys	0m0.083s
+real	0m4.300s
+user	0m4.233s
+sys	0m0.067s
 
 Testing parsing under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/parsing.scm /tmp/larcenous/Femtolisp/parsing.scm
 Running...
 Running parsing:2500
 eval: variable string-set! has no value
@@ -9708,38 +9753,41 @@ in file /tmp/larcenous/Femtolisp/parsing.scm
 #4 (parsing-benchmark/lambda/lambda/lambda/lambda/lambda
  0 #f)
 
-real	0m0.034s
-user	0m0.034s
-sys	0m0.000s
+real	0m0.026s
+user	0m0.022s
+sys	0m0.003s
 +!CSVLINE!+femtolisp,parsing,CRASHED
 
 Testing peval under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/peval.scm /tmp/larcenous/Femtolisp/peval.scm
 Running...
 Running peval:2000
-Elapsed time: 28.0774030685424805 seconds (28.0774040222167969) for peval:2000
-+!CSVLINE!+femtolisp-unknown,peval:2000,28.0774030685424805
+Elapsed time: 26.7657160758972168 seconds (26.7657160758972168) for peval:2000
++!CSVLINE!+femtolisp-unknown,peval:2000,26.7657160758972168
 
-real	0m28.102s
-user	0m28.101s
+real	0m26.782s
+user	0m26.782s
 sys	0m0.000s
 
 Testing primes under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/primes.scm /tmp/larcenous/Femtolisp/primes.scm
 Running...
 Running primes:1000:10000
-Elapsed time: 12.0347919464111328 seconds (12.0347929000854492) for primes:1000:10000
-+!CSVLINE!+femtolisp-unknown,primes:1000:10000,12.0347919464111328
+Elapsed time: 11.4776561260223389 seconds (11.4776561260223389) for primes:1000:10000
++!CSVLINE!+femtolisp-unknown,primes:1000:10000,11.4776561260223389
 
-real	0m12.045s
-user	0m12.041s
-sys	0m0.003s
+real	0m11.487s
+user	0m11.480s
+sys	0m0.007s
 
 Testing quicksort under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/quicksort.scm /tmp/larcenous/Femtolisp/quicksort.scm
 Running...
 Running quicksort:10000:2500
 eval: variable call-with-current-continuation has no value
@@ -10639,27 +10687,29 @@ in file /tmp/larcenous/Femtolisp/quicksort.scm
   998308 998404 998428 998570 998607 998651 998716 999331 999410 999438 999532
   999607 999680 999726 999732 999809 999892])
 
-real	1m32.425s
-user	1m32.418s
+real	1m28.130s
+user	1m28.126s
 sys	0m0.003s
 +!CSVLINE!+femtolisp,quicksort,CRASHED
 
 Testing scheme under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/scheme.scm /tmp/larcenous/Femtolisp/scheme.scm
 Running...
 eval: variable gcd has no value
 in file /tmp/larcenous/Femtolisp/scheme.scm
 #0 (lambda)
 
-real	0m0.021s
-user	0m0.021s
+real	0m0.020s
+user	0m0.020s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,scheme,CRASHED
 
 Testing slatex under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/slatex.scm /tmp/larcenous/Femtolisp/slatex.scm
 Running...
 Running slatex:500
 eval: variable char-alphabetic? has no value
@@ -10672,68 +10722,87 @@ in file /tmp/larcenous/Femtolisp/slatex.scm
  #<io stream>)
 #4 (lambda "inputs/slatex-data/test")
 
-real	0m0.034s
-user	0m0.034s
+real	0m0.036s
+user	0m0.036s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,slatex,CRASHED
+
+Testing chudnovsky under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/chudnovsky.scm /tmp/larcenous/Femtolisp/chudnovsky.scm
+Running...
+eval: variable expt has no value
+in file /tmp/larcenous/Femtolisp/chudnovsky.scm
+#0 (lambda)
+
+real	0m0.008s
+user	0m0.008s
+sys	0m0.000s
++!CSVLINE!+femtolisp,chudnovsky,CRASHED
 
 Testing nboyer under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/nboyer.scm /tmp/larcenous/Femtolisp/nboyer.scm
 Running...
 Running nboyer:5:1
-Elapsed time: 11.5981237888336182 seconds (11.5981249809265137) for nboyer:5:1
-+!CSVLINE!+femtolisp-unknown,nboyer:5:1,11.5981237888336182
+Elapsed time: 10.8735029697418213 seconds (10.8735039234161377) for nboyer:5:1
++!CSVLINE!+femtolisp-unknown,nboyer:5:1,10.8735029697418213
 
-real	0m11.615s
-user	0m11.561s
-sys	0m0.053s
+real	0m10.893s
+user	0m10.877s
+sys	0m0.017s
 
 Testing sboyer under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sboyer.scm /tmp/larcenous/Femtolisp/sboyer.scm
 Running...
 Running sboyer:5:1
-Elapsed time: 13.8114120960235596 seconds (13.811413049697876) for sboyer:5:1
-+!CSVLINE!+femtolisp-unknown,sboyer:5:1,13.8114120960235596
+Elapsed time: 13.1239421367645264 seconds (13.1239421367645264) for sboyer:5:1
++!CSVLINE!+femtolisp-unknown,sboyer:5:1,13.1239421367645264
 
-real	0m13.826s
-user	0m13.816s
-sys	0m0.010s
+real	0m13.139s
+user	0m13.125s
+sys	0m0.013s
 
 Testing gcbench under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/gcbench.scm /tmp/larcenous/Femtolisp/gcbench.scm
 Running...
 eval: variable expt has no value
 in file /tmp/larcenous/Femtolisp/gcbench.scm
 
-real	0m0.011s
-user	0m0.008s
-sys	0m0.003s
+real	0m0.014s
+user	0m0.014s
+sys	0m0.000s
 +!CSVLINE!+femtolisp,gcbench,CRASHED
 
 Testing mperm under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mperm.scm /tmp/larcenous/Femtolisp/mperm.scm
 Running...
 arg-error: apply: too many arguments
 in file /tmp/larcenous/Femtolisp/mperm.scm
 #0 (<= 0 1 2)
 
 real	0m0.011s
-user	0m0.008s
-sys	0m0.003s
+user	0m0.011s
+sys	0m0.000s
 +!CSVLINE!+femtolisp,mperm,CRASHED
 
 Testing equal under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/equal.scm /tmp/larcenous/Femtolisp/equal.scm
 Running...
 Running equal:100:100:8:1000:2000:5000
-./bench: line 673: 30468 Killed                  "${FEMTOLISP}" "$1" < "$2"
+./bench: line 674:  5097 Killed                  "${FEMTOLISP}" "$1" < "$2"
 
-real	5m0.003s
+real	5m0.001s
 user	4m59.997s
 sys	0m0.000s
 +!CSVLINE!+femtolisp,equal,ULIMITKILLED
@@ -10741,6 +10810,7 @@ sys	0m0.000s
 Testing bv2string under Femtolisp
 Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
 Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/bv2string.scm /tmp/larcenous/Femtolisp/bv2string.scm
 Running...
 Running bv2string:1000:1000:100
 eval: variable make-bytevector has no value
@@ -10763,7 +10833,7 @@ in file /tmp/larcenous/Femtolisp/bv2string.scm
  #5# #6#)
 #2 (main/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda)
 
-real	0m0.010s
-user	0m0.007s
-sys	0m0.004s
+real	0m0.014s
+user	0m0.008s
+sys	0m0.005s
 +!CSVLINE!+femtolisp,bv2string,CRASHED

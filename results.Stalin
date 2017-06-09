@@ -1,10 +1,11 @@
 
 ****************************
-Benchmarking Stalin on Tue 6 Jun 21:24:40 CEST 2017 under Linux nexion 4.11.3-1-ARCH #1 SMP PREEMPT Sun May 28 10:40:17 CEST 2017 x86_64 GNU/Linux
+Benchmarking Stalin on Thu 8 Jun 16:00:51 CEST 2017 under Linux nexion 4.11.3-1-ARCH #1 SMP PREEMPT Sun May 28 10:40:17 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/browse.scm /tmp/larcenous/Stalin/browse.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -174,16 +175,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  1% - Fast tree shake
+     1 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     4 -  8% - Performing flow analysis
+     2 -  7% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-    18 - 31% - Determining which call sites to split
+    11 - 33% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  2% - Determining which environments are called more than once
      0 -  0% - Determining which variables are referenced
@@ -191,25 +192,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     3 -  6% - Determining escaping types
+     2 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  1% - Determining which environments are recursive
-     3 -  4% - Determining which environments are reentrant
+     0 -  1% - Determining which environments are recursive
+     1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     8 - 13% - Performing lightweight closure conversion
-     5 -  8% - Determining parents
-     1 -  1% - Determining which expressions need conversion to CPS
-     1 -  1% - Determining environment distances from root
+     3 - 10% - Performing lightweight closure conversion
+     2 -  8% - Determining parents
+     0 -  1% - Determining which expressions need conversion to CPS
+     0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     3 -  5% - Determining blocked environments
-     1 -  1% - Determining which environments need to pass parameters globally
+     1 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
+     0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     3 -  5% - Applying closed-world assumption
+     3 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
-     1 -  1% - Determining which environments have regions
+     0 -  1% - Determining which environments have regions
      0 -  0% - Determining which type sets are squeezable
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
@@ -217,21 +218,22 @@ Compilation time summary (in CPU seconds)
      1 -  2% - Generating code
      0 -  0% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  1% - Generating C code
+     0 -  1% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running browse:2000
-Elapsed time: 1.3999999999068677425384521484375 seconds (1.399999999999999911182158029987476766109466552734375) for browse:2000
-+!CSVLINE!+stalin-unknown,browse:2000,1.3999999999068677425384521484375
+Elapsed time: 9.2999999993480741977691650390625e-1 seconds (9.300000000000000710542735760100185871124267578125e-1) for browse:2000
++!CSVLINE!+stalin-unknown,browse:2000,9.2999999993480741977691650390625e-1
 
-real	0m1.416s
-user	0m1.389s
+real	0m0.927s
+user	0m0.929s
 sys	0m0.007s
 
 Testing deriv under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/deriv.scm /tmp/larcenous/Stalin/deriv.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -395,38 +397,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     6 - 23% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     4 - 24% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  3% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 14% - Performing lightweight closure conversion
+     2 - 10% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     1 -  5% - Determining blocked environments
+     0 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -435,25 +437,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running deriv:10000000
-Elapsed time: 2.166000000003259540193312204792164266109466552734375e1 seconds (2.165999999999999925393012745189480483531951904296875e1) for deriv:10000000
-+!CSVLINE!+stalin-unknown,deriv:10000000,2.166000000003259540193312204792164266109466552734375e1
+Elapsed time: 9.0200000000186264514923095703125 seconds (9.019999999999999573674358543939888477325439453125) for deriv:10000000
++!CSVLINE!+stalin-unknown,deriv:10000000,9.0200000000186264514923095703125
 
-real	0m21.697s
-user	0m20.608s
-sys	0m1.079s
+real	0m9.023s
+user	0m15.734s
+sys	0m1.163s
 +!CSVLINE!+stalin,deriv,CRASHED
 
 Testing destruc under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/destruc.scm /tmp/larcenous/Stalin/destruc.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -613,38 +616,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 11% - Performing flow analysis
+     2 - 11% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     7 - 24% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     4 - 26% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  3% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  2% - Determining which environments are recursive
+     0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 14% - Performing lightweight closure conversion
+     2 - 11% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     2 -  6% - Determining blocked environments
+     0 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -653,24 +656,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running destruc:600:50:4000
-Elapsed time: 1.0330000000074506250058448131312616169452667236328125e1 seconds (1.0330000000000001403321903126197867095470428466796875e1) for destruc:600:50:4000
-+!CSVLINE!+stalin-unknown,destruc:600:50:4000,1.0330000000074506250058448131312616169452667236328125e1
+Elapsed time: 4.709999999846331775188446044921875 seconds (4.70999999999999996447286321199499070644378662109375) for destruc:600:50:4000
++!CSVLINE!+stalin-unknown,destruc:600:50:4000,4.709999999846331775188446044921875
 
-real	0m10.335s
-user	0m9.721s
-sys	0m0.397s
+real	0m4.712s
+user	0m7.022s
+sys	0m0.422s
 
 Testing diviter under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/diviter.scm /tmp/larcenous/Stalin/diviter.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -830,16 +834,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 10% - Performing flow analysis
+     1 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     5 - 20% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     3 - 19% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -847,21 +851,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     5 - 17% - Determining escaping types
+     2 - 16% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     0 -  1% - Determining which environments are recursive
-     1 -  4% - Determining which environments are reentrant
+     0 -  2% - Determining which environments are recursive
+     1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 11% - Performing lightweight closure conversion
+     1 - 10% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -873,21 +877,22 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running diviter:1000:1000000
-Elapsed time: 1.36200000001117604853106968221254646778106689453125e1 seconds (1.3620000000000000994759830064140260219573974609375e1) for diviter:1000:1000000
-+!CSVLINE!+stalin-unknown,diviter:1000:1000000,1.36200000001117604853106968221254646778106689453125e1
+Elapsed time: 8.870000000111758708953857421875 seconds (8.8699999999999992184029906638897955417633056640625) for diviter:1000:1000000
++!CSVLINE!+stalin-unknown,diviter:1000:1000000,8.870000000111758708953857421875
 
-real	0m13.635s
-user	0m15.206s
-sys	0m1.335s
+real	0m8.873s
+user	0m15.578s
+sys	0m1.213s
 
 Testing divrec under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/divrec.scm /tmp/larcenous/Stalin/divrec.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -1047,38 +1052,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 - 10% - Performing flow analysis
+     1 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     5 - 19% - Determining which call sites to split
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  3% - Determining which environments are called more than once
+     1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     4 - 15% - Determining escaping types
+     2 - 14% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     0 -  1% - Determining which environments are recursive
+     0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 13% - Performing lightweight closure conversion
+     1 - 10% - Performing lightweight closure conversion
      1 -  5% - Determining parents
-     0 -  2% - Determining which expressions need conversion to CPS
+     0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -1095,16 +1100,17 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running divrec:1000:1000000
-Elapsed time: 1.88900000000139716149760715779848396778106689453125e1 seconds (1.88900000000000023447910280083306133747100830078125e1) for divrec:1000:1000000
-+!CSVLINE!+stalin-unknown,divrec:1000:1000000,1.88900000000139716149760715779848396778106689453125e1
+Elapsed time: 1.1669999999925495526298391268937848508358001708984375e1 seconds (1.1670000000000000373034936274052597582340240478515625e1) for divrec:1000:1000000
++!CSVLINE!+stalin-unknown,divrec:1000:1000000,1.1669999999925495526298391268937848508358001708984375e1
 
-real	0m18.890s
-user	0m20.043s
-sys	0m1.253s
+real	0m11.670s
+user	0m18.610s
+sys	0m1.167s
 
 Testing puzzle under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/puzzle.scm /tmp/larcenous/Stalin/puzzle.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -1260,38 +1266,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  3% - Fast tree shake
+     1 -  4% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 11% - Performing flow analysis
+     2 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     7 - 25% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     4 - 26% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  2% - Determining which environments are recursive
-     1 -  4% - Determining which environments are reentrant
+     0 -  2% - Determining which environments are recursive
+     1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 15% - Performing lightweight closure conversion
+     2 - 12% - Performing lightweight closure conversion
      1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -1300,25 +1306,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  3% - Generating code
+     0 -  3% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running puzzle:1000
-Elapsed time: 1.21999999997206032276153564453125 seconds (1.2199999999999999733546474089962430298328399658203125) for puzzle:1000
-+!CSVLINE!+stalin-unknown,puzzle:1000,1.21999999997206032276153564453125
+Elapsed time: 6.7999999993480741977691650390625e-1 seconds (6.800000000000000710542735760100185871124267578125e-1) for puzzle:1000
++!CSVLINE!+stalin-unknown,puzzle:1000,6.7999999993480741977691650390625e-1
 
-real	0m1.227s
-user	0m1.181s
-sys	0m0.007s
+real	0m0.684s
+user	0m0.685s
+sys	0m0.000s
 +!CSVLINE!+stalin,puzzle,CRASHED
 
 Testing triangl under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/triangl.scm /tmp/larcenous/Stalin/triangl.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -1477,39 +1484,39 @@ Writing database
 Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
-     0 -  0% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  1% - Expanding macros
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     4 - 12% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     2 -  5% - Determining which types and type sets are used
-     6 - 19% - Determining which call sites to split
+     1 -  5% - Determining which types and type sets are used
+     4 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
+     0 -  2% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     3 -  8% - Determining escaping types
+     1 -  6% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  2% - Determining which environments are recursive
+     0 -  2% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  1% - Asserting uniqueness
-     6 - 17% - Performing lightweight closure conversion
-     2 -  4% - Determining parents
-     1 -  2% - Determining which expressions need conversion to CPS
+     3 - 14% - Performing lightweight closure conversion
+     1 -  4% - Determining parents
+     0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     2 -  6% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -1518,24 +1525,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running triangl:22:1:50
-Elapsed time: 2.120000000111758708953857421875 seconds (2.12000000000000010658141036401502788066864013671875) for triangl:22:1:50
-+!CSVLINE!+stalin-unknown,triangl:22:1:50,2.120000000111758708953857421875
+Elapsed time: 1.280000000144354999065399169921875 seconds (1.28000000000000003552713678800500929355621337890625) for triangl:22:1:50
++!CSVLINE!+stalin-unknown,triangl:22:1:50,1.280000000144354999065399169921875
 
-real	0m2.131s
-user	0m2.079s
-sys	0m0.010s
+real	0m1.278s
+user	0m1.289s
+sys	0m0.003s
 
 Testing tak under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/tak.scm /tmp/larcenous/Stalin/tak.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -1695,38 +1703,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  3% - Determining which types and type sets are used
-     5 - 19% - Determining which call sites to split
+     0 -  3% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  5% - Determining which environments are called more than once
+     1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
-     0 -  1% - Inverting points-to relation
-     1 -  6% - Determining escaping types
+     0 -  0% - Inverting points-to relation
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 14% - Performing lightweight closure conversion
+     1 - 10% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  3% - Determining which environments have external continuation calls
-     1 -  5% - Determining blocked environments
+     0 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -1735,7 +1743,7 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  1% - Removing unused labels
      0 -  2% - Generating C code
@@ -1743,17 +1751,18 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running tak:40:20:11:1
-Elapsed time: 7.609999999986030161380767822265625 seconds (7.61000000000000031974423109204508364200592041015625) for tak:40:20:11:1
-+!CSVLINE!+stalin-unknown,tak:40:20:11:1,7.609999999986030161380767822265625
+Elapsed time: 3.83000000007450580596923828125 seconds (3.8300000000000000710542735760100185871124267578125) for tak:40:20:11:1
++!CSVLINE!+stalin-unknown,tak:40:20:11:1,3.83000000007450580596923828125
 
-real	0m7.623s
-user	0m7.563s
-sys	0m0.003s
+real	0m3.829s
+user	0m3.821s
+sys	0m0.010s
 +!CSVLINE!+stalin,tak,CRASHED
 
 Testing takl under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/takl.scm /tmp/larcenous/Stalin/takl.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -1915,38 +1924,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     5 - 19% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  2% - Determining which environments are recursive
+     0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 15% - Performing lightweight closure conversion
-     2 -  6% - Determining parents
+     1 - 10% - Performing lightweight closure conversion
+     1 -  6% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  3% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  5% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  6% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -1955,24 +1964,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  1% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running takl:40:20:12:1
-Elapsed time: 3.51000000000931322574615478515625 seconds (3.5099999999999997868371792719699442386627197265625) for takl:40:20:12:1
-+!CSVLINE!+stalin-unknown,takl:40:20:12:1,3.51000000000931322574615478515625
+Elapsed time: 2.470000000088475644588470458984375 seconds (2.470000000000000195399252334027551114559173583984375) for takl:40:20:12:1
++!CSVLINE!+stalin-unknown,takl:40:20:12:1,2.470000000088475644588470458984375
 
-real	0m3.508s
-user	0m3.497s
+real	0m2.471s
+user	0m2.472s
 sys	0m0.000s
 
 Testing ntakl under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/ntakl.scm /tmp/larcenous/Stalin/ntakl.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -2134,18 +2144,18 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     5 - 20% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  3% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
@@ -2156,16 +2166,16 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 15% - Performing lightweight closure conversion
-     2 -  6% - Determining parents
+     1 - 10% - Performing lightweight closure conversion
+     1 -  6% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  3% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  5% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -2174,24 +2184,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  1% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 3.71999999997206032276153564453125 seconds (3.720000000000000195399252334027551114559173583984375) for ntakl:40:20:12:1
-+!CSVLINE!+stalin-unknown,ntakl:40:20:12:1,3.71999999997206032276153564453125
+Elapsed time: 2.559999999939464032649993896484375 seconds (2.560000000000000053290705182007513940334320068359375) for ntakl:40:20:12:1
++!CSVLINE!+stalin-unknown,ntakl:40:20:12:1,2.559999999939464032649993896484375
 
-real	0m3.730s
-user	0m3.511s
-sys	0m0.000s
+real	0m2.560s
+user	0m2.558s
+sys	0m0.003s
 
 Testing cpstak under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/cpstak.scm /tmp/larcenous/Stalin/cpstak.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -2351,16 +2362,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  3% - Determining which types and type sets are used
-     5 - 19% - Determining which call sites to split
+     0 -  3% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  5% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -2368,21 +2379,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  1% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     1 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 15% - Performing lightweight closure conversion
+     2 - 11% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  3% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -2391,23 +2402,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
-./bench: line 394: 25980 Killed                  "$exe" < "$2"
+Too many heap sections: Increase MAXHINCR or MAX_HEAP_SECTS
+Running cpstak:40:20:11:1
+./bench: line 395:   773 Aborted                 (core dumped) "$exe" < "$2"
 
-real	0m7.100s
-user	0m9.301s
-sys	0m1.568s
-+!CSVLINE!+stalin,cpstak,ULIMITKILLED
+real	0m14.269s
+user	0m8.603s
+sys	0m2.339s
++!CSVLINE!+stalin,cpstak,CRASHED
 
 Testing ctak under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/ctak.scm /tmp/larcenous/Stalin/ctak.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -2567,16 +2581,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 11% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  3% - Determining which types and type sets are used
-     5 - 19% - Determining which call sites to split
+     0 -  3% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -2584,21 +2598,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  1% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 15% - Performing lightweight closure conversion
+     2 - 11% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     1 -  5% - Determining blocked environments
+     0 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -2607,25 +2621,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  3% - Generating code
+     0 -  3% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 1.51000000000931322574615478515625 seconds (1.50999999999999996447286321199499070644378662109375) for ctak:32:16:8:1
-+!CSVLINE!+stalin-unknown,ctak:32:16:8:1,1.51000000000931322574615478515625
+Elapsed time: 7.89999999920837581157684326171875e-1 seconds (7.9000000000000003552713678800500929355621337890625e-1) for ctak:32:16:8:1
++!CSVLINE!+stalin-unknown,ctak:32:16:8:1,7.89999999920837581157684326171875e-1
 
-real	0m1.537s
-user	0m1.467s
+real	0m0.794s
+user	0m0.795s
 sys	0m0.000s
 +!CSVLINE!+stalin,ctak,CRASHED
 
 Testing fib under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/fib.scm /tmp/larcenous/Stalin/fib.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -2787,32 +2802,32 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 -  6% - Performing flow analysis
+     1 -  6% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     5 - 11% - Determining which call sites to split
+     3 - 12% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  2% - Determining which environments are called more than once
-     0 -  0% - Determining which variables are referenced
+     0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      1 -  3% - Determining which environments are recursive
-     4 -  9% - Determining which environments are reentrant
-     1 -  1% - Asserting uniqueness
-     9 - 21% - Performing lightweight closure conversion
-    10 - 23% - Determining parents
+     2 -  9% - Determining which environments are reentrant
+     0 -  1% - Asserting uniqueness
+     5 - 20% - Performing lightweight closure conversion
+     5 - 22% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
-     0 -  1% - Determining environment distances from root
+     0 -  0% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  1% - Determining which environments have external continuation calls
-     1 -  3% - Determining blocked environments
+     0 -  2% - Determining which environments have external continuation calls
+     1 -  2% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  3% - Applying closed-world assumption
+     1 -  4% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -2821,25 +2836,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  1% - Generating code
+     0 -  1% - Generating code
      0 -  0% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  1% - Generating C code
+     0 -  1% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running fib:40:5
-Elapsed time: 6.250000000116415321826934814453125 seconds (6.25) for fib:40:5
-+!CSVLINE!+stalin-unknown,fib:40:5,6.250000000116415321826934814453125
+Elapsed time: 3.209999999962747097015380859375 seconds (3.20999999999999996447286321199499070644378662109375) for fib:40:5
++!CSVLINE!+stalin-unknown,fib:40:5,3.209999999962747097015380859375
 
-real	0m6.253s
-user	0m6.202s
-sys	0m0.003s
+real	0m3.219s
+user	0m3.215s
+sys	0m0.000s
 +!CSVLINE!+stalin,fib,CRASHED
 
 Testing fibc under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/fibc.scm /tmp/larcenous/Stalin/fibc.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -3001,16 +3017,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 -  9% - Performing flow analysis
+     1 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     5 - 16% - Determining which call sites to split
+     3 - 17% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -3018,21 +3034,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     5 - 17% - Determining escaping types
+     3 - 16% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     0 -  1% - Determining which environments are recursive
+     0 -  2% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 13% - Performing lightweight closure conversion
-     1 -  5% - Determining parents
+     2 - 10% - Performing lightweight closure conversion
+     1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  4% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -3041,25 +3057,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     2 -  6% - Generating code
+     1 -  7% - Generating code
      0 -  1% - Removing unused declarations
      0 -  1% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running fibc:30:10
-Elapsed time: 6.09999999986030161380767822265625e-1 seconds (6.0999999999999996447286321199499070644378662109375e-1) for fibc:30:10
-+!CSVLINE!+stalin-unknown,fibc:30:10,6.09999999986030161380767822265625e-1
+Elapsed time: 3.29999999958090484142303466796875e-1 seconds (3.300000000000000266453525910037569701671600341796875e-1) for fibc:30:10
++!CSVLINE!+stalin-unknown,fibc:30:10,3.29999999958090484142303466796875e-1
 
-real	0m0.620s
-user	0m0.600s
+real	0m0.333s
+user	0m0.329s
 sys	0m0.003s
 +!CSVLINE!+stalin,fibc,CRASHED
 
 Testing fibfp under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/fibfp.scm /tmp/larcenous/Stalin/fibfp.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -3221,32 +3238,32 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 -  6% - Performing flow analysis
+     1 -  6% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     5 - 11% - Determining which call sites to split
+     3 - 12% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  2% - Determining which environments are called more than once
-     0 -  0% - Determining which variables are referenced
+     0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      1 -  3% - Determining which environments are recursive
-     4 -  9% - Determining which environments are reentrant
-     1 -  1% - Asserting uniqueness
-     8 - 20% - Performing lightweight closure conversion
-     9 - 24% - Determining parents
+     2 -  9% - Determining which environments are reentrant
+     0 -  1% - Asserting uniqueness
+     5 - 20% - Performing lightweight closure conversion
+     5 - 22% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
-     0 -  1% - Determining environment distances from root
+     0 -  0% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  1% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  3% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  3% - Applying closed-world assumption
+     1 -  5% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -3263,16 +3280,17 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running fibfp:3.5e1:10
-Elapsed time: 1.09000000008381903171539306640625 seconds (1.0900000000000000710542735760100185871124267578125) for fibfp:3.5e1:10
-+!CSVLINE!+stalin-unknown,fibfp:3.5e1:10,1.09000000008381903171539306640625
+Elapsed time: 5.49999999930150806903839111328125e-1 seconds (5.5e-1) for fibfp:3.5e1:10
++!CSVLINE!+stalin-unknown,fibfp:3.5e1:10,5.49999999930150806903839111328125e-1
 
-real	0m1.099s
-user	0m1.081s
-sys	0m0.003s
+real	0m0.550s
+user	0m0.550s
+sys	0m0.000s
 
 Testing sum under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/sum.scm /tmp/larcenous/Stalin/sum.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -3428,16 +3446,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 -  8% - Performing flow analysis
+     1 -  8% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     4 - 15% - Determining which call sites to split
+     3 - 17% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -3445,21 +3463,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  9% - Determining escaping types
+     1 -  8% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      1 -  5% - Determining which environments are recursive
-     4 - 16% - Determining which environments are reentrant
-     1 -  2% - Asserting uniqueness
-     3 - 11% - Performing lightweight closure conversion
-     1 -  5% - Determining parents
+     3 - 16% - Determining which environments are reentrant
+     0 -  2% - Asserting uniqueness
+     1 -  8% - Performing lightweight closure conversion
+     1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  4% - Applying closed-world assumption
+     1 -  6% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -3471,22 +3489,23 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running sum:10000:200000
-Elapsed time: 6.05000000004656612873077392578125 seconds (6.04999999999999982236431605997495353221893310546875) for sum:10000:200000
-+!CSVLINE!+stalin-unknown,sum:10000:200000,6.05000000004656612873077392578125
+Elapsed time: 4.6400000001303851604461669921875 seconds (4.63999999999999968025576890795491635799407958984375) for sum:10000:200000
++!CSVLINE!+stalin-unknown,sum:10000:200000,4.6400000001303851604461669921875
 
-real	0m6.059s
-user	0m6.025s
-sys	0m0.000s
+real	0m4.647s
+user	0m4.634s
+sys	0m0.013s
 +!CSVLINE!+stalin,sum,CRASHED
 
 Testing sumfp under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/sumfp.scm /tmp/larcenous/Stalin/sumfp.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -3642,16 +3661,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 -  8% - Performing flow analysis
+     1 -  8% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     5 - 16% - Determining which call sites to split
+     3 - 17% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -3659,21 +3678,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     3 -  9% - Determining escaping types
+     1 -  8% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      1 -  5% - Determining which environments are recursive
-     5 - 16% - Determining which environments are reentrant
+     2 - 15% - Determining which environments are reentrant
      1 -  3% - Asserting uniqueness
-     3 - 11% - Performing lightweight closure conversion
-     1 -  5% - Determining parents
+     1 -  8% - Performing lightweight closure conversion
+     1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  4% - Applying closed-world assumption
+     1 -  6% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -3682,24 +3701,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     0 -  1% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running sumfp:1.0e6:500
-Elapsed time: 6.5999999991618096828460693359375e-1 seconds (6.60000000000000053290705182007513940334320068359375e-1) for sumfp:1.0e6:500
-+!CSVLINE!+stalin-unknown,sumfp:1.0e6:500,6.5999999991618096828460693359375e-1
+Elapsed time: 6.19999999995343387126922607421875e-1 seconds (6.20000000000000017763568394002504646778106689453125e-1) for sumfp:1.0e6:500
++!CSVLINE!+stalin-unknown,sumfp:1.0e6:500,6.19999999995343387126922607421875e-1
 
-real	0m0.661s
-user	0m0.639s
-sys	0m0.003s
+real	0m0.623s
+user	0m0.622s
+sys	0m0.000s
 
 Testing fft under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/fft.scm /tmp/larcenous/Stalin/fft.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -3859,38 +3879,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  1% - Reading source
      0 -  1% - Expanding macros
-     1 -  2% - Fast tree shake
+     1 -  4% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     4 - 13% - Performing flow analysis
+     2 - 11% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     7 - 24% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     4 - 26% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  3% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  2% - Determining which environments are recursive
+     0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 13% - Performing lightweight closure conversion
+     2 - 10% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     1 -  5% - Determining blocked environments
+     0 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -3899,24 +3919,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running fft:65536:100
-Elapsed time: 4.00000000023283064365386962890625e-1 seconds (4.0e-1) for fft:65536:100
-+!CSVLINE!+stalin-unknown,fft:65536:100,4.00000000023283064365386962890625e-1
+Elapsed time: 2.69999999902211129665374755859375e-1 seconds (2.70000000000000017763568394002504646778106689453125e-1) for fft:65536:100
++!CSVLINE!+stalin-unknown,fft:65536:100,2.69999999902211129665374755859375e-1
 
-real	0m0.416s
-user	0m0.402s
-sys	0m0.003s
+real	0m0.272s
+user	0m0.272s
+sys	0m0.000s
 
 Testing mbrot under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/mbrot.scm /tmp/larcenous/Stalin/mbrot.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -4072,38 +4093,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 11% - Performing flow analysis
+     1 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     5 - 21% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     3 - 23% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
-     0 -  1% - Inverting points-to relation
-     1 -  6% - Determining escaping types
+     0 -  0% - Inverting points-to relation
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 15% - Performing lightweight closure conversion
+     2 - 11% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     1 -  5% - Determining blocked environments
+     0 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -4115,22 +4136,23 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running mbrot:75:1000
-Elapsed time: 6.40000000013969838619232177734375e-1 seconds (6.4000000000000003552713678800500929355621337890625e-1) for mbrot:75:1000
-+!CSVLINE!+stalin-unknown,mbrot:75:1000,6.40000000013969838619232177734375e-1
+Elapsed time: 5.7000000006519258022308349609375e-1 seconds (5.699999999999999289457264239899814128875732421875e-1) for mbrot:75:1000
++!CSVLINE!+stalin-unknown,mbrot:75:1000,5.7000000006519258022308349609375e-1
 
-real	0m0.647s
-user	0m0.639s
-sys	0m0.003s
+real	0m0.575s
+user	0m0.575s
+sys	0m0.000s
 +!CSVLINE!+stalin,mbrot,CRASHED
 
 Testing mbrotZ under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/mbrotZ.scm /tmp/larcenous/Stalin/mbrotZ.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/mbrotZ.exp:53:2215:Unbound variable
@@ -4139,20 +4161,232 @@ Expanding macros
 Testing nucleic under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
-./bench: line 386: 26508 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
-+!CSVLINE!+stalin,nucleic,COMPILEERROR
+stalin_comp /tmp/larcenous/Stalin/nucleic.scm /tmp/larcenous/Stalin/nucleic.exe
+Reading source
+Expanding macros
+Fast tree shake
+Annotating expressions with their parents
+Annotating variables with their environments
+Annotating expressions with their environments
+In-lining first-order calls to primitive procedures
+Annotating expressions with their parents
+Annotating variables with their environments
+Annotating expressions with their environments
+Annotating variables with their references
+Performing flow analysis
+Enumerating call sites
+Determining which types and type sets are used
+ 28371 expressions
+    16 internal symbol types
+     1 external symbol type
+    66 primitive procedure types
+   176 non-called native procedure types
+   564 called noop native procedure types
+   956 called non-noop native procedure types
+     0 foreign procedure types
+     0 continuation types
+     4 string types
+   150 structure types
+  1723 headed vector types
+     1 nonheaded vector type
+     0 displaced vector types
+ 33186 type sets
+   817 hunoz variables
+  1974 non-hunoz variables
+   671 noop environments
+  1805 non-noop environments
+0 call sites dispatch on clones
+Maximal non-LET lexical nesting depth is 6
+Maximal clone rate is 1
+Determining which call sites to split
+Performing flow analysis
+Enumerating call sites
+Determining which types and type sets are used
+ 38376 expressions
+    16 internal symbol types
+     1 external symbol type
+    64 primitive procedure types
+   241 non-called native procedure types
+   708 called noop native procedure types
+  1600 called non-noop native procedure types
+     0 foreign procedure types
+     0 continuation types
+    14 string types
+   152 structure types
+  1734 headed vector types
+     1 nonheaded vector type
+     0 displaced vector types
+ 44442 type sets
+   993 hunoz variables
+  3498 non-hunoz variables
+   827 noop environments
+  3147 non-noop environments
+0 call sites dispatch on clones
+Maximal non-LET lexical nesting depth is 6
+Maximal clone rate is 108
+Determining which call sites to split
+2 passes of flow analysis
+Computing call graph
+Determining which environments are called more than once
+Determining which variables are referenced
+Determining free variables
+Determining necessarily-fictitious native procedure types
+Annotating environments and continuation types
+Inverting points-to relation
+Determining escaping types
+Determining which environments have unique call sites
+Determining which environments are recursive
+Determining which environments are reentrant
+Asserting uniqueness
+Performing lightweight closure conversion
+Determining parents
+Determining which expressions need conversion to CPS
+ 28159 expressions
+    16 internal symbol types
+     1 external symbol type
+    64 primitive procedure types
+   179 non-called native procedure types
+   708 called noop native procedure types
+  1600 called non-noop native procedure types
+     0 foreign procedure types
+     0 continuation types
+    14 string types
+   152 structure types
+  1734 headed vector types
+     1 nonheaded vector type
+     0 displaced vector types
+ 33308 type sets
+   797 hunoz variables
+  2777 non-hunoz variables
+     0 noop environments
+  2056 non-noop environments
+0 call sites dispatch on clones
+Maximal non-LET lexical nesting depth is 6
+Maximal clone rate is 108
+Determining environment distances from root
+Determining which environments have external self tail calls
+Determining which environments have external continuation calls
+Determining blocked environments
+Determining which environments need to pass parameters globally
+Determining allocations
+Applying closed-world assumption
+Determining indirect structure types
+Determining which types are never allocated on the heap
+Determining which types are atomic
+Determining which environments have regions
+Determining which type sets are squeezable
+Determining which type sets are squishable
+Determining alignments
+Assigning global squish tags
+W41643 is general case for the following reasons:
+  flonum
+W38843 is general case for the following reasons:
+  nondegenerate nonheaded vector
+W18704 is general case for the following reasons:
+  flonum
+W17082 is general case for the following reasons:
+  flonum
+W17081 is general case for the following reasons:
+  flonum
+W17064 is general case for the following reasons:
+  flonum
+W16653 is general case for the following reasons:
+  flonum
+W16620 is general case for the following reasons:
+  flonum
+W16619 is general case for the following reasons:
+  flonum
+W16618 is general case for the following reasons:
+  flonum
+W14473 is general case for the following reasons:
+  flonum
+W7955 is general case for the following reasons:
+  flonum
+W70 is general case for the following reasons:
+  flonum
+W54 is general case for the following reasons:
+  flonum
+W25 is general case for the following reasons:
+  flonum
+Generating code
+In read[1512]
+Argument to STRUCTURE-REF will not be a structure of the correct type
+Removing unused declarations
+Removing unused labels
+Generating C code
+Writing database
+Compiling C code
+Compilation time summary (in CPU seconds)
+     0 -  0% - Reading source
+     0 -  0% - Expanding macros
+     1 -  1% - Fast tree shake
+     0 -  0% - Annotating expressions with their parents
+     0 -  0% - Annotating variables with their environments
+     0 -  0% - Annotating expressions with their environments
+     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  0% - Annotating variables with their references
+    42 - 19% - Performing flow analysis
+     0 -  0% - Enumerating call sites
+    19 -  9% - Determining which types and type sets are used
+     6 -  3% - Determining which call sites to split
+     0 -  0% - Computing call graph
+     1 -  0% - Determining which environments are called more than once
+     0 -  0% - Determining which variables are referenced
+     0 -  0% - Determining free variables
+     0 -  0% - Determining necessarily-fictitious native procedure types
+     0 -  0% - Annotating environments and continuation types
+     0 -  0% - Inverting points-to relation
+     8 -  4% - Determining escaping types
+     0 -  0% - Determining which environments have unique call sites
+     0 -  0% - Determining which environments are recursive
+     1 -  1% - Determining which environments are reentrant
+    43 - 19% - Asserting uniqueness
+    57 - 26% - Performing lightweight closure conversion
+     1 -  0% - Determining parents
+    14 -  6% - Determining which expressions need conversion to CPS
+     0 -  0% - Determining environment distances from root
+     0 -  0% - Determining which environments have external self tail calls
+     1 -  0% - Determining which environments have external continuation calls
+     1 -  0% - Determining blocked environments
+     0 -  0% - Determining which environments need to pass parameters globally
+     0 -  0% - Determining allocations
+    22 - 10% - Applying closed-world assumption
+     0 -  0% - Determining indirect structure types
+     0 -  0% - Determining which types are never allocated on the heap
+     0 -  0% - Determining which types are atomic
+     0 -  0% - Determining which environments have regions
+     0 -  0% - Determining which type sets are squeezable
+     0 -  0% - Determining which type sets are squishable
+     0 -  0% - Determining alignments
+     0 -  0% - Assigning global squish tags
+     1 -  0% - Generating code
+     0 -  0% - Removing unused declarations
+     0 -  0% - Removing unused labels
+     1 -  0% - Generating C code
+     0 -  0% - Writing database
+     0 -  0% - Compiling C code
+Running...
+Running nucleic:50
+Elapsed time: 4.30000000051222741603851318359375e-1 seconds (4.29999999999999982236431605997495353221893310546875e-1) for nucleic:50
++!CSVLINE!+stalin-unknown,nucleic:50,4.30000000051222741603851318359375e-1
+
+real	0m0.438s
+user	0m0.451s
+sys	0m0.003s
 
 Testing pi under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/pi.scm /tmp/larcenous/Stalin/pi.exe
 Reading source
 Expanding macros
-/tmp/larcenous/Stalin/pi.exp:70:2571:Unbound variable
+/tmp/larcenous/Stalin/pi.exp:37:1413:Unbound variable
 +!CSVLINE!+stalin,pi,COMPILEERROR
 
 Testing pnpoly under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/pnpoly.scm /tmp/larcenous/Stalin/pnpoly.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -4312,12 +4546,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 11% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     5 - 20% - Determining which call sites to split
+     3 - 21% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -4325,21 +4559,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  1% - Inverting points-to relation
-     1 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 14% - Performing lightweight closure conversion
+     1 - 11% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
-     0 -  1% - Determining which environments need to pass parameters globally
+     0 -  2% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -4348,25 +4582,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
-     0 -  1% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  0% - Removing unused labels
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running pnpoly:1000000
-Elapsed time: 2.259999999892897903919219970703125 seconds (2.2599999999999997868371792719699442386627197265625) for pnpoly:1000000
-+!CSVLINE!+stalin-unknown,pnpoly:1000000,2.259999999892897903919219970703125
+Elapsed time: 9.799999999813735485076904296875e-1 seconds (9.800000000000000710542735760100185871124267578125e-1) for pnpoly:1000000
++!CSVLINE!+stalin-unknown,pnpoly:1000000,9.799999999813735485076904296875e-1
 
-real	0m2.272s
-user	0m2.187s
-sys	0m0.040s
+real	0m0.992s
+user	0m1.185s
+sys	0m0.039s
 +!CSVLINE!+stalin,pnpoly,CRASHED
 
 Testing ray under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/ray.scm /tmp/larcenous/Stalin/ray.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/ray.exp:67:2378:Unbound variable
@@ -4375,6 +4610,7 @@ Expanding macros
 Testing simplex under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/simplex.scm /tmp/larcenous/Stalin/simplex.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -4536,38 +4772,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  2% - Fast tree shake
+     1 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     4 - 10% - Performing flow analysis
+     2 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-    13 - 37% - Determining which call sites to split
+     8 - 38% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
-     0 -  0% - Determining which variables are referenced
+     0 -  2% - Determining which environments are called more than once
+     0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  4% - Determining escaping types
+     1 -  4% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 11% - Performing lightweight closure conversion
+     2 -  9% - Performing lightweight closure conversion
      1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     2 -  4% - Applying closed-world assumption
+     1 -  6% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -4576,24 +4812,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  1% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running simplex:1000000
-Elapsed time: 5.49999999930150806903839111328125e-1 seconds (5.5e-1) for simplex:1000000
-+!CSVLINE!+stalin-unknown,simplex:1000000,5.49999999930150806903839111328125e-1
+Elapsed time: 2.6000000000931322574615478515625e-1 seconds (2.600000000000000088817841970012523233890533447265625e-1) for simplex:1000000
++!CSVLINE!+stalin-unknown,simplex:1000000,2.6000000000931322574615478515625e-1
 
-real	0m0.565s
-user	0m0.544s
-sys	0m0.017s
+real	0m0.270s
+user	0m0.310s
+sys	0m0.004s
 
 Testing ack under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/ack.scm /tmp/larcenous/Stalin/ack.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -4749,16 +4986,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 -  8% - Performing flow analysis
+     1 -  8% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     0 -  2% - Determining which types and type sets are used
-     5 - 16% - Determining which call sites to split
+     0 -  1% - Determining which types and type sets are used
+     3 - 16% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -4766,21 +5003,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     3 -  9% - Determining escaping types
+     1 -  8% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     2 -  6% - Determining which environments are recursive
-     5 - 18% - Determining which environments are reentrant
-     1 -  2% - Asserting uniqueness
-     3 - 10% - Performing lightweight closure conversion
+     1 -  6% - Determining which environments are recursive
+     3 - 17% - Determining which environments are reentrant
+     0 -  2% - Asserting uniqueness
+     1 -  8% - Performing lightweight closure conversion
      1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  3% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  4% - Applying closed-world assumption
+     1 -  6% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -4792,22 +5029,23 @@ Compilation time summary (in CPU seconds)
      0 -  1% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     0 -  1% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running ack:3:12:2
-Elapsed time: 8.589999999967403709888458251953125 seconds (8.589999999999999857891452847979962825775146484375) for ack:3:12:2
-+!CSVLINE!+stalin-unknown,ack:3:12:2,8.589999999967403709888458251953125
+Elapsed time: 4.410000000032596290111541748046875 seconds (4.410000000000000142108547152020037174224853515625) for ack:3:12:2
++!CSVLINE!+stalin-unknown,ack:3:12:2,4.410000000032596290111541748046875
 
-real	0m8.598s
-user	0m8.427s
-sys	0m0.010s
+real	0m4.411s
+user	0m4.404s
+sys	0m0.007s
 +!CSVLINE!+stalin,ack,CRASHED
 
 Testing array1 under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/array1.scm /tmp/larcenous/Stalin/array1.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -4965,16 +5203,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 -  9% - Performing flow analysis
+     1 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     5 - 18% - Determining which call sites to split
+     3 - 19% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -4982,21 +5220,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     6 - 20% - Determining escaping types
+     3 - 18% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     0 -  1% - Determining which environments are recursive
+     0 -  2% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 12% - Performing lightweight closure conversion
+     1 -  9% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -5008,22 +5246,23 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running array1:1000000:500
-Elapsed time: 9.0999999991618096828460693359375e-1 seconds (9.0999999999999996447286321199499070644378662109375e-1) for array1:1000000:500
-+!CSVLINE!+stalin-unknown,array1:1000000:500,9.0999999991618096828460693359375e-1
+Elapsed time: 4.00000000023283064365386962890625e-1 seconds (4.0e-1) for array1:1000000:500
++!CSVLINE!+stalin-unknown,array1:1000000:500,4.00000000023283064365386962890625e-1
 
-real	0m0.918s
-user	0m0.893s
-sys	0m0.003s
+real	0m0.398s
+user	0m0.396s
+sys	0m0.004s
 +!CSVLINE!+stalin,array1,CRASHED
 
 Testing string under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/string.scm /tmp/larcenous/Stalin/string.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -5179,16 +5418,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 10% - Performing flow analysis
+     1 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     5 - 19% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -5196,21 +5435,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     4 - 16% - Determining escaping types
+     2 - 15% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
-     1 -  4% - Determining which environments are reentrant
+     1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 13% - Performing lightweight closure conversion
+     1 -  9% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -5222,22 +5461,23 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running string:500000:25
-Elapsed time: 8.39999999967403709888458251953125e-1 seconds (8.4000000000000003552713678800500929355621337890625e-1) for string:500000:25
-+!CSVLINE!+stalin-unknown,string:500000:25,8.39999999967403709888458251953125e-1
+Elapsed time: 3.80000000004656612873077392578125e-1 seconds (3.79999999999999982236431605997495353221893310546875e-1) for string:500000:25
++!CSVLINE!+stalin-unknown,string:500000:25,3.80000000004656612873077392578125e-1
 
-real	0m0.856s
-user	0m0.762s
-sys	0m0.053s
+real	0m0.391s
+user	0m0.609s
+sys	0m0.033s
 +!CSVLINE!+stalin,string,CRASHED
 
 Testing sum1 under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/sum1.scm /tmp/larcenous/Stalin/sum1.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -5393,16 +5633,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 -  9% - Performing flow analysis
+     1 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     6 - 20% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -5410,21 +5650,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     6 - 22% - Determining escaping types
+     3 - 21% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 11% - Performing lightweight closure conversion
+     1 -  9% - Performing lightweight closure conversion
      1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     1 -  3% - Determining blocked environments
+     0 -  2% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  4% - Applying closed-world assumption
+     1 -  6% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -5433,24 +5673,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     0 -  1% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running sum1:25
-Elapsed time: 1.670000000041909515857696533203125 seconds (1.6699999999999999289457264239899814128875732421875) for sum1:25
-+!CSVLINE!+stalin-unknown,sum1:25,1.670000000041909515857696533203125
+Elapsed time: 1.1400000001303851604461669921875 seconds (1.1399999999999999023003738329862244427204132080078125) for sum1:25
++!CSVLINE!+stalin-unknown,sum1:25,1.1400000001303851604461669921875
 
-real	0m1.710s
-user	0m1.592s
-sys	0m0.026s
+real	0m1.148s
+user	0m1.180s
+sys	0m0.014s
 
 Testing cat under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/cat.scm /tmp/larcenous/Stalin/cat.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/cat.exp:43:1567:Unbound variable
@@ -5459,6 +5700,7 @@ Expanding macros
 Testing tail under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/tail.scm /tmp/larcenous/Stalin/tail.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/tail.exp:39:1496:Unbound variable
@@ -5467,6 +5709,7 @@ Expanding macros
 Testing wc under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/wc.scm /tmp/larcenous/Stalin/wc.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -5626,38 +5869,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 11% - Performing flow analysis
+     2 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     6 - 24% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     4 - 24% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
-     0 -  1% - Inverting points-to relation
-     1 -  6% - Determining escaping types
+     0 -  0% - Inverting points-to relation
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 13% - Performing lightweight closure conversion
-     1 -  6% - Determining parents
+     1 - 10% - Performing lightweight closure conversion
+     1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -5666,24 +5909,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 5.05000000004656612873077392578125 seconds (5.04999999999999982236431605997495353221893310546875) for wc:inputs/bib:50
-+!CSVLINE!+stalin-unknown,wc:inputs/bib:50,5.05000000004656612873077392578125
+Elapsed time: 3.6099999998696148395538330078125 seconds (3.609999999999999875655021241982467472553253173828125) for wc:inputs/bib:50
++!CSVLINE!+stalin-unknown,wc:inputs/bib:50,3.6099999998696148395538330078125
 
-real	0m5.062s
-user	0m4.959s
-sys	0m0.056s
+real	0m3.610s
+user	0m3.567s
+sys	0m0.050s
 
 Testing read1 under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/read1.scm /tmp/larcenous/Stalin/read1.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -5843,38 +6087,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 12% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  3% - Determining which types and type sets are used
-     5 - 19% - Determining which call sites to split
+     0 -  3% - Determining which types and type sets are used
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  5% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
-     0 -  1% - Inverting points-to relation
-     1 -  6% - Determining escaping types
+     0 -  0% - Inverting points-to relation
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 14% - Performing lightweight closure conversion
-     1 -  6% - Determining parents
+     2 - 11% - Performing lightweight closure conversion
+     1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  3% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -5883,25 +6127,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running read1:2500
-Elapsed time: 1.1230000000097788426245415394078008830547332763671875e1 seconds (1.1229999999999999982236431605997495353221893310546875e1) for read1:2500
-+!CSVLINE!+stalin-unknown,read1:2500,1.1230000000097788426245415394078008830547332763671875e1
+Elapsed time: 6.48999999999068677425384521484375 seconds (6.4900000000000002131628207280300557613372802734375) for read1:2500
++!CSVLINE!+stalin-unknown,read1:2500,6.48999999999068677425384521484375
 
-real	0m11.236s
-user	0m11.137s
-sys	0m0.083s
+real	0m6.488s
+user	0m6.635s
+sys	0m0.043s
 +!CSVLINE!+stalin,read1,CRASHED
 
 Testing compiler under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/compiler.scm /tmp/larcenous/Stalin/compiler.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/compiler.exp:9737:456640:Unbound variable
@@ -5910,6 +6155,7 @@ Expanding macros
 Testing conform under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/conform.scm /tmp/larcenous/Stalin/conform.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -6071,16 +6317,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  1% - Fast tree shake
+     0 -  1% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-    18 - 25% - Performing flow analysis
+    10 - 24% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     2 -  3% - Determining which types and type sets are used
-    14 - 19% - Determining which call sites to split
+     1 -  3% - Determining which types and type sets are used
+     8 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  1% - Determining which environments are called more than once
      0 -  0% - Determining which variables are referenced
@@ -6088,25 +6334,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     5 -  6% - Determining escaping types
+     3 -  6% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  1% - Determining which environments are recursive
-     2 -  3% - Determining which environments are reentrant
+     0 -  1% - Determining which environments are recursive
+     1 -  3% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-    15 - 20% - Performing lightweight closure conversion
+     8 - 18% - Performing lightweight closure conversion
      1 -  2% - Determining parents
      1 -  2% - Determining which expressions need conversion to CPS
-     0 -  1% - Determining environment distances from root
+     0 -  0% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
      1 -  2% - Determining which environments have external continuation calls
-     2 -  3% - Determining blocked environments
-     1 -  1% - Determining which environments need to pass parameters globally
+     1 -  3% - Determining blocked environments
+     0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     4 -  5% - Applying closed-world assumption
+     3 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
-     1 -  1% - Determining which environments have regions
+     0 -  1% - Determining which environments have regions
      0 -  0% - Determining which type sets are squeezable
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
@@ -6114,27 +6360,29 @@ Compilation time summary (in CPU seconds)
      1 -  2% - Generating code
      0 -  0% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  1% - Generating C code
+     0 -  1% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running conform:500
-Elapsed time: 4.2299999999813735485076904296875 seconds (4.230000000000000426325641456060111522674560546875) for conform:500
-+!CSVLINE!+stalin-unknown,conform:500,4.2299999999813735485076904296875
+Elapsed time: 2.240000000107102096080780029296875 seconds (2.2400000000000002131628207280300557613372802734375) for conform:500
++!CSVLINE!+stalin-unknown,conform:500,2.240000000107102096080780029296875
 
-real	0m4.235s
-user	0m4.189s
+real	0m2.242s
+user	0m2.658s
 sys	0m0.050s
 
 Testing dynamic under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
-./bench: line 386: 27416 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+stalin_comp /tmp/larcenous/Stalin/dynamic.scm /tmp/larcenous/Stalin/dynamic.exe
+./bench: line 387:  1290 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,dynamic,COMPILEERROR
 
 Testing earley under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/earley.scm /tmp/larcenous/Stalin/earley.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -6292,16 +6540,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     4 -  8% - Performing flow analysis
+     2 -  8% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  1% - Determining which types and type sets are used
-    17 - 34% - Determining which call sites to split
+     0 -  1% - Determining which types and type sets are used
+    10 - 35% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  2% - Determining which environments are called more than once
      0 -  0% - Determining which variables are referenced
@@ -6309,25 +6557,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  1% - Determining which environments are recursive
-     2 -  4% - Determining which environments are reentrant
+     0 -  1% - Determining which environments are recursive
+     1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-    10 - 19% - Performing lightweight closure conversion
+     5 - 16% - Performing lightweight closure conversion
      1 -  3% - Determining parents
-     1 -  1% - Determining which expressions need conversion to CPS
+     0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
      1 -  2% - Determining which environments have external continuation calls
-     2 -  4% - Determining blocked environments
-     1 -  1% - Determining which environments need to pass parameters globally
+     1 -  4% - Determining blocked environments
+     0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     2 -  5% - Applying closed-world assumption
+     2 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
-     1 -  1% - Determining which environments have regions
+     0 -  1% - Determining which environments have regions
      0 -  0% - Determining which type sets are squeezable
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
@@ -6335,20 +6583,21 @@ Compilation time summary (in CPU seconds)
      1 -  2% - Generating code
      0 -  0% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
-./bench: line 394: 27810 Segmentation fault      (core dumped) "$exe" < "$2"
+./bench: line 395:  1343 Segmentation fault      (core dumped) "$exe" < "$2"
 
-real	0m12.354s
-user	0m6.865s
-sys	0m1.720s
+real	0m7.987s
+user	0m6.742s
+sys	0m1.147s
 +!CSVLINE!+stalin,earley,CRASHED
 
 Testing graphs under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/graphs.scm /tmp/larcenous/Stalin/graphs.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -6506,38 +6755,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  2% - Fast tree shake
+     1 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 10% - Performing flow analysis
+     2 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     9 - 27% - Determining which call sites to split
+     5 - 28% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
+     1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     1 -  1% - Determining which environments are recursive
+     0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     5 - 15% - Performing lightweight closure conversion
+     2 - 12% - Performing lightweight closure conversion
      1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     2 -  6% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -6546,25 +6795,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  1% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running graphs:7:3
-Elapsed time: 2.258999999996740282171003855182789266109466552734375e1 seconds (2.258999999999999896971303314785473048686981201171875e1) for graphs:7:3
-+!CSVLINE!+stalin-unknown,graphs:7:3,2.258999999996740282171003855182789266109466552734375e1
+Elapsed time: 9.32000000006519258022308349609375 seconds (9.32000000000000028421709430404007434844970703125) for graphs:7:3
++!CSVLINE!+stalin-unknown,graphs:7:3,9.32000000006519258022308349609375
 
-real	0m22.604s
-user	0m23.901s
-sys	0m0.113s
+real	0m9.325s
+user	0m19.564s
+sys	0m0.087s
 +!CSVLINE!+stalin,graphs,CRASHED
 
 Testing lattice under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/lattice.scm /tmp/larcenous/Stalin/lattice.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -6728,38 +6978,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  2% - Fast tree shake
+     1 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 -  9% - Performing flow analysis
+     2 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-    14 - 36% - Determining which call sites to split
+     8 - 36% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
-     0 -  0% - Determining which variables are referenced
+     0 -  2% - Determining which environments are called more than once
+     0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  4% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     5 - 14% - Performing lightweight closure conversion
+     2 - 11% - Performing lightweight closure conversion
      1 -  3% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
-     2 -  4% - Determining blocked environments
+     0 -  2% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     2 -  4% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -6768,25 +7018,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running lattice:44:10
-Elapsed time: 6.450000000069849193096160888671875 seconds (6.45000000000000017763568394002504646778106689453125) for lattice:44:10
-+!CSVLINE!+stalin-unknown,lattice:44:10,6.450000000069849193096160888671875
+Elapsed time: 3.770000000135041773319244384765625 seconds (3.770000000000000017763568394002504646778106689453125) for lattice:44:10
++!CSVLINE!+stalin-unknown,lattice:44:10,3.770000000135041773319244384765625
 
-real	0m6.460s
-user	0m6.460s
-sys	0m0.013s
+real	0m3.778s
+user	0m4.268s
+sys	0m0.017s
 +!CSVLINE!+stalin,lattice,CRASHED
 
 Testing matrix under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/matrix.scm /tmp/larcenous/Stalin/matrix.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -6944,6 +7195,7 @@ This case of squished-to-squished is not (yet) implemented
 Testing maze under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/maze.scm /tmp/larcenous/Stalin/maze.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -7110,6 +7362,7 @@ Argument to STRUCTURE-REF will not be a structure of the correct type
 Testing mazefun under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/mazefun.scm /tmp/larcenous/Stalin/mazefun.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -7269,38 +7522,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  2% - Fast tree shake
+     1 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     4 - 10% - Performing flow analysis
+     2 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-    14 - 37% - Determining which call sites to split
+     8 - 37% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
+     0 -  2% - Determining which environments are called more than once
      0 -  0% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  4% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     6 - 15% - Performing lightweight closure conversion
+     2 - 11% - Performing lightweight closure conversion
      1 -  3% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  3% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     2 -  4% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -7309,24 +7562,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 4.890000000013969838619232177734375 seconds (4.88999999999999968025576890795491635799407958984375) for mazefun:11:11:10000
-+!CSVLINE!+stalin-unknown,mazefun:11:11:10000,4.890000000013969838619232177734375
+Elapsed time: 2.079999999958090484142303466796875 seconds (2.0800000000000000710542735760100185871124267578125) for mazefun:11:11:10000
++!CSVLINE!+stalin-unknown,mazefun:11:11:10000,2.079999999958090484142303466796875
 
-real	0m4.894s
-user	0m4.584s
-sys	0m0.210s
+real	0m2.083s
+user	0m3.071s
+sys	0m0.123s
 
 Testing nqueens under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/nqueens.scm /tmp/larcenous/Stalin/nqueens.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -7482,16 +7736,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 -  9% - Performing flow analysis
+     1 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     5 - 17% - Determining which call sites to split
+     3 - 18% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -7499,21 +7753,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     6 - 21% - Determining escaping types
+     3 - 19% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     0 -  1% - Determining which environments are recursive
-     1 -  4% - Determining which environments are reentrant
+     0 -  2% - Determining which environments are recursive
+     1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 13% - Performing lightweight closure conversion
+     1 -  9% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -7525,22 +7779,23 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running nqueens:13:10
-Elapsed time: 6.119999999995343387126922607421875 seconds (6.12000000000000010658141036401502788066864013671875) for nqueens:13:10
-+!CSVLINE!+stalin-unknown,nqueens:13:10,6.119999999995343387126922607421875
+Elapsed time: 3.92999999993480741977691650390625 seconds (3.9300000000000000710542735760100185871124267578125) for nqueens:13:10
++!CSVLINE!+stalin-unknown,nqueens:13:10,3.92999999993480741977691650390625
 
-real	0m6.142s
-user	0m5.961s
-sys	0m0.038s
+real	0m3.930s
+user	0m3.929s
+sys	0m0.000s
 +!CSVLINE!+stalin,nqueens,CRASHED
 
 Testing paraffins under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/paraffins.scm /tmp/larcenous/Stalin/paraffins.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -7694,40 +7949,40 @@ Generating C code
 Writing database
 Compiling C code
 Compilation time summary (in CPU seconds)
-     0 -  0% - Reading source
-     0 -  0% - Expanding macros
-     1 -  3% - Fast tree shake
+     0 -  1% - Reading source
+     0 -  1% - Expanding macros
+     1 -  4% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 10% - Performing flow analysis
+     1 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     6 - 23% - Determining which call sites to split
+     4 - 24% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     5 - 18% - Performing lightweight closure conversion
+     2 - 13% - Performing lightweight closure conversion
      1 -  5% - Determining parents
-     0 -  2% - Determining which expressions need conversion to CPS
+     0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  3% - Determining which environments have external continuation calls
-     1 -  5% - Determining blocked environments
+     0 -  3% - Determining which environments have external continuation calls
+     1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     2 -  6% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -7736,25 +7991,26 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running paraffins:23:10
-Elapsed time: 2.269999999902211129665374755859375 seconds (2.270000000000000017763568394002504646778106689453125) for paraffins:23:10
-+!CSVLINE!+stalin-unknown,paraffins:23:10,2.269999999902211129665374755859375
+Elapsed time: 1.559999999939464032649993896484375 seconds (1.560000000000000053290705182007513940334320068359375) for paraffins:23:10
++!CSVLINE!+stalin-unknown,paraffins:23:10,1.559999999939464032649993896484375
 
-real	0m2.279s
-user	0m2.228s
-sys	0m0.101s
+real	0m1.573s
+user	0m1.821s
+sys	0m0.085s
 +!CSVLINE!+stalin,paraffins,CRASHED
 
 Testing parsing under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/parsing.scm /tmp/larcenous/Stalin/parsing.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -7930,47 +8186,47 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  0% - Fast tree shake
+     0 -  0% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-    12 -  5% - Performing flow analysis
+     6 -  5% - Performing flow analysis
      0 -  0% - Enumerating call sites
      1 -  0% - Determining which types and type sets are used
-    47 - 21% - Determining which call sites to split
+    27 - 23% - Determining which call sites to split
      0 -  0% - Computing call graph
-     6 -  2% - Determining which environments are called more than once
-     2 -  1% - Determining which variables are referenced
+     2 -  2% - Determining which environments are called more than once
+     1 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     9 -  4% - Determining escaping types
+     5 -  4% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     4 -  2% - Determining which environments are recursive
-    13 -  6% - Determining which environments are reentrant
+     1 -  1% - Determining which environments are recursive
+     4 -  3% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-    16 -  7% - Performing lightweight closure conversion
-    61 - 27% - Determining parents
-     2 -  1% - Determining which expressions need conversion to CPS
-     2 -  1% - Determining environment distances from root
+     9 -  7% - Performing lightweight closure conversion
+    33 - 28% - Determining parents
+     1 -  1% - Determining which expressions need conversion to CPS
+     1 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     5 -  2% - Determining which environments have external continuation calls
-    14 -  6% - Determining blocked environments
-     3 -  1% - Determining which environments need to pass parameters globally
+     3 -  3% - Determining which environments have external continuation calls
+     5 -  4% - Determining blocked environments
+     1 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     9 -  4% - Applying closed-world assumption
+     8 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
-    11 -  5% - Determining which environments have regions
+     6 -  5% - Determining which environments have regions
      0 -  0% - Determining which type sets are squeezable
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     4 -  2% - Generating code
+     2 -  2% - Generating code
      0 -  0% - Removing unused declarations
      0 -  0% - Removing unused labels
      1 -  1% - Generating C code
@@ -7978,23 +8234,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running parsing:2500
-Elapsed time: 1.25e1 seconds (1.25e1) for parsing:2500
-+!CSVLINE!+stalin-unknown,parsing:2500,1.25e1
+Elapsed time: 5.990000000107102096080780029296875 seconds (5.9900000000000002131628207280300557613372802734375) for parsing:2500
++!CSVLINE!+stalin-unknown,parsing:2500,5.990000000107102096080780029296875
 
-real	0m12.529s
-user	0m12.465s
-sys	0m0.013s
+real	0m5.991s
+user	0m6.185s
+sys	0m0.017s
 +!CSVLINE!+stalin,parsing,CRASHED
 
 Testing peval under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
-./bench: line 386: 28671 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+stalin_comp /tmp/larcenous/Stalin/peval.scm /tmp/larcenous/Stalin/peval.exe
+./bench: line 387:  1529 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,peval,COMPILEERROR
 
 Testing primes under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/primes.scm /tmp/larcenous/Stalin/primes.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -8160,10 +8418,10 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 -  4% - Performing flow analysis
+     1 -  5% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     5 -  9% - Determining which call sites to split
+     3 - 10% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  2% - Determining which environments are called more than once
      0 -  0% - Determining which variables are referenced
@@ -8171,21 +8429,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     8 - 15% - Determining escaping types
+     4 - 14% - Determining escaping types
      0 -  1% - Determining which environments have unique call sites
-     7 - 11% - Determining which environments are recursive
-    21 - 36% - Determining which environments are reentrant
-     1 -  1% - Asserting uniqueness
-     3 -  6% - Performing lightweight closure conversion
+     3 - 11% - Determining which environments are recursive
+    11 - 35% - Determining which environments are reentrant
+     0 -  1% - Asserting uniqueness
+     1 -  4% - Performing lightweight closure conversion
      1 -  2% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  0% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  1% - Determining which environments have external continuation calls
+     0 -  1% - Determining which environments have external continuation calls
      1 -  2% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  2% - Applying closed-world assumption
+     1 -  3% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -8197,21 +8455,22 @@ Compilation time summary (in CPU seconds)
      0 -  1% - Generating code
      0 -  0% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  1% - Generating C code
+     0 -  1% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running primes:1000:10000
-Elapsed time: 1.339999999967403709888458251953125 seconds (1.3400000000000000799360577730112709105014801025390625) for primes:1000:10000
-+!CSVLINE!+stalin-unknown,primes:1000:10000,1.339999999967403709888458251953125
+Elapsed time: 7.8000000002793967723846435546875e-1 seconds (7.800000000000000710542735760100185871124267578125e-1) for primes:1000:10000
++!CSVLINE!+stalin-unknown,primes:1000:10000,7.8000000002793967723846435546875e-1
 
-real	0m1.341s
-user	0m1.314s
-sys	0m0.013s
+real	0m0.776s
+user	0m0.883s
+sys	0m0.004s
 
 Testing quicksort under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/quicksort.scm /tmp/larcenous/Stalin/quicksort.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -8371,38 +8630,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  2% - Fast tree shake
+     1 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 11% - Performing flow analysis
+     2 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  2% - Determining which types and type sets are used
-     7 - 26% - Determining which call sites to split
+     0 -  2% - Determining which types and type sets are used
+     4 - 27% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  3% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  5% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 14% - Performing lightweight closure conversion
-     1 -  5% - Determining parents
+     2 - 11% - Performing lightweight closure conversion
+     1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -8411,44 +8670,57 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  3% - Generating code
+     0 -  3% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running quicksort:10000:2500
-Elapsed time: 2.9399999999441206455230712890625 seconds (2.939999999999999857891452847979962825775146484375) for quicksort:10000:2500
-+!CSVLINE!+stalin-unknown,quicksort:10000:2500,2.9399999999441206455230712890625
+Elapsed time: 1.719999999855645000934600830078125 seconds (1.7199999999999999289457264239899814128875732421875) for quicksort:10000:2500
++!CSVLINE!+stalin-unknown,quicksort:10000:2500,1.719999999855645000934600830078125
 
-real	0m2.951s
-user	0m2.823s
-sys	0m0.086s
+real	0m1.722s
+user	0m2.121s
+sys	0m0.058s
 
 Testing scheme under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
-./bench: line 386: 29020 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+stalin_comp /tmp/larcenous/Stalin/scheme.scm /tmp/larcenous/Stalin/scheme.exe
+./bench: line 387:  1622 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,scheme,COMPILEERROR
 
 Testing slatex under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/slatex.scm /tmp/larcenous/Stalin/slatex.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/slatex.exp:196:6436:Unbound variable
 +!CSVLINE!+stalin,slatex,COMPILEERROR
 
+Testing chudnovsky under Stalin
+Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
+Compiling...
+stalin_comp /tmp/larcenous/Stalin/chudnovsky.scm /tmp/larcenous/Stalin/chudnovsky.exe
+Reading source
+Expanding macros
+/tmp/larcenous/Stalin/chudnovsky.exp:71:2556:Unbound variable
++!CSVLINE!+stalin,chudnovsky,COMPILEERROR
+
 Testing nboyer under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
-./bench: line 386: 29283 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+stalin_comp /tmp/larcenous/Stalin/nboyer.scm /tmp/larcenous/Stalin/nboyer.exe
+./bench: line 387:  1678 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,nboyer,COMPILEERROR
 
 Testing sboyer under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/sboyer.scm /tmp/larcenous/Stalin/sboyer.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -8606,16 +8878,16 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  0% - Fast tree shake
+     0 -  0% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
      0 -  0% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-    11 -  4% - Performing flow analysis
+     7 -  4% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     2 -  1% - Determining which types and type sets are used
-     6 -  2% - Determining which call sites to split
+     1 -  1% - Determining which types and type sets are used
+     4 -  2% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  0% - Determining which environments are called more than once
      0 -  0% - Determining which variables are referenced
@@ -8623,21 +8895,21 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-    13 -  5% - Determining escaping types
+     7 -  4% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  0% - Determining which environments are recursive
      1 -  0% - Determining which environments are reentrant
-    76 - 28% - Asserting uniqueness
-    87 - 32% - Performing lightweight closure conversion
+    58 - 30% - Asserting uniqueness
+    60 - 31% - Performing lightweight closure conversion
      1 -  0% - Determining parents
-    28 - 10% - Determining which expressions need conversion to CPS
+    20 - 10% - Determining which expressions need conversion to CPS
      0 -  0% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  0% - Determining which environments have external continuation calls
-     1 -  1% - Determining blocked environments
+     0 -  0% - Determining which environments have external continuation calls
+     1 -  0% - Determining blocked environments
      0 -  0% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-    40 - 15% - Applying closed-world assumption
+    29 - 15% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -8654,17 +8926,18 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running sboyer:5:1
-Elapsed time: 1.450000000069849193096160888671875 seconds (1.45) for sboyer:5:1
-+!CSVLINE!+stalin-unknown,sboyer:5:1,1.450000000069849193096160888671875
+Elapsed time: 9.59999999962747097015380859375e-1 seconds (9.5999999999999996447286321199499070644378662109375e-1) for sboyer:5:1
++!CSVLINE!+stalin-unknown,sboyer:5:1,9.59999999962747097015380859375e-1
 
-real	0m1.455s
-user	0m1.854s
-sys	0m0.050s
+real	0m0.963s
+user	0m1.797s
+sys	0m0.031s
 +!CSVLINE!+stalin,sboyer,CRASHED
 
 Testing gcbench under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/gcbench.scm /tmp/larcenous/Stalin/gcbench.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/gcbench.exp:72:3049:Unbound variable
@@ -8673,6 +8946,7 @@ Expanding macros
 Testing mperm under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/mperm.scm /tmp/larcenous/Stalin/mperm.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -8846,14 +9120,14 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     3 - 11% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     1 -  3% - Determining which types and type sets are used
-     5 - 23% - Determining which call sites to split
+     0 -  3% - Determining which types and type sets are used
+     4 - 23% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  3% - Determining which environments are called more than once
+     0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
@@ -8864,16 +9138,16 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     3 - 14% - Performing lightweight closure conversion
-     1 -  4% - Determining parents
+     2 - 11% - Performing lightweight closure conversion
+     1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  6% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -8882,24 +9156,25 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
-     0 -  1% - Removing unused labels
+     0 -  0% - Removing unused labels
      0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 1.47799999999115261317683689412660896778106689453125e1 seconds (1.47799999999999993605115378159098327159881591796875e1) for mperm:20:10:2:1
-+!CSVLINE!+stalin-unknown,mperm:20:10:2:1,1.47799999999115261317683689412660896778106689453125e1
+Elapsed time: 9.5200000000186264514923095703125 seconds (9.519999999999999573674358543939888477325439453125) for mperm:20:10:2:1
++!CSVLINE!+stalin-unknown,mperm:20:10:2:1,9.5200000000186264514923095703125
 
-real	0m16.341s
-user	0m29.993s
-sys	0m1.922s
+real	0m10.657s
+user	0m29.305s
+sys	0m1.985s
 
 Testing equal under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/equal.scm /tmp/larcenous/Stalin/equal.exe
 Reading source
 Expanding macros
 Fast tree shake
@@ -9061,38 +9336,38 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     1 -  2% - Fast tree shake
+     1 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
-     0 -  0% - In-lining first-order calls to primitive procedures
+     0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     7 - 26% - Performing flow analysis
+     4 - 25% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     4 - 14% - Determining which call sites to split
+     3 - 15% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  2% - Determining which environments are called more than once
+     0 -  2% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     2 -  6% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
-     1 -  5% - Determining which environments are reentrant
+     1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     4 - 13% - Performing lightweight closure conversion
-     1 -  5% - Determining parents
+     2 - 10% - Performing lightweight closure conversion
+     1 -  4% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     1 -  2% - Determining which environments have external continuation calls
+     0 -  2% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  5% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -9101,23 +9376,24 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  2% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
-     1 -  2% - Generating C code
+     0 -  2% - Generating C code
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
-./bench: line 394: 30053 Killed                  "$exe" < "$2"
+./bench: line 395:  1788 Killed                  "$exe" < "$2"
 
-real	5m0.003s
-user	4m59.994s
+real	5m0.006s
+user	5m0.002s
 sys	0m0.000s
 +!CSVLINE!+stalin,equal,ULIMITKILLED
 
 Testing bv2string under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
+stalin_comp /tmp/larcenous/Stalin/bv2string.scm /tmp/larcenous/Stalin/bv2string.exe
 Reading source
 Expanding macros
 /tmp/larcenous/Stalin/bv2string.exp:131:5553:Unbound variable
