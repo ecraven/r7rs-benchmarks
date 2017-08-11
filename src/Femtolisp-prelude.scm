@@ -11,13 +11,13 @@
 (define (this-scheme-implementation-name)
   (string-append "femtolisp-" "unknown"))
 
-(define (round x) x)
+(define (round x) (truncate (if (< x 0) (- x 0.5) (+ x 0.5))))
 
 ;;;; taken from aliases.scm
 ; definitions of standard scheme procedures in terms of femtolisp procedures
 ; sufficient to run the R5RS version of psyntax
 
-(define top-level-bound? bound?)
+;(define top-level-bound? bound?)
 (define (eval-core x) (eval x))
 (define (symbol-value s) (top-level-value s))
 (define (set-symbol-value! s v) (set-top-level-value! s v))
@@ -29,9 +29,9 @@
                        x)))))
 (define (command-line) *argv*)
 
-(define gensym
-  (let (($gensym gensym))
-    (lambda ((x #f)) ($gensym))))
+;(define gensym
+;  (let (($gensym gensym))
+;    (lambda ((x #f)) ($gensym))))
 
 (define-macro (begin0 first . rest)
   `(prog1 ,first ,@rest))
@@ -44,7 +44,8 @@
   (for 0 (- (length v) 1)
        (lambda (i) (aset! v i f)))
   #t)
-(define (vector-map f v) (vector.map f v))
+;(define (vector-map f v) (vector.map f v))
+(define vector-map vector.map)
 
 (define array-ref aref)
 (define (array-set! a obj i0 . idxs)
@@ -65,11 +66,12 @@
 (define remainder mod0)
 (define (inexact x) x)
 (define (exact x)
-  (if (exact? x) x
+  (if (or (exact? x) (= x (truncate x)))
+      (truncate x)
       (error "exact real numbers not supported")))
 (define (exact->inexact x) (double x))
 (define (inexact->exact x)
-  (if (integer-valued? x)
+  (if (or (integer-valued? x) (= x (truncate x)))
       (truncate x)
       (error "exact real numbers not supported")))
 (define (floor x)   (if (< x 0) (truncate (- x 0.5)) (truncate x)))
@@ -79,8 +81,8 @@
 
 (define (char->integer c) (fixnum c))
 (define (integer->char i) (wchar i))
-(define char-upcase char.upcase)
-(define char-downcase char.downcase)
+;(define char-upcase char.upcase)
+;(define char-downcase char.downcase)
 (define char=? eqv?)
 (define char<? <)
 (define char>? >)
@@ -107,6 +109,7 @@
   (string.char s (string.inc s 0 i)))
 
 (define (list->string l) (apply string l))
+
 (define (string->list s)
   (do ((i (sizeof s) i)
        (l '() (cons (string.char s i) l)))
@@ -151,9 +154,9 @@
 (define (current-output-port (p *output-stream*))
   (set! *output-stream* p))
 
-(define (input-port-line p)
-  ; TODO
-  1)
+;(define (input-port-line p)
+;  ; TODO
+;  1)
 
 (define get-datum read)
 (define (put-datum port x)
@@ -243,8 +246,6 @@
   (if (null? lst) zero
       (fold-left f (f zero (car lst)) (cdr lst))))
 
-(define fold-right foldr)
-
 (define (partition pred lst)
   (let ((s (separate pred lst)))
     (values (car s) (cdr s))))
@@ -295,8 +296,8 @@
 (define table-ref get)
 (define table-set! put!)
 (define (read-line (s *input-stream*))
-  (io.flush *output-stream*)
-  (io.discardbuffer s)
+;  (io.flush *output-stream*)
+;  (io.discardbuffer s)
   (io.readline s))
 (define (shell-command s) 1)
 (define (error-exception-message e) (cadr e))
@@ -309,3 +310,69 @@
 
 (define (read-u8) (io.read *input-stream* 'uint8))
 (define modulo mod)
+
+;; -- added by e to make more of the benchmarks run...
+
+;; -- missing expt, gcd, lcm, exact-integer?, write-string
+
+(define (square x) (* x x))
+(define (expt b p)
+  (cond ((= p 0) 1)
+        ((= b 0) 0)
+        ((even? p) (square (expt b (div0 p 2))))
+        (#t (* b (expt b (- p 1))))))
+
+(define (gcd a b)
+  (cond ((= a 0) b)
+        ((= b 0) a)
+        ((< a b)  (gcd a (- b a)))
+        (#t       (gcd b (- a b)))))
+
+(define exact-integer? integer?)
+
+(define (write-string s . opts)
+  (let ((port (if (null? opts) *standard-output* (car opts))))
+    (apply io.write port s (cdr opts))))
+
+(define (lcm x y)
+  (quotient (abs (* x y)) (gcd x y)))
+
+;; --  call/cc hack to make some tests run
+;;
+(define (call-with-current-continuation fun)
+  (let ((tag (list 'tag))
+        (res #f))
+    (trycatch (set! res (fun (lambda (r) (set! res r) (raise tag))))
+      (lambda (e) (if (eq? e tag) #t (raise e))))
+    res))
+
+;; -- it pains me to write sqrt here, it really should be a builtin
+;;
+(define (sqrt x)
+  (if (<= x 0)
+    x
+    (let loop ((i 13) (guess 2.0))
+     (if (<= i 0)
+       guess
+       (loop (- i 1) (/ (+ guess (/ x guess)) 2))))))
+
+;; -- it pains me to write sin here, it really should be a builtin
+;; -- see https://stackoverflow.com/questions/18646634/scheme-new-sin-x-function
+;;
+(define (sin x)
+  (let* ((last-value 1)
+        (n-odd-fact ;; calculates the next odd factorial
+          (lambda (j)
+            (begin (set! last-value (* j (- j 1) last-value))
+                    last-value)))) ;;memioze(ish) last call
+    (let loop ((i 0) (sum x))
+      (let ((term (if (= i 0)
+                    0.0
+                    (* (if (odd? i) -1 1)
+                       (/ (expt x (+ 1 (* 2 i)))
+                          (n-odd-fact (+ 1 (* 2 i))))))))
+         (if (= i 20) ;; bigger than 20 is hard for factorial, good enough for accuracy
+             (double sum)
+             (loop (+ i 1) (+ sum term)))))))
+
+;; -- e
