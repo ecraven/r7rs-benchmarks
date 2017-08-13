@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking Rhizome on Thu 8 Jun 09:28:48 CEST 2017 under Linux nexion 4.11.3-1-ARCH #1 SMP PREEMPT Sun May 28 10:40:17 CEST 2017 x86_64 GNU/Linux
+Benchmarking Rhizome on Sun 13 Aug 00:54:28 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -14,11 +14,11 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_browse.exe.c
 gcc -m32 -o browse.exe s_browse.exe.o browse.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running browse:2000
-Elapsed time: 45.561402 seconds (45.561) for browse:2000
-+!CSVLINE!+rhizome-unknown,browse:2000,45.561402
+Elapsed time: 60.395144 seconds (60.395) for browse:2000
++!CSVLINE!+rhizome-unknown,browse:2000,60.395144
 
-real	0m45.568s
-user	0m45.564s
+real	1m0.404s
+user	1m0.401s
 sys	0m0.003s
 
 Testing deriv under Rhizome
@@ -33,12 +33,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_deriv.exe.c
 gcc -m32 -o deriv.exe s_deriv.exe.o deriv.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running deriv:10000000
-Elapsed time: 22.917811 seconds (22.918) for deriv:10000000
-+!CSVLINE!+rhizome-unknown,deriv:10000000,22.917811
+Elapsed time: 28.644374 seconds (28.644) for deriv:10000000
++!CSVLINE!+rhizome-unknown,deriv:10000000,28.644374
 
-real	0m22.921s
-user	0m22.921s
-sys	0m0.000s
+real	0m28.648s
+user	0m28.645s
+sys	0m0.003s
 
 Testing destruc under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -72,12 +72,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_diviter.exe.c
 gcc -m32 -o diviter.exe s_diviter.exe.o diviter.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running diviter:1000:1000000
-Elapsed time: 35.865336 seconds (35.865) for diviter:1000:1000000
-+!CSVLINE!+rhizome-unknown,diviter:1000:1000000,35.865336
+Elapsed time: 48.797273 seconds (48.797) for diviter:1000:1000000
++!CSVLINE!+rhizome-unknown,diviter:1000:1000000,48.797273
 
-real	0m35.869s
-user	0m35.869s
-sys	0m0.000s
+real	0m48.801s
+user	0m48.795s
+sys	0m0.007s
 
 Testing divrec under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -91,11 +91,11 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_divrec.exe.c
 gcc -m32 -o divrec.exe s_divrec.exe.o divrec.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running divrec:1000:1000000
-Elapsed time: 40.942683 seconds (40.943) for divrec:1000:1000000
-+!CSVLINE!+rhizome-unknown,divrec:1000:1000000,40.942683
+Elapsed time: 53.689171 seconds (53.689) for divrec:1000:1000000
++!CSVLINE!+rhizome-unknown,divrec:1000:1000000,53.689171
 
-real	0m40.947s
-user	0m40.946s
+real	0m53.693s
+user	0m53.694s
 sys	0m0.000s
 
 Testing puzzle under Rhizome
@@ -110,12 +110,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_puzzle.exe.c
 gcc -m32 -o puzzle.exe s_puzzle.exe.o puzzle.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running puzzle:1000
-Elapsed time: 89.14966200000001 seconds (89.15000000000001) for puzzle:1000
-+!CSVLINE!+rhizome-unknown,puzzle:1000,89.14966200000001
+Elapsed time: 113.228673 seconds (113.229) for puzzle:1000
++!CSVLINE!+rhizome-unknown,puzzle:1000,113.228673
 
-real	1m29.153s
-user	1m29.145s
-sys	0m0.007s
+real	1m53.232s
+user	1m53.189s
+sys	0m0.043s
 
 Testing triangl under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -129,12 +129,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_triangl.exe.c
 gcc -m32 -o triangl.exe s_triangl.exe.o triangl.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running triangl:22:1:50
-Elapsed time: 61.804937 seconds (61.805) for triangl:22:1:50
-+!CSVLINE!+rhizome-unknown,triangl:22:1:50,61.804937
+Elapsed time: 80.68494700000001 seconds (80.685) for triangl:22:1:50
++!CSVLINE!+rhizome-unknown,triangl:22:1:50,80.68494700000001
 
-real	1m1.808s
-user	1m1.807s
-sys	0m0.000s
+real	1m20.688s
+user	1m20.681s
+sys	0m0.007s
 
 Testing tak under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -148,12 +148,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_tak.exe.c
 gcc -m32 -o tak.exe s_tak.exe.o tak.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running tak:40:20:11:1
-Elapsed time: 66.71779000000001 seconds (66.718) for tak:40:20:11:1
-+!CSVLINE!+rhizome-unknown,tak:40:20:11:1,66.71779000000001
+Elapsed time: 88.721384 seconds (88.721) for tak:40:20:11:1
++!CSVLINE!+rhizome-unknown,tak:40:20:11:1,88.721384
 
-real	1m6.721s
-user	1m6.707s
-sys	0m0.014s
+real	1m28.725s
+user	1m28.705s
+sys	0m0.020s
 
 Testing takl under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -167,12 +167,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_takl.exe.c
 gcc -m32 -o takl.exe s_takl.exe.o takl.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running takl:40:20:12:1
-Elapsed time: 201.978401 seconds (201.978) for takl:40:20:12:1
-+!CSVLINE!+rhizome-unknown,takl:40:20:12:1,201.978401
+Elapsed time: 413.800706 seconds (413.801) for takl:40:20:12:1
++!CSVLINE!+rhizome-unknown,takl:40:20:12:1,413.800706
 
-real	3m21.982s
-user	3m21.952s
-sys	0m0.027s
+real	6m53.813s
+user	4m30.459s
+sys	0m0.520s
 
 Testing ntakl under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -186,12 +186,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_ntakl.exe.c
 gcc -m32 -o ntakl.exe s_ntakl.exe.o ntakl.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 154.646139 seconds (154.646) for ntakl:40:20:12:1
-+!CSVLINE!+rhizome-unknown,ntakl:40:20:12:1,154.646139
+Elapsed time: 215.703682 seconds (215.704) for ntakl:40:20:12:1
++!CSVLINE!+rhizome-unknown,ntakl:40:20:12:1,215.703682
 
-real	2m34.650s
-user	2m34.627s
-sys	0m0.020s
+real	3m35.708s
+user	3m35.626s
+sys	0m0.080s
 
 Testing cpstak under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -205,12 +205,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_cpstak.exe.c
 gcc -m32 -o cpstak.exe s_cpstak.exe.o cpstak.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 71.36586899999999 seconds (71.366) for cpstak:40:20:11:1
-+!CSVLINE!+rhizome-unknown,cpstak:40:20:11:1,71.36586899999999
+Elapsed time: 88.536145 seconds (88.536) for cpstak:40:20:11:1
++!CSVLINE!+rhizome-unknown,cpstak:40:20:11:1,88.536145
 
-real	1m11.369s
-user	1m11.362s
-sys	0m0.007s
+real	1m28.540s
+user	1m28.508s
+sys	0m0.030s
 
 Testing ctak under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -224,12 +224,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_ctak.exe.c
 gcc -m32 -o ctak.exe s_ctak.exe.o ctak.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 7.326881 seconds (7.327) for ctak:32:16:8:1
-+!CSVLINE!+rhizome-unknown,ctak:32:16:8:1,7.326881
+Elapsed time: 8.811978 seconds (8.811999999999999) for ctak:32:16:8:1
++!CSVLINE!+rhizome-unknown,ctak:32:16:8:1,8.811978
 
-real	0m7.330s
-user	0m7.330s
-sys	0m0.000s
+real	0m8.817s
+user	0m8.810s
+sys	0m0.007s
 
 Testing fib under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -243,12 +243,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_fib.exe.c
 gcc -m32 -o fib.exe s_fib.exe.o fib.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running fib:40:5
-Elapsed time: 121.881274 seconds (121.881) for fib:40:5
-+!CSVLINE!+rhizome-unknown,fib:40:5,121.881274
+Elapsed time: 149.099426 seconds (149.099) for fib:40:5
++!CSVLINE!+rhizome-unknown,fib:40:5,149.099426
 
-real	2m1.885s
-user	2m1.870s
-sys	0m0.013s
+real	2m29.103s
+user	2m29.038s
+sys	0m0.063s
 
 Testing fibc under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -262,12 +262,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_fibc.exe.c
 gcc -m32 -o fibc.exe s_fibc.exe.o fibc.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running fibc:30:10
-Elapsed time: 12.791366 seconds (12.791) for fibc:30:10
-+!CSVLINE!+rhizome-unknown,fibc:30:10,12.791366
+Elapsed time: 15.811673 seconds (15.812) for fibc:30:10
++!CSVLINE!+rhizome-unknown,fibc:30:10,15.811673
 
-real	0m12.795s
-user	0m12.794s
-sys	0m0.000s
+real	0m15.815s
+user	0m15.812s
+sys	0m0.003s
 
 Testing fibfp under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -281,12 +281,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_fibfp.exe.c
 gcc -m32 -o fibfp.exe s_fibfp.exe.o fibfp.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running fibfp:35.:10
-Elapsed time: 42.128336 seconds (42.128) for fibfp:35.:10
-+!CSVLINE!+rhizome-unknown,fibfp:35.:10,42.128336
+Elapsed time: 48.52730500000001 seconds (48.527) for fibfp:35.:10
++!CSVLINE!+rhizome-unknown,fibfp:35.:10,48.52730500000001
 
-real	0m42.132s
-user	0m42.128s
-sys	0m0.003s
+real	0m48.531s
+user	0m48.517s
+sys	0m0.013s
 
 Testing sum under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -300,12 +300,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_sum.exe.c
 gcc -m32 -o sum.exe s_sum.exe.o sum.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running sum:10000:200000
-Elapsed time: 148.413279 seconds (148.413) for sum:10000:200000
-+!CSVLINE!+rhizome-unknown,sum:10000:200000,148.413279
+Elapsed time: 191.326439 seconds (191.326) for sum:10000:200000
++!CSVLINE!+rhizome-unknown,sum:10000:200000,191.326439
 
-real	2m28.417s
-user	2m28.401s
-sys	0m0.013s
+real	3m11.330s
+user	3m11.296s
+sys	0m0.033s
 
 Testing sumfp under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -319,12 +319,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_sumfp.exe.c
 gcc -m32 -o sumfp.exe s_sumfp.exe.o sumfp.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running sumfp:1000000.:500
-Elapsed time: 73.502804 seconds (73.503) for sumfp:1000000.:500
-+!CSVLINE!+rhizome-unknown,sumfp:1000000.:500,73.502804
+Elapsed time: 111.945983 seconds (111.947) for sumfp:1000000.:500
++!CSVLINE!+rhizome-unknown,sumfp:1000000.:500,111.945983
 
-real	1m13.506s
-user	1m13.505s
-sys	0m0.000s
+real	1m51.963s
+user	1m27.433s
+sys	0m0.087s
 
 Testing fft under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -341,8 +341,8 @@ Running fft:65536:100
 
 Error in top level procedure.
 
-real	0m0.004s
-user	0m0.004s
+real	0m0.006s
+user	0m0.006s
 sys	0m0.000s
 +!CSVLINE!+rhizome,fft,CRASHED
 
@@ -361,8 +361,8 @@ Running mbrot:75:1000
 
 Error in top level procedure.
 
-real	0m0.003s
-user	0m0.003s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+rhizome,mbrot,CRASHED
 
@@ -381,8 +381,8 @@ Running mbrotZ:75:1000
 
 Error in top level procedure.
 
-real	0m0.003s
-user	0m0.003s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+rhizome,mbrotZ,CRASHED
 
@@ -398,12 +398,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_nucleic.exe.c
 gcc -m32 -o nucleic.exe s_nucleic.exe.o nucleic.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running nucleic:50
-Elapsed time: 42.64039 seconds (42.64) for nucleic:50
-+!CSVLINE!+rhizome-unknown,nucleic:50,42.64039
+Elapsed time: 48.682754 seconds (48.683) for nucleic:50
++!CSVLINE!+rhizome-unknown,nucleic:50,48.682754
 
-real	0m42.644s
-user	0m42.627s
-sys	0m0.017s
+real	0m48.687s
+user	0m48.612s
+sys	0m0.073s
 
 Testing pi under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -421,8 +421,8 @@ Running pi:50:500:50:2
 Error in top level procedure.
 
 real	0m0.004s
-user	0m0.000s
-sys	0m0.004s
+user	0m0.004s
+sys	0m0.000s
 +!CSVLINE!+rhizome,pi,CRASHED
 
 Testing pnpoly under Rhizome
@@ -440,9 +440,9 @@ Running pnpoly:1000000
 
 Error in top level procedure.
 
-real	0m0.003s
-user	0m0.000s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
 +!CSVLINE!+rhizome,pnpoly,CRASHED
 
 Testing ray under Rhizome
@@ -497,12 +497,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_ack.exe.c
 gcc -m32 -o ack.exe s_ack.exe.o ack.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running ack:3:12:2
-Elapsed time: 178.537863 seconds (178.538) for ack:3:12:2
-+!CSVLINE!+rhizome-unknown,ack:3:12:2,178.537863
+Elapsed time: 401.301289 seconds (401.303) for ack:3:12:2
++!CSVLINE!+rhizome-unknown,ack:3:12:2,401.301289
 
-real	2m58.541s
-user	2m53.515s
-sys	0m5.024s
+real	6m41.315s
+user	3m25.031s
+sys	0m10.775s
 
 Testing array1 under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -516,12 +516,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_array1.exe.c
 gcc -m32 -o array1.exe s_array1.exe.o array1.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running array1:1000000:500
-Elapsed time: 90.745687 seconds (90.746) for array1:1000000:500
-+!CSVLINE!+rhizome-unknown,array1:1000000:500,90.745687
+Elapsed time: 109.653286 seconds (109.653) for array1:1000000:500
++!CSVLINE!+rhizome-unknown,array1:1000000:500,109.653286
 
-real	1m30.814s
-user	1m30.371s
-sys	0m0.442s
+real	1m49.749s
+user	1m49.235s
+sys	0m0.513s
 
 Testing string under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -535,12 +535,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_string.exe.c
 gcc -m32 -o string.exe s_string.exe.o string.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running string:500000:25
-Elapsed time: 0.195381 seconds (0.195) for string:500000:25
-+!CSVLINE!+rhizome-unknown,string:500000:25,0.195381
+Elapsed time: 0.211769 seconds (0.212) for string:500000:25
++!CSVLINE!+rhizome-unknown,string:500000:25,0.211769
 
-real	0m0.224s
-user	0m0.054s
-sys	0m0.171s
+real	0m0.250s
+user	0m0.027s
+sys	0m0.223s
 
 Testing sum1 under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -558,8 +558,8 @@ Running sum1:25
 Error in top level procedure.
 
 real	0m0.004s
-user	0m0.000s
-sys	0m0.004s
+user	0m0.004s
+sys	0m0.000s
 +!CSVLINE!+rhizome,sum1,CRASHED
 
 Testing cat under Rhizome
@@ -618,8 +618,8 @@ Running wc:inputs/bib:50
 Error in top level procedure.
 
 real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
+user	0m0.000s
+sys	0m0.004s
 +!CSVLINE!+rhizome,wc,CRASHED
 
 Testing read1 under Rhizome
@@ -637,8 +637,8 @@ Running read1:2500
 
 Error in top level procedure.
 
-real	0m0.004s
-user	0m0.004s
+real	0m0.005s
+user	0m0.005s
 sys	0m0.000s
 +!CSVLINE!+rhizome,read1,CRASHED
 
@@ -656,9 +656,9 @@ Running...
 
 Error in top level procedure.
 
-real	0m0.006s
-user	0m0.000s
-sys	0m0.006s
+real	0m0.008s
+user	0m0.008s
+sys	0m0.000s
 +!CSVLINE!+rhizome,compiler,CRASHED
 
 Testing conform under Rhizome
@@ -696,9 +696,9 @@ Running dynamic:500
 
 Error in top level procedure.
 
-real	0m0.004s
-user	0m0.001s
-sys	0m0.003s
+real	0m0.005s
+user	0m0.005s
+sys	0m0.000s
 +!CSVLINE!+rhizome,dynamic,CRASHED
 
 Testing earley under Rhizome
@@ -716,8 +716,8 @@ Running earley:1
 
 Error in top level procedure.
 
-real	0m0.003s
-user	0m0.003s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+rhizome,earley,CRASHED
 
@@ -737,8 +737,8 @@ Running graphs:7:3
 Error in top level procedure.
 
 real	0m0.003s
-user	0m0.000s
-sys	0m0.003s
+user	0m0.003s
+sys	0m0.000s
 +!CSVLINE!+rhizome,graphs,CRASHED
 
 Testing lattice under Rhizome
@@ -753,12 +753,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_lattice.exe.c
 gcc -m32 -o lattice.exe s_lattice.exe.o lattice.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running lattice:44:10
-Elapsed time: 154.047112 seconds (154.047) for lattice:44:10
-+!CSVLINE!+rhizome-unknown,lattice:44:10,154.047112
+Elapsed time: 197.045445 seconds (197.045) for lattice:44:10
++!CSVLINE!+rhizome-unknown,lattice:44:10,197.045445
 
-real	2m34.051s
-user	2m34.028s
-sys	0m0.020s
+real	3m17.049s
+user	3m16.986s
+sys	0m0.063s
 
 Testing matrix under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -775,9 +775,9 @@ Running matrix:5:5:2500
 
 Error in top level procedure.
 
-real	0m0.003s
-user	0m0.000s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.003s
+sys	0m0.000s
 +!CSVLINE!+rhizome,matrix,CRASHED
 
 Testing maze under Rhizome
@@ -812,12 +812,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_mazefun.exe.c
 gcc -m32 -o mazefun.exe s_mazefun.exe.o mazefun.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 66.56098 seconds (66.56100000000001) for mazefun:11:11:10000
-+!CSVLINE!+rhizome-unknown,mazefun:11:11:10000,66.56098
+Elapsed time: 83.33949299999999 seconds (83.339) for mazefun:11:11:10000
++!CSVLINE!+rhizome-unknown,mazefun:11:11:10000,83.33949299999999
 
-real	1m6.565s
-user	1m6.477s
-sys	0m0.087s
+real	1m23.343s
+user	1m23.170s
+sys	0m0.173s
 
 Testing nqueens under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -835,9 +835,9 @@ Running nqueens:13:10
 
 Error in top level procedure.
 
-real	0m0.003s
+real	0m0.004s
 user	0m0.000s
-sys	0m0.003s
+sys	0m0.004s
 +!CSVLINE!+rhizome,nqueens,CRASHED
 
 Testing paraffins under Rhizome
@@ -852,12 +852,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_paraffins.exe.c
 gcc -m32 -o paraffins.exe s_paraffins.exe.o paraffins.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running paraffins:23:10
-Elapsed time: 69.96290499999999 seconds (69.96299999999999) for paraffins:23:10
-+!CSVLINE!+rhizome-unknown,paraffins:23:10,69.96290499999999
+Elapsed time: 76.63524099999999 seconds (76.63500000000001) for paraffins:23:10
++!CSVLINE!+rhizome-unknown,paraffins:23:10,76.63524099999999
 
-real	1m9.967s
-user	1m6.489s
-sys	0m3.477s
+real	1m16.639s
+user	1m12.556s
+sys	0m4.083s
 
 Testing parsing under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -891,12 +891,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_peval.exe.c
 gcc -m32 -o peval.exe s_peval.exe.o peval.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running peval:2000
-Elapsed time: 61.86564199999999 seconds (61.866) for peval:2000
-+!CSVLINE!+rhizome-unknown,peval:2000,61.86564199999999
+Elapsed time: 80.653657 seconds (80.654) for peval:2000
++!CSVLINE!+rhizome-unknown,peval:2000,80.653657
 
-real	1m1.869s
-user	1m1.705s
-sys	0m0.163s
+real	1m20.664s
+user	1m17.058s
+sys	0m0.307s
 
 Testing primes under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -910,12 +910,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_primes.exe.c
 gcc -m32 -o primes.exe s_primes.exe.o primes.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running primes:1000:10000
-Elapsed time: 23.743937 seconds (23.744) for primes:1000:10000
-+!CSVLINE!+rhizome-unknown,primes:1000:10000,23.743937
+Elapsed time: 30.963076 seconds (30.963) for primes:1000:10000
++!CSVLINE!+rhizome-unknown,primes:1000:10000,30.963076
 
-real	0m23.747s
-user	0m23.414s
-sys	0m0.333s
+real	0m30.967s
+user	0m30.506s
+sys	0m0.460s
 
 Testing quicksort under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -932,9 +932,9 @@ Running quicksort:10000:2500
 
 Error in top level procedure.
 
-real	0m0.023s
-user	0m0.020s
-sys	0m0.003s
+real	0m0.038s
+user	0m0.038s
+sys	0m0.000s
 +!CSVLINE!+rhizome,quicksort,CRASHED
 
 Testing scheme under Rhizome
@@ -953,8 +953,8 @@ Running scheme:100000
 Error in top level procedure.
 
 real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
+user	0m0.002s
+sys	0m0.002s
 +!CSVLINE!+rhizome,scheme,CRASHED
 
 Testing slatex under Rhizome
@@ -969,12 +969,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_slatex.exe.c
 gcc -m32 -o slatex.exe s_slatex.exe.o slatex.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running slatex:500
-[inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test]Elapsed time: 0.004937 seconds (0.005) for slatex:500
-+!CSVLINE!+rhizome-unknown,slatex:500,0.004937
+[inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test][inputs/slatex-data/test]Elapsed time: 0.009468000000000001 seconds (0.008999999999999999) for slatex:500
++!CSVLINE!+rhizome-unknown,slatex:500,0.009468000000000001
 
-real	0m0.008s
-user	0m0.004s
-sys	0m0.004s
+real	0m0.013s
+user	0m0.010s
+sys	0m0.003s
 
 Testing chudnovsky under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -1008,12 +1008,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_nboyer.exe.c
 gcc -m32 -o nboyer.exe s_nboyer.exe.o nboyer.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running nboyer:5:1
-Elapsed time: 81.099204 seconds (81.099) for nboyer:5:1
-+!CSVLINE!+rhizome-unknown,nboyer:5:1,81.099204
+Elapsed time: 93.719953 seconds (93.72199999999999) for nboyer:5:1
++!CSVLINE!+rhizome-unknown,nboyer:5:1,93.719953
 
-real	1m21.103s
-user	1m18.211s
-sys	0m2.891s
+real	1m33.733s
+user	1m30.071s
+sys	0m3.330s
 
 Testing sboyer under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -1027,12 +1027,12 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c s_sboyer.exe.c
 gcc -m32 -o sboyer.exe s_sboyer.exe.o sboyer.o -lrhzpisys -lpthread -lm -ldl
 Running...
 Running sboyer:5:1
-Elapsed time: 36.2206 seconds (36.221) for sboyer:5:1
-+!CSVLINE!+rhizome-unknown,sboyer:5:1,36.2206
+Elapsed time: 47.381495 seconds (47.382) for sboyer:5:1
++!CSVLINE!+rhizome-unknown,sboyer:5:1,47.381495
 
-real	0m36.224s
-user	0m36.000s
-sys	0m0.224s
+real	0m47.385s
+user	0m47.165s
+sys	0m0.220s
 
 Testing gcbench under Rhizome
 Including prelude /home/nex/src/r7rs-benchmarks/src/Rhizome-prelude.scm
@@ -1052,8 +1052,8 @@ Running gcbench:20:1
 Error in top level procedure.
 
 real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
+user	0m0.000s
+sys	0m0.003s
 +!CSVLINE!+rhizome,gcbench,CRASHED
 
 Testing mperm under Rhizome
@@ -1067,11 +1067,11 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c mperm.c
 gcc -O2 -m32 -mtune=i686 -falign-functions -c s_mperm.exe.c
 gcc -m32 -o mperm.exe s_mperm.exe.o mperm.o -lrhzpisys -lpthread -lm -ldl
 Running...
-./bench: line 472: 28063 Killed                  "$1" < "$2"
+./bench: line 472: 13290 Killed                  "$1" < "$2"
 
-real	5m0.003s
-user	4m42.670s
-sys	0m17.326s
+real	5m0.004s
+user	4m41.310s
+sys	0m18.690s
 +!CSVLINE!+rhizome,mperm,ULIMITKILLED
 
 Testing equal under Rhizome
@@ -1085,11 +1085,11 @@ gcc -O2 -m32 -mtune=i686 -falign-functions -c equal.c
 gcc -O2 -m32 -mtune=i686 -falign-functions -c s_equal.exe.c
 gcc -m32 -o equal.exe s_equal.exe.o equal.o -lrhzpisys -lpthread -lm -ldl
 Running...
-./bench: line 472: 28128 Killed                  "$1" < "$2"
+./bench: line 472: 13497 Killed                  "$1" < "$2"
 
 real	5m0.001s
-user	4m59.996s
-sys	0m0.000s
+user	4m59.973s
+sys	0m0.027s
 +!CSVLINE!+rhizome,equal,ULIMITKILLED
 
 Testing bv2string under Rhizome
@@ -1107,7 +1107,7 @@ Running bv2string:1000:1000:100
 
 Error in top level procedure.
 
-real	0m0.003s
-user	0m0.003s
+real	0m0.005s
+user	0m0.005s
 sys	0m0.000s
 +!CSVLINE!+rhizome,bv2string,CRASHED
