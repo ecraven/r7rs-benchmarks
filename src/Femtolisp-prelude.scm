@@ -47,6 +47,17 @@
 ;(define (vector-map f v) (vector.map f v))
 (define vector-map vector.map)
 
+(define (make-bytevector n (fill #f))
+  (let ((vec (c-value `(array byte ,n))))
+    (if fill
+        (for 0 (- n 1)
+             (lambda (i) (aset! vec i fill))))
+    vec))
+
+(define bytevector-u8-set! aset!)
+(define utf8->string identity)
+(define string->utf8 identity)
+
 (define array-ref aref)
 (define (array-set! a obj i0 . idxs)
   (if (null? idxs)
@@ -81,8 +92,8 @@
 
 (define (char->integer c) (fixnum c))
 (define (integer->char i) (wchar i))
-;(define char-upcase char.upcase)
-;(define char-downcase char.downcase)
+(define char-upcase char.upcase)
+(define char-downcase char.downcase)
 (define char=? eqv?)
 (define char<? <)
 (define char>? >)
