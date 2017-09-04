@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking MIT on Sun 13 Aug 00:01:08 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
+Benchmarking MIT on Sat 2 Sep 02:05:49 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
@@ -12,12 +12,12 @@ mit_comp /tmp/larcenous/MIT/browse.scm /tmp/larcenous/MIT/browse.com
 ;Compiling file: "/tmp/larcenous/MIT/browse.bin" => "/tmp/larcenous/MIT/browse.com"... done
 Running...
 Running browse:2000
-Elapsed time: 7.434 seconds (8) for browse:2000
-+!CSVLINE!+mit-9.2.1,browse:2000,7.434
+Elapsed time: 7.449 seconds (8) for browse:2000
++!CSVLINE!+mit-9.2.1,browse:2000,7.449
 
-real	0m7.530s
-user	0m6.923s
-sys	0m0.607s
+real	0m7.471s
+user	0m7.261s
+sys	0m0.210s
 
 Testing deriv under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
@@ -27,12 +27,12 @@ mit_comp /tmp/larcenous/MIT/deriv.scm /tmp/larcenous/MIT/deriv.com
 ;Compiling file: "/tmp/larcenous/MIT/deriv.bin" => "/tmp/larcenous/MIT/deriv.com"... done
 Running...
 Running deriv:10000000
-Elapsed time: 7.833 seconds (8) for deriv:10000000
-+!CSVLINE!+mit-9.2.1,deriv:10000000,7.833
+Elapsed time: 6.947 seconds (7) for deriv:10000000
++!CSVLINE!+mit-9.2.1,deriv:10000000,6.947
 
-real	0m7.944s
-user	0m7.278s
-sys	0m0.667s
+real	0m6.969s
+user	0m6.749s
+sys	0m0.220s
 
 Testing destruc under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
@@ -42,12 +42,12 @@ mit_comp /tmp/larcenous/MIT/destruc.scm /tmp/larcenous/MIT/destruc.com
 ;Compiling file: "/tmp/larcenous/MIT/destruc.bin" => "/tmp/larcenous/MIT/destruc.com"... done
 Running...
 Running destruc:600:50:4000
-Elapsed time: 6.606 seconds (6) for destruc:600:50:4000
-+!CSVLINE!+mit-9.2.1,destruc:600:50:4000,6.606
+Elapsed time: 5.865 seconds (6) for destruc:600:50:4000
++!CSVLINE!+mit-9.2.1,destruc:600:50:4000,5.865
 
-real	0m6.682s
-user	0m6.189s
-sys	0m0.493s
+real	0m5.887s
+user	0m5.707s
+sys	0m0.180s
 
 Testing diviter under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
@@ -57,12 +57,12 @@ mit_comp /tmp/larcenous/MIT/diviter.scm /tmp/larcenous/MIT/diviter.com
 ;Compiling file: "/tmp/larcenous/MIT/diviter.bin" => "/tmp/larcenous/MIT/diviter.com"... done
 Running...
 Running diviter:1000:1000000
-Elapsed time: 3.087 seconds (3) for diviter:1000:1000000
-+!CSVLINE!+mit-9.2.1,diviter:1000:1000000,3.087
+Elapsed time: 2.515 seconds (3) for diviter:1000:1000000
++!CSVLINE!+mit-9.2.1,diviter:1000:1000000,2.515
 
-real	0m3.202s
-user	0m2.561s
-sys	0m0.640s
+real	0m2.536s
+user	0m2.303s
+sys	0m0.233s
 
 Testing divrec under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
@@ -72,12 +72,12 @@ mit_comp /tmp/larcenous/MIT/divrec.scm /tmp/larcenous/MIT/divrec.com
 ;Compiling file: "/tmp/larcenous/MIT/divrec.bin" => "/tmp/larcenous/MIT/divrec.com"... done
 Running...
 Running divrec:1000:1000000
-Elapsed time: 4.053 seconds (4) for divrec:1000:1000000
-+!CSVLINE!+mit-9.2.1,divrec:1000:1000000,4.053
+Elapsed time: 3.539 seconds (3) for divrec:1000:1000000
++!CSVLINE!+mit-9.2.1,divrec:1000:1000000,3.539
 
-real	0m4.166s
-user	0m3.519s
-sys	0m0.647s
+real	0m3.561s
+user	0m3.397s
+sys	0m0.163s
 
 Testing puzzle under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
@@ -89,164 +89,315 @@ mit_comp /tmp/larcenous/MIT/puzzle.scm /tmp/larcenous/MIT/puzzle.com
 ;Compiling file: "/tmp/larcenous/MIT/puzzle.bin" => "/tmp/larcenous/MIT/puzzle.com"... done
 Running...
 Running puzzle:1000
-Elapsed time: 13.821 seconds (14) for puzzle:1000
-+!CSVLINE!+mit-9.2.1,puzzle:1000,13.821
+Elapsed time: 12.853 seconds (12) for puzzle:1000
++!CSVLINE!+mit-9.2.1,puzzle:1000,12.853
 
-real	0m13.857s
-user	0m9.730s
-sys	0m4.127s
+real	0m12.870s
+user	0m9.140s
+sys	0m3.730s
 
 Testing triangl under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/triangl.scm /tmp/larcenous/MIT/triangl.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5250 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5251 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,triangl,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/triangl.scm" => "/tmp/larcenous/MIT/triangl.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/triangl.bin" => "/tmp/larcenous/MIT/triangl.com"... done
+Running...
+Running triangl:22:1:50
+Elapsed time: 3.334 seconds (4) for triangl:22:1:50
++!CSVLINE!+mit-9.2.1,triangl:22:1:50,3.334
+
+real	0m3.348s
+user	0m3.345s
+sys	0m0.003s
 
 Testing tak under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/tak.scm /tmp/larcenous/MIT/tak.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5261 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5262 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,tak,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/tak.scm" => "/tmp/larcenous/MIT/tak.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/tak.bin" => "/tmp/larcenous/MIT/tak.com"... done
+Running...
+Running tak:40:20:11:1
+Elapsed time: 2.719 seconds (3) for tak:40:20:11:1
++!CSVLINE!+mit-9.2.1,tak:40:20:11:1,2.719
+
+real	0m2.735s
+user	0m2.728s
+sys	0m0.007s
 
 Testing takl under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/takl.scm /tmp/larcenous/MIT/takl.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5272 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5273 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,takl,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/takl.scm" => "/tmp/larcenous/MIT/takl.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/takl.bin" => "/tmp/larcenous/MIT/takl.com"... done
+Running...
+Running takl:40:20:12:1
+Elapsed time: 6.236 seconds (6) for takl:40:20:12:1
++!CSVLINE!+mit-9.2.1,takl:40:20:12:1,6.236
+
+real	0m6.250s
+user	0m6.246s
+sys	0m0.003s
 
 Testing ntakl under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/ntakl.scm /tmp/larcenous/MIT/ntakl.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5287 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5288 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,ntakl,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/ntakl.scm" => "/tmp/larcenous/MIT/ntakl.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/ntakl.bin" => "/tmp/larcenous/MIT/ntakl.com"... done
+Running...
+Running ntakl:40:20:12:1
+Elapsed time: 6.242 seconds (6) for ntakl:40:20:12:1
++!CSVLINE!+mit-9.2.1,ntakl:40:20:12:1,6.242
+
+real	0m6.260s
+user	0m6.253s
+sys	0m0.007s
 
 Testing cpstak under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/cpstak.scm /tmp/larcenous/MIT/cpstak.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5298 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5299 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,cpstak,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/cpstak.scm" => "/tmp/larcenous/MIT/cpstak.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/cpstak.bin" => "/tmp/larcenous/MIT/cpstak.com"... done
+Running...
+Running cpstak:40:20:11:1
+Elapsed time: 113.879 seconds (113) for cpstak:40:20:11:1
++!CSVLINE!+mit-9.2.1,cpstak:40:20:11:1,113.879
+
+real	1m53.901s
+user	1m53.688s
+sys	0m0.210s
 
 Testing ctak under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/ctak.scm /tmp/larcenous/MIT/ctak.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5309 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5310 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,ctak,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/ctak.scm" => "/tmp/larcenous/MIT/ctak.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/ctak.bin" => "/tmp/larcenous/MIT/ctak.com"... done
+Running...
+Running ctak:32:16:8:1
+Elapsed time: 288.99 seconds (288) for ctak:32:16:8:1
++!CSVLINE!+mit-9.2.1,ctak:32:16:8:1,288.99
+
+real	4m49.010s
+user	2m38.676s
+sys	2m10.327s
 
 Testing fib under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/fib.scm /tmp/larcenous/MIT/fib.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5320 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5321 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,fib,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/fib.scm" => "/tmp/larcenous/MIT/fib.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/fib.bin" => "/tmp/larcenous/MIT/fib.com"... done
+Running...
+Running fib:40:5
+Elapsed time: 6.335 seconds (6) for fib:40:5
++!CSVLINE!+mit-9.2.1,fib:40:5,6.335
+
+real	0m6.349s
+user	0m6.344s
+sys	0m0.004s
 
 Testing fibc under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/fibc.scm /tmp/larcenous/MIT/fibc.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5331 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5332 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,fibc,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/fibc.scm" => "/tmp/larcenous/MIT/fibc.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/fibc.bin" => "/tmp/larcenous/MIT/fibc.com"... done
+Running...
+Running fibc:30:10
+Elapsed time: 171.642 seconds (172) for fibc:30:10
++!CSVLINE!+mit-9.2.1,fibc:30:10,171.642
+
+real	2m51.664s
+user	1m34.875s
+sys	1m16.785s
 
 Testing fibfp under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/fibfp.scm /tmp/larcenous/MIT/fibfp.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5342 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5343 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,fibfp,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/fibfp.scm" => "/tmp/larcenous/MIT/fibfp.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/fibfp.bin" => "/tmp/larcenous/MIT/fibfp.com"... done
+Running...
+Running fibfp:35.:10
+Elapsed time: 8.346 seconds (8) for fibfp:35.:10
++!CSVLINE!+mit-9.2.1,fibfp:35.:10,8.346
+
+real	0m8.372s
+user	0m8.166s
+sys	0m0.207s
 
 Testing sum under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/sum.scm /tmp/larcenous/MIT/sum.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5353 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5354 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,sum,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/sum.scm" => "/tmp/larcenous/MIT/sum.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/sum.bin" => "/tmp/larcenous/MIT/sum.com"... done
+Running...
+Running sum:10000:200000
+Elapsed time: 7.579 seconds (8) for sum:10000:200000
++!CSVLINE!+mit-9.2.1,sum:10000:200000,7.579
+
+real	0m7.593s
+user	0m7.588s
+sys	0m0.004s
 
 Testing sumfp under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/sumfp.scm /tmp/larcenous/MIT/sumfp.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5364 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5365 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,sumfp,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/sumfp.scm" => "/tmp/larcenous/MIT/sumfp.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/sumfp.bin" => "/tmp/larcenous/MIT/sumfp.com"... done
+Running...
+Running sumfp:1000000.:500
+Elapsed time: 16.66 seconds (17) for sumfp:1000000.:500
++!CSVLINE!+mit-9.2.1,sumfp:1000000.:500,16.66
+
+real	0m16.686s
+user	0m16.459s
+sys	0m0.227s
 
 Testing fft under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/fft.scm /tmp/larcenous/MIT/fft.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5379 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5380 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,fft,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/fft.scm" => "/tmp/larcenous/MIT/fft.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/fft.bin" => "/tmp/larcenous/MIT/fft.com"... done
+Running...
+Running fft:65536:100
+Elapsed time: 4.379 seconds (4) for fft:65536:100
++!CSVLINE!+mit-9.2.1,fft:65536:100,4.379
+
+real	0m4.400s
+user	0m4.216s
+sys	0m0.184s
 
 Testing mbrot under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/mbrot.scm /tmp/larcenous/MIT/mbrot.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5390 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5391 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,mbrot,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/mbrot.scm" => "/tmp/larcenous/MIT/mbrot.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/mbrot.bin" => "/tmp/larcenous/MIT/mbrot.com"... done
+Running...
+Running mbrot:75:1000
+Elapsed time: 25.948 seconds (26) for mbrot:75:1000
++!CSVLINE!+mit-9.2.1,mbrot:75:1000,25.948
+
+real	0m25.969s
+user	0m25.802s
+sys	0m0.167s
 
 Testing mbrotZ under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/mbrotZ.scm /tmp/larcenous/MIT/mbrotZ.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5401 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5402 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,mbrotZ,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/mbrotZ.scm" => "/tmp/larcenous/MIT/mbrotZ.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/mbrotZ.bin" => "/tmp/larcenous/MIT/mbrotZ.com"... done
+Running...
+Running mbrotZ:75:1000
+Elapsed time: 24.797 seconds (24) for mbrotZ:75:1000
++!CSVLINE!+mit-9.2.1,mbrotZ:75:1000,24.797
+
+real	0m24.820s
+user	0m24.643s
+sys	0m0.177s
 
 Testing nucleic under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/nucleic.scm /tmp/larcenous/MIT/nucleic.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5412 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5413 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,nucleic,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/nucleic.scm" => "/tmp/larcenous/MIT/nucleic.bin"...
+;Warning: Unreferenced bound variable: partial-inst (|#[unnamed-procedure]| reference)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/nucleic.bin" => "/tmp/larcenous/MIT/nucleic.com"... done
+Running...
+Running nucleic:50
+Elapsed time: 10.65 seconds (11) for nucleic:50
++!CSVLINE!+mit-9.2.1,nucleic:50,10.65
+
+real	0m10.672s
+user	0m10.459s
+sys	0m0.213s
 
 Testing pi under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/pi.scm /tmp/larcenous/MIT/pi.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5423 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5424 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,pi,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/pi.scm" => "/tmp/larcenous/MIT/pi.bin"...
+;Warning: Unreferenced bound variable: r (|#[unnamed-procedure]| square-root)
+;Warning: Unreferenced bound variable: r (|#[unnamed-procedure]| square-root)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/pi.bin" => "/tmp/larcenous/MIT/pi.com"... done
+Running...
+Running pi:50:500:50:2
+;Unbound variable: exact-integer-sqrt
+;To continue, call RESTART with an option number:
+; (RESTART 2) => Define exact-integer-sqrt to a given value.
+; (RESTART 1) => Return to read-eval-print level 1.
+
+2 error> 
+End of input stream reached.
+real	0m0.018s
+user	0m0.011s
+sys	0m0.007s
++!CSVLINE!+mit,pi,CRASHED
 
 Testing pnpoly under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/pnpoly.scm /tmp/larcenous/MIT/pnpoly.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5434 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5435 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,pnpoly,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/pnpoly.scm" => "/tmp/larcenous/MIT/pnpoly.bin"...
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/pnpoly.bin" => "/tmp/larcenous/MIT/pnpoly.com"... done
+Running...
+Running pnpoly:1000000
+Elapsed time: 15.112 seconds (15) for pnpoly:1000000
++!CSVLINE!+mit-9.2.1,pnpoly:1000000,15.112
+
+real	0m15.134s
+user	0m14.933s
+sys	0m0.200s
 
 Testing ray under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/ray.scm /tmp/larcenous/MIT/ray.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5445 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5446 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,ray,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/ray.scm" => "/tmp/larcenous/MIT/ray.bin"...
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/ray.bin" => "/tmp/larcenous/MIT/ray.com"... done
+Running...
+Running ray:50
+Elapsed time: 23.62 seconds (23) for ray:50
++!CSVLINE!+mit-9.2.1,ray:50,23.62
+
+real	0m23.640s
+user	0m23.448s
+sys	0m0.190s
 
 Testing simplex under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/simplex.scm /tmp/larcenous/MIT/simplex.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5456 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5457 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,simplex,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/simplex.scm" => "/tmp/larcenous/MIT/simplex.bin"...
+;Warning: Unreferenced bound variable: input (test)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/simplex.bin" => "/tmp/larcenous/MIT/simplex.com"... done
+Running...
+Running simplex:1000000
+Elapsed time: 8.128 seconds (8) for simplex:1000000
++!CSVLINE!+mit-9.2.1,simplex:1000000,8.128
+
+real	0m8.149s
+user	0m7.959s
+sys	0m0.190s
 
 Testing ack under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
@@ -256,257 +407,759 @@ mit_comp /tmp/larcenous/MIT/ack.scm /tmp/larcenous/MIT/ack.com
 ;Compiling file: "/tmp/larcenous/MIT/ack.bin" => "/tmp/larcenous/MIT/ack.com"... done
 Running...
 Running ack:3:12:2
-Elapsed time: 5.3 seconds (6) for ack:3:12:2
-+!CSVLINE!+mit-9.2.1,ack:3:12:2,5.3
+Elapsed time: 4.933 seconds (5) for ack:3:12:2
++!CSVLINE!+mit-9.2.1,ack:3:12:2,4.933
 
-real	0m5.314s
-user	0m5.311s
-sys	0m0.003s
+real	0m4.951s
+user	0m4.944s
+sys	0m0.007s
 
 Testing array1 under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/array1.scm /tmp/larcenous/MIT/array1.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5508 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5509 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,array1,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/array1.scm" => "/tmp/larcenous/MIT/array1.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/array1.bin" => "/tmp/larcenous/MIT/array1.com"... done
+Running...
+Running array1:1000000:500
+Elapsed time: 4.854 seconds (5) for array1:1000000:500
++!CSVLINE!+mit-9.2.1,array1:1000000:500,4.854
+
+real	0m4.875s
+user	0m4.692s
+sys	0m0.183s
 
 Testing string under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/string.scm /tmp/larcenous/MIT/string.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5522 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5523 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,string,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/string.scm" => "/tmp/larcenous/MIT/string.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/string.bin" => "/tmp/larcenous/MIT/string.com"... done
+Running...
+Running string:500000:25
+Elapsed time: .349 seconds (0) for string:500000:25
++!CSVLINE!+mit-9.2.1,string:500000:25,.349
+
+real	0m0.365s
+user	0m0.306s
+sys	0m0.060s
 
 Testing sum1 under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/sum1.scm /tmp/larcenous/MIT/sum1.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5533 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5534 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,sum1,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/sum1.scm" => "/tmp/larcenous/MIT/sum1.bin"...
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/sum1.bin" => "/tmp/larcenous/MIT/sum1.com"... done
+Running...
+Running sum1:25
+Elapsed time: 33.526 seconds (34) for sum1:25
++!CSVLINE!+mit-9.2.1,sum1:25,33.526
+
+real	0m33.547s
+user	0m33.343s
+sys	0m0.203s
 
 Testing cat under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/cat.scm /tmp/larcenous/MIT/cat.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5544 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5545 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,cat,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/cat.scm" => "/tmp/larcenous/MIT/cat.bin"...
+;Warning: Unreferenced bound variable: result (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| main)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/cat.bin" => "/tmp/larcenous/MIT/cat.com"... done
+Running...
+Running cat:50
+Elapsed time: 31.419 seconds (31) for cat:50
++!CSVLINE!+mit-9.2.1,cat:50,31.419
+
+real	0m31.433s
+user	0m31.307s
+sys	0m0.120s
 
 Testing tail under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/tail.scm /tmp/larcenous/MIT/tail.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5555 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5556 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,tail,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/tail.scm" => "/tmp/larcenous/MIT/tail.bin"...
+;Warning: Unreferenced bound variable: result (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| main)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/tail.bin" => "/tmp/larcenous/MIT/tail.com"... done
+Running...
+Running tail:25
+Elapsed time: 10.954 seconds (11) for tail:25
++!CSVLINE!+mit-9.2.1,tail:25,10.954
+
+real	0m10.972s
+user	0m10.780s
+sys	0m0.190s
 
 Testing wc under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/wc.scm /tmp/larcenous/MIT/wc.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5566 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5567 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,wc,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/wc.scm" => "/tmp/larcenous/MIT/wc.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/wc.bin" => "/tmp/larcenous/MIT/wc.com"... done
+Running...
+Running wc:inputs/bib:50
+Elapsed time: 15.348 seconds (16) for wc:inputs/bib:50
++!CSVLINE!+mit-9.2.1,wc:inputs/bib:50,15.348
+
+real	0m15.362s
+user	0m15.342s
+sys	0m0.020s
 
 Testing read1 under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/read1.scm /tmp/larcenous/MIT/read1.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5577 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5578 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,read1,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/read1.scm" => "/tmp/larcenous/MIT/read1.bin"...
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/read1.bin" => "/tmp/larcenous/MIT/read1.com"... done
+Running...
+Running read1:2500
+Elapsed time: 11.362 seconds (11) for read1:2500
++!CSVLINE!+mit-9.2.1,read1:2500,11.362
+
+real	0m11.380s
+user	0m11.257s
+sys	0m0.123s
 
 Testing compiler under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/compiler.scm /tmp/larcenous/MIT/compiler.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5588 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5589 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,compiler,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/compiler.scm" => "/tmp/larcenous/MIT/compiler.bin"...
+;Warning: Unreferenced bound variable: expr (scheme-global-eval)
+;Warning: Unreferenced bound variable: err (scheme-global-eval)
+;Warning: Unreferenced bound variable: filename (pinpoint-error)
+;Warning: Unreferenced bound variable: line (pinpoint-error)
+;Warning: Unreferenced bound variable: char (pinpoint-error)
+;Warning: Unreferenced bound variable: env (|#[unnamed-procedure]| env-lookup-macro)
+;Warning: Unreferenced bound variable: name (|#[unnamed-procedure]| env-lookup-macro)
+;Warning: Unreferenced bound variable: source (flag-decl)
+;Warning: Unreferenced bound variable: source (parameterized-decl)
+;Warning: Unreferenced bound variable: source (boolean-decl)
+;Warning: Unreferenced bound variable: source (namable-decl)
+;Warning: Unreferenced bound variable: source (namable-boolean-decl)
+;Warning: Unreferenced bound variable: source (check-arg-and-result-types)
+;Warning: Unreferenced bound variable: use (pt-c-procedure)
+;Warning: Unreferenced bound variable: use (pt-quasiquote)
+;Warning: Unreferenced bound variable: use (pt-set!)
+;Warning: Unreferenced bound variable: var (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| loop1 |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: decl (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| pt-combination)
+;Warning: Unreferenced bound variable: use (pt-combination)
+;Warning: Unreferenced bound variable: use (pt-delay)
+;Warning: Unreferenced bound variable: use (pt-future)
+;Warning: Unreferenced bound variable: decls (|#[unnamed-procedure]| |#[let-procedure]| make-proc-obj)
+;Warning: Unreferenced bound variable: x (|#[unnamed-procedure]| |#[let-procedure]| generate-report)
+;Warning: Unreferenced bound variable: info-port (trace-unindent)
+;Warning: Unreferenced bound variable: lbl (|#[let-procedure]| gen-proc)
+;Warning: Unreferenced bound variable: live (|#[let-procedure]| gen-proc)
+;Warning: Unreferenced bound variable: strict-pat (predicate-test)
+;Warning: Unreferenced bound variable: strict-pat (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: best-payoff (|#[unnamed-procedure]| loop |#[let-procedure]| |#[let-procedure]| free-vars-order)
+;Warning: Unreferenced bound variable: ordered-args (|#[let-procedure]| free-vars-order)
+;Warning: Unreferenced bound variable: all-live (|#[let-procedure]| gen-let)
+;Warning: Unreferenced bound variable: filename (asm-open-output-file)
+;Warning: Unreferenced bound variable: asm-port (asm-close-output-port)
+;Warning: Unreferenced bound variable: asm-port (asm-display)
+;Warning: Unreferenced bound variable: m (|#[let-procedure]| |#[let-procedure]| ofile-wsym)
+;Warning: Unreferenced bound variable: m (|#[let-procedure]| |#[let-procedure]| ofile-lsym)
+;Warning: Unreferenced bound variable: gvm-instr (|#[let-procedure]| ofile-gvm-instr)
+;Warning: Unreferenced bound variable: min-args (label-info)
+;Warning: Unreferenced bound variable: rest? (label-info)
+;Warning: Unreferenced bound variable: c-intf (dump)
+;Warning: Unreferenced bound variable: index (dump-object)
+;Warning: Unreferenced bound variable: sym (dump-symbol)
+;Warning: Unreferenced bound variable: prev-bb (loop |#[let-procedure]| |#[let-procedure]| dump-procedure)
+;Warning: Unreferenced bound variable: nb-regs (|#[let-procedure]| |#[let-procedure]| loop1 |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: sn (gen-label-simple)
+;Warning: Unreferenced bound variable: sn (gen-label-entry)
+;Warning: Unreferenced bound variable: sn (gen-label-return)
+;Warning: Unreferenced bound variable: sn (gen-label-task-entry)
+;Warning: Unreferenced bound variable: sn (gen-label-task-return)
+;Warning: Unreferenced bound variable: sn-first-opnd (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| gen-add-in-place)
+;Warning: Unreferenced bound variable: sn-first-opnd (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| gen-sub-in-place)
+;Warning: Unreferenced bound variable: sn-first-opnd (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| gen-div-in-place)
+;Warning: Unreferenced bound variable: sn-first-opnd (|#[let-procedure]| |#[let-procedure]| gen-div)
+;Warning: Unreferenced bound variable: sn-first-opnd (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| gen-op-in-place ...)
+;Warning: Unreferenced bound variable: x (|#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: decls (|#[unnamed-procedure]| |#[let-procedure]| |#[unnamed-procedure]| safe)
+;Warning: Unreferenced bound variable: proc (|#[unnamed-procedure]| safe)
+;Warning: Unreferenced bound variable: proc-name (|#[unnamed-procedure]| safe)
+;Warning: Unreferenced bound variable: proc-name (|#[unnamed-procedure]| unsafe)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
+;Warning: Unreferenced bound variable: opnds (|#[unnamed-procedure]|)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/compiler.bin" => "/tmp/larcenous/MIT/compiler.com"... done
+Running...
+Running compiler:2000
+Elapsed time: 4.603 seconds (4) for compiler:2000
++!CSVLINE!+mit-9.2.1,compiler:2000,4.603
+
+real	0m4.631s
+user	0m4.541s
+sys	0m0.090s
 
 Testing conform under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/conform.scm /tmp/larcenous/MIT/conform.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5599 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5600 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,conform,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/conform.scm" => "/tmp/larcenous/MIT/conform.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/conform.bin" => "/tmp/larcenous/MIT/conform.com"... done
+Running...
+Running conform:500
+Elapsed time: 6.03 seconds (6) for conform:500
++!CSVLINE!+mit-9.2.1,conform:500,6.03
+
+real	0m6.047s
+user	0m5.980s
+sys	0m0.067s
 
 Testing dynamic under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/dynamic.scm /tmp/larcenous/MIT/dynamic.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5610 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5611 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,dynamic,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/dynamic.scm" => "/tmp/larcenous/MIT/dynamic.bin"...
+;Warning: Unreferenced bound variable: env (dynamic-parse-quote)
+;Warning: Unreferenced bound variable: env (dynamic-parse-do)
+;Warning: Unreferenced bound variable: args (dynamic-parse-do)
+;Warning: Unreferenced bound variable: env (dynamic-parse-quasiquote)
+;Warning: Unreferenced bound variable: args (dynamic-parse-quasiquote)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/dynamic.bin" => "/tmp/larcenous/MIT/dynamic.com"... done
+Running...
+Running dynamic:500
+Elapsed time: 11.695 seconds (12) for dynamic:500
++!CSVLINE!+mit-9.2.1,dynamic:500,11.695
+
+real	0m11.716s
+user	0m11.546s
+sys	0m0.170s
 
 Testing earley under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/earley.scm /tmp/larcenous/MIT/earley.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5621 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5622 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,earley,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/earley.scm" => "/tmp/larcenous/MIT/earley.bin"...
+;Warning: Unreferenced bound variable: toks (produce |#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: nb-nts (|#[let-procedure]| |#[let-procedure]| parsed? |#[unnamed-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/earley.bin" => "/tmp/larcenous/MIT/earley.com"... done
+Running...
+Running earley:1
+Elapsed time: 2.022 seconds (2) for earley:1
++!CSVLINE!+mit-9.2.1,earley:1,2.022
+
+real	0m2.040s
+user	0m1.896s
+sys	0m0.144s
 
 Testing graphs under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/graphs.scm /tmp/larcenous/MIT/graphs.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5634 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5635 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,graphs,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/graphs.scm" => "/tmp/larcenous/MIT/graphs.bin"...
+;Warning: Unreferenced bound variable: leaf-depth (|#[unnamed-procedure]| |#[unnamed-procedure]| |#[let-procedure]| make-minimal?)
+;Warning: Unreferenced bound variable: from (|#[unnamed-procedure]| |#[let-procedure]| fold-over-rdg)
+;Warning: Unreferenced bound variable: perm (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: state (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: state (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/graphs.bin" => "/tmp/larcenous/MIT/graphs.com"... done
+Running...
+Running graphs:7:3
+Elapsed time: 19.684 seconds (20) for graphs:7:3
++!CSVLINE!+mit-9.2.1,graphs:7:3,19.684
+
+real	0m19.705s
+user	0m19.465s
+sys	0m0.240s
 
 Testing lattice under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/lattice.scm /tmp/larcenous/MIT/lattice.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5645 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5646 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,lattice,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/lattice.scm" => "/tmp/larcenous/MIT/lattice.bin"...
+;Warning: Unreferenced bound variable: x (|#[unnamed-procedure]| count-maps)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/lattice.bin" => "/tmp/larcenous/MIT/lattice.com"... done
+Running...
+Running lattice:44:10
+Elapsed time: 11.282 seconds (12) for lattice:44:10
++!CSVLINE!+mit-9.2.1,lattice:44:10,11.282
+
+real	0m11.300s
+user	0m11.173s
+sys	0m0.127s
 
 Testing matrix under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/matrix.scm /tmp/larcenous/MIT/matrix.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5656 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5657 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,matrix,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/matrix.scm" => "/tmp/larcenous/MIT/matrix.bin"...
+;Warning: Unreferenced bound variable: gcd (|#[unnamed-procedure]| |#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: ignore (|#[unnamed-procedure]| |#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/matrix.bin" => "/tmp/larcenous/MIT/matrix.com"... done
+Running...
+Running matrix:5:5:2500
+Elapsed time: 10.59 seconds (10) for matrix:5:5:2500
++!CSVLINE!+mit-9.2.1,matrix:5:5:2500,10.59
+
+real	0m10.611s
+user	0m10.435s
+sys	0m0.177s
 
 Testing maze under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/maze.scm /tmp/larcenous/MIT/maze.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5667 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5668 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,maze,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/maze.scm" => "/tmp/larcenous/MIT/maze.bin"...
+;Warning: Unreferenced bound variable: exit (|#[let-procedure]| |#[let-procedure]| pmaze)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/maze.bin" => "/tmp/larcenous/MIT/maze.com"... done
+Running...
+Running maze:20:7:10000
+Elapsed time: 5.283 seconds (5) for maze:20:7:10000
++!CSVLINE!+mit-9.2.1,maze:20:7:10000,5.283
+
+real	0m5.301s
+user	0m5.247s
+sys	0m0.053s
 
 Testing mazefun under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/mazefun.scm /tmp/larcenous/MIT/mazefun.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5678 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5679 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,mazefun,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/mazefun.scm" => "/tmp/larcenous/MIT/mazefun.bin"...
+;Warning: Unreferenced bound variable: i (|#[let-procedure]| try-to-pierce)
+;Warning: Unreferenced bound variable: j (|#[let-procedure]| try-to-pierce)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/mazefun.bin" => "/tmp/larcenous/MIT/mazefun.com"... done
+Running...
+Running mazefun:11:11:10000
+Elapsed time: 6.113 seconds (6) for mazefun:11:11:10000
++!CSVLINE!+mit-9.2.1,mazefun:11:11:10000,6.113
+
+real	0m6.133s
+user	0m6.023s
+sys	0m0.110s
 
 Testing nqueens under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/nqueens.scm /tmp/larcenous/MIT/nqueens.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5693 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5694 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,nqueens,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/nqueens.scm" => "/tmp/larcenous/MIT/nqueens.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/nqueens.bin" => "/tmp/larcenous/MIT/nqueens.com"... done
+Running...
+Running nqueens:13:10
+Elapsed time: 10.34 seconds (10) for nqueens:13:10
++!CSVLINE!+mit-9.2.1,nqueens:13:10,10.34
+
+real	0m10.361s
+user	0m10.184s
+sys	0m0.177s
 
 Testing paraffins under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/paraffins.scm /tmp/larcenous/MIT/paraffins.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5704 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5705 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,paraffins,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/paraffins.scm" => "/tmp/larcenous/MIT/paraffins.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/paraffins.bin" => "/tmp/larcenous/MIT/paraffins.com"... done
+Running...
+Running paraffins:23:10
+Elapsed time: 1.095 seconds (1) for paraffins:23:10
++!CSVLINE!+mit-9.2.1,paraffins:23:10,1.095
+
+real	0m1.115s
+user	0m0.958s
+sys	0m0.157s
 
 Testing parsing under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/parsing.scm /tmp/larcenous/MIT/parsing.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5715 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5716 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,parsing,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/parsing.scm" => "/tmp/larcenous/MIT/parsing.bin"...
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state30 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state31 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state32 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state33 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state34 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state35 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state36 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state37 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state38 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state39 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state40 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: temp (|#[let-procedure]| state41 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced defined variable: state31
+;Warning: Unreferenced defined variable: state32
+;Warning: Unreferenced defined variable: state33
+;Warning: Unreferenced defined variable: state34
+;Warning: Unreferenced defined variable: state35
+;Warning: Unreferenced defined variable: state36
+;Warning: Unreferenced defined variable: state37
+;Warning: Unreferenced defined variable: state38
+;Warning: Unreferenced defined variable: state39
+;Warning: Unreferenced defined variable: state40
+;Warning: Unreferenced defined variable: state41
+;Warning: Unreferenced bound variable: linenumberoflasterror (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: totalerrors (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/parsing.bin" => "/tmp/larcenous/MIT/parsing.com"... aborted
+;Aborting!: out of memory
+;GC #5 02:23:42: took:   0.10 (100%) CPU,   0.10 (100%) real; free: 512000401
+;GC #6 02:23:42: took:   0.10 (100%) CPU,   0.10  (90%) real; free: 512000884
+;GC #7 02:23:42: took:   0.10 (100%) CPU,   0.10 (100%) real; free: 512000869
+Running...
+;Unable to find file "/tmp/larcenous/MIT/parsing.com" because: File does not exist.
+;To continue, call RESTART with an option number:
+; (RESTART 1) => Return to read-eval-print level 1.
+
+2 error> 2500
+;Value: 2500
+
+2 error> "inputs/parsing.data"
+;Value 13: "inputs/parsing.data"
+
+2 error> (should return this list)
+;Unbound variable: this
+;To continue, call RESTART with an option number:
+; (RESTART 4) => Specify a value to use instead of this.
+; (RESTART 3) => Define this to a given value.
+; (RESTART 2) => Return to read-eval-print level 2.
+; (RESTART 1) => Return to read-eval-print level 1.
+
+3 error> 
+End of input stream reached.
+real	0m0.014s
+user	0m0.007s
+sys	0m0.007s
++!CSVLINE!+mit,parsing,CRASHED
 
 Testing peval under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/peval.scm /tmp/larcenous/MIT/peval.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5726 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5727 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,peval,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/peval.scm" => "/tmp/larcenous/MIT/peval.bin"...
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/peval.bin" => "/tmp/larcenous/MIT/peval.com"... done
+Running...
+Running peval:2000
+Elapsed time: 9.354 seconds (10) for peval:2000
++!CSVLINE!+mit-9.2.1,peval:2000,9.354
+
+real	0m9.374s
+user	0m9.204s
+sys	0m0.170s
 
 Testing primes under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/primes.scm /tmp/larcenous/MIT/primes.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5737 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5738 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,primes,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/primes.scm" => "/tmp/larcenous/MIT/primes.bin"... done
+;Compiling file: "/tmp/larcenous/MIT/primes.bin" => "/tmp/larcenous/MIT/primes.com"... done
+Running...
+Running primes:1000:10000
+Elapsed time: 7.121 seconds (7) for primes:1000:10000
++!CSVLINE!+mit-9.2.1,primes:1000:10000,7.121
+
+real	0m7.142s
+user	0m7.005s
+sys	0m0.137s
 
 Testing quicksort under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/quicksort.scm /tmp/larcenous/MIT/quicksort.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5748 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5749 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,quicksort,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/quicksort.scm" => "/tmp/larcenous/MIT/quicksort.bin"...
+;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| main)
+;Warning: Unreferenced bound variable: ignore2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[unnamed-procedure]| ...)
+;Warning: Unreferenced bound variable: ignore4 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[unnamed-procedure]| ...)
+;Warning: Unreferenced bound variable: ignore1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[unnamed-procedure]| |#[let-procedure]|)
+;Warning: Unreferenced bound variable: ignore3 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[unnamed-procedure]| |#[let-procedure]|)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/quicksort.bin" => "/tmp/larcenous/MIT/quicksort.com"... done
+Running...
+Running quicksort:10000:2500
+Elapsed time: 6.471 seconds (7) for quicksort:10000:2500
++!CSVLINE!+mit-9.2.1,quicksort:10000:2500,6.471
+
+real	0m6.502s
+user	0m6.402s
+sys	0m0.100s
 
 Testing scheme under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/scheme.scm /tmp/larcenous/MIT/scheme.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5759 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5760 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,scheme,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/scheme.scm" => "/tmp/larcenous/MIT/scheme.bin"...
+;Warning: Unreferenced bound variable: env (comp-self-eval)
+;Warning: Unreferenced bound variable: env (comp-quote)
+;Warning: Unreferenced bound variable: env (comp-unquote)
+;Warning: Unreferenced bound variable: env (comp-unquote-splicing)
+;Warning: Unreferenced bound variable: env (comp-define-macro)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| gen-glo-ref)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| |#[let-procedure]| gen-cst)
+;Warning: Unreferenced bound variable: key (|#[unnamed-procedure]| gen-case-else)
+;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| gen-macro)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/scheme.bin" => "/tmp/larcenous/MIT/scheme.com"... done
+Running...
+Running scheme:100000
+Elapsed time: 5.604 seconds (6) for scheme:100000
++!CSVLINE!+mit-9.2.1,scheme:100000,5.604
+
+real	0m5.624s
+user	0m5.501s
+sys	0m0.123s
 
 Testing slatex under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/slatex.scm /tmp/larcenous/MIT/slatex.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5770 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5771 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,slatex,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/slatex.scm" => "/tmp/larcenous/MIT/slatex.bin"...
+;Warning: Unreferenced bound variable: z (slatex.force-output)
+;Warning: Unreferenced bound variable: i (slatex.ignore2)
+;Warning: Unreferenced bound variable: ii (slatex.ignore2)
+;Warning: Unreferenced bound variable: result (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| main)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/slatex.bin" => "/tmp/larcenous/MIT/slatex.com"... done
+Running...
+Running slatex:500
+Elapsed time: 11.998 seconds (12) for slatex:500
++!CSVLINE!+mit-9.2.1,slatex:500,11.998
+
+real	0m12.016s
+user	0m10.534s
+sys	0m1.459s
 
 Testing chudnovsky under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/chudnovsky.scm /tmp/larcenous/MIT/chudnovsky.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5781 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5782 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,chudnovsky,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/chudnovsky.scm" => "/tmp/larcenous/MIT/chudnovsky.bin"...
+;Warning: Unreferenced bound variable: r (|#[unnamed-procedure]| integer-sqrt)
+;Warning: Unreferenced bound variable: r (|#[unnamed-procedure]| integer-sqrt)
+;Warning: Unreferenced bound variable: g (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| pi)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/chudnovsky.bin" => "/tmp/larcenous/MIT/chudnovsky.com"... done
+Running...
+Running chudnovsky:50:500:50:2
+;Unbound variable: exact-integer-sqrt
+;To continue, call RESTART with an option number:
+; (RESTART 2) => Define exact-integer-sqrt to a given value.
+; (RESTART 1) => Return to read-eval-print level 1.
+
+2 error> 
+End of input stream reached.
+real	0m0.017s
+user	0m0.013s
+sys	0m0.003s
++!CSVLINE!+mit,chudnovsky,CRASHED
 
 Testing nboyer under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/nboyer.scm /tmp/larcenous/MIT/nboyer.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5792 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5793 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,nboyer,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/nboyer.scm" => "/tmp/larcenous/MIT/nboyer.bin"...
+;Warning: Unreferenced bound variable: args (setup-boyer)
+;Warning: Unreferenced bound variable: args (test-boyer)
+;Warning: Unreferenced bound variable: property (put |#[let-procedure]|)
+;Warning: Unreferenced bound variable: property (get |#[let-procedure]|)
+;Warning: Unreferenced defined variable: trans-of-implies
+;... done
+;Compiling file: "/tmp/larcenous/MIT/nboyer.bin" => "/tmp/larcenous/MIT/nboyer.com"... done
+Running...
+Running nboyer:5:1
+Elapsed time: 1.412 seconds (1) for nboyer:5:1
++!CSVLINE!+mit-9.2.1,nboyer:5:1,1.412
+
+real	0m1.430s
+user	0m1.326s
+sys	0m0.103s
 
 Testing sboyer under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/sboyer.scm /tmp/larcenous/MIT/sboyer.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5803 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5804 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,sboyer,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/sboyer.scm" => "/tmp/larcenous/MIT/sboyer.bin"...
+;Warning: Unreferenced bound variable: property (put |#[let-procedure]|)
+;Warning: Unreferenced bound variable: property (get |#[let-procedure]|)
+;Warning: Unreferenced defined variable: trans-of-implies
+;... done
+;Compiling file: "/tmp/larcenous/MIT/sboyer.bin" => "/tmp/larcenous/MIT/sboyer.com"... done
+Running...
+Running sboyer:5:1
+Elapsed time: 1.431 seconds (2) for sboyer:5:1
++!CSVLINE!+mit-9.2.1,sboyer:5:1,1.431
+
+real	0m1.446s
+user	0m1.432s
+sys	0m0.013s
 
 Testing gcbench under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/gcbench.scm /tmp/larcenous/MIT/gcbench.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5814 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5815 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,gcbench,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/gcbench.scm" => "/tmp/larcenous/MIT/gcbench.bin"...
+;Warning: Unreferenced defined variable: classnode?
+;Warning: Unreferenced defined variable: node.i
+;Warning: Unreferenced defined variable: node.i-set!
+;Warning: Unreferenced defined variable: node.j
+;Warning: Unreferenced defined variable: node.j-set!
+;Warning: Unreferenced bound variable: result (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| main)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/gcbench.bin" => "/tmp/larcenous/MIT/gcbench.com"... done
+Running...
+The garbage collector should touch about 128 megabytes of heap storage.
+The use of more or less memory will skew the results.
+Running gcbench:20:1
+Garbage Collector Test
+ Stretching memory with a binary tree of depth 20
+ Total memory available= ???????? bytes  Free memory= ???????? bytes
+GCBench: Main
+ Creating a long-lived binary tree of depth 18
+ Creating a long-lived array of 2097148 inexact reals
+ Total memory available= ???????? bytes  Free memory= ???????? bytes
+Creating 135300 trees of depth 4
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 33026 trees of depth 6
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 8208 trees of depth 8
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 2048 trees of depth 10
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 512 trees of depth 12
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 128 trees of depth 14
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 32 trees of depth 16
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 8 trees of depth 18
+GCBench: Top down construction
+GCBench: Bottom up construction
+ Total memory available= ???????? bytes  Free memory= ???????? bytes
+Elapsed time: 1.432 seconds (1) for gcbench:20:1
++!CSVLINE!+mit-9.2.1,gcbench:20:1,1.432
+
+real	0m1.453s
+user	0m1.280s
+sys	0m0.173s
 
 Testing mperm under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/mperm.scm /tmp/larcenous/MIT/mperm.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5825 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5826 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,mperm,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/mperm.scm" => "/tmp/larcenous/MIT/mperm.bin"...
+;Warning: Unreferenced bound variable: name (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s3 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: s4 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/mperm.bin" => "/tmp/larcenous/MIT/mperm.com"... done
+Running...
+Running mperm:20:10:2:1
+Elapsed time: 3.154 seconds (3) for mperm:20:10:2:1
++!CSVLINE!+mit-9.2.1,mperm:20:10:2:1,3.154
+
+real	0m3.298s
+user	0m3.065s
+sys	0m0.233s
 
 Testing equal under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/equal.scm /tmp/larcenous/MIT/equal.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5836 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5837 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,equal,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/equal.scm" => "/tmp/larcenous/MIT/equal.bin"...
+;Warning: Unreferenced bound variable: n0 (equality-benchmarks)
+;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
+;... done
+;Compiling file: "/tmp/larcenous/MIT/equal.bin" => "/tmp/larcenous/MIT/equal.com"... done
+Running...
+Running equal:100:100:8:1000:2000:5000
+./bench: line 633:  8475 Killed                  ${MIT} --quiet --heap 500000 --load "$1" < "$2"
+
+real	5m0.003s
+user	4m59.994s
+sys	0m0.004s
++!CSVLINE!+mit,equal,ULIMITKILLED
 
 Testing bv2string under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
 mit_comp /tmp/larcenous/MIT/bv2string.scm /tmp/larcenous/MIT/bv2string.com
-unable to mmap executable heap -- native code will probably fail./bench: line 628:  5847 Done                    echo "(begin (cf \"$1\") (%exit 0))"
-      5848 Segmentation fault      (core dumped) | ${MIT} --quiet --heap 500000
-+!CSVLINE!+mit,bv2string,COMPILEERROR
+;Generating SCode for file: "/tmp/larcenous/MIT/bv2string.scm" => "/tmp/larcenous/MIT/bv2string.bin"...
+;Warning: Unreferenced defined variable: random-bytevector2
+;Warning: Unreferenced defined variable: random-bytevector4
+;... done
+;Compiling file: "/tmp/larcenous/MIT/bv2string.bin" => "/tmp/larcenous/MIT/bv2string.com"... done
+Running...
+Running bv2string:1000:1000:100
+Elapsed time: 7.253 seconds (7) for bv2string:1000:1000:100
++!CSVLINE!+mit-9.2.1,bv2string:1000:1000:100,7.253
+
+real	0m7.266s
+user	0m7.263s
+sys	0m0.003s

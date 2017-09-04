@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking Bones on Sat 12 Aug 21:52:29 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
+Benchmarking Bones on Fri 1 Sep 16:00:08 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
