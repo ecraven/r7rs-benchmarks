@@ -35,6 +35,24 @@
 (define write-string write)
 
 (define (this-scheme-implementation-name) (string-append "gambitc-" (system-version-string)))
+
+(define (string->utf8 s)
+  (with-output-to-u8vector
+   (list char-encoding: 'UTF-8)
+   (lambda ()
+     (display s))))
+
+(define (utf8->string bstr #!optional (enc 'UTF-8))
+  (let* ((in (open-input-u8vector `(char-encoding: ,enc init: ,bstr)))
+         (len (u8vector-length bstr))
+         (out (make-string len))
+         (n (read-substring out 0 len in)))
+    (string-shrink! out n)
+    out))
+
+(define make-bytevector make-u8vector)
+
+(define bytevector-u8-set! u8vector-set!)
 ;; TODO: load syntax-case here, to get syntax-rules.
 ;; google says (load "~~/syntax-case"), but that doesn't work on my machine :-/
 
