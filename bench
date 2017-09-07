@@ -117,6 +117,7 @@ setup ()
     FOMENT=${FOMENT:-"foment"}
     GAMBITC=${GAMBITC:-"gambitc"}
     GAUCHE=${GAUCHE:-"gosh"}
+    GERBIL=${GERBIL:-"gxc"}
     GUILD=${GUILD:-"guild"}
     GUILE=${GUILE:-"guile"}
     HUSKI=${HUSKI:-"huski"}
@@ -165,6 +166,7 @@ Usage: bench [-r runs] <system> <benchmark>
   foment           for Foment
   gambitc          for GambitC Scheme
   gauche           for Gauche
+  gerbil           for Gerbil Scheme
   guile            for Guile Scheme
   husk             for Husk
   ironscheme       for IronScheme
@@ -702,6 +704,21 @@ gauche_exec ()
 }
 
 # -----------------------------------------------------------------------------
+# Definitions specific to Gerbil
+
+gerbil_comp ()
+{
+    sed -i -e 's/^(main)$//' $1
+    ${GERBIL} -d $(dirname "$1") -exe -static -O -o "${1%.scm}.exe" "$1"
+}
+
+gerbil_exec ()
+{
+    export GERBIL_HOME=/opt/gerbil-scheme-git/
+    time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
 # Definitions specific to Kawa
 
 # I could not get huskc to work:
@@ -1089,6 +1106,16 @@ for system in $systems ; do
                 COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
+
+        gerbil) NAME='Gerbil'
+                COMP=gerbil_comp
+                EXEC=gerbil_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="exe"
                 COMPCOMMANDS=""
                 EXECCOMMANDS=""
                 ;;
