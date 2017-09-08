@@ -724,7 +724,7 @@ gauche_exec ()
 gerbil_comp ()
 {
     sed -i -e 's/^(main)$//' $1
-    ${GERBIL} -d $(dirname "$1") -exe -static -O -o "${1%.scm}.exe" "$1"
+    ${GERBIL} -d $(dirname "$1") -exe -static -O -gsc-option -prelude '(declare (not safe))' -cc-options "--param max-gcse-memory=300000000" -o "${1%.scm}.exe" "$1"
 }
 
 gerbil_exec ()
