@@ -533,7 +533,7 @@ bones_comp ()
     echo "nasm -I/usr/share/bones -f elf64 $1.s -o $1.o"
     nasm -I/usr/share/bones/ -f elf64 $1.s -o $1.o
     echo "gcc $1.o -o $2"
-    gcc $1.o -o $2
+    gcc -no-pie $1.o -o $2
 }
 
 bones_exec ()
