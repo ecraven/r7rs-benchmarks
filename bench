@@ -138,6 +138,7 @@ setup ()
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
     S9fES=${S9fES:-"s9"}
+    SISC=${SISC:-"sisc"}
     STALIN=${STALIN:-"chicken-stalin"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
     VICARE=${VICARE:-"vicare"}
@@ -183,6 +184,7 @@ Usage: bench [-r runs] <system> <benchmark>
   sagittarius      for Sagittarius
   scheme48         for Scheme48
   s9fes            for S9fES (Scheme 9 from Empty Space)
+  sisc             for SISC (Second Implementation of Scheme)
   stalin           for Stalin
   tinyscheme       for TinyScheme
   vicare           for Vicare
@@ -410,6 +412,19 @@ s9fes_comp ()
 s9fes_exec ()
 {
     time ${S9fES} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to SISC
+
+sisc_comp ()
+{
+    :
+}
+
+sisc_exec ()
+{
+    time ${SISC} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -929,6 +944,16 @@ for system in $systems ; do
                COMPCOMMANDS=""
                EXECCOMMANDS=""
                ;;
+
+        sisc) NAME='SISC'
+              COMP=sisc_comp
+              EXEC=sisc_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="scm"
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
+              ;;
 
         tinyscheme) NAME='TinyScheme'
                     COMP=tinyscheme_comp
