@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking Foment on Thu 7 Sep 17:45:45 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
+Benchmarking Foment on Sat 9 Sep 01:10:53 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -9,12 +9,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/browse.scm /tmp/larcenous/Foment/browse.scm
 Running...
 Running browse:2000
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 24705 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	3m15.974s
-user	3m14.564s
-sys	0m1.403s
-+!CSVLINE!+foment,browse,CRASHED
+real	8m8.050s
+user	3m7.287s
+sys	0m2.973s
++!CSVLINE!+foment,browse,ULIMITKILLED
 
 Testing deriv under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -23,12 +23,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/deriv.scm /tmp/larcenous/Foment/deriv.scm
 Running...
 Running deriv:10000000
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 24750 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	1m49.436s
-user	1m47.921s
-sys	0m1.510s
-+!CSVLINE!+foment,deriv,CRASHED
+real	6m2.977s
+user	1m43.415s
+sys	0m2.545s
++!CSVLINE!+foment,deriv,ULIMITKILLED
 
 Testing destruc under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -37,12 +37,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/destruc.scm /tmp/larcenous/Foment/destruc.scm
 Running...
 Running destruc:600:50:4000
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 24796 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	3m52.526s
-user	3m51.052s
-sys	0m1.470s
-+!CSVLINE!+foment,destruc,CRASHED
+real	11m3.021s
+user	3m40.844s
+sys	0m3.944s
++!CSVLINE!+foment,destruc,ULIMITKILLED
 
 Testing diviter under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -51,12 +51,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/diviter.scm /tmp/larcenous/Foment/diviter.scm
 Running...
 Running diviter:1000:1000000
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 24864 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m28.375s
-user	2m26.952s
-sys	0m1.420s
-+!CSVLINE!+foment,diviter,CRASHED
+real	5m21.263s
+user	2m19.004s
+sys	0m2.527s
++!CSVLINE!+foment,diviter,ULIMITKILLED
 
 Testing divrec under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -65,12 +65,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/divrec.scm /tmp/larcenous/Foment/divrec.scm
 Running...
 Running divrec:1000:1000000
-#<error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 24904 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m21.186s
-user	2m19.569s
-sys	0m1.594s
-+!CSVLINE!+foment,divrec,CRASHED
+real	9m14.651s
+user	2m14.006s
+sys	0m3.358s
++!CSVLINE!+foment,divrec,ULIMITKILLED
 
 Testing puzzle under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -79,11 +79,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/puzzle.scm /tmp/larcenous/Foment/puzzle.scm
 Running...
 Running puzzle:1000
-./bench: line 689: 32750 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 24955 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.171s
-user	4m59.270s
-sys	0m0.853s
+real	5m0.125s
+user	4m59.215s
+sys	0m0.900s
 +!CSVLINE!+foment,puzzle,ULIMITKILLED
 
 Testing triangl under Foment
@@ -93,13 +93,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/triangl.scm /tmp/larcenous/Foment/triangl.scm
 Running...
 Running triangl:22:1:50
-terminate called after throwing an instance of 'void*'
-./bench: line 689:   341 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25002 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	3m7.556s
-user	3m1.862s
-sys	0m2.518s
-+!CSVLINE!+foment,triangl,CRASHED
+real	8m4.448s
+user	2m54.936s
+sys	0m2.810s
++!CSVLINE!+foment,triangl,ULIMITKILLED
 
 Testing tak under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -108,12 +107,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/tak.scm /tmp/larcenous/Foment/tak.scm
 Running...
 Running tak:40:20:11:1
-Elapsed time: 214.973 seconds (215.0) for tak:40:20:11:1
-+!CSVLINE!+foment-0.4,tak:40:20:11:1,214.973
+Elapsed time: 213.615 seconds (213.0) for tak:40:20:11:1
++!CSVLINE!+foment-0.4,tak:40:20:11:1,213.615
 
-real	3m34.994s
-user	3m34.990s
-sys	0m0.000s
+real	3m33.635s
+user	3m33.624s
+sys	0m0.003s
 
 Testing takl under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -122,11 +121,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/takl.scm /tmp/larcenous/Foment/takl.scm
 Running...
 Running takl:40:20:12:1
-./bench: line 689:   426 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25096 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.002s
-user	4m59.987s
-sys	0m0.010s
+real	5m0.003s
+user	4m59.998s
+sys	0m0.000s
 +!CSVLINE!+foment,takl,ULIMITKILLED
 
 Testing ntakl under Foment
@@ -136,10 +135,10 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/ntakl.scm /tmp/larcenous/Foment/ntakl.scm
 Running...
 Running ntakl:40:20:12:1
-./bench: line 689:   487 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25143 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.004s
-user	4m59.999s
+real	5m0.003s
+user	4m59.997s
 sys	0m0.000s
 +!CSVLINE!+foment,ntakl,ULIMITKILLED
 
@@ -150,13 +149,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/cpstak.scm /tmp/larcenous/Foment/cpstak.scm
 Running...
 Running cpstak:40:20:11:1
-terminate called after throwing an instance of 'void*'
-./bench: line 689:   544 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25189 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m40.080s
-user	2m34.164s
-sys	0m2.500s
-+!CSVLINE!+foment,cpstak,CRASHED
+real	5m53.482s
+user	2m27.343s
+sys	0m2.778s
++!CSVLINE!+foment,cpstak,ULIMITKILLED
 
 Testing ctak under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -165,13 +163,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/ctak.scm /tmp/larcenous/Foment/ctak.scm
 Running...
 Running ctak:32:16:8:1
-terminate called after throwing an instance of 'void*'
-./bench: line 689:   582 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25232 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	3m39.337s
-user	3m33.954s
-sys	0m2.418s
-+!CSVLINE!+foment,ctak,CRASHED
+real	7m48.930s
+user	3m25.332s
+sys	0m2.931s
++!CSVLINE!+foment,ctak,ULIMITKILLED
 
 Testing fib under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -180,11 +177,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/fib.scm /tmp/larcenous/Foment/fib.scm
 Running...
 Running fib:40:5
-./bench: line 689:   628 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25286 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.002s
-user	4m59.997s
-sys	0m0.000s
+real	5m0.019s
+user	4m59.995s
+sys	0m0.014s
 +!CSVLINE!+foment,fib,ULIMITKILLED
 
 Testing fibc under Foment
@@ -194,12 +191,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/fibc.scm /tmp/larcenous/Foment/fibc.scm
 Running...
 Running fibc:30:10
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 25332 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	3m18.210s
-user	3m16.492s
-sys	0m1.714s
-+!CSVLINE!+foment,fibc,CRASHED
+real	8m46.405s
+user	3m8.643s
+sys	0m3.263s
++!CSVLINE!+foment,fibc,ULIMITKILLED
 
 Testing fibfp under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -208,13 +205,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/fibfp.scm /tmp/larcenous/Foment/fibfp.scm
 Running...
 Running fibfp:35.0:10
-terminate called after throwing an instance of 'void*'
-./bench: line 689:   708 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25384 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m13.072s
-user	2m8.062s
-sys	0m2.224s
-+!CSVLINE!+foment,fibfp,CRASHED
+real	6m0.609s
+user	2m2.271s
+sys	0m2.663s
++!CSVLINE!+foment,fibfp,ULIMITKILLED
 
 Testing sum under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -223,11 +219,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/sum.scm /tmp/larcenous/Foment/sum.scm
 Running...
 Running sum:10000:200000
-./bench: line 689:   737 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25419 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.008s
-user	4m59.989s
-sys	0m0.014s
+real	5m0.011s
+user	4m59.963s
+sys	0m0.037s
 +!CSVLINE!+foment,sum,ULIMITKILLED
 
 Testing sumfp under Foment
@@ -237,13 +233,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/sumfp.scm /tmp/larcenous/Foment/sumfp.scm
 Running...
 Running sumfp:1000000.0:500
-terminate called after throwing an instance of 'void*'
-./bench: line 689:   782 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25466 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	1m54.175s
-user	1m47.505s
-sys	0m2.265s
-+!CSVLINE!+foment,sumfp,CRASHED
+real	6m0.932s
+user	1m42.728s
+sys	0m2.686s
++!CSVLINE!+foment,sumfp,ULIMITKILLED
 
 Testing fft under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -252,12 +247,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/fft.scm /tmp/larcenous/Foment/fft.scm
 Running...
 Running fft:65536:100
-Elapsed time: 187.434 seconds (188.0) for fft:65536:100
-+!CSVLINE!+foment-0.4,fft:65536:100,187.434
+Elapsed time: 184.741 seconds (185.0) for fft:65536:100
++!CSVLINE!+foment-0.4,fft:65536:100,184.741
 
-real	3m7.637s
-user	3m6.478s
-sys	0m1.153s
+real	3m4.956s
+user	3m3.699s
+sys	0m1.247s
 
 Testing mbrot under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -266,12 +261,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/mbrot.scm /tmp/larcenous/Foment/mbrot.scm
 Running...
 Running mbrot:75:1000
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 25553 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	1m43.646s
-user	1m42.290s
-sys	0m1.353s
-+!CSVLINE!+foment,mbrot,CRASHED
+real	6m34.351s
+user	1m38.235s
+sys	0m2.525s
++!CSVLINE!+foment,mbrot,ULIMITKILLED
 
 Testing mbrotZ under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -280,12 +275,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/mbrotZ.scm /tmp/larcenous/Foment/mbrotZ.scm
 Running...
 Running mbrotZ:75:1000
-error: recursive exception: string->symbol: adults too small; increase maximum-adults-size
+./bench: line 704: 25593 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	1m28.169s
-user	1m26.690s
-sys	0m1.477s
-+!CSVLINE!+foment,mbrotZ,CRASHED
+real	4m4.446s
+user	1m23.134s
+sys	0m2.335s
++!CSVLINE!+foment,mbrotZ,ULIMITKILLED
 
 Testing nucleic under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -294,13 +289,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/nucleic.scm /tmp/larcenous/Foment/nucleic.scm
 Running...
 Running nucleic:50
-terminate called after throwing an instance of 'void*'
-./bench: line 689:   883 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25637 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m44.000s
-user	2m37.120s
-sys	0m2.327s
-+!CSVLINE!+foment,nucleic,CRASHED
+real	17m5.044s
+user	2m28.222s
+sys	0m5.077s
++!CSVLINE!+foment,nucleic,ULIMITKILLED
 
 Testing pi under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -308,11 +302,11 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Foment-postlude.scm
 Compiling...
 foment_comp /tmp/larcenous/Foment/pi.scm /tmp/larcenous/Foment/pi.scm
 Running...
-#<exception: #x7f2597295650 implementation-restriction read "read: number too long" irritants: (#<textual-input-port: #x7f259701a970 standard-input line: 1>)>
+#<exception: #x7f03b5590650 implementation-restriction read "read: number too long" irritants: (#<textual-input-port: #x7f03b5315970 standard-input line: 1>)>
 
-real	0m0.034s
-user	0m0.016s
-sys	0m0.000s
+real	0m0.053s
+user	0m0.045s
+sys	0m0.003s
 +!CSVLINE!+foment,pi,CRASHED
 
 Testing pnpoly under Foment
@@ -322,11 +316,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/pnpoly.scm /tmp/larcenous/Foment/pnpoly.scm
 Running...
 Running pnpoly:1000000
-./bench: line 689:   921 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25700 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.191s
-user	4m58.835s
-sys	0m1.350s
+real	5m0.232s
+user	4m58.840s
+sys	0m1.337s
 +!CSVLINE!+foment,pnpoly,ULIMITKILLED
 
 Testing ray under Foment
@@ -336,12 +330,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/ray.scm /tmp/larcenous/Foment/ray.scm
 Running...
 Running ray:50
-error: recursive exception: hash-table-set!: adults too small; increase maximum-adults-size
+./bench: line 704: 25747 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m14.735s
-user	2m13.181s
-sys	0m1.450s
-+!CSVLINE!+foment,ray,CRASHED
+real	3m55.868s
+user	2m6.733s
+sys	0m2.061s
++!CSVLINE!+foment,ray,ULIMITKILLED
 
 Testing simplex under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -350,12 +344,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/simplex.scm /tmp/larcenous/Foment/simplex.scm
 Running...
 Running simplex:1000000
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 25784 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	3m45.029s
-user	3m43.388s
-sys	0m1.597s
-+!CSVLINE!+foment,simplex,CRASHED
+real	8m30.575s
+user	3m34.334s
+sys	0m3.211s
++!CSVLINE!+foment,simplex,ULIMITKILLED
 
 Testing ack under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -364,11 +358,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/ack.scm /tmp/larcenous/Foment/ack.scm
 Running...
 Running ack:3:12:2
-./bench: line 689:  1048 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25856 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.004s
-user	4m59.995s
-sys	0m0.004s
+real	5m0.008s
+user	4m59.999s
+sys	0m0.000s
 +!CSVLINE!+foment,ack,ULIMITKILLED
 
 Testing array1 under Foment
@@ -378,11 +372,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/array1.scm /tmp/larcenous/Foment/array1.scm
 Running...
 Running array1:1000000:500
-./bench: line 689:  1094 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 25903 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.001s
-user	4m59.983s
-sys	0m0.013s
+real	5m0.003s
+user	4m59.993s
+sys	0m0.003s
 +!CSVLINE!+foment,array1,ULIMITKILLED
 
 Testing string under Foment
@@ -392,12 +386,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/string.scm /tmp/larcenous/Foment/string.scm
 Running...
 Running string:500000:25
-Elapsed time: 4.028 seconds (4.0) for string:500000:25
-+!CSVLINE!+foment-0.4,string:500000:25,4.028
+Elapsed time: 3.929 seconds (4.0) for string:500000:25
++!CSVLINE!+foment-0.4,string:500000:25,3.929
 
-real	0m4.070s
-user	0m4.047s
-sys	0m0.023s
+real	0m3.947s
+user	0m3.937s
+sys	0m0.010s
 
 Testing sum1 under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -406,12 +400,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/sum1.scm /tmp/larcenous/Foment/sum1.scm
 Running...
 Running sum1:25
-Elapsed time: 3.604 seconds (3.0) for sum1:25
-+!CSVLINE!+foment-0.4,sum1:25,3.604
+Elapsed time: 3.607 seconds (4.0) for sum1:25
++!CSVLINE!+foment-0.4,sum1:25,3.607
 
-real	0m3.630s
-user	0m3.604s
-sys	0m0.027s
+real	0m3.651s
+user	0m3.617s
+sys	0m0.033s
 
 Testing cat under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -420,12 +414,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/cat.scm /tmp/larcenous/Foment/cat.scm
 Running...
 Running cat:50
-Elapsed time: 120.189 seconds (121.0) for cat:50
-+!CSVLINE!+foment-0.4,cat:50,120.189
+Elapsed time: 123.512 seconds (124.0) for cat:50
++!CSVLINE!+foment-0.4,cat:50,123.512
 
-real	2m0.386s
-user	1m58.248s
-sys	0m1.157s
+real	2m3.690s
+user	2m1.723s
+sys	0m1.223s
 
 Testing tail under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -434,12 +428,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/tail.scm /tmp/larcenous/Foment/tail.scm
 Running...
 Running tail:25
-Elapsed time: 61.029 seconds (61.0) for tail:25
-+!CSVLINE!+foment-0.4,tail:25,61.029
+Elapsed time: 60.344 seconds (60.0) for tail:25
++!CSVLINE!+foment-0.4,tail:25,60.344
 
-real	1m1.193s
-user	0m59.896s
-sys	0m0.880s
+real	1m0.454s
+user	0m59.208s
+sys	0m0.844s
 
 Testing wc under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -448,12 +442,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/wc.scm /tmp/larcenous/Foment/wc.scm
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 87.622 seconds (88.0) for wc:inputs/bib:50
-+!CSVLINE!+foment-0.4,wc:inputs/bib:50,87.622
+Elapsed time: 87.828 seconds (88.0) for wc:inputs/bib:50
++!CSVLINE!+foment-0.4,wc:inputs/bib:50,87.828
 
-real	1m27.674s
-user	1m27.576s
-sys	0m0.097s
+real	1m27.864s
+user	1m27.812s
+sys	0m0.050s
 
 Testing read1 under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -462,12 +456,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/read1.scm /tmp/larcenous/Foment/read1.scm
 Running...
 Running read1:2500
-Elapsed time: 6.063 seconds (6.0) for read1:2500
-+!CSVLINE!+foment-0.4,read1:2500,6.063
+Elapsed time: 6.087 seconds (6.0) for read1:2500
++!CSVLINE!+foment-0.4,read1:2500,6.087
 
-real	0m6.091s
-user	0m6.031s
-sys	0m0.059s
+real	0m6.139s
+user	0m6.072s
+sys	0m0.067s
 
 Testing compiler under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -476,12 +470,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/compiler.scm /tmp/larcenous/Foment/compiler.scm
 Running...
 Running compiler:2000
-Elapsed time: 275.106 seconds (275.0) for compiler:2000
-+!CSVLINE!+foment-0.4,compiler:2000,275.106
+Elapsed time: 277.193 seconds (277.0) for compiler:2000
++!CSVLINE!+foment-0.4,compiler:2000,277.193
 
-real	4m35.567s
-user	4m34.312s
-sys	0m1.233s
+real	4m37.659s
+user	4m36.505s
+sys	0m1.146s
 
 Testing conform under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -490,13 +484,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/conform.scm /tmp/larcenous/Foment/conform.scm
 Running...
 Running conform:500
-terminate called after throwing an instance of 'void*'
-./bench: line 689:  1253 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26080 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	4m26.758s
-user	4m20.872s
-sys	0m2.314s
-+!CSVLINE!+foment,conform,CRASHED
+real	10m25.635s
+user	4m10.495s
+sys	0m3.126s
++!CSVLINE!+foment,conform,ULIMITKILLED
 
 Testing dynamic under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -505,12 +498,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/dynamic.scm /tmp/larcenous/Foment/dynamic.scm
 Running...
 Running dynamic:500
-Elapsed time: 279.297 seconds (279.0) for dynamic:500
-+!CSVLINE!+foment-0.4,dynamic:500,279.297
+Elapsed time: 278.843 seconds (279.0) for dynamic:500
++!CSVLINE!+foment-0.4,dynamic:500,278.843
 
-real	4m39.524s
-user	4m38.134s
-sys	0m1.383s
+real	4m39.060s
+user	4m37.755s
+sys	0m1.293s
 
 Testing earley under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -519,11 +512,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/earley.scm /tmp/larcenous/Foment/earley.scm
 Running...
 Running earley:1
-./bench: line 689:  1346 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26186 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.027s
-user	4m59.876s
-sys	0m0.143s
+real	5m0.017s
+user	4m59.874s
+sys	0m0.130s
 +!CSVLINE!+foment,earley,ULIMITKILLED
 
 Testing graphs under Foment
@@ -533,11 +526,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/graphs.scm /tmp/larcenous/Foment/graphs.scm
 Running...
 Running graphs:7:3
-./bench: line 689:  1391 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26232 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.126s
-user	4m59.249s
-sys	0m0.870s
+real	5m0.107s
+user	4m59.122s
+sys	0m0.967s
 +!CSVLINE!+foment,graphs,ULIMITKILLED
 
 Testing lattice under Foment
@@ -547,13 +540,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/lattice.scm /tmp/larcenous/Foment/lattice.scm
 Running...
 Running lattice:44:10
-terminate called after throwing an instance of 'void*'
-./bench: line 689:  1438 Aborted                 (core dumped) "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26279 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	3m11.777s
-user	3m6.558s
-sys	0m2.315s
-+!CSVLINE!+foment,lattice,CRASHED
+real	9m30.501s
+user	2m58.290s
+sys	0m3.038s
++!CSVLINE!+foment,lattice,ULIMITKILLED
 
 Testing matrix under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -562,12 +554,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/matrix.scm /tmp/larcenous/Foment/matrix.scm
 Running...
 Running matrix:5:5:2500
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 26325 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m35.749s
-user	2m34.194s
-sys	0m1.518s
-+!CSVLINE!+foment,matrix,CRASHED
+real	5m44.894s
+user	2m28.010s
+sys	0m2.407s
++!CSVLINE!+foment,matrix,ULIMITKILLED
 
 Testing maze under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -576,12 +568,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/maze.scm /tmp/larcenous/Foment/maze.scm
 Running...
 Running maze:20:7:10000
-Elapsed time: 119.542 seconds (120.0) for maze:20:7:10000
-+!CSVLINE!+foment-0.4,maze:20:7:10000,119.542
+Elapsed time: 119.725 seconds (120.0) for maze:20:7:10000
++!CSVLINE!+foment-0.4,maze:20:7:10000,119.725
 
-real	1m59.688s
-user	1m59.146s
-sys	0m0.523s
+real	1m59.869s
+user	1m59.320s
+sys	0m0.527s
 
 Testing mazefun under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -590,11 +582,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/mazefun.scm /tmp/larcenous/Foment/mazefun.scm
 Running...
 Running mazefun:11:11:10000
-./bench: line 689:  1530 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26393 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.219s
-user	4m58.652s
-sys	0m1.560s
+real	11m34.699s
+user	4m49.604s
+sys	0m3.460s
 +!CSVLINE!+foment,mazefun,ULIMITKILLED
 
 Testing nqueens under Foment
@@ -604,10 +596,10 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/nqueens.scm /tmp/larcenous/Foment/nqueens.scm
 Running...
 Running nqueens:13:10
-./bench: line 689:  1575 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26482 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.185s
-user	4m59.035s
+real	5m0.234s
+user	4m59.030s
 sys	0m1.144s
 +!CSVLINE!+foment,nqueens,ULIMITKILLED
 
@@ -618,11 +610,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/paraffins.scm /tmp/larcenous/Foment/paraffins.scm
 Running...
 Running paraffins:23:10
-./bench: line 689:  1635 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26528 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.014s
-user	4m59.947s
-sys	0m0.060s
+real	5m0.012s
+user	4m59.929s
+sys	0m0.073s
 +!CSVLINE!+foment,paraffins,ULIMITKILLED
 
 Testing parsing under Foment
@@ -632,12 +624,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/parsing.scm /tmp/larcenous/Foment/parsing.scm
 Running...
 Running parsing:2500
-Elapsed time: 211.975 seconds (212.0) for parsing:2500
-+!CSVLINE!+foment-0.4,parsing:2500,211.975
+Elapsed time: 212.321 seconds (213.0) for parsing:2500
++!CSVLINE!+foment-0.4,parsing:2500,212.321
 
-real	3m32.226s
-user	3m31.008s
-sys	0m1.200s
+real	3m32.583s
+user	3m31.348s
+sys	0m1.230s
 
 Testing peval under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -646,12 +638,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/peval.scm /tmp/larcenous/Foment/peval.scm
 Running...
 Running peval:2000
-error: recursive exception: make-string: adults too small; increase maximum-adults-size
+./bench: line 704: 26611 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	2m51.904s
-user	2m50.416s
-sys	0m1.447s
-+!CSVLINE!+foment,peval,CRASHED
+real	7m29.953s
+user	2m43.761s
+sys	0m3.014s
++!CSVLINE!+foment,peval,ULIMITKILLED
 
 Testing primes under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -660,12 +652,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/primes.scm /tmp/larcenous/Foment/primes.scm
 Running...
 Running primes:1000:10000
-Elapsed time: 103.735 seconds (103.0) for primes:1000:10000
-+!CSVLINE!+foment-0.4,primes:1000:10000,103.735
+Elapsed time: 103.123 seconds (103.0) for primes:1000:10000
++!CSVLINE!+foment-0.4,primes:1000:10000,103.123
 
-real	1m43.921s
-user	1m43.084s
-sys	0m0.813s
+real	1m43.268s
+user	1m42.438s
+sys	0m0.823s
 
 Testing quicksort under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -674,11 +666,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/quicksort.scm /tmp/larcenous/Foment/quicksort.scm
 Running...
 Running quicksort:10000:2500
-./bench: line 689:  1771 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26684 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.205s
-user	4m58.845s
-sys	0m1.353s
+real	5m0.184s
+user	4m58.837s
+sys	0m1.340s
 +!CSVLINE!+foment,quicksort,ULIMITKILLED
 
 Testing scheme under Foment
@@ -688,12 +680,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/scheme.scm /tmp/larcenous/Foment/scheme.scm
 Running...
 Running scheme:100000
-Elapsed time: 233.137 seconds (233.0) for scheme:100000
-+!CSVLINE!+foment-0.4,scheme:100000,233.137
+Elapsed time: 233.17 seconds (233.0) for scheme:100000
++!CSVLINE!+foment-0.4,scheme:100000,233.17
 
-real	3m53.342s
-user	3m52.178s
-sys	0m1.160s
+real	3m53.362s
+user	3m52.213s
+sys	0m1.143s
 
 Testing slatex under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -702,12 +694,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/slatex.scm /tmp/larcenous/Foment/slatex.scm
 Running...
 Running slatex:500
-Elapsed time: 148.624 seconds (149.0) for slatex:500
-+!CSVLINE!+foment-0.4,slatex:500,148.624
+Elapsed time: 148.194 seconds (148.0) for slatex:500
++!CSVLINE!+foment-0.4,slatex:500,148.194
 
-real	2m28.711s
-user	0m39.592s
-sys	0m3.492s
+real	2m28.362s
+user	0m39.828s
+sys	0m3.617s
 
 Testing chudnovsky under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -715,11 +707,11 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Foment-postlude.scm
 Compiling...
 foment_comp /tmp/larcenous/Foment/chudnovsky.scm /tmp/larcenous/Foment/chudnovsky.scm
 Running...
-#<exception: #x7fad0226ece8 implementation-restriction read "read: number too long" irritants: (#<textual-input-port: #x7fad01fda970 standard-input line: 1>)>
+#<exception: #x7f5007c9ace8 implementation-restriction read "read: number too long" irritants: (#<textual-input-port: #x7f5007a06970 standard-input line: 1>)>
 
-real	0m0.033s
-user	0m0.022s
-sys	0m0.011s
+real	0m0.021s
+user	0m0.015s
+sys	0m0.003s
 +!CSVLINE!+foment,chudnovsky,CRASHED
 
 Testing nboyer under Foment
@@ -729,11 +721,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/nboyer.scm /tmp/larcenous/Foment/nboyer.scm
 Running...
 Running nboyer:5:1
-./bench: line 689:  1893 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26804 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.023s
-user	4m59.839s
-sys	0m0.177s
+real	5m0.022s
+user	4m59.878s
+sys	0m0.137s
 +!CSVLINE!+foment,nboyer,ULIMITKILLED
 
 Testing sboyer under Foment
@@ -743,11 +735,11 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/sboyer.scm /tmp/larcenous/Foment/sboyer.scm
 Running...
 Running sboyer:5:1
-./bench: line 689:  1940 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26851 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.051s
-user	4m59.778s
-sys	0m0.257s
+real	5m0.045s
+user	4m59.733s
+sys	0m0.303s
 +!CSVLINE!+foment,sboyer,ULIMITKILLED
 
 Testing gcbench under Foment
@@ -759,11 +751,11 @@ Running...
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
 Running gcbench:20:1
-./bench: line 689:  1985 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26897 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.026s
-user	4m59.821s
-sys	0m0.194s
+real	5m0.036s
+user	4m59.796s
+sys	0m0.233s
 +!CSVLINE!+foment,gcbench,ULIMITKILLED
 
 Testing mperm under Foment
@@ -772,11 +764,11 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Foment-postlude.scm
 Compiling...
 foment_comp /tmp/larcenous/Foment/mperm.scm /tmp/larcenous/Foment/mperm.scm
 Running...
-./bench: line 689:  2031 Killed                  "${FOMENT}" "$1" < "$2"
+./bench: line 704: 26944 Killed                  "${FOMENT}" "$1" < "$2"
 
-real	5m0.008s
-user	4m59.896s
-sys	0m0.100s
+real	5m0.018s
+user	4m59.884s
+sys	0m0.127s
 +!CSVLINE!+foment,mperm,ULIMITKILLED
 
 Testing equal under Foment
@@ -786,12 +778,12 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/equal.scm /tmp/larcenous/Foment/equal.scm
 Running...
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 45.261 seconds (45.0) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+foment-0.4,equal:100:100:8:1000:2000:5000,45.261
+Elapsed time: 44.943 seconds (45.0) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+foment-0.4,equal:100:100:8:1000:2000:5000,44.943
 
-real	0m45.431s
-user	0m44.738s
-sys	0m0.692s
+real	0m45.087s
+user	0m44.343s
+sys	0m0.743s
 
 Testing bv2string under Foment
 Including prelude /home/nex/src/r7rs-benchmarks/src/Foment-prelude.scm
@@ -800,9 +792,9 @@ Compiling...
 foment_comp /tmp/larcenous/Foment/bv2string.scm /tmp/larcenous/Foment/bv2string.scm
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 107.596 seconds (108.0) for bv2string:1000:1000:100
-+!CSVLINE!+foment-0.4,bv2string:1000:1000:100,107.596
+Elapsed time: 107.957 seconds (108.0) for bv2string:1000:1000:100
++!CSVLINE!+foment-0.4,bv2string:1000:1000:100,107.957
 
-real	1m47.838s
-user	1m46.609s
-sys	0m1.227s
+real	1m48.184s
+user	1m46.943s
+sys	0m1.238s
