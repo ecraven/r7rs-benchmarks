@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking Stalin on Sat 9 Sep 17:56:19 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
+Benchmarking Stalin on Wed 13 Sep 16:34:29 CEST 2017 under Linux nexion 4.12.12-1-ARCH #1 SMP PREEMPT Sun Sep 10 09:41:14 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -223,12 +223,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running browse:2000
-Elapsed time: 9.800000004470348358154296875e-1 seconds (9.800000000000000710542735760100185871124267578125e-1) for browse:2000
-+!CSVLINE!+stalin-unknown,browse:2000,9.800000004470348358154296875e-1
+Elapsed time: 1.0 seconds (1.0) for browse:2000
++!CSVLINE!+stalin-unknown,browse:2000,1.0
 
-real	0m0.982s
-user	0m0.984s
-sys	0m0.003s
+real	0m1.002s
+user	0m1.008s
+sys	0m0.000s
 
 Testing deriv under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -403,10 +403,10 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their environments
      0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 - 12% - Performing flow analysis
+     2 - 13% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     4 - 24% - Determining which call sites to split
+     4 - 25% - Determining which call sites to split
      0 -  0% - Computing call graph
      0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -445,12 +445,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running deriv:10000000
-Elapsed time: 8.91999999992549419403076171875 seconds (8.9199999999999999289457264239899814128875732421875) for deriv:10000000
-+!CSVLINE!+stalin-unknown,deriv:10000000,8.91999999992549419403076171875
+Elapsed time: 8.97000000000116415321826934814453125 seconds (8.9700000000000006394884621840901672840118408203125) for deriv:10000000
++!CSVLINE!+stalin-unknown,deriv:10000000,8.97000000000116415321826934814453125
 
-real	0m8.918s
-user	0m15.676s
-sys	0m1.060s
+real	0m8.972s
+user	0m15.922s
+sys	0m0.907s
 +!CSVLINE!+stalin,deriv,CRASHED
 
 Testing destruc under Stalin
@@ -644,7 +644,7 @@ Compilation time summary (in CPU seconds)
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
      0 -  3% - Determining which environments have external continuation calls
-     1 -  4% - Determining blocked environments
+     1 -  5% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
      1 -  8% - Applying closed-world assumption
@@ -664,12 +664,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running destruc:600:50:4000
-Elapsed time: 4.799999999813735485076904296875 seconds (4.79999999999999982236431605997495353221893310546875) for destruc:600:50:4000
-+!CSVLINE!+stalin-unknown,destruc:600:50:4000,4.799999999813735485076904296875
+Elapsed time: 4.75 seconds (4.75) for destruc:600:50:4000
++!CSVLINE!+stalin-unknown,destruc:600:50:4000,4.75
 
-real	0m4.797s
-user	0m7.158s
-sys	0m0.352s
+real	0m4.757s
+user	0m7.150s
+sys	0m0.323s
 
 Testing diviter under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -882,12 +882,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running diviter:1000:1000000
-Elapsed time: 8.5600000000558793544769287109375 seconds (8.5600000000000004973799150320701301097869873046875) for diviter:1000:1000000
-+!CSVLINE!+stalin-unknown,diviter:1000:1000000,8.5600000000558793544769287109375
+Elapsed time: 8.430000000007566995918750762939453125 seconds (8.42999999999999971578290569595992565155029296875) for diviter:1000:1000000
++!CSVLINE!+stalin-unknown,diviter:1000:1000000,8.430000000007566995918750762939453125
 
-real	0m8.559s
-user	0m15.209s
-sys	0m1.167s
+real	0m8.427s
+user	0m15.213s
+sys	0m1.079s
 
 Testing divrec under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -1100,12 +1100,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running divrec:1000:1000000
-Elapsed time: 1.150999999977648347027070485637523233890533447265625e1 seconds (1.1510000000000000230926389122032560408115386962890625e1) for divrec:1000:1000000
-+!CSVLINE!+stalin-unknown,divrec:1000:1000000,1.150999999977648347027070485637523233890533447265625e1
+Elapsed time: 1.176000000000931411392457448528148233890533447265625e1 seconds (1.1759999999999999342747969421907328069210052490234375e1) for divrec:1000:1000000
++!CSVLINE!+stalin-unknown,divrec:1000:1000000,1.176000000000931411392457448528148233890533447265625e1
 
-real	0m11.506s
-user	0m18.290s
-sys	0m1.112s
+real	0m11.766s
+user	0m18.684s
+sys	0m1.058s
 
 Testing puzzle under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -1314,11 +1314,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running puzzle:1000
-Elapsed time: 6.79999999701976776123046875e-1 seconds (6.800000000000000710542735760100185871124267578125e-1) for puzzle:1000
-+!CSVLINE!+stalin-unknown,puzzle:1000,6.79999999701976776123046875e-1
+Elapsed time: 6.99999999997089616954326629638671875e-1 seconds (7.0e-1) for puzzle:1000
++!CSVLINE!+stalin-unknown,puzzle:1000,6.99999999997089616954326629638671875e-1
 
-real	0m0.683s
-user	0m0.685s
+real	0m0.697s
+user	0m0.699s
 sys	0m0.000s
 +!CSVLINE!+stalin,puzzle,CRASHED
 
@@ -1533,11 +1533,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running triangl:22:1:50
-Elapsed time: 1.3699999996460974216461181640625 seconds (1.37000000000000010658141036401502788066864013671875) for triangl:22:1:50
-+!CSVLINE!+stalin-unknown,triangl:22:1:50,1.3699999996460974216461181640625
+Elapsed time: 1.300000000002910383045673370361328125 seconds (1.3000000000000000444089209850062616169452667236328125) for triangl:22:1:50
++!CSVLINE!+stalin-unknown,triangl:22:1:50,1.300000000002910383045673370361328125
 
-real	0m1.369s
-user	0m1.381s
+real	0m1.299s
+user	0m1.311s
 sys	0m0.000s
 
 Testing tak under Stalin
@@ -1726,7 +1726,7 @@ Compilation time summary (in CPU seconds)
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
      1 - 10% - Performing lightweight closure conversion
-     1 -  5% - Determining parents
+     1 -  6% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
@@ -1751,11 +1751,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running tak:40:20:11:1
-Elapsed time: 3.8199999998323619365692138671875 seconds (3.8199999999999999289457264239899814128875732421875) for tak:40:20:11:1
-+!CSVLINE!+stalin-unknown,tak:40:20:11:1,3.8199999998323619365692138671875
+Elapsed time: 3.79000000000814907252788543701171875 seconds (3.79000000000000003552713678800500929355621337890625) for tak:40:20:11:1
++!CSVLINE!+stalin-unknown,tak:40:20:11:1,3.79000000000814907252788543701171875
 
-real	0m3.818s
-user	0m3.819s
+real	0m3.790s
+user	0m3.791s
 sys	0m0.000s
 +!CSVLINE!+stalin,tak,CRASHED
 
@@ -1955,7 +1955,7 @@ Compilation time summary (in CPU seconds)
      1 -  5% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  9% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -1972,12 +1972,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running takl:40:20:12:1
-Elapsed time: 2.5 seconds (2.5) for takl:40:20:12:1
-+!CSVLINE!+stalin-unknown,takl:40:20:12:1,2.5
+Elapsed time: 2.490000000005238689482212066650390625 seconds (2.4900000000000002131628207280300557613372802734375) for takl:40:20:12:1
++!CSVLINE!+stalin-unknown,takl:40:20:12:1,2.490000000005238689482212066650390625
 
-real	0m2.507s
-user	0m2.509s
-sys	0m0.000s
+real	0m2.489s
+user	0m2.487s
+sys	0m0.003s
 
 Testing ntakl under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -2175,7 +2175,7 @@ Compilation time summary (in CPU seconds)
      1 -  5% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  9% - Applying closed-world assumption
+     1 -  8% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -2192,12 +2192,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 2.459999999962747097015380859375 seconds (2.45999999999999996447286321199499070644378662109375) for ntakl:40:20:12:1
-+!CSVLINE!+stalin-unknown,ntakl:40:20:12:1,2.459999999962747097015380859375
+Elapsed time: 2.47000000000116415321826934814453125 seconds (2.470000000000000195399252334027551114559173583984375) for ntakl:40:20:12:1
++!CSVLINE!+stalin-unknown,ntakl:40:20:12:1,2.47000000000116415321826934814453125
 
-real	0m2.459s
-user	0m2.463s
-sys	0m0.000s
+real	0m2.470s
+user	0m2.468s
+sys	0m0.003s
 
 Testing cpstak under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -2371,7 +2371,7 @@ Compilation time summary (in CPU seconds)
      2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  3% - Determining which types and type sets are used
-     3 - 21% - Determining which call sites to split
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  5% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -2409,12 +2409,14 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
-./bench: line 399: 14315 Killed                  "$exe" < "$2"
+Too many heap sections: Increase MAXHINCR or MAX_HEAP_SECTS
+Running cpstak:40:20:11:1
+./bench: line 399: 24570 Aborted                 (core dumped) "$exe" < "$2"
 
-real	0m4.268s
-user	0m8.230s
-sys	0m1.435s
-+!CSVLINE!+stalin,cpstak,ULIMITKILLED
+real	0m9.923s
+user	0m8.193s
+sys	0m2.018s
++!CSVLINE!+stalin,cpstak,CRASHED
 
 Testing ctak under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -2585,12 +2587,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their environments
      0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 - 11% - Performing flow analysis
+     2 - 12% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  3% - Determining which types and type sets are used
      3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
-     1 -  5% - Determining which environments are called more than once
+     1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
@@ -2627,12 +2629,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 7.99999999813735485076904296875e-1 seconds (8.0e-1) for ctak:32:16:8:1
-+!CSVLINE!+stalin-unknown,ctak:32:16:8:1,7.99999999813735485076904296875e-1
+Elapsed time: 8.099999999976716935634613037109375e-1 seconds (8.10000000000000142108547152020037174224853515625e-1) for ctak:32:16:8:1
++!CSVLINE!+stalin-unknown,ctak:32:16:8:1,8.099999999976716935634613037109375e-1
 
-real	0m0.808s
-user	0m0.805s
-sys	0m0.003s
+real	0m0.816s
+user	0m0.818s
+sys	0m0.000s
 +!CSVLINE!+stalin,ctak,CRASHED
 
 Testing fib under Stalin
@@ -2805,7 +2807,7 @@ Compilation time summary (in CPU seconds)
      0 -  1% - Determining which types and type sets are used
      3 - 12% - Determining which call sites to split
      0 -  0% - Computing call graph
-     0 -  2% - Determining which environments are called more than once
+     1 -  2% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
@@ -2842,12 +2844,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running fib:40:5
-Elapsed time: 3.809999999590218067169189453125 seconds (3.810000000000000142108547152020037174224853515625) for fib:40:5
-+!CSVLINE!+stalin-unknown,fib:40:5,3.809999999590218067169189453125
+Elapsed time: 3.240000000005238689482212066650390625 seconds (3.2400000000000002131628207280300557613372802734375) for fib:40:5
++!CSVLINE!+stalin-unknown,fib:40:5,3.240000000005238689482212066650390625
 
-real	0m3.810s
-user	0m3.808s
-sys	0m0.003s
+real	0m3.244s
+user	0m3.245s
+sys	0m0.000s
 +!CSVLINE!+stalin,fib,CRASHED
 
 Testing fibc under Stalin
@@ -3063,12 +3065,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running fibc:30:10
-Elapsed time: 3.400000003166496753692626953125e-1 seconds (3.4000000000000003552713678800500929355621337890625e-1) for fibc:30:10
-+!CSVLINE!+stalin-unknown,fibc:30:10,3.400000003166496753692626953125e-1
+Elapsed time: 3.40000000011059455573558807373046875e-1 seconds (3.4000000000000003552713678800500929355621337890625e-1) for fibc:30:10
++!CSVLINE!+stalin-unknown,fibc:30:10,3.40000000011059455573558807373046875e-1
 
-real	0m0.350s
-user	0m0.348s
-sys	0m0.003s
+real	0m0.343s
+user	0m0.344s
+sys	0m0.000s
 +!CSVLINE!+stalin,fibc,CRASHED
 
 Testing fibfp under Stalin
@@ -3278,11 +3280,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running fibfp:3.5e1:10
-Elapsed time: 5.49999999813735485076904296875e-1 seconds (5.5e-1) for fibfp:3.5e1:10
-+!CSVLINE!+stalin-unknown,fibfp:3.5e1:10,5.49999999813735485076904296875e-1
+Elapsed time: 5.700000000069849193096160888671875e-1 seconds (5.699999999999999289457264239899814128875732421875e-1) for fibfp:3.5e1:10
++!CSVLINE!+stalin-unknown,fibfp:3.5e1:10,5.700000000069849193096160888671875e-1
 
-real	0m0.548s
-user	0m0.547s
+real	0m0.569s
+user	0m0.570s
 sys	0m0.000s
 
 Testing sum under Stalin
@@ -3444,7 +3446,7 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  2% - Fast tree shake
+     0 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
@@ -3475,7 +3477,7 @@ Compilation time summary (in CPU seconds)
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  7% - Applying closed-world assumption
+     1 -  6% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -3492,11 +3494,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running sum:10000:200000
-Elapsed time: 4.6400000001303851604461669921875 seconds (4.63999999999999968025576890795491635799407958984375) for sum:10000:200000
-+!CSVLINE!+stalin-unknown,sum:10000:200000,4.6400000001303851604461669921875
+Elapsed time: 4.640000000013969838619232177734375 seconds (4.63999999999999968025576890795491635799407958984375) for sum:10000:200000
++!CSVLINE!+stalin-unknown,sum:10000:200000,4.640000000013969838619232177734375
 
-real	0m4.644s
-user	0m4.644s
+real	0m4.635s
+user	0m4.636s
 sys	0m0.000s
 +!CSVLINE!+stalin,sum,CRASHED
 
@@ -3707,12 +3709,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running sumfp:1.0e6:500
-Elapsed time: 6.20000000111758708953857421875e-1 seconds (6.20000000000000017763568394002504646778106689453125e-1) for sumfp:1.0e6:500
-+!CSVLINE!+stalin-unknown,sumfp:1.0e6:500,6.20000000111758708953857421875e-1
+Elapsed time: 6.20000000009895302355289459228515625e-1 seconds (6.20000000000000017763568394002504646778106689453125e-1) for sumfp:1.0e6:500
++!CSVLINE!+stalin-unknown,sumfp:1.0e6:500,6.20000000009895302355289459228515625e-1
 
-real	0m0.628s
-user	0m0.628s
-sys	0m0.000s
+real	0m0.620s
+user	0m0.615s
+sys	0m0.007s
 
 Testing fft under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -3894,12 +3896,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     1 -  4% - Determining escaping types
+     1 -  5% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     2 - 10% - Performing lightweight closure conversion
+     1 - 10% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
@@ -3925,11 +3927,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running fft:65536:100
-Elapsed time: 2.70000000484287738800048828125e-1 seconds (2.70000000000000017763568394002504646778106689453125e-1) for fft:65536:100
-+!CSVLINE!+stalin-unknown,fft:65536:100,2.70000000484287738800048828125e-1
+Elapsed time: 2.6999999998952262103557586669921875e-1 seconds (2.70000000000000017763568394002504646778106689453125e-1) for fft:65536:100
++!CSVLINE!+stalin-unknown,fft:65536:100,2.6999999998952262103557586669921875e-1
 
-real	0m0.279s
-user	0m0.279s
+real	0m0.270s
+user	0m0.271s
 sys	0m0.000s
 
 Testing mbrot under Stalin
@@ -4139,10 +4141,10 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running mbrot:75:1000
-Elapsed time: 5.699999998323619365692138671875e-1 seconds (5.699999999999999289457264239899814128875732421875e-1) for mbrot:75:1000
-+!CSVLINE!+stalin-unknown,mbrot:75:1000,5.699999998323619365692138671875e-1
+Elapsed time: 5.69999999992433004081249237060546875e-1 seconds (5.699999999999999289457264239899814128875732421875e-1) for mbrot:75:1000
++!CSVLINE!+stalin-unknown,mbrot:75:1000,5.69999999992433004081249237060546875e-1
 
-real	0m0.572s
+real	0m0.571s
 user	0m0.573s
 sys	0m0.000s
 +!CSVLINE!+stalin,mbrot,CRASHED
@@ -4365,12 +4367,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running nucleic:50
-Elapsed time: 4.300000001676380634307861328125e-1 seconds (4.29999999999999982236431605997495353221893310546875e-1) for nucleic:50
-+!CSVLINE!+stalin-unknown,nucleic:50,4.300000001676380634307861328125e-1
+Elapsed time: 4.30000000007566995918750762939453125e-1 seconds (4.29999999999999982236431605997495353221893310546875e-1) for nucleic:50
++!CSVLINE!+stalin-unknown,nucleic:50,4.30000000007566995918750762939453125e-1
 
 real	0m0.435s
-user	0m0.448s
-sys	0m0.007s
+user	0m0.451s
+sys	0m0.003s
 
 Testing pi under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -4538,7 +4540,7 @@ Generating C code
 Writing database
 Compiling C code
 Compilation time summary (in CPU seconds)
-     0 -  1% - Reading source
+     0 -  0% - Reading source
      0 -  1% - Expanding macros
      0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
@@ -4562,7 +4564,7 @@ Compilation time summary (in CPU seconds)
      0 -  2% - Determining which environments are recursive
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     1 - 11% - Performing lightweight closure conversion
+     1 - 10% - Performing lightweight closure conversion
      1 -  5% - Determining parents
      0 -  2% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
@@ -4588,12 +4590,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running pnpoly:1000000
-Elapsed time: 1.0299999997951090335845947265625 seconds (1.0300000000000000266453525910037569701671600341796875) for pnpoly:1000000
-+!CSVLINE!+stalin-unknown,pnpoly:1000000,1.0299999997951090335845947265625
+Elapsed time: 9.90000000005238689482212066650390625e-1 seconds (9.9000000000000003552713678800500929355621337890625e-1) for pnpoly:1000000
++!CSVLINE!+stalin-unknown,pnpoly:1000000,9.90000000005238689482212066650390625e-1
 
-real	0m1.039s
-user	0m1.241s
-sys	0m0.026s
+real	0m0.993s
+user	0m1.206s
+sys	0m0.014s
 +!CSVLINE!+stalin,pnpoly,CRASHED
 
 Testing ray under Stalin
@@ -4770,7 +4772,7 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     1 -  3% - Fast tree shake
+     1 -  4% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
@@ -4818,12 +4820,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running simplex:1000000
-Elapsed time: 2.700000000186264514923095703125e-1 seconds (2.70000000000000017763568394002504646778106689453125e-1) for simplex:1000000
-+!CSVLINE!+stalin-unknown,simplex:1000000,2.700000000186264514923095703125e-1
+Elapsed time: 2.59999999994761310517787933349609375e-1 seconds (2.600000000000000088817841970012523233890533447265625e-1) for simplex:1000000
++!CSVLINE!+stalin-unknown,simplex:1000000,2.59999999994761310517787933349609375e-1
 
-real	0m0.271s
-user	0m0.312s
-sys	0m0.004s
+real	0m0.270s
+user	0m0.308s
+sys	0m0.007s
 
 Testing ack under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -4992,7 +4994,7 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating variables with their references
      1 -  8% - Performing flow analysis
      0 -  0% - Enumerating call sites
-     0 -  2% - Determining which types and type sets are used
+     0 -  1% - Determining which types and type sets are used
      3 - 16% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
@@ -5001,7 +5003,7 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     1 -  9% - Determining escaping types
+     1 -  8% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      1 -  6% - Determining which environments are recursive
      3 - 17% - Determining which environments are reentrant
@@ -5024,7 +5026,7 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     0 -  1% - Generating code
+     0 -  2% - Generating code
      0 -  1% - Removing unused declarations
      0 -  0% - Removing unused labels
      0 -  2% - Generating C code
@@ -5032,11 +5034,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running ack:3:12:2
-Elapsed time: 4.3400000003166496753692626953125 seconds (4.339999999999999857891452847979962825775146484375) for ack:3:12:2
-+!CSVLINE!+stalin-unknown,ack:3:12:2,4.3400000003166496753692626953125
+Elapsed time: 4.25 seconds (4.25) for ack:3:12:2
++!CSVLINE!+stalin-unknown,ack:3:12:2,4.25
 
-real	0m4.344s
-user	0m4.343s
+real	0m4.248s
+user	0m4.249s
 sys	0m0.000s
 +!CSVLINE!+stalin,ack,CRASHED
 
@@ -5210,7 +5212,7 @@ Compilation time summary (in CPU seconds)
      1 -  9% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     3 - 19% - Determining which call sites to split
+     3 - 20% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -5249,11 +5251,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running array1:1000000:500
-Elapsed time: 3.900000001303851604461669921875e-1 seconds (3.9000000000000003552713678800500929355621337890625e-1) for array1:1000000:500
-+!CSVLINE!+stalin-unknown,array1:1000000:500,3.900000001303851604461669921875e-1
+Elapsed time: 3.9999999999417923390865325927734375e-1 seconds (4.0e-1) for array1:1000000:500
++!CSVLINE!+stalin-unknown,array1:1000000:500,3.9999999999417923390865325927734375e-1
 
-real	0m0.393s
-user	0m0.394s
+real	0m0.405s
+user	0m0.407s
 sys	0m0.000s
 +!CSVLINE!+stalin,array1,CRASHED
 
@@ -5464,12 +5466,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running string:500000:25
-Elapsed time: 3.70000000111758708953857421875e-1 seconds (3.70000000000000017763568394002504646778106689453125e-1) for string:500000:25
-+!CSVLINE!+stalin-unknown,string:500000:25,3.70000000111758708953857421875e-1
+Elapsed time: 3.79999999990104697644710540771484375e-1 seconds (3.79999999999999982236431605997495353221893310546875e-1) for string:500000:25
++!CSVLINE!+stalin-unknown,string:500000:25,3.79999999990104697644710540771484375e-1
 
-real	0m0.377s
-user	0m0.528s
-sys	0m0.033s
+real	0m0.379s
+user	0m0.607s
+sys	0m0.028s
 +!CSVLINE!+stalin,string,CRASHED
 
 Testing sum1 under Stalin
@@ -5631,7 +5633,7 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  1% - Expanding macros
-     0 -  2% - Fast tree shake
+     0 -  3% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
@@ -5648,7 +5650,7 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining necessarily-fictitious native procedure types
      0 -  0% - Annotating environments and continuation types
      0 -  0% - Inverting points-to relation
-     3 - 21% - Determining escaping types
+     3 - 20% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
      0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
@@ -5679,12 +5681,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running sum1:25
-Elapsed time: 1.129999999888241291046142578125 seconds (1.12999999999999989341858963598497211933135986328125) for sum1:25
-+!CSVLINE!+stalin-unknown,sum1:25,1.129999999888241291046142578125
+Elapsed time: 1.14999999999417923390865325927734375 seconds (1.149999999999999911182158029987476766109466552734375) for sum1:25
++!CSVLINE!+stalin-unknown,sum1:25,1.14999999999417923390865325927734375
 
-real	0m1.139s
-user	0m1.170s
-sys	0m0.007s
+real	0m1.155s
+user	0m1.191s
+sys	0m0.003s
 
 Testing cat under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -5873,10 +5875,10 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their environments
      0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 - 11% - Performing flow analysis
+     1 - 11% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     4 - 25% - Determining which call sites to split
+     3 - 25% - Determining which call sites to split
      0 -  0% - Computing call graph
      1 -  4% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -5894,7 +5896,7 @@ Compilation time summary (in CPU seconds)
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     0 -  2% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
@@ -5915,12 +5917,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 3.6699999994598329067230224609375 seconds (3.6699999999999999289457264239899814128875732421875) for wc:inputs/bib:50
-+!CSVLINE!+stalin-unknown,wc:inputs/bib:50,3.6699999994598329067230224609375
+Elapsed time: 3.45999999999185092747211456298828125 seconds (3.45999999999999996447286321199499070644378662109375) for wc:inputs/bib:50
++!CSVLINE!+stalin-unknown,wc:inputs/bib:50,3.45999999999185092747211456298828125
 
-real	0m3.676s
-user	0m3.627s
-sys	0m0.057s
+real	0m3.459s
+user	0m3.420s
+sys	0m0.050s
 
 Testing read1 under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -6133,12 +6135,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running read1:2500
-Elapsed time: 6.5 seconds (6.5) for read1:2500
-+!CSVLINE!+stalin-unknown,read1:2500,6.5
+Elapsed time: 7.379999999990104697644710540771484375 seconds (7.37999999999999989341858963598497211933135986328125) for read1:2500
++!CSVLINE!+stalin-unknown,read1:2500,7.379999999990104697644710540771484375
 
-real	0m6.505s
-user	0m6.622s
-sys	0m0.037s
+real	0m7.383s
+user	0m7.487s
+sys	0m0.050s
 
 Testing compiler under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -6362,18 +6364,18 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running conform:500
-Elapsed time: 2.320000000298023223876953125 seconds (2.319999999999999840127884453977458178997039794921875) for conform:500
-+!CSVLINE!+stalin-unknown,conform:500,2.320000000298023223876953125
+Elapsed time: 2.3200000000069849193096160888671875 seconds (2.319999999999999840127884453977458178997039794921875) for conform:500
++!CSVLINE!+stalin-unknown,conform:500,2.3200000000069849193096160888671875
 
-real	0m2.327s
-user	0m2.988s
-sys	0m0.031s
+real	0m2.321s
+user	0m2.865s
+sys	0m0.030s
 
 Testing dynamic under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
 stalin_comp /tmp/larcenous/Stalin/dynamic.scm /tmp/larcenous/Stalin/dynamic.exe
-./bench: line 391: 14832 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+./bench: line 391: 25064 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,dynamic,COMPILEERROR
 
 Testing earley under Stalin
@@ -6537,7 +6539,7 @@ Compiling C code
 Compilation time summary (in CPU seconds)
      0 -  0% - Reading source
      0 -  0% - Expanding macros
-     0 -  1% - Fast tree shake
+     0 -  2% - Fast tree shake
      0 -  0% - Annotating expressions with their parents
      0 -  0% - Annotating variables with their environments
      0 -  0% - Annotating expressions with their environments
@@ -6559,7 +6561,7 @@ Compilation time summary (in CPU seconds)
      0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     5 - 16% - Performing lightweight closure conversion
+     4 - 16% - Performing lightweight closure conversion
      1 -  3% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
@@ -6584,11 +6586,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
-./bench: line 399: 14886 Segmentation fault      (core dumped) "$exe" < "$2"
+./bench: line 399: 25117 Segmentation fault      (core dumped) "$exe" < "$2"
 
-real	0m8.362s
-user	0m6.794s
-sys	0m1.586s
+real	0m7.335s
+user	0m6.411s
+sys	0m1.427s
 +!CSVLINE!+stalin,earley,CRASHED
 
 Testing graphs under Stalin
@@ -6761,9 +6763,9 @@ Compilation time summary (in CPU seconds)
      2 - 10% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     5 - 28% - Determining which call sites to split
+     6 - 28% - Determining which call sites to split
      0 -  0% - Computing call graph
-     0 -  3% - Determining which environments are called more than once
+     1 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
      0 -  0% - Determining free variables
      0 -  0% - Determining necessarily-fictitious native procedure types
@@ -6771,10 +6773,10 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Inverting points-to relation
      1 -  4% - Determining escaping types
      0 -  0% - Determining which environments have unique call sites
-     0 -  1% - Determining which environments are recursive
-     1 -  4% - Determining which environments are reentrant
+     0 -  2% - Determining which environments are recursive
+     1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     2 - 12% - Performing lightweight closure conversion
+     2 - 11% - Performing lightweight closure conversion
      1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
@@ -6800,12 +6802,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running graphs:7:3
-Elapsed time: 9.4799999999813735485076904296875 seconds (9.480000000000000426325641456060111522674560546875) for graphs:7:3
-+!CSVLINE!+stalin-unknown,graphs:7:3,9.4799999999813735485076904296875
+Elapsed time: 9.26000000000931322574615478515625 seconds (9.2599999999999997868371792719699442386627197265625) for graphs:7:3
++!CSVLINE!+stalin-unknown,graphs:7:3,9.26000000000931322574615478515625
 
-real	0m9.492s
-user	0m20.068s
-sys	0m0.144s
+real	0m9.261s
+user	0m19.371s
+sys	0m0.193s
 +!CSVLINE!+stalin,graphs,CRASHED
 
 Testing lattice under Stalin
@@ -6997,7 +6999,7 @@ Compilation time summary (in CPU seconds)
      0 -  1% - Determining which environments are recursive
      1 -  4% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
-     2 - 11% - Performing lightweight closure conversion
+     2 - 10% - Performing lightweight closure conversion
      1 -  3% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
@@ -7023,11 +7025,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running lattice:44:10
-Elapsed time: 3.879999999888241291046142578125 seconds (3.87999999999999989341858963598497211933135986328125) for lattice:44:10
-+!CSVLINE!+stalin-unknown,lattice:44:10,3.879999999888241291046142578125
+Elapsed time: 3.930000000007566995918750762939453125 seconds (3.9300000000000000710542735760100185871124267578125) for lattice:44:10
++!CSVLINE!+stalin-unknown,lattice:44:10,3.930000000007566995918750762939453125
 
-real	0m3.883s
-user	0m4.449s
+real	0m3.932s
+user	0m4.444s
 sys	0m0.007s
 +!CSVLINE!+stalin,lattice,CRASHED
 
@@ -7550,7 +7552,7 @@ Compilation time summary (in CPU seconds)
      1 -  3% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
-     1 -  6% - Applying closed-world assumption
+     1 -  7% - Applying closed-world assumption
      0 -  0% - Determining indirect structure types
      0 -  0% - Determining which types are never allocated on the heap
      0 -  0% - Determining which types are atomic
@@ -7567,12 +7569,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 2.0200000000186264514923095703125 seconds (2.020000000000000017763568394002504646778106689453125) for mazefun:11:11:10000
-+!CSVLINE!+stalin-unknown,mazefun:11:11:10000,2.0200000000186264514923095703125
+Elapsed time: 2.02999999999883584678173065185546875 seconds (2.029999999999999804600747665972448885440826416015625) for mazefun:11:11:10000
++!CSVLINE!+stalin-unknown,mazefun:11:11:10000,2.02999999999883584678173065185546875
 
-real	0m2.019s
-user	0m2.994s
-sys	0m0.134s
+real	0m2.034s
+user	0m3.044s
+sys	0m0.104s
 
 Testing nqueens under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -7781,12 +7783,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running nqueens:13:10
-Elapsed time: 4.0200000000186264514923095703125 seconds (4.019999999999999573674358543939888477325439453125) for nqueens:13:10
-+!CSVLINE!+stalin-unknown,nqueens:13:10,4.0200000000186264514923095703125
+Elapsed time: 4.04000000000814907252788543701171875 seconds (4.04000000000000003552713678800500929355621337890625) for nqueens:13:10
++!CSVLINE!+stalin-unknown,nqueens:13:10,4.04000000000814907252788543701171875
 
-real	0m4.024s
-user	0m4.021s
-sys	0m0.003s
+real	0m4.043s
+user	0m4.044s
+sys	0m0.000s
 +!CSVLINE!+stalin,nqueens,CRASHED
 
 Testing paraffins under Stalin
@@ -7996,12 +7998,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running paraffins:23:10
-Elapsed time: 1.540000000037252902984619140625 seconds (1.54000000000000003552713678800500929355621337890625) for paraffins:23:10
-+!CSVLINE!+stalin-unknown,paraffins:23:10,1.540000000037252902984619140625
+Elapsed time: 1.52999999999883584678173065185546875 seconds (1.5300000000000000710542735760100185871124267578125) for paraffins:23:10
++!CSVLINE!+stalin-unknown,paraffins:23:10,1.52999999999883584678173065185546875
 
-real	0m1.555s
-user	0m1.817s
-sys	0m0.070s
+real	0m1.543s
+user	0m1.791s
+sys	0m0.092s
 +!CSVLINE!+stalin,paraffins,CRASHED
 
 Testing parsing under Stalin
@@ -8231,19 +8233,19 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running parsing:2500
-Elapsed time: 5.8900000001303851604461669921875 seconds (5.88999999999999968025576890795491635799407958984375) for parsing:2500
-+!CSVLINE!+stalin-unknown,parsing:2500,5.8900000001303851604461669921875
+Elapsed time: 6.70999999999185092747211456298828125 seconds (6.70999999999999996447286321199499070644378662109375) for parsing:2500
++!CSVLINE!+stalin-unknown,parsing:2500,6.70999999999185092747211456298828125
 
-real	0m5.893s
-user	0m6.076s
-sys	0m0.007s
+real	0m6.710s
+user	0m6.890s
+sys	0m0.020s
 +!CSVLINE!+stalin,parsing,CRASHED
 
 Testing peval under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
 stalin_comp /tmp/larcenous/Stalin/peval.scm /tmp/larcenous/Stalin/peval.exe
-./bench: line 391: 15089 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+./bench: line 391: 25314 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,peval,COMPILEERROR
 
 Testing primes under Stalin
@@ -8457,12 +8459,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running primes:1000:10000
-Elapsed time: 7.799999997951090335845947265625e-1 seconds (7.800000000000000710542735760100185871124267578125e-1) for primes:1000:10000
-+!CSVLINE!+stalin-unknown,primes:1000:10000,7.799999997951090335845947265625e-1
+Elapsed time: 7.70000000004074536263942718505859375e-1 seconds (7.70000000000000017763568394002504646778106689453125e-1) for primes:1000:10000
++!CSVLINE!+stalin-unknown,primes:1000:10000,7.70000000004074536263942718505859375e-1
 
-real	0m0.787s
-user	0m0.922s
-sys	0m0.014s
+real	0m0.772s
+user	0m0.869s
+sys	0m0.011s
 
 Testing quicksort under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -8633,10 +8635,10 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Annotating expressions with their environments
      0 -  1% - In-lining first-order calls to primitive procedures
      0 -  0% - Annotating variables with their references
-     2 - 10% - Performing flow analysis
+     2 - 11% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  2% - Determining which types and type sets are used
-     4 - 26% - Determining which call sites to split
+     4 - 27% - Determining which call sites to split
      0 -  0% - Computing call graph
      0 -  3% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -8650,11 +8652,11 @@ Compilation time summary (in CPU seconds)
      1 -  5% - Determining which environments are reentrant
      0 -  0% - Asserting uniqueness
      2 - 11% - Performing lightweight closure conversion
-     1 -  5% - Determining parents
+     1 -  4% - Determining parents
      0 -  1% - Determining which expressions need conversion to CPS
      0 -  1% - Determining environment distances from root
      0 -  0% - Determining which environments have external self tail calls
-     0 -  2% - Determining which environments have external continuation calls
+     0 -  3% - Determining which environments have external continuation calls
      1 -  4% - Determining blocked environments
      0 -  1% - Determining which environments need to pass parameters globally
      0 -  0% - Determining allocations
@@ -8675,18 +8677,18 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running quicksort:10000:2500
-Elapsed time: 1.719999999739229679107666015625 seconds (1.7199999999999999289457264239899814128875732421875) for quicksort:10000:2500
-+!CSVLINE!+stalin-unknown,quicksort:10000:2500,1.719999999739229679107666015625
+Elapsed time: 1.73000000001047737896442413330078125 seconds (1.729999999999999982236431605997495353221893310546875) for quicksort:10000:2500
++!CSVLINE!+stalin-unknown,quicksort:10000:2500,1.73000000001047737896442413330078125
 
 real	0m1.726s
-user	0m2.089s
-sys	0m0.062s
+user	0m2.101s
+sys	0m0.052s
 
 Testing scheme under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
 stalin_comp /tmp/larcenous/Stalin/scheme.scm /tmp/larcenous/Stalin/scheme.exe
-./bench: line 391: 15179 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+./bench: line 391: 25398 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,scheme,COMPILEERROR
 
 Testing slatex under Stalin
@@ -8711,7 +8713,7 @@ Testing nboyer under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
 Compiling...
 stalin_comp /tmp/larcenous/Stalin/nboyer.scm /tmp/larcenous/Stalin/nboyer.exe
-./bench: line 391: 15239 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+./bench: line 391: 25444 Killed                  ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
 +!CSVLINE!+stalin,nboyer,COMPILEERROR
 
 Testing sboyer under Stalin
@@ -8897,7 +8899,7 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which environments are recursive
      1 -  0% - Determining which environments are reentrant
     57 - 30% - Asserting uniqueness
-    60 - 31% - Performing lightweight closure conversion
+    59 - 31% - Performing lightweight closure conversion
      1 -  0% - Determining parents
     20 - 10% - Determining which expressions need conversion to CPS
      0 -  0% - Determining environment distances from root
@@ -8915,7 +8917,7 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Determining which type sets are squishable
      0 -  0% - Determining alignments
      0 -  0% - Assigning global squish tags
-     1 -  0% - Generating code
+     1 -  1% - Generating code
      0 -  0% - Removing unused declarations
      0 -  0% - Removing unused labels
      1 -  0% - Generating C code
@@ -8923,12 +8925,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running sboyer:5:1
-Elapsed time: 9.69999999739229679107666015625e-1 seconds (9.699999999999999289457264239899814128875732421875e-1) for sboyer:5:1
-+!CSVLINE!+stalin-unknown,sboyer:5:1,9.69999999739229679107666015625e-1
+Elapsed time: 9.8000000001047737896442413330078125e-1 seconds (9.800000000000000710542735760100185871124267578125e-1) for sboyer:5:1
++!CSVLINE!+stalin-unknown,sboyer:5:1,9.8000000001047737896442413330078125e-1
 
-real	0m0.981s
-user	0m1.810s
-sys	0m0.030s
+real	0m0.982s
+user	0m1.796s
+sys	0m0.061s
 +!CSVLINE!+stalin,sboyer,CRASHED
 
 Testing gcbench under Stalin
@@ -9161,12 +9163,12 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Compiling C code
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 1.0260000000242144313489234264125116169452667236328125e1 seconds (1.0260000000000000230926389122032560408115386962890625e1) for mperm:20:10:2:1
-+!CSVLINE!+stalin-unknown,mperm:20:10:2:1,1.0260000000242144313489234264125116169452667236328125e1
+Elapsed time: 1.01900000000023283064365386962890625e1 seconds (1.0189999999999999058530875117867253720760345458984375e1) for mperm:20:10:2:1
++!CSVLINE!+stalin-unknown,mperm:20:10:2:1,1.01900000000023283064365386962890625e1
 
-real	0m11.370s
-user	0m32.917s
-sys	0m2.847s
+real	0m11.300s
+user	0m33.107s
+sys	0m2.832s
 
 Testing equal under Stalin
 Including prelude /home/nex/src/r7rs-benchmarks/src/Stalin-prelude.scm
@@ -9342,7 +9344,7 @@ Compilation time summary (in CPU seconds)
      4 - 25% - Performing flow analysis
      0 -  0% - Enumerating call sites
      0 -  1% - Determining which types and type sets are used
-     2 - 15% - Determining which call sites to split
+     3 - 15% - Determining which call sites to split
      0 -  0% - Computing call graph
      0 -  2% - Determining which environments are called more than once
      0 -  1% - Determining which variables are referenced
@@ -9380,11 +9382,11 @@ Compilation time summary (in CPU seconds)
      0 -  0% - Writing database
      0 -  0% - Compiling C code
 Running...
-./bench: line 399: 15373 Killed                  "$exe" < "$2"
+./bench: line 399: 25557 Killed                  "$exe" < "$2"
 
-real	5m0.004s
-user	4m59.999s
-sys	0m0.000s
+real	5m0.001s
+user	4m59.991s
+sys	0m0.003s
 +!CSVLINE!+stalin,equal,ULIMITKILLED
 
 Testing bv2string under Stalin

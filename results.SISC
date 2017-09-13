@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking SISC on Sat 9 Sep 20:33:25 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
+Benchmarking SISC on Wed 13 Sep 19:05:44 CEST 2017 under Linux nexion 4.12.12-1-ARCH #1 SMP PREEMPT Sun Sep 10 09:41:14 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -8,14 +8,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/browse.scm /tmp/larcenous/SISC/browse.scm
 Running...
 Running browse:2000
-Elapsed time: 15.879 seconds (15879/1000) for browse:2000
-+!CSVLINE!+SISC-1.16.6,browse:2000,15.879
+Elapsed time: 16.087 seconds (16087/1000) for browse:2000
++!CSVLINE!+SISC-1.16.6,browse:2000,16.087
 SISC (1.16.6)
 #;> 
 
-real	0m16.480s
-user	0m18.072s
-sys	0m0.217s
+real	0m16.671s
+user	0m18.392s
+sys	0m0.234s
 
 Testing deriv under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -23,14 +23,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/deriv.scm /tmp/larcenous/SISC/deriv.scm
 Running...
 Running deriv:10000000
-Elapsed time: 53.806 seconds (53807/1000) for deriv:10000000
-+!CSVLINE!+SISC-1.16.6,deriv:10000000,53.806
+Elapsed time: 59.108 seconds (14777/250) for deriv:10000000
++!CSVLINE!+SISC-1.16.6,deriv:10000000,59.108
 SISC (1.16.6)
 #;> 
 
-real	0m54.117s
-user	0m55.808s
-sys	0m0.214s
+real	0m59.434s
+user	1m0.872s
+sys	0m0.196s
 
 Testing destruc under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -38,14 +38,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/destruc.scm /tmp/larcenous/SISC/destruc.scm
 Running...
 Running destruc:600:50:4000
-Elapsed time: 100.596 seconds (100597/1000) for destruc:600:50:4000
-+!CSVLINE!+SISC-1.16.6,destruc:600:50:4000,100.596
+Elapsed time: 92.832 seconds (92833/1000) for destruc:600:50:4000
++!CSVLINE!+SISC-1.16.6,destruc:600:50:4000,92.832
 SISC (1.16.6)
 #;> 
 
-real	1m40.951s
-user	1m42.991s
-sys	0m0.491s
+real	1m33.153s
+user	1m35.082s
+sys	0m0.368s
 
 Testing diviter under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -53,14 +53,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/diviter.scm /tmp/larcenous/SISC/diviter.scm
 Running...
 Running diviter:1000:1000000
-Elapsed time: 42.259 seconds (2113/50) for diviter:1000:1000000
-+!CSVLINE!+SISC-1.16.6,diviter:1000:1000000,42.259
+Elapsed time: 44.367 seconds (44367/1000) for diviter:1000:1000000
++!CSVLINE!+SISC-1.16.6,diviter:1000:1000000,44.367
 SISC (1.16.6)
 #;> 
 
-real	0m42.588s
-user	0m43.730s
-sys	0m0.185s
+real	0m44.678s
+user	0m46.099s
+sys	0m0.305s
 
 Testing divrec under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -68,14 +68,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/divrec.scm /tmp/larcenous/SISC/divrec.scm
 Running...
 Running divrec:1000:1000000
-Elapsed time: 63.152 seconds (63153/1000) for divrec:1000:1000000
-+!CSVLINE!+SISC-1.16.6,divrec:1000:1000000,63.152
+Elapsed time: 62.863 seconds (7858/125) for divrec:1000:1000000
++!CSVLINE!+SISC-1.16.6,divrec:1000:1000000,62.863
 SISC (1.16.6)
 #;> 
 
-real	1m3.487s
-user	1m5.130s
-sys	0m0.334s
+real	1m3.202s
+user	1m4.881s
+sys	0m0.317s
 
 Testing puzzle under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -83,14 +83,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/puzzle.scm /tmp/larcenous/SISC/puzzle.scm
 Running...
 Running puzzle:1000
-Elapsed time: 128.402 seconds (64201/500) for puzzle:1000
-+!CSVLINE!+SISC-1.16.6,puzzle:1000,128.402
+Elapsed time: 128.929 seconds (12893/100) for puzzle:1000
++!CSVLINE!+SISC-1.16.6,puzzle:1000,128.929
 SISC (1.16.6)
 #;> 
 
-real	2m8.756s
-user	2m10.978s
-sys	0m0.462s
+real	2m9.318s
+user	2m11.709s
+sys	0m0.820s
 
 Testing triangl under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -98,14 +98,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/triangl.scm /tmp/larcenous/SISC/triangl.scm
 Running...
 Running triangl:22:1:50
-Elapsed time: 86.991 seconds (86991/1000) for triangl:22:1:50
-+!CSVLINE!+SISC-1.16.6,triangl:22:1:50,86.991
+Elapsed time: 96.286 seconds (48143/500) for triangl:22:1:50
++!CSVLINE!+SISC-1.16.6,triangl:22:1:50,96.286
 SISC (1.16.6)
 #;> 
 
-real	1m27.314s
-user	1m29.060s
-sys	0m0.310s
+real	1m36.596s
+user	1m38.389s
+sys	0m0.506s
 
 Testing tak under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -113,8 +113,8 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/tak.scm /tmp/larcenous/SISC/tak.scm
 Running...
 Running tak:40:20:11:1
-Elapsed time: 90.348 seconds (22587/250) for tak:40:20:11:1
-+!CSVLINE!+SISC-1.16.6,tak:40:20:11:1,90.348
+Elapsed time: 86.498 seconds (86499/1000) for tak:40:20:11:1
++!CSVLINE!+SISC-1.16.6,tak:40:20:11:1,86.498
 SISC (1.16.6)
 #;> 10
 #;> 32
@@ -128,9 +128,9 @@ SISC (1.16.6)
 #;> 7
 #;> 
 
-real	1m30.672s
-user	1m32.525s
-sys	0m0.365s
+real	1m26.853s
+user	1m28.619s
+sys	0m0.347s
 
 Testing takl under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -138,11 +138,11 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/takl.scm /tmp/larcenous/SISC/takl.scm
 Running...
 Running takl:40:20:12:1
-/usr/bin/sisc: line 59: 22839 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
+/usr/bin/sisc: line 59:   322 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
 
-real	4m56.203s
-user	5m0.695s
-sys	0m1.059s
+real	4m55.883s
+user	5m0.719s
+sys	0m0.940s
 +!CSVLINE!+sisc,takl,ULIMITKILLED
 
 Testing ntakl under SISC
@@ -151,14 +151,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/ntakl.scm /tmp/larcenous/SISC/ntakl.scm
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 202.041 seconds (202041/1000) for ntakl:40:20:12:1
-+!CSVLINE!+SISC-1.16.6,ntakl:40:20:12:1,202.041
+Elapsed time: 206.03 seconds (20603/100) for ntakl:40:20:12:1
++!CSVLINE!+SISC-1.16.6,ntakl:40:20:12:1,206.03
 SISC (1.16.6)
 #;> 
 
-real	3m22.391s
-user	3m24.803s
-sys	0m0.740s
+real	3m26.366s
+user	3m28.942s
+sys	0m0.531s
 
 Testing cpstak under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -166,8 +166,8 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/cpstak.scm /tmp/larcenous/SISC/cpstak.scm
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 119.201 seconds (59601/500) for cpstak:40:20:11:1
-+!CSVLINE!+SISC-1.16.6,cpstak:40:20:11:1,119.201
+Elapsed time: 109.198 seconds (109199/1000) for cpstak:40:20:11:1
++!CSVLINE!+SISC-1.16.6,cpstak:40:20:11:1,109.198
 SISC (1.16.6)
 #;> 5
 #;> 32
@@ -181,9 +181,9 @@ SISC (1.16.6)
 #;> 7
 #;> 
 
-real	1m59.528s
-user	2m1.789s
-sys	0m0.503s
+real	1m49.579s
+user	1m51.668s
+sys	0m0.599s
 
 Testing ctak under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -191,8 +191,8 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/ctak.scm /tmp/larcenous/SISC/ctak.scm
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 41.742 seconds (20871/500) for ctak:32:16:8:1
-+!CSVLINE!+SISC-1.16.6,ctak:32:16:8:1,41.742
+Elapsed time: 40.062 seconds (20031/500) for ctak:32:16:8:1
++!CSVLINE!+SISC-1.16.6,ctak:32:16:8:1,40.062
 SISC (1.16.6)
 #;> 160
 #;> 18
@@ -201,9 +201,9 @@ SISC (1.16.6)
 #;> 7
 #;> 
 
-real	0m42.096s
-user	0m43.348s
-sys	0m0.301s
+real	0m40.464s
+user	0m41.936s
+sys	0m0.321s
 
 Testing fib under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -211,14 +211,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/fib.scm /tmp/larcenous/SISC/fib.scm
 Running...
 Running fib:40:5
-Elapsed time: 201.364 seconds (40273/200) for fib:40:5
-+!CSVLINE!+SISC-1.16.6,fib:40:5,201.364
+Elapsed time: 205.066 seconds (205067/1000) for fib:40:5
++!CSVLINE!+SISC-1.16.6,fib:40:5,205.066
 SISC (1.16.6)
 #;> 
 
-real	3m21.671s
-user	3m24.899s
-sys	0m1.071s
+real	3m25.377s
+user	3m28.853s
+sys	0m0.924s
 
 Testing fibc under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -226,14 +226,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/fibc.scm /tmp/larcenous/SISC/fibc.scm
 Running...
 Running fibc:30:10
-Elapsed time: 51.819 seconds (2591/50) for fibc:30:10
-+!CSVLINE!+SISC-1.16.6,fibc:30:10,51.819
+Elapsed time: 55.402 seconds (55403/1000) for fibc:30:10
++!CSVLINE!+SISC-1.16.6,fibc:30:10,55.402
 SISC (1.16.6)
 #;> 
 
-real	0m52.135s
-user	0m53.730s
-sys	0m0.241s
+real	0m55.718s
+user	0m57.247s
+sys	0m0.353s
 
 Testing fibfp under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -241,14 +241,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/fibfp.scm /tmp/larcenous/SISC/fibfp.scm
 Running...
 Running fibfp:35.0:10
-Elapsed time: 36.014 seconds (18007/500) for fibfp:35.0:10
-+!CSVLINE!+SISC-1.16.6,fibfp:35.0:10,36.014
+Elapsed time: 36.851 seconds (36851/1000) for fibfp:35.0:10
++!CSVLINE!+SISC-1.16.6,fibfp:35.0:10,36.851
 SISC (1.16.6)
 #;> 
 
-real	0m36.321s
-user	0m37.462s
-sys	0m0.474s
+real	0m37.132s
+user	0m38.156s
+sys	0m0.405s
 
 Testing sum under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -256,14 +256,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/sum.scm /tmp/larcenous/SISC/sum.scm
 Running...
 Running sum:10000:200000
-Elapsed time: 186.822 seconds (186823/1000) for sum:10000:200000
-+!CSVLINE!+SISC-1.16.6,sum:10000:200000,186.822
+Elapsed time: 214.724 seconds (53681/250) for sum:10000:200000
++!CSVLINE!+SISC-1.16.6,sum:10000:200000,214.724
 SISC (1.16.6)
 #;> 
 
-real	3m7.150s
-user	3m10.261s
-sys	0m0.742s
+real	3m35.043s
+user	3m38.491s
+sys	0m0.784s
 
 Testing sumfp under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -271,14 +271,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/sumfp.scm /tmp/larcenous/SISC/sumfp.scm
 Running...
 Running sumfp:1000000.0:500
-Elapsed time: 46.872 seconds (46873/1000) for sumfp:1000000.0:500
-+!CSVLINE!+SISC-1.16.6,sumfp:1000000.0:500,46.872
+Elapsed time: 51.039 seconds (51039/1000) for sumfp:1000000.0:500
++!CSVLINE!+SISC-1.16.6,sumfp:1000000.0:500,51.039
 SISC (1.16.6)
 #;> 
 
-real	0m47.191s
-user	0m48.824s
-sys	0m0.294s
+real	0m51.321s
+user	0m52.523s
+sys	0m0.297s
 
 Testing fft under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -296,9 +296,9 @@ Caused by Error: undefined variable 'exact-integer?'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.387s
-user	0m1.358s
-sys	0m0.041s
+real	0m0.390s
+user	0m1.313s
+sys	0m0.045s
 
 Testing mbrot under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -306,14 +306,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/mbrot.scm /tmp/larcenous/SISC/mbrot.scm
 Running...
 Running mbrot:75:1000
-Elapsed time: 73.043 seconds (73043/1000) for mbrot:75:1000
-+!CSVLINE!+SISC-1.16.6,mbrot:75:1000,73.043
+Elapsed time: 69.229 seconds (69229/1000) for mbrot:75:1000
++!CSVLINE!+SISC-1.16.6,mbrot:75:1000,69.229
 SISC (1.16.6)
 #;> 
 
-real	1m13.396s
-user	1m15.366s
-sys	0m0.403s
+real	1m9.548s
+user	1m11.562s
+sys	0m0.308s
 
 Testing mbrotZ under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -321,14 +321,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/mbrotZ.scm /tmp/larcenous/SISC/mbrotZ.scm
 Running...
 Running mbrotZ:75:1000
-Elapsed time: 89.334 seconds (17867/200) for mbrotZ:75:1000
-+!CSVLINE!+SISC-1.16.6,mbrotZ:75:1000,89.334
+Elapsed time: 91.856 seconds (91857/1000) for mbrotZ:75:1000
++!CSVLINE!+SISC-1.16.6,mbrotZ:75:1000,91.856
 SISC (1.16.6)
 #;> 
 
-real	1m29.700s
-user	1m31.966s
-sys	0m0.510s
+real	1m32.209s
+user	1m34.493s
+sys	0m0.541s
 
 Testing nucleic under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -336,14 +336,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/nucleic.scm /tmp/larcenous/SISC/nucleic.scm
 Running...
 Running nucleic:50
-Elapsed time: 56.069 seconds (56069/1000) for nucleic:50
-+!CSVLINE!+SISC-1.16.6,nucleic:50,56.069
+Elapsed time: 56.308 seconds (14077/250) for nucleic:50
++!CSVLINE!+SISC-1.16.6,nucleic:50,56.308
 SISC (1.16.6)
 #;> 
 
-real	0m56.895s
-user	0m59.212s
-sys	0m0.330s
+real	0m57.076s
+user	0m59.451s
+sys	0m0.335s
 
 Testing pi under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -361,9 +361,9 @@ Caused by Error: undefined variable 'square'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.374s
-user	0m1.308s
-sys	0m0.040s
+real	0m0.367s
+user	0m1.139s
+sys	0m0.058s
 
 Testing pnpoly under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -371,14 +371,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/pnpoly.scm /tmp/larcenous/SISC/pnpoly.scm
 Running...
 Running pnpoly:1000000
-Elapsed time: 278.77 seconds (278771/1000) for pnpoly:1000000
-+!CSVLINE!+SISC-1.16.6,pnpoly:1000000,278.77
+Elapsed time: 270.861 seconds (270861/1000) for pnpoly:1000000
++!CSVLINE!+SISC-1.16.6,pnpoly:1000000,270.861
 SISC (1.16.6)
 #;> 
 
-real	4m39.114s
-user	4m43.630s
-sys	0m1.234s
+real	4m31.191s
+user	4m35.166s
+sys	0m1.236s
 
 Testing ray under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -397,8 +397,8 @@ SISC (1.16.6)
 #;> 
 
 real	0m0.426s
-user	0m1.458s
-sys	0m0.103s
+user	0m1.513s
+sys	0m0.044s
 
 Testing simplex under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -406,14 +406,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/simplex.scm /tmp/larcenous/SISC/simplex.scm
 Running...
 Running simplex:1000000
-Elapsed time: 124.692 seconds (31173/250) for simplex:1000000
-+!CSVLINE!+SISC-1.16.6,simplex:1000000,124.692
+Elapsed time: 125.132 seconds (31283/250) for simplex:1000000
++!CSVLINE!+SISC-1.16.6,simplex:1000000,125.132
 SISC (1.16.6)
 #;> 
 
-real	2m5.179s
-user	2m7.873s
-sys	0m0.642s
+real	2m5.577s
+user	2m7.850s
+sys	0m0.527s
 
 Testing ack under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -421,14 +421,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/ack.scm /tmp/larcenous/SISC/ack.scm
 Running...
 Running ack:3:12:2
-Elapsed time: 164.228 seconds (41057/250) for ack:3:12:2
-+!CSVLINE!+SISC-1.16.6,ack:3:12:2,164.228
+Elapsed time: 163.081 seconds (163081/1000) for ack:3:12:2
++!CSVLINE!+SISC-1.16.6,ack:3:12:2,163.081
 SISC (1.16.6)
 #;> 
 
-real	2m44.539s
-user	2m52.486s
-sys	0m0.513s
+real	2m43.414s
+user	2m51.324s
+sys	0m0.340s
 
 Testing array1 under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -436,12 +436,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/array1.scm /tmp/larcenous/SISC/array1.scm
 Running...
 Running array1:1000000:500
-/usr/bin/sisc: line 59: 23652 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
+Elapsed time: 275.938 seconds (137969/500) for array1:1000000:500
++!CSVLINE!+SISC-1.16.6,array1:1000000:500,275.938
+SISC (1.16.6)
+#;> 
 
-real	4m45.877s
-user	4m58.432s
-sys	0m1.680s
-+!CSVLINE!+sisc,array1,ULIMITKILLED
+real	4m36.244s
+user	4m48.130s
+sys	0m2.548s
 
 Testing string under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -449,14 +451,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/string.scm /tmp/larcenous/SISC/string.scm
 Running...
 Running string:500000:25
-Elapsed time: 0.507 seconds (507/1000) for string:500000:25
-+!CSVLINE!+SISC-1.16.6,string:500000:25,0.507
+Elapsed time: 0.529 seconds (53/100) for string:500000:25
++!CSVLINE!+SISC-1.16.6,string:500000:25,0.529
 SISC (1.16.6)
 #;> 
 
-real	0m0.837s
-user	0m2.156s
-sys	0m0.153s
+real	0m0.908s
+user	0m2.441s
+sys	0m0.139s
 
 Testing sum1 under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -474,9 +476,9 @@ Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inpu
 SISC (1.16.6)
 #;> 
 
-real	0m0.391s
-user	0m1.112s
-sys	0m0.051s
+real	0m0.329s
+user	0m1.067s
+sys	0m0.033s
 
 Testing cat under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -494,9 +496,9 @@ Caused by Error: undefined variable 'delete-file'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.325s
-user	0m0.921s
-sys	0m0.053s
+real	0m0.401s
+user	0m1.219s
+sys	0m0.033s
 
 Testing tail under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -514,9 +516,9 @@ Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inpu
 SISC (1.16.6)
 #;> 
 
-real	0m0.364s
-user	0m1.063s
-sys	0m0.053s
+real	0m0.333s
+user	0m0.909s
+sys	0m0.039s
 
 Testing wc under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -534,9 +536,9 @@ Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inpu
 SISC (1.16.6)
 #;> 
 
-real	0m0.371s
-user	0m1.157s
-sys	0m0.026s
+real	0m0.392s
+user	0m1.286s
+sys	0m0.038s
 
 Testing read1 under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -554,9 +556,9 @@ Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inpu
 SISC (1.16.6)
 #;> 
 
-real	0m0.371s
-user	0m1.108s
-sys	0m0.040s
+real	0m0.393s
+user	0m1.234s
+sys	0m0.050s
 
 Testing compiler under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -582,9 +584,9 @@ Error: attempt to apply non-procedure '"|----------------------------...'.
 console:58:1: <indeterminate call>
 #;> 
 
-real	0m3.290s
-user	0m6.464s
-sys	0m0.175s
+real	0m3.315s
+user	0m6.519s
+sys	0m0.198s
 
 Testing conform under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -592,14 +594,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/conform.scm /tmp/larcenous/SISC/conform.scm
 Running...
 Running conform:500
-Elapsed time: 122.142 seconds (61071/500) for conform:500
-+!CSVLINE!+SISC-1.16.6,conform:500,122.142
+Elapsed time: 125.966 seconds (125967/1000) for conform:500
++!CSVLINE!+SISC-1.16.6,conform:500,125.966
 SISC (1.16.6)
 #;> 
 
-real	2m2.661s
-user	2m5.893s
-sys	0m0.760s
+real	2m6.539s
+user	2m9.788s
+sys	0m0.733s
 
 Testing dynamic under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -617,9 +619,9 @@ Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inpu
 SISC (1.16.6)
 #;> 
 
-real	0m0.867s
-user	0m2.669s
-sys	0m0.097s
+real	0m0.835s
+user	0m2.374s
+sys	0m0.117s
 
 Testing earley under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -627,14 +629,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/earley.scm /tmp/larcenous/SISC/earley.scm
 Running...
 Running earley:1
-Elapsed time: 87.515 seconds (21879/250) for earley:1
-+!CSVLINE!+SISC-1.16.6,earley:1,87.515
+Elapsed time: 85.499 seconds (85499/1000) for earley:1
++!CSVLINE!+SISC-1.16.6,earley:1,85.499
 SISC (1.16.6)
 #;> 
 
-real	1m28.152s
-user	3m15.355s
-sys	0m1.043s
+real	1m26.075s
+user	3m7.972s
+sys	0m1.909s
 
 Testing graphs under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -642,14 +644,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/graphs.scm /tmp/larcenous/SISC/graphs.scm
 Running...
 Running graphs:7:3
-Elapsed time: 149.876 seconds (37469/250) for graphs:7:3
-+!CSVLINE!+SISC-1.16.6,graphs:7:3,149.876
+Elapsed time: 151.393 seconds (151393/1000) for graphs:7:3
++!CSVLINE!+SISC-1.16.6,graphs:7:3,151.393
 SISC (1.16.6)
 #;> 
 
-real	2m30.362s
-user	2m34.540s
-sys	0m0.762s
+real	2m31.872s
+user	2m36.073s
+sys	0m0.841s
 
 Testing lattice under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -657,14 +659,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/lattice.scm /tmp/larcenous/SISC/lattice.scm
 Running...
 Running lattice:44:10
-Elapsed time: 207.52 seconds (207521/1000) for lattice:44:10
-+!CSVLINE!+SISC-1.16.6,lattice:44:10,207.52
+Elapsed time: 233.696 seconds (29212/125) for lattice:44:10
++!CSVLINE!+SISC-1.16.6,lattice:44:10,233.696
 SISC (1.16.6)
 #;> 
 
-real	3m27.874s
-user	3m31.596s
-sys	0m0.774s
+real	3m54.061s
+user	3m58.567s
+sys	0m1.015s
 
 Testing matrix under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -684,9 +686,9 @@ SISC (1.16.6)
 #;> Error in read-code: error reading from port '#<character-input-port>': unexpected close-parenthesis '')''. 
 #;> 
 
-real	0m0.523s
-user	0m1.910s
-sys	0m0.063s
+real	0m0.519s
+user	0m1.952s
+sys	0m0.047s
 
 Testing maze under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -704,9 +706,9 @@ Caused by Error: undefined variable 'exact-integer?'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.576s
-user	0m1.983s
-sys	0m0.059s
+real	0m0.499s
+user	0m1.797s
+sys	0m0.079s
 
 Testing mazefun under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -714,14 +716,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/mazefun.scm /tmp/larcenous/SISC/mazefun.scm
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 87.582 seconds (43791/500) for mazefun:11:11:10000
-+!CSVLINE!+SISC-1.16.6,mazefun:11:11:10000,87.582
+Elapsed time: 87.824 seconds (10978/125) for mazefun:11:11:10000
++!CSVLINE!+SISC-1.16.6,mazefun:11:11:10000,87.824
 SISC (1.16.6)
 #;> 
 
-real	1m27.984s
-user	1m30.094s
-sys	0m0.380s
+real	1m28.288s
+user	1m30.482s
+sys	0m0.338s
 
 Testing nqueens under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -729,14 +731,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/nqueens.scm /tmp/larcenous/SISC/nqueens.scm
 Running...
 Running nqueens:13:10
-Elapsed time: 236.026 seconds (236027/1000) for nqueens:13:10
-+!CSVLINE!+SISC-1.16.6,nqueens:13:10,236.026
+Elapsed time: 247.471 seconds (247471/1000) for nqueens:13:10
++!CSVLINE!+SISC-1.16.6,nqueens:13:10,247.471
 SISC (1.16.6)
 #;> 
 
-real	3m56.394s
-user	4m0.194s
-sys	0m0.919s
+real	4m7.838s
+user	4m11.889s
+sys	0m0.854s
 
 Testing paraffins under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -744,17 +746,17 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/paraffins.scm /tmp/larcenous/SISC/paraffins.scm
 Running...
 Running paraffins:23:10
-Elapsed time: 36.133 seconds (36133/1000) for paraffins:23:10
-+!CSVLINE!+SISC-1.16.6,paraffins:23:10,36.133
+Elapsed time: 36.723 seconds (36723/1000) for paraffins:23:10
++!CSVLINE!+SISC-1.16.6,paraffins:23:10,36.723
 SISC (1.16.6)
 #;> 5
 #;> 24
 #;> 14490245
 #;> 
 
-real	0m36.597s
-user	3m1.948s
-sys	0m2.531s
+real	0m37.105s
+user	2m57.015s
+sys	0m3.544s
 
 Testing parsing under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -772,9 +774,9 @@ Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inpu
 SISC (1.16.6)
 #;> 
 
-real	0m1.261s
-user	0m2.996s
-sys	0m0.134s
+real	0m1.231s
+user	0m2.952s
+sys	0m0.074s
 
 Testing peval under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -782,14 +784,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/peval.scm /tmp/larcenous/SISC/peval.scm
 Running...
 Running peval:2000
-Elapsed time: 121.587 seconds (121587/1000) for peval:2000
-+!CSVLINE!+SISC-1.16.6,peval:2000,121.587
+Elapsed time: 122.155 seconds (24431/200) for peval:2000
++!CSVLINE!+SISC-1.16.6,peval:2000,122.155
 SISC (1.16.6)
 #;> 
 
-real	2m2.263s
-user	2m5.313s
-sys	0m0.584s
+real	2m2.789s
+user	2m5.987s
+sys	0m0.606s
 
 Testing primes under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -797,14 +799,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/primes.scm /tmp/larcenous/SISC/primes.scm
 Running...
 Running primes:1000:10000
-Elapsed time: 40.251 seconds (40251/1000) for primes:1000:10000
-+!CSVLINE!+SISC-1.16.6,primes:1000:10000,40.251
+Elapsed time: 39.687 seconds (39687/1000) for primes:1000:10000
++!CSVLINE!+SISC-1.16.6,primes:1000:10000,39.687
 SISC (1.16.6)
 #;> 
 
-real	0m40.579s
-user	0m42.639s
-sys	0m0.287s
+real	0m39.994s
+user	0m41.711s
+sys	0m0.228s
 
 Testing quicksort under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -822,9 +824,9 @@ Caused by Error: undefined variable 'vector-map'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.482s
-user	0m1.826s
-sys	0m0.047s
+real	0m0.519s
+user	0m1.910s
+sys	0m0.059s
 
 Testing scheme under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -832,14 +834,14 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/scheme.scm /tmp/larcenous/SISC/scheme.scm
 Running...
 Running scheme:100000
-Elapsed time: 79.306 seconds (39653/500) for scheme:100000
-+!CSVLINE!+SISC-1.16.6,scheme:100000,79.306
+Elapsed time: 79.918 seconds (39959/500) for scheme:100000
++!CSVLINE!+SISC-1.16.6,scheme:100000,79.918
 SISC (1.16.6)
 #;> 
 
-real	1m19.960s
-user	1m21.902s
-sys	0m0.340s
+real	1m20.610s
+user	1m22.682s
+sys	0m0.237s
 
 Testing slatex under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -857,9 +859,9 @@ Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inpu
 SISC (1.16.6)
 #;> 
 
-real	0m0.993s
-user	0m3.026s
-sys	0m0.129s
+real	0m1.035s
+user	0m3.063s
+sys	0m0.076s
 
 Testing chudnovsky under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -877,8 +879,8 @@ Caused by Error: undefined variable 'exact-integer-sqrt'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.346s
-user	0m1.074s
+real	0m0.368s
+user	0m1.240s
 sys	0m0.043s
 
 Testing nboyer under SISC
@@ -887,8 +889,8 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/nboyer.scm /tmp/larcenous/SISC/nboyer.scm
 Running...
 Running nboyer:5:1
-Elapsed time: 43.706 seconds (21853/500) for nboyer:5:1
-+!CSVLINE!+SISC-1.16.6,nboyer:5:1,43.706
+Elapsed time: 43.438 seconds (43439/1000) for nboyer:5:1
++!CSVLINE!+SISC-1.16.6,nboyer:5:1,43.438
 SISC (1.16.6)
 #;> 16445406
 #;> 1
@@ -897,9 +899,9 @@ SISC (1.16.6)
 #;> 51507739
 #;> 
 
-real	0m44.288s
-user	0m56.455s
-sys	0m0.707s
+real	0m43.984s
+user	0m55.660s
+sys	0m1.432s
 
 Testing sboyer under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -907,15 +909,15 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/sboyer.scm /tmp/larcenous/SISC/sboyer.scm
 Running...
 Running sboyer:5:1
-Elapsed time: 50.263 seconds (50263/1000) for sboyer:5:1
-+!CSVLINE!+SISC-1.16.6,sboyer:5:1,50.263
+Elapsed time: 50.353 seconds (50353/1000) for sboyer:5:1
++!CSVLINE!+SISC-1.16.6,sboyer:5:1,50.353
 SISC (1.16.6)
 #;> 16445406
 #;> 
 
-real	0m50.813s
-user	0m53.146s
-sys	0m0.896s
+real	0m50.894s
+user	0m53.471s
+sys	0m0.650s
 
 Testing gcbench under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -935,9 +937,9 @@ Caused by Error: undefined variable 'classnode?'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.396s
-user	0m1.314s
-sys	0m0.043s
+real	0m0.398s
+user	0m1.302s
+sys	0m0.053s
 
 Testing mperm under SISC
 Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
@@ -945,11 +947,11 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/mperm.scm /tmp/larcenous/SISC/mperm.scm
 Running...
 Running mperm:20:10:2:1
-/usr/bin/sisc: line 59: 24698 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
+/usr/bin/sisc: line 59:  2127 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
 
-real	1m24.743s
-user	4m59.171s
-sys	0m0.937s
+real	1m24.573s
+user	4m58.802s
+sys	0m1.256s
 +!CSVLINE!+sisc,mperm,ULIMITKILLED
 
 Testing equal under SISC
@@ -958,11 +960,11 @@ Compiling...
 sisc_comp /tmp/larcenous/SISC/equal.scm /tmp/larcenous/SISC/equal.scm
 Running...
 Running equal:100:100:8:1000:2000:5000
-/usr/bin/sisc: line 59: 24735 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
+/usr/bin/sisc: line 59:  2161 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
 
-real	4m58.934s
-user	4m59.937s
-sys	0m0.064s
+real	4m58.798s
+user	4m59.928s
+sys	0m0.061s
 +!CSVLINE!+sisc,equal,ULIMITKILLED
 
 Testing bv2string under SISC
@@ -981,6 +983,6 @@ Caused by Error: undefined variable 'string->utf8'.
 SISC (1.16.6)
 #;> 
 
-real	0m0.356s
-user	0m1.163s
-sys	0m0.014s
+real	0m0.364s
+user	0m1.205s
+sys	0m0.047s

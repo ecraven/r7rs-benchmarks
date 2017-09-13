@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking Bones on Fri 8 Sep 19:52:35 CEST 2017 under Linux nexion 4.11.9-1-ARCH #1 SMP PREEMPT Wed Jul 5 18:23:08 CEST 2017 x86_64 GNU/Linux
+Benchmarking Bones on Tue 12 Sep 20:23:38 CEST 2017 under Linux nexion 4.12.12-1-ARCH #1 SMP PREEMPT Sun Sep 10 09:41:14 CEST 2017 x86_64 GNU/Linux
 
 Testing browse under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -11,12 +11,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/browse.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/browse.scm.o -o /tmp/larcenous/Bones/browse.exe
 Running...
 Running browse:2000
-Elapsed time: 0.563300469 seconds (0.0) for browse:2000
-+!CSVLINE!+bones-unknown,browse:2000,0.563300469
+Elapsed time: 0.584368976 seconds (1.0) for browse:2000
++!CSVLINE!+bones-unknown,browse:2000,0.584368976
 
-real	0m0.565s
-user	0m0.562s
-sys	0m0.003s
+real	0m0.586s
+user	0m0.579s
+sys	0m0.007s
 
 Testing deriv under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -27,12 +27,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/deriv.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/deriv.scm.o -o /tmp/larcenous/Bones/deriv.exe
 Running...
 Running deriv:10000000
-Elapsed time: 3.837917204 seconds (4.0) for deriv:10000000
-+!CSVLINE!+bones-unknown,deriv:10000000,3.837917204
+Elapsed time: 4.005557563 seconds (4.0) for deriv:10000000
++!CSVLINE!+bones-unknown,deriv:10000000,4.005557563
 
-real	0m3.839s
-user	0m3.832s
-sys	0m0.007s
+real	0m4.006s
+user	0m4.003s
+sys	0m0.003s
 
 Testing destruc under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -43,12 +43,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/destruc.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/destruc.scm.o -o /tmp/larcenous/Bones/destruc.exe
 Running...
 Running destruc:600:50:4000
-Elapsed time: 7.884835246 seconds (8.0) for destruc:600:50:4000
-+!CSVLINE!+bones-unknown,destruc:600:50:4000,7.884835246
+Elapsed time: 7.916439596 seconds (8.0) for destruc:600:50:4000
++!CSVLINE!+bones-unknown,destruc:600:50:4000,7.916439596
 
-real	0m7.886s
-user	0m7.882s
-sys	0m0.003s
+real	0m7.917s
+user	0m7.900s
+sys	0m0.017s
 
 Testing diviter under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -59,12 +59,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/diviter.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/diviter.scm.o -o /tmp/larcenous/Bones/diviter.exe
 Running...
 Running diviter:1000:1000000
-Elapsed time: 2.26803403 seconds (2.0) for diviter:1000:1000000
-+!CSVLINE!+bones-unknown,diviter:1000:1000000,2.26803403
+Elapsed time: 2.281298406 seconds (2.0) for diviter:1000:1000000
++!CSVLINE!+bones-unknown,diviter:1000:1000000,2.281298406
 
-real	0m2.269s
-user	0m2.265s
-sys	0m0.003s
+real	0m2.282s
+user	0m2.272s
+sys	0m0.010s
 
 Testing divrec under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -75,12 +75,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/divrec.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/divrec.scm.o -o /tmp/larcenous/Bones/divrec.exe
 Running...
 Running divrec:1000:1000000
-Elapsed time: 4.480313251 seconds (4.0) for divrec:1000:1000000
-+!CSVLINE!+bones-unknown,divrec:1000:1000000,4.480313251
+Elapsed time: 4.487200279 seconds (4.0) for divrec:1000:1000000
++!CSVLINE!+bones-unknown,divrec:1000:1000000,4.487200279
 
-real	0m4.481s
-user	0m4.471s
-sys	0m0.010s
+real	0m4.488s
+user	0m4.481s
+sys	0m0.007s
 
 Testing puzzle under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -91,12 +91,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/puzzle.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/puzzle.scm.o -o /tmp/larcenous/Bones/puzzle.exe
 Running...
 Running puzzle:1000
-Elapsed time: 13.373017584 seconds (13.0) for puzzle:1000
-+!CSVLINE!+bones-unknown,puzzle:1000,13.373017584
+Elapsed time: 13.166519585 seconds (13.0) for puzzle:1000
++!CSVLINE!+bones-unknown,puzzle:1000,13.166519585
 
-real	0m13.374s
-user	0m13.367s
-sys	0m0.007s
+real	0m13.167s
+user	0m13.164s
+sys	0m0.003s
 
 Testing triangl under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -107,12 +107,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/triangl.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/triangl.scm.o -o /tmp/larcenous/Bones/triangl.exe
 Running...
 Running triangl:22:1:50
-Elapsed time: 9.425067192 seconds (9.0) for triangl:22:1:50
-+!CSVLINE!+bones-unknown,triangl:22:1:50,9.425067192
+Elapsed time: 9.609161041 seconds (10.0) for triangl:22:1:50
++!CSVLINE!+bones-unknown,triangl:22:1:50,9.609161041
 
-real	0m9.426s
-user	0m9.422s
-sys	0m0.003s
+real	0m9.610s
+user	0m9.610s
+sys	0m0.000s
 
 Testing tak under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -123,12 +123,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/tak.scm.s -o /tmp/larcenou
 gcc /tmp/larcenous/Bones/tak.scm.o -o /tmp/larcenous/Bones/tak.exe
 Running...
 Running tak:40:20:11:1
-Elapsed time: 10.955720146 seconds (10.0) for tak:40:20:11:1
-+!CSVLINE!+bones-unknown,tak:40:20:11:1,10.955720146
+Elapsed time: 10.932032538 seconds (11.0) for tak:40:20:11:1
++!CSVLINE!+bones-unknown,tak:40:20:11:1,10.932032538
 
-real	0m10.957s
-user	0m10.953s
-sys	0m0.003s
+real	0m10.933s
+user	0m10.926s
+sys	0m0.007s
 
 Testing takl under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -139,12 +139,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/takl.scm.s -o /tmp/larceno
 gcc /tmp/larcenous/Bones/takl.scm.o -o /tmp/larcenous/Bones/takl.exe
 Running...
 Running takl:40:20:12:1
-Elapsed time: 7.352904487 seconds (7.0) for takl:40:20:12:1
-+!CSVLINE!+bones-unknown,takl:40:20:12:1,7.352904487
+Elapsed time: 7.496060493 seconds (8.0) for takl:40:20:12:1
++!CSVLINE!+bones-unknown,takl:40:20:12:1,7.496060493
 
-real	0m7.354s
-user	0m7.344s
-sys	0m0.010s
+real	0m7.497s
+user	0m7.493s
+sys	0m0.003s
 
 Testing ntakl under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -155,12 +155,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/ntakl.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/ntakl.scm.o -o /tmp/larcenous/Bones/ntakl.exe
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 7.829878236 seconds (8.0) for ntakl:40:20:12:1
-+!CSVLINE!+bones-unknown,ntakl:40:20:12:1,7.829878236
+Elapsed time: 7.41846229 seconds (7.0) for ntakl:40:20:12:1
++!CSVLINE!+bones-unknown,ntakl:40:20:12:1,7.41846229
 
-real	0m7.831s
-user	0m7.827s
-sys	0m0.003s
+real	0m7.420s
+user	0m7.413s
+sys	0m0.007s
 
 Testing cpstak under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -171,12 +171,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/cpstak.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/cpstak.scm.o -o /tmp/larcenous/Bones/cpstak.exe
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 14.204623025 seconds (14.0) for cpstak:40:20:11:1
-+!CSVLINE!+bones-unknown,cpstak:40:20:11:1,14.204623025
+Elapsed time: 14.204937631 seconds (15.0) for cpstak:40:20:11:1
++!CSVLINE!+bones-unknown,cpstak:40:20:11:1,14.204937631
 
-real	0m14.205s
-user	0m14.199s
-sys	0m0.007s
+real	0m14.206s
+user	0m14.205s
+sys	0m0.000s
 
 Testing ctak under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -187,11 +187,11 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/ctak.scm.s -o /tmp/larceno
 gcc /tmp/larcenous/Bones/ctak.scm.o -o /tmp/larcenous/Bones/ctak.exe
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 1.716745097 seconds (2.0) for ctak:32:16:8:1
-+!CSVLINE!+bones-unknown,ctak:32:16:8:1,1.716745097
+Elapsed time: 1.74093949 seconds (2.0) for ctak:32:16:8:1
++!CSVLINE!+bones-unknown,ctak:32:16:8:1,1.74093949
 
-real	0m1.718s
-user	0m1.714s
+real	0m1.742s
+user	0m1.739s
 sys	0m0.003s
 
 Testing fib under Bones
@@ -203,12 +203,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/fib.scm.s -o /tmp/larcenou
 gcc /tmp/larcenous/Bones/fib.scm.o -o /tmp/larcenous/Bones/fib.exe
 Running...
 Running fib:40:5
-Elapsed time: 23.651210695 seconds (24.0) for fib:40:5
-+!CSVLINE!+bones-unknown,fib:40:5,23.651210695
+Elapsed time: 24.091395151 seconds (24.0) for fib:40:5
++!CSVLINE!+bones-unknown,fib:40:5,24.091395151
 
-real	0m23.652s
-user	0m23.648s
-sys	0m0.003s
+real	0m24.092s
+user	0m24.082s
+sys	0m0.010s
 
 Testing fibc under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -219,12 +219,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/fibc.scm.s -o /tmp/larceno
 gcc /tmp/larcenous/Bones/fibc.scm.o -o /tmp/larcenous/Bones/fibc.exe
 Running...
 Running fibc:30:10
-Elapsed time: 1.882881569 seconds (2.0) for fibc:30:10
-+!CSVLINE!+bones-unknown,fibc:30:10,1.882881569
+Elapsed time: 1.796781951 seconds (2.0) for fibc:30:10
++!CSVLINE!+bones-unknown,fibc:30:10,1.796781951
 
-real	0m1.884s
-user	0m1.880s
-sys	0m0.003s
+real	0m1.798s
+user	0m1.784s
+sys	0m0.013s
 
 Testing fibfp under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -235,12 +235,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/fibfp.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/fibfp.scm.o -o /tmp/larcenous/Bones/fibfp.exe
 Running...
 Running fibfp:35.0:10
-Elapsed time: 5.198522111 seconds (5.0) for fibfp:35.0:10
-+!CSVLINE!+bones-unknown,fibfp:35.0:10,5.198522111
+Elapsed time: 5.307145671 seconds (5.0) for fibfp:35.0:10
++!CSVLINE!+bones-unknown,fibfp:35.0:10,5.307145671
 
-real	0m5.199s
-user	0m5.192s
-sys	0m0.007s
+real	0m5.308s
+user	0m5.305s
+sys	0m0.003s
 
 Testing sum under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -251,12 +251,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/sum.scm.s -o /tmp/larcenou
 gcc /tmp/larcenous/Bones/sum.scm.o -o /tmp/larcenous/Bones/sum.exe
 Running...
 Running sum:10000:200000
-Elapsed time: 34.183968248 seconds (34.0) for sum:10000:200000
-+!CSVLINE!+bones-unknown,sum:10000:200000,34.183968248
+Elapsed time: 33.107056611 seconds (33.0) for sum:10000:200000
++!CSVLINE!+bones-unknown,sum:10000:200000,33.107056611
 
-real	0m34.185s
-user	0m34.184s
-sys	0m0.000s
+real	0m33.108s
+user	0m33.100s
+sys	0m0.007s
 
 Testing sumfp under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -267,12 +267,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/sumfp.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/sumfp.scm.o -o /tmp/larcenous/Bones/sumfp.exe
 Running...
 Running sumfp:1000000.0:500
-Elapsed time: 9.682978746 seconds (9.0) for sumfp:1000000.0:500
-+!CSVLINE!+bones-unknown,sumfp:1000000.0:500,9.682978746
+Elapsed time: 9.922207216 seconds (10.0) for sumfp:1000000.0:500
++!CSVLINE!+bones-unknown,sumfp:1000000.0:500,9.922207216
 
-real	0m9.684s
-user	0m9.674s
-sys	0m0.010s
+real	0m9.923s
+user	0m9.916s
+sys	0m0.007s
 
 Testing fft under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -283,12 +283,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/fft.scm.s -o /tmp/larcenou
 gcc /tmp/larcenous/Bones/fft.scm.o -o /tmp/larcenous/Bones/fft.exe
 Running...
 Running fft:65536:100
-Elapsed time: 12.838613401 seconds (13.0) for fft:65536:100
-+!CSVLINE!+bones-unknown,fft:65536:100,12.838613401
+Elapsed time: 12.549858205 seconds (12.0) for fft:65536:100
++!CSVLINE!+bones-unknown,fft:65536:100,12.549858205
 
-real	0m12.839s
-user	0m12.839s
-sys	0m0.000s
+real	0m12.551s
+user	0m12.547s
+sys	0m0.003s
 
 Testing mbrot under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -299,12 +299,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/mbrot.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/mbrot.scm.o -o /tmp/larcenous/Bones/mbrot.exe
 Running...
 Running mbrot:75:1000
-Elapsed time: 17.533632435 seconds (18.0) for mbrot:75:1000
-+!CSVLINE!+bones-unknown,mbrot:75:1000,17.533632435
+Elapsed time: 17.075949457 seconds (17.0) for mbrot:75:1000
++!CSVLINE!+bones-unknown,mbrot:75:1000,17.075949457
 
-real	0m17.534s
-user	0m17.531s
-sys	0m0.003s
+real	0m17.077s
+user	0m17.066s
+sys	0m0.010s
 
 Testing mbrotZ under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -331,12 +331,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/nucleic.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/nucleic.scm.o -o /tmp/larcenous/Bones/nucleic.exe
 Running...
 Running nucleic:50
-Elapsed time: 6.992931063 seconds (7.0) for nucleic:50
-+!CSVLINE!+bones-unknown,nucleic:50,6.992931063
+Elapsed time: 6.90790378 seconds (7.0) for nucleic:50
++!CSVLINE!+bones-unknown,nucleic:50,6.90790378
 
-real	0m6.994s
-user	0m6.984s
-sys	0m0.010s
+real	0m6.909s
+user	0m6.908s
+sys	0m0.000s
 
 Testing pi under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -360,12 +360,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/pnpoly.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/pnpoly.scm.o -o /tmp/larcenous/Bones/pnpoly.exe
 Running...
 Running pnpoly:1000000
-Elapsed time: 13.261151008 seconds (13.0) for pnpoly:1000000
-+!CSVLINE!+bones-unknown,pnpoly:1000000,13.261151008
+Elapsed time: 13.581152403 seconds (14.0) for pnpoly:1000000
++!CSVLINE!+bones-unknown,pnpoly:1000000,13.581152403
 
-real	0m13.262s
-user	0m13.262s
-sys	0m0.000s
+real	0m13.582s
+user	0m13.575s
+sys	0m0.007s
 
 Testing ray under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -389,12 +389,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/simplex.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/simplex.scm.o -o /tmp/larcenous/Bones/simplex.exe
 Running...
 Running simplex:1000000
-Elapsed time: 10.402375136 seconds (11.0) for simplex:1000000
-+!CSVLINE!+bones-unknown,simplex:1000000,10.402375136
+Elapsed time: 10.474615363 seconds (10.0) for simplex:1000000
++!CSVLINE!+bones-unknown,simplex:1000000,10.474615363
 
-real	0m10.403s
-user	0m10.396s
-sys	0m0.007s
+real	0m10.475s
+user	0m10.472s
+sys	0m0.003s
 
 Testing ack under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -405,12 +405,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/ack.scm.s -o /tmp/larcenou
 gcc /tmp/larcenous/Bones/ack.scm.o -o /tmp/larcenous/Bones/ack.exe
 Running...
 Running ack:3:12:2
-Elapsed time: 24.766185152 seconds (25.0) for ack:3:12:2
-+!CSVLINE!+bones-unknown,ack:3:12:2,24.766185152
+Elapsed time: 25.249760832 seconds (26.0) for ack:3:12:2
++!CSVLINE!+bones-unknown,ack:3:12:2,25.249760832
 
-real	0m24.767s
-user	0m24.767s
-sys	0m0.000s
+real	0m25.250s
+user	0m25.233s
+sys	0m0.017s
 
 Testing array1 under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -421,12 +421,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/array1.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/array1.scm.o -o /tmp/larcenous/Bones/array1.exe
 Running...
 Running array1:1000000:500
-Elapsed time: 20.100859609 seconds (20.0) for array1:1000000:500
-+!CSVLINE!+bones-unknown,array1:1000000:500,20.100859609
+Elapsed time: 19.993985544 seconds (20.0) for array1:1000000:500
++!CSVLINE!+bones-unknown,array1:1000000:500,19.993985544
 
-real	0m20.102s
-user	0m20.101s
-sys	0m0.000s
+real	0m19.995s
+user	0m19.991s
+sys	0m0.003s
 
 Testing string under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -437,8 +437,8 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/string.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/string.scm.o -o /tmp/larcenous/Bones/string.exe
 Running...
 Running string:500000:25
-Elapsed time: 0.060983477 seconds (0.0) for string:500000:25
-+!CSVLINE!+bones-unknown,string:500000:25,0.060983477
+Elapsed time: 0.061087219 seconds (0.0) for string:500000:25
++!CSVLINE!+bones-unknown,string:500000:25,0.061087219
 
 real	0m0.062s
 user	0m0.055s
@@ -453,12 +453,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/sum1.scm.s -o /tmp/larceno
 gcc /tmp/larcenous/Bones/sum1.scm.o -o /tmp/larcenous/Bones/sum1.exe
 Running...
 Running sum1:25
-Elapsed time: 11.205156932 seconds (11.0) for sum1:25
-+!CSVLINE!+bones-unknown,sum1:25,11.205156932
+Elapsed time: 11.047182298 seconds (11.0) for sum1:25
++!CSVLINE!+bones-unknown,sum1:25,11.047182298
 
-real	0m11.206s
-user	0m7.486s
-sys	0m3.720s
+real	0m11.048s
+user	0m7.351s
+sys	0m3.697s
 
 Testing cat under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -469,12 +469,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/cat.scm.s -o /tmp/larcenou
 gcc /tmp/larcenous/Bones/cat.scm.o -o /tmp/larcenous/Bones/cat.exe
 Running...
 Running cat:50
-Elapsed time: 169.280045096 seconds (169.0) for cat:50
-+!CSVLINE!+bones-unknown,cat:50,169.280045096
+Elapsed time: 164.476318656 seconds (165.0) for cat:50
++!CSVLINE!+bones-unknown,cat:50,164.476318656
 
-real	2m49.281s
-user	0m14.802s
-sys	2m34.465s
+real	2m44.477s
+user	0m14.799s
+sys	2m29.667s
 
 Testing tail under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -498,12 +498,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/wc.scm.s -o /tmp/larcenous
 gcc /tmp/larcenous/Bones/wc.scm.o -o /tmp/larcenous/Bones/wc.exe
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 41.263094315 seconds (42.0) for wc:inputs/bib:50
-+!CSVLINE!+bones-unknown,wc:inputs/bib:50,41.263094315
+Elapsed time: 39.741735642 seconds (40.0) for wc:inputs/bib:50
++!CSVLINE!+bones-unknown,wc:inputs/bib:50,39.741735642
 
-real	0m41.264s
-user	0m11.380s
-sys	0m29.883s
+real	0m39.743s
+user	0m10.640s
+sys	0m29.102s
 
 Testing read1 under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -514,12 +514,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/read1.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/read1.scm.o -o /tmp/larcenous/Bones/read1.exe
 Running...
 Running read1:2500
-Elapsed time: 18.202298327 seconds (18.0) for read1:2500
-+!CSVLINE!+bones-unknown,read1:2500,18.202298327
+Elapsed time: 17.875402812 seconds (18.0) for read1:2500
++!CSVLINE!+bones-unknown,read1:2500,17.875402812
 
-real	0m18.203s
-user	0m8.596s
-sys	0m9.606s
+real	0m17.876s
+user	0m8.610s
+sys	0m9.266s
 
 Testing compiler under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -549,12 +549,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/conform.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/conform.scm.o -o /tmp/larcenous/Bones/conform.exe
 Running...
 Running conform:500
-Elapsed time: 7.43586763 seconds (7.0) for conform:500
-+!CSVLINE!+bones-unknown,conform:500,7.43586763
+Elapsed time: 7.622087442 seconds (8.0) for conform:500
++!CSVLINE!+bones-unknown,conform:500,7.622087442
 
-real	0m7.437s
-user	0m7.437s
-sys	0m0.000s
+real	0m7.623s
+user	0m7.619s
+sys	0m0.003s
 
 Testing dynamic under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -565,12 +565,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/dynamic.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/dynamic.scm.o -o /tmp/larcenous/Bones/dynamic.exe
 Running...
 Running dynamic:500
-Elapsed time: 21.148288573 seconds (22.0) for dynamic:500
-+!CSVLINE!+bones-unknown,dynamic:500,21.148288573
+Elapsed time: 21.010631063 seconds (21.0) for dynamic:500
++!CSVLINE!+bones-unknown,dynamic:500,21.010631063
 
-real	0m21.149s
-user	0m15.472s
-sys	0m5.676s
+real	0m21.012s
+user	0m15.607s
+sys	0m5.404s
 
 Testing earley under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -584,9 +584,9 @@ Running earley:1
 
 Error: out of memory
 
-real	0m6.537s
-user	0m6.530s
-sys	0m0.007s
+real	0m6.745s
+user	0m6.735s
+sys	0m0.010s
 +!CSVLINE!+bones,earley,CRASHED
 
 Testing graphs under Bones
@@ -598,12 +598,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/graphs.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/graphs.scm.o -o /tmp/larcenous/Bones/graphs.exe
 Running...
 Running graphs:7:3
-Elapsed time: 21.220857821 seconds (21.0) for graphs:7:3
-+!CSVLINE!+bones-unknown,graphs:7:3,21.220857821
+Elapsed time: 21.546498278 seconds (21.0) for graphs:7:3
++!CSVLINE!+bones-unknown,graphs:7:3,21.546498278
 
-real	0m21.222s
-user	0m21.218s
-sys	0m0.003s
+real	0m21.547s
+user	0m21.547s
+sys	0m0.000s
 
 Testing lattice under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -614,12 +614,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/lattice.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/lattice.scm.o -o /tmp/larcenous/Bones/lattice.exe
 Running...
 Running lattice:44:10
-Elapsed time: 23.549084858 seconds (23.0) for lattice:44:10
-+!CSVLINE!+bones-unknown,lattice:44:10,23.549084858
+Elapsed time: 24.729843162 seconds (25.0) for lattice:44:10
++!CSVLINE!+bones-unknown,lattice:44:10,24.729843162
 
-real	0m23.550s
-user	0m23.543s
-sys	0m0.007s
+real	0m24.731s
+user	0m24.726s
+sys	0m0.003s
 
 Testing matrix under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -630,12 +630,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/matrix.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/matrix.scm.o -o /tmp/larcenous/Bones/matrix.exe
 Running...
 Running matrix:5:5:2500
-Elapsed time: 5.718825304 seconds (5.0) for matrix:5:5:2500
-+!CSVLINE!+bones-unknown,matrix:5:5:2500,5.718825304
+Elapsed time: 5.743692686 seconds (6.0) for matrix:5:5:2500
++!CSVLINE!+bones-unknown,matrix:5:5:2500,5.743692686
 
-real	0m5.720s
-user	0m5.713s
-sys	0m0.007s
+real	0m5.745s
+user	0m5.741s
+sys	0m0.003s
 
 Testing maze under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -646,12 +646,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/maze.scm.s -o /tmp/larceno
 gcc /tmp/larcenous/Bones/maze.scm.o -o /tmp/larcenous/Bones/maze.exe
 Running...
 Running maze:20:7:10000
-Elapsed time: 4.392849463 seconds (5.0) for maze:20:7:10000
-+!CSVLINE!+bones-unknown,maze:20:7:10000,4.392849463
+Elapsed time: 4.394773051 seconds (4.0) for maze:20:7:10000
++!CSVLINE!+bones-unknown,maze:20:7:10000,4.394773051
 
-real	0m4.395s
-user	0m4.391s
-sys	0m0.003s
+real	0m4.397s
+user	0m4.396s
+sys	0m0.000s
 
 Testing mazefun under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -662,11 +662,11 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/mazefun.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/mazefun.scm.o -o /tmp/larcenous/Bones/mazefun.exe
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 9.944734364 seconds (10.0) for mazefun:11:11:10000
-+!CSVLINE!+bones-unknown,mazefun:11:11:10000,9.944734364
+Elapsed time: 10.296875656 seconds (10.0) for mazefun:11:11:10000
++!CSVLINE!+bones-unknown,mazefun:11:11:10000,10.296875656
 
-real	0m9.946s
-user	0m9.942s
+real	0m10.298s
+user	0m10.294s
 sys	0m0.003s
 
 Testing nqueens under Bones
@@ -678,11 +678,11 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/nqueens.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/nqueens.scm.o -o /tmp/larcenous/Bones/nqueens.exe
 Running...
 Running nqueens:13:10
-Elapsed time: 29.786226973 seconds (30.0) for nqueens:13:10
-+!CSVLINE!+bones-unknown,nqueens:13:10,29.786226973
+Elapsed time: 30.215586484 seconds (30.0) for nqueens:13:10
++!CSVLINE!+bones-unknown,nqueens:13:10,30.215586484
 
-real	0m29.787s
-user	0m29.783s
+real	0m30.216s
+user	0m30.212s
 sys	0m0.003s
 
 Testing paraffins under Bones
@@ -697,9 +697,9 @@ Running paraffins:23:10
 
 Error: out of memory
 
-real	0m0.908s
-user	0m0.904s
-sys	0m0.003s
+real	0m0.918s
+user	0m0.912s
+sys	0m0.007s
 +!CSVLINE!+bones,paraffins,CRASHED
 
 Testing parsing under Bones
@@ -711,12 +711,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/parsing.scm.s -o /tmp/larc
 gcc /tmp/larcenous/Bones/parsing.scm.o -o /tmp/larcenous/Bones/parsing.exe
 Running...
 Running parsing:2500
-Elapsed time: 22.665367061 seconds (22.0) for parsing:2500
-+!CSVLINE!+bones-unknown,parsing:2500,22.665367061
+Elapsed time: 22.567923093 seconds (22.0) for parsing:2500
++!CSVLINE!+bones-unknown,parsing:2500,22.567923093
 
-real	0m22.666s
-user	0m22.659s
-sys	0m0.007s
+real	0m22.569s
+user	0m22.565s
+sys	0m0.003s
 
 Testing peval under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -727,12 +727,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/peval.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/peval.scm.o -o /tmp/larcenous/Bones/peval.exe
 Running...
 Running peval:2000
-Elapsed time: 4.594871991 seconds (5.0) for peval:2000
-+!CSVLINE!+bones-unknown,peval:2000,4.594871991
+Elapsed time: 4.646092463 seconds (4.0) for peval:2000
++!CSVLINE!+bones-unknown,peval:2000,4.646092463
 
-real	0m4.596s
-user	0m4.592s
-sys	0m0.003s
+real	0m4.647s
+user	0m4.647s
+sys	0m0.000s
 
 Testing primes under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -743,12 +743,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/primes.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/primes.scm.o -o /tmp/larcenous/Bones/primes.exe
 Running...
 Running primes:1000:10000
-Elapsed time: 3.341094608 seconds (3.0) for primes:1000:10000
-+!CSVLINE!+bones-unknown,primes:1000:10000,3.341094608
+Elapsed time: 3.298220386 seconds (3.0) for primes:1000:10000
++!CSVLINE!+bones-unknown,primes:1000:10000,3.298220386
 
-real	0m3.342s
-user	0m3.342s
-sys	0m0.000s
+real	0m3.299s
+user	0m3.296s
+sys	0m0.003s
 
 Testing quicksort under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -785,12 +785,12 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/slatex.scm.s -o /tmp/larce
 gcc /tmp/larcenous/Bones/slatex.scm.o -o /tmp/larcenous/Bones/slatex.exe
 Running...
 Running slatex:500
-Elapsed time: 7.870195187 seconds (7.0) for slatex:500
-+!CSVLINE!+bones-unknown,slatex:500,7.870195187
+Elapsed time: 7.855192278 seconds (8.0) for slatex:500
++!CSVLINE!+bones-unknown,slatex:500,7.855192278
 
-real	0m7.871s
-user	0m2.121s
-sys	0m5.727s
+real	0m7.856s
+user	0m2.233s
+sys	0m5.501s
 
 Testing chudnovsky under Bones
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bones-prelude.scm
@@ -817,8 +817,8 @@ Running nboyer:5:1
 
 Error: out of memory
 
-real	0m4.386s
-user	0m4.379s
+real	0m4.465s
+user	0m4.458s
 sys	0m0.007s
 +!CSVLINE!+bones,nboyer,CRASHED
 
@@ -834,9 +834,9 @@ Running sboyer:5:1
 
 Error: out of memory
 
-real	0m29.282s
-user	0m29.279s
-sys	0m0.003s
+real	0m29.917s
+user	0m29.873s
+sys	0m0.043s
 +!CSVLINE!+bones,sboyer,CRASHED
 
 Testing gcbench under Bones
@@ -888,9 +888,9 @@ Running...
 
 Error: out of memory
 
-real	0m2.141s
-user	0m2.134s
-sys	0m0.007s
+real	0m2.167s
+user	0m2.163s
+sys	0m0.003s
 +!CSVLINE!+bones,mperm,CRASHED
 
 Testing equal under Bones
@@ -902,10 +902,10 @@ nasm -I/usr/share/bones -f elf64 /tmp/larcenous/Bones/equal.scm.s -o /tmp/larcen
 gcc /tmp/larcenous/Bones/equal.scm.o -o /tmp/larcenous/Bones/equal.exe
 Running...
 Running equal:100:100:8:1000:2000:5000
-./bench: line 540: 17785 Killed                  "$1" < "$2"
+./bench: line 540: 17700 Killed                  "$1" < "$2"
 
-real	5m0.001s
-user	4m59.997s
+real	5m0.003s
+user	4m59.996s
 sys	0m0.000s
 +!CSVLINE!+bones,equal,ULIMITKILLED
 
