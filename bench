@@ -71,7 +71,7 @@ KVW_BENCHMARKS="ack array1 string sum1 cat tail wc"
 
 IO_BENCHMARKS="read1"
 
-OTHER_BENCHMARKS="compiler conform dynamic earley graphs lattice matrix maze mazefun nqueens paraffins parsing peval primes quicksort scheme slatex"
+OTHER_BENCHMARKS="compiler conform dynamic earley graphs lattice matrix maze mazefun nqueens paraffins parsing peval primes quicksort scheme slatex chudnovsky"
 
 GC_BENCHMARKS="nboyer sboyer gcbench mperm"
 
@@ -79,6 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
+ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon"
 ################################################################
 
 NB_RUNS=1
@@ -111,9 +112,12 @@ setup ()
     CHIBI=${CHIBI:-"chibi-scheme"}
     CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
     CHICKEN_CSI=${CHICKEN_CSI:-"csi"}
+    CYCLONE=${CYCLONE:-"cyclone"}
+    FEMTOLISP=${FEMTOLISP:-"flisp"}
     FOMENT=${FOMENT:-"foment"}
     GAMBITC=${GAMBITC:-"gambitc"}
     GAUCHE=${GAUCHE:-"gosh"}
+    GERBIL=${GERBIL:-"gxc"}
     GUILD=${GUILD:-"guild"}
     GUILE=${GUILE:-"guile"}
     HUSKI=${HUSKI:-"huski"}
@@ -134,6 +138,7 @@ setup ()
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
     S9fES=${S9fES:-"s9"}
+    SISC=${SISC:-"sisc"}
     STALIN=${STALIN:-"chicken-stalin"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
     VICARE=${VICARE:-"vicare"}
@@ -158,9 +163,11 @@ Usage: bench [-r runs] <system> <benchmark>
   chibi            for Chibi
   chicken          for Chicken (compiled)
   chickencsi       for Chicken (interpreted)
+  cyclone          for Cyclone
   foment           for Foment
   gambitc          for GambitC Scheme
   gauche           for Gauche
+  gerbil           for Gerbil Scheme
   guile            for Guile Scheme
   husk             for Husk
   ironscheme       for IronScheme
@@ -177,6 +184,7 @@ Usage: bench [-r runs] <system> <benchmark>
   sagittarius      for Sagittarius
   scheme48         for Scheme48
   s9fes            for S9fES (Scheme 9 from Empty Space)
+  sisc             for SISC (Second Implementation of Scheme)
   stalin           for Stalin
   tinyscheme       for TinyScheme
   vicare           for Vicare
@@ -226,15 +234,32 @@ evaluate ()
         make_src_code $1
         echo Compiling...
         ulimit -t ${CPU_LIMIT}
+        echo $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
         $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
+        if [ $? -ne 0 ]
+        then
+            echo "+!CSVLINE!+${2},$1,COMPILEERROR"
+            skiprun="true"
+        fi
         i=0
-        while [ "$i" -lt "$NB_RUNS" ]
-        do
-            echo Running...
-            ulimit -t ${CPU_LIMIT}
-            $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
-            i=`expr $i + 1`
-        done
+        if [ "$skiprun" != "true" ]
+        then
+            while [ "$i" -lt "$NB_RUNS" ]
+            do
+                echo Running...
+                ulimit -t ${CPU_LIMIT}
+                $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
+                status=$?
+                if [ $status -eq 137 ] # killed by ulimit timeout
+                then
+                    echo "+!CSVLINE!+${2},$1,ULIMITKILLED"
+                elif [ $status -ne 0 ]
+                then
+                    echo "+!CSVLINE!+${2},$1,CRASHED"
+                fi
+                i=`expr $i + 1`
+            done
+        fi
     } 2>&1 | tee -a results.${NAME}
 
 }
@@ -324,7 +349,7 @@ chibi_exec ()
 
 chicken_comp ()
 {
-    OPTS="-optimize-leaf-routines -block -inline -inline-global -specialize -O3" # ecraven added -O3
+    OPTS="-optimize-leaf-routines -block -inline -inline-global -specialize -O3 -d0" # ecraven added -O3
     ${CHICKEN_CSC} ${OPTS} $1 -o $2 # ecraven removed -extend r7rs -require-extension r7rs which is very very bad for performance
 }
 
@@ -344,6 +369,19 @@ chickencsi_comp ()
 chickencsi_exec ()
 {
     time ${CHICKEN_CSI} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Cyclone
+
+cyclone_comp ()
+{
+  ${CYCLONE} $1
+}
+
+cyclone_exec ()
+{
+  time `dirname $1`/`basename $1 .scm` < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -374,6 +412,19 @@ s9fes_comp ()
 s9fes_exec ()
 {
     time ${S9fES} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to SISC
+
+sisc_comp ()
+{
+    :
+}
+
+sisc_exec ()
+{
+    time ${SISC} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -482,7 +533,7 @@ bones_comp ()
     echo "nasm -I/usr/share/bones -f elf64 $1.s -o $1.o"
     nasm -I/usr/share/bones/ -f elf64 $1.s -o $1.o
     echo "gcc $1.o -o $2"
-    gcc $1.o -o $2
+    gcc -no-pie $1.o -o $2
 }
 
 bones_exec ()
@@ -549,7 +600,7 @@ racket_exec ()
 
 bigloo_comp ()
 {
-    ${BIGLOO} $1 -O3 -call/cc -copt -O3 -o $2
+    ${BIGLOO} $1 -O6 -call/cc -copt -O3 -o $2
 }
 
 bigloo_exec ()
@@ -569,7 +620,7 @@ chez_exec ()
 {
     # remove import statement
     sed -i -e 's/^(import (scheme.*)$//g' $1
-    time "${CHEZ}" --program "$1" < "$2"
+    time "${CHEZ}" --optimize-level 3 --compile-imported-libraries --program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -629,6 +680,19 @@ gambitc_exec ()
 }
 
 # -----------------------------------------------------------------------------
+# Definitions specific to femtolisp
+
+femtolisp_comp ()
+{
+    :
+}
+
+femtolisp_exec ()
+{
+    time "${FEMTOLISP}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
 # Definitions specific to Foment
 
 foment_comp ()
@@ -652,6 +716,21 @@ gauche_comp ()
 gauche_exec ()
 {
     time "${GAUCHE}" -r7 -b "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Gerbil
+
+gerbil_comp ()
+{
+    sed -i -e 's/^(main)$//' $1
+    ${GERBIL} -d $(dirname "$1") -exe -static -O -o "${1%.scm}.exe" "$1"
+}
+
+gerbil_exec ()
+{
+    export GERBIL_HOME=/opt/gerbil-scheme-git/
+    time "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -827,8 +906,18 @@ for system in $systems ; do
                  ;;
 
         chickencsi) NAME='ChickenCSI'
-                 COMP=chickencsi_comp
-                 EXEC=chickencsi_exec
+                    COMP=chickencsi_comp
+                    EXEC=chickencsi_exec
+                    COMPOPTS=""
+                    EXTENSION="scm"
+                    EXTENSIONCOMP="scm"
+                    COMPCOMMANDS=""
+                    EXECCOMMANDS=""
+                    ;;
+
+        cyclone) NAME='Cyclone'
+                 COMP=cyclone_comp
+                 EXEC=cyclone_exec
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="scm"
@@ -855,6 +944,16 @@ for system in $systems ; do
                COMPCOMMANDS=""
                EXECCOMMANDS=""
                ;;
+
+        sisc) NAME='SISC'
+              COMP=sisc_comp
+              EXEC=sisc_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="scm"
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
+              ;;
 
         tinyscheme) NAME='TinyScheme'
                     COMP=tinyscheme_comp
@@ -1006,6 +1105,16 @@ for system in $systems ; do
              EXECCOMMANDS=""
              ;;
 
+        femtolisp) NAME='Femtolisp'
+                   COMP=femtolisp_comp
+                   EXEC=femtolisp_exec
+                   COMPOPTS=""
+                   EXTENSION="scm"
+                   EXTENSIONCOMP="scm"
+                   COMPCOMMANDS=""
+                   EXECCOMMANDS=""
+                   ;;
+
         foment) NAME='Foment'
                 COMP=foment_comp
                 EXEC=foment_exec
@@ -1022,6 +1131,16 @@ for system in $systems ; do
                 COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
+
+        gerbil) NAME='Gerbil'
+                COMP=gerbil_comp
+                EXEC=gerbil_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="exe"
                 COMPCOMMANDS=""
                 EXECCOMMANDS=""
                 ;;
@@ -1089,6 +1208,6 @@ for system in $systems ; do
     mkdir -p "${TEMP}" 2> /dev/null
 
     for program in $benchmarks ; do
-        evaluate $program
+        evaluate $program $system
     done
 done

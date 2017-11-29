@@ -1,0 +1,988 @@
+
+****************************
+Benchmarking SISC on Wed 13 Sep 19:05:44 CEST 2017 under Linux nexion 4.12.12-1-ARCH #1 SMP PREEMPT Sun Sep 10 09:41:14 CEST 2017 x86_64 GNU/Linux
+
+Testing browse under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/browse.scm /tmp/larcenous/SISC/browse.scm
+Running...
+Running browse:2000
+Elapsed time: 16.087 seconds (16087/1000) for browse:2000
++!CSVLINE!+SISC-1.16.6,browse:2000,16.087
+SISC (1.16.6)
+#;> 
+
+real	0m16.671s
+user	0m18.392s
+sys	0m0.234s
+
+Testing deriv under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/deriv.scm /tmp/larcenous/SISC/deriv.scm
+Running...
+Running deriv:10000000
+Elapsed time: 59.108 seconds (14777/250) for deriv:10000000
++!CSVLINE!+SISC-1.16.6,deriv:10000000,59.108
+SISC (1.16.6)
+#;> 
+
+real	0m59.434s
+user	1m0.872s
+sys	0m0.196s
+
+Testing destruc under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/destruc.scm /tmp/larcenous/SISC/destruc.scm
+Running...
+Running destruc:600:50:4000
+Elapsed time: 92.832 seconds (92833/1000) for destruc:600:50:4000
++!CSVLINE!+SISC-1.16.6,destruc:600:50:4000,92.832
+SISC (1.16.6)
+#;> 
+
+real	1m33.153s
+user	1m35.082s
+sys	0m0.368s
+
+Testing diviter under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/diviter.scm /tmp/larcenous/SISC/diviter.scm
+Running...
+Running diviter:1000:1000000
+Elapsed time: 44.367 seconds (44367/1000) for diviter:1000:1000000
++!CSVLINE!+SISC-1.16.6,diviter:1000:1000000,44.367
+SISC (1.16.6)
+#;> 
+
+real	0m44.678s
+user	0m46.099s
+sys	0m0.305s
+
+Testing divrec under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/divrec.scm /tmp/larcenous/SISC/divrec.scm
+Running...
+Running divrec:1000:1000000
+Elapsed time: 62.863 seconds (7858/125) for divrec:1000:1000000
++!CSVLINE!+SISC-1.16.6,divrec:1000:1000000,62.863
+SISC (1.16.6)
+#;> 
+
+real	1m3.202s
+user	1m4.881s
+sys	0m0.317s
+
+Testing puzzle under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/puzzle.scm /tmp/larcenous/SISC/puzzle.scm
+Running...
+Running puzzle:1000
+Elapsed time: 128.929 seconds (12893/100) for puzzle:1000
++!CSVLINE!+SISC-1.16.6,puzzle:1000,128.929
+SISC (1.16.6)
+#;> 
+
+real	2m9.318s
+user	2m11.709s
+sys	0m0.820s
+
+Testing triangl under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/triangl.scm /tmp/larcenous/SISC/triangl.scm
+Running...
+Running triangl:22:1:50
+Elapsed time: 96.286 seconds (48143/500) for triangl:22:1:50
++!CSVLINE!+SISC-1.16.6,triangl:22:1:50,96.286
+SISC (1.16.6)
+#;> 
+
+real	1m36.596s
+user	1m38.389s
+sys	0m0.506s
+
+Testing tak under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/tak.scm /tmp/larcenous/SISC/tak.scm
+Running...
+Running tak:40:20:11:1
+Elapsed time: 86.498 seconds (86499/1000) for tak:40:20:11:1
++!CSVLINE!+SISC-1.16.6,tak:40:20:11:1,86.498
+SISC (1.16.6)
+#;> 10
+#;> 32
+#;> 16
+#;> 8
+#;> 9
+#;> 3000
+#;> 18
+#;> 12
+#;> 6
+#;> 7
+#;> 
+
+real	1m26.853s
+user	1m28.619s
+sys	0m0.347s
+
+Testing takl under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/takl.scm /tmp/larcenous/SISC/takl.scm
+Running...
+Running takl:40:20:12:1
+/usr/bin/sisc: line 59:   322 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
+
+real	4m55.883s
+user	5m0.719s
+sys	0m0.940s
++!CSVLINE!+sisc,takl,ULIMITKILLED
+
+Testing ntakl under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/ntakl.scm /tmp/larcenous/SISC/ntakl.scm
+Running...
+Running ntakl:40:20:12:1
+Elapsed time: 206.03 seconds (20603/100) for ntakl:40:20:12:1
++!CSVLINE!+SISC-1.16.6,ntakl:40:20:12:1,206.03
+SISC (1.16.6)
+#;> 
+
+real	3m26.366s
+user	3m28.942s
+sys	0m0.531s
+
+Testing cpstak under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/cpstak.scm /tmp/larcenous/SISC/cpstak.scm
+Running...
+Running cpstak:40:20:11:1
+Elapsed time: 109.198 seconds (109199/1000) for cpstak:40:20:11:1
++!CSVLINE!+SISC-1.16.6,cpstak:40:20:11:1,109.198
+SISC (1.16.6)
+#;> 5
+#;> 32
+#;> 16
+#;> 8
+#;> 9
+#;> 1700
+#;> 18
+#;> 12
+#;> 6
+#;> 7
+#;> 
+
+real	1m49.579s
+user	1m51.668s
+sys	0m0.599s
+
+Testing ctak under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/ctak.scm /tmp/larcenous/SISC/ctak.scm
+Running...
+Running ctak:32:16:8:1
+Elapsed time: 40.062 seconds (20031/500) for ctak:32:16:8:1
++!CSVLINE!+SISC-1.16.6,ctak:32:16:8:1,40.062
+SISC (1.16.6)
+#;> 160
+#;> 18
+#;> 12
+#;> 6
+#;> 7
+#;> 
+
+real	0m40.464s
+user	0m41.936s
+sys	0m0.321s
+
+Testing fib under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/fib.scm /tmp/larcenous/SISC/fib.scm
+Running...
+Running fib:40:5
+Elapsed time: 205.066 seconds (205067/1000) for fib:40:5
++!CSVLINE!+SISC-1.16.6,fib:40:5,205.066
+SISC (1.16.6)
+#;> 
+
+real	3m25.377s
+user	3m28.853s
+sys	0m0.924s
+
+Testing fibc under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/fibc.scm /tmp/larcenous/SISC/fibc.scm
+Running...
+Running fibc:30:10
+Elapsed time: 55.402 seconds (55403/1000) for fibc:30:10
++!CSVLINE!+SISC-1.16.6,fibc:30:10,55.402
+SISC (1.16.6)
+#;> 
+
+real	0m55.718s
+user	0m57.247s
+sys	0m0.353s
+
+Testing fibfp under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/fibfp.scm /tmp/larcenous/SISC/fibfp.scm
+Running...
+Running fibfp:35.0:10
+Elapsed time: 36.851 seconds (36851/1000) for fibfp:35.0:10
++!CSVLINE!+SISC-1.16.6,fibfp:35.0:10,36.851
+SISC (1.16.6)
+#;> 
+
+real	0m37.132s
+user	0m38.156s
+sys	0m0.405s
+
+Testing sum under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/sum.scm /tmp/larcenous/SISC/sum.scm
+Running...
+Running sum:10000:200000
+Elapsed time: 214.724 seconds (53681/250) for sum:10000:200000
++!CSVLINE!+SISC-1.16.6,sum:10000:200000,214.724
+SISC (1.16.6)
+#;> 
+
+real	3m35.043s
+user	3m38.491s
+sys	0m0.784s
+
+Testing sumfp under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/sumfp.scm /tmp/larcenous/SISC/sumfp.scm
+Running...
+Running sumfp:1000000.0:500
+Elapsed time: 51.039 seconds (51039/1000) for sumfp:1000000.0:500
++!CSVLINE!+SISC-1.16.6,sumfp:1000000.0:500,51.039
+SISC (1.16.6)
+#;> 
+
+real	0m51.321s
+user	0m52.523s
+sys	0m0.297s
+
+Testing fft under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/fft.scm /tmp/larcenous/SISC/fft.scm
+Running...
+Running fft:65536:100
+Error in load: evaluation error at file:/tmp/larcenous/SISC/fft.scm:188:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'exact-integer?'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.390s
+user	0m1.313s
+sys	0m0.045s
+
+Testing mbrot under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/mbrot.scm /tmp/larcenous/SISC/mbrot.scm
+Running...
+Running mbrot:75:1000
+Elapsed time: 69.229 seconds (69229/1000) for mbrot:75:1000
++!CSVLINE!+SISC-1.16.6,mbrot:75:1000,69.229
+SISC (1.16.6)
+#;> 
+
+real	1m9.548s
+user	1m11.562s
+sys	0m0.308s
+
+Testing mbrotZ under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/mbrotZ.scm /tmp/larcenous/SISC/mbrotZ.scm
+Running...
+Running mbrotZ:75:1000
+Elapsed time: 91.856 seconds (91857/1000) for mbrotZ:75:1000
++!CSVLINE!+SISC-1.16.6,mbrotZ:75:1000,91.856
+SISC (1.16.6)
+#;> 
+
+real	1m32.209s
+user	1m34.493s
+sys	0m0.541s
+
+Testing nucleic under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/nucleic.scm /tmp/larcenous/SISC/nucleic.scm
+Running...
+Running nucleic:50
+Elapsed time: 56.308 seconds (14077/250) for nucleic:50
++!CSVLINE!+SISC-1.16.6,nucleic:50,56.308
+SISC (1.16.6)
+#;> 
+
+real	0m57.076s
+user	0m59.451s
+sys	0m0.335s
+
+Testing pi under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/pi.scm /tmp/larcenous/SISC/pi.scm
+Running...
+Running pi:50:500:50:2
+Error in load: evaluation error at file:/tmp/larcenous/SISC/pi.scm:200:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'square'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.367s
+user	0m1.139s
+sys	0m0.058s
+
+Testing pnpoly under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/pnpoly.scm /tmp/larcenous/SISC/pnpoly.scm
+Running...
+Running pnpoly:1000000
+Elapsed time: 270.861 seconds (270861/1000) for pnpoly:1000000
++!CSVLINE!+SISC-1.16.6,pnpoly:1000000,270.861
+SISC (1.16.6)
+#;> 
+
+real	4m31.191s
+user	4m35.166s
+sys	0m1.236s
+
+Testing ray under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/ray.scm /tmp/larcenous/SISC/ray.scm
+Running...
+Running ray:50
+Error in load: evaluation error at file:/tmp/larcenous/SISC/ray.scm:266:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'delete-file'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.426s
+user	0m1.513s
+sys	0m0.044s
+
+Testing simplex under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/simplex.scm /tmp/larcenous/SISC/simplex.scm
+Running...
+Running simplex:1000000
+Elapsed time: 125.132 seconds (31283/250) for simplex:1000000
++!CSVLINE!+SISC-1.16.6,simplex:1000000,125.132
+SISC (1.16.6)
+#;> 
+
+real	2m5.577s
+user	2m7.850s
+sys	0m0.527s
+
+Testing ack under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/ack.scm /tmp/larcenous/SISC/ack.scm
+Running...
+Running ack:3:12:2
+Elapsed time: 163.081 seconds (163081/1000) for ack:3:12:2
++!CSVLINE!+SISC-1.16.6,ack:3:12:2,163.081
+SISC (1.16.6)
+#;> 
+
+real	2m43.414s
+user	2m51.324s
+sys	0m0.340s
+
+Testing array1 under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/array1.scm /tmp/larcenous/SISC/array1.scm
+Running...
+Running array1:1000000:500
+Elapsed time: 275.938 seconds (137969/500) for array1:1000000:500
++!CSVLINE!+SISC-1.16.6,array1:1000000:500,275.938
+SISC (1.16.6)
+#;> 
+
+real	4m36.244s
+user	4m48.130s
+sys	0m2.548s
+
+Testing string under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/string.scm /tmp/larcenous/SISC/string.scm
+Running...
+Running string:500000:25
+Elapsed time: 0.529 seconds (53/100) for string:500000:25
++!CSVLINE!+SISC-1.16.6,string:500000:25,0.529
+SISC (1.16.6)
+#;> 
+
+real	0m0.908s
+user	0m2.441s
+sys	0m0.139s
+
+Testing sum1 under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/sum1.scm /tmp/larcenous/SISC/sum1.scm
+Running...
+Running sum1:25
+Error in load: evaluation error at file:/tmp/larcenous/SISC/sum1.scm:108:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inputs/sum1.data'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.329s
+user	0m1.067s
+sys	0m0.033s
+
+Testing cat under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/cat.scm /tmp/larcenous/SISC/cat.scm
+Running...
+Running cat:50
+Error in load: evaluation error at file:/tmp/larcenous/SISC/cat.scm:116:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'delete-file'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.401s
+user	0m1.219s
+sys	0m0.033s
+
+Testing tail under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/tail.scm /tmp/larcenous/SISC/tail.scm
+Running...
+Running tail:25
+Error in load: evaluation error at file:/tmp/larcenous/SISC/tail.scm:126:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inputs/bib'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.333s
+user	0m0.909s
+sys	0m0.039s
+
+Testing wc under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/wc.scm /tmp/larcenous/SISC/wc.scm
+Running...
+Running wc:inputs/bib:50
+Error in load: evaluation error at file:/tmp/larcenous/SISC/wc.scm:113:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inputs/bib'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.392s
+user	0m1.286s
+sys	0m0.038s
+
+Testing read1 under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/read1.scm /tmp/larcenous/SISC/read1.scm
+Running...
+Running read1:2500
+Error in load: evaluation error at file:/tmp/larcenous/SISC/read1.scm:130:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inputs/parsing.data'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.393s
+user	0m1.234s
+sys	0m0.050s
+
+Testing compiler under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/compiler.scm /tmp/larcenous/SISC/compiler.scm
+Running...
+Error in load: evaluation error at file:/tmp/larcenous/SISC/compiler.scm:8,695:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'exact-integer?'.
+SISC (1.16.6)
+#;> 2000
+#;> Error: undefined variable 'safe'.
+console:4:3: <indeterminate call>
+[previous entry repeated twice]
+#;> Error: undefined variable 'm68000'.
+#;> Error: undefined variable 'asm'.
+#;> {warning: compiler detected application of non-procedure '"|----------------------------...'.)
+Error: attempt to apply non-procedure '"|----------------------------...'.
+console:58:1: <indeterminate call>
+#;> 
+
+real	0m3.315s
+user	0m6.519s
+sys	0m0.198s
+
+Testing conform under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/conform.scm /tmp/larcenous/SISC/conform.scm
+Running...
+Running conform:500
+Elapsed time: 125.966 seconds (125967/1000) for conform:500
++!CSVLINE!+SISC-1.16.6,conform:500,125.966
+SISC (1.16.6)
+#;> 
+
+real	2m6.539s
+user	2m9.788s
+sys	0m0.733s
+
+Testing dynamic under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/dynamic.scm /tmp/larcenous/SISC/dynamic.scm
+Running...
+Running dynamic:500
+Error in load: evaluation error at file:/tmp/larcenous/SISC/dynamic.scm:2,408:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inputs/dynamic.data'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.835s
+user	0m2.374s
+sys	0m0.117s
+
+Testing earley under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/earley.scm /tmp/larcenous/SISC/earley.scm
+Running...
+Running earley:1
+Elapsed time: 85.499 seconds (85499/1000) for earley:1
++!CSVLINE!+SISC-1.16.6,earley:1,85.499
+SISC (1.16.6)
+#;> 
+
+real	1m26.075s
+user	3m7.972s
+sys	0m1.909s
+
+Testing graphs under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/graphs.scm /tmp/larcenous/SISC/graphs.scm
+Running...
+Running graphs:7:3
+Elapsed time: 151.393 seconds (151393/1000) for graphs:7:3
++!CSVLINE!+SISC-1.16.6,graphs:7:3,151.393
+SISC (1.16.6)
+#;> 
+
+real	2m31.872s
+user	2m36.073s
+sys	0m0.841s
+
+Testing lattice under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/lattice.scm /tmp/larcenous/SISC/lattice.scm
+Running...
+Running lattice:44:10
+Elapsed time: 233.696 seconds (29212/125) for lattice:44:10
++!CSVLINE!+SISC-1.16.6,lattice:44:10,233.696
+SISC (1.16.6)
+#;> 
+
+real	3m54.061s
+user	3m58.567s
+sys	0m1.015s
+
+Testing matrix under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/matrix.scm /tmp/larcenous/SISC/matrix.scm
+Running...
+Running matrix:5:5:2500
+Error in load: evaluation error at file:/tmp/larcenous/SISC/matrix.scm:885:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'exact-integer?'.
+SISC (1.16.6)
+#;> Error in read-code: error reading from port '#<character-input-port>': unexpected close-parenthesis '')''. 
+#;> Error in read-code: error reading from port '#<character-input-port>': unexpected close-parenthesis '')''. 
+#;> 
+
+real	0m0.519s
+user	0m1.952s
+sys	0m0.047s
+
+Testing maze under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/maze.scm /tmp/larcenous/SISC/maze.scm
+Running...
+Running maze:20:7:10000
+Error in load: evaluation error at file:/tmp/larcenous/SISC/maze.scm:830:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'exact-integer?'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.499s
+user	0m1.797s
+sys	0m0.079s
+
+Testing mazefun under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/mazefun.scm /tmp/larcenous/SISC/mazefun.scm
+Running...
+Running mazefun:11:11:10000
+Elapsed time: 87.824 seconds (10978/125) for mazefun:11:11:10000
++!CSVLINE!+SISC-1.16.6,mazefun:11:11:10000,87.824
+SISC (1.16.6)
+#;> 
+
+real	1m28.288s
+user	1m30.482s
+sys	0m0.338s
+
+Testing nqueens under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/nqueens.scm /tmp/larcenous/SISC/nqueens.scm
+Running...
+Running nqueens:13:10
+Elapsed time: 247.471 seconds (247471/1000) for nqueens:13:10
++!CSVLINE!+SISC-1.16.6,nqueens:13:10,247.471
+SISC (1.16.6)
+#;> 
+
+real	4m7.838s
+user	4m11.889s
+sys	0m0.854s
+
+Testing paraffins under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/paraffins.scm /tmp/larcenous/SISC/paraffins.scm
+Running...
+Running paraffins:23:10
+Elapsed time: 36.723 seconds (36723/1000) for paraffins:23:10
++!CSVLINE!+SISC-1.16.6,paraffins:23:10,36.723
+SISC (1.16.6)
+#;> 5
+#;> 24
+#;> 14490245
+#;> 
+
+real	0m37.105s
+user	2m57.015s
+sys	0m3.544s
+
+Testing parsing under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/parsing.scm /tmp/larcenous/SISC/parsing.scm
+Running...
+Running parsing:2500
+Error in load: evaluation error at file:/tmp/larcenous/SISC/parsing.scm:1,016:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inputs/parsing.data'.
+SISC (1.16.6)
+#;> 
+
+real	0m1.231s
+user	0m2.952s
+sys	0m0.074s
+
+Testing peval under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/peval.scm /tmp/larcenous/SISC/peval.scm
+Running...
+Running peval:2000
+Elapsed time: 122.155 seconds (24431/200) for peval:2000
++!CSVLINE!+SISC-1.16.6,peval:2000,122.155
+SISC (1.16.6)
+#;> 
+
+real	2m2.789s
+user	2m5.987s
+sys	0m0.606s
+
+Testing primes under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/primes.scm /tmp/larcenous/SISC/primes.scm
+Running...
+Running primes:1000:10000
+Elapsed time: 39.687 seconds (39687/1000) for primes:1000:10000
++!CSVLINE!+SISC-1.16.6,primes:1000:10000,39.687
+SISC (1.16.6)
+#;> 
+
+real	0m39.994s
+user	0m41.711s
+sys	0m0.228s
+
+Testing quicksort under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/quicksort.scm /tmp/larcenous/SISC/quicksort.scm
+Running...
+Running quicksort:10000:2500
+Error in load: evaluation error at file:/tmp/larcenous/SISC/quicksort.scm:233:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'vector-map'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.519s
+user	0m1.910s
+sys	0m0.059s
+
+Testing scheme under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/scheme.scm /tmp/larcenous/SISC/scheme.scm
+Running...
+Running scheme:100000
+Elapsed time: 79.918 seconds (39959/500) for scheme:100000
++!CSVLINE!+SISC-1.16.6,scheme:100000,79.918
+SISC (1.16.6)
+#;> 
+
+real	1m20.610s
+user	1m22.682s
+sys	0m0.237s
+
+Testing slatex under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/slatex.scm /tmp/larcenous/SISC/slatex.scm
+Running...
+Running slatex:500
+Error in load: evaluation error at file:/tmp/larcenous/SISC/slatex.scm:2,434:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error in open-input-file: error opening 'file:/tmp/larcenous/SISC/inputs/slatex-data/test.tex'.
+SISC (1.16.6)
+#;> 
+
+real	0m1.035s
+user	0m3.063s
+sys	0m0.076s
+
+Testing chudnovsky under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/chudnovsky.scm /tmp/larcenous/SISC/chudnovsky.scm
+Running...
+Running chudnovsky:50:500:50:20
+Error in load: evaluation error at file:/tmp/larcenous/SISC/chudnovsky.scm:146:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'exact-integer-sqrt'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.368s
+user	0m1.240s
+sys	0m0.043s
+
+Testing nboyer under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/nboyer.scm /tmp/larcenous/SISC/nboyer.scm
+Running...
+Running nboyer:5:1
+Elapsed time: 43.438 seconds (43439/1000) for nboyer:5:1
++!CSVLINE!+SISC-1.16.6,nboyer:5:1,43.438
+SISC (1.16.6)
+#;> 16445406
+#;> 1
+#;> 4
+#;> 16445406
+#;> 51507739
+#;> 
+
+real	0m43.984s
+user	0m55.660s
+sys	0m1.432s
+
+Testing sboyer under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/sboyer.scm /tmp/larcenous/SISC/sboyer.scm
+Running...
+Running sboyer:5:1
+Elapsed time: 50.353 seconds (50353/1000) for sboyer:5:1
++!CSVLINE!+SISC-1.16.6,sboyer:5:1,50.353
+SISC (1.16.6)
+#;> 16445406
+#;> 
+
+real	0m50.894s
+user	0m53.471s
+sys	0m0.650s
+
+Testing gcbench under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/gcbench.scm /tmp/larcenous/SISC/gcbench.scm
+Running...
+The garbage collector should touch about 128 megabytes of heap storage.
+The use of more or less memory will skew the results.
+Running gcbench:20:1
+Error in load: evaluation error at file:/tmp/larcenous/SISC/gcbench.scm:275:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'classnode?'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.398s
+user	0m1.302s
+sys	0m0.053s
+
+Testing mperm under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/mperm.scm /tmp/larcenous/SISC/mperm.scm
+Running...
+Running mperm:20:10:2:1
+/usr/bin/sisc: line 59:  2127 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
+
+real	1m24.573s
+user	4m58.802s
+sys	0m1.256s
++!CSVLINE!+sisc,mperm,ULIMITKILLED
+
+Testing equal under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/equal.scm /tmp/larcenous/SISC/equal.scm
+Running...
+Running equal:100:100:8:1000:2000:5000
+/usr/bin/sisc: line 59:  2161 Killed                  $JAVA $JAVAOPT -classpath $SISC_HOME/sisc-opt.jar${D}$SISC_HOME/sisc.jar${D}$SISC_HOME/sisc-lib.jar${D}$CLASSPATH -Dsisc.home=$SISC_HOME sisc.REPL -h $SISC_HOME/sisc.shp $PROPERTIES $EXTENSIONS "$@"
+
+real	4m58.798s
+user	4m59.928s
+sys	0m0.061s
++!CSVLINE!+sisc,equal,ULIMITKILLED
+
+Testing bv2string under SISC
+Including prelude /home/nex/src/r7rs-benchmarks/src/SISC-prelude.scm
+Compiling...
+sisc_comp /tmp/larcenous/SISC/bv2string.scm /tmp/larcenous/SISC/bv2string.scm
+Running...
+Running bv2string:1000:1000:100
+Error in load: evaluation error at file:/tmp/larcenous/SISC/bv2string.scm:213:1
+---------------------------
+To enable more detailed stack tracing, set the dynamic parameter max-stack-trace-depth to a non-zero value, e.g. 16.
+---------------------------
+Some stack trace entries may have been suppressed. To see all entries set the dynamic parameter suppressed-stack-trace-source-kinds to '().
+===========================
+Caused by Error: undefined variable 'string->utf8'.
+SISC (1.16.6)
+#;> 
+
+real	0m0.364s
+user	0m1.205s
+sys	0m0.047s

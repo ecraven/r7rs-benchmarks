@@ -1,0 +1,1515 @@
+
+****************************
+Benchmarking Femtolisp on Wed 13 Sep 18:23:59 CEST 2017 under Linux nexion 4.12.12-1-ARCH #1 SMP PREEMPT Sun Sep 10 09:41:14 CEST 2017 x86_64 GNU/Linux
+
+Testing browse under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/browse.scm /tmp/larcenous/Femtolisp/browse.scm
+Running...
+Running browse:2000
+type error: get: expected table, got |837|
+in file /tmp/larcenous/Femtolisp/browse.scm
+#0 (investigate/lambda/lambda/lambda/lambda/lambda
+ #0=#fn(#1="9000r1|\x8540];e0i10M|M_332~|N41;" #2=[my-match] [#0#
+							      [#8=((*a ?b *b ?b
+								    a *a a *b
+								    *a)
+								   (*a *b *b *a
+  (*a) (*b))
+								   (? ? * (b a)
+  * ? ?)) #3=[#fn(#4="7000r1|\x8540];c0q]312~|N41;" #5=[#fn("9000r1c0qm02|c1i20Mc23241;" [#fn(#1# #2#)
+  #fn(get) pattern])] #3#) [#7=(|837| |177| |1090| |617| |661| |749| |628| |56|
+				|826| |408| |1035| |474| |320| |452| |672| |991|
+				|155| |122| |793| |221| |716| |727| |848| |309|
+				|144| |936| |100| |881| |287| |430| |23| |771|
+				|232| |804| |958| |650| |1068| |1057| |463| |276|
+				|1046| |1002| |199| |34| |738| |210| |540| |397|
+				|342| |364| |782| |683| |89| |375| |166| |595|
+				|892| |705| |507| |639| |331| |188| |243| |441|
+				|1013| |1079| |67| |298| |386| |573| |859| |133|
+				|760| |12| |529| |815| |111| |496| |45| |265|
+				|925| |903| |254| |78| |551| |606| |485| |518|
+				|419| |870| |562| |1| |353| |980| |694| |914|
+				|969| |947| |584| |1024|)
+			    #6=[#fn("7000r1|\x8540];c0q]312~|N41;" [#fn("7000r1c0qm02|i2141;" [#fn(#4# #5#)])] #6#)
+				[#7# #8# ()]]]]]]))
+#1 (investigate/lambda/lambda/lambda/lambda
+ ((*a ?b *b ?b a *a a *b *a)
+  (*a *b *b *a (*a) (*b)) (? ? * (b a) * ? ?)))
+#2 (investigate/lambda/lambda
+ (|837| |177| |1090| |617| |661| |749| |628| |56| |826| |408| |1035| |474| |320|
+  |452| |672| |991| |155| |122| |793| |221| |716| |727| |848| |309| |144| |936|
+  |100| |881| |287| |430| |23| |771| |232| |804| |958| |650| |1068| |1057| |463|
+  |276| |1046| |1002| |199| |34| |738| |210| |540| |397| |342| |364| |782| |683|
+  |89| |375| |166| |595| |892| |705| |507| |639| |331| |188| |243| |441| |1013|
+  |1079| |67| |298| |386| |573| |859| |133| |760| |12| |529| |815| |111| |496|
+  |45| |265| |925| |903| |254| |78| |551| |606| |485| |518| |419| |870| |562|
+  |1| |353| |980| |694| |914| |969| |947| |584| |1024|))
+#3 (browse ((*a ?b *b ?b a *a a *b *a)
+	 (*a *b *b *a (*a) (*b)) (? ? * (b a) * ? ?)))
+
+real	0m0.019s
+user	0m0.015s
+sys	0m0.003s
++!CSVLINE!+femtolisp,browse,CRASHED
+
+Testing deriv under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/deriv.scm /tmp/larcenous/Femtolisp/deriv.scm
+Running...
+Running deriv:10000000
+Elapsed time: 10.4136130809783936 seconds (10.4139999999999997) for deriv:10000000
++!CSVLINE!+femtolisp-unknown,deriv:10000000,10.4136130809783936
+
+real	0m10.430s
+user	0m10.430s
+sys	0m0.000s
+
+Testing destruc under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/destruc.scm /tmp/larcenous/Femtolisp/destruc.scm
+Running...
+Running destruc:600:50:4000
+Elapsed time: 25.8763959407806396 seconds (25.8760000000000012) for destruc:600:50:4000
++!CSVLINE!+femtolisp-unknown,destruc:600:50:4000,25.8763959407806396
+
+real	0m25.899s
+user	0m25.899s
+sys	0m0.000s
+
+Testing diviter under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/diviter.scm /tmp/larcenous/Femtolisp/diviter.scm
+Running...
+Running diviter:1000:1000000
+Elapsed time: 19.399528980255127 seconds (19.3999999999999986) for diviter:1000:1000000
++!CSVLINE!+femtolisp-unknown,diviter:1000:1000000,19.399528980255127
+
+real	0m19.418s
+user	0m19.418s
+sys	0m0.000s
+
+Testing divrec under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/divrec.scm /tmp/larcenous/Femtolisp/divrec.scm
+Running...
+Running divrec:1000:1000000
+Elapsed time: 20.559157133102417 seconds (20.5590000000000011) for divrec:1000:1000000
++!CSVLINE!+femtolisp-unknown,divrec:1000:1000000,20.559157133102417
+
+real	0m20.575s
+user	0m20.572s
+sys	0m0.003s
+
+Testing puzzle under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/puzzle.scm /tmp/larcenous/Femtolisp/puzzle.scm
+Running...
+Running puzzle:1000
+Elapsed time: 59.6548731327056885 seconds (59.6550000000000011) for puzzle:1000
++!CSVLINE!+femtolisp-unknown,puzzle:1000,59.6548731327056885
+
+real	0m59.676s
+user	0m59.675s
+sys	0m0.000s
+
+Testing triangl under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/triangl.scm /tmp/larcenous/Femtolisp/triangl.scm
+Running...
+Running triangl:22:1:50
+Elapsed time: 28.7165238857269287 seconds (28.7169999999999987) for triangl:22:1:50
++!CSVLINE!+femtolisp-unknown,triangl:22:1:50,28.7165238857269287
+
+real	0m28.732s
+user	0m28.728s
+sys	0m0.004s
+
+Testing tak under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/tak.scm /tmp/larcenous/Femtolisp/tak.scm
+Running...
+Running tak:40:20:11:1
+Elapsed time: 21.2718758583068848 seconds (21.2719999999999985) for tak:40:20:11:1
++!CSVLINE!+femtolisp-unknown,tak:40:20:11:1,21.2718758583068848
+
+real	0m21.292s
+user	0m21.288s
+sys	0m0.003s
+
+Testing takl under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/takl.scm /tmp/larcenous/Femtolisp/takl.scm
+Running...
+Running takl:40:20:12:1
+Elapsed time: 67.3191111087799072 seconds (67.3190000000000026) for takl:40:20:12:1
++!CSVLINE!+femtolisp-unknown,takl:40:20:12:1,67.3191111087799072
+
+real	1m7.338s
+user	1m7.337s
+sys	0m0.000s
+
+Testing ntakl under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ntakl.scm /tmp/larcenous/Femtolisp/ntakl.scm
+Running...
+Running ntakl:40:20:12:1
+Elapsed time: 50.4976809024810791 seconds (50.4979999999999976) for ntakl:40:20:12:1
++!CSVLINE!+femtolisp-unknown,ntakl:40:20:12:1,50.4976809024810791
+
+real	0m50.517s
+user	0m50.516s
+sys	0m0.000s
+
+Testing cpstak under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/cpstak.scm /tmp/larcenous/Femtolisp/cpstak.scm
+Running...
+Running cpstak:40:20:11:1
+Elapsed time: 40.2788760662078857 seconds (40.2790000000000035) for cpstak:40:20:11:1
++!CSVLINE!+femtolisp-unknown,cpstak:40:20:11:1,40.2788760662078857
+
+real	0m40.299s
+user	0m40.298s
+sys	0m0.000s
+
+Testing ctak under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ctak.scm /tmp/larcenous/Femtolisp/ctak.scm
+Running...
+Running ctak:32:16:8:1
+Elapsed time: 10.2570159435272217 seconds (10.2569999999999997) for ctak:32:16:8:1
++!CSVLINE!+femtolisp-unknown,ctak:32:16:8:1,10.2570159435272217
+
+real	0m10.278s
+user	0m10.277s
+sys	0m0.000s
+
+Testing fib under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fib.scm /tmp/larcenous/Femtolisp/fib.scm
+Running...
+Running fib:40:5
+Elapsed time: 43.7254328727722168 seconds (43.7250000000000014) for fib:40:5
++!CSVLINE!+femtolisp-unknown,fib:40:5,43.7254328727722168
+
+real	0m43.745s
+user	0m43.744s
+sys	0m0.000s
+
+Testing fibc under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fibc.scm /tmp/larcenous/Femtolisp/fibc.scm
+Running...
+Running fibc:30:10
+Elapsed time: 12.6689050197601318 seconds (12.6690000000000005) for fibc:30:10
++!CSVLINE!+femtolisp-unknown,fibc:30:10,12.6689050197601318
+
+real	0m12.686s
+user	0m12.685s
+sys	0m0.000s
+
+Testing fibfp under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fibfp.scm /tmp/larcenous/Femtolisp/fibfp.scm
+Running...
+Running fibfp:35:10
+Elapsed time: 20.9036178588867188 seconds (20.9039999999999999) for fibfp:35:10
++!CSVLINE!+femtolisp-unknown,fibfp:35:10,20.9036178588867188
+
+real	0m20.921s
+user	0m20.921s
+sys	0m0.000s
+
+Testing sum under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sum.scm /tmp/larcenous/Femtolisp/sum.scm
+Running...
+Running sum:10000:200000
+Elapsed time: 52.2321860790252686 seconds (52.2319999999999993) for sum:10000:200000
++!CSVLINE!+femtolisp-unknown,sum:10000:200000,52.2321860790252686
+
+real	0m52.251s
+user	0m52.250s
+sys	0m0.000s
+
+Testing sumfp under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sumfp.scm /tmp/larcenous/Femtolisp/sumfp.scm
+Running...
+Running sumfp:1000000:500
+Elapsed time: 34.9981620311737061 seconds (34.9979999999999976) for sumfp:1000000:500
++!CSVLINE!+femtolisp-unknown,sumfp:1000000:500,34.9981620311737061
+
+real	0m35.013s
+user	0m35.012s
+sys	0m0.000s
+
+Testing fft under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/fft.scm /tmp/larcenous/Femtolisp/fft.scm
+Running...
+Running fft:65536:100
+Elapsed time: 32.9645321369171143 seconds (32.9650000000000034) for fft:65536:100
++!CSVLINE!+femtolisp-unknown,fft:65536:100,32.9645321369171143
+
+real	0m32.983s
+user	0m32.979s
+sys	0m0.003s
+
+Testing mbrot under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mbrot.scm /tmp/larcenous/Femtolisp/mbrot.scm
+Running...
+arg-error: apply: too few arguments
+in file /tmp/larcenous/Femtolisp/mbrot.scm
+#0 (count #fn("6000r1|A@;" []) ((loop2) (y) (loop1)
+				     (matrix r i step n) ()))
+#1 (compile-sym/lambda (3 . 0))
+#2 (for-each/lambda #0=#fn(":000r2}MF6I0|c0c1}32Q22~|c0c2}3242;];" [#fn(map) #.car
+								 #.cdr] [#0#
+  [#fn(":000r1e0~\x7f^|44;" [compile-in] [[(0 3 loadc 2 loadg 1 loadg #:g117
+					    brf 2 call load0 loada0 0 loadg 1
+					    argc)
+					   #table(vector-set! 1  >= 0  vector-ref 2)
+					   3 +inf.0]
+					  ((x) (loop2) (y) (loop1)
+					       (matrix r i step n) ()) #1=(matrix
+  x) ()]) #1# () ()]] for-each-n))
+#3 (compile-arglist [(0 3 loadc 2 loadg 1 loadg #:g117 brf 2 call load0 loada0 0
+		   loadg 1 argc) #table(vector-set! 1  >= 0  vector-ref 2) 3 +inf.0]
+		 ((x) (loop2) (y) (loop1)
+		      (matrix r i step n) ())
+		 (matrix x))
+#4 (compile-app/lambda/lambda/lambda
+ #f)
+#5 (for-each/lambda #0=#fn(":000r2}MF6I0|c0c1}32Q22~|c0c2}3242;];" [#fn(map) #.car
+								 #.cdr] [#0#
+  [#fn(":000r1e0~\x7f^|44;" [compile-in] [[(0 3 loadc 2 loadg 1 loadg #:g117
+					    brf 2 call load0 loada0 0 loadg 1
+					    argc)
+					   #table(vector-set! 1  >= 0  vector-ref 2)
+					   3 +inf.0]
+					  ((x) (loop2) (y) (loop1)
+					       (matrix r i step n) ())
+					  #2=((vector-ref matrix x)
+					      y (count r i step x y)) ()])
+   #2# () ()]] for-each-n))
+#6 (compile-arglist [(0 3 loadc 2 loadg 1 loadg #:g117 brf 2 call load0 loada0 0
+		   loadg 1 argc) #table(vector-set! 1  >= 0  vector-ref 2) 3 +inf.0]
+		 ((x) (loop2) (y) (loop1)
+		      (matrix r i step n) ())
+		 ((vector-ref matrix x)
+		  y (count r i step x y)))
+#7 (compile-app/lambda/lambda/lambda
+ #f)
+#8 (compile-begin [(0 3 loadc 2 loadg 1 loadg #:g117 brf 2 call load0 loada0 0
+		 loadg 1 argc) #table(vector-set! 1  >= 0  vector-ref 2) 3 +inf.0]
+	       ((x) (loop2) #0=(y) (loop1)
+		    (matrix r i step n) ())
+	       #t ((vector-set! (vector-ref matrix x) y
+				(count r i step x y))
+		   (loop2 (- x 1))))
+#9 (compile-if/lambda #:g117 #:g118
+		   (>= x 0) (begin (vector-set! (vector-ref matrix x) y
+						(count r i step x y))
+				   (loop2 (- x 1)))
+		   (loop1 (- y 1)))
+#10 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#11 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #0=[lambda [[(1 argc)
+							  #table() 0 +inf.0]
+							 ((loop2) (y) (loop1)
+								  (matrix r i
+  step n)
+								  ()) #f (lambda (x)
+  (if (>= x 0) (begin (vector-set! (vector-ref matrix x) y
+				   (count r i step x y))
+		      (loop2 (- x 1)))
+      (loop1 (- y 1)))) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #0#))
+#12 (compile-in/lambda set!)
+#13 (compile-begin [(1 argc) #table() 0 +inf.0]
+	       ((loop2) (y) (loop1)
+			(matrix r i step n) ())
+	       #t ((set! loop2 (lambda (x)
+				 (if (>= x 0)
+				     (begin (vector-set! (vector-ref matrix x)
+							 y (count r i step x y))
+					    (loop2 (- x 1)))
+				     (loop1 (- y 1)))))
+		   loop2))
+#14 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#15 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #0=[lambda [[(#:g115 brf 2 call
+							   load0 loada0 0 loadg
+							   1 argc)
+							  #table(>= 0) 1 +inf.0]
+							 ((y) (loop1)
+							      (matrix r i step
+  n)
+							      ()) #f (lambda (loop2)
+  (set! loop2 (lambda (x)
+		(if (>= x 0) (begin (vector-set! (vector-ref matrix x) y
+						 (count r i step x y))
+				    (loop2 (- x 1)))
+		    (loop1 (- y 1)))))
+  loop2) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #0#))
+#16 (compile-app/lambda/lambda/lambda
+ #f)
+#17 (compile-app/lambda/lambda/lambda
+ #f)
+#18 (compile-if/lambda #:g115 #:g116
+		   (>= y 0) (begin (((lambda (loop2)
+				       (set! loop2 (lambda (x)
+						     (if (>= x 0)
+							 (begin (vector-set! (vector-ref
+  matrix x)
+  y (count r i step x y))
+								(loop2 (- x 1)))
+							 (loop1 (- y 1)))))
+				       loop2)
+				     #t)
+				    (- n 1)))
+		   #f)
+#19 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#20 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #0=[lambda [[(1 argc)
+							  #table() 0 +inf.0]
+							 ((loop1) (matrix r i
+  step n)
+								  ()) #f (lambda (y)
+  (if (>= y 0) (begin (((lambda (loop2)
+			  (set! loop2 (lambda (x)
+					(if (>= x 0)
+					    (begin (vector-set! (vector-ref
+								 matrix x)
+								y (count r i
+  step x y))
+						   (loop2 (- x 1)))
+					    (loop1 (- y 1)))))
+			  loop2)
+			#t)
+		       (- n 1)))
+      #f)) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #0#))
+#21 (compile-in/lambda set!)
+#22 (compile-begin [(1 argc) #table() 0 +inf.0]
+	       ((loop1) (matrix r i step n) ()) #t ((set! loop1 (lambda (y)
+								  (if (>= y 0)
+  (begin (((lambda (loop2)
+	     (set! loop2 (lambda (x)
+			   (if (>= x 0) (begin (vector-set! (vector-ref matrix
+  x)
+							    y (count r i step
+  x y))
+					       (loop2 (- x 1)))
+			       (loop1 (- y 1)))))
+	     loop2)
+	   #t)
+	  (- n 1)))
+  #f)))
+						    loop1))
+#23 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#24 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #0=[lambda [[(5 argc)
+							  #table() 0 +inf.0]
+							 ((matrix r i step n)
+							  ()) #f (lambda (loop1)
+								   (set! loop1
+  (lambda (y)
+    (if (>= y 0) (begin (((lambda (loop2)
+			    (set! loop2 (lambda (x)
+					  (if (>= x 0)
+					      (begin (vector-set! (vector-ref
+								   matrix x)
+								  y (count r i
+  step x y))
+						     (loop2 (- x 1)))
+					      (loop1 (- y 1)))))
+			    loop2)
+			  #t)
+			 (- n 1)))
+	#f)))
+								   loop1) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #0#))
+#25 (compile-app/lambda/lambda/lambda
+ #f)
+#26 (compile-app/lambda/lambda/lambda
+ #f)
+#27 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#28 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #1=[lambda [[(0 argc)
+							  #table() 0 +inf.0] (())
+							 #f (lambda (matrix r
+  i . #0=(step n))
+							      (((lambda (loop1)
+								  (set! loop1
+  (lambda (y)
+    (if (>= y 0) (begin (((lambda (loop2)
+			    (set! loop2 (lambda (x)
+					  (if (>= x 0)
+					      (begin (vector-set! (vector-ref
+								   matrix x)
+								  y (count r i
+  step x y))
+						     (loop2 (- x 1)))
+					      (loop1 (- y 1)))))
+			    loop2)
+			  #t)
+			 (- n 1)))
+	#f)))
+								  loop1)
+								#t)
+							       (- n 1)) . mbrot)
+							 ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #1#))
+#29 (compile-in/lambda set!)
+#30 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#31 (lambda #fn("8000r0e0~\x7f42;" [compile-f-] [() (lambda ()
+						  (define (mbrot matrix r i
+								 step n)
+						    (((lambda (loop1)
+							(set! loop1 (lambda (y)
+  (if (>= y 0) (begin (((lambda (loop2)
+			  (set! loop2 (lambda (x)
+					(if (>= x 0)
+					    (begin (vector-set! (vector-ref
+								 matrix x)
+								y (count r i
+  step x y))
+						   (loop2 (- x 1)))
+					    (loop1 (- y 1)))))
+			  loop2)
+			#t)
+		       (- n 1)))
+      #f)))
+							loop1)
+						      #t)
+						     (- n 1))) . #:g0) ()])
+  #fn("6000r2|;" []))
+#32 (eval (define (mbrot matrix r i step n)
+	(let loop1 ((y (- n 1)))
+	     (when (>= y 0) (let loop2 ((x (- n 1)))
+				 (if (>= x 0)
+				     (begin (vector-set! (vector-ref matrix x)
+							 y (count r i step x y))
+					    (loop2 (- x 1)))
+				     (loop1 (- y 1))))))))
+
+real	0m0.024s
+user	0m0.021s
+sys	0m0.004s
++!CSVLINE!+femtolisp,mbrot,CRASHED
+
+Testing mbrotZ under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mbrotZ.scm /tmp/larcenous/Femtolisp/mbrotZ.scm
+Running...
+arg-error: apply: too few arguments
+in file /tmp/larcenous/Femtolisp/mbrotZ.scm
+#0 (count #fn("6000r1|A@;" []) ((loop2) (y) (loop1)
+				     (matrix z0 step n) ()))
+#1 (compile-sym/lambda (3 . 0))
+#2 (for-each/lambda #0=#fn(":000r2}MF6I0|c0c1}32Q22~|c0c2}3242;];" [#fn(map) #.car
+								 #.cdr] [#0#
+  [#fn(":000r1e0~\x7f^|44;" [compile-in] [[(0 3 loadc 2 loadg 1 loadg #:g117
+					    brf 2 call load0 loada0 0 loadg 1
+					    argc)
+					   #table(vector-set! 1  >= 0  vector-ref 2)
+					   3 +inf.0]
+					  ((x) (loop2) (y) (loop1)
+					       (matrix z0 step n) ()) #1=(matrix
+  x) ()]) #1# () ()]] for-each-n))
+#3 (compile-arglist [(0 3 loadc 2 loadg 1 loadg #:g117 brf 2 call load0 loada0 0
+		   loadg 1 argc) #table(vector-set! 1  >= 0  vector-ref 2) 3 +inf.0]
+		 ((x) (loop2) (y) (loop1)
+		      (matrix z0 step n) ())
+		 (matrix x))
+#4 (compile-app/lambda/lambda/lambda
+ #f)
+#5 (for-each/lambda #0=#fn(":000r2}MF6I0|c0c1}32Q22~|c0c2}3242;];" [#fn(map) #.car
+								 #.cdr] [#0#
+  [#fn(":000r1e0~\x7f^|44;" [compile-in] [[(0 3 loadc 2 loadg 1 loadg #:g117
+					    brf 2 call load0 loada0 0 loadg 1
+					    argc)
+					   #table(vector-set! 1  >= 0  vector-ref 2)
+					   3 +inf.0]
+					  ((x) (loop2) (y) (loop1)
+					       (matrix z0 step n) ())
+					  #2=((vector-ref matrix x)
+					      y (count z0 step
+						       (make-rectangular (inexact
+  x)
+  (inexact y)))) ()]) #2# () ()]] for-each-n))
+#6 (compile-arglist [(0 3 loadc 2 loadg 1 loadg #:g117 brf 2 call load0 loada0 0
+		   loadg 1 argc) #table(vector-set! 1  >= 0  vector-ref 2) 3 +inf.0]
+		 ((x) (loop2) (y) (loop1)
+		      (matrix z0 step n) ())
+		 ((vector-ref matrix x)
+		  y (count z0 step
+			   (make-rectangular (inexact x) (inexact y)))))
+#7 (compile-app/lambda/lambda/lambda
+ #f)
+#8 (compile-begin [(0 3 loadc 2 loadg 1 loadg #:g117 brf 2 call load0 loada0 0
+		 loadg 1 argc) #table(vector-set! 1  >= 0  vector-ref 2) 3 +inf.0]
+	       ((x) (loop2) (y) (loop1)
+		    (matrix z0 step n) ())
+	       #t ((vector-set! (vector-ref matrix x) y
+				(count z0 step
+				       (make-rectangular (inexact x) (inexact
+  y))))
+		   (loop2 (- x 1))))
+#9 (compile-if/lambda #:g117 #:g118
+		   (>= x 0) (begin (vector-set! (vector-ref matrix x) y
+						(count z0 step
+						       (make-rectangular (inexact
+  x)
+  (inexact y))))
+				   (loop2 (- x 1)))
+		   (loop1 (- y 1)))
+#10 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#11 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #0=[lambda [[(1 argc)
+							  #table() 0 +inf.0]
+							 ((loop2) (y) (loop1)
+								  (matrix z0
+  step n)
+								  ()) #f (lambda (x)
+  (if (>= x 0) (begin (vector-set! (vector-ref matrix x) y
+				   (count z0 step
+					  (make-rectangular (inexact x) (inexact
+  y))))
+		      (loop2 (- x 1)))
+      (loop1 (- y 1)))) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #0#))
+#12 (compile-in/lambda set!)
+#13 (compile-begin [(1 argc) #table() 0 +inf.0]
+	       ((loop2) (y) (loop1)
+			(matrix z0 step n) ())
+	       #t ((set! loop2 (lambda (x)
+				 (if (>= x 0)
+				     (begin (vector-set! (vector-ref matrix x)
+							 y (count z0 step
+								  (make-rectangular
+								   (inexact x)
+								   (inexact y))))
+					    (loop2 (- x 1)))
+				     (loop1 (- y 1)))))
+		   loop2))
+#14 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#15 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #0=[lambda [[(#:g115 brf 2 call
+							   load0 loada0 0 loadg
+							   1 argc)
+							  #table(>= 0) 1 +inf.0]
+							 ((y) (loop1)
+							      (matrix z0 step
+  n)
+							      ()) #f (lambda (loop2)
+  (set! loop2 (lambda (x)
+		(if (>= x 0) (begin (vector-set! (vector-ref matrix x) y
+						 (count z0 step
+							(make-rectangular (inexact
+  x)
+  (inexact y))))
+				    (loop2 (- x 1)))
+		    (loop1 (- y 1)))))
+  loop2) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #0#))
+#16 (compile-app/lambda/lambda/lambda
+ #f)
+#17 (compile-app/lambda/lambda/lambda
+ #f)
+#18 (compile-if/lambda #:g115 #:g116
+		   (>= . #0=(y 0)) (begin (((lambda (loop2)
+					      (set! loop2 (lambda (x)
+							    (if (>= x 0)
+								(begin (vector-set!
+  (vector-ref matrix x) y (count z0 step
+				 (make-rectangular (inexact x) (inexact y))))
+  (loop2 (- x 1)))
+								(loop1 (- y 1)))))
+					      loop2)
+					    #t)
+					   (- n 1)))
+		   #f)
+#19 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#20 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #0=[lambda [[(1 argc)
+							  #table() 0 +inf.0]
+							 ((loop1) (matrix z0
+  step n)
+								  ()) #f (lambda (y)
+  (if (>= y 0) (begin (((lambda (loop2)
+			  (set! loop2 (lambda (x)
+					(if (>= x 0)
+					    (begin (vector-set! (vector-ref
+								 matrix x)
+								y (count z0
+  step (make-rectangular (inexact x) (inexact y))))
+						   (loop2 (- x 1)))
+					    (loop1 (- y 1)))))
+			  loop2)
+			#t)
+		       (- n 1)))
+      #f)) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #0#))
+#21 (compile-in/lambda set!)
+#22 (compile-begin [(1 argc) #table() 0 +inf.0]
+	       ((loop1) (matrix z0 step n) ()) #t ((set! loop1 (lambda (y)
+								 (if (>= y 0)
+  (begin (((lambda (loop2)
+	     (set! loop2 (lambda (x)
+			   (if (>= x 0) (begin (vector-set! (vector-ref matrix
+  x)
+							    y (count z0 step
+  (make-rectangular (inexact x) (inexact y))))
+					       (loop2 (- x 1)))
+			       (loop1 (- y 1)))))
+	     loop2)
+	   #t)
+	  (- n 1)))
+  #f)))
+						   loop1))
+#23 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#24 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #1=[lambda [[(4 argc)
+							  #table() 0 +inf.0]
+							 ((matrix z0 step n)
+							  ()) #f (lambda (loop1)
+								   (set! loop1
+  (lambda (y)
+    (if (>= y 0) (begin (((lambda (loop2)
+			    (set! loop2 (lambda (x)
+					  (if (>= x 0)
+					      (begin (vector-set! (vector-ref
+								   matrix x)
+								  y (count z0
+  step (make-rectangular (inexact x) (inexact y))))
+						     (loop2 (- x 1)))
+					      (loop1 (- y 1)))))
+			    loop2)
+			  #t)
+			 (- n 1)))
+	#f)))
+								   loop1) ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #1#))
+#25 (compile-app/lambda/lambda/lambda
+ #f)
+#26 (compile-app/lambda/lambda/lambda
+ #f)
+#27 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#28 (lambda #fn("8000r0e0i11i1342;" [compile-f-] #1=[lambda [[(0 argc)
+							  #table() 0 +inf.0] (())
+							 #f (lambda (matrix z0
+  step n)
+							      (((lambda (loop1)
+								  (set! loop1
+  (lambda (y)
+    (if (>= y 0) (begin (((lambda (loop2)
+			    #0=(set! loop2 (lambda (x)
+					     (if (>= x 0)
+						 (begin (vector-set! (vector-ref
+  matrix x)
+  y (count z0 step
+	   (make-rectangular (inexact x) (inexact y))))
+							(loop2 (- x 1)))
+						 (loop1 (- y 1)))))
+			    loop2)
+			  #t)
+			 (- n 1)))
+	#f)))
+								  loop1)
+								#t)
+							       (- n 1)) . mbrot)
+							 ()]])
+  #fn("9000r2e0i10c1|332e2i10}322}e3i1131X6<0e0i10c442;];" [emit loadv
+							    bcode:cdepth nnn
+							    closure] #1#))
+#29 (compile-in/lambda set!)
+#30 (lambda/lambda/lambda/lambda/lambda/lambda
+ ())
+#31 (lambda #fn("8000r0e0~\x7f42;" [compile-f-] [() (lambda ()
+						  (define (mbrot matrix z0 step
+								 n)
+						    (((lambda (loop1)
+							(set! loop1 (lambda (y)
+  (if (>= y 0) (begin (((lambda (loop2)
+			  (set! loop2 (lambda (x)
+					(if #0=(>= x 0)
+					    (begin . #1=((vector-set! (vector-ref
+  matrix x)
+  y (count z0 step
+	   (make-rectangular (inexact x) (inexact y))))
+							 (loop2 (- x 1))))
+					    (loop1 (- y 1)))))
+			  loop2)
+			#t)
+		       (- n 1)))
+      #f)))
+							loop1)
+						      #t)
+						     (- n 1))) . #:g0) ()])
+  #fn("6000r2|;" []))
+#32 (eval (define (mbrot matrix z0 step n)
+	(let loop1 ((y (- n 1)))
+	     (when (>= y 0) (let loop2 ((x (- n 1)))
+				 (if (>= x 0)
+				     (begin (vector-set! (vector-ref matrix x)
+							 y (count z0 step
+								  (make-rectangular
+								   (inexact x)
+								   (inexact y))))
+					    (loop2 (- x 1)))
+				     (loop1 (- y 1))))))))
+
+real	0m0.023s
+user	0m0.019s
+sys	0m0.003s
++!CSVLINE!+femtolisp,mbrotZ,CRASHED
+
+Testing nucleic under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/nucleic.scm /tmp/larcenous/Femtolisp/nucleic.scm
+Running...
+Running nucleic:50
+Elapsed time: 19.9016039371490479 seconds (19.902000000000001) for nucleic:50
++!CSVLINE!+femtolisp-unknown,nucleic:50,19.9016039371490479
+
+real	0m19.979s
+user	0m19.979s
+sys	0m0.000s
+
+Testing pi under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/pi.scm /tmp/larcenous/Femtolisp/pi.scm
+Running...
+parse-error: read: overflow in numeric constant 314159265358979323846264338327950288419716939937507
+in file /tmp/larcenous/Femtolisp/pi.scm
+
+real	0m0.021s
+user	0m0.021s
+sys	0m0.000s
++!CSVLINE!+femtolisp,pi,CRASHED
+
+Testing pnpoly under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/pnpoly.scm /tmp/larcenous/Femtolisp/pnpoly.scm
+Running...
+Running pnpoly:1000000
+Elapsed time: 90.4014520645141602 seconds (90.4009999999999962) for pnpoly:1000000
++!CSVLINE!+femtolisp-unknown,pnpoly:1000000,90.4014520645141602
+
+real	1m30.422s
+user	1m30.420s
+sys	0m0.000s
+
+Testing ray under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ray.scm /tmp/larcenous/Femtolisp/ray.scm
+Running...
+Running ray:50
+Elapsed time: 25.0324718952178955 seconds (25.032) for ray:50
++!CSVLINE!+femtolisp-unknown,ray:50,25.0324718952178955
+
+real	0m25.055s
+user	0m25.051s
+sys	0m0.003s
+
+Testing simplex under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/simplex.scm /tmp/larcenous/Femtolisp/simplex.scm
+Running...
+Running simplex:1000000
+Elapsed time: 71.1545150279998779 seconds (71.1550000000000011) for simplex:1000000
++!CSVLINE!+femtolisp-unknown,simplex:1000000,71.1545150279998779
+
+real	1m11.177s
+user	1m11.176s
+sys	0m0.000s
+
+Testing ack under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/ack.scm /tmp/larcenous/Femtolisp/ack.scm
+Running...
+Running ack:3:12:2
+Elapsed time: 41.4258501529693604 seconds (41.4260000000000019) for ack:3:12:2
++!CSVLINE!+femtolisp-unknown,ack:3:12:2,41.4258501529693604
+
+real	0m41.447s
+user	0m41.443s
+sys	0m0.003s
+
+Testing array1 under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/array1.scm /tmp/larcenous/Femtolisp/array1.scm
+Running...
+Running array1:1000000:500
+Elapsed time: 53.0823800563812256 seconds (53.0820000000000007) for array1:1000000:500
++!CSVLINE!+femtolisp-unknown,array1:1000000:500,53.0823800563812256
+
+real	0m53.101s
+user	0m53.096s
+sys	0m0.003s
+
+Testing string under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/string.scm /tmp/larcenous/Femtolisp/string.scm
+Running...
+Running string:500000:25
+Elapsed time: 0.8967728614807129 seconds (0.897) for string:500000:25
++!CSVLINE!+femtolisp-unknown,string:500000:25,0.8967728614807129
+
+real	0m0.920s
+user	0m0.813s
+sys	0m0.107s
+
+Testing sum1 under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sum1.scm /tmp/larcenous/Femtolisp/sum1.scm
+Running...
+Running sum1:25
+Elapsed time: 0.8124949932098389 seconds (0.8120000000000001) for sum1:25
++!CSVLINE!+femtolisp-unknown,sum1:25,0.8124949932098389
+
+real	0m0.834s
+user	0m0.830s
+sys	0m0.003s
+
+Testing cat under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/cat.scm /tmp/larcenous/Femtolisp/cat.scm
+Running...
+Running cat:50
+Elapsed time: 26.149216890335083 seconds (26.1490000000000009) for cat:50
++!CSVLINE!+femtolisp-unknown,cat:50,26.149216890335083
+
+real	0m26.170s
+user	0m26.099s
+sys	0m0.070s
+
+Testing tail under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/tail.scm /tmp/larcenous/Femtolisp/tail.scm
+Running...
+Running tail:25
+Elapsed time: 0.3243310451507568 seconds (0.324) for tail:25
++!CSVLINE!+femtolisp-unknown,tail:25,0.3243310451507568
+
+real	0m0.346s
+user	0m0.326s
+sys	0m0.020s
+
+Testing wc under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/wc.scm /tmp/larcenous/Femtolisp/wc.scm
+Running...
+Running wc:inputs/bib:50
+Elapsed time: 35.8864049911499023 seconds (35.8860000000000028) for wc:inputs/bib:50
++!CSVLINE!+femtolisp-unknown,wc:inputs/bib:50,35.8864049911499023
+
+real	0m35.903s
+user	0m35.886s
+sys	0m0.017s
+
+Testing read1 under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/read1.scm /tmp/larcenous/Femtolisp/read1.scm
+Running...
+Running read1:2500
+Elapsed time: 1.2546639442443848 seconds (1.2549999999999999) for read1:2500
++!CSVLINE!+femtolisp-unknown,read1:2500,1.2546639442443848
+
+real	0m1.273s
+user	0m1.270s
+sys	0m0.003s
+
+Testing compiler under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/compiler.scm /tmp/larcenous/Femtolisp/compiler.scm
+Running...
+eval: variable string-set! has no value
+in file /tmp/larcenous/Femtolisp/compiler.scm
+#0 (string->canonical-symbol/lambda/lambda/lambda
+ "QUOTE" "     " 4)
+#1 (lambda)
+
+real	0m0.025s
+user	0m0.022s
+sys	0m0.003s
++!CSVLINE!+femtolisp,compiler,CRASHED
+
+Testing conform under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/conform.scm /tmp/larcenous/Femtolisp/conform.scm
+Running...
+Running conform:500
+Elapsed time: 39.4533238410949707 seconds (39.453000000000003) for conform:500
++!CSVLINE!+femtolisp-unknown,conform:500,39.4533238410949707
+
+real	0m39.479s
+user	0m39.478s
+sys	0m0.000s
+
+Testing dynamic under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/dynamic.scm /tmp/larcenous/Femtolisp/dynamic.scm
+Running...
+arg-error: symbol: too few arguments
+in file /tmp/larcenous/Femtolisp/dynamic.scm
+#0 (lambda)
+
+real	0m0.039s
+user	0m0.038s
+sys	0m0.000s
++!CSVLINE!+femtolisp,dynamic,CRASHED
+
+Testing earley under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/earley.scm /tmp/larcenous/Femtolisp/earley.scm
+Running...
+Running earley:1
+Elapsed time: 28.1155030727386475 seconds (28.1159999999999997) for earley:1
++!CSVLINE!+femtolisp-unknown,earley:1,28.1155030727386475
+
+real	0m28.163s
+user	0m28.009s
+sys	0m0.153s
+
+Testing graphs under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/graphs.scm /tmp/larcenous/Femtolisp/graphs.scm
+Running...
+Running graphs:7:3
+Elapsed time: 86.0904369354248047 seconds (86.0900000000000034) for graphs:7:3
++!CSVLINE!+femtolisp-unknown,graphs:7:3,86.0904369354248047
+
+real	1m26.117s
+user	1m26.104s
+sys	0m0.010s
+
+Testing lattice under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/lattice.scm /tmp/larcenous/Femtolisp/lattice.scm
+Running...
+Running lattice:44:10
+Elapsed time: 110.7422780990600586 seconds (110.7420000000000044) for lattice:44:10
++!CSVLINE!+femtolisp-unknown,lattice:44:10,110.7422780990600586
+
+real	1m50.763s
+user	1m50.760s
+sys	0m0.000s
+
+Testing matrix under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/matrix.scm /tmp/larcenous/Femtolisp/matrix.scm
+Running...
+Running matrix:5:5:2500
+Elapsed time: 30.6558570861816406 seconds (30.6559999999999988) for matrix:5:5:2500
++!CSVLINE!+femtolisp-unknown,matrix:5:5:2500,30.6558570861816406
+
+real	0m30.681s
+user	0m30.680s
+sys	0m0.000s
+
+Testing maze under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/maze.scm /tmp/larcenous/Femtolisp/maze.scm
+Running...
+Running maze:20:7:10000
+ERROR: returned incorrect result: (#\  #\  #\  #\_ #\  #\  #\  #\_ #\  #\  #\  #\_ #\newline #\  #\_ #\/ #\  #\\
+ #\_ #\/ #\  #\\ #\_ #\/ #\  #\\ #\  #\newline #\/ #\  #\  #\_ #\  #\  #\\ #\ 
+ #\/ #\  #\  #\_ #\/ #\. #\\ #\newline #\\ #\_ #\  #\  #\\ #\_ #\  #\  #\  #\_
+ #\/ #\. #\  #\_ #\/ #\newline #\/ #\  #\  #\_ #\/ #\  #\\ #\_ #\/ #\  #\\ #\_
+ #\  #\. #\\ #\newline #\\ #\  #\/ #\  #\\ #\  #\/ #\  #\  #\_ #\/ #\. #\  #\_
+ #\/ #\newline #\/ #\  #\\ #\_ #\  #\. #\\ #\  #\  #\  #\\ #\  #\/ #\  #\\ #\newline
+ #\\ #\  #\  #\. #\  #\_ #\  #\. #\\ #\  #\/ #\. #\  #\_ #\/ #\newline #\/ #\ 
+ #\\ #\  #\/ #\. #\  #\  #\/ #\  #\\ #\  #\  #\  #\\ #\newline #\\ #\_ #\/ #\.
+ #\\ #\  #\/ #\  #\\ #\_ #\/ #\. #\\ #\  #\/ #\newline #\/ #\  #\\ #\  #\/ #\.
+ #\\ #\_ #\  #\  #\\ #\  #\/ #\  #\\ #\newline #\\ #\  #\/ #\. #\\ #\_ #\  #\.
+ #\\ #\_ #\/ #\. #\\ #\_ #\/ #\newline #\/ #\  #\\ #\_ #\  #\. #\\ #\_ #\  #\.
+ #\  #\_ #\  #\  #\\ #\newline #\\ #\_ #\  #\  #\\ #\  #\/ #\  #\\ #\_ #\  #\ 
+ #\\ #\_ #\/ #\newline #\/ #\  #\\ #\_ #\  #\. #\  #\_ #\/ #\  #\\ #\_ #\/ #\ 
+ #\\ #\newline #\\ #\_ #\  #\  #\  #\  #\  #\  #\\ #\  #\  #\  #\  #\  #\/ #\newline
+ #\/ #\  #\  #\  #\/ #\. #\\ #\_ #\  #\  #\\ #\_ #\/ #\  #\\ #\newline #\\ #\_
+ #\/ #\  #\\ #\_ #\  #\. #\\ #\_ #\/ #\  #\\ #\_ #\/ #\newline #\/ #\  #\\ #\ 
+ #\/ #\  #\\ #\  #\/ #\. #\\ #\_ #\  #\  #\\ #\newline #\\ #\  #\  #\  #\\ #\_
+ #\  #\. #\  #\  #\/ #\  #\\ #\  #\/ #\newline #\/ #\  #\\ #\_ #\/ #\  #\\ #\_
+ #\/ #\. #\  #\  #\/ #\  #\\ #\newline #\\ #\_ #\/ #\  #\  #\  #\/ #\. #\  #\_
+ #\/ #\  #\\ #\  #\/ #\newline #\/ #\  #\  #\_ #\/ #\  #\\ #\_ #\  #\. #\\ #\_
+ #\/ #\  #\\ #\newline #\\ #\_ #\/ #\  #\  #\_ #\/ #\. #\  #\  #\/ #\  #\\ #\ 
+ #\/ #\newline #\/ #\  #\  #\_ #\  #\  #\\ #\  #\/ #\  #\\ #\_ #\  #\  #\\ #\newline
+ #\\ #\_ #\/ #\  #\  #\_ #\  #\. #\\ #\_ #\/ #\  #\  #\_ #\/ #\newline #\/ #\ 
+ #\\ #\_ #\/ #\. #\\ #\  #\/ #\  #\  #\_ #\/ #\  #\\ #\newline #\\ #\  #\/ #\.
+ #\  #\_ #\  #\. #\\ #\  #\/ #\  #\\ #\  #\/ #\newline #\/ #\  #\\ #\  #\/ #\ 
+ #\  #\_ #\  #\  #\  #\_ #\/ #\  #\\ #\newline #\\ #\  #\  #\. #\\ #\_ #\/ #\ 
+ #\  #\_ #\/ #\  #\  #\_ #\/ #\newline #\/ #\  #\\ #\_ #\  #\. #\\ #\_ #\/ #\ 
+ #\  #\  #\  #\  #\\ #\newline #\\ #\_ #\/ #\. #\  #\  #\  #\  #\\ #\  #\/ #\ 
+ #\\ #\_ #\/ #\newline #\/ #\. #\\ #\  #\/ #\  #\\ #\_ #\/ #\  #\\ #\_ #\  #\ 
+ #\\ #\newline #\\ #\  #\  #\. #\\ #\_ #\/ #\  #\  #\_ #\  #\  #\\ #\  #\/ #\newline
+ #\/ #\. #\\ #\_ #\/ #\  #\  #\_ #\  #\  #\\ #\_ #\/ #\  #\\ #\newline #\\ #\_
+ #\  #\. #\\ #\  #\/ #\  #\\ #\  #\/ #\  #\\ #\_ #\/ #\newline #\/ #\  #\  #\ 
+ #\  #\. #\  #\_ #\/ #\  #\  #\_ #\  #\  #\\ #\newline #\\ #\_ #\/ #\  #\\ #\ 
+ #\/ #\  #\\ #\_ #\  #\  #\\ #\_ #\/ #\newline #\/ #\  #\\ #\_ #\/ #\. #\\ #\ 
+ #\/ #\. #\\ #\_ #\  #\  #\\ #\newline #\\ #\_ #\  #\  #\  #\  #\  #\. #\  #\ 
+ #\/ #\. #\\ #\_ #\/ #\newline #\/ #\  #\  #\_ #\/ #\  #\\ #\_ #\/ #\. #\  #\_
+ #\  #\. #\\ #\newline #\\ #\_ #\/ #\  #\\ #\_ #\/ #\  #\\ #\_ #\/ #\  #\\ #\ 
+ #\/ #\newline)
+
+real	0m23.765s
+user	0m23.764s
+sys	0m0.000s
+
+Testing mazefun under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mazefun.scm /tmp/larcenous/Femtolisp/mazefun.scm
+Running...
+Running mazefun:11:11:10000
+Elapsed time: 24.5362980365753174 seconds (24.5360000000000014) for mazefun:11:11:10000
++!CSVLINE!+femtolisp-unknown,mazefun:11:11:10000,24.5362980365753174
+
+real	0m24.554s
+user	0m24.553s
+sys	0m0.000s
+
+Testing nqueens under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/nqueens.scm /tmp/larcenous/Femtolisp/nqueens.scm
+Running...
+Running nqueens:13:10
+Elapsed time: 56.3164920806884766 seconds (56.3160000000000025) for nqueens:13:10
++!CSVLINE!+femtolisp-unknown,nqueens:13:10,56.3164920806884766
+
+real	0m56.331s
+user	0m56.329s
+sys	0m0.000s
+
+Testing paraffins under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/paraffins.scm /tmp/larcenous/Femtolisp/paraffins.scm
+Running...
+Running paraffins:23:10
+Elapsed time: 4.3651630878448486 seconds (4.3650000000000002) for paraffins:23:10
++!CSVLINE!+femtolisp-unknown,paraffins:23:10,4.3651630878448486
+
+real	0m4.396s
+user	0m4.339s
+sys	0m0.057s
+
+Testing parsing under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/parsing.scm /tmp/larcenous/Femtolisp/parsing.scm
+Running...
+Running parsing:2500
+eval: variable string-set! has no value
+in file /tmp/larcenous/Femtolisp/parsing.scm
+#0 (parse-string/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/consumechar)
+#1 (parse-string/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/state0/lambda
+ #\;)
+#2 (parse-string/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/parse-datum)
+#3 (parse-string/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda/lambda
+ #0=#fn("8000r2|c0\x8240};~i1[30|42;" [eof] [#0#
+					     #1=[#fn("7000r0c0q]31i0m30312c1qi0m3041;" [#fn("6000r1c0qm02|;" [#fn("7000r1e0|316F0i1n302`o602~i1m3041;^;" [char-whitespace?])])
+  #fn("8000r1e0|iA0326:0i0lc141;\x7f|41;" [char=? eof])] #1# scanner0)
+						 #fn("7000r1c0q|41;" [#fn("8000r1|c0=6@0i1n302i1lc141;|c2=6@0i1n302i1lc341;|c4=6@0i1n302i1lc541;|c6=6@0i1n302i1lc741;|c8=6C0i1n302i1Ni1m3041;e9|c:326C0i1n302i1Mi1m3041;e9|c;326C0i1n302i1Li1m3041;|c<=6C0i1n302i1Ai1m3041;e9|c=326C0i1n302i1?i1m3041;|c>=6C0i1n302i1>i1m3041;|c?=6C0i1n302i13i1m3041;|c@=6C0i1n302i12i1m3041;eA~316C0i1n302i1Oi1m3041;i1ki?041;" [#\`
+  backquote #\' quote #\) rparen #\( lparen #\; memv (#\+ #\-)
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9) #\. (#\a #\b #\c #\d #\e #\f #\g
+						 #\h #\i #\j #\k #\l #\m #\n
+						 #\o #\p #\q #\r #\s #\t #\u
+						 #\v #\w #\x #\y #\z #\A #\B
+						 #\C #\D #\E #\F #\G #\H #\I
+						 #\J #\K #\L #\M #\N #\O #\P
+						 #\Q #\R #\S #\T #\U #\V #\W
+						 #\X #\Y #\Z #\! #\$ #\% #\&
+						 #\* #\/ #\: #\< #\= #\> #\?
+						 #\^ #\_ #\~) #\# #\" #\,
+  char-whitespace?])] #1# state0) #fn("7000r1c0q|41;" [#fn("7000r1|c0=6@0i1n302i1lc141;i1lc241;" [#\@
+  splicing comma])] #1# state1) #fn("7000r1c0q|41;" [#fn("7000r1|c0=6@0i1n302i1lc141;i1g~316C0i1n302i13i1m3041;i1ki?041;" [#\"
+  string])] #1# state2) #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i19i1m3041;i1ki?041;" [#\n])] #1# state3)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i14i1m3041;i1ki?041;" [#\i])] #1# state4)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i15i1m3041;i1ki?041;" [#\l])] #1# state5)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i16i1m3041;i1ki?041;" [#\w])] #1# state6)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i17i1m3041;i1ki?041;" [#\e])] #1# state7)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6@0i1n302i1lc141;i1ki?041;" [#\e
+  character])] #1# state8) #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i19i1m3041;i1ki?041;" [#\c])] #1# state9)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i1:i1m3041;i1ki?041;" [#\a])] #1# state10)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i1;i1m3041;i1ki?041;" [#\p])] #1# state11)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i1<i1m3041;|c1=6C0i1n302i18i1m3041;e2~316@0i1n302i1lc341;i1ki?041;" [#\s
+  #\n char? character])] #1# state12) #fn("7000r1c0q|41;" [#fn("8000r1|c0=6@0i1n302i1lc141;e2|c3326@0i1n302i1lc441;|c5=6C0i1n302i1=i1m3041;i1ki?041;" [#\(
+  vecstart memv (#\t #\f) boolean #\\])] #1# state13)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1?i1m3041;i1lc241;" [memv
+  (#\a #\b #\c #\d #\e #\f #\g #\h #\i #\j #\k #\l #\m #\n #\o #\p #\q #\r #\s
+   #\t #\u #\v #\w #\x #\y #\z #\A #\B #\C #\D #\E #\F #\G #\H #\I #\J #\K #\L
+   #\M #\N #\O #\P #\Q #\R #\S #\T #\U #\V #\W #\X #\Y #\Z #\! #\$ #\% #\& #\*
+   #\/ #\: #\< #\= #\> #\? #\^ #\_ #\~ #\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9
+   #\+ #\- #\. #\@) id])] #1# state14) #fn("7000r1c0q|41;" [#fn("7000r1|c0=6@0i1n302i1lc141;i1ki?041;" [#\.
+  id])] #1# state15) #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Ci1m3041;|c2=6C0i1n302i1@i1m3041;i1lc341;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9) #\. period])] #1# state16)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Ci1m3041;i1ki?041;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9)])] #1# state17)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Gi1m3041;|c2=6C0i1n302i1Di1m3041;e0|c3326C0i1n302i1Ci1m3041;i1lc441;" [memv
+  (#\e #\s #\f #\d #\l) #\# (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9) number])] #1# state18)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Gi1m3041;|c2=6C0i1n302i1Di1m3041;i1lc341;" [memv
+  (#\e #\s #\f #\d #\l) #\# number])] #1# state19)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Ei1m3041;i1lc241;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9) number])] #1# state20)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Ei1m3041;i1ki?041;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9)])] #1# state21)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Fi1m3041;e0|c2326C0i1n302i1Ei1m3041;i1ki?041;" [memv
+  (#\+ #\-) (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9)])] #1# state22)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6C0i1n302i1Hi1m3041;i1lc141;" [#\#
+  number])] #1# state23) #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Ii1m3041;|c2=6C0i1n302i1Hi1m3041;i1lc341;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9) #\# number])] #1# state24)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Ii1m3041;i1ki?041;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9)])] #1# state25)
+						 #fn("7000r1c0q|41;" [#fn("8000r1|c0=6C0i1n302i1Ki1m3041;|c1=6C0i1n302i1Ji1m3041;e2|c3326C0i1n302i1Gi1m3041;|c4=6C0i1n302i1Di1m3041;i1lc541;" [#\#
+  #\/ memv (#\e #\s #\f #\d #\l) #\. number])] #1# state26)
+						 #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Li1m3041;|c2=6C0i1n302i1Ki1m3041;|c3=6C0i1n302i1Ji1m3041;e0|c4326C0i1n302i1Gi1m3041;|c5=6C0i1n302i1Ci1m3041;i1lc641;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9) #\# #\/ (#\e #\s #\f #\d #\l) #\.
+  number])] #1# state27) #fn("7000r1c0q|41;" [#fn("8000r1e0|c1326C0i1n302i1Li1m3041;|c2=6C0i1n302i1Bi1m3041;i1lc341;" [memv
+  (#\0 #\1 #\2 #\3 #\4 #\5 #\6 #\7 #\8 #\9) #\. id])] #1# state28)
+						 #fn("7000r1c0q|41;" [#fn("7000r1|c0=6H0i1n302`o602i11i1m3041;i1h~316C0i1n302i1Ni1m3041;i1ki?041;" [#\newline])] #1# state29)
+						 #fn("7000r1c0q|41;" [#fn("7000r1e0~316C0i1n302i1Oi1m3041;`o602i11i1m3041;" [char-whitespace?])] #1# state30)
+						 #fn("7000r1c0q|41;" [#fn("7000r1`o602i11i1m3041;" [])] #1# state31)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [id])] #1# state32)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [boolean])] #1# state33)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [character])] #1# state34)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [vecstart])] #1# state35)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [string])] #1# state36)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [lparen])] #1# state37)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [rparen])] #1# state38)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [quote])] #1# state39)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [backquote])] #1# state40)
+						 #fn("7000r1c0q|41;" [#fn("7000r1i1lc041;" [splicing])] #1# state41)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1c0|c1326=0c2qi0^3041;c0|c3326=0c4qi0\\3041;i0|c5c642;" [#fn(memq)
+  (splicing comma backquote quote lparen vecstart)
+  #fn("7000r1i1p|41;" []) (boolean number character string id)
+  #fn("7000r1i1p|41;" []) <datum> (backquote boolean character comma id lparen
+				   number quote splicing string vecstart)])] #1# parse-datum)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1|c0=6=0c1qi0]3041;|c2=6>0i0j302i0u40;|c3=6>0i0j302i0s40;|c4=6>0i0j302i0t40;|c5=6>0i0j302i0r40;i0|c6c742;" [id
+  #fn("7000r1i1p|41;" []) string character number boolean <simple-datum> (boolean
+  character id number string)])] #1# parse-simple-datum)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1|c0=6>0i0j302i0v40;i0|c1c242;" [id
+  <symbol> (id)])] #1# parse-symbol) #fn("7000r0c0qi0i3041;" [#fn("8000r1|c0=6=0c1qi0e3041;c2|c3326=0c4qi0_3041;i0|c5c642;" [vecstart
+  #fn("7000r1i1p|41;" []) #fn(memq) (lparen quote backquote comma splicing)
+  #fn("7000r1i1p|41;" []) <compound-datum> (backquote comma lparen quote
+						      splicing vecstart)])] #1# parse-compound-datum)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1c0|c1326=0c2qi0c3041;|c3=6C0i0j302c4qi0`3041;i0|c5c642;" [#fn(memq)
+  (splicing comma backquote quote) #fn("7000r1i1p|41;" []) lparen #fn("7000r1i1p|41;" [])
+  <list> (backquote comma lparen quote splicing)])] #1# parse-list)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1c0|c1326=0c2qi0[3041;|c3=6>0i0j302i0o40;i0|c4c542;" [#fn(memq)
+  (id string character number boolean vecstart lparen quote backquote comma
+   splicing) #fn("7000r1c0qi1a3041;" [#fn("7000r1~|K;" [])]) rparen <list2> (backquote
+  boolean character comma id lparen number quote rparen splicing string
+  vecstart)])] #1# parse-list2) #fn("7000r0c0qi0i3041;" [#fn("8000r1c0|c1326=0c2qi0f3041;i0|c3c442;" [#fn(memq)
+  (rparen period splicing comma backquote quote lparen vecstart boolean number
+   character string id) #fn("7000r1c0qi1b3041;" [#fn("8000r1i2w~|42;" [])])
+  <list3> (backquote boolean character comma id lparen number period quote
+	   rparen splicing string vecstart)])] #1# parse-list3)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1|c0=6C0i0j302c1qi0[3041;|c2=6>0i0j302i0o40;i0|c3c442;" [period
+  #fn("8000r1i1i30c0\x82?0i1j302i1p|41;i1|c1c242;" [rparen <list4> (rparen)])
+  rparen <list4> (period rparen)])] #1# parse-list4)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1c0|c1326=0c2qi0d3041;i0|c3c442;" [#fn(memq)
+  (quote backquote comma splicing) #fn("7000r1c0qi1[3041;" [#fn("7000r1~|L2;" [])])
+  <abbreviation> (backquote comma quote splicing)])] #1# parse-abbreviation)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1|c0=6>0i0j302i0z40;|c1=6>0i0j302i0{40;|c2=6>0i0j302i0x40;|c3=6>0i0j302i0y40;i0|c4c542;" [splicing
+  comma backquote quote <abbrev-prefix> (backquote comma quote splicing)])] #1# parse-abbrev-prefix)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1|c0=6C0i0j302c1qi0f3041;i0|c2c342;" [vecstart
+  #fn("8000r1i1i30c0\x82?0i1j302i1q|41;i1|c1c242;" [rparen <vector> (rparen)])
+  <vector> (vecstart)])] #1# parse-vector)
+						 #fn("7000r0c0qi0i3041;" [#fn("8000r1c0|c1326=0c2qi0[3041;c0|c332680i0o40;i0|c4c542;" [#fn(memq)
+  (id string character number boolean vecstart lparen quote backquote comma
+   splicing) #fn("7000r1c0qi1f3041;" [#fn("7000r1~|K;" [])]) (rparen period)
+  <data> (backquote boolean character comma id lparen number period quote
+	  rparen splicing string vecstart)])] #1# parse-data)
+						 #fn("8000r1e0|c132@;" [char=?
+  #\"] isnotdoublequote?) #fn("8000r1e0|c132@;" [char=? #\newline] isnotnewline?)
+						 #fn("6000r0i;0660i<0;`o502~40;" [] #1# next-token)
+						 #fn("6000r0^o;0;" [] #1# consume-token!)
+						 #fn("7000r1c0q]41;" [#fn("=000r1~i@0W670c05N0~i?0W670c15A0~i>0W670c2540c3m02e4^e5c6|32i90332^o<02^o402i1i40;" ["Amazingly long token"
+  "in line " "Bug in lexical analyzer (generated)"
+  "Bug in lexical analyzer" error string-append "Lexical Error: "])] #1# scannererror)
+						 #fn("9000r1c0|c1326C0e2i60`i5033o:0530^2|o<02]o;02|;" [#fn(memq)
+  (boolean character id number string) substring] #1# accept)
+						 #fn("8000r0i30660i40;i20i10X6K0e0iB0i2032o402i20awo20580iA0o402]o302^2i0m40;" [string-ref] #1# scanchar)
+						 #fn(";000r0i30660^570i0m302i50i@0X6g0^o302e0i40c1326=0i80awo80530^2e2i60i50i40332i50awo50;i0ki?041;" [char=?
+  #\newline string-set!] #1# consumechar)
+						 #fn("6000r0_;" [] emptyList)
+						 #fn("6000r1|;" [] identity)
+						 #fn("7000r1e0|41;" [list->vector] list2vector)
+						 #fn("8000r0e0i:0c142;" [string=?
+  "#t"] #1# makeBool) #fn("8000r0e0i:0`42;" [string-ref] #1# makeChar)
+						 #fn("7000r0c0i:041;" [#fn(string->number)] #1# makeNum)
+						 #fn(":000r0e0i:0ae1i:031ax43;" [substring
+  string-length] #1# makeString) #fn("7000r0e0i:041;" [string->symbol] #1# makeSym)
+						 #fn("9000r2|\x8540};|Mi0w|N}32K;" [] #1# pseudoAppend)
+						 #fn("6000r0c0;" [quasiquote] symBackquote)
+						 #fn("6000r0c0;" [quote] symQuote)
+						 #fn("6000r0c0;" [unquote-splicing] symSplicing)
+						 #fn("6000r0c0;" [unquote] symUnquote)
+						 #fn("8000r2c0i0i30\x8250c0;e1c2312e1i80312e1c3312c4|312e5302e1c6312e1i0i30312e1c7312e5302e1c8312c4}312e5302e9^c:42;" [eof
+  display "Syntax error in line " " while parsing a " #fn(write) newline "  Encountered a "
+  " while expecting something in" "  " error "Syntax error"] #1# parse-error)
+						 [28300 [1 [#f [#\; [0 ["                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "
+  [0 [1 [0 ["" [#f [z1 [3 [2 [1 [1024 [#\~ [";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n; File:         nboyer.sch\n; Description:  The Boyer benchmark\n; Author:       Bob Boyer\n; Created:      5-Apr-85\n; Modified:     10-Apr-85 14:52:20 (Bob Shaw)\n;               22-Jul-87 (Will Clinger)\n;               2-Jul-88 (Will Clinger -- distinguished #f and the empty list)\n;               13-Feb-97 (Will Clinger -- fixed bugs in unifier and rules,\n;                          rewrote to eliminate property lists, and added\n;                          a scaling parameter suggested by Bob Boyer)\n;               19-Mar-99 (Will Clinger -- cleaned up comments)\n;               4-Apr-01 (Will Clinger -- changed four 1- symbols to sub1)\n; Language:     Scheme\n; Status:       Public Domain\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n;;; NBOYER -- Logic programming benchmark, originally written by Bob Boyer.\n;;; Fairly CONS intensive.\n\n; Note:  The version of this benchmark that appears in Dick Gabriel's book\n; contained several bugs that are corrected here.  These bugs are discussed\n; by Henry Baker, \"The Boyer Benchmark Meets Linear Logic\", ACM SIGPLAN Lisp\n; Pointers 6(4), October-December 1993, pages 3-10.  The fixed bugs are:\n;\n;    The benchmark now returns a boolean result.\n;    FALSEP and TRUEP use TERM-MEMBER? rather than MEMV (which is called MEMBER\n;         in Common Lisp)\n;    ONE-WAY-UNIFY1 now treats numbers correctly\n;    ONE-WAY-UNIFY1-LST now treats empty lists correctly\n;    Rule 19 has been corrected (this rule was not touched by the original\n;         benchmark, but is used by this version)\n;    Rules 84 and 101 have been corrected (but these rules are never touched\n;         by the benchmark)\n;\n; According to Baker, these bug fixes make the benchmark 10-25% slower.\n; Please do not compare the timings from this benchmark against those of\n; the original benchmark.\n;\n; This version of the benchmark also prints the number of rewrites as a sanity\n; check, because it is too easy for a buggy version to return the correct\n; boolean result.  The correct number of rewrites is\n;\n;     n      rewrites       peak live storage (approximate, in bytes)\n;     0         95024           520,000\n;     1        591777         2,085,000\n;     2       1813975         5,175,000\n;     3       5375678\n;     4      16445406\n;     5      51507739\n\n; Nboyer is a 2-phase benchmark.\n; The first phase attaches lemmas to symbols.  This phase is not timed,\n; but it accounts for very little of the runtime anyway.\n; The second phase creates the test problem, and tests to see\n; whether it is implied by the lemmas.\n\n(define (nboyer-benchmark . args)\n  (let ((n (if (null? args) 0 (car args))))\n    (setup-boyer)\n    (run-benchmark (string-append \"nboyer\"\n                                  (number->string n))\n                   1\n                   (lambda () (test-boyer n))\n                   (lambda (rewrites)\n                     (and (number? rewrites)\n                          (case n\n                           ((0)  (= rewrites 95024))\n                           ((1)  (= rewrites 591777))\n                           ((2)  (= rewrites 1813975))\n                           ((3)  (= rewrites 5375678))\n                           ((4)  (= rewrites 16445406))\n                           ((5)  (= rewrites 51507739))\n                           ; If it works for n <= 5, assume it works.\n                           (else #t)))))))\n\n(define (setup-boyer) #t) ; assigned below\n(define (test-boyer) #t)  ; assigned below\n\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;\n; The first phase.\n;\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n; In the original benchmark, it stored a list of lemmas on the\n; property lists of symbols.\n; In the new benchmark, it maintains an association list of\n; symbols and symbol-records, and stores the list of lemmas\n; within the symbol-records.\n\n(let ()\n  \n  (define (setup)\n    (add-lemma-lst\n     (quote ((equal (compile form)\n                    (reverse (codegen (optimize form)\n                                      (nil))))\n             (equal (eqp x y)\n                    (equal (fix x)\n                           (fix y)))\n             (equal (greaterp x y)\n                    (lessp y x))\n             (equal (lesseqp x y)\n                    (not (lessp y x)))\n             (equal (greatereqp x y)\n                    (not (lessp x y)))\n             (equal (boolean x)\n                    (or (equal x (t))\n                        (equal x (f))))\n             (equal (iff x y)\n                    (and (implies x y)\n                         (implies y x)))\n             (equal (even1 x)\n                    (if (zerop x)\n                        (t)\n                        (odd (sub1 x))))\n             (equal (countps- l pred)\n                    (countps-loop l pred (zero)))\n             (equal (fact- i)\n                    (fact-loop i 1))\n             (equal (reverse- x)\n                    (reverse-loop x (nil)))\n             (equal (divides x y)\n                    (zerop (remainder y x)))\n             (equal (assume-true var alist)\n                    (cons (cons var (t))\n                          alist))\n             (equal (assume-false var alist)\n                    (cons (cons var (f))\n                          alist))\n             (equal (tautology-checker x)\n                    (tautologyp (normalize x)\n                                (nil)))\n             (equal (falsify x)\n                    (falsify1 (normalize x)\n                              (nil)))\n             (equal (prime x)\n                    (and (not (zerop x))\n                         (not (equal x (add1 (zero))))\n                         (prime1 x (sub1 x))))\n             (equal (and p q)\n                    (if p (if q (t)\n                                (f))\n                          (f)))\n             (equal (or p q)\n                    (if p (t)\n                          (if q (t)\n                                (f))))\n             (equal (not p)\n                    (if p (f)\n                          (t)))\n             (equal (implies p q)\n                    (if p (if q (t)\n                                (f))\n                          (t)))\n             (equal (fix x)\n                    (if (numberp x)\n                        x\n                        (zero)))\n             (equal (if (if a b c)\n                        d e)\n                    (if a (if b d e)\n                          (if c d e)))\n             (equal (zerop x)\n                    (or (equal x (zero))\n                        (not (numberp x))))\n             (equal (plus (plus x y)\n                          z)\n                    (plus x (plus y z)))\n             (equal (equal (plus a b)\n                           (zero))\n                    (and (zerop a)\n                         (zerop b)))\n             (equal (difference x x)\n                    (zero))\n             (equal (equal (plus a b)\n                           (plus a c))\n                    (equal (fix b)\n                           (fix c)))\n             (equal (equal (zero)\n                           (difference x y))\n                    (not (lessp y x)))\n             (equal (equal x (difference x y))\n                    (and (numberp x)\n                         (or (equal x (zero))\n                             (zerop y))))\n             (equal (meaning (plus-tree (append x y))\n                             a)\n                    (plus (meaning (plus-tree x)\n                                   a)\n                          (meaning (plus-tree y)\n                                   a)))\n             (equal (meaning (plus-tree (plus-fringe x))\n                             a)\n                    (fix (meaning x a)))\n             (equal (append (append x y)\n                            z)\n                    (append x (append y z)))\n             (equal (reverse (append a b))\n                    (append (reverse b)\n                            (reverse a)))\n             (equal (times x (plus y z))\n                    (plus (times x y)\n                          (times x z)))\n             (equal (times (times x y)\n                           z)\n                    (times x (times y z)))\n             (equal (equal (times x y)\n                           (zero))\n                    (or (zerop x)\n                        (zerop y)))\n             (equal (exec (append x y)\n                          pds envrn)\n                    (exec y (exec x pds envrn)\n                            envrn))\n             (equal (mc-flatten x y)\n                    (append (flatten x)\n                            y))\n             (equal (member x (append a b))\n                    (or (member x a)\n                        (member x b)))\n             (equal (member x (reverse y))\n                    (member x y))\n             (equal (length (reverse x))\n                    (length x))\n             (equal (member a (intersect b c))\n                    (and (member a b)\n                         (member a c)))\n             (equal (nth (zero)\n                         i)\n                    (zero))\n             (equal (exp i (plus j k))\n                    (times (exp i j)\n                           (exp i k)))\n             (equal (exp i (times j k))\n                    (exp (exp i j)\n                         k))\n             (equal (reverse-loop x y)\n                    (append (reverse x)\n                            y))\n             (equal (reverse-loop x (nil))\n                    (reverse x))\n             (equal (count-list z (sort-lp x y))\n                    (plus (count-list z x)\n                          (count-list z y)))\n             (equal (equal (append a b)\n                           (append a c))\n                    (equal b c))\n             (equal (plus (remainder x y)\n                          (times y (quotient x y)))\n                    (fix x))\n             (equal (power-eval (big-plus1 l i base)\n                                base)\n                    (plus (power-eval l base)\n                          i))\n             (equal (power-eval (big-plus x y i base)\n                                base)\n                    (plus i (plus (power-eval x base)\n                                  (power-eval y base))))\n             (equal (remainder y 1)\n                    (zero))\n             (equal (lessp (remainder x y)\n                           y)\n                    (not (zerop y)))\n             (equal (remainder x x)\n                    (zero))\n             (equal (lessp (quotient i j)\n                           i)\n                    (and (not (zerop i))\n                         (or (zerop j)\n                             (not (equal j 1)))))\n             (equal (lessp (remainder x y)\n                           x)\n                    (and (not (zerop y))\n                         (not (zerop x))\n                         (not (lessp x y))))\n             (equal (power-eval (power-rep i base)\n                                base)\n                    (fix i))\n             (equal (power-eval (big-plus (power-rep i base)\n                                          (power-rep j base)\n                                          (zero)\n                                          base)\n                                base)\n                    (plus i j))\n             (equal (gcd x y)\n                    (gcd y x))\n             (equal (nth (append a b)\n                         i)\n                    (append (nth a i)\n                            (nth b (difference i (length a)))))\n             (equal (difference (plus x y)\n                                x)\n                    (fix y))\n             (equal (difference (plus y x)\n                                x)\n                    (fix y))\n             (equal (difference (plus x y)\n                                (plus x z))\n                    (difference y z))\n             (equal (times x (difference c w))\n                    (difference (times c x)\n                                (times w x)))\n             (equal (remainder (times x z)\n                               z)\n                    (zero))\n             (equal (difference (plus b (plus a c))\n                                a)\n                    (plus b c))\n             (equal (difference (add1 (plus y z))\n                                z)\n                    (add1 y))\n             (equal (lessp (plus x y)\n                           (plus x z))\n                    (lessp y z))\n             (equal (lessp (times x z)\n                           (times y z))\n                    (and (not (zerop z))\n                         (lessp x y)))\n             (equal (lessp y (plus x y))\n                    (not (zerop x)))\n             (equal (gcd (times x z)\n                         (times y z))\n                    (times z (gcd x y)))\n             (equal (value (normalize x)\n                           a)\n                    (value x a))\n             (equal (equal (flatten x)\n                           (cons y (nil)))\n                    (and (nlistp x)\n                         (equal x y)))\n             (equal (listp (gopher x))\n                    (listp x))\n             (equal (samefringe x y)\n                    (equal (flatten x)\n                           (flatten y)))\n             (equal (equal (greatest-factor x y)\n                           (zero))\n                    (and (or (zerop y)\n                             (equal y 1))\n                         (equal x (zero))))\n             (equal (equal (greatest-factor x y)\n                           1)\n                    (equal x 1))\n             (equal (numberp (greatest-factor x y))\n                    (not (and (or (zerop y)\n                                  (equal y 1))\n                              (not (numberp x)))))\n             (equal (times-list (append x y))\n                    (times (times-list x)\n                           (times-list y)))\n             (equal (prime-list (append x y))\n                    (and (prime-list x)\n                         (prime-list y)))\n             (equal (equal z (times w z))\n                    (and (numberp z)\n                         (or (equal z (zero))\n                             (equal w 1))))\n             (equal (greatereqp x y)\n                    (not (lessp x y)))\n             (equal (equal x (times x y))\n                    (or (equal x (zero))\n                        (and (numberp x)\n                             (equal y 1))))\n             (equal (remainder (times y x)\n                               y)\n                    (zero))\n             (equal (equal (times a b)\n                           1)\n                    (and (not (equal a (zero)))\n                         (not (equal b (zero)))\n                         (numberp a)\n                         (numberp b)\n                         (equal (sub1 a)\n                                (zero))\n                         (equal (sub1 b)\n                                (zero))))\n             (equal (lessp (length (delete x l))\n                           (length l))\n                    (member x l))\n             (equal (sort2 (delete x l))\n                    (delete x (sort2 l)))\n             (equal (dsort x)\n                    (sort2 x))\n             (equal (length (cons x1\n                                  (cons x2\n                                        (cons x3 (cons x4\n                                                       (cons x5\n                                                             (cons x6 x7)))))))\n                    (plus 6 (length x7)))\n             (equal (difference (add1 (add1 x))\n                                2)\n                    (fix x))\n             (equal (quotient (plus x (plus x y))\n                              2)\n                    (plus x (quotient y 2)))\n             (equal (sigma (zero)\n                           i)\n                    (quotient (times i (add1 i))\n                              2))\n             (equal (plus x (add1 y))\n                    (if (numberp y)\n                        (add1 (plus x y))\n                        (add1 x)))\n             (equal (equal (difference x y)\n                           (difference z y))\n                    (if (lessp x y)\n                        (not (lessp y z))\n                        (if (lessp z y)\n                            (not (lessp y x))\n                            (equal (fix x)\n                                   (fix z)))))\n             (equal (meaning (plus-tree (delete x y))\n                             a)\n                    (if (member x y)\n                        (difference (meaning (plus-tree y)\n                                             a)\n                                    (meaning x a))\n                        (meaning (plus-tree y)\n                                 a)))\n             (equal (times x (add1 y))\n                    (if (numberp y)\n                        (plus x (times x y))\n                        (fix x)))\n             (equal (nth (nil)\n                         i)\n                    (if (zerop i)\n                        (nil)\n                        (zero)))\n             (equal (last (append a b))\n                    (if (listp b)\n                        (last b)\n                        (if (listp a)\n                            (cons (car (last a))\n                                  b)\n                            b)))\n             (equal (equal (lessp x y)\n                           z)\n                    (if (lessp x y)\n                        (equal (t) z)\n                        (equal (f) z)))\n             (equal (assignment x (append a b))\n                    (if (assignedp x a)\n                        (assignment x a)\n                        (assignment x b)))\n             (equal (car (gopher x))\n                    (if (listp x)\n                        (car (flatten x))\n                        (zero)))\n             (equal (flatten (cdr (gopher x)))\n                    (if (listp x)\n                        (cdr (flatten x))\n                        (cons (zero)\n                              (nil))))\n             (equal (quotient (times y x)\n                              y)\n                    (if (zerop y)\n                        (zero)\n                        (fix x)))\n             (equal (get j (set i val mem))\n                    (if (eqp j i)\n                        val\n                        (get j mem)))))))\n  \n  (define (add-lemma-lst lst)\n    (cond ((null? lst)\n           #t)\n          (else (add-lemma (car lst))\n                (add-lemma-lst (cdr lst)))))\n  \n  (define (add-lemma term)\n    (cond ((and (pair? term)\n                (eq? (car term)\n                     (quote equal))\n                (pair? (cadr term)))\n           (put (car (cadr term))\n                (quote lemmas)\n                (cons\n                 (translate-term term)\n                 (get (car (cadr term)) (quote lemmas)))))\n          (else (error \"ADD-LEMMA did not like term:  \" term))))\n  \n  ; Translates a term by replacing its constructor symbols by symbol-records.\n  \n  (define (translate-term term)\n    (cond ((not (pair? term))\n           term)\n          (else (cons (symbol->symbol-record (car term))\n                      (translate-args (cdr term))))))\n  \n  (define (translate-args lst)\n    (cond ((null? lst)\n           '())\n          (else (cons (translate-term (car lst))\n                      (translate-args (cdr lst))))))\n  \n  ; For debugging only, so the use of MAP does not change\n  ; the first-order character of the benchmark.\n  \n  (define (untranslate-term term)\n    (cond ((not (pair? term))\n           term)\n          (else (cons (get-name (car term))\n                      (map untranslate-term (cdr term))))))\n  \n  ; A symbol-record is represented as a vector with two fields:\n  ; the symbol (for debugging) and\n  ; the list of lemmas associated with the symbol.\n  \n  (define (put sym property value)\n    (put-lemmas! (symbol->symbol-record sym) value))\n  \n  (define (get sym property)\n    (get-lemmas (symbol->symbol-record sym)))\n  \n  (define (symbol->symbol-record sym)\n    (let ((x (assq sym *symbol-records-alist*)))\n      (if x\n          (cdr x)\n          (let ((r (make-symbol-record sym)))\n            (set! *symbol-records-alist*\n                  (cons (cons sym r)\n                        *symbol-records-alist*))\n            r))))\n  \n  ; Association list of symbols and symbol-records.\n  \n  (define *symbol-records-alist* '())\n  \n  ; A symbol-record is represented as a vector with two fields:\n  ; the symbol (for debugging) and\n  ; the list of lemmas associated with the symbol.\n  \n  (define (make-symbol-record sym)\n    (vector sym '()))\n  \n  (define (put-lemmas! symbol-record lemmas)\n    (vector-set! symbol-record 1 lemmas))\n  \n  (define (get-lemmas symbol-record)\n    (vector-ref symbol-record 1))\n  \n  (define (get-name symbol-record)\n    (vector-ref symbol-record 0))\n  \n  (define (symbol-record-equal? r1 r2)\n    (eq? r1 r2))\n  \n  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n  ;\n  ; The second phase.\n  ;\n  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n  \n  (define (test n)\n    (let ((term\n           (apply-subst\n            (translate-alist\n             (quote ((x f (plus (plus a b)\n                                (plus c (zero))))\n                     (y f (times (times a b)\n                                 (plus c d)))\n                     (z f (reverse (append (append a b)\n                                           (nil))))\n                     (u equal (plus a b)\n                              (difference x y))\n                     (w lessp (remainder a b)\n                              (member a (length b))))))\n            (translate-term\n             (do ((term\n                   (quote (implies (and (implies x y)\n                                        (and (implies y z)\n                                             (and (implies z u)\n                                                  (implies u w))))\n                                   (implies x w)))\n                   (list 'or term '(f)))\n                  (n n (- n 1)))\n                 ((zero? n) term))))))\n    (tautp term)))\n  \n  (define (translate-alist alist)\n    (cond ((null? alist)\n           '())\n          (else (cons (cons (caar alist)\n                            (translate-term (cdar alist)))\n                      (translate-alist (cdr alist))))))\n  \n  (define (apply-subst alist term)\n    (cond ((not (pair? term))\n           (let ((temp-temp (assq term alist)))\n             (if temp-temp\n                 (cdr temp-temp)\n                 term)))\n          (else (cons (car term)\n                      (apply-subst-lst alist (cdr term))))))\n  \n  (define (apply-subst-lst alist lst)\n    (cond ((null? lst)\n           '())\n          (else (cons (apply-subst alist (car lst))\n                      (apply-subst-lst alist (cdr lst))))))\n  \n  (define (tautp x)\n    (tautologyp (rewrite x)\n                '() '()))\n  \n  (define (tautologyp x true-lst false-lst)\n    (cond ((truep x true-lst)\n           #t)\n          ((falsep x false-lst)\n           #f)\n          ((not (pair? x))\n           #f)\n          ((eq? (car x) if-constructor)\n           (cond ((truep (cadr x)\n                         true-lst)\n                  (tautologyp (caddr x)\n                              true-lst false-lst))\n                 ((falsep (cadr x)\n                          false-lst)\n                  (tautologyp (cadddr x)\n                              true-lst false-lst))\n                 (else (and (tautologyp (caddr x)\n                                        (cons (cadr x)\n                                              true-lst)\n                                        false-lst)\n                            (tautologyp (cadddr x)\n                                        true-lst\n                                        (cons (cadr x)\n                                              false-lst))))))\n          (else #f)))\n  \n  (define if-constructor '*) ; becomes (symbol->symbol-record 'if)\n  \n  (define rewrite-count 0) ; sanity check\n  \n  (define (rewrite term)\n    (set! rewrite-count (+ rewrite-count 1))\n    (cond ((not (pair? term))\n           term)\n          (else (rewrite-with-lemmas (cons (car term)\n                                           (rewrite-args (cdr term)))\n                                     (get-lemmas (car term))))))\n  \n  (define (rewrite-args lst)\n    (cond ((null? lst)\n           '())\n          (else (cons (rewrite (car lst))\n                      (rewrite-args (cdr lst))))))\n  \n  (define (rewrite-with-lemmas term lst)\n    (cond ((null? lst)\n           term)\n          ((one-way-unify term (cadr (car lst)))\n           (rewrite (apply-subst unify-subst (caddr (car lst)))))\n          (else (rewrite-with-lemmas term (cdr lst)))))\n  \n  (define unify-subst '*)\n  \n  (define (one-way-unify term1 term2)\n    (begin (set! unify-subst '())\n           (one-way-unify1 term1 term2)))\n  \n  (define (one-way-unify1 term1 term2)\n    (cond ((not (pair? term2))\n           (let ((temp-temp (assq term2 unify-subst)))\n             (cond (temp-temp\n                    (term-equal? term1 (cdr temp-temp)))\n                   ((number? term2)          ; This bug fix makes\n                    (equal? term1 term2))    ; nboyer 10-25% slower!\n                   (else\n                    (set! unify-subst (cons (cons term2 term1)\n                                            unify-subst))\n                    #t))))\n          ((not (pair? term1))\n           #f)\n          ((eq? (car term1)\n                (car term2))\n           (one-way-unify1-lst (cdr term1)\n                               (cdr term2)))\n          (else #f)))\n  \n  (define (one-way-unify1-lst lst1 lst2)\n    (cond ((null? lst1)\n           (null? lst2))\n          ((null? lst2)\n           #f)\n          ((one-way-unify1 (car lst1)\n                           (car lst2))\n           (one-way-unify1-lst (cdr lst1)\n                               (cdr lst2)))\n          (else #f)))\n  \n  (define (falsep x lst)\n    (or (term-equal? x false-term)\n        (term-member? x lst)))\n  \n  (define (truep x lst)\n    (or (term-equal? x true-term)\n        (term-member? x lst)))\n  \n  (define false-term '*)  ; becomes (translate-term '(f))\n  (define true-term '*)   ; becomes (translate-term '(t))\n  \n  ; The next two procedures were in the original benchmark\n  ; but were never used.\n  \n  (define (trans-of-implies n)\n    (translate-term\n     (list (quote implies)\n           (trans-of-implies1 n)\n           (list (quote implies)\n                 0 n))))\n  \n  (define (trans-of-implies1 n)\n    (cond ((equal? n 1)\n           (list (quote implies)\n                 0 1))\n          (else (list (quote and)\n                      (list (quote implies)\n                            (- n 1)\n                            n)\n                      (trans-of-implies1 (- n 1))))))\n  \n  ; Translated terms can be circular structures, which can't be\n  ; compared using Scheme's equal? and member procedures, so we\n  ; use these instead.\n  \n  (define (term-equal? x y)\n    (cond ((pair? x)\n           (and (pair? y)\n                (symbol-record-equal? (car x) (car y))\n                (term-args-equal? (cdr x) (cdr y))))\n          (else (equal? x y))))\n  \n  (define (term-args-equal? lst1 lst2)\n    (cond ((null? lst1)\n           (null? lst2))\n          ((null? lst2)\n           #f)\n          ((term-equal? (car lst1) (car lst2))\n           (term-args-equal? (cdr lst1) (cdr lst2)))\n          (else #f)))\n  \n  (define (term-member? x lst)\n    (cond ((null? lst)\n           #f)\n          ((term-equal? x (car lst))\n           #t)\n          (else (term-member? x (cdr lst)))))\n  \n  (set! setup-boyer\n        (lambda ()\n          (set! *symbol-records-alist* '())\n          (set! if-constructor (symbol->symbol-record 'if))\n          (set! false-term (translate-term '(f)))\n          (set! true-term  (translate-term '(t)))\n          (setup)))\n  \n  (set! test-boyer\n        (lambda (n)\n          (set! rewrite-count 0)\n          (let ((answer (test n)))\n            (write rewrite-count)\n            (display \" rewrites\")\n            (newline)\n            (if answer\n                rewrite-count\n                #f)))))\n\n(should return this list)\n"
+					    ()]]]]]]]]]]]]]]]]]]]]))
+#4 (parsing-benchmark/lambda/lambda/lambda/lambda/lambda
+ 0 #f)
+
+real	0m0.035s
+user	0m0.035s
+sys	0m0.000s
++!CSVLINE!+femtolisp,parsing,CRASHED
+
+Testing peval under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/peval.scm /tmp/larcenous/Femtolisp/peval.scm
+Running...
+Running peval:2000
+Elapsed time: 26.596668004989624 seconds (26.5970000000000013) for peval:2000
++!CSVLINE!+femtolisp-unknown,peval:2000,26.596668004989624
+
+real	0m26.625s
+user	0m26.621s
+sys	0m0.003s
+
+Testing primes under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/primes.scm /tmp/larcenous/Femtolisp/primes.scm
+Running...
+Running primes:1000:10000
+Elapsed time: 12.6288070678710938 seconds (12.6289999999999996) for primes:1000:10000
++!CSVLINE!+femtolisp-unknown,primes:1000:10000,12.6288070678710938
+
+real	0m12.648s
+user	0m12.645s
+sys	0m0.003s
+
+Testing quicksort under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/quicksort.scm /tmp/larcenous/Femtolisp/quicksort.scm
+Running...
+Running quicksort:10000:2500
+Elapsed time: 86.4988110065460205 seconds (86.4989999999999952) for quicksort:10000:2500
++!CSVLINE!+femtolisp-unknown,quicksort:10000:2500,86.4988110065460205
+
+real	1m26.527s
+user	1m26.525s
+sys	0m0.000s
+
+Testing scheme under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/scheme.scm /tmp/larcenous/Femtolisp/scheme.scm
+Running...
+eval: variable char-ci=? has no value
+in file /tmp/larcenous/Femtolisp/scheme.scm
+#0 (lambda)
+
+real	0m0.030s
+user	0m0.030s
+sys	0m0.000s
++!CSVLINE!+femtolisp,scheme,CRASHED
+
+Testing slatex under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/slatex.scm /tmp/larcenous/Femtolisp/slatex.scm
+Running...
+Running slatex:500
+eval: variable string-set! has no value
+in file /tmp/larcenous/Femtolisp/slatex.scm
+#0 (lambda/lambda [0 "                                                                                                                                                                                                        "
+		"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"])
+#1 (lambda/lambda #fn("9000r1e0|e1`332e2e3|e432`c5332e2e3|e632`e7332e2e3|e832`e9332e2e3|e:32`e;43;" [vector-set!
+  slatex.=rtedge string-set! vector-ref slatex.=char #\newline slatex.=space
+  slatex.&void-space slatex.=tab slatex.&void-tab slatex.=notab
+  slatex.&void-notab]))
+#2 (lambda #<io stream>
+  #<io stream>)
+#3 (lambda/lambda/lambda/lambda/lambda/lambda/lambda
+ fwd2 "UNDEFINED")
+#4 (call-with-output-file/lambda
+ #<io stream>)
+#5 (call-with-input-file/lambda
+ #<io stream>)
+#6 (lambda/lambda/lambda/lambda
+ "outputs/z0.tex")
+#7 (lambda/lambda/lambda/lambda/lambda/lambda)
+#8 (call-with-input-file/lambda
+ #<io stream>)
+#9 (lambda "inputs/slatex-data/test")
+
+real	0m0.042s
+user	0m0.041s
+sys	0m0.000s
++!CSVLINE!+femtolisp,slatex,CRASHED
+
+Testing chudnovsky under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/chudnovsky.scm /tmp/larcenous/Femtolisp/chudnovsky.scm
+Running...
+parse-error: read: overflow in numeric constant 314159265358979323846264338327950288419716939937510
+in file /tmp/larcenous/Femtolisp/chudnovsky.scm
+
+real	0m0.021s
+user	0m0.021s
+sys	0m0.000s
++!CSVLINE!+femtolisp,chudnovsky,CRASHED
+
+Testing nboyer under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/nboyer.scm /tmp/larcenous/Femtolisp/nboyer.scm
+Running...
+Running nboyer:5:1
+Elapsed time: 10.9402668476104736 seconds (10.9399999999999995) for nboyer:5:1
++!CSVLINE!+femtolisp-unknown,nboyer:5:1,10.9402668476104736
+
+real	0m10.969s
+user	0m10.945s
+sys	0m0.023s
+
+Testing sboyer under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/sboyer.scm /tmp/larcenous/Femtolisp/sboyer.scm
+Running...
+Running sboyer:5:1
+Elapsed time: 13.6436038017272949 seconds (13.6440000000000001) for sboyer:5:1
++!CSVLINE!+femtolisp-unknown,sboyer:5:1,13.6436038017272949
+
+real	0m13.665s
+user	0m13.651s
+sys	0m0.013s
+
+Testing gcbench under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/gcbench.scm /tmp/larcenous/Femtolisp/gcbench.scm
+Running...
+The garbage collector should touch about 128 megabytes of heap storage.
+The use of more or less memory will skew the results.
+Running gcbench:20:1
+eval: variable define-record-type has no value
+in file /tmp/larcenous/Femtolisp/gcbench.scm
+#0 (gcbench/lambda/lambda/lambda/lambda/lambda
+ 18)
+
+real	0m0.021s
+user	0m0.021s
+sys	0m0.000s
++!CSVLINE!+femtolisp,gcbench,CRASHED
+
+Testing mperm under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/mperm.scm /tmp/larcenous/Femtolisp/mperm.scm
+Running...
+arg-error: apply: too many arguments
+in file /tmp/larcenous/Femtolisp/mperm.scm
+#0 (<= 0 1 2)
+
+real	0m0.024s
+user	0m0.020s
+sys	0m0.003s
++!CSVLINE!+femtolisp,mperm,CRASHED
+
+Testing equal under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/equal.scm /tmp/larcenous/Femtolisp/equal.scm
+Running...
+Running equal:100:100:8:1000:2000:5000
+Elapsed time: 2.9898791313171387 seconds (2.9900000000000002) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+femtolisp-unknown,equal:100:100:8:1000:2000:5000,2.9898791313171387
+
+real	0m3.008s
+user	0m2.744s
+sys	0m0.264s
+
+Testing bv2string under Femtolisp
+Including prelude /home/nex/src/r7rs-benchmarks/src/Femtolisp-prelude.scm
+Compiling...
+femtolisp_comp /tmp/larcenous/Femtolisp/bv2string.scm /tmp/larcenous/Femtolisp/bv2string.scm
+Running...
+Running bv2string:1000:1000:100
+Elapsed time: 9.6372449398040771 seconds (9.6370000000000005) for bv2string:1000:1000:100
++!CSVLINE!+femtolisp-unknown,bv2string:1000:1000:100,9.6372449398040771
+
+real	0m9.655s
+user	0m9.655s
+sys	0m0.000s

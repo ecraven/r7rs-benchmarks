@@ -4,75 +4,37 @@
 
 (import (scheme base) (scheme char) (scheme read) (scheme write) (scheme time))
 
-;;; R6RS procedures needed by this benchmark
-
-(define (div x y)
-  (cond ((and (exact-integer? x)
-              (exact-integer? y)
-              (>= x 0))
-         (quotient x y))
-        ((< y 0)
-         ;; x < 0, y < 0
-         (let* ((q (quotient x y))
-                (r (- x (* q y))))
-           (if (= r 0)
-               q
-               (+ q 1))))
-        (else
-         ;; x < 0, y > 0
-         (let* ((q (quotient x y))
-                (r (- x (* q y))))
-           (if (= r 0)
-               q
-               (- q 1))))))
-
-;;; End of R6RS procedures.
-
-;; Utilities.
-
-(define (width x)
-  (let loop ((i 0) (n 1))
-    (if (< x n) i (loop (+ i 1) (* n 2)))))
-
-(define (root x y)
-  (let loop ((g (expt
-                 2
-                 (div (+ (width x) (- y 1)) y))))
-    (let ((a (expt g (- y 1))))
-      (let ((b (* a y)))
-        (let ((c (* a (- y 1))))
-          (let ((d (div (+ x (* g c)) b)))
-            (if (< d g) (loop d) g)))))))
-
 (define (square-root x)
-  (root x 2))
+  (call-with-values
+   (lambda ()
+     (exact-integer-sqrt x))
+   (lambda (q r)
+     q)))
 
 (define (quartic-root x)
-  (root x 4))
+  (square-root (square-root x)))
 
-;;(define (square x)
-;;  (* x x))
 
-;; Compute pi using the 'brent-salamin' method.
+;;; Compute pi using the 'brent-salamin' method.
 
 (define (pi-brent-salamin nb-digits)
   (let ((one (expt 10 nb-digits)))
     (let loop ((a one)
-               (b (square-root (div (square one) 2)))
-               (t (div one 4))
+               (b (square-root (quotient (square one) 2)))
+               (t (quotient one 4))
                (x 1))
       (if (= a b)
-          (div (square (+ a b)) (* 4 t))
-          (let ((new-a (div (+ a b) 2)))
+          (quotient (square (+ a b)) (* 4 t))
+          (let ((new-a (quotient (+ a b) 2)))
             (loop new-a
                   (square-root (* a b))
                   (- t
-                     (div
+                     (quotient
                       (* x (square (- new-a a)))
                       one))
                   (* 2 x)))))))
 
-;; Compute pi using the quadratically converging 'borwein' method.
+;;; Compute pi using the quadratically converging 'borwein' method.
 
 (define (pi-borwein2 nb-digits)
   (let* ((one (expt 10 nb-digits))
@@ -80,25 +42,25 @@
          (one^4 (square one^2))
          (sqrt2 (square-root (* one^2 2)))
          (qurt2 (quartic-root (* one^4 2))))
-    (let loop ((x (div
+    (let loop ((x (quotient
                    (* one (+ sqrt2 one))
                    (* 2 qurt2)))
                (y qurt2)
                (p (+ (* 2 one) sqrt2)))
-      (let ((new-p (div (* p (+ x one))
-                        (+ y one))))
+      (let ((new-p (quotient (* p (+ x one))
+                             (+ y one))))
         (if (= x one)
             new-p
             (let ((sqrt-x (square-root (* one x))))
-              (loop (div
+              (loop (quotient
                      (* one (+ x one))
                      (* 2 sqrt-x))
-                    (div
+                    (quotient
                      (* one (+ (* x y) one^2))
                      (* (+ y one) sqrt-x))
                     new-p)))))))
 
-;; Compute pi using the quartically converging 'borwein' method.
+;;; Compute pi using the quartically converging 'borwein' method.
 
 (define (pi-borwein4 nb-digits)
   (let* ((one (expt 10 nb-digits))
@@ -109,24 +71,24 @@
                (a (- (* 6 one) (* 4 sqrt2)))
                (x 8))
       (if (= y 0)
-          (div one^2 a)
+          (quotient one^2 a)
           (let* ((t1 (quartic-root (- one^4 (square (square y)))))
-                 (t2 (div
+                 (t2 (quotient
                       (* one (- one t1))
                       (+ one t1)))
-                 (t3 (div
-                      (square (div (square (+ one t2)) one))
+                 (t3 (quotient
+                      (square (quotient (square (+ one t2)) one))
                       one))
                  (t4 (+ one
                         (+ t2
-                           (div (square t2) one)))))
+                           (quotient (square t2) one)))))
             (loop t2
-                  (div
+                  (quotient
                    (- (* t3 a) (* x (* t2 t4)))
                    one)
                   (* 4 x)))))))
 
-;; Try it.
+;;; Try it.
 
 (define (pies n m s)
   (if (< m n)

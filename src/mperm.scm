@@ -137,7 +137,8 @@
            (positive? n)
            (positive? k)
            (<= 0 ell k))
-      (let ((id (string-append "perm"
+      (let ((id (string-append "mperm:"
+		
                                (number->string m)
                                ":"
                                (number->string n)
@@ -203,7 +204,7 @@
          (s3 (number->string input3))
          (s2 (number->string input2))
          (s1 (number->string input1))
-         (name "perm"))
+         (name "mperm"))
     (MpermNKL-benchmark (hide input1 input1)
                         (hide input1 input2)
                         (hide input1 input3)
