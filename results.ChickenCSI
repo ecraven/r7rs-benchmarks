@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking ChickenCSI on Tue 12 Sep 23:00:23 CEST 2017 under Linux nexion 4.12.12-1-ARCH #1 SMP PREEMPT Sun Sep 10 09:41:14 CEST 2017 x86_64 GNU/Linux
+Benchmarking ChickenCSI on Wed 28 Feb 12:35:22 CET 2018 under Linux nexion 4.14.15-1-ARCH #1 SMP PREEMPT Tue Jan 23 21:49:25 UTC 2018 x86_64 GNU/Linux
 
 Testing browse under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -11,9 +11,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/browse.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -21,13 +21,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running browse:2000
-Elapsed time: 173.841 seconds (174.0) for browse:2000
-+!CSVLINE!+chickencsi-4.12.0,browse:2000,173.841
+Elapsed time: 202.543 seconds (202.0) for browse:2000
++!CSVLINE!+chickencsi-4.13.0,browse:2000,202.543
 
 
-real	2m53.871s
-user	2m52.066s
-sys	0m1.800s
+real	3m22.575s
+user	3m20.077s
+sys	0m2.494s
 
 Testing deriv under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -38,9 +38,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/deriv.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -48,13 +48,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running deriv:10000000
-Elapsed time: 113.724 seconds (113.0) for deriv:10000000
-+!CSVLINE!+chickencsi-4.12.0,deriv:10000000,113.724
+Elapsed time: 132.308 seconds (133.0) for deriv:10000000
++!CSVLINE!+chickencsi-4.13.0,deriv:10000000,132.308
 
 
-real	1m53.731s
-user	1m53.294s
-sys	0m0.433s
+real	2m12.314s
+user	2m11.682s
+sys	0m0.630s
 
 Testing destruc under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -65,9 +65,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/destruc.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -75,13 +75,12 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running destruc:600:50:4000
-Elapsed time: 261.515 seconds (262.0) for destruc:600:50:4000
-+!CSVLINE!+chickencsi-4.12.0,destruc:600:50:4000,261.515
+./bench: line 370: 19456 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-
-real	4m21.527s
-user	4m20.269s
-sys	0m1.250s
+real	5m0.001s
+user	4m58.065s
+sys	0m1.933s
++!CSVLINE!+chickencsi,destruc,ULIMITKILLED
 
 Testing diviter under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -92,9 +91,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/diviter.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -102,13 +101,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running diviter:1000:1000000
-Elapsed time: 141.786 seconds (142.0) for diviter:1000:1000000
-+!CSVLINE!+chickencsi-4.12.0,diviter:1000:1000000,141.786
+Elapsed time: 166.349 seconds (166.0) for diviter:1000:1000000
++!CSVLINE!+chickencsi-4.13.0,diviter:1000:1000000,166.349
 
 
-real	2m21.794s
-user	2m20.897s
-sys	0m0.894s
+real	2m46.358s
+user	2m45.072s
+sys	0m1.283s
 
 Testing divrec under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -119,9 +118,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/divrec.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -129,13 +128,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running divrec:1000:1000000
-Elapsed time: 196.125 seconds (196.0) for divrec:1000:1000000
-+!CSVLINE!+chickencsi-4.12.0,divrec:1000:1000000,196.125
+Elapsed time: 227.188 seconds (227.0) for divrec:1000:1000000
++!CSVLINE!+chickencsi-4.13.0,divrec:1000:1000000,227.188
 
 
-real	3m16.136s
-user	3m15.334s
-sys	0m0.797s
+real	3m47.196s
+user	3m45.895s
+sys	0m1.297s
 
 Testing puzzle under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -146,9 +145,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/puzzle.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -156,11 +155,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running puzzle:1000
-./bench: line 370: 20244 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 19689 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.003s
-user	4m57.916s
-sys	0m2.080s
+real	5m0.001s
+user	4m57.657s
+sys	0m2.340s
 +!CSVLINE!+chickencsi,puzzle,ULIMITKILLED
 
 Testing triangl under ChickenCSI
@@ -172,9 +171,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/triangl.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -182,13 +181,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running triangl:22:1:50
-Elapsed time: 205.862 seconds (206.0) for triangl:22:1:50
-+!CSVLINE!+chickencsi-4.12.0,triangl:22:1:50,205.862
+Elapsed time: 243.228 seconds (244.0) for triangl:22:1:50
++!CSVLINE!+chickencsi-4.13.0,triangl:22:1:50,243.228
 
 
-real	3m25.874s
-user	3m24.078s
-sys	0m1.790s
+real	4m3.259s
+user	4m0.949s
+sys	0m2.280s
 
 Testing tak under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -199,9 +198,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/tak.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -209,8 +208,8 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running tak:40:20:11:1
-Elapsed time: 195.897 seconds (196.0) for tak:40:20:11:1
-+!CSVLINE!+chickencsi-4.12.0,tak:40:20:11:1,195.897
+Elapsed time: 231.334 seconds (231.0) for tak:40:20:11:1
++!CSVLINE!+chickencsi-4.13.0,tak:40:20:11:1,231.334
 10
 32
 16
@@ -223,9 +222,9 @@ Elapsed time: 195.897 seconds (196.0) for tak:40:20:11:1
 7
 
 
-real	3m15.904s
-user	3m14.660s
-sys	0m1.240s
+real	3m51.339s
+user	3m49.516s
+sys	0m1.820s
 
 Testing takl under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -236,9 +235,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/takl.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -246,11 +245,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running takl:40:20:12:1
-./bench: line 370: 20326 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 19836 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.001s
-user	4m58.011s
-sys	0m1.983s
+real	5m0.008s
+user	4m57.602s
+sys	0m2.400s
 +!CSVLINE!+chickencsi,takl,ULIMITKILLED
 
 Testing ntakl under ChickenCSI
@@ -262,9 +261,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/ntakl.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -272,11 +271,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running ntakl:40:20:12:1
-./bench: line 370: 20360 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 19910 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
 real	5m0.003s
-user	4m57.972s
-sys	0m2.023s
+user	4m57.456s
+sys	0m2.543s
 +!CSVLINE!+chickencsi,ntakl,ULIMITKILLED
 
 Testing cpstak under ChickenCSI
@@ -288,9 +287,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/cpstak.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -298,11 +297,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running cpstak:40:20:11:1
-./bench: line 370: 20394 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 19947 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.146s
-sys	0m0.850s
+real	5m0.002s
+user	4m59.022s
+sys	0m0.977s
 +!CSVLINE!+chickencsi,cpstak,ULIMITKILLED
 
 Testing ctak under ChickenCSI
@@ -314,9 +313,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/ctak.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -324,8 +323,8 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running ctak:32:16:8:1
-Elapsed time: 68.497 seconds (68.0) for ctak:32:16:8:1
-+!CSVLINE!+chickencsi-4.12.0,ctak:32:16:8:1,68.497
+Elapsed time: 73.953 seconds (74.0) for ctak:32:16:8:1
++!CSVLINE!+chickencsi-4.13.0,ctak:32:16:8:1,73.953
 160
 18
 12
@@ -333,9 +332,9 @@ Elapsed time: 68.497 seconds (68.0) for ctak:32:16:8:1
 7
 
 
-real	1m8.509s
-user	1m8.344s
-sys	0m0.164s
+real	1m13.959s
+user	1m13.792s
+sys	0m0.167s
 
 Testing fib under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -346,9 +345,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/fib.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -356,11 +355,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running fib:40:5
-./bench: line 370: 20439 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 20021 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.001s
-user	4m58.070s
-sys	0m1.923s
+real	5m0.002s
+user	4m57.705s
+sys	0m2.293s
 +!CSVLINE!+chickencsi,fib,ULIMITKILLED
 
 Testing fibc under ChickenCSI
@@ -372,9 +371,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/fibc.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -382,13 +381,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running fibc:30:10
-Elapsed time: 65.918 seconds (66.0) for fibc:30:10
-+!CSVLINE!+chickencsi-4.12.0,fibc:30:10,65.918
+Elapsed time: 77.244 seconds (77.0) for fibc:30:10
++!CSVLINE!+chickencsi-4.13.0,fibc:30:10,77.244
 
 
-real	1m5.926s
-user	1m4.684s
-sys	0m1.240s
+real	1m17.250s
+user	1m15.708s
+sys	0m1.540s
 
 Testing fibfp under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -399,9 +398,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/fibfp.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -409,13 +408,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running fibfp:35.0:10
-Elapsed time: 64.482 seconds (65.0) for fibfp:35.0:10
-+!CSVLINE!+chickencsi-4.12.0,fibfp:35.0:10,64.482
+Elapsed time: 75.122 seconds (75.0) for fibfp:35.0:10
++!CSVLINE!+chickencsi-4.13.0,fibfp:35.0:10,75.122
 
 
-real	1m4.494s
-user	1m4.169s
-sys	0m0.324s
+real	1m15.127s
+user	1m14.566s
+sys	0m0.560s
 
 Testing sum under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -426,9 +425,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/sum.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -436,11 +435,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running sum:10000:200000
-./bench: line 370: 20502 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 20076 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.004s
-user	4m57.891s
-sys	0m2.103s
+real	5m0.003s
+user	4m57.448s
+sys	0m2.550s
 +!CSVLINE!+chickencsi,sum,ULIMITKILLED
 
 Testing sumfp under ChickenCSI
@@ -452,9 +451,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/sumfp.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -462,13 +461,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running sumfp:1000000.0:500
-Elapsed time: 120.348 seconds (120.0) for sumfp:1000000.0:500
-+!CSVLINE!+chickencsi-4.12.0,sumfp:1000000.0:500,120.348
+Elapsed time: 145.653 seconds (146.0) for sumfp:1000000.0:500
++!CSVLINE!+chickencsi-4.13.0,sumfp:1000000.0:500,145.653
 
 
-real	2m0.357s
-user	1m59.584s
-sys	0m0.770s
+real	2m25.660s
+user	2m24.565s
+sys	0m1.093s
 
 Testing fft under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -479,9 +478,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/fft.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -489,13 +488,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running fft:65536:100
-Elapsed time: 78.156 seconds (78.0) for fft:65536:100
-+!CSVLINE!+chickencsi-4.12.0,fft:65536:100,78.156
+Elapsed time: 90.509 seconds (91.0) for fft:65536:100
++!CSVLINE!+chickencsi-4.13.0,fft:65536:100,90.509
 
 
-real	1m18.171s
-user	1m17.762s
-sys	0m0.407s
+real	1m30.523s
+user	1m29.988s
+sys	0m0.528s
 
 Testing mbrot under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -506,9 +505,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/mbrot.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -516,13 +515,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running mbrot:75:1000
-Elapsed time: 152.962 seconds (153.0) for mbrot:75:1000
-+!CSVLINE!+chickencsi-4.12.0,mbrot:75:1000,152.962
+Elapsed time: 178.896 seconds (178.0) for mbrot:75:1000
++!CSVLINE!+chickencsi-4.13.0,mbrot:75:1000,178.896
 
 
-real	2m32.971s
-user	2m31.957s
-sys	0m1.010s
+real	2m58.903s
+user	2m57.637s
+sys	0m1.263s
 
 Testing mbrotZ under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -533,9 +532,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/mbrotZ.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -565,9 +564,9 @@ Error: unbound variable: -1.0-0.5i
 	<eval>	  [test] (>= i 0)
 	<eval>	  [test] (mbrot matrix -1.0-0.5i 0.005 n)	<--
 
-real	0m0.009s
-user	0m0.009s
-sys	0m0.000s
+real	0m0.006s
+user	0m0.002s
+sys	0m0.004s
 +!CSVLINE!+chickencsi,mbrotZ,CRASHED
 
 Testing nucleic under ChickenCSI
@@ -579,9 +578,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/nucleic.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -589,13 +588,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running nucleic:50
-Elapsed time: 75.282 seconds (76.0) for nucleic:50
-+!CSVLINE!+chickencsi-4.12.0,nucleic:50,75.282
+Elapsed time: 86.901 seconds (86.0) for nucleic:50
++!CSVLINE!+chickencsi-4.13.0,nucleic:50,86.901
 
 
-real	1m15.331s
-user	1m14.922s
-sys	0m0.407s
+real	1m26.943s
+user	1m26.272s
+sys	0m0.670s
 
 Testing pi under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -606,9 +605,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/pi.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -638,8 +637,8 @@ Error: unbound variable: exact-integer-sqrt
 	<eval>	  [square-root] (call-with-values (lambda () (exact-integer-sqrt x)) (lambda (q r) q))
 	<eval>	  [square-root] (exact-integer-sqrt x)	<--
 
-real	0m0.013s
-user	0m0.013s
+real	0m0.008s
+user	0m0.007s
 sys	0m0.000s
 +!CSVLINE!+chickencsi,pi,CRASHED
 
@@ -652,9 +651,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/pnpoly.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -662,13 +661,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running pnpoly:1000000
-Elapsed time: 226.192 seconds (226.0) for pnpoly:1000000
-+!CSVLINE!+chickencsi-4.12.0,pnpoly:1000000,226.192
+Elapsed time: 263.873 seconds (264.0) for pnpoly:1000000
++!CSVLINE!+chickencsi-4.13.0,pnpoly:1000000,263.873
 
 
-real	3m46.205s
-user	3m44.740s
-sys	0m1.460s
+real	4m23.879s
+user	4m21.906s
+sys	0m1.970s
 
 Testing ray under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -679,9 +678,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/ray.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -689,13 +688,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running ray:50
-Elapsed time: 81.594 seconds (81.0) for ray:50
-+!CSVLINE!+chickencsi-4.12.0,ray:50,81.594
+Elapsed time: 95.473 seconds (96.0) for ray:50
++!CSVLINE!+chickencsi-4.13.0,ray:50,95.473
 
 
-real	1m21.610s
-user	1m21.071s
-sys	0m0.537s
+real	1m35.482s
+user	1m34.145s
+sys	0m0.747s
 
 Testing simplex under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -706,9 +705,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/simplex.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -716,13 +715,12 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running simplex:1000000
-Elapsed time: 276.35 seconds (277.0) for simplex:1000000
-+!CSVLINE!+chickencsi-4.12.0,simplex:1000000,276.35
+./bench: line 370: 20293 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-
-real	4m36.366s
-user	4m35.052s
-sys	0m1.307s
+real	5m0.002s
+user	4m58.292s
+sys	0m1.707s
++!CSVLINE!+chickencsi,simplex,ULIMITKILLED
 
 Testing ack under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -733,9 +731,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/ack.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -743,11 +741,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running ack:3:12:2
-./bench: line 370: 23674 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 20324 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.001s
-user	4m57.510s
-sys	0m2.483s
+real	5m0.002s
+user	4m57.105s
+sys	0m2.893s
 +!CSVLINE!+chickencsi,ack,ULIMITKILLED
 
 Testing array1 under ChickenCSI
@@ -759,9 +757,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/array1.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -769,11 +767,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running array1:1000000:500
-./bench: line 370: 23708 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 20381 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.004s
-user	4m57.919s
-sys	0m2.077s
+real	5m0.001s
+user	4m57.433s
+sys	0m2.560s
 +!CSVLINE!+chickencsi,array1,ULIMITKILLED
 
 Testing string under ChickenCSI
@@ -785,9 +783,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/string.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -795,13 +793,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running string:500000:25
-Elapsed time: 0.232 seconds (0.0) for string:500000:25
-+!CSVLINE!+chickencsi-4.12.0,string:500000:25,0.232
+Elapsed time: 0.272 seconds (0.0) for string:500000:25
++!CSVLINE!+chickencsi-4.13.0,string:500000:25,0.272
 
 
-real	0m0.242s
-user	0m0.238s
-sys	0m0.004s
+real	0m0.279s
+user	0m0.268s
+sys	0m0.010s
 
 Testing sum1 under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -812,9 +810,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/sum1.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -822,13 +820,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running sum1:25
-Elapsed time: 5.234 seconds (5.0) for sum1:25
-+!CSVLINE!+chickencsi-4.12.0,sum1:25,5.234
+Elapsed time: 5.919 seconds (6.0) for sum1:25
++!CSVLINE!+chickencsi-4.13.0,sum1:25,5.919
 
 
-real	0m5.244s
-user	0m5.164s
-sys	0m0.080s
+real	0m5.925s
+user	0m5.864s
+sys	0m0.060s
 
 Testing cat under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -839,9 +837,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/cat.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -849,13 +847,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running cat:50
-Elapsed time: 62.386 seconds (63.0) for cat:50
-+!CSVLINE!+chickencsi-4.12.0,cat:50,62.386
+Elapsed time: 76.395 seconds (76.0) for cat:50
++!CSVLINE!+chickencsi-4.13.0,cat:50,76.395
 
 
-real	1m2.396s
-user	1m1.823s
-sys	0m0.567s
+real	1m16.401s
+user	1m15.448s
+sys	0m0.893s
 
 Testing tail under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -866,9 +864,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/tail.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -898,9 +896,9 @@ Error: (write-string) bad argument type - not a fixnum: #<output port "outputs/t
 	<eval>	  [tail-r-aux] (eof-object? x)
 	<eval>	  [echo-lines-in-reverse-order] (write-string line out)	<--
 
-real	0m0.048s
-user	0m0.043s
-sys	0m0.005s
+real	0m0.081s
+user	0m0.070s
+sys	0m0.003s
 +!CSVLINE!+chickencsi,tail,CRASHED
 
 Testing wc under ChickenCSI
@@ -912,9 +910,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/wc.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -922,13 +920,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running wc:inputs/bib:50
-Elapsed time: 161.892 seconds (162.0) for wc:inputs/bib:50
-+!CSVLINE!+chickencsi-4.12.0,wc:inputs/bib:50,161.892
+Elapsed time: 193.574 seconds (193.0) for wc:inputs/bib:50
++!CSVLINE!+chickencsi-4.13.0,wc:inputs/bib:50,193.574
 
 
-real	2m41.902s
-user	2m39.407s
-sys	0m2.490s
+real	3m13.581s
+user	3m9.169s
+sys	0m4.407s
 
 Testing read1 under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -939,9 +937,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/read1.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -949,13 +947,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running read1:2500
-Elapsed time: 9.466 seconds (9.0) for read1:2500
-+!CSVLINE!+chickencsi-4.12.0,read1:2500,9.466
+Elapsed time: 10.592 seconds (11.0) for read1:2500
++!CSVLINE!+chickencsi-4.13.0,read1:2500,10.592
 
 
-real	0m9.476s
-user	0m9.452s
-sys	0m0.024s
+real	0m10.597s
+user	0m10.566s
+sys	0m0.030s
 
 Testing compiler under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -966,9 +964,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/compiler.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -976,13 +974,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running compiler:2000
-Elapsed time: 211.273 seconds (212.0) for compiler:2000
-+!CSVLINE!+chickencsi-4.12.0,compiler:2000,211.273
+Elapsed time: 232.104 seconds (232.0) for compiler:2000
++!CSVLINE!+chickencsi-4.13.0,compiler:2000,232.104
 
 
-real	3m31.517s
-user	3m31.011s
-sys	0m0.500s
+real	3m52.412s
+user	3m51.765s
+sys	0m0.640s
 
 Testing conform under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -993,9 +991,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/conform.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1003,11 +1001,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running conform:500
-./bench: line 370: 23834 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 21125 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.002s
-user	4m57.619s
-sys	0m2.373s
+real	5m5.168s
+user	4m56.719s
+sys	0m3.273s
 +!CSVLINE!+chickencsi,conform,ULIMITKILLED
 
 Testing dynamic under ChickenCSI
@@ -1019,9 +1017,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/dynamic.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1029,13 +1027,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running dynamic:500
-Elapsed time: 76.593 seconds (76.0) for dynamic:500
-+!CSVLINE!+chickencsi-4.12.0,dynamic:500,76.593
+Elapsed time: 88.68 seconds (89.0) for dynamic:500
++!CSVLINE!+chickencsi-4.13.0,dynamic:500,88.68
 
 
-real	1m16.640s
-user	1m15.904s
-sys	0m0.733s
+real	1m28.743s
+user	1m28.150s
+sys	0m0.583s
 
 Testing earley under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1046,9 +1044,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/earley.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1056,12 +1054,30 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running earley:1
-./bench: line 370: 23879 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+[panic] out of memory - heap has reached its maximum size - execution terminated
 
-real	5m0.005s
-user	4m57.640s
-sys	0m2.357s
-+!CSVLINE!+chickencsi,earley,ULIMITKILLED
+...more...
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval>
+<eval> 	<--
+
+real	4m55.811s
+user	4m54.563s
+sys	0m1.225s
++!CSVLINE!+chickencsi,earley,CRASHED
 
 Testing graphs under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1072,9 +1088,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/graphs.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1084,11 +1100,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 
 Note: assignment to imported value binding: vector-fold
 Running graphs:7:3
-./bench: line 370: 23913 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 21865 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.001s
-user	4m59.273s
-sys	0m0.720s
+real	5m0.003s
+user	4m59.031s
+sys	0m0.963s
 +!CSVLINE!+chickencsi,graphs,ULIMITKILLED
 
 Testing lattice under ChickenCSI
@@ -1100,9 +1116,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/lattice.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1110,11 +1126,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running lattice:44:10
-./bench: line 370: 23949 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 22015 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.003s
-user	4m58.575s
-sys	0m1.420s
+real	5m0.020s
+user	4m58.301s
+sys	0m1.693s
 +!CSVLINE!+chickencsi,lattice,ULIMITKILLED
 
 Testing matrix under ChickenCSI
@@ -1126,9 +1142,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/matrix.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1136,11 +1152,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running matrix:5:5:2500
-./bench: line 370: 23982 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 22213 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.001s
-user	4m58.666s
-sys	0m1.327s
+real	5m0.030s
+user	4m58.326s
+sys	0m1.667s
 +!CSVLINE!+chickencsi,matrix,ULIMITKILLED
 
 Testing maze under ChickenCSI
@@ -1152,9 +1168,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/maze.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1162,13 +1178,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running maze:20:7:10000
-Elapsed time: 114.747 seconds (115.0) for maze:20:7:10000
-+!CSVLINE!+chickencsi-4.12.0,maze:20:7:10000,114.747
+Elapsed time: 143.757 seconds (144.0) for maze:20:7:10000
++!CSVLINE!+chickencsi-4.13.0,maze:20:7:10000,143.757
 
 
-real	1m54.774s
-user	1m53.478s
-sys	0m1.293s
+real	2m23.778s
+user	2m21.465s
+sys	0m2.300s
 
 Testing mazefun under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1179,9 +1195,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/mazefun.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1189,13 +1205,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running mazefun:11:11:10000
-Elapsed time: 213.926 seconds (214.0) for mazefun:11:11:10000
-+!CSVLINE!+chickencsi-4.12.0,mazefun:11:11:10000,213.926
+Elapsed time: 281.059 seconds (281.0) for mazefun:11:11:10000
++!CSVLINE!+chickencsi-4.13.0,mazefun:11:11:10000,281.059
 
 
-real	3m33.940s
-user	3m32.701s
-sys	0m1.233s
+real	4m41.067s
+user	4m38.727s
+sys	0m2.280s
 
 Testing nqueens under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1206,9 +1222,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/nqueens.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1216,11 +1232,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running nqueens:13:10
-./bench: line 370: 24074 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 22579 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.002s
-user	4m58.184s
-sys	0m1.810s
+real	5m0.036s
+user	4m57.782s
+sys	0m2.210s
 +!CSVLINE!+chickencsi,nqueens,ULIMITKILLED
 
 Testing paraffins under ChickenCSI
@@ -1232,9 +1248,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/paraffins.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1242,16 +1258,16 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running paraffins:23:10
-Elapsed time: 74.957 seconds (75.0) for paraffins:23:10
-+!CSVLINE!+chickencsi-4.12.0,paraffins:23:10,74.957
+Elapsed time: 93.016 seconds (93.0) for paraffins:23:10
++!CSVLINE!+chickencsi-4.13.0,paraffins:23:10,93.016
 5
 24
 14490245
 
 
-real	1m14.974s
-user	1m14.194s
-sys	0m0.777s
+real	1m33.053s
+user	1m30.924s
+sys	0m2.127s
 
 Testing parsing under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1262,9 +1278,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/parsing.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1272,13 +1288,12 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running parsing:2500
-Elapsed time: 237.106 seconds (237.0) for parsing:2500
-+!CSVLINE!+chickencsi-4.12.0,parsing:2500,237.106
+./bench: line 370: 23017 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-
-real	3m57.144s
-user	3m55.870s
-sys	0m1.267s
+real	5m0.001s
+user	4m57.865s
+sys	0m2.130s
++!CSVLINE!+chickencsi,parsing,ULIMITKILLED
 
 Testing peval under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1289,9 +1304,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/peval.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1299,13 +1314,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running peval:2000
-Elapsed time: 202.565 seconds (203.0) for peval:2000
-+!CSVLINE!+chickencsi-4.12.0,peval:2000,202.565
+Elapsed time: 270.636 seconds (271.0) for peval:2000
++!CSVLINE!+chickencsi-4.13.0,peval:2000,270.636
 
 
-real	3m22.594s
-user	3m20.861s
-sys	0m1.727s
+real	4m30.661s
+user	4m27.784s
+sys	0m2.863s
 
 Testing primes under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1316,9 +1331,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/primes.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1326,13 +1341,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running primes:1000:10000
-Elapsed time: 76.991 seconds (77.0) for primes:1000:10000
-+!CSVLINE!+chickencsi-4.12.0,primes:1000:10000,76.991
+Elapsed time: 100.818 seconds (100.0) for primes:1000:10000
++!CSVLINE!+chickencsi-4.13.0,primes:1000:10000,100.818
 
 
-real	1m17.001s
-user	1m16.492s
-sys	0m0.507s
+real	1m40.824s
+user	1m40.175s
+sys	0m0.647s
 
 Testing quicksort under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1343,9 +1358,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/quicksort.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1353,11 +1368,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running quicksort:10000:2500
-./bench: line 370: 24190 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 23480 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-real	5m0.001s
-user	4m57.709s
-sys	0m2.283s
+real	5m0.036s
+user	4m57.258s
+sys	0m2.733s
 +!CSVLINE!+chickencsi,quicksort,ULIMITKILLED
 
 Testing scheme under ChickenCSI
@@ -1369,9 +1384,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/scheme.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1379,13 +1394,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running scheme:100000
-Elapsed time: 173.246 seconds (173.0) for scheme:100000
-+!CSVLINE!+chickencsi-4.12.0,scheme:100000,173.246
+Elapsed time: 219.051 seconds (220.0) for scheme:100000
++!CSVLINE!+chickencsi-4.13.0,scheme:100000,219.051
 
 
-real	2m53.280s
-user	2m50.398s
-sys	0m2.877s
+real	3m39.078s
+user	3m36.385s
+sys	0m2.670s
 
 Testing slatex under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1396,9 +1411,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/slatex.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1406,13 +1421,13 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running slatex:500
-Elapsed time: 34.054 seconds (34.0) for slatex:500
-+!CSVLINE!+chickencsi-4.12.0,slatex:500,34.054
+Elapsed time: 40.935 seconds (41.0) for slatex:500
++!CSVLINE!+chickencsi-4.13.0,slatex:500,40.935
 
 
-real	0m34.102s
-user	0m32.541s
-sys	0m1.387s
+real	0m40.977s
+user	0m39.152s
+sys	0m1.696s
 
 Testing chudnovsky under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1423,9 +1438,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/chudnovsky.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1455,9 +1470,9 @@ Error: unbound variable: exact-integer-sqrt
 	<eval>	  [integer-sqrt] (call-with-values (lambda () (exact-integer-sqrt x)) (lambda (q r) q))
 	<eval>	  [integer-sqrt] (exact-integer-sqrt x)	<--
 
-real	0m0.009s
+real	0m0.006s
 user	0m0.006s
-sys	0m0.003s
+sys	0m0.000s
 +!CSVLINE!+chickencsi,chudnovsky,CRASHED
 
 Testing nboyer under ChickenCSI
@@ -1469,9 +1484,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/nboyer.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1479,8 +1494,8 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running nboyer:5:1
-Elapsed time: 130.964 seconds (131.0) for nboyer:5:1
-+!CSVLINE!+chickencsi-4.12.0,nboyer:5:1,130.964
+Elapsed time: 149.836 seconds (149.0) for nboyer:5:1
++!CSVLINE!+chickencsi-4.13.0,nboyer:5:1,149.836
 16445406
 1
 4
@@ -1488,9 +1503,9 @@ Elapsed time: 130.964 seconds (131.0) for nboyer:5:1
 51507739
 
 
-real	2m11.005s
-user	2m10.271s
-sys	0m0.730s
+real	2m29.891s
+user	2m28.985s
+sys	0m0.870s
 
 Testing sboyer under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1501,9 +1516,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/sboyer.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1511,14 +1526,14 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running sboyer:5:1
-Elapsed time: 150.037 seconds (150.0) for sboyer:5:1
-+!CSVLINE!+chickencsi-4.12.0,sboyer:5:1,150.037
+Elapsed time: 173.522 seconds (174.0) for sboyer:5:1
++!CSVLINE!+chickencsi-4.13.0,sboyer:5:1,173.522
 16445406
 
 
-real	2m30.081s
-user	2m29.381s
-sys	0m0.696s
+real	2m53.569s
+user	2m52.577s
+sys	0m0.987s
 
 Testing gcbench under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1529,9 +1544,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/gcbench.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1573,13 +1588,13 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 61.112 seconds (61.0) for gcbench:20:1
-+!CSVLINE!+chickencsi-4.12.0,gcbench:20:1,61.112
+Elapsed time: 70.13 seconds (70.0) for gcbench:20:1
++!CSVLINE!+chickencsi-4.13.0,gcbench:20:1,70.13
 
 
-real	1m1.130s
-user	1m0.712s
-sys	0m0.416s
+real	1m10.139s
+user	1m9.541s
+sys	0m0.596s
 
 Testing mperm under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1590,9 +1605,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/mperm.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1600,13 +1615,12 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running mperm:20:10:2:1
-Elapsed time: 274.83 seconds (275.0) for mperm:20:10:2:1
-+!CSVLINE!+chickencsi-4.12.0,mperm:20:10:2:1,274.83
+./bench: line 370: 25185 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
-
-real	4m52.583s
-user	4m51.011s
-sys	0m1.563s
+real	5m0.173s
+user	4m57.818s
+sys	0m2.207s
++!CSVLINE!+chickencsi,mperm,ULIMITKILLED
 
 Testing equal under ChickenCSI
 Including prelude /home/nex/src/r7rs-benchmarks/src/ChickenCSI-prelude.scm
@@ -1617,9 +1631,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/equal.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1627,11 +1641,11 @@ compiled 2017-02-19 on yves.more-magic.net (Linux)
 ; loading /usr/lib/chicken/8/data-structures.import.so ...
 ; loading /usr/lib/chicken/8/vector-lib.so ...
 Running equal:100:100:8:1000:2000:5000
-./bench: line 370: 24348 Killed                  ${CHICKEN_CSI} "$1" < "$2"
+./bench: line 370: 25379 Killed                  ${CHICKEN_CSI} "$1" < "$2"
 
 real	5m0.001s
-user	4m59.990s
-sys	0m0.004s
+user	4m59.988s
+sys	0m0.007s
 +!CSVLINE!+chickencsi,equal,ULIMITKILLED
 
 Testing bv2string under ChickenCSI
@@ -1643,9 +1657,9 @@ Running...
 CHICKEN
 (c) 2008-2017, The CHICKEN Team
 (c) 2000-2007, Felix L. Winkelmann
-Version 4.12.0 (rev 6ea24b6)
+Version 4.13.0 (rev 68eeaaef)
 linux-unix-gnu-x86-64 [ 64bit manyargs dload ptables ]
-compiled 2017-02-19 on yves.more-magic.net (Linux)
+compiled 2017-12-11 on yves.more-magic.net (Linux)
 
 ; loading /tmp/larcenous/ChickenCSI/bv2string.scm ...
 ; loading /usr/lib/chicken/8/vector-lib.import.so ...
@@ -1675,7 +1689,7 @@ Error: unbound variable: make-bytevector
 	<eval>	  [random1477] (quotient x 8)
 	<eval>	  [random-bytevector] (make-bytevector n)	<--
 
-real	0m0.012s
-user	0m0.012s
+real	0m0.006s
+user	0m0.006s
 sys	0m0.000s
 +!CSVLINE!+chickencsi,bv2string,CRASHED

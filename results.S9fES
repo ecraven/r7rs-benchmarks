@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking S9fES on Wed 13 Sep 11:35:27 CEST 2017 under Linux nexion 4.12.12-1-ARCH #1 SMP PREEMPT Sun Sep 10 09:41:14 CEST 2017 x86_64 GNU/Linux
+Benchmarking S9fES on Wed 28 Feb 18:43:44 CET 2018 under Linux nexion 4.14.15-1-ARCH #1 SMP PREEMPT Tue Jan 23 21:49:25 UTC 2018 x86_64 GNU/Linux
 
 Testing browse under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -8,11 +8,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/browse.scm /tmp/larcenous/S9fES/browse.scm
 Running...
 Running browse:2000
-Elapsed time: 276.27 seconds (276.27) for browse:2000
-+!CSVLINE!+s9fes-unknown,browse:2000,276.27
+Elapsed time: 255.23 seconds (255.23) for browse:2000
++!CSVLINE!+s9fes-unknown,browse:2000,255.23
 
-real	4m36.452s
-user	4m36.435s
+real	4m15.405s
+user	4m15.392s
 sys	0m0.003s
 
 Testing deriv under S9fES
@@ -21,11 +21,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/deriv.scm /tmp/larcenous/S9fES/deriv.scm
 Running...
 Running deriv:10000000
-./bench: line 413: 20876 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  1123 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.988s
-sys	0m0.007s
+real	5m0.007s
+user	4m59.997s
+sys	0m0.000s
 +!CSVLINE!+s9fes,deriv,ULIMITKILLED
 
 Testing destruc under S9fES
@@ -34,11 +34,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/destruc.scm /tmp/larcenous/S9fES/destruc.scm
 Running...
 Running destruc:600:50:4000
-./bench: line 413: 20910 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  1294 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
+real	5m0.004s
 user	4m59.995s
-sys	0m0.000s
+sys	0m0.003s
 +!CSVLINE!+s9fes,destruc,ULIMITKILLED
 
 Testing diviter under S9fES
@@ -47,11 +47,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/diviter.scm /tmp/larcenous/S9fES/diviter.scm
 Running...
 Running diviter:1000:1000000
-./bench: line 413: 20945 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  1461 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.994s
-sys	0m0.000s
+real	5m0.014s
+user	4m59.997s
+sys	0m0.003s
 +!CSVLINE!+s9fes,diviter,ULIMITKILLED
 
 Testing divrec under S9fES
@@ -60,10 +60,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/divrec.scm /tmp/larcenous/S9fES/divrec.scm
 Running...
 Running divrec:1000:1000000
-./bench: line 413: 20980 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  1611 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.994s
+real	5m0.017s
+user	4m59.997s
 sys	0m0.000s
 +!CSVLINE!+s9fes,divrec,ULIMITKILLED
 
@@ -73,11 +73,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/puzzle.scm /tmp/larcenous/S9fES/puzzle.scm
 Running...
 Running puzzle:1000
-./bench: line 413: 21022 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  1726 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.987s
-sys	0m0.007s
+real	5m0.010s
+user	5m0.000s
+sys	0m0.000s
 +!CSVLINE!+s9fes,puzzle,ULIMITKILLED
 
 Testing triangl under S9fES
@@ -86,11 +86,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/triangl.scm /tmp/larcenous/S9fES/triangl.scm
 Running...
 Running triangl:22:1:50
-./bench: line 413: 21063 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  1866 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.994s
-sys	0m0.000s
+real	5m0.014s
+user	4m59.993s
+sys	0m0.003s
 +!CSVLINE!+s9fes,triangl,ULIMITKILLED
 
 Testing tak under S9fES
@@ -99,11 +99,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/tak.scm /tmp/larcenous/S9fES/tak.scm
 Running...
 Running tak:40:20:11:1
-./bench: line 413: 21097 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  2088 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.994s
-sys	0m0.000s
+real	5m0.007s
+user	4m59.996s
+sys	0m0.003s
 +!CSVLINE!+s9fes,tak,ULIMITKILLED
 
 Testing takl under S9fES
@@ -112,11 +112,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/takl.scm /tmp/larcenous/S9fES/takl.scm
 Running...
 Running takl:40:20:12:1
-./bench: line 413: 21131 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  2286 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
+real	5m0.000s
 user	4m59.994s
-sys	0m0.000s
+sys	0m0.003s
 +!CSVLINE!+s9fes,takl,ULIMITKILLED
 
 Testing ntakl under S9fES
@@ -125,10 +125,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/ntakl.scm /tmp/larcenous/S9fES/ntakl.scm
 Running...
 Running ntakl:40:20:12:1
-./bench: line 413: 21166 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  2595 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.994s
+real	5m0.004s
+user	5m0.001s
 sys	0m0.000s
 +!CSVLINE!+s9fes,ntakl,ULIMITKILLED
 
@@ -138,10 +138,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/cpstak.scm /tmp/larcenous/S9fES/cpstak.scm
 Running...
 Running cpstak:40:20:11:1
-./bench: line 413: 21201 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  2803 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.991s
+real	5m0.000s
+user	4m59.992s
 sys	0m0.003s
 +!CSVLINE!+s9fes,cpstak,ULIMITKILLED
 
@@ -151,11 +151,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/ctak.scm /tmp/larcenous/S9fES/ctak.scm
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 173.0 seconds (173.0) for ctak:32:16:8:1
-+!CSVLINE!+s9fes-unknown,ctak:32:16:8:1,173.0
+Elapsed time: 159.64 seconds (159.64) for ctak:32:16:8:1
++!CSVLINE!+s9fes-unknown,ctak:32:16:8:1,159.64
 
-real	2m53.019s
-user	2m53.014s
+real	2m39.652s
+user	2m39.651s
 sys	0m0.000s
 
 Testing fib under S9fES
@@ -164,11 +164,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/fib.scm /tmp/larcenous/S9fES/fib.scm
 Running...
 Running fib:40:5
-./bench: line 413: 21254 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  3268 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.994s
-sys	0m0.000s
+real	5m0.069s
+user	4m59.983s
+sys	0m0.013s
 +!CSVLINE!+s9fes,fib,ULIMITKILLED
 
 Testing fibc under S9fES
@@ -177,11 +177,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/fibc.scm /tmp/larcenous/S9fES/fibc.scm
 Running...
 Running fibc:30:10
-./bench: line 413: 21288 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  3455 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.993s
-sys	0m0.000s
+real	5m0.001s
+user	4m59.989s
+sys	0m0.003s
 +!CSVLINE!+s9fes,fibc,ULIMITKILLED
 
 Testing fibfp under S9fES
@@ -190,11 +190,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/fibfp.scm /tmp/larcenous/S9fES/fibfp.scm
 Running...
 Running fibfp:35.0:10
-./bench: line 413: 21323 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  3636 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.991s
-sys	0m0.003s
+real	5m0.004s
+user	5m0.000s
+sys	0m0.000s
 +!CSVLINE!+s9fes,fibfp,ULIMITKILLED
 
 Testing sum under S9fES
@@ -203,10 +203,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/sum.scm /tmp/larcenous/S9fES/sum.scm
 Running...
 Running sum:10000:200000
-./bench: line 413: 21357 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  3728 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.001s
-user	4m59.990s
+real	5m0.000s
+user	4m59.995s
 sys	0m0.003s
 +!CSVLINE!+s9fes,sum,ULIMITKILLED
 
@@ -216,11 +216,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/sumfp.scm /tmp/larcenous/S9fES/sumfp.scm
 Running...
 Running sumfp:1000000.0:500
-./bench: line 413: 21391 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  3930 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.001s
-user	4m59.990s
-sys	0m0.003s
+real	5m0.000s
+user	4m59.994s
+sys	0m0.004s
 +!CSVLINE!+s9fes,sumfp,ULIMITKILLED
 
 Testing fft under S9fES
@@ -229,11 +229,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/fft.scm /tmp/larcenous/S9fES/fft.scm
 Running...
 Running fft:65536:100
-./bench: line 413: 21425 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  4474 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.982s
-sys	0m0.010s
+real	5m0.004s
+user	4m59.998s
+sys	0m0.003s
 +!CSVLINE!+s9fes,fft,ULIMITKILLED
 
 Testing mbrot under S9fES
@@ -242,10 +242,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/mbrot.scm /tmp/larcenous/S9fES/mbrot.scm
 Running...
 Running mbrot:75:1000
-./bench: line 413: 21473 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  4618 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.001s
-user	4m59.994s
+real	5m0.003s
+user	5m0.000s
 sys	0m0.000s
 +!CSVLINE!+s9fes,mbrot,ULIMITKILLED
 
@@ -258,9 +258,9 @@ Running mbrotZ:75:1000
 error: "/tmp/larcenous/S9fES/mbrotZ.scm": 154: symbol not bound: -1.0-0.5i
 call trace: loop loop loop loop loop
 
-real	0m0.026s
-user	0m0.026s
-sys	0m0.000s
+real	0m0.020s
+user	0m0.016s
+sys	0m0.003s
 +!CSVLINE!+s9fes,mbrotZ,CRASHED
 
 Testing nucleic under S9fES
@@ -269,11 +269,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/nucleic.scm /tmp/larcenous/S9fES/nucleic.scm
 Running...
 Running nucleic:50
-./bench: line 413: 21513 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  4752 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.995s
-sys	0m0.000s
+real	5m0.002s
+user	4m59.996s
+sys	0m0.003s
 +!CSVLINE!+s9fes,nucleic,ULIMITKILLED
 
 Testing pi under S9fES
@@ -285,9 +285,9 @@ Running pi:50:500:50:2
 error: "/tmp/larcenous/S9fES/pi.scm": 245: symbol not bound: exact-integer-sqrt
 call trace: square square-root call-with-values thunk
 
-real	0m0.028s
-user	0m0.028s
-sys	0m0.000s
+real	0m0.019s
+user	0m0.016s
+sys	0m0.003s
 +!CSVLINE!+s9fes,pi,CRASHED
 
 Testing pnpoly under S9fES
@@ -296,11 +296,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/pnpoly.scm /tmp/larcenous/S9fES/pnpoly.scm
 Running...
 Running pnpoly:1000000
-./bench: line 413: 21553 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  5179 Killed                  ${S9fES} "$1" < "$2"
 
 real	5m0.002s
-user	4m59.991s
-sys	0m0.003s
+user	4m59.988s
+sys	0m0.007s
 +!CSVLINE!+s9fes,pnpoly,ULIMITKILLED
 
 Testing ray under S9fES
@@ -309,11 +309,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/ray.scm /tmp/larcenous/S9fES/ray.scm
 Running...
 Running ray:50
-./bench: line 413: 21587 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  5558 Killed                  ${S9fES} "$1" < "$2"
 
 real	5m0.004s
-user	4m59.992s
-sys	0m0.003s
+user	4m59.993s
+sys	0m0.007s
 +!CSVLINE!+s9fes,ray,ULIMITKILLED
 
 Testing simplex under S9fES
@@ -322,11 +322,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/simplex.scm /tmp/larcenous/S9fES/simplex.scm
 Running...
 Running simplex:1000000
-./bench: line 413: 21621 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  5767 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.982s
-sys	0m0.013s
+real	5m0.004s
+user	4m59.994s
+sys	0m0.007s
 +!CSVLINE!+s9fes,simplex,ULIMITKILLED
 
 Testing ack under S9fES
@@ -335,11 +335,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/ack.scm /tmp/larcenous/S9fES/ack.scm
 Running...
 Running ack:3:12:2
-./bench: line 413: 21657 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  5967 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.005s
-user	4m59.987s
-sys	0m0.007s
+real	5m0.004s
+user	5m0.001s
+sys	0m0.000s
 +!CSVLINE!+s9fes,ack,ULIMITKILLED
 
 Testing array1 under S9fES
@@ -348,11 +348,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/array1.scm /tmp/larcenous/S9fES/array1.scm
 Running...
 Running array1:1000000:500
-./bench: line 413: 21691 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  6240 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.975s
-sys	0m0.020s
+real	5m0.005s
+user	4m59.995s
+sys	0m0.007s
 +!CSVLINE!+s9fes,array1,ULIMITKILLED
 
 Testing string under S9fES
@@ -361,12 +361,12 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/string.scm /tmp/larcenous/S9fES/string.scm
 Running...
 Running string:500000:25
-Elapsed time: 0.6 seconds (0.6) for string:500000:25
-+!CSVLINE!+s9fes-unknown,string:500000:25,0.6
+Elapsed time: 0.69 seconds (0.69) for string:500000:25
++!CSVLINE!+s9fes-unknown,string:500000:25,0.69
 
-real	0m0.618s
-user	0m0.608s
-sys	0m0.010s
+real	0m0.712s
+user	0m0.705s
+sys	0m0.007s
 
 Testing sum1 under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -374,12 +374,12 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/sum1.scm /tmp/larcenous/S9fES/sum1.scm
 Running...
 Running sum1:25
-Elapsed time: 13.77 seconds (13.77) for sum1:25
-+!CSVLINE!+s9fes-unknown,sum1:25,13.77
+Elapsed time: 13.4 seconds (13.4) for sum1:25
++!CSVLINE!+s9fes-unknown,sum1:25,13.4
 
-real	0m13.797s
-user	0m13.790s
-sys	0m0.007s
+real	0m13.421s
+user	0m13.404s
+sys	0m0.017s
 
 Testing cat under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -387,11 +387,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/cat.scm /tmp/larcenous/S9fES/cat.scm
 Running...
 Running cat:50
-./bench: line 413: 21740 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  7781 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.847s
-sys	0m0.147s
+real	5m0.186s
+user	4m59.560s
+sys	0m0.433s
 +!CSVLINE!+s9fes,cat,ULIMITKILLED
 
 Testing tail under S9fES
@@ -403,9 +403,9 @@ Running tail:25
 error: "/tmp/larcenous/S9fES/tail.scm": 140: symbol not bound: write-string
 call trace: mapcar1 mapcar1
 
-real	0m7.151s
-user	0m7.144s
-sys	0m0.007s
+real	0m7.468s
+user	0m7.468s
+sys	0m0.000s
 +!CSVLINE!+s9fes,tail,CRASHED
 
 Testing wc under S9fES
@@ -414,11 +414,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/wc.scm /tmp/larcenous/S9fES/wc.scm
 Running...
 Running wc:inputs/bib:50
-./bench: line 413: 21782 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413:  9003 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.975s
-sys	0m0.020s
+real	5m5.456s
+user	4m59.900s
+sys	0m0.104s
 +!CSVLINE!+s9fes,wc,ULIMITKILLED
 
 Testing read1 under S9fES
@@ -427,12 +427,12 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/read1.scm /tmp/larcenous/S9fES/read1.scm
 Running...
 Running read1:2500
-Elapsed time: 63.72 seconds (63.72) for read1:2500
-+!CSVLINE!+s9fes-unknown,read1:2500,63.72
+Elapsed time: 66.59 seconds (66.59) for read1:2500
++!CSVLINE!+s9fes-unknown,read1:2500,66.59
 
-real	1m3.739s
-user	1m3.727s
-sys	0m0.010s
+real	1m6.612s
+user	1m6.565s
+sys	0m0.040s
 
 Testing compiler under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -443,8 +443,8 @@ Running compiler:2000
 error: "/tmp/larcenous/S9fES/compiler.scm": 11842: cdr: expected pair in argument #1: (#f)
 call trace: loop loop
 
-real	0m2.406s
-user	0m2.402s
+real	0m2.663s
+user	0m2.658s
 sys	0m0.003s
 +!CSVLINE!+s9fes,compiler,CRASHED
 
@@ -454,11 +454,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/conform.scm /tmp/larcenous/S9fES/conform.scm
 Running...
 Running conform:500
-./bench: line 413: 21834 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 10843 Killed                  ${S9fES} "$1" < "$2"
 
 real	5m0.003s
-user	4m59.988s
-sys	0m0.007s
+user	4m59.996s
+sys	0m0.003s
 +!CSVLINE!+s9fes,conform,ULIMITKILLED
 
 Testing dynamic under S9fES
@@ -467,11 +467,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/dynamic.scm /tmp/larcenous/S9fES/dynamic.scm
 Running...
 Running dynamic:500
-./bench: line 413: 21868 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11042 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.983s
-sys	0m0.010s
+real	5m0.004s
+user	4m59.981s
+sys	0m0.020s
 +!CSVLINE!+s9fes,dynamic,ULIMITKILLED
 
 Testing earley under S9fES
@@ -480,11 +480,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/earley.scm /tmp/larcenous/S9fES/earley.scm
 Running...
 Running earley:1
-./bench: line 413: 21903 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11195 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.004s
-user	4m59.970s
-sys	0m0.027s
+real	5m0.006s
+user	4m59.982s
+sys	0m0.020s
 +!CSVLINE!+s9fes,earley,ULIMITKILLED
 
 Testing graphs under S9fES
@@ -493,10 +493,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/graphs.scm /tmp/larcenous/S9fES/graphs.scm
 Running...
 Running graphs:7:3
-./bench: line 413: 21958 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11240 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.981s
+real	5m0.008s
+user	4m59.990s
 sys	0m0.010s
 +!CSVLINE!+s9fes,graphs,ULIMITKILLED
 
@@ -506,11 +506,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/lattice.scm /tmp/larcenous/S9fES/lattice.scm
 Running...
 Running lattice:44:10
-./bench: line 413: 21991 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11347 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.001s
-user	4m59.989s
-sys	0m0.003s
+real	5m0.003s
+user	4m59.999s
+sys	0m0.000s
 +!CSVLINE!+s9fes,lattice,ULIMITKILLED
 
 Testing matrix under S9fES
@@ -519,10 +519,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/matrix.scm /tmp/larcenous/S9fES/matrix.scm
 Running...
 Running matrix:5:5:2500
-./bench: line 413: 22025 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11454 Killed                  ${S9fES} "$1" < "$2"
 
 real	5m0.001s
-user	4m59.990s
+user	4m59.994s
 sys	0m0.003s
 +!CSVLINE!+s9fes,matrix,ULIMITKILLED
 
@@ -532,10 +532,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/maze.scm /tmp/larcenous/S9fES/maze.scm
 Running...
 Running maze:20:7:10000
-./bench: line 413: 22059 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11560 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.995s
+real	5m0.004s
+user	5m0.000s
 sys	0m0.000s
 +!CSVLINE!+s9fes,maze,ULIMITKILLED
 
@@ -545,10 +545,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/mazefun.scm /tmp/larcenous/S9fES/mazefun.scm
 Running...
 Running mazefun:11:11:10000
-./bench: line 413: 22093 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11698 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.994s
+real	5m0.007s
+user	4m59.998s
 sys	0m0.000s
 +!CSVLINE!+s9fes,mazefun,ULIMITKILLED
 
@@ -558,11 +558,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/nqueens.scm /tmp/larcenous/S9fES/nqueens.scm
 Running...
 Running nqueens:13:10
-./bench: line 413: 22127 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11805 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.991s
-sys	0m0.003s
+real	5m0.004s
+user	5m0.000s
+sys	0m0.000s
 +!CSVLINE!+s9fes,nqueens,ULIMITKILLED
 
 Testing paraffins under S9fES
@@ -573,9 +573,9 @@ Running...
 Running paraffins:23:10
 S9core: fatal error: new_vec: hit memory limit
 
-real	0m6.347s
-user	0m6.324s
-sys	0m0.023s
+real	0m6.534s
+user	0m6.507s
+sys	0m0.027s
 +!CSVLINE!+s9fes,paraffins,CRASHED
 
 Testing parsing under S9fES
@@ -584,11 +584,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/parsing.scm /tmp/larcenous/S9fES/parsing.scm
 Running...
 Running parsing:2500
-./bench: line 413: 22168 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 11857 Killed                  ${S9fES} "$1" < "$2"
 
 real	5m0.004s
-user	4m59.991s
-sys	0m0.003s
+user	4m59.994s
+sys	0m0.000s
 +!CSVLINE!+s9fes,parsing,ULIMITKILLED
 
 Testing peval under S9fES
@@ -597,10 +597,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/peval.scm /tmp/larcenous/S9fES/peval.scm
 Running...
 Running peval:2000
-./bench: line 413: 22202 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 12172 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.002s
-user	4m59.987s
+real	5m0.017s
+user	4m59.989s
 sys	0m0.007s
 +!CSVLINE!+s9fes,peval,ULIMITKILLED
 
@@ -610,11 +610,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/primes.scm /tmp/larcenous/S9fES/primes.scm
 Running...
 Running primes:1000:10000
-./bench: line 413: 22237 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 12248 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.001s
-user	4m59.990s
-sys	0m0.003s
+real	5m0.003s
+user	5m0.000s
+sys	0m0.000s
 +!CSVLINE!+s9fes,primes,ULIMITKILLED
 
 Testing quicksort under S9fES
@@ -623,11 +623,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/quicksort.scm /tmp/larcenous/S9fES/quicksort.scm
 Running...
 Running quicksort:10000:2500
-./bench: line 413: 22272 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 12385 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.991s
-sys	0m0.003s
+real	5m0.240s
+user	4m59.980s
+sys	0m0.000s
 +!CSVLINE!+s9fes,quicksort,ULIMITKILLED
 
 Testing scheme under S9fES
@@ -637,8 +637,8 @@ s9fes_comp /tmp/larcenous/S9fES/scheme.scm /tmp/larcenous/S9fES/scheme.scm
 Running...
 error: "/tmp/larcenous/S9fES/scheme.scm": 943: symbol not bound: complex?
 
-real	0m0.058s
-user	0m0.058s
+real	0m0.060s
+user	0m0.060s
 sys	0m0.000s
 +!CSVLINE!+s9fes,scheme,CRASHED
 
@@ -648,12 +648,12 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/slatex.scm /tmp/larcenous/S9fES/slatex.scm
 Running...
 Running slatex:500
-Elapsed time: 145.02 seconds (145.02) for slatex:500
-+!CSVLINE!+s9fes-unknown,slatex:500,145.02
+Elapsed time: 134.68 seconds (134.68) for slatex:500
++!CSVLINE!+s9fes-unknown,slatex:500,134.68
 
-real	2m25.154s
-user	2m23.338s
-sys	0m1.334s
+real	2m14.818s
+user	2m12.745s
+sys	0m1.780s
 
 Testing chudnovsky under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -664,9 +664,9 @@ Running chudnovsky:50:500:50:20
 error: "/tmp/larcenous/S9fES/chudnovsky.scm": 171: symbol not bound: exact-integer-sqrt
 call trace: square square integer-sqrt call-with-values thunk
 
-real	0m0.019s
-user	0m0.016s
-sys	0m0.003s
+real	0m0.018s
+user	0m0.015s
+sys	0m0.004s
 +!CSVLINE!+s9fes,chudnovsky,CRASHED
 
 Testing nboyer under S9fES
@@ -675,11 +675,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/nboyer.scm /tmp/larcenous/S9fES/nboyer.scm
 Running...
 Running nboyer:5:1
-./bench: line 413: 22336 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 12560 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.003s
-user	4m59.962s
-sys	0m0.030s
+real	5m0.333s
+user	4m59.960s
+sys	0m0.010s
 +!CSVLINE!+s9fes,nboyer,ULIMITKILLED
 
 Testing sboyer under S9fES
@@ -688,11 +688,11 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/sboyer.scm /tmp/larcenous/S9fES/sboyer.scm
 Running...
 Running sboyer:5:1
-./bench: line 413: 22384 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 12846 Killed                  ${S9fES} "$1" < "$2"
 
-real	5m0.004s
+real	5m0.003s
 user	4m59.986s
-sys	0m0.010s
+sys	0m0.013s
 +!CSVLINE!+s9fes,sboyer,ULIMITKILLED
 
 Testing gcbench under S9fES
@@ -706,8 +706,8 @@ Running gcbench:20:1
 error: "/tmp/larcenous/S9fES/gcbench.scm": 288: symbol not bound: define-record-type
 call trace: square square
 
-real	0m0.022s
-user	0m0.022s
+real	0m0.028s
+user	0m0.028s
 sys	0m0.000s
 +!CSVLINE!+s9fes,gcbench,CRASHED
 
@@ -718,8 +718,8 @@ s9fes_comp /tmp/larcenous/S9fES/mperm.scm /tmp/larcenous/S9fES/mperm.scm
 Running...
 S9core: fatal error: cons3: hit memory limit
 
-real	2m0.173s
-user	2m0.147s
+real	1m59.759s
+user	1m59.733s
 sys	0m0.023s
 +!CSVLINE!+s9fes,mperm,CRASHED
 
@@ -729,10 +729,10 @@ Compiling...
 s9fes_comp /tmp/larcenous/S9fES/equal.scm /tmp/larcenous/S9fES/equal.scm
 Running...
 Running equal:100:100:8:1000:2000:5000
-./bench: line 413: 22439 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 413: 12910 Killed                  ${S9fES} "$1" < "$2"
 
 real	5m0.002s
-user	4m59.995s
+user	4m59.999s
 sys	0m0.000s
 +!CSVLINE!+s9fes,equal,ULIMITKILLED
 
@@ -745,7 +745,7 @@ Running bv2string:1000:1000:100
 error: "/tmp/larcenous/S9fES/bv2string.scm": 227: symbol not bound: make-bytevector
 call trace: random-bytevector random random14
 
-real	0m0.030s
-user	0m0.026s
-sys	0m0.004s
+real	0m0.025s
+user	0m0.025s
+sys	0m0.000s
 +!CSVLINE!+s9fes,bv2string,CRASHED
