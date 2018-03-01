@@ -1,1713 +1,778 @@
 
 ****************************
-Benchmarking Racket on Wed 28 Feb 16:33:31 CET 2018 under Linux nexion 4.14.15-1-ARCH #1 SMP PREEMPT Tue Jan 23 21:49:25 UTC 2018 x86_64 GNU/Linux
+Benchmarking Racket on Thu 1 Mar 07:05:06 CET 2018 under Linux nexion 4.14.15-1-ARCH #1 SMP PREEMPT Tue Jan 23 21:49:25 UTC 2018 x86_64 GNU/Linux
 
 Testing browse under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/browse.scm /tmp/larcenous/Racket/browse.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/browse.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,browse,COMPILEERROR
+Running...
+Running browse:2000
+Elapsed time: 5.342 seconds (5.342) for browse:2000
++!CSVLINE!+racket-6.12,browse:2000,5.342
+
+real	0m5.540s
+user	0m5.493s
+sys	0m0.050s
 
 Testing deriv under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/deriv.scm /tmp/larcenous/Racket/deriv.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/deriv.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,deriv,COMPILEERROR
+Running...
+Running deriv:10000000
+Elapsed time: 3.492 seconds (3.492) for deriv:10000000
++!CSVLINE!+racket-6.12,deriv:10000000,3.492
+
+real	0m3.692s
+user	0m3.615s
+sys	0m0.080s
 
 Testing destruc under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/destruc.scm /tmp/larcenous/Racket/destruc.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/destruc.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,destruc,COMPILEERROR
+Running...
+Running destruc:600:50:4000
+Elapsed time: 4.796 seconds (4.796) for destruc:600:50:4000
++!CSVLINE!+racket-6.12,destruc:600:50:4000,4.796
+
+real	0m4.994s
+user	0m4.953s
+sys	0m0.043s
 
 Testing diviter under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/diviter.scm /tmp/larcenous/Racket/diviter.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/diviter.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,diviter,COMPILEERROR
+Running...
+Running diviter:1000:1000000
+Elapsed time: 2.766 seconds (2.766) for diviter:1000:1000000
++!CSVLINE!+racket-6.12,diviter:1000:1000000,2.766
+
+real	0m2.966s
+user	0m2.922s
+sys	0m0.047s
 
 Testing divrec under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/divrec.scm /tmp/larcenous/Racket/divrec.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/divrec.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,divrec,COMPILEERROR
+Running...
+Running divrec:1000:1000000
+Elapsed time: 4.497 seconds (4.497) for divrec:1000:1000000
++!CSVLINE!+racket-6.12,divrec:1000:1000000,4.497
+
+real	0m4.695s
+user	0m4.622s
+sys	0m0.077s
 
 Testing puzzle under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/puzzle.scm /tmp/larcenous/Racket/puzzle.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/puzzle.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,puzzle,COMPILEERROR
+Running...
+Running puzzle:1000
+Elapsed time: 6.145 seconds (6.145) for puzzle:1000
++!CSVLINE!+racket-6.12,puzzle:1000,6.145
+
+real	0m6.343s
+user	0m6.292s
+sys	0m0.054s
 
 Testing triangl under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/triangl.scm /tmp/larcenous/Racket/triangl.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/triangl.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,triangl,COMPILEERROR
+Running...
+Running triangl:22:1:50
+Elapsed time: 3.97 seconds (3.97) for triangl:22:1:50
++!CSVLINE!+racket-6.12,triangl:22:1:50,3.97
+
+real	0m4.168s
+user	0m4.143s
+sys	0m0.027s
 
 Testing tak under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/tak.scm /tmp/larcenous/Racket/tak.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/tak.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,tak,COMPILEERROR
+Running...
+Running tak:40:20:11:1
+Elapsed time: 2.955 seconds (2.954) for tak:40:20:11:1
++!CSVLINE!+racket-6.12,tak:40:20:11:1,2.955
+
+real	0m3.148s
+user	0m3.113s
+sys	0m0.037s
 
 Testing takl under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/takl.scm /tmp/larcenous/Racket/takl.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/takl.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,takl,COMPILEERROR
+Running...
+Running takl:40:20:12:1
+Elapsed time: 6.157 seconds (6.157) for takl:40:20:12:1
++!CSVLINE!+racket-6.12,takl:40:20:12:1,6.157
+
+real	0m6.354s
+user	0m6.313s
+sys	0m0.043s
 
 Testing ntakl under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/ntakl.scm /tmp/larcenous/Racket/ntakl.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/ntakl.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,ntakl,COMPILEERROR
+Running...
+Running ntakl:40:20:12:1
+Elapsed time: 6.105 seconds (6.106) for ntakl:40:20:12:1
++!CSVLINE!+racket-6.12,ntakl:40:20:12:1,6.105
+
+real	0m6.303s
+user	0m6.268s
+sys	0m0.037s
 
 Testing cpstak under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/cpstak.scm /tmp/larcenous/Racket/cpstak.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/cpstak.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,cpstak,COMPILEERROR
+Running...
+Running cpstak:40:20:11:1
+Elapsed time: 7.848 seconds (7.847) for cpstak:40:20:11:1
++!CSVLINE!+racket-6.12,cpstak:40:20:11:1,7.848
+
+real	0m8.049s
+user	0m7.928s
+sys	0m0.127s
 
 Testing ctak under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/ctak.scm /tmp/larcenous/Racket/ctak.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/ctak.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,ctak,COMPILEERROR
+Running...
+Running ctak:32:16:8:1
+Elapsed time: 125.026 seconds (125.026) for ctak:32:16:8:1
++!CSVLINE!+racket-6.12,ctak:32:16:8:1,125.026
+
+real	2m5.224s
+user	2m4.532s
+sys	0m0.783s
 
 Testing fib under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/fib.scm /tmp/larcenous/Racket/fib.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/fib.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,fib,COMPILEERROR
+Running...
+Running fib:40:5
+Elapsed time: 5.239 seconds (5.238) for fib:40:5
++!CSVLINE!+racket-6.12,fib:40:5,5.239
+
+real	0m5.433s
+user	0m5.395s
+sys	0m0.040s
 
 Testing fibc under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/fibc.scm /tmp/larcenous/Racket/fibc.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/fibc.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,fibc,COMPILEERROR
+Running...
+Running fibc:30:10
+Elapsed time: 70.053 seconds (70.053) for fibc:30:10
++!CSVLINE!+racket-6.12,fibc:30:10,70.053
+
+real	1m10.249s
+user	1m9.819s
+sys	0m0.480s
 
 Testing fibfp under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/fibfp.scm /tmp/larcenous/Racket/fibfp.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/fibfp.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,fibfp,COMPILEERROR
+Running...
+Running fibfp:35.0:10
+Elapsed time: 2.088 seconds (2.088) for fibfp:35.0:10
++!CSVLINE!+racket-6.12,fibfp:35.0:10,2.088
+
+real	0m2.283s
+user	0m2.212s
+sys	0m0.073s
 
 Testing sum under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/sum.scm /tmp/larcenous/Racket/sum.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/sum.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,sum,COMPILEERROR
+Running...
+Running sum:10000:200000
+Elapsed time: 4.307 seconds (4.306) for sum:10000:200000
++!CSVLINE!+racket-6.12,sum:10000:200000,4.307
+
+real	0m4.500s
+user	0m4.485s
+sys	0m0.017s
 
 Testing sumfp under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/sumfp.scm /tmp/larcenous/Racket/sumfp.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/sumfp.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,sumfp,COMPILEERROR
+Running...
+Running sumfp:1000000.0:500
+Elapsed time: 3.425 seconds (3.424) for sumfp:1000000.0:500
++!CSVLINE!+racket-6.12,sumfp:1000000.0:500,3.425
+
+real	0m3.622s
+user	0m3.582s
+sys	0m0.043s
 
 Testing fft under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/fft.scm /tmp/larcenous/Racket/fft.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/fft.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,fft,COMPILEERROR
+Running...
+Running fft:65536:100
+Elapsed time: 3.061 seconds (3.061) for fft:65536:100
++!CSVLINE!+racket-6.12,fft:65536:100,3.061
+
+real	0m3.259s
+user	0m3.161s
+sys	0m0.100s
 
 Testing mbrot under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/mbrot.scm /tmp/larcenous/Racket/mbrot.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/mbrot.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,mbrot,COMPILEERROR
+Running...
+Running mbrot:75:1000
+Elapsed time: 4.442 seconds (4.442) for mbrot:75:1000
++!CSVLINE!+racket-6.12,mbrot:75:1000,4.442
+
+real	0m4.637s
+user	0m4.494s
+sys	0m0.147s
 
 Testing mbrotZ under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/mbrotZ.scm /tmp/larcenous/Racket/mbrotZ.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/mbrotZ.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,mbrotZ,COMPILEERROR
+Running...
+Running mbrotZ:75:1000
+Elapsed time: 25.558 seconds (25.558) for mbrotZ:75:1000
++!CSVLINE!+racket-6.12,mbrotZ:75:1000,25.558
+
+real	0m25.752s
+user	0m25.525s
+sys	0m0.244s
 
 Testing nucleic under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/nucleic.scm /tmp/larcenous/Racket/nucleic.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/nucleic.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,nucleic,COMPILEERROR
+Running...
+Running nucleic:50
+Elapsed time: 2.035 seconds (2.034) for nucleic:50
++!CSVLINE!+racket-6.12,nucleic:50,2.035
+
+real	0m2.237s
+user	0m2.175s
+sys	0m0.063s
 
 Testing pi under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/pi.scm /tmp/larcenous/Racket/pi.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/pi.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,pi,COMPILEERROR
+Running...
+Running pi:50:500:50:2
+Elapsed time: 0.013 seconds (0.013) for pi:50:500:50:2
++!CSVLINE!+racket-6.12,pi:50:500:50:2,0.013
+
+real	0m0.209s
+user	0m0.187s
+sys	0m0.023s
 
 Testing pnpoly under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/pnpoly.scm /tmp/larcenous/Racket/pnpoly.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/pnpoly.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,pnpoly,COMPILEERROR
+Running...
+Running pnpoly:1000000
+Elapsed time: 6.635 seconds (6.634) for pnpoly:1000000
++!CSVLINE!+racket-6.12,pnpoly:1000000,6.635
+
+real	0m6.830s
+user	0m6.797s
+sys	0m0.037s
 
 Testing ray under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/ray.scm /tmp/larcenous/Racket/ray.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/ray.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,ray,COMPILEERROR
+Running...
+Running ray:50
+Elapsed time: 1.964 seconds (1.964) for ray:50
++!CSVLINE!+racket-6.12,ray:50,1.964
+
+real	0m2.161s
+user	0m2.093s
+sys	0m0.070s
 
 Testing simplex under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/simplex.scm /tmp/larcenous/Racket/simplex.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/simplex.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,simplex,COMPILEERROR
+Running...
+Running simplex:1000000
+Elapsed time: 3.401 seconds (3.401) for simplex:1000000
++!CSVLINE!+racket-6.12,simplex:1000000,3.401
+
+real	0m3.596s
+user	0m3.535s
+sys	0m0.063s
 
 Testing ack under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/ack.scm /tmp/larcenous/Racket/ack.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/ack.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,ack,COMPILEERROR
+Running...
+Running ack:3:12:2
+Elapsed time: 5.73 seconds (5.73) for ack:3:12:2
++!CSVLINE!+racket-6.12,ack:3:12:2,5.73
+
+real	0m5.926s
+user	0m5.894s
+sys	0m0.033s
 
 Testing array1 under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/array1.scm /tmp/larcenous/Racket/array1.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/array1.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,array1,COMPILEERROR
+Running...
+Running array1:1000000:500
+Elapsed time: 5.843 seconds (5.843) for array1:1000000:500
++!CSVLINE!+racket-6.12,array1:1000000:500,5.843
+
+real	0m6.039s
+user	0m5.707s
+sys	0m0.337s
 
 Testing string under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/string.scm /tmp/larcenous/Racket/string.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/string.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,string,COMPILEERROR
+Running...
+Running string:500000:25
+Elapsed time: 0.7 seconds (0.701) for string:500000:25
++!CSVLINE!+racket-6.12,string:500000:25,0.7
+
+real	0m0.899s
+user	0m0.800s
+sys	0m0.100s
 
 Testing sum1 under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/sum1.scm /tmp/larcenous/Racket/sum1.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/sum1.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,sum1,COMPILEERROR
+Running...
+Running sum1:25
+Elapsed time: 10.282 seconds (10.282) for sum1:25
++!CSVLINE!+racket-6.12,sum1:25,10.282
+
+real	0m10.477s
+user	0m10.402s
+sys	0m0.077s
 
 Testing cat under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/cat.scm /tmp/larcenous/Racket/cat.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/cat.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,cat,COMPILEERROR
+Running...
+Running cat:50
+Elapsed time: 8.445 seconds (8.445) for cat:50
++!CSVLINE!+racket-6.12,cat:50,8.445
+
+real	0m8.639s
+user	0m8.471s
+sys	0m0.167s
 
 Testing tail under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/tail.scm /tmp/larcenous/Racket/tail.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/tail.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,tail,COMPILEERROR
+Running...
+Running tail:25
+Elapsed time: 1.462 seconds (1.463) for tail:25
++!CSVLINE!+racket-6.12,tail:25,1.462
+
+real	0m1.660s
+user	0m1.515s
+sys	0m0.147s
 
 Testing wc under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/wc.scm /tmp/larcenous/Racket/wc.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/wc.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,wc,COMPILEERROR
+Running...
+Running wc:inputs/bib:50
+Elapsed time: 5.96 seconds (5.96) for wc:inputs/bib:50
++!CSVLINE!+racket-6.12,wc:inputs/bib:50,5.96
+
+real	0m6.157s
+user	0m6.095s
+sys	0m0.063s
 
 Testing read1 under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/read1.scm /tmp/larcenous/Racket/read1.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/read1.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,read1,COMPILEERROR
+Running...
+Running read1:2500
+Elapsed time: 15.037 seconds (15.037) for read1:2500
++!CSVLINE!+racket-6.12,read1:2500,15.037
+
+real	0m15.233s
+user	0m15.168s
+sys	0m0.070s
 
 Testing compiler under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/compiler.scm /tmp/larcenous/Racket/compiler.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/compiler.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,compiler,COMPILEERROR
+Running...
+Running compiler:2000
+Elapsed time: 3.624 seconds (3.624) for compiler:2000
++!CSVLINE!+racket-6.12,compiler:2000,3.624
+
+real	0m3.843s
+user	0m3.796s
+sys	0m0.050s
 
 Testing conform under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/conform.scm /tmp/larcenous/Racket/conform.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/conform.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,conform,COMPILEERROR
+Running...
+Running conform:500
+Elapsed time: 4.498 seconds (4.498) for conform:500
++!CSVLINE!+racket-6.12,conform:500,4.498
+
+real	0m4.694s
+user	0m4.619s
+sys	0m0.077s
 
 Testing dynamic under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/dynamic.scm /tmp/larcenous/Racket/dynamic.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/dynamic.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,dynamic,COMPILEERROR
+Running...
+Running dynamic:500
+Elapsed time: 11.09 seconds (11.091) for dynamic:500
++!CSVLINE!+racket-6.12,dynamic:500,11.09
+
+real	0m11.299s
+user	0m11.001s
+sys	0m0.260s
 
 Testing earley under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/earley.scm /tmp/larcenous/Racket/earley.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/earley.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,earley,COMPILEERROR
+Running...
+Running earley:1
+Elapsed time: 5.799 seconds (5.799) for earley:1
++!CSVLINE!+racket-6.12,earley:1,5.799
+
+real	0m6.012s
+user	0m5.693s
+sys	0m0.324s
 
 Testing graphs under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/graphs.scm /tmp/larcenous/Racket/graphs.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/graphs.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,graphs,COMPILEERROR
+Running...
+Running graphs:7:3
+Elapsed time: 5.44 seconds (5.441) for graphs:7:3
++!CSVLINE!+racket-6.12,graphs:7:3,5.44
+
+real	0m5.641s
+user	0m5.538s
+sys	0m0.107s
 
 Testing lattice under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/lattice.scm /tmp/larcenous/Racket/lattice.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/lattice.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,lattice,COMPILEERROR
+Running...
+Running lattice:44:10
+Elapsed time: 7.922 seconds (7.922) for lattice:44:10
++!CSVLINE!+racket-6.12,lattice:44:10,7.922
+
+real	0m8.118s
+user	0m8.080s
+sys	0m0.040s
 
 Testing matrix under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/matrix.scm /tmp/larcenous/Racket/matrix.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/matrix.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,matrix,COMPILEERROR
+Running...
+Running matrix:5:5:2500
+Elapsed time: 3.31 seconds (3.31) for matrix:5:5:2500
++!CSVLINE!+racket-6.12,matrix:5:5:2500,3.31
+
+real	0m3.508s
+user	0m3.467s
+sys	0m0.044s
 
 Testing maze under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/maze.scm /tmp/larcenous/Racket/maze.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/maze.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,maze,COMPILEERROR
+Running...
+Running maze:20:7:10000
+Elapsed time: 1.719 seconds (1.719) for maze:20:7:10000
++!CSVLINE!+racket-6.12,maze:20:7:10000,1.719
+
+real	0m1.918s
+user	0m1.899s
+sys	0m0.020s
 
 Testing mazefun under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/mazefun.scm /tmp/larcenous/Racket/mazefun.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/mazefun.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,mazefun,COMPILEERROR
+Running...
+Running mazefun:11:11:10000
+Elapsed time: 4.915 seconds (4.915) for mazefun:11:11:10000
++!CSVLINE!+racket-6.12,mazefun:11:11:10000,4.915
+
+real	0m5.112s
+user	0m5.079s
+sys	0m0.037s
 
 Testing nqueens under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/nqueens.scm /tmp/larcenous/Racket/nqueens.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/nqueens.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,nqueens,COMPILEERROR
+Running...
+Running nqueens:13:10
+Elapsed time: 8.557 seconds (8.558) for nqueens:13:10
++!CSVLINE!+racket-6.12,nqueens:13:10,8.557
+
+real	0m8.755s
+user	0m8.707s
+sys	0m0.053s
 
 Testing paraffins under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/paraffins.scm /tmp/larcenous/Racket/paraffins.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/paraffins.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,paraffins,COMPILEERROR
+Running...
+Running paraffins:23:10
+Elapsed time: 9.117 seconds (9.117) for paraffins:23:10
++!CSVLINE!+racket-6.12,paraffins:23:10,9.117
+
+real	0m9.317s
+user	0m8.551s
+sys	0m0.770s
 
 Testing parsing under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/parsing.scm /tmp/larcenous/Racket/parsing.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/parsing.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,parsing,COMPILEERROR
+Running...
+Running parsing:2500
+Elapsed time: 4.711 seconds (4.711) for parsing:2500
++!CSVLINE!+racket-6.12,parsing:2500,4.711
+
+real	0m4.910s
+user	0m4.868s
+sys	0m0.043s
 
 Testing peval under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/peval.scm /tmp/larcenous/Racket/peval.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/peval.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,peval,COMPILEERROR
+Running...
+Running peval:2000
+Elapsed time: 3.76 seconds (3.76) for peval:2000
++!CSVLINE!+racket-6.12,peval:2000,3.76
+
+real	0m3.956s
+user	0m3.905s
+sys	0m0.053s
 
 Testing primes under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/primes.scm /tmp/larcenous/Racket/primes.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/primes.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,primes,COMPILEERROR
+Running...
+Running primes:1000:10000
+Elapsed time: 2.649 seconds (2.649) for primes:1000:10000
++!CSVLINE!+racket-6.12,primes:1000:10000,2.649
+
+real	0m2.846s
+user	0m2.805s
+sys	0m0.043s
 
 Testing quicksort under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/quicksort.scm /tmp/larcenous/Racket/quicksort.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/quicksort.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,quicksort,COMPILEERROR
+Running...
+Running quicksort:10000:2500
+Elapsed time: 15.438 seconds (15.438) for quicksort:10000:2500
++!CSVLINE!+racket-6.12,quicksort:10000:2500,15.438
+
+real	0m15.637s
+user	0m15.565s
+sys	0m0.077s
 
 Testing scheme under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/scheme.scm /tmp/larcenous/Racket/scheme.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/scheme.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,scheme,COMPILEERROR
+Running...
+Running scheme:100000
+Elapsed time: 6.344 seconds (6.344) for scheme:100000
++!CSVLINE!+racket-6.12,scheme:100000,6.344
+
+real	0m6.543s
+user	0m6.512s
+sys	0m0.033s
 
 Testing slatex under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/slatex.scm /tmp/larcenous/Racket/slatex.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/slatex.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,slatex,COMPILEERROR
+Running...
+Running slatex:500
+Elapsed time: 6.19 seconds (6.19) for slatex:500
++!CSVLINE!+racket-6.12,slatex:500,6.19
+
+real	0m6.388s
+user	0m4.884s
+sys	0m1.401s
 
 Testing chudnovsky under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/chudnovsky.scm /tmp/larcenous/Racket/chudnovsky.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/chudnovsky.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,chudnovsky,COMPILEERROR
+Running...
+Running chudnovsky:50:500:50:20
+Elapsed time: 0.006 seconds (0.006) for chudnovsky:50:500:50:20
++!CSVLINE!+racket-6.12,chudnovsky:50:500:50:20,0.006
+
+real	0m0.205s
+user	0m0.148s
+sys	0m0.057s
 
 Testing nboyer under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/nboyer.scm /tmp/larcenous/Racket/nboyer.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/nboyer.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,nboyer,COMPILEERROR
+Running...
+Running nboyer:5:1
+Elapsed time: 4.718 seconds (4.717) for nboyer:5:1
++!CSVLINE!+racket-6.12,nboyer:5:1,4.718
+
+real	0m4.989s
+user	0m4.599s
+sys	0m0.394s
 
 Testing sboyer under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/sboyer.scm /tmp/larcenous/Racket/sboyer.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/sboyer.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,sboyer,COMPILEERROR
+Running...
+Running sboyer:5:1
+Elapsed time: 1.656 seconds (1.656) for sboyer:5:1
++!CSVLINE!+racket-6.12,sboyer:5:1,1.656
+
+real	0m1.855s
+user	0m1.796s
+sys	0m0.060s
 
 Testing gcbench under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/gcbench.scm /tmp/larcenous/Racket/gcbench.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/gcbench.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,gcbench,COMPILEERROR
+Running...
+The garbage collector should touch about 128 megabytes of heap storage.
+The use of more or less memory will skew the results.
+Running gcbench:20:1
+Garbage Collector Test
+ Stretching memory with a binary tree of depth 20
+ Total memory available= ???????? bytes  Free memory= ???????? bytes
+GCBench: Main
+ Creating a long-lived binary tree of depth 18
+ Creating a long-lived array of 2097148 inexact reals
+ Total memory available= ???????? bytes  Free memory= ???????? bytes
+Creating 135300 trees of depth 4
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 33026 trees of depth 6
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 8208 trees of depth 8
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 2048 trees of depth 10
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 512 trees of depth 12
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 128 trees of depth 14
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 32 trees of depth 16
+GCBench: Top down construction
+GCBench: Bottom up construction
+Creating 8 trees of depth 18
+GCBench: Top down construction
+GCBench: Bottom up construction
+ Total memory available= ???????? bytes  Free memory= ???????? bytes
+Elapsed time: 3.865 seconds (3.864) for gcbench:20:1
++!CSVLINE!+racket-6.12,gcbench:20:1,3.865
+
+real	0m4.064s
+user	0m3.917s
+sys	0m0.150s
 
 Testing mperm under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/mperm.scm /tmp/larcenous/Racket/mperm.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/mperm.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,mperm,COMPILEERROR
+Running...
+Running mperm:20:10:2:1
+Elapsed time: 16.495 seconds (16.495) for mperm:20:10:2:1
++!CSVLINE!+racket-6.12,mperm:20:10:2:1,16.495
+
+real	0m17.482s
+user	0m16.571s
+sys	0m0.920s
 
 Testing equal under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/equal.scm /tmp/larcenous/Racket/equal.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/equal.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,equal,COMPILEERROR
+Running...
+Running equal:100:100:8:1000:2000:5000
+Elapsed time: 3.391 seconds (3.39) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+racket-6.12,equal:100:100:8:1000:2000:5000,3.391
+
+real	0m3.587s
+user	0m3.516s
+sys	0m0.074s
 
 Testing bv2string under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
 racket_comp /tmp/larcenous/Racket/bv2string.scm /tmp/larcenous/Racket/bv2string.scm
-standard-module-name-resolver: collection not found
-  for module path: (submod r7rs reader)
-  collection: "r7rs"
-  in collection directories:
-   /home/nex/src/r7rs-benchmarks/.racket/6.12/collects
-   /usr/share/racket/collects
-   ... [159 additional linked and package directories]
-  compilation context...:
-   /tmp/larcenous/Racket/bv2string.scm
-  context...:
-   show-collection-err
-   standard-module-name-resolver
-   /usr/share/racket/collects/compiler/cm.rkt:405:23
-   /usr/share/racket/collects/syntax/modcode.rkt:62:2: reader
-   /usr/share/racket/collects/syntax/modcode.rkt:279:5: compile-one
-   /usr/share/racket/collects/compiler/cm.rkt:363:0: compile-zo*
-   /usr/share/racket/collects/compiler/cm.rkt:572:26
-   /usr/share/racket/collects/compiler/cm.rkt:564:42
-   /usr/share/racket/collects/compiler/cm.rkt:635:0: compile-root
-   /usr/share/racket/collects/compiler/cm.rkt:737:4
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt:81:8: for-loop
-   /usr/share/racket/pkgs/compiler-lib/compiler/commands/make.rkt: [running body]
-   /usr/share/racket/collects/raco/raco.rkt: [running body]
-   /usr/share/racket/collects/raco/main.rkt: [running body]
-+!CSVLINE!+racket,bv2string,COMPILEERROR
+Running...
+Running bv2string:1000:1000:100
+Elapsed time: 2.657 seconds (2.657) for bv2string:1000:1000:100
++!CSVLINE!+racket-6.12,bv2string:1000:1000:100,2.657
+
+real	0m2.854s
+user	0m2.832s
+sys	0m0.023s
