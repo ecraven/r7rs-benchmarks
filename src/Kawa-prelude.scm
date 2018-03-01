@@ -14,4 +14,4 @@
 ;; (define (square x) (* x x))
 ;; (define exact-integer? integer?)
 
-(define (this-scheme-implementation-name) (string-append "kawa-" (scheme-implementation-version)))
+(define (this-scheme-implementation-name) (string-append "kawa-" (vector-ref ((scheme-implementation-version):split " ") 0)))
