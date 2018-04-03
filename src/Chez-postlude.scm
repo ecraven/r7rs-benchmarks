@@ -1,3 +1,7 @@
+(import
+ (only (chezscheme)
+    machine-type
+    scheme-version-number))
 (define (this-scheme-implementation-name)
   (let* ((machine-type-name (symbol->string (machine-type)))
          (threads (if (char=? (string-ref machine-type-name 0) #\t)
@@ -14,8 +18,3 @@
                                               "."
                                               (number->string c))))
                             "-" threads bits)))
-(define (current-second)
-  (time-second (current-time)))
-(define (current-jiffy)
-  (+ (current-second) (/ (time-nanosecond (current-time)) 1000000000)))
-(define (jiffies-per-second) 1)
