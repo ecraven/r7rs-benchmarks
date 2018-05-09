@@ -14,4 +14,20 @@
 (define (square x) (* x x))
 (define exact-integer? integer?)
 
+;; bv2string
+(use srfi-4 lolevel)
+
+(define make-bytevector make-u8vector)
+(define bytevector-u8-set! u8vector-set!)
+
+(define (string->utf8 string)
+  (let ((u8vector (make-u8vector (string-length string))))
+    (move-memory! string u8vector)
+    u8vector))
+
+(define (utf8->string u8vector)
+  (let ((string (make-string (u8vector-length u8vector))))
+    (move-memory! u8vector string)
+    string))
+
 (define (this-scheme-implementation-name) (string-append "chickencsi-" (chicken-version)))
