@@ -1,4 +1,5 @@
-(use extras) ;; for read-line
+(import chicken scheme srfi-4 lolevel)
+(use (rename extras (write-string %write-string))) ;; for read-line, write-string
 (use vector-lib) ;; for vector-map
 (define flush-output-port flush-output)
 (define-syntax import
@@ -13,6 +14,10 @@
 (define exact inexact->exact)
 (define (square x) (* x x))
 (define exact-integer? integer?)
+
+;; tail
+(define (write-string string #!optional out)
+  (%write-string string #f out))
 
 ;; bv2string
 (define make-bytevector make-u8vector)

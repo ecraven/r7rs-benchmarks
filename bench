@@ -349,7 +349,7 @@ chibi_exec ()
 
 chicken_comp ()
 {
-    OPTS="-optimize-leaf-routines -block -inline -inline-global -specialize -O3 -d0" # ecraven added -O3
+    OPTS="-M -optimize-leaf-routines -block -inline -inline-global -specialize -O3 -d0" # ecraven added -O3
     ${CHICKEN_CSC} ${OPTS} $1 -o $2 # ecraven removed -extend r7rs -require-extension r7rs which is very very bad for performance
 }
 
