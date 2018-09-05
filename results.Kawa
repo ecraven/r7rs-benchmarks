@@ -1,183 +1,196 @@
 
 ****************************
-Benchmarking Kawa on Wed 28 Feb 15:20:09 CET 2018 under Linux nexion 4.14.15-1-ARCH #1 SMP PREEMPT Tue Jan 23 21:49:25 UTC 2018 x86_64 GNU/Linux
+Benchmarking Kawa on Tue 4 Sep 23:46:19 CEST 2018 under Linux nexion 4.18.5-arch1-1-ARCH #1 SMP PREEMPT Fri Aug 24 12:48:58 UTC 2018 x86_64 GNU/Linux
 
 Testing browse under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/browse.scm /tmp/larcenous/Kawa/browse.scm
 Running...
+/tmp/larcenous/Kawa/browse.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/browse.scm:194:4: warning - no declaration seen for investigate
 /tmp/larcenous/Kawa/browse.scm:216:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/browse.scm:219:26: warning - no declaration seen for hide
 Running browse:2000
-Elapsed time: 28.933814783 seconds (28.934) for browse:2000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),browse:2000,28.933814783
+Elapsed time: 27.899156458 seconds (27.899) for browse:2000
++!CSVLINE!+kawa-3.0,browse:2000,27.899156458
 
-real	0m29.772s
-user	0m31.957s
-sys	0m0.206s
+real	0m28.595s
+user	0m29.696s
+sys	0m0.150s
 
 Testing deriv under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/deriv.scm /tmp/larcenous/Kawa/deriv.scm
 Running...
+/tmp/larcenous/Kawa/deriv.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/deriv.scm:59:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/deriv.scm:62:25: warning - no declaration seen for hide
 Running deriv:10000000
-Elapsed time: 27.072512562 seconds (27.073) for deriv:10000000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),deriv:10000000,27.072512562
+Elapsed time: 24.098408831 seconds (24.099) for deriv:10000000
++!CSVLINE!+kawa-3.0,deriv:10000000,24.098408831
 
-real	0m27.597s
-user	1m10.537s
-sys	0m4.039s
+real	0m24.614s
+user	1m15.313s
+sys	0m6.641s
 
 Testing destruc under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/destruc.scm /tmp/larcenous/Kawa/destruc.scm
 Running...
+/tmp/larcenous/Kawa/destruc.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/destruc.scm:73:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/destruc.scm:77:22: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/destruc.scm:77:42: warning - no declaration seen for hide
 Running destruc:600:50:4000
-Elapsed time: 66.77000897 seconds (66.77) for destruc:600:50:4000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),destruc:600:50:4000,66.77000897
+Elapsed time: 63.025305791 seconds (63.026) for destruc:600:50:4000
++!CSVLINE!+kawa-3.0,destruc:600:50:4000,63.025305791
 
-real	1m7.259s
-user	1m9.295s
-sys	0m0.110s
+real	1m3.469s
+user	1m4.274s
+sys	0m0.091s
 
 Testing diviter under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/diviter.scm /tmp/larcenous/Kawa/diviter.scm
 Running...
+/tmp/larcenous/Kawa/diviter.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/diviter.scm:38:25: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/diviter.scm:40:6: warning - no declaration seen for run-r7rs-benchmark
 Running diviter:1000:1000000
-Elapsed time: 32.515972529 seconds (32.516) for diviter:1000:1000000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),diviter:1000:1000000,32.515972529
+Elapsed time: 31.505041359 seconds (31.506) for diviter:1000:1000000
++!CSVLINE!+kawa-3.0,diviter:1000:1000000,31.505041359
 
-real	0m32.974s
-user	0m34.060s
-sys	0m0.200s
+real	0m31.930s
+user	0m32.692s
+sys	0m0.156s
 
 Testing divrec under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/divrec.scm /tmp/larcenous/Kawa/divrec.scm
 Running...
+/tmp/larcenous/Kawa/divrec.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/divrec.scm:37:25: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/divrec.scm:39:6: warning - no declaration seen for run-r7rs-benchmark
 Running divrec:1000:1000000
-Elapsed time: 33.54307343 seconds (33.543) for divrec:1000:1000000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),divrec:1000:1000000,33.54307343
+Elapsed time: 32.556848096 seconds (32.557) for divrec:1000:1000000
++!CSVLINE!+kawa-3.0,divrec:1000:1000000,32.556848096
 
-real	0m33.986s
-user	0m35.200s
-sys	0m0.173s
+real	0m33.016s
+user	0m33.702s
+sys	0m0.197s
 
 Testing puzzle under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/puzzle.scm /tmp/larcenous/Kawa/puzzle.scm
 Running...
+/tmp/larcenous/Kawa/puzzle.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/puzzle.scm:162:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/puzzle.scm:165:25: warning - no declaration seen for hide
 Running puzzle:1000
-Elapsed time: 112.917269595 seconds (112.918) for puzzle:1000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),puzzle:1000,112.917269595
+Elapsed time: 108.868161034 seconds (108.868) for puzzle:1000
++!CSVLINE!+kawa-3.0,puzzle:1000,108.868161034
 
-real	1m53.448s
-user	1m54.696s
-sys	0m0.063s
+real	1m49.367s
+user	1m50.343s
+sys	0m0.068s
 
 Testing triangl under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/triangl.scm /tmp/larcenous/Kawa/triangl.scm
 Running...
+/tmp/larcenous/Kawa/triangl.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/triangl.scm:81:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/triangl.scm:84:24: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/triangl.scm:84:44: warning - no declaration seen for hide
 Running triangl:22:1:50
-Elapsed time: 80.163820063 seconds (80.164) for triangl:22:1:50
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),triangl:22:1:50,80.163820063
+Elapsed time: 77.194850455 seconds (77.195) for triangl:22:1:50
++!CSVLINE!+kawa-3.0,triangl:22:1:50,77.194850455
 
-real	1m20.590s
-user	1m21.339s
-sys	0m0.030s
+real	1m17.667s
+user	1m18.295s
+sys	0m0.060s
 
 Testing tak under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/tak.scm /tmp/larcenous/Kawa/tak.scm
 Running...
+/tmp/larcenous/Kawa/tak.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/tak.scm:40:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/tak.scm:44:14: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/tak.scm:44:34: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/tak.scm:44:54: warning - no declaration seen for hide
 Running tak:40:20:11:1
-Elapsed time: 46.719197664 seconds (46.719) for tak:40:20:11:1
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),tak:40:20:11:1,46.719197664
+Elapsed time: 45.245021431 seconds (45.245) for tak:40:20:11:1
++!CSVLINE!+kawa-3.0,tak:40:20:11:1,45.245021431
 
-real	0m47.125s
-user	0m47.664s
-sys	0m0.033s
+real	0m45.688s
+user	0m46.178s
+sys	0m0.047s
 
 Testing takl under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/takl.scm /tmp/larcenous/Kawa/takl.scm
 Running...
+/tmp/larcenous/Kawa/takl.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/takl.scm:32:13: warning - no declaration seen for shorterp
 /tmp/larcenous/Kawa/takl.scm:55:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/takl.scm:59:14: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/takl.scm:59:34: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/takl.scm:59:54: warning - no declaration seen for hide
 Running takl:40:20:12:1
-Elapsed time: 137.385642923 seconds (137.386) for takl:40:20:12:1
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),takl:40:20:12:1,137.385642923
+Elapsed time: 132.604173646 seconds (132.604) for takl:40:20:12:1
++!CSVLINE!+kawa-3.0,takl:40:20:12:1,132.604173646
 
-real	2m17.827s
-user	2m18.482s
-sys	0m0.056s
+real	2m13.037s
+user	2m13.618s
+sys	0m0.050s
 
 Testing ntakl under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/ntakl.scm /tmp/larcenous/Kawa/ntakl.scm
 Running...
+/tmp/larcenous/Kawa/ntakl.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/ntakl.scm:33:13: warning - no declaration seen for shorterp
 /tmp/larcenous/Kawa/ntakl.scm:69:8: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/ntakl.scm:73:16: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/ntakl.scm:73:36: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/ntakl.scm:73:56: warning - no declaration seen for hide
 Running ntakl:40:20:12:1
-Elapsed time: 135.529446298 seconds (135.529) for ntakl:40:20:12:1
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),ntakl:40:20:12:1,135.529446298
+Elapsed time: 132.54843958 seconds (132.548) for ntakl:40:20:12:1
++!CSVLINE!+kawa-3.0,ntakl:40:20:12:1,132.54843958
 
-real	2m15.991s
-user	2m16.649s
-sys	0m0.046s
+real	2m12.971s
+user	2m13.504s
+sys	0m0.044s
 
 Testing cpstak under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/cpstak.scm /tmp/larcenous/Kawa/cpstak.scm
 Running...
+/tmp/larcenous/Kawa/cpstak.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/cpstak.scm:55:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/cpstak.scm:59:17: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/cpstak.scm:59:37: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/cpstak.scm:59:57: warning - no declaration seen for hide
 Running cpstak:40:20:11:1
 Exception in thread "main" java.lang.StackOverflowError
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:148)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at atInteractiveLevel-3$frame.lambda1tak(cpstak.scm:27)
+	at gnu.math.IntNum.compare(IntNum.java:164)
+	at gnu.kawa.functions.NumberCompare.compare(NumberCompare.java:197)
+	at gnu.kawa.functions.NumberCompare.compareStrict(NumberCompare.java:154)
+	at gnu.kawa.functions.NumberCompare.apply2(NumberCompare.java:123)
+	at gnu.kawa.functions.NumberCompare.$Ls(NumberCompare.java:48)
+	at atInteractiveLevel-3$frame.lambda1tak(cpstak.scm:26)
 	at atInteractiveLevel-3$frame0.lambda2(cpstak.scm:35)
 	at atInteractiveLevel-3$frame0.lambda2$check(cpstak.scm:31)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
@@ -1196,12 +1209,10 @@ Exception in thread "main" java.lang.StackOverflowError
 	at atInteractiveLevel-3$frame1.lambda3$check(cpstak.scm:35)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
 	at gnu.mapping.Procedure.apply1(Procedure.java:148)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at atInteractiveLevel-3$frame.lambda1tak(cpstak.scm:27)
 
-real	0m0.438s
-user	0m0.870s
-sys	0m0.043s
+real	0m0.464s
+user	0m0.958s
+sys	0m0.039s
 +!CSVLINE!+kawa,cpstak,CRASHED
 
 Testing ctak under Kawa
@@ -1209,145 +1220,155 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/ctak.scm /tmp/larcenous/Kawa/ctak.scm
 Running...
+/tmp/larcenous/Kawa/ctak.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/ctak.scm:24:17: warning - no declaration seen for ctak-aux
 /tmp/larcenous/Kawa/ctak.scm:51:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/ctak.scm:55:15: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/ctak.scm:55:35: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/ctak.scm:55:55: warning - no declaration seen for hide
 Running ctak:32:16:8:1
-Elapsed time: 135.436965713 seconds (135.437) for ctak:32:16:8:1
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),ctak:32:16:8:1,135.436965713
+Elapsed time: 131.247300823 seconds (131.247) for ctak:32:16:8:1
++!CSVLINE!+kawa-3.0,ctak:32:16:8:1,131.247300823
 
-real	2m15.886s
-user	2m20.078s
-sys	0m0.165s
+real	2m11.695s
+user	2m13.666s
+sys	0m0.539s
 
 Testing fib under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/fib.scm /tmp/larcenous/Kawa/fib.scm
 Running...
+/tmp/larcenous/Kawa/fib.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/fib.scm:35:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/fib.scm:38:23: warning - no declaration seen for hide
 Running fib:40:5
-Elapsed time: 117.831100033 seconds (117.831) for fib:40:5
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),fib:40:5,117.831100033
+Elapsed time: 114.442850345 seconds (114.443) for fib:40:5
++!CSVLINE!+kawa-3.0,fib:40:5,114.442850345
 
-real	1m58.240s
-user	1m58.830s
-sys	0m0.023s
+real	1m54.894s
+user	1m55.371s
+sys	0m0.037s
 
 Testing fibc under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/fibc.scm /tmp/larcenous/Kawa/fibc.scm
 Running...
+/tmp/larcenous/Kawa/fibc.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/fibc.scm:50:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/fibc.scm:53:24: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/fibc.scm:53:43: warning - no declaration seen for hide
 Running fibc:30:10
-Elapsed time: 94.365860441 seconds (94.366) for fibc:30:10
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),fibc:30:10,94.365860441
+Elapsed time: 92.574988991 seconds (92.575) for fibc:30:10
++!CSVLINE!+kawa-3.0,fibc:30:10,92.574988991
 
-real	1m34.795s
-user	1m36.904s
-sys	0m0.167s
+real	1m32.993s
+user	1m34.543s
+sys	0m0.358s
 
 Testing fibfp under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/fibfp.scm /tmp/larcenous/Kawa/fibfp.scm
 Running...
+/tmp/larcenous/Kawa/fibfp.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/fibfp.scm:35:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/fibfp.scm:38:25: warning - no declaration seen for hide
 Running fibfp:35.0:10
-Elapsed time: 21.477600885 seconds (21.478) for fibfp:35.0:10
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),fibfp:35.0:10,21.477600885
+Elapsed time: 20.732966316 seconds (20.733) for fibfp:35.0:10
++!CSVLINE!+kawa-3.0,fibfp:35.0:10,20.732966316
 
-real	0m21.908s
-user	0m22.761s
-sys	0m0.174s
+real	0m21.152s
+user	0m21.785s
+sys	0m0.127s
 
 Testing sum under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/sum.scm /tmp/larcenous/Kawa/sum.scm
 Running...
+/tmp/larcenous/Kawa/sum.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/sum.scm:35:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/sum.scm:38:23: warning - no declaration seen for hide
 Running sum:10000:200000
-Elapsed time: 170.293974862 seconds (170.294) for sum:10000:200000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),sum:10000:200000,170.293974862
+Elapsed time: 164.090692007 seconds (164.091) for sum:10000:200000
++!CSVLINE!+kawa-3.0,sum:10000:200000,164.090692007
 
-real	2m50.747s
-user	2m54.639s
-sys	0m0.324s
+real	2m44.536s
+user	2m46.730s
+sys	0m0.747s
 
 Testing sumfp under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/sumfp.scm /tmp/larcenous/Kawa/sumfp.scm
 Running...
+/tmp/larcenous/Kawa/sumfp.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/sumfp.scm:35:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/sumfp.scm:38:23: warning - no declaration seen for hide
 Running sumfp:1000000.0:500
-Elapsed time: 70.670671909 seconds (70.671) for sumfp:1000000.0:500
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),sumfp:1000000.0:500,70.670671909
+Elapsed time: 68.026932622 seconds (68.027) for sumfp:1000000.0:500
++!CSVLINE!+kawa-3.0,sumfp:1000000.0:500,68.026932622
 
-real	1m11.101s
-user	1m12.548s
-sys	0m0.240s
+real	1m8.452s
+user	1m9.382s
+sys	0m0.368s
 
 Testing fft under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/fft.scm /tmp/larcenous/Kawa/fft.scm
 Running...
+/tmp/larcenous/Kawa/fft.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/fft.scm:120:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/fft.scm:124:14: warning - no declaration seen for hide
 Running fft:65536:100
-Elapsed time: 115.2550478 seconds (115.255) for fft:65536:100
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),fft:65536:100,115.2550478
+Elapsed time: 108.684908477 seconds (108.685) for fft:65536:100
++!CSVLINE!+kawa-3.0,fft:65536:100,108.684908477
 
-real	1m55.732s
-user	2m0.627s
-sys	0m0.190s
+real	1m49.149s
+user	1m55.075s
+sys	0m0.218s
 
 Testing mbrot under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/mbrot.scm /tmp/larcenous/Kawa/mbrot.scm
 Running...
+/tmp/larcenous/Kawa/mbrot.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/mbrot.scm:69:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/mbrot.scm:72:24: warning - no declaration seen for hide
 Running mbrot:75:1000
-Elapsed time: 99.339424118 seconds (99.34) for mbrot:75:1000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),mbrot:75:1000,99.339424118
+Elapsed time: 95.398939428 seconds (95.399) for mbrot:75:1000
++!CSVLINE!+kawa-3.0,mbrot:75:1000,95.398939428
 
-real	1m39.821s
-user	1m43.192s
-sys	0m0.334s
+real	1m35.852s
+user	1m37.568s
+sys	0m0.388s
 
 Testing mbrotZ under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/mbrotZ.scm /tmp/larcenous/Kawa/mbrotZ.scm
 Running...
+/tmp/larcenous/Kawa/mbrotZ.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/mbrotZ.scm:74:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/mbrotZ.scm:77:24: warning - no declaration seen for hide
 Running mbrotZ:75:1000
-Elapsed time: 80.100852952 seconds (80.101) for mbrotZ:75:1000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),mbrotZ:75:1000,80.100852952
+Elapsed time: 77.998243281 seconds (77.998) for mbrotZ:75:1000
++!CSVLINE!+kawa-3.0,mbrotZ:75:1000,77.998243281
 
-real	1m20.583s
-user	1m23.571s
-sys	0m0.214s
+real	1m18.453s
+user	1m19.910s
+sys	0m0.440s
 
 Testing nucleic under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/nucleic.scm /tmp/larcenous/Kawa/nucleic.scm
 Running...
+/tmp/larcenous/Kawa/nucleic.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/nucleic.scm:3394:12: warning - no declaration seen for list-of-common-atoms
 /tmp/larcenous/Kawa/nucleic.scm:3395:12: warning - no declaration seen for list-of-specific-atoms
 /tmp/larcenous/Kawa/nucleic.scm:3470:4: warning - no declaration seen for maximum
@@ -1356,51 +1377,54 @@ Running...
 /tmp/larcenous/Kawa/nucleic.scm:3495:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/nucleic.scm:3498:23: warning - no declaration seen for hide
 Running nucleic:50
-Elapsed time: 43.229013505 seconds (43.229) for nucleic:50
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),nucleic:50,43.229013505
+Elapsed time: 41.199718983 seconds (41.2) for nucleic:50
++!CSVLINE!+kawa-3.0,nucleic:50,41.199718983
 
-real	0m44.192s
-user	0m49.873s
-sys	0m0.270s
+real	0m42.058s
+user	0m46.608s
+sys	0m0.231s
 
 Testing pi under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/pi.scm /tmp/larcenous/Kawa/pi.scm
 Running...
+/tmp/larcenous/Kawa/pi.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/pi.scm:130:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/pi.scm:134:15: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/pi.scm:135:15: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/pi.scm:136:15: warning - no declaration seen for hide
 Running pi:50:500:50:2
-Elapsed time: 12.419826513 seconds (12.42) for pi:50:500:50:2
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),pi:50:500:50:2,12.419826513
+Elapsed time: 12.032025344 seconds (12.032) for pi:50:500:50:2
++!CSVLINE!+kawa-3.0,pi:50:500:50:2,12.032025344
 
-real	0m12.891s
-user	0m14.318s
-sys	0m0.126s
+real	0m12.495s
+user	0m13.462s
+sys	0m0.080s
 
 Testing pnpoly under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/pnpoly.scm /tmp/larcenous/Kawa/pnpoly.scm
 Running...
+/tmp/larcenous/Kawa/pnpoly.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/pnpoly.scm:67:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/pnpoly.scm:70:23: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/pnpoly.scm:70:43: warning - no declaration seen for hide
 Running pnpoly:1000000
-Elapsed time: 108.877359898 seconds (108.878) for pnpoly:1000000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),pnpoly:1000000,108.877359898
+Elapsed time: 104.88839475 seconds (104.889) for pnpoly:1000000
++!CSVLINE!+kawa-3.0,pnpoly:1000000,104.88839475
 
-real	1m49.342s
-user	1m55.515s
-sys	0m0.534s
+real	1m45.372s
+user	1m51.599s
+sys	0m0.796s
 
 Testing ray under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/ray.scm /tmp/larcenous/Kawa/ray.scm
 Running...
+/tmp/larcenous/Kawa/ray.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/ray.scm:77:21: warning - no declaration seen for color-at
 /tmp/larcenous/Kawa/ray.scm:89:23: warning - no declaration seen for sendray
 /tmp/larcenous/Kawa/ray.scm:94:14: warning - no declaration seen for first-hit
@@ -1544,30 +1568,32 @@ ERROR: returned incorrect result: #(0.8 200.0 #(0.0 -300.0 -1200.0))#(0.7
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       300.0
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -2800.0))ok
 
-real	0m54.197s
-user	0m57.678s
-sys	0m0.184s
+real	0m51.867s
+user	0m54.371s
+sys	0m0.240s
 
 Testing simplex under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/simplex.scm /tmp/larcenous/Kawa/simplex.scm
 Running...
+/tmp/larcenous/Kawa/simplex.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/simplex.scm:215:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/simplex.scm:218:24: warning - no declaration seen for hide
 Running simplex:1000000
-Elapsed time: 82.40990277 seconds (82.41) for simplex:1000000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),simplex:1000000,82.40990277
+Elapsed time: 79.096255263 seconds (79.096) for simplex:1000000
++!CSVLINE!+kawa-3.0,simplex:1000000,79.096255263
 
-real	1m22.951s
-user	1m27.275s
-sys	0m0.142s
+real	1m19.605s
+user	1m21.515s
+sys	0m0.172s
 
 Testing ack under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/ack.scm /tmp/larcenous/Kawa/ack.scm
 Running...
+/tmp/larcenous/Kawa/ack.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/ack.scm:36:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/ack.scm:39:23: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/ack.scm:39:43: warning - no declaration seen for hide
@@ -2598,9 +2624,9 @@ Exception in thread "main" java.lang.StackOverflowError
 	at atInteractiveLevel-3.ack(ack.scm:25)
 	at atInteractiveLevel-3.ack(ack.scm:25)
 
-real	0m27.702s
-user	0m29.064s
-sys	0m0.077s
+real	0m26.612s
+user	0m28.044s
+sys	0m0.127s
 +!CSVLINE!+kawa,ack,CRASHED
 
 Testing array1 under Kawa
@@ -2608,114 +2634,122 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/array1.scm /tmp/larcenous/Kawa/array1.scm
 Running...
+/tmp/larcenous/Kawa/array1.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/array1.scm:52:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/array1.scm:55:22: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/array1.scm:55:41: warning - no declaration seen for hide
 Running array1:1000000:500
-Elapsed time: 278.168525829 seconds (278.169) for array1:1000000:500
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),array1:1000000:500,278.168525829
+./bench: line 766: 24997 Killed                  "${KAWA}" -f "$1" < "$2"
 
-real	4m38.630s
-user	4m46.215s
-sys	0m0.680s
+real	4m46.505s
+user	4m59.637s
+sys	0m0.574s
++!CSVLINE!+kawa,array1,ULIMITKILLED
 
 Testing string under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/string.scm /tmp/larcenous/Kawa/string.scm
 Running...
+/tmp/larcenous/Kawa/string.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/string.scm:49:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/string.scm:52:26: warning - no declaration seen for hide
 Running string:500000:25
-Elapsed time: 1.004803028 seconds (1.005) for string:500000:25
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),string:500000:25,1.004803028
+Elapsed time: 1.057377047 seconds (1.058) for string:500000:25
++!CSVLINE!+kawa-3.0,string:500000:25,1.057377047
 
-real	0m1.437s
-user	0m2.220s
-sys	0m0.106s
+real	0m1.496s
+user	0m2.085s
+sys	0m0.198s
 
 Testing sum1 under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/sum1.scm /tmp/larcenous/Kawa/sum1.scm
 Running...
+/tmp/larcenous/Kawa/sum1.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/sum1.scm:41:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/sum1.scm:44:22: warning - no declaration seen for hide
 Running sum1:25
-Elapsed time: 1.786466758 seconds (1.786) for sum1:25
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),sum1:25,1.786466758
+Elapsed time: 1.761978356 seconds (1.762) for sum1:25
++!CSVLINE!+kawa-3.0,sum1:25,1.761978356
 
-real	0m2.227s
-user	0m3.244s
-sys	0m0.100s
+real	0m2.189s
+user	0m2.993s
+sys	0m0.117s
 
 Testing cat under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/cat.scm /tmp/larcenous/Kawa/cat.scm
 Running...
+/tmp/larcenous/Kawa/cat.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/cat.scm:49:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/cat.scm:52:22: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/cat.scm:52:42: warning - no declaration seen for hide
 Running cat:50
-Elapsed time: 13.256656709 seconds (13.257) for cat:50
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),cat:50,13.256656709
+Elapsed time: 12.9435671 seconds (12.943) for cat:50
++!CSVLINE!+kawa-3.0,cat:50,12.9435671
 
-real	0m13.806s
-user	0m14.528s
-sys	0m0.250s
+real	0m13.403s
+user	0m13.966s
+sys	0m0.201s
 
 Testing tail under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/tail.scm /tmp/larcenous/Kawa/tail.scm
 Running...
+/tmp/larcenous/Kawa/tail.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/tail.scm:59:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/tail.scm:62:22: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/tail.scm:62:42: warning - no declaration seen for hide
 Running tail:25
-Elapsed time: 1.173996716 seconds (1.174) for tail:25
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),tail:25,1.173996716
+Elapsed time: 1.187940745 seconds (1.188) for tail:25
++!CSVLINE!+kawa-3.0,tail:25,1.187940745
 
-real	0m1.593s
-user	0m2.793s
-sys	0m0.224s
+real	0m1.616s
+user	0m2.838s
+sys	0m0.281s
 
 Testing wc under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/wc.scm /tmp/larcenous/Kawa/wc.scm
 Running...
+/tmp/larcenous/Kawa/wc.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/wc.scm:46:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/wc.scm:49:22: warning - no declaration seen for hide
 Running wc:inputs/bib:50
-Elapsed time: 9.303730964 seconds (9.304) for wc:inputs/bib:50
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),wc:inputs/bib:50,9.303730964
+Elapsed time: 8.988810483 seconds (8.989) for wc:inputs/bib:50
++!CSVLINE!+kawa-3.0,wc:inputs/bib:50,8.988810483
 
-real	0m9.785s
-user	0m10.623s
-sys	0m0.207s
+real	0m9.450s
+user	0m10.099s
+sys	0m0.187s
 
 Testing read1 under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/read1.scm /tmp/larcenous/Kawa/read1.scm
 Running...
+/tmp/larcenous/Kawa/read1.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/read1.scm:63:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/read1.scm:66:44: warning - no declaration seen for hide
 Running read1:2500
-Elapsed time: 4.220549029 seconds (4.22) for read1:2500
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),read1:2500,4.220549029
+Elapsed time: 4.277633564 seconds (4.277) for read1:2500
++!CSVLINE!+kawa-3.0,read1:2500,4.277633564
 
-real	0m4.672s
-user	0m5.929s
-sys	0m0.110s
+real	0m4.726s
+user	0m5.738s
+sys	0m0.135s
 
 Testing compiler under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/compiler.scm /tmp/larcenous/Kawa/compiler.scm
 Running...
+/tmp/larcenous/Kawa/compiler.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/compiler.scm:81:38: warning - no declaration seen for scheme-global-eval
 /tmp/larcenous/Kawa/compiler.scm:83:4: warning - no declaration seen for scheme-global-eval
 /tmp/larcenous/Kawa/compiler.scm:202:32: warning - no declaration seen for throw-to-exception-handler
@@ -2918,9 +2952,9 @@ Running...
 /tmp/larcenous/Kawa/compiler.scm:2054:36: warning - not a type or class expression
 /tmp/larcenous/Kawa/compiler.scm:2054:13: call to 'length?' has too many arguments (2; must be 1)
 
-real	0m1.346s
-user	0m4.699s
-sys	0m0.071s
+real	0m1.094s
+user	0m3.543s
+sys	0m0.076s
 +!CSVLINE!+kawa,compiler,CRASHED
 
 Testing conform under Kawa
@@ -2928,6 +2962,7 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/conform.scm /tmp/larcenous/Kawa/conform.scm
 Running...
+/tmp/larcenous/Kawa/conform.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/conform.scm:88:58: warning - no declaration seen for blue-edges
 /tmp/larcenous/Kawa/conform.scm:95:14: warning - no declaration seen for none-node?
 /tmp/larcenous/Kawa/conform.scm:95:32: warning - no declaration seen for any-node?
@@ -2947,18 +2982,19 @@ Running...
 /tmp/larcenous/Kawa/conform.scm:389:51: warning - no declaration seen for join
 /tmp/larcenous/Kawa/conform.scm:482:6: warning - no declaration seen for run-r7rs-benchmark
 Running conform:500
-Elapsed time: 79.447035636 seconds (79.447) for conform:500
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),conform:500,79.447035636
+Elapsed time: 76.328847938 seconds (76.329) for conform:500
++!CSVLINE!+kawa-3.0,conform:500,76.328847938
 
-real	1m20.167s
-user	1m34.110s
-sys	0m1.010s
+real	1m16.986s
+user	1m31.620s
+sys	0m1.862s
 
 Testing dynamic under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/dynamic.scm /tmp/larcenous/Kawa/dynamic.scm
 Running...
+/tmp/larcenous/Kawa/dynamic.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/dynamic.scm:132:6: warning - no declaration seen for dynamic-parse-action-null-const
 /tmp/larcenous/Kawa/dynamic.scm:134:6: warning - no declaration seen for dynamic-parse-action-boolean-const
 /tmp/larcenous/Kawa/dynamic.scm:136:6: warning - no declaration seen for dynamic-parse-action-char-const
@@ -3110,40 +3146,44 @@ Running...
 /tmp/larcenous/Kawa/dynamic.scm:2341:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/dynamic.scm:2344:24: warning - no declaration seen for hide
 Running dynamic:500
-Elapsed time: 50.88563634 seconds (50.886) for dynamic:500
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),dynamic:500,50.88563634
+Elapsed time: 47.115481929 seconds (47.115) for dynamic:500
++!CSVLINE!+kawa-3.0,dynamic:500,47.115481929
 
-real	0m52.128s
-user	1m10.092s
-sys	0m1.266s
+real	0m48.101s
+user	1m4.931s
+sys	0m1.445s
 
 Testing earley under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/earley.scm /tmp/larcenous/Kawa/earley.scm
 Running...
+/tmp/larcenous/Kawa/earley.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/earley.scm:670:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/earley.scm:673:24: warning - no declaration seen for hide
 Running earley:1
-Elapsed time: 27.687609954 seconds (27.687) for earley:1
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),earley:1,27.687609954
+Elapsed time: 24.709142501 seconds (24.709) for earley:1
++!CSVLINE!+kawa-3.0,earley:1,24.709142501
 
-real	0m28.375s
-user	1m3.497s
-sys	0m1.213s
+real	0m25.315s
+user	0m59.981s
+sys	0m0.812s
 
 Testing graphs under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/graphs.scm /tmp/larcenous/Kawa/graphs.scm
 Running...
+/tmp/larcenous/Kawa/graphs.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/graphs.scm:308:39: warning - no declaration seen for cmp-next-vertex
 /tmp/larcenous/Kawa/graphs.scm:447:24: warning - no declaration seen for make-reach?
 /tmp/larcenous/Kawa/graphs.scm:623:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/graphs.scm:626:31: warning - no declaration seen for hide
 Running graphs:7:3
 Exception in thread "main" java.lang.StackOverflowError
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:74)
+	at atInteractiveLevel-14.lambda1(graphs.scm:332)
+	at atInteractiveLevel-14.lambda1$check(graphs.scm:332)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
 	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
 	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
@@ -3195,6 +3235,47 @@ Exception in thread "main" java.lang.StackOverflowError
 	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
 	at atInteractiveLevel-12$frame0.lambda3_$Mn$St$St$Mn(graphs.scm:254)
+	at atInteractiveLevel-12$frame1.lambda4(graphs.scm:245)
+	at atInteractiveLevel-12$frame1.lambda4$check(graphs.scm:242)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:148)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at atInteractiveLevel-15$frame.lambda3cont(graphs.scm:404)
+	at atInteractiveLevel-15$frame.lambda3cont$check(graphs.scm:401)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply3(Procedure.java:161)
+	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
+	at atInteractiveLevel-13$frame0.lambda4(graphs.scm:325)
+	at atInteractiveLevel-13$frame0.lambda4$check(graphs.scm:321)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply3(Procedure.java:161)
+	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
+	at atInteractiveLevel-12$frame.lambda2_$Mn$St$Mn(graphs.scm:227)
+	at atInteractiveLevel-12$frame1.lambda5(graphs.scm:253)
+	at atInteractiveLevel-12$frame1.lambda5$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at atInteractiveLevel-13$frame0.lambda3(graphs.scm:314)
+	at atInteractiveLevel-13$frame0.lambda3$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at atInteractiveLevel-12$frame0.lambda3_$Mn$St$St$Mn(graphs.scm:254)
+	at atInteractiveLevel-12$frame.lambda2_$Mn$St$Mn(graphs.scm:228)
+	at atInteractiveLevel-12$frame1.lambda5(graphs.scm:253)
+	at atInteractiveLevel-12$frame1.lambda5$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at atInteractiveLevel-13$frame0.lambda3(graphs.scm:314)
+	at atInteractiveLevel-13$frame0.lambda3$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at atInteractiveLevel-12$frame0.lambda3_$Mn$St$St$Mn(graphs.scm:254)
 	at atInteractiveLevel-12$frame.lambda2_$Mn$St$Mn(graphs.scm:228)
 	at atInteractiveLevel-12$frame1.lambda5(graphs.scm:253)
 	at atInteractiveLevel-12$frame1.lambda5$check(graphs.scm:249)
@@ -4124,53 +4205,10 @@ Exception in thread "main" java.lang.StackOverflowError
 	at atInteractiveLevel-13$frame0.lambda3(graphs.scm:314)
 	at atInteractiveLevel-13$frame0.lambda3$check(graphs.scm:307)
 	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at atInteractiveLevel-12$frame0.lambda3_$Mn$St$St$Mn(graphs.scm:254)
-	at atInteractiveLevel-12$frame1.lambda4(graphs.scm:245)
-	at atInteractiveLevel-12$frame1.lambda4$check(graphs.scm:242)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:148)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at atInteractiveLevel-15$frame.lambda3cont(graphs.scm:404)
-	at atInteractiveLevel-15$frame.lambda3cont$check(graphs.scm:401)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply3(Procedure.java:161)
-	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
-	at atInteractiveLevel-13$frame0.lambda4(graphs.scm:325)
-	at atInteractiveLevel-13$frame0.lambda4$check(graphs.scm:321)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply3(Procedure.java:161)
-	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
-	at atInteractiveLevel-12$frame.lambda2_$Mn$St$Mn(graphs.scm:227)
-	at atInteractiveLevel-12$frame1.lambda5(graphs.scm:253)
-	at atInteractiveLevel-12$frame1.lambda5$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at atInteractiveLevel-13$frame0.lambda3(graphs.scm:314)
-	at atInteractiveLevel-13$frame0.lambda3$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at atInteractiveLevel-12$frame0.lambda3_$Mn$St$St$Mn(graphs.scm:254)
-	at atInteractiveLevel-12$frame.lambda2_$Mn$St$Mn(graphs.scm:228)
-	at atInteractiveLevel-12$frame1.lambda5(graphs.scm:253)
-	at atInteractiveLevel-12$frame1.lambda5$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at atInteractiveLevel-13$frame0.lambda3(graphs.scm:314)
-	at atInteractiveLevel-13$frame0.lambda3$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
 
-real	0m0.566s
-user	0m1.471s
-sys	0m0.049s
+real	0m0.552s
+user	0m1.310s
+sys	0m0.079s
 +!CSVLINE!+kawa,graphs,CRASHED
 
 Testing lattice under Kawa
@@ -4178,23 +4216,25 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/lattice.scm /tmp/larcenous/Kawa/lattice.scm
 Running...
+/tmp/larcenous/Kawa/lattice.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/lattice.scm:77:14: warning - no declaration seen for xreverse!
 /tmp/larcenous/Kawa/lattice.scm:196:14: warning - no declaration seen for sum
 /tmp/larcenous/Kawa/lattice.scm:250:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/lattice.scm:253:23: warning - no declaration seen for hide
 Running lattice:44:10
-Elapsed time: 89.971816525 seconds (89.972) for lattice:44:10
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),lattice:44:10,89.971816525
+Elapsed time: 85.974465884 seconds (85.974) for lattice:44:10
++!CSVLINE!+kawa-3.0,lattice:44:10,85.974465884
 
-real	1m30.462s
-user	1m33.709s
-sys	0m0.334s
+real	1m26.470s
+user	1m29.445s
+sys	0m0.379s
 
 Testing matrix under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/matrix.scm /tmp/larcenous/Kawa/matrix.scm
 Running...
+/tmp/larcenous/Kawa/matrix.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/matrix.scm:106:17: warning - no declaration seen for zunda
 /tmp/larcenous/Kawa/matrix.scm:104:12: warning - no declaration seen for gen-perms
 /tmp/larcenous/Kawa/matrix.scm:136:8: warning - no declaration seen for zebra
@@ -4211,18 +4251,19 @@ Running...
 /tmp/larcenous/Kawa/matrix.scm:821:29: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/matrix.scm:821:49: warning - no declaration seen for hide
 Running matrix:5:5:2500
-Elapsed time: 35.072654463 seconds (35.073) for matrix:5:5:2500
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),matrix:5:5:2500,35.072654463
+Elapsed time: 33.45077667 seconds (33.451) for matrix:5:5:2500
++!CSVLINE!+kawa-3.0,matrix:5:5:2500,33.45077667
 
-real	0m35.776s
-user	0m44.097s
-sys	0m0.885s
+real	0m34.135s
+user	0m41.711s
+sys	0m1.065s
 
 Testing maze under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/maze.scm /tmp/larcenous/Kawa/maze.scm
 Running...
+/tmp/larcenous/Kawa/maze.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/maze.scm:542:37: warning - no declaration seen for for-each-hex-child
 /tmp/larcenous/Kawa/maze.scm:580:15: warning - no declaration seen for bit-test
 /tmp/larcenous/Kawa/maze.scm:581:15: warning - no declaration seen for bit-test
@@ -4242,18 +4283,19 @@ Running...
 /tmp/larcenous/Kawa/maze.scm:766:23: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/maze.scm:766:43: warning - no declaration seen for hide
 Running maze:20:7:10000
-Elapsed time: 29.287146752 seconds (29.287) for maze:20:7:10000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),maze:20:7:10000,29.287146752
+Elapsed time: 27.726030938 seconds (27.726) for maze:20:7:10000
++!CSVLINE!+kawa-3.0,maze:20:7:10000,27.726030938
 
-real	0m30.077s
-user	0m36.013s
-sys	0m0.491s
+real	0m28.353s
+user	0m33.430s
+sys	0m0.443s
 
 Testing mazefun under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/mazefun.scm /tmp/larcenous/Kawa/mazefun.scm
 Running...
+/tmp/larcenous/Kawa/mazefun.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/mazefun.scm:110:6: warning - no declaration seen for shuffle-aux
 /tmp/larcenous/Kawa/mazefun.scm:139:12: warning - no declaration seen for cave-to-maze
 /tmp/larcenous/Kawa/mazefun.scm:139:26: warning - no declaration seen for pierce-randomly
@@ -4266,11 +4308,11 @@ Running...
 /tmp/larcenous/Kawa/mazefun.scm:216:29: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/mazefun.scm:216:49: warning - no declaration seen for hide
 Running mazefun:11:11:10000
-Elapsed time: 101.455545298 seconds (101.455) for mazefun:11:11:10000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),mazefun:11:11:10000,101.455545298
+Elapsed time: 97.843418824 seconds (97.843) for mazefun:11:11:10000
++!CSVLINE!+kawa-3.0,mazefun:11:11:10000,97.843418824
 
-real	1m42.042s
-user	1m46.152s
+real	1m38.377s
+user	1m40.871s
 sys	0m0.213s
 
 Testing nqueens under Kawa
@@ -4278,38 +4320,41 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/nqueens.scm /tmp/larcenous/Kawa/nqueens.scm
 Running...
+/tmp/larcenous/Kawa/nqueens.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/nqueens.scm:58:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/nqueens.scm:61:27: warning - no declaration seen for hide
 Running nqueens:13:10
-Elapsed time: 183.33678326 seconds (183.337) for nqueens:13:10
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),nqueens:13:10,183.33678326
+Elapsed time: 177.201167091 seconds (177.201) for nqueens:13:10
++!CSVLINE!+kawa-3.0,nqueens:13:10,177.201167091
 
-real	3m3.781s
-user	3m8.346s
-sys	0m0.111s
+real	2m57.654s
+user	2m58.450s
+sys	0m0.118s
 
 Testing paraffins under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/paraffins.scm /tmp/larcenous/Kawa/paraffins.scm
 Running...
+/tmp/larcenous/Kawa/paraffins.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/paraffins.scm:35:21: warning - no declaration seen for three-partitions
 /tmp/larcenous/Kawa/paraffins.scm:100:21: warning - no declaration seen for four-partitions
 /tmp/larcenous/Kawa/paraffins.scm:203:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/paraffins.scm:206:22: warning - no declaration seen for hide
 Running paraffins:23:10
-Elapsed time: 30.10146527 seconds (30.101) for paraffins:23:10
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),paraffins:23:10,30.10146527
+Elapsed time: 28.462819435 seconds (28.463) for paraffins:23:10
++!CSVLINE!+kawa-3.0,paraffins:23:10,28.462819435
 
-real	0m30.561s
-user	2m22.447s
-sys	0m1.259s
+real	0m29.001s
+user	2m47.173s
+sys	0m1.036s
 
 Testing parsing under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/parsing.scm /tmp/larcenous/Kawa/parsing.scm
 Running...
+/tmp/larcenous/Kawa/parsing.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/parsing.scm:57:25: warning - no declaration seen for read-file-as-string
 /tmp/larcenous/Kawa/parsing.scm:61:26: warning - no declaration seen for parse-string
 /tmp/larcenous/Kawa/parsing.scm:501:14: warning - no use of state31
@@ -5341,9 +5386,9 @@ Exception Details:
 	at kawa.repl.processArgs(repl.java:288)
 	at kawa.repl.main(repl.java:820)
 
-real	0m0.730s
-user	0m2.020s
-sys	0m0.063s
+real	0m0.760s
+user	0m1.867s
+sys	0m0.073s
 +!CSVLINE!+kawa,parsing,CRASHED
 
 Testing peval under Kawa
@@ -5351,6 +5396,7 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/peval.scm /tmp/larcenous/Kawa/peval.scm
 Running...
+/tmp/larcenous/Kawa/peval.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/peval.scm:49:4: warning - no declaration seen for peval
 /tmp/larcenous/Kawa/peval.scm:49:11: warning - no declaration seen for alphatize
 /tmp/larcenous/Kawa/peval.scm:53:13: warning - no declaration seen for const-expr?
@@ -5387,33 +5433,35 @@ Running...
 /tmp/larcenous/Kawa/peval.scm:656:24: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/peval.scm:656:44: warning - no declaration seen for hide
 Running peval:2000
-Elapsed time: 52.576346343 seconds (52.576) for peval:2000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),peval:2000,52.576346343
+Elapsed time: 48.91497106 seconds (48.915) for peval:2000
++!CSVLINE!+kawa-3.0,peval:2000,48.91497106
 
-real	0m53.248s
-user	1m38.303s
-sys	0m4.647s
+real	0m49.578s
+user	1m43.500s
+sys	0m7.760s
 
 Testing primes under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/primes.scm /tmp/larcenous/Kawa/primes.scm
 Running...
+/tmp/larcenous/Kawa/primes.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/primes.scm:51:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/primes.scm:54:28: warning - no declaration seen for hide
 Running primes:1000:10000
-Elapsed time: 22.647788092 seconds (22.648) for primes:1000:10000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),primes:1000:10000,22.647788092
+Elapsed time: 22.225750588 seconds (22.226) for primes:1000:10000
++!CSVLINE!+kawa-3.0,primes:1000:10000,22.225750588
 
-real	0m23.071s
-user	0m24.226s
-sys	0m0.177s
+real	0m22.663s
+user	0m23.480s
+sys	0m0.132s
 
 Testing quicksort under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/quicksort.scm /tmp/larcenous/Kawa/quicksort.scm
 Running...
+/tmp/larcenous/Kawa/quicksort.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/quicksort.scm:27:24: warning - no declaration seen for partition
 /tmp/larcenous/Kawa/quicksort.scm:115:30: warning - void-valued expression where value is needed
 /tmp/larcenous/Kawa/quicksort.scm:116:30: warning - void-valued expression where value is needed
@@ -5424,18 +5472,19 @@ Running...
 /tmp/larcenous/Kawa/quicksort.scm:153:18: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/quicksort.scm:158:6: warning - no declaration seen for run-r7rs-benchmark
 Running quicksort:10000:2500
-Elapsed time: 122.428753846 seconds (122.429) for quicksort:10000:2500
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),quicksort:10000:2500,122.428753846
+Elapsed time: 117.374483165 seconds (117.375) for quicksort:10000:2500
++!CSVLINE!+kawa-3.0,quicksort:10000:2500,117.374483165
 
-real	2m3.007s
-user	2m7.617s
-sys	0m0.143s
+real	1m57.943s
+user	1m59.355s
+sys	0m0.166s
 
 Testing scheme under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/scheme.scm /tmp/larcenous/Kawa/scheme.scm
 Running...
+/tmp/larcenous/Kawa/scheme.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/scheme.scm:25:16: warning - no declaration seen for scheme-comp
 /tmp/larcenous/Kawa/scheme.scm:25:33: warning - no declaration seen for scheme-global-environment
 /tmp/larcenous/Kawa/scheme.scm:122:4: warning - no declaration seen for gen-var-ref
@@ -5573,18 +5622,19 @@ Running...
 /tmp/larcenous/Kawa/scheme.scm:1066:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/scheme.scm:1069:31: warning - no declaration seen for hide
 Running scheme:100000
-Elapsed time: 85.454561635 seconds (85.455) for scheme:100000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),scheme:100000,85.454561635
+Elapsed time: 83.627316804 seconds (83.628) for scheme:100000
++!CSVLINE!+kawa-3.0,scheme:100000,83.627316804
 
-real	1m26.385s
-user	1m31.826s
-sys	0m0.230s
+real	1m24.441s
+user	1m27.254s
+sys	0m0.098s
 
 Testing slatex under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/slatex.scm /tmp/larcenous/Kawa/slatex.scm
 Running...
+/tmp/larcenous/Kawa/slatex.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/slatex.scm:65:25: warning - no declaration seen for slatex.error
 /tmp/larcenous/Kawa/slatex.scm:115:25: warning - no declaration seen for slatex.error
 /tmp/larcenous/Kawa/slatex.scm:135:10: warning - no declaration seen for slatex.*slatex-case-sensitive?*
@@ -5695,9 +5745,9 @@ java.net.UnknownServiceException: protocol doesn't support output
 	at kawa.repl.processArgs(repl.java:288)
 	at kawa.repl.main(repl.java:820)
 
-real	0m10.613s
-user	0m19.499s
-sys	0m1.357s
+real	0m9.897s
+user	0m16.208s
+sys	0m1.469s
 +!CSVLINE!+kawa,slatex,CRASHED
 
 Testing chudnovsky under Kawa
@@ -5705,23 +5755,25 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/chudnovsky.scm /tmp/larcenous/Kawa/chudnovsky.scm
 Running...
+/tmp/larcenous/Kawa/chudnovsky.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/chudnovsky.scm:76:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/chudnovsky.scm:80:15: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/chudnovsky.scm:81:15: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/chudnovsky.scm:82:15: warning - no declaration seen for hide
 Running chudnovsky:50:500:50:20
-Elapsed time: 1.958664252 seconds (1.958) for chudnovsky:50:500:50:20
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),chudnovsky:50:500:50:20,1.958664252
+Elapsed time: 1.838424091 seconds (1.839) for chudnovsky:50:500:50:20
++!CSVLINE!+kawa-3.0,chudnovsky:50:500:50:20,1.838424091
 
-real	0m2.472s
-user	0m3.753s
-sys	0m0.054s
+real	0m2.305s
+user	0m3.387s
+sys	0m0.067s
 
 Testing nboyer under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/nboyer.scm /tmp/larcenous/Kawa/nboyer.scm
 Running...
+/tmp/larcenous/Kawa/nboyer.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/nboyer.scm:84:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/nboyer.scm:88:9: warning - no declaration seen for setup-boyer
 /tmp/larcenous/Kawa/nboyer.scm:89:9: warning - no declaration seen for test-boyer
@@ -5735,15 +5787,16 @@ Running...
 Running nboyer:5:1
 ERROR: returned incorrect result: #t
 
-real	0m0.493s
-user	0m1.182s
-sys	0m0.018s
+real	0m0.481s
+user	0m1.127s
+sys	0m0.027s
 
 Testing sboyer under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/sboyer.scm /tmp/larcenous/Kawa/sboyer.scm
 Running...
+/tmp/larcenous/Kawa/sboyer.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/sboyer.scm:84:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/sboyer.scm:88:9: warning - no declaration seen for setup-boyer
 /tmp/larcenous/Kawa/sboyer.scm:89:9: warning - no declaration seen for test-boyer
@@ -5787,9 +5840,9 @@ gnu.mapping.WrongArguments: call to 'test-boyer' has too many arguments (3; must
 	at kawa.repl.processArgs(repl.java:288)
 	at kawa.repl.main(repl.java:820)
 
-real	0m0.503s
-user	0m1.165s
-sys	0m0.043s
+real	0m0.482s
+user	0m1.093s
+sys	0m0.049s
 +!CSVLINE!+kawa,sboyer,CRASHED
 
 Testing gcbench under Kawa
@@ -5797,6 +5850,7 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/gcbench.scm /tmp/larcenous/Kawa/gcbench.scm
 Running...
+/tmp/larcenous/Kawa/gcbench.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/gcbench.scm:95:7: warning - no use of classNode?
 /tmp/larcenous/Kawa/gcbench.scm:98:14: warning - no use of node.i
 /tmp/larcenous/Kawa/gcbench.scm:98:25: warning - no use of node.i-set!
@@ -5839,18 +5893,19 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 6.544959202 seconds (6.545) for gcbench:20:1
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),gcbench:20:1,6.544959202
+Elapsed time: 5.457728288 seconds (5.458) for gcbench:20:1
++!CSVLINE!+kawa-3.0,gcbench:20:1,5.457728288
 
-real	0m7.032s
-user	0m8.958s
-sys	0m0.187s
+real	0m5.919s
+user	0m7.721s
+sys	0m0.270s
 
 Testing mperm under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/mperm.scm /tmp/larcenous/Kawa/mperm.scm
 Running...
+/tmp/larcenous/Kawa/mperm.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/mperm.scm:150:6: warning - no declaration seen for MpermNKL-benchmark
 /tmp/larcenous/Kawa/mperm.scm:189:10: warning - no declaration seen for run-benchmark
 /tmp/larcenous/Kawa/mperm.scm:212:10: warning - no declaration seen for run-r7rs-benchmark
@@ -5859,18 +5914,19 @@ Running...
 /tmp/larcenous/Kawa/mperm.scm:227:26: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/mperm.scm:228:26: warning - no declaration seen for hide
 Running mperm:20:10:2:1
-Elapsed time: 102.503980837 seconds (102.504) for mperm:20:10:2:1
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),mperm:20:10:2:1,102.503980837
+./bench: line 766: 25973 Killed                  "${KAWA}" -f "$1" < "$2"
 
-real	1m49.523s
-user	4m52.579s
-sys	0m1.844s
+real	1m29.104s
+user	4m58.911s
+sys	0m1.200s
++!CSVLINE!+kawa,mperm,ULIMITKILLED
 
 Testing equal under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/equal.scm /tmp/larcenous/Kawa/equal.scm
 Running...
+/tmp/larcenous/Kawa/equal.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/equal.scm:94:17: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/equal.scm:102:17: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/equal.scm:110:17: warning - no declaration seen for hide
@@ -5885,27 +5941,28 @@ Running...
 /tmp/larcenous/Kawa/equal.scm:173:30: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/equal.scm:174:30: warning - no declaration seen for hide
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 6.421583145 seconds (6.421) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),equal:100:100:8:1000:2000:5000,6.421583145
+Elapsed time: 6.286596907 seconds (6.287) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+kawa-3.0,equal:100:100:8:1000:2000:5000,6.286596907
 
-real	0m6.921s
-user	0m8.255s
-sys	0m0.142s
+real	0m6.797s
+user	0m7.619s
+sys	0m0.271s
 
 Testing bv2string under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
 kawa_comp /tmp/larcenous/Kawa/bv2string.scm /tmp/larcenous/Kawa/bv2string.scm
 Running...
+/tmp/larcenous/Kawa/bv2string.scm:17:79: warning - no known slot 'split' in java.lang.CharSequence
 /tmp/larcenous/Kawa/bv2string.scm:108:12: warning - no use of random-bytevector2
 /tmp/larcenous/Kawa/bv2string.scm:118:12: warning - no use of random-bytevector4
 /tmp/larcenous/Kawa/bv2string.scm:144:6: warning - no declaration seen for run-r7rs-benchmark
 /tmp/larcenous/Kawa/bv2string.scm:148:34: warning - no declaration seen for hide
 /tmp/larcenous/Kawa/bv2string.scm:148:54: warning - no declaration seen for hide
 Running bv2string:1000:1000:100
-Elapsed time: 18.294198899 seconds (18.295) for bv2string:1000:1000:100
-+!CSVLINE!+kawa-3.0 (git describe: 3.0-0-g39797ea94),bv2string:1000:1000:100,18.294198899
+Elapsed time: 17.901045848 seconds (17.901) for bv2string:1000:1000:100
++!CSVLINE!+kawa-3.0,bv2string:1000:1000:100,17.901045848
 
-real	0m18.752s
-user	0m20.194s
-sys	0m0.139s
+real	0m18.393s
+user	0m19.315s
+sys	0m0.164s
