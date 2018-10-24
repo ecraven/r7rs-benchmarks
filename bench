@@ -121,8 +121,10 @@ setup ()
     GUILD=${GUILD:-"guild"}
     GUILE=${GUILE:-"guile"}
     HUSKI=${HUSKI:-"huski"}
+    JAVA=${JAVA:-"java"}
     IRONSCHEME=${IRONSCHEME:-"ironscheme"}
     KAWA=${KAWA:-"kawa"}
+    KAWAJAR=${KAWAJAR:-/usr/share/kawa/lib/kawa.jar}
     LARCENY=${LARCENY:-"larceny"}
     MIT=${MIT:-"mit-scheme"}
     MOSH=${MOSH:-"mosh-scheme"}
@@ -734,7 +736,7 @@ gerbil_exec ()
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Kawa
+# Definitions specific to Husk
 
 # I could not get huskc to work:
 #
@@ -759,12 +761,14 @@ husk_exec ()
 
 kawa_comp ()
 {
-    :
+    classname=$(basename -s .scm $1)
+    "${KAWA}" --r7rs --no-warn-unused -d out --main -T $classname -C $1
 }
 
 kawa_exec ()
 {
-    time "${KAWA}" -f "$1" < "$2"
+    classname=$(basename -s .scm $1)
+    time "${JAVA}" -cp $KAWAJAR:$(dirname $0)/out $classname < "$2"
 }
 
 # -----------------------------------------------------------------------------
