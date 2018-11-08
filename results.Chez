@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking Chez on Tue 4 Sep 14:31:11 CEST 2018 under Linux nexion 4.18.5-arch1-1-ARCH #1 SMP PREEMPT Fri Aug 24 12:48:58 UTC 2018 x86_64 GNU/Linux
+Benchmarking Chez on Wed 24 Oct 10:00:54 CEST 2018 under Linux nexion 4.18.8-arch1-1-ARCH #1 SMP PREEMPT Sat Sep 15 20:34:48 UTC 2018 x86_64 GNU/Linux
 
 Testing browse under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -8,12 +8,13 @@ Including postlude /home/nex/src/r7rs-benchmarks/src/Chez-postlude.scm
 Compiling...
 chez_comp /tmp/larcenous/Chez/browse.scm /tmp/larcenous/Chez/browse.scm
 Running...
+compiling /home/nex/scheme/chez/scheme/base.sls with output to /home/nex/scheme/chez/scheme/base.so
 Running browse:2000
-Elapsed time: 0.775377392 seconds (1.0) for browse:2000
-+!CSVLINE!+chez-9.5.1-m64,browse:2000,0.775377392
+Elapsed time: 0.719848957 seconds (1.0) for browse:2000
++!CSVLINE!+chez-9.5.1-m64,browse:2000,0.719848957
 
-real	0m0.907s
-user	0m0.894s
+real	0m0.898s
+user	0m0.882s
 sys	0m0.010s
 
 Testing deriv under Chez
@@ -23,12 +24,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/deriv.scm /tmp/larcenous/Chez/deriv.scm
 Running...
 Running deriv:10000000
-Elapsed time: 1.054172267 seconds (1.0) for deriv:10000000
-+!CSVLINE!+chez-9.5.1-m64,deriv:10000000,1.054172267
+Elapsed time: 0.93034291 seconds (1.0) for deriv:10000000
++!CSVLINE!+chez-9.5.1-m64,deriv:10000000,0.93034291
 
-real	0m1.183s
-user	0m1.152s
-sys	0m0.027s
+real	0m1.062s
+user	0m1.039s
+sys	0m0.020s
 
 Testing destruc under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -37,12 +38,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/destruc.scm /tmp/larcenous/Chez/destruc.scm
 Running...
 Running destruc:600:50:4000
-Elapsed time: 2.090221706 seconds (3.0) for destruc:600:50:4000
-+!CSVLINE!+chez-9.5.1-m64,destruc:600:50:4000,2.090221706
+Elapsed time: 1.99241597 seconds (2.0) for destruc:600:50:4000
++!CSVLINE!+chez-9.5.1-m64,destruc:600:50:4000,1.99241597
 
-real	0m2.222s
-user	0m2.204s
-sys	0m0.014s
+real	0m2.117s
+user	0m2.095s
+sys	0m0.020s
 
 Testing diviter under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -51,12 +52,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/diviter.scm /tmp/larcenous/Chez/diviter.scm
 Running...
 Running diviter:1000:1000000
-Elapsed time: 1.521224309 seconds (1.0) for diviter:1000:1000000
-+!CSVLINE!+chez-9.5.1-m64,diviter:1000:1000000,1.521224309
+Elapsed time: 1.444194266 seconds (1.0) for diviter:1000:1000000
++!CSVLINE!+chez-9.5.1-m64,diviter:1000:1000000,1.444194266
 
-real	0m1.651s
-user	0m1.613s
-sys	0m0.023s
+real	0m1.572s
+user	0m1.543s
+sys	0m0.027s
 
 Testing divrec under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -65,12 +66,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/divrec.scm /tmp/larcenous/Chez/divrec.scm
 Running...
 Running divrec:1000:1000000
-Elapsed time: 1.927127243 seconds (2.0) for divrec:1000:1000000
-+!CSVLINE!+chez-9.5.1-m64,divrec:1000:1000000,1.927127243
+Elapsed time: 1.759066121 seconds (2.0) for divrec:1000:1000000
++!CSVLINE!+chez-9.5.1-m64,divrec:1000:1000000,1.759066121
 
-real	0m2.052s
-user	0m2.033s
-sys	0m0.013s
+real	0m1.887s
+user	0m1.851s
+sys	0m0.034s
 
 Testing puzzle under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -79,11 +80,11 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/puzzle.scm /tmp/larcenous/Chez/puzzle.scm
 Running...
 Running puzzle:1000
-Elapsed time: 1.766662591 seconds (2.0) for puzzle:1000
-+!CSVLINE!+chez-9.5.1-m64,puzzle:1000,1.766662591
+Elapsed time: 1.786861807 seconds (2.0) for puzzle:1000
++!CSVLINE!+chez-9.5.1-m64,puzzle:1000,1.786861807
 
-real	0m1.907s
-user	0m1.888s
+real	0m1.923s
+user	0m1.912s
 sys	0m0.010s
 
 Testing triangl under Chez
@@ -93,12 +94,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/triangl.scm /tmp/larcenous/Chez/triangl.scm
 Running...
 Running triangl:22:1:50
-Elapsed time: 1.647666903 seconds (2.0) for triangl:22:1:50
-+!CSVLINE!+chez-9.5.1-m64,triangl:22:1:50,1.647666903
+Elapsed time: 1.626892499 seconds (2.0) for triangl:22:1:50
++!CSVLINE!+chez-9.5.1-m64,triangl:22:1:50,1.626892499
 
-real	0m1.779s
-user	0m1.764s
-sys	0m0.007s
+real	0m1.755s
+user	0m1.731s
+sys	0m0.023s
 
 Testing tak under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -107,12 +108,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/tak.scm /tmp/larcenous/Chez/tak.scm
 Running...
 Running tak:40:20:11:1
-Elapsed time: 1.50737418 seconds (2.0) for tak:40:20:11:1
-+!CSVLINE!+chez-9.5.1-m64,tak:40:20:11:1,1.50737418
+Elapsed time: 1.485376344 seconds (2.0) for tak:40:20:11:1
++!CSVLINE!+chez-9.5.1-m64,tak:40:20:11:1,1.485376344
 
-real	0m1.639s
-user	0m1.629s
-sys	0m0.007s
+real	0m1.610s
+user	0m1.596s
+sys	0m0.013s
 
 Testing takl under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -121,12 +122,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/takl.scm /tmp/larcenous/Chez/takl.scm
 Running...
 Running takl:40:20:12:1
-Elapsed time: 3.550442418 seconds (3.0) for takl:40:20:12:1
-+!CSVLINE!+chez-9.5.1-m64,takl:40:20:12:1,3.550442418
+Elapsed time: 3.447922705 seconds (3.0) for takl:40:20:12:1
++!CSVLINE!+chez-9.5.1-m64,takl:40:20:12:1,3.447922705
 
-real	0m3.678s
-user	0m3.675s
-sys	0m0.000s
+real	0m3.573s
+user	0m3.552s
+sys	0m0.020s
 
 Testing ntakl under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -135,12 +136,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/ntakl.scm /tmp/larcenous/Chez/ntakl.scm
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 3.551469909 seconds (4.0) for ntakl:40:20:12:1
-+!CSVLINE!+chez-9.5.1-m64,ntakl:40:20:12:1,3.551469909
+Elapsed time: 3.448650714 seconds (4.0) for ntakl:40:20:12:1
++!CSVLINE!+chez-9.5.1-m64,ntakl:40:20:12:1,3.448650714
 
-real	0m3.683s
-user	0m3.669s
-sys	0m0.010s
+real	0m3.574s
+user	0m3.556s
+sys	0m0.017s
 
 Testing cpstak under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -149,12 +150,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/cpstak.scm /tmp/larcenous/Chez/cpstak.scm
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 3.320022689 seconds (3.0) for cpstak:40:20:11:1
-+!CSVLINE!+chez-9.5.1-m64,cpstak:40:20:11:1,3.320022689
+Elapsed time: 2.936694801 seconds (3.0) for cpstak:40:20:11:1
++!CSVLINE!+chez-9.5.1-m64,cpstak:40:20:11:1,2.936694801
 
-real	0m3.454s
-user	0m3.408s
-sys	0m0.037s
+real	0m3.065s
+user	0m3.026s
+sys	0m0.033s
 
 Testing ctak under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -163,12 +164,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/ctak.scm /tmp/larcenous/Chez/ctak.scm
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 0.6264449 seconds (0.0) for ctak:32:16:8:1
-+!CSVLINE!+chez-9.5.1-m64,ctak:32:16:8:1,0.6264449
+Elapsed time: 0.554622524 seconds (0.0) for ctak:32:16:8:1
++!CSVLINE!+chez-9.5.1-m64,ctak:32:16:8:1,0.554622524
 
-real	0m0.758s
-user	0m0.726s
-sys	0m0.030s
+real	0m0.682s
+user	0m0.657s
+sys	0m0.023s
 
 Testing fib under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -177,12 +178,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/fib.scm /tmp/larcenous/Chez/fib.scm
 Running...
 Running fib:40:5
-Elapsed time: 3.299317231 seconds (4.0) for fib:40:5
-+!CSVLINE!+chez-9.5.1-m64,fib:40:5,3.299317231
+Elapsed time: 3.437213357 seconds (3.0) for fib:40:5
++!CSVLINE!+chez-9.5.1-m64,fib:40:5,3.437213357
 
-real	0m3.431s
-user	0m3.411s
-sys	0m0.017s
+real	0m3.561s
+user	0m3.530s
+sys	0m0.030s
 
 Testing fibc under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -191,12 +192,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/fibc.scm /tmp/larcenous/Chez/fibc.scm
 Running...
 Running fibc:30:10
-Elapsed time: 0.474031579 seconds (0.0) for fibc:30:10
-+!CSVLINE!+chez-9.5.1-m64,fibc:30:10,0.474031579
+Elapsed time: 0.431333343 seconds (1.0) for fibc:30:10
++!CSVLINE!+chez-9.5.1-m64,fibc:30:10,0.431333343
 
-real	0m0.610s
-user	0m0.591s
-sys	0m0.017s
+real	0m0.559s
+user	0m0.524s
+sys	0m0.034s
 
 Testing fibfp under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -205,12 +206,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/fibfp.scm /tmp/larcenous/Chez/fibfp.scm
 Running...
 Running fibfp:35.0:10
-Elapsed time: 2.637843469 seconds (3.0) for fibfp:35.0:10
-+!CSVLINE!+chez-9.5.1-m64,fibfp:35.0:10,2.637843469
+Elapsed time: 2.51130906 seconds (2.0) for fibfp:35.0:10
++!CSVLINE!+chez-9.5.1-m64,fibfp:35.0:10,2.51130906
 
-real	0m2.767s
-user	0m2.748s
-sys	0m0.013s
+real	0m2.636s
+user	0m2.602s
+sys	0m0.030s
 
 Testing sum under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -219,12 +220,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/sum.scm /tmp/larcenous/Chez/sum.scm
 Running...
 Running sum:10000:200000
-Elapsed time: 2.723339776 seconds (3.0) for sum:10000:200000
-+!CSVLINE!+chez-9.5.1-m64,sum:10000:200000,2.723339776
+Elapsed time: 2.967153409 seconds (3.0) for sum:10000:200000
++!CSVLINE!+chez-9.5.1-m64,sum:10000:200000,2.967153409
 
-real	0m2.858s
-user	0m2.835s
-sys	0m0.020s
+real	0m3.095s
+user	0m3.084s
+sys	0m0.010s
 
 Testing sumfp under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -233,12 +234,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/sumfp.scm /tmp/larcenous/Chez/sumfp.scm
 Running...
 Running sumfp:1000000.0:500
-Elapsed time: 4.159224933 seconds (4.0) for sumfp:1000000.0:500
-+!CSVLINE!+chez-9.5.1-m64,sumfp:1000000.0:500,4.159224933
+Elapsed time: 3.88603941 seconds (4.0) for sumfp:1000000.0:500
++!CSVLINE!+chez-9.5.1-m64,sumfp:1000000.0:500,3.88603941
 
-real	0m4.290s
-user	0m4.251s
-sys	0m0.030s
+real	0m4.016s
+user	0m3.985s
+sys	0m0.024s
 
 Testing fft under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -247,12 +248,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/fft.scm /tmp/larcenous/Chez/fft.scm
 Running...
 Running fft:65536:100
-Elapsed time: 2.621318033 seconds (3.0) for fft:65536:100
-+!CSVLINE!+chez-9.5.1-m64,fft:65536:100,2.621318033
+Elapsed time: 2.11046568 seconds (3.0) for fft:65536:100
++!CSVLINE!+chez-9.5.1-m64,fft:65536:100,2.11046568
 
-real	0m2.758s
-user	0m2.730s
-sys	0m0.020s
+real	0m2.245s
+user	0m2.206s
+sys	0m0.033s
 
 Testing mbrot under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -261,12 +262,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/mbrot.scm /tmp/larcenous/Chez/mbrot.scm
 Running...
 Running mbrot:75:1000
-Elapsed time: 5.357448577 seconds (5.0) for mbrot:75:1000
-+!CSVLINE!+chez-9.5.1-m64,mbrot:75:1000,5.357448577
+Elapsed time: 4.973841647 seconds (5.0) for mbrot:75:1000
++!CSVLINE!+chez-9.5.1-m64,mbrot:75:1000,4.973841647
 
-real	0m5.493s
-user	0m5.452s
-sys	0m0.030s
+real	0m5.104s
+user	0m5.059s
+sys	0m0.037s
 
 Testing mbrotZ under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -275,12 +276,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/mbrotZ.scm /tmp/larcenous/Chez/mbrotZ.scm
 Running...
 Running mbrotZ:75:1000
-Elapsed time: 5.640217355 seconds (5.0) for mbrotZ:75:1000
-+!CSVLINE!+chez-9.5.1-m64,mbrotZ:75:1000,5.640217355
+Elapsed time: 5.14192028 seconds (5.0) for mbrotZ:75:1000
++!CSVLINE!+chez-9.5.1-m64,mbrotZ:75:1000,5.14192028
 
-real	0m5.773s
-user	0m5.728s
-sys	0m0.030s
+real	0m5.270s
+user	0m5.205s
+sys	0m0.053s
 
 Testing nucleic under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -289,12 +290,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/nucleic.scm /tmp/larcenous/Chez/nucleic.scm
 Running...
 Running nucleic:50
-Elapsed time: 1.918180998 seconds (2.0) for nucleic:50
-+!CSVLINE!+chez-9.5.1-m64,nucleic:50,1.918180998
+Elapsed time: 1.744203488 seconds (2.0) for nucleic:50
++!CSVLINE!+chez-9.5.1-m64,nucleic:50,1.744203488
 
-real	0m2.082s
-user	0m2.051s
-sys	0m0.027s
+real	0m1.899s
+user	0m1.882s
+sys	0m0.013s
 
 Testing pi under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -303,12 +304,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/pi.scm /tmp/larcenous/Chez/pi.scm
 Running...
 Running pi:50:500:50:2
-Elapsed time: 0.010442034 seconds (0.0) for pi:50:500:50:2
-+!CSVLINE!+chez-9.5.1-m64,pi:50:500:50:2,0.010442034
+Elapsed time: 0.010117562 seconds (0.0) for pi:50:500:50:2
++!CSVLINE!+chez-9.5.1-m64,pi:50:500:50:2,0.010117562
 
-real	0m0.149s
+real	0m0.147s
 user	0m0.128s
-sys	0m0.020s
+sys	0m0.017s
 
 Testing pnpoly under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -317,12 +318,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/pnpoly.scm /tmp/larcenous/Chez/pnpoly.scm
 Running...
 Running pnpoly:1000000
-Elapsed time: 3.967590428 seconds (4.0) for pnpoly:1000000
-+!CSVLINE!+chez-9.5.1-m64,pnpoly:1000000,3.967590428
+Elapsed time: 3.776568771 seconds (4.0) for pnpoly:1000000
++!CSVLINE!+chez-9.5.1-m64,pnpoly:1000000,3.776568771
 
-real	0m4.106s
-user	0m4.088s
-sys	0m0.010s
+real	0m3.900s
+user	0m3.880s
+sys	0m0.017s
 
 Testing ray under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -331,12 +332,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/ray.scm /tmp/larcenous/Chez/ray.scm
 Running...
 Running ray:50
-Elapsed time: 2.372111539 seconds (2.0) for ray:50
-+!CSVLINE!+chez-9.5.1-m64,ray:50,2.372111539
+Elapsed time: 2.206450637 seconds (2.0) for ray:50
++!CSVLINE!+chez-9.5.1-m64,ray:50,2.206450637
 
-real	0m2.510s
-user	0m2.474s
-sys	0m0.030s
+real	0m2.342s
+user	0m2.302s
+sys	0m0.033s
 
 Testing simplex under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -345,12 +346,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/simplex.scm /tmp/larcenous/Chez/simplex.scm
 Running...
 Running simplex:1000000
-Elapsed time: 2.010223292 seconds (2.0) for simplex:1000000
-+!CSVLINE!+chez-9.5.1-m64,simplex:1000000,2.010223292
+Elapsed time: 1.90302289 seconds (2.0) for simplex:1000000
++!CSVLINE!+chez-9.5.1-m64,simplex:1000000,1.90302289
 
-real	0m2.162s
-user	0m2.120s
-sys	0m0.020s
+real	0m2.042s
+user	0m2.036s
+sys	0m0.003s
 
 Testing ack under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -359,11 +360,11 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/ack.scm /tmp/larcenous/Chez/ack.scm
 Running...
 Running ack:3:12:2
-Elapsed time: 2.369637363 seconds (3.0) for ack:3:12:2
-+!CSVLINE!+chez-9.5.1-m64,ack:3:12:2,2.369637363
+Elapsed time: 2.317790652 seconds (3.0) for ack:3:12:2
++!CSVLINE!+chez-9.5.1-m64,ack:3:12:2,2.317790652
 
-real	0m2.498s
-user	0m2.483s
+real	0m2.446s
+user	0m2.431s
 sys	0m0.013s
 
 Testing array1 under Chez
@@ -373,12 +374,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/array1.scm /tmp/larcenous/Chez/array1.scm
 Running...
 Running array1:1000000:500
-Elapsed time: 6.229054011 seconds (6.0) for array1:1000000:500
-+!CSVLINE!+chez-9.5.1-m64,array1:1000000:500,6.229054011
+Elapsed time: 5.995948466 seconds (6.0) for array1:1000000:500
++!CSVLINE!+chez-9.5.1-m64,array1:1000000:500,5.995948466
 
-real	0m6.368s
-user	0m3.309s
-sys	0m3.007s
+real	0m6.125s
+user	0m3.136s
+sys	0m2.976s
 
 Testing string under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -387,12 +388,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/string.scm /tmp/larcenous/Chez/string.scm
 Running...
 Running string:500000:25
-Elapsed time: 1.001034903 seconds (1.0) for string:500000:25
-+!CSVLINE!+chez-9.5.1-m64,string:500000:25,1.001034903
+Elapsed time: 1.106718224 seconds (1.0) for string:500000:25
++!CSVLINE!+chez-9.5.1-m64,string:500000:25,1.106718224
 
-real	0m1.138s
-user	0m1.092s
-sys	0m0.043s
+real	0m1.268s
+user	0m0.982s
+sys	0m0.283s
 
 Testing sum1 under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -401,11 +402,11 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/sum1.scm /tmp/larcenous/Chez/sum1.scm
 Running...
 Running sum1:25
-Elapsed time: 1.433147093 seconds (2.0) for sum1:25
-+!CSVLINE!+chez-9.5.1-m64,sum1:25,1.433147093
+Elapsed time: 1.376509648 seconds (2.0) for sum1:25
++!CSVLINE!+chez-9.5.1-m64,sum1:25,1.376509648
 
-real	0m1.570s
-user	0m1.545s
+real	0m1.501s
+user	0m1.476s
 sys	0m0.023s
 
 Testing cat under Chez
@@ -415,12 +416,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/cat.scm /tmp/larcenous/Chez/cat.scm
 Running...
 Running cat:50
-Elapsed time: 1.822970943 seconds (2.0) for cat:50
-+!CSVLINE!+chez-9.5.1-m64,cat:50,1.822970943
+Elapsed time: 1.834806376 seconds (2.0) for cat:50
++!CSVLINE!+chez-9.5.1-m64,cat:50,1.834806376
 
-real	0m1.950s
-user	0m1.605s
-sys	0m0.339s
+real	0m1.964s
+user	0m1.602s
+sys	0m0.360s
 
 Testing tail under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -429,12 +430,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/tail.scm /tmp/larcenous/Chez/tail.scm
 Running...
 Running tail:25
-Elapsed time: 1.218828355 seconds (1.0) for tail:25
-+!CSVLINE!+chez-9.5.1-m64,tail:25,1.218828355
+Elapsed time: 1.192319652 seconds (1.0) for tail:25
++!CSVLINE!+chez-9.5.1-m64,tail:25,1.192319652
 
-real	0m1.349s
-user	0m1.142s
-sys	0m0.204s
+real	0m1.327s
+user	0m1.135s
+sys	0m0.190s
 
 Testing wc under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -443,12 +444,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/wc.scm /tmp/larcenous/Chez/wc.scm
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 1.255688416 seconds (2.0) for wc:inputs/bib:50
-+!CSVLINE!+chez-9.5.1-m64,wc:inputs/bib:50,1.255688416
+Elapsed time: 1.225067399 seconds (1.0) for wc:inputs/bib:50
++!CSVLINE!+chez-9.5.1-m64,wc:inputs/bib:50,1.225067399
 
-real	0m1.380s
-user	0m1.299s
-sys	0m0.080s
+real	0m1.353s
+user	0m1.276s
+sys	0m0.077s
 
 Testing read1 under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -457,12 +458,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/read1.scm /tmp/larcenous/Chez/read1.scm
 Running...
 Running read1:2500
-Elapsed time: 0.838436107 seconds (0.0) for read1:2500
-+!CSVLINE!+chez-9.5.1-m64,read1:2500,0.838436107
+Elapsed time: 0.823348352 seconds (1.0) for read1:2500
++!CSVLINE!+chez-9.5.1-m64,read1:2500,0.823348352
 
-real	0m0.967s
-user	0m0.922s
-sys	0m0.044s
+real	0m0.949s
+user	0m0.902s
+sys	0m0.047s
 
 Testing compiler under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -471,12 +472,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/compiler.scm /tmp/larcenous/Chez/compiler.scm
 Running...
 Running compiler:2000
-Elapsed time: 1.864037457 seconds (2.0) for compiler:2000
-+!CSVLINE!+chez-9.5.1-m64,compiler:2000,1.864037457
+Elapsed time: 1.824155692 seconds (2.0) for compiler:2000
++!CSVLINE!+chez-9.5.1-m64,compiler:2000,1.824155692
 
-real	0m3.335s
-user	0m3.281s
-sys	0m0.047s
+real	0m3.245s
+user	0m3.155s
+sys	0m0.083s
 
 Testing conform under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -485,12 +486,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/conform.scm /tmp/larcenous/Chez/conform.scm
 Running...
 Running conform:500
-Elapsed time: 1.358912589 seconds (1.0) for conform:500
-+!CSVLINE!+chez-9.5.1-m64,conform:500,1.358912589
+Elapsed time: 1.344072331 seconds (1.0) for conform:500
++!CSVLINE!+chez-9.5.1-m64,conform:500,1.344072331
 
-real	0m1.501s
-user	0m1.473s
-sys	0m0.027s
+real	0m1.487s
+user	0m1.469s
+sys	0m0.017s
 
 Testing dynamic under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -499,12 +500,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/dynamic.scm /tmp/larcenous/Chez/dynamic.scm
 Running...
 Running dynamic:500
-Elapsed time: 1.913918881 seconds (2.0) for dynamic:500
-+!CSVLINE!+chez-9.5.1-m64,dynamic:500,1.913918881
+Elapsed time: 1.872891825 seconds (2.0) for dynamic:500
++!CSVLINE!+chez-9.5.1-m64,dynamic:500,1.872891825
 
-real	0m2.198s
-user	0m2.141s
-sys	0m0.053s
+real	0m2.150s
+user	0m2.107s
+sys	0m0.040s
 
 Testing earley under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -513,12 +514,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/earley.scm /tmp/larcenous/Chez/earley.scm
 Running...
 Running earley:1
-Elapsed time: 3.053775357 seconds (3.0) for earley:1
-+!CSVLINE!+chez-9.5.1-m64,earley:1,3.053775357
+Elapsed time: 2.977213882 seconds (3.0) for earley:1
++!CSVLINE!+chez-9.5.1-m64,earley:1,2.977213882
 
-real	0m3.232s
-user	0m2.951s
-sys	0m0.276s
+real	0m3.165s
+user	0m2.838s
+sys	0m0.323s
 
 Testing graphs under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -527,12 +528,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/graphs.scm /tmp/larcenous/Chez/graphs.scm
 Running...
 Running graphs:7:3
-Elapsed time: 1.300211553 seconds (1.0) for graphs:7:3
-+!CSVLINE!+chez-9.5.1-m64,graphs:7:3,1.300211553
+Elapsed time: 1.248803235 seconds (2.0) for graphs:7:3
++!CSVLINE!+chez-9.5.1-m64,graphs:7:3,1.248803235
 
-real	0m1.436s
-user	0m1.383s
-sys	0m0.050s
+real	0m1.384s
+user	0m1.348s
+sys	0m0.034s
 
 Testing lattice under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -541,12 +542,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/lattice.scm /tmp/larcenous/Chez/lattice.scm
 Running...
 Running lattice:44:10
-Elapsed time: 2.715529989 seconds (3.0) for lattice:44:10
-+!CSVLINE!+chez-9.5.1-m64,lattice:44:10,2.715529989
+Elapsed time: 2.709317672 seconds (3.0) for lattice:44:10
++!CSVLINE!+chez-9.5.1-m64,lattice:44:10,2.709317672
 
-real	0m2.847s
-user	0m2.832s
-sys	0m0.014s
+real	0m2.846s
+user	0m2.824s
+sys	0m0.020s
 
 Testing matrix under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -555,12 +556,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/matrix.scm /tmp/larcenous/Chez/matrix.scm
 Running...
 Running matrix:5:5:2500
-Elapsed time: 1.166549826 seconds (1.0) for matrix:5:5:2500
-+!CSVLINE!+chez-9.5.1-m64,matrix:5:5:2500,1.166549826
+Elapsed time: 1.144515939 seconds (1.0) for matrix:5:5:2500
++!CSVLINE!+chez-9.5.1-m64,matrix:5:5:2500,1.144515939
 
-real	0m1.304s
-user	0m1.279s
-sys	0m0.023s
+real	0m1.282s
+user	0m1.253s
+sys	0m0.027s
 
 Testing maze under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -569,12 +570,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/maze.scm /tmp/larcenous/Chez/maze.scm
 Running...
 Running maze:20:7:10000
-Elapsed time: 1.250131651 seconds (1.0) for maze:20:7:10000
-+!CSVLINE!+chez-9.5.1-m64,maze:20:7:10000,1.250131651
+Elapsed time: 1.236537031 seconds (1.0) for maze:20:7:10000
++!CSVLINE!+chez-9.5.1-m64,maze:20:7:10000,1.236537031
 
-real	0m1.405s
-user	0m1.373s
-sys	0m0.030s
+real	0m1.389s
+user	0m1.371s
+sys	0m0.017s
 
 Testing mazefun under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -583,12 +584,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/mazefun.scm /tmp/larcenous/Chez/mazefun.scm
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 1.900377896 seconds (2.0) for mazefun:11:11:10000
-+!CSVLINE!+chez-9.5.1-m64,mazefun:11:11:10000,1.900377896
+Elapsed time: 1.939558462 seconds (2.0) for mazefun:11:11:10000
++!CSVLINE!+chez-9.5.1-m64,mazefun:11:11:10000,1.939558462
 
-real	0m2.034s
-user	0m2.016s
-sys	0m0.017s
+real	0m2.072s
+user	0m2.047s
+sys	0m0.023s
 
 Testing nqueens under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -597,12 +598,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/nqueens.scm /tmp/larcenous/Chez/nqueens.scm
 Running...
 Running nqueens:13:10
-Elapsed time: 4.4772812 seconds (4.0) for nqueens:13:10
-+!CSVLINE!+chez-9.5.1-m64,nqueens:13:10,4.4772812
+Elapsed time: 4.465287409 seconds (5.0) for nqueens:13:10
++!CSVLINE!+chez-9.5.1-m64,nqueens:13:10,4.465287409
 
-real	0m4.608s
-user	0m4.594s
-sys	0m0.010s
+real	0m4.593s
+user	0m4.576s
+sys	0m0.013s
 
 Testing paraffins under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -611,12 +612,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/paraffins.scm /tmp/larcenous/Chez/paraffins.scm
 Running...
 Running paraffins:23:10
-Elapsed time: 5.205700773 seconds (5.0) for paraffins:23:10
-+!CSVLINE!+chez-9.5.1-m64,paraffins:23:10,5.205700773
+Elapsed time: 5.221102402 seconds (5.0) for paraffins:23:10
++!CSVLINE!+chez-9.5.1-m64,paraffins:23:10,5.221102402
 
-real	0m5.371s
-user	0m4.895s
-sys	0m0.467s
+real	0m5.401s
+user	0m4.962s
+sys	0m0.430s
 
 Testing parsing under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -625,12 +626,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/parsing.scm /tmp/larcenous/Chez/parsing.scm
 Running...
 Running parsing:2500
-Elapsed time: 2.441359635 seconds (2.0) for parsing:2500
-+!CSVLINE!+chez-9.5.1-m64,parsing:2500,2.441359635
+Elapsed time: 2.4372843 seconds (2.0) for parsing:2500
++!CSVLINE!+chez-9.5.1-m64,parsing:2500,2.4372843
 
-real	0m2.589s
-user	0m2.564s
-sys	0m0.023s
+real	0m2.581s
+user	0m2.559s
+sys	0m0.020s
 
 Testing peval under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -639,12 +640,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/peval.scm /tmp/larcenous/Chez/peval.scm
 Running...
 Running peval:2000
-Elapsed time: 1.433733816 seconds (1.0) for peval:2000
-+!CSVLINE!+chez-9.5.1-m64,peval:2000,1.433733816
+Elapsed time: 1.407137497 seconds (1.0) for peval:2000
++!CSVLINE!+chez-9.5.1-m64,peval:2000,1.407137497
 
-real	0m1.581s
-user	0m1.559s
-sys	0m0.020s
+real	0m1.548s
+user	0m1.519s
+sys	0m0.027s
 
 Testing primes under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -653,12 +654,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/primes.scm /tmp/larcenous/Chez/primes.scm
 Running...
 Running primes:1000:10000
-Elapsed time: 2.097203756 seconds (2.0) for primes:1000:10000
-+!CSVLINE!+chez-9.5.1-m64,primes:1000:10000,2.097203756
+Elapsed time: 2.086998192 seconds (2.0) for primes:1000:10000
++!CSVLINE!+chez-9.5.1-m64,primes:1000:10000,2.086998192
 
-real	0m2.229s
-user	0m2.207s
-sys	0m0.021s
+real	0m2.214s
+user	0m2.196s
+sys	0m0.017s
 
 Testing quicksort under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -667,12 +668,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/quicksort.scm /tmp/larcenous/Chez/quicksort.scm
 Running...
 Running quicksort:10000:2500
-Elapsed time: 3.007677023 seconds (3.0) for quicksort:10000:2500
-+!CSVLINE!+chez-9.5.1-m64,quicksort:10000:2500,3.007677023
+Elapsed time: 2.986405667 seconds (3.0) for quicksort:10000:2500
++!CSVLINE!+chez-9.5.1-m64,quicksort:10000:2500,2.986405667
 
-real	0m3.140s
-user	0m3.114s
-sys	0m0.024s
+real	0m3.118s
+user	0m3.099s
+sys	0m0.017s
 
 Testing scheme under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -681,12 +682,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/scheme.scm /tmp/larcenous/Chez/scheme.scm
 Running...
 Running scheme:100000
-Elapsed time: 1.917197076 seconds (1.0) for scheme:100000
-+!CSVLINE!+chez-9.5.1-m64,scheme:100000,1.917197076
+Elapsed time: 1.960092879 seconds (2.0) for scheme:100000
++!CSVLINE!+chez-9.5.1-m64,scheme:100000,1.960092879
 
-real	0m2.116s
-user	0m2.081s
-sys	0m0.033s
+real	0m2.158s
+user	0m2.142s
+sys	0m0.013s
 
 Testing slatex under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -695,12 +696,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/slatex.scm /tmp/larcenous/Chez/slatex.scm
 Running...
 Running slatex:500
-Elapsed time: 2.643396971 seconds (2.0) for slatex:500
-+!CSVLINE!+chez-9.5.1-m64,slatex:500,2.643396971
+Elapsed time: 2.636281568 seconds (3.0) for slatex:500
++!CSVLINE!+chez-9.5.1-m64,slatex:500,2.636281568
 
-real	0m2.844s
-user	0m1.530s
-sys	0m1.272s
+real	0m2.841s
+user	0m1.476s
+sys	0m1.315s
 
 Testing chudnovsky under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -709,12 +710,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/chudnovsky.scm /tmp/larcenous/Chez/chudnovsky.scm
 Running...
 Running chudnovsky:50:500:50:20
-Elapsed time: 0.005407687 seconds (0.0) for chudnovsky:50:500:50:20
-+!CSVLINE!+chez-9.5.1-m64,chudnovsky:50:500:50:20,0.005407687
+Elapsed time: 0.005675069 seconds (0.0) for chudnovsky:50:500:50:20
++!CSVLINE!+chez-9.5.1-m64,chudnovsky:50:500:50:20,0.005675069
 
-real	0m0.134s
-user	0m0.122s
-sys	0m0.010s
+real	0m0.138s
+user	0m0.124s
+sys	0m0.013s
 
 Testing nboyer under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -723,12 +724,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/nboyer.scm /tmp/larcenous/Chez/nboyer.scm
 Running...
 Running nboyer:5:1
-Elapsed time: 1.978987459 seconds (2.0) for nboyer:5:1
-+!CSVLINE!+chez-9.5.1-m64,nboyer:5:1,1.978987459
+Elapsed time: 2.012756203 seconds (2.0) for nboyer:5:1
++!CSVLINE!+chez-9.5.1-m64,nboyer:5:1,2.012756203
 
-real	0m2.132s
+real	0m2.160s
 user	0m2.000s
-sys	0m0.127s
+sys	0m0.156s
 
 Testing sboyer under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -737,12 +738,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/sboyer.scm /tmp/larcenous/Chez/sboyer.scm
 Running...
 Running sboyer:5:1
-Elapsed time: 0.762580243 seconds (1.0) for sboyer:5:1
-+!CSVLINE!+chez-9.5.1-m64,sboyer:5:1,0.762580243
+Elapsed time: 0.788689722 seconds (1.0) for sboyer:5:1
++!CSVLINE!+chez-9.5.1-m64,sboyer:5:1,0.788689722
 
-real	0m0.901s
-user	0m0.870s
-sys	0m0.030s
+real	0m0.928s
+user	0m0.891s
+sys	0m0.037s
 
 Testing gcbench under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -785,12 +786,12 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 1.117269112 seconds (1.0) for gcbench:20:1
-+!CSVLINE!+chez-9.5.1-m64,gcbench:20:1,1.117269112
+Elapsed time: 1.095080782 seconds (1.0) for gcbench:20:1
++!CSVLINE!+chez-9.5.1-m64,gcbench:20:1,1.095080782
 
-real	0m1.256s
-user	0m1.183s
-sys	0m0.070s
+real	0m1.230s
+user	0m1.144s
+sys	0m0.083s
 
 Testing mperm under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -799,12 +800,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/mperm.scm /tmp/larcenous/Chez/mperm.scm
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 9.148014149 seconds (9.0) for mperm:20:10:2:1
-+!CSVLINE!+chez-9.5.1-m64,mperm:20:10:2:1,9.148014149
+Elapsed time: 9.415599285 seconds (9.0) for mperm:20:10:2:1
++!CSVLINE!+chez-9.5.1-m64,mperm:20:10:2:1,9.415599285
 
-real	0m9.650s
-user	0m8.701s
-sys	0m0.932s
+real	0m9.914s
+user	0m8.636s
+sys	0m1.095s
 
 Testing equal under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -813,12 +814,12 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/equal.scm /tmp/larcenous/Chez/equal.scm
 Running...
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 0.592169468 seconds (0.0) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+chez-9.5.1-m64,equal:100:100:8:1000:2000:5000,0.592169468
+Elapsed time: 0.713334415 seconds (1.0) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+chez-9.5.1-m64,equal:100:100:8:1000:2000:5000,0.713334415
 
-real	0m0.722s
-user	0m0.688s
-sys	0m0.034s
+real	0m0.860s
+user	0m0.838s
+sys	0m0.020s
 
 Testing bv2string under Chez
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chez-prelude.scm
@@ -827,9 +828,9 @@ Compiling...
 chez_comp /tmp/larcenous/Chez/bv2string.scm /tmp/larcenous/Chez/bv2string.scm
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 1.968301944 seconds (2.0) for bv2string:1000:1000:100
-+!CSVLINE!+chez-9.5.1-m64,bv2string:1000:1000:100,1.968301944
+Elapsed time: 2.103018712 seconds (2.0) for bv2string:1000:1000:100
++!CSVLINE!+chez-9.5.1-m64,bv2string:1000:1000:100,2.103018712
 
-real	0m2.103s
-user	0m2.086s
-sys	0m0.014s
+real	0m2.246s
+user	0m2.231s
+sys	0m0.013s
