@@ -1,5 +1,7 @@
-(use-modules (ice-9 rdelim)
-             (ice-9 syncase))
+(use-modules (ice-9 rdelim))
+(cond
+  ((string-ci< (version) "2.0")
+   (use-modules (ice-9 syncase))))
 (define-syntax import
   (syntax-rules ()
     ((import stuff ...)
