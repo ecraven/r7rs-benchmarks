@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon"
+ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon" #  chicken4 chicken4csi
 ################################################################
 
 NB_RUNS=1
@@ -110,8 +110,10 @@ setup ()
     BONES=${BONES:-"bones"}
     CHEZ=${CHEZ:-"chez-scheme"}
     CHIBI=${CHIBI:-"chibi-scheme"}
-    CHICKEN_CSC=${CHICKEN_CSC:-"csc"}
-    CHICKEN_CSI=${CHICKEN_CSI:-"csi"}
+    CHICKEN4_CSC=${CHICKEN4_CSC:-"chicken-csc"}
+    CHICKEN4_CSI=${CHICKEN4_CSI:-"chicken-csi"}
+    CHICKEN5_CSC=${CHICKEN5_CSC:-"chicken-csc"}
+    CHICKEN5_CSI=${CHICKEN5_CSI:-"chicken-csi"}
     CYCLONE=${CYCLONE:-"cyclone"}
     FEMTOLISP=${FEMTOLISP:-"flisp"}
     FOMENT=${FOMENT:-"foment"}
@@ -163,8 +165,10 @@ Usage: bench [-r runs] <system> <benchmark>
   bones            for Bones
   chez             for Chez Scheme
   chibi            for Chibi
-  chicken          for Chicken (compiled)
-  chickencsi       for Chicken (interpreted)
+  chicken4         for Chicken 4 (compiled)
+  chicken4csi      for Chicken 4 (interpreted)
+  chicken5         for Chicken 5 (compiled)
+  chicken5csi      for Chicken 5(interpreted)
   cyclone          for Cyclone
   foment           for Foment
   gambitc          for GambitC Scheme
@@ -347,30 +351,57 @@ chibi_exec ()
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Chicken
+# Definitions specific to Chicken4
 
-chicken_comp ()
+chicken4_comp ()
 {
     OPTS="-M -optimize-leaf-routines -block -inline -inline-global -specialize -O3 -d0" # ecraven added -O3
-    ${CHICKEN_CSC} ${OPTS} $1 -o $2 # ecraven removed -extend r7rs -require-extension r7rs which is very very bad for performance
+    ${CHICKEN4_CSC} ${OPTS} $1 -o $2 # ecraven removed -extend r7rs -require-extension r7rs which is very very bad for performance
 }
 
-chicken_exec ()
+chicken4_exec ()
 {
     time "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Chicken CSI
+# Definitions specific to Chicken5
 
-chickencsi_comp ()
+chicken5_comp ()
+{
+    OPTS="-optimize-leaf-routines -block -inline -inline-global -specialize -O2 -d0"
+    ${CHICKEN4_CSC} ${OPTS} $1 -o $2 # ecraven removed -extend r7rs -require-extension r7rs which is very very bad for performance
+}
+
+chicken5_exec ()
+{
+    time "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chicken 4 CSI
+
+chicken4csi_comp ()
 {
     :
 }
 
-chickencsi_exec ()
+chicken4csi_exec ()
 {
-    time ${CHICKEN_CSI} "$1" < "$2"
+    time ${CHICKEN4_CSI} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Chicken 5 CSI
+
+chicken5csi_comp ()
+{
+    :
+}
+
+chicken5csi_exec ()
+{
+    time ${CHICKEN5_CSI} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -899,9 +930,9 @@ for system in $systems ; do
                EXECCOMMANDS=""
                ;;
 
-        chicken) NAME='Chicken'
-                 COMP=chicken_comp
-                 EXEC=chicken_exec
+        chicken5) NAME='Chicken5'
+                 COMP=chicken5_comp
+                 EXEC=chicken5_exec
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
@@ -909,9 +940,29 @@ for system in $systems ; do
                  EXECCOMMANDS=""
                  ;;
 
-        chickencsi) NAME='ChickenCSI'
-                    COMP=chickencsi_comp
-                    EXEC=chickencsi_exec
+        chicken5csi) NAME='Chicken5CSI'
+                    COMP=chicken5csi_comp
+                    EXEC=chicken5csi_exec
+                    COMPOPTS=""
+                    EXTENSION="scm"
+                    EXTENSIONCOMP="scm"
+                    COMPCOMMANDS=""
+                    EXECCOMMANDS=""
+                    ;;
+
+        chicken4) NAME='Chicken4'
+                 COMP=chicken4_comp
+                 EXEC=chicken4_exec
+                 COMPOPTS=""
+                 EXTENSION="scm"
+                 EXTENSIONCOMP="exe"
+                 COMPCOMMANDS=""
+                 EXECCOMMANDS=""
+                 ;;
+
+        chicken4csi) NAME='Chicken4CSI'
+                    COMP=chicken4csi_comp
+                    EXEC=chicken4csi_exec
                     COMPOPTS=""
                     EXTENSION="scm"
                     EXTENSIONCOMP="scm"
