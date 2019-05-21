@@ -14,7 +14,8 @@
       (car rest)
       rest))
 (define (this-scheme-implementation-name)
-  (string-append "s9fes-" "unknown"))
+  ;; this requires reimagined (somewhere around 2018-11-13
+  (string-append "s9fes-" *RELEASE-DATE*))
 (define inexact exact->inexact)
 (define exact inexact->exact)
 (define (square n) (* n n))
