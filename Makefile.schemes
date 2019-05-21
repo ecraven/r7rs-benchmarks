@@ -25,12 +25,18 @@ chez:
 chibi:
 	./bench chibi all
 
-chicken:
-	./bench chicken all
+chicken4:
+	./bench chicken4 all
 
-chickencsi:
-	./bench chickencsi all
+chicken4csi:
+	./bench chicken4csi all
 
+chicken5:
+	./bench chicken5 all
+
+chicken5csi:
+	./bench chicken5csi all
+        
 cyclone:
 	./bench cyclone all
 
@@ -96,9 +102,13 @@ results.Chez: chez
 
 results.Chibi: chibi
 
-results.Chicken: chicken
+results.Chicken5: chicken5
 
-results.ChickenCSI: chickencsi
+results.Chicken5CSI: chicken5csi
+
+results.Chicken4: chicken4
+
+results.Chicken4CSI: chicken4csi
 
 results.Foment: foment
 
@@ -148,4 +158,4 @@ results.Gerbil: gerbil
 
 results.SISC: sisc
 
-all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.ChickenCSI results.Foment results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.MIT results.Petite results.Picrin results.Racket results.Rhizome results.RScheme results.S9fES results.Sagittarius results.Scheme48 results.Stalin results.TinyScheme results.Ypsilon results.Cyclone results.Femtolisp results.Gerbil results.SISC # results.Vicare
+all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken5 results.Chicken5CSI results.Foment results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.MIT results.Petite results.Picrin results.Racket results.Rhizome results.RScheme results.S9fES results.Sagittarius results.Scheme48 results.Stalin results.TinyScheme results.Ypsilon results.Cyclone results.Femtolisp results.Gerbil results.SISC # results.Vicare
