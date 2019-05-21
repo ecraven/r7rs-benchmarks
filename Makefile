@@ -15,4 +15,7 @@ index.html: all.csv
 clean:
 	rm -f results.* all.csv outputs/*
 
+chicken-dependencies:
+	chicken-install r7rs srfi-1 srfi-13 srfi-14 srfi-69
+
 include Makefile.schemes
