@@ -28,12 +28,8 @@
 
 OSNAME="`( uname )`"
 
-# If a benchmark takes longer than an hour to run, then it's
-# probably in some kind of infinite loop.
-# CPU_LIMIT=3600
-
-# ecraven changed this to 5 minutes
-CPU_LIMIT=${CPU_LIMIT:-"300"}
+# Kill compilations and runs after 10 minutes of CPU time.
+CPU_LIMIT=${CPU_LIMIT:-"600"}
 
 # The following definitions are not in use, but using them
 # might improve the script.
