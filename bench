@@ -689,7 +689,10 @@ mit_exec ()
 
 guile_comp ()
 {
-    ${GUILD} compile $1
+    # Guile's default optimization level is more suited to interactive
+    # development.  Explicitly selecting -O3 allows it to more
+    # aggressively inline top-level definitions.
+    ${GUILD} compile -O3 $1
 }
 
 guile_exec ()
