@@ -1,687 +1,1399 @@
 
 ****************************
-Benchmarking IronScheme on Wed 24 Oct 19:16:49 CEST 2018 under Linux nexion 4.18.8-arch1-1-ARCH #1 SMP PREEMPT Sat Sep 15 20:34:48 UTC 2018 x86_64 GNU/Linux
+Benchmarking IronScheme on Mon 9 Sep 22:22:19 CEST 2019 under Linux nexion 5.2.11-arch1-1-ARCH #1 SMP PREEMPT Thu Aug 29 08:09:36 UTC 2019 x86_64 GNU/Linux
 
 Testing browse under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/browse.sps /tmp/larcenous/IronScheme/browse.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.007s
-user	0m0.003s
-sys	0m0.003s
-+!CSVLINE!+ironscheme,browse,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running browse:2000
+Elapsed time: 19.084178 seconds (19) for browse:2000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,browse:2000,19.084178
+
+real	0m21.222s
+user	0m20.373s
+sys	0m0.388s
 
 Testing deriv under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/deriv.sps /tmp/larcenous/IronScheme/deriv.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.000s
-sys	0m0.002s
-+!CSVLINE!+ironscheme,deriv,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running deriv:10000000
+Elapsed time: 17.881246 seconds (18) for deriv:10000000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,deriv:10000000,17.881246
+
+real	0m19.226s
+user	0m19.014s
+sys	0m0.214s
 
 Testing destruc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/destruc.sps /tmp/larcenous/IronScheme/destruc.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,destruc,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running destruc:600:50:4000
+/home/nex/bin/ironscheme: line 2: 20908 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.508s
+user	4m59.647s
+sys	0m0.547s
++!CSVLINE!+ironscheme,destruc,ULIMITKILLED
 
 Testing diviter under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/diviter.sps /tmp/larcenous/IronScheme/diviter.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.006s
-user	0m0.006s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,diviter,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running diviter:1000:1000000
+Elapsed time: 10.898932 seconds (11) for diviter:1000:1000000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,diviter:1000:1000000,10.898932
+
+real	0m12.334s
+user	0m12.186s
+sys	0m0.201s
 
 Testing divrec under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/divrec.sps /tmp/larcenous/IronScheme/divrec.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,divrec,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running divrec:1000:1000000
+Elapsed time: 15.238634 seconds (15) for divrec:1000:1000000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,divrec:1000:1000000,15.238634
+
+real	0m16.706s
+user	0m16.512s
+sys	0m0.258s
 
 Testing puzzle under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/puzzle.sps /tmp/larcenous/IronScheme/puzzle.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,puzzle,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running puzzle:1000
+/home/nex/bin/ironscheme: line 2: 21007 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.422s
+user	4m59.929s
+sys	0m0.097s
++!CSVLINE!+ironscheme,puzzle,ULIMITKILLED
 
 Testing triangl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/triangl.sps /tmp/larcenous/IronScheme/triangl.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,triangl,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running triangl:22:1:50
+Elapsed time: 113.234781 seconds (113) for triangl:22:1:50
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,triangl:22:1:50,113.234781
+
+real	1m54.643s
+user	1m54.488s
+sys	0m0.083s
 
 Testing tak under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/tak.sps /tmp/larcenous/IronScheme/tak.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.000s
-sys	0m0.002s
-+!CSVLINE!+ironscheme,tak,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running tak:40:20:11:1
+Elapsed time: 93.645448 seconds (93) for tak:40:20:11:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tak:40:20:11:1,93.645448
+
+real	1m35.053s
+user	1m34.847s
+sys	0m0.066s
 
 Testing takl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/takl.sps /tmp/larcenous/IronScheme/takl.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,takl,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running takl:40:20:12:1
+Elapsed time: 16.70871 seconds (17) for takl:40:20:12:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,takl:40:20:12:1,16.70871
+
+real	0m18.134s
+user	0m18.045s
+sys	0m0.070s
 
 Testing ntakl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/ntakl.sps /tmp/larcenous/IronScheme/ntakl.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,ntakl,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running ntakl:40:20:12:1
+Elapsed time: 15.542678 seconds (16) for ntakl:40:20:12:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,ntakl:40:20:12:1,15.542678
+
+real	0m16.980s
+user	0m16.877s
+sys	0m0.080s
 
 Testing cpstak under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/cpstak.sps /tmp/larcenous/IronScheme/cpstak.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,cpstak,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running cpstak:40:20:11:1
+Elapsed time: 226.181359 seconds (226) for cpstak:40:20:11:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,cpstak:40:20:11:1,226.181359
+
+real	3m47.705s
+user	3m44.592s
+sys	0m3.268s
 
 Testing ctak under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/ctak.sps /tmp/larcenous/IronScheme/ctak.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.000s
-sys	0m0.003s
-+!CSVLINE!+ironscheme,ctak,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running ctak:32:16:8:1
+/home/nex/bin/ironscheme: line 2: 21159 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.495s
+user	4m59.888s
+sys	0m0.120s
++!CSVLINE!+ironscheme,ctak,ULIMITKILLED
 
 Testing fib under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fib.sps /tmp/larcenous/IronScheme/fib.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,fib,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running fib:40:5
+Elapsed time: 235.027952 seconds (235) for fib:40:5
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,fib:40:5,235.027952
+
+real	3m56.445s
+user	3m55.685s
+sys	0m0.053s
 
 Testing fibc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fibc.sps /tmp/larcenous/IronScheme/fibc.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,fibc,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running fibc:30:10
+/home/nex/bin/ironscheme: line 2: 21485 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.152s
+user	4m59.931s
+sys	0m0.086s
++!CSVLINE!+ironscheme,fibc,ULIMITKILLED
 
 Testing fibfp under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fibfp.sps /tmp/larcenous/IronScheme/fibfp.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.000s
-sys	0m0.002s
-+!CSVLINE!+ironscheme,fibfp,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running fibfp:35.0:10
+/home/nex/bin/ironscheme: line 2: 21806 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.458s
+user	4m59.572s
+sys	0m0.633s
++!CSVLINE!+ironscheme,fibfp,ULIMITKILLED
 
 Testing sum under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sum.sps /tmp/larcenous/IronScheme/sum.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,sum,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running sum:10000:200000
+/home/nex/bin/ironscheme: line 2: 22061 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.741s
+user	4m59.658s
+sys	0m0.747s
++!CSVLINE!+ironscheme,sum,ULIMITKILLED
 
 Testing sumfp under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sumfp.sps /tmp/larcenous/IronScheme/sumfp.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,sumfp,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running sumfp:1000000.0:500
+/home/nex/bin/ironscheme: line 2: 22605 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.609s
+user	4m59.771s
+sys	0m0.630s
++!CSVLINE!+ironscheme,sumfp,ULIMITKILLED
 
 Testing fft under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fft.sps /tmp/larcenous/IronScheme/fft.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,fft,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running fft:65536:100
+Elapsed time: 84.426956 seconds (84) for fft:65536:100
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,fft:65536:100,84.426956
+
+real	1m25.829s
+user	1m26.097s
+sys	0m0.874s
 
 Testing mbrot under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mbrot.sps /tmp/larcenous/IronScheme/mbrot.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,mbrot,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running mbrot:75:1000
+/home/nex/bin/ironscheme: line 2: 23429 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.376s
+user	4m59.728s
+sys	0m0.473s
++!CSVLINE!+ironscheme,mbrot,ULIMITKILLED
 
 Testing mbrotZ under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mbrotZ.sps /tmp/larcenous/IronScheme/mbrotZ.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,mbrotZ,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running mbrotZ:75:1000
+/home/nex/bin/ironscheme: line 2: 23697 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.547s
+user	4m59.882s
+sys	0m0.386s
++!CSVLINE!+ironscheme,mbrotZ,ULIMITKILLED
 
 Testing nucleic under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/nucleic.sps /tmp/larcenous/IronScheme/nucleic.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.001s
-sys	0m0.003s
-+!CSVLINE!+ironscheme,nucleic,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running nucleic:50
+/home/nex/bin/ironscheme: line 2: 24025 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.444s
+user	4m59.814s
+sys	0m0.463s
++!CSVLINE!+ironscheme,nucleic,ULIMITKILLED
 
 Testing pi under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/pi.sps /tmp/larcenous/IronScheme/pi.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running pi:50:500:50:100
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a SIGSEGV while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+/proc/self/maps:
+40e9a000-40eaa000 rwxp 00000000 00:00 0 
+41dfc000-420ee000 rwxp 00000000 00:00 0 
+55658d070000-55658d09c000 r--p 00000000 08:02 2481455                    /usr/bin/mono-sgen
+55658d09c000-55658d3c2000 r-xp 0002c000 08:02 2481455                    /usr/bin/mono-sgen
+55658d3c2000-55658d504000 r--p 00352000 08:02 2481455                    /usr/bin/mono-sgen
+55658d505000-55658d50c000 r--p 00494000 08:02 2481455                    /usr/bin/mono-sgen
+55658d50c000-55658d511000 rw-p 0049b000 08:02 2481455                    /usr/bin/mono-sgen
+55658d511000-55658d528000 rw-p 00000000 00:00 0 
+55658eab5000-556591897000 rw-p 00000000 00:00 0                          [heap]
+7f6c34000000-7f6c344c4000 rw-p 00000000 00:00 0 
+7f6c344c4000-7f6c38000000 ---p 00000000 00:00 0 
+7f6c3c000000-7f6c3c035000 rw-p 00000000 00:00 0 
+7f6c3c035000-7f6c40000000 ---p 00000000 00:00 0 
+7f6c40d6c000-7f6c40dec000 rw-p 00000000 00:00 0 
+7f6c40df0000-7f6c40e70000 rw-p 00000000 00:00 0 
+7f6c40e74000-7f6c40ef4000 rw-p 00000000 00:00 0 
+7f6c40ef8000-7f6c40f78000 rw-p 00000000 00:00 0 
+7f6c40f7c000-7f6c40ffc000 rw-p 00000000 00:00 0 
+7f6c41000000-7f6c41100000 rw-p 00000000 00:00 0 
+7f6c4116c000-7f6c411ec000 rw-p 00000000 00:00 0 
+7f6c411f0000-7f6c41270000 rw-p 00000000 00:00 0 
+7f6c41274000-7f6c412f4000 rw-p 00000000 00:00 0 
+7f6c412f8000-7f6c41378000 rw-p 00000000 00:00 0 
+7f6c4137c000-7f6c413fc000 rw-p 00000000 00:00 0 
+7f6c41400000-7f6c41500000 rw-p 00000000 00:00 0 
+
+=================================================================
+	Basic Fault Adddress Reporting
+=================================================================
+Memory around native instruction pointer (0x55658d363b40):0x55658d363b30  48 83 c2 23 48 83 e2 fc 48 8d 04 ca c3 0f 1f 00  H..#H...H.......
+0x55658d363b40  48 8b 47 08 48 89 c2 83 e2 05 48 83 fa 01 74 20  H.G.H.....H...t 
+0x55658d363b50  48 83 f8 0f 74 4a 48 89 c2 83 e2 07 48 83 fa 05  H...tJH.....H...
+0x55658d363b60  74 1e 48 8b 3f e9 76 ff ff ff 66 0f 1f 44 00 00  t.H.?.v...f..D..
+
+=================================================================
+	Native stacktrace:
+=================================================================
+	0x55658d19d00a - mono : (null)
+	0x55658d12b17e - mono : (null)
+	0x55658d09da37 - mono : (null)
+	0x7f6c46095d00 - /usr/lib/libpthread.so.0 : (null)
+	0x55658d363b40 - mono : (null)
+	0x55658d364b8c - mono : (null)
+	0x55658d366ca6 - mono : (null)
+	0x55658d36a14d - mono : (null)
+	0x55658d36a6e8 - mono : (null)
+	0x55658d35a509 - mono : (null)
+	0x55658d33e32c - mono : (null)
+	0x41e01ade - Unknown
+
+=================================================================
+	Telemetry Dumper:
+=================================================================
+Pkilling 0x7f6c45ea0780 from 0x7f6c4247b700
+Pkilling 0x7f6c45a4e700 from 0x7f6c4247b700
+Entering thread summarizer pause from 0x7f6c4247b700
+Finished thread summarizer pause from 0x7f6c4247b700.
+/home/nex/bin/ironscheme: line 2: 24376 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	0m3.630s
+user	0m1.286s
+sys	0m0.153s
 +!CSVLINE!+ironscheme,pi,CRASHED
+Crash Reporter has timed out, sending SIGSEGV
 
 Testing pnpoly under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/pnpoly.sps /tmp/larcenous/IronScheme/pnpoly.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,pnpoly,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running pnpoly:1000000
+/home/nex/bin/ironscheme: line 2: 24581 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m1.235s
+user	4m59.772s
+sys	0m0.452s
++!CSVLINE!+ironscheme,pnpoly,ULIMITKILLED
 
 Testing ray under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/ray.sps /tmp/larcenous/IronScheme/ray.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running ray:50
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a SIGSEGV while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+/proc/self/maps:
+4047a000-4048a000 rwxp 00000000 00:00 0 
+41bfb000-41efd000 rwxp 00000000 00:00 0 
+559da2a30000-559da2a5c000 r--p 00000000 08:02 2481455                    /usr/bin/mono-sgen
+559da2a5c000-559da2d82000 r-xp 0002c000 08:02 2481455                    /usr/bin/mono-sgen
+559da2d82000-559da2ec4000 r--p 00352000 08:02 2481455                    /usr/bin/mono-sgen
+559da2ec5000-559da2ecc000 r--p 00494000 08:02 2481455                    /usr/bin/mono-sgen
+559da2ecc000-559da2ed1000 rw-p 0049b000 08:02 2481455                    /usr/bin/mono-sgen
+559da2ed1000-559da2ee8000 rw-p 00000000 00:00 0 
+559da418b000-559da6f6e000 rw-p 00000000 00:00 0                          [heap]
+7f9524000000-7f95244c7000 rw-p 00000000 00:00 0 
+7f95244c7000-7f9528000000 ---p 00000000 00:00 0 
+7f952a16c000-7f952a1ec000 rw-p 00000000 00:00 0 
+7f952a1f0000-7f952a270000 rw-p 00000000 00:00 0 
+7f952a274000-7f952a2f4000 rw-p 00000000 00:00 0 
+7f952a2f8000-7f952a378000 rw-p 00000000 00:00 0 
+7f952a37c000-7f952a3fc000 rw-p 00000000 00:00 0 
+7f952a400000-7f952a500000 rw-p 00000000 00:00 0 
+7f952a56c000-7f952a5ec000 rw-p 00000000 00:00 0 
+7f952a5f0000-7f952a670000 rw-p 00000000 00:00 0 
+7f952a674000-7f952a6f4000 rw-p 00000000 00:00 0 
+7f952a6f8000-7f952a778000 rw-p 00000000 00:00 0 
+7f952a77c000-7f952a7fc000 rw-p 00000000 00:00 0 
+7f952a800000-7f952a900000 rw-p 00000000 00:00 0 
+7f952a974000-7f952a9f4000 rw-p 00000000 00:00 0 
+7f952a9f8000-7f952aa78000 rw-p 00000000 00:00 0 
+
+=================================================================
+	Basic Fault Adddress Reporting
+=================================================================
+Memory around native instruction pointer (0x559da2d23b40):0x559da2d23b30  48 83 c2 23 48 83 e2 fc 48 8d 04 ca c3 0f 1f 00  H..#H...H.......
+0x559da2d23b40  48 8b 47 08 48 89 c2 83 e2 05 48 83 fa 01 74 20  H.G.H.....H...t 
+0x559da2d23b50  48 83 f8 0f 74 4a 48 89 c2 83 e2 07 48 83 fa 05  H...tJH.....H...
+0x559da2d23b60  74 1e 48 8b 3f e9 76 ff ff ff 66 0f 1f 44 00 00  t.H.?.v...f..D..
+
+=================================================================
+	Native stacktrace:
+=================================================================
+	0x559da2b5d00a - mono : (null)
+	0x559da2aeb17e - mono : (null)
+	0x559da2a5da37 - mono : (null)
+	0x7f95334dad00 - /usr/lib/libpthread.so.0 : (null)
+	0x559da2d23b40 - mono : (null)
+	0x559da2d24b8c - mono : (null)
+	0x559da2d26ca6 - mono : (null)
+	0x559da2d2a14d - mono : (null)
+	0x559da2d2a6e8 - mono : (null)
+	0x559da2d1a509 - mono : (null)
+	0x559da2d1a8a1 - mono : (null)
+	0x559da2cfe25a - mono : (null)
+	0x41c040e7 - Unknown
+
+=================================================================
+	Telemetry Dumper:
+=================================================================
+Pkilling 0x7f95332e5780 from 0x7f952b873700
+Pkilling 0x7f9532e96700 from 0x7f952b873700
+Entering thread summarizer pause from 0x7f952b873700
+Finished thread summarizer pause from 0x7f952b873700.
+/home/nex/bin/ironscheme: line 2: 25072 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	0m4.002s
+user	0m1.673s
+sys	0m0.150s
 +!CSVLINE!+ironscheme,ray,CRASHED
+Crash Reporter has timed out, sending SIGSEGV
 
 Testing simplex under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/simplex.sps /tmp/larcenous/IronScheme/simplex.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,simplex,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running simplex:1000000
+/home/nex/bin/ironscheme: line 2: 25156 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m2.970s
+user	4m59.735s
+sys	0m0.487s
++!CSVLINE!+ironscheme,simplex,ULIMITKILLED
 
 Testing ack under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/ack.sps /tmp/larcenous/IronScheme/ack.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,ack,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running ack:3:12:2
+Elapsed time: 272.916968 seconds (273) for ack:3:12:2
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,ack:3:12:2,272.916968
+
+real	4m34.249s
+user	4m33.466s
+sys	0m0.343s
 
 Testing array1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/array1.sps /tmp/larcenous/IronScheme/array1.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,array1,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running array1:1000000:500
+Elapsed time: 207.278327 seconds (207) for array1:1000000:500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,array1:1000000:500,207.278327
+
+real	3m28.654s
+user	3m29.198s
+sys	0m6.878s
 
 Testing string under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/string.sps /tmp/larcenous/IronScheme/string.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,string,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running string:500000:100
+Elapsed time: 3.858552 seconds (4) for string:500000:100
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,string:500000:100,3.858552
+
+real	0m5.212s
+user	0m4.853s
+sys	0m1.851s
 
 Testing sum1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sum1.sps /tmp/larcenous/IronScheme/sum1.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.001s
-sys	0m0.004s
-+!CSVLINE!+ironscheme,sum1,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running sum1:25
+/home/nex/bin/ironscheme: line 2: 26270 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	4m58.714s
+user	4m56.539s
+sys	0m3.822s
++!CSVLINE!+ironscheme,sum1,ULIMITKILLED
 
 Testing cat under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/cat.sps /tmp/larcenous/IronScheme/cat.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,cat,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running cat:50
+Elapsed time: 110.618075 seconds (111) for cat:50
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,cat:50,110.618075
+
+real	1m51.969s
+user	1m50.600s
+sys	0m1.272s
 
 Testing tail under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/tail.sps /tmp/larcenous/IronScheme/tail.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.000s
-sys	0m0.003s
-+!CSVLINE!+ironscheme,tail,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running tail:50
+Elapsed time: 3.394602 seconds (4) for tail:50
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tail:50,3.394602
+
+real	0m4.834s
+user	0m4.639s
+sys	0m0.462s
 
 Testing wc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/wc.sps /tmp/larcenous/IronScheme/wc.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,wc,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running wc:inputs/bib:50
+Elapsed time: 113.464711 seconds (114) for wc:inputs/bib:50
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,wc:inputs/bib:50,113.464711
+
+real	1m54.886s
+user	1m52.941s
+sys	0m1.645s
 
 Testing read1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/read1.sps /tmp/larcenous/IronScheme/read1.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,read1,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running read1:2500
+Elapsed time: 111.03924 seconds (111) for read1:2500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,read1:2500,111.03924
+
+real	1m52.464s
+user	1m36.525s
+sys	0m16.227s
 
 Testing compiler under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/compiler.sps /tmp/larcenous/IronScheme/compiler.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,compiler,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 604 handles
+
+Running compiler:2000
+Unhandled CLR exception during evaluation:
+CLR Exception: System.InvalidProgramException
+System.InvalidProgramException: Invalid IL code in eval-core(067):::gen-label-entry (object,object,object,object,object,object): IL_03ef: call      0x06fff971
+
+
+  at eval-core(067).::dump-procedure#1##loop$571 (System.Object prev-bb, System.Object prev-gvm-instr, System.Object l) [0x00092] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::dump-procedure (System.Object proc) [0x00145] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::dump##loop$564 (System.Object index) [0x0001c] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::dump (System.Object proc, System.Object filename, System.Object c-intf, System.Object options) [0x000ac] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::compile-program##compiler-body#anon$464 (IronScheme.Scripting.CodeContext $context, System.Object lst, System.Object env, System.Object c-intf) [0x00176] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::compile-program##compiler-body$462 (IronScheme.Scripting.CodeContext $context) [0x0008e] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at IronScheme.Runtime.Builtins.CallWithCurrentContinuation (System.Object fc1) [0x00031] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at eval-core(067).::with-exception-handling (System.Object proc) [0x0004c] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::compile-program (System.Object program, System.Object target-name, System.Object opts, System.Object module-name, System.Object dest, System.Object info-port) [0x00072] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::ce+ (System.Object source, System.Object target-name, System.Object opts) [0x00057] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::main#1#anon#1#2#3#4#5#6$711 (IronScheme.Scripting.CodeContext $context) [0x00046] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).::run-r7rs-benchmark (System.Object name, System.Object count, System.Object thunk, System.Object ok?) [0x00091] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at eval-core(067).$262 () [0x07a22] in <c27f24aa08b84abda12a6f9bcf5c4499>:0 
+  at IronScheme.Scripting.ScriptCode.Run (IronScheme.Scripting.CodeContext codeContext, System.Boolean tryEvaluate) [0x0004a] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at IronScheme.Scripting.ScriptCode.Run (IronScheme.Scripting.ScriptModule module) [0x00020] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at IronScheme.Runtime.Builtins+<>c__DisplayClass52_1.<CompileCore>b__1 () [0x00015] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at #.psyntax.expander::compile-r6rs-top-level#anon#1#2$2666 (IronScheme.Scripting.CodeContext $context) [0x00047] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at #.ironscheme.exceptions::dynamic-wind (System.Object in, System.Object proc, System.Object out) [0x0009c] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at #.ironscheme.exceptions::dynamic-wind (System.Object in, System.Object proc, System.Object out) [0x0009c] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at #.psyntax.main::load#1$2682 (IronScheme.Scripting.CodeContext $context) [0x00041] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at #.ironscheme.exceptions::dynamic-wind (System.Object in, System.Object proc, System.Object out) [0x0009c] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at IronScheme.Runtime.Builtins.CallWithCurrentContinuation (System.Object fc1) [0x00031] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+  at IronScheme.Runtime.R6RS.Exceptions.WithClrExceptionHandler (System.Object handler, System.Object thunk) [0x0000e] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
+
+
+real	0m4.717s
+user	0m4.659s
+sys	0m0.206s
 
 Testing conform under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/conform.sps /tmp/larcenous/IronScheme/conform.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,conform,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running conform:500
+Elapsed time: 25.391622 seconds (26) for conform:500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,conform:500,25.391622
+
+real	0m26.844s
+user	0m26.730s
+sys	0m0.233s
 
 Testing dynamic under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/dynamic.sps /tmp/larcenous/IronScheme/dynamic.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,dynamic,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 286 handles
+
+Running dynamic:500
+Elapsed time: 91.283255 seconds (92) for dynamic:500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,dynamic:500,91.283255
+
+real	1m33.047s
+user	1m25.918s
+sys	0m9.856s
 
 Testing earley under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/earley.sps /tmp/larcenous/IronScheme/earley.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,earley,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running earley:1
+Elapsed time: 47.314703 seconds (48) for earley:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,earley:1,47.314703
+
+real	0m49.062s
+user	0m53.097s
+sys	0m0.951s
 
 Testing graphs under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/graphs.sps /tmp/larcenous/IronScheme/graphs.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.001s
-sys	0m0.004s
-+!CSVLINE!+ironscheme,graphs,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running graphs:7:3
+Elapsed time: 83.486057 seconds (84) for graphs:7:3
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,graphs:7:3,83.486057
+
+real	1m25.150s
+user	1m24.657s
+sys	0m0.606s
 
 Testing lattice under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/lattice.sps /tmp/larcenous/IronScheme/lattice.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.002s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,lattice,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running lattice:44:10
+Elapsed time: 42.591481 seconds (43) for lattice:44:10
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,lattice:44:10,42.591481
+
+real	0m43.979s
+user	0m43.806s
+sys	0m0.157s
 
 Testing matrix under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/matrix.sps /tmp/larcenous/IronScheme/matrix.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,matrix,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Unhandled exception during evaluation:
+&lexical
+&message: "invalid syntax"
+&irritants: ("2500\n5\n5\n\n(((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 -1 -1) (1 -1 1 -1 -1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 -1) (1 -1 1 -1 -1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 -1) (1 -1 1 -1 1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 1) (1 -1 1 1 -1) (1 -1 -1 -1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 1) (1 -1 1 1 1) (1 -1 -1 -1 -1)))))\n")
+
+real	0m1.666s
+user	0m1.388s
+sys	0m0.097s
 
 Testing maze under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/maze.sps /tmp/larcenous/IronScheme/maze.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,maze,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running maze:20:7:10000
+/home/nex/bin/ironscheme: line 2: 36822 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.410s
+user	4m59.264s
+sys	0m1.093s
++!CSVLINE!+ironscheme,maze,ULIMITKILLED
 
 Testing mazefun under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mazefun.sps /tmp/larcenous/IronScheme/mazefun.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,mazefun,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running mazefun:11:11:10000
+Elapsed time: 165.829073 seconds (166) for mazefun:11:11:10000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mazefun:11:11:10000,165.829073
+
+real	2m47.477s
+user	2m46.937s
+sys	0m0.316s
 
 Testing nqueens under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/nqueens.sps /tmp/larcenous/IronScheme/nqueens.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,nqueens,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running nqueens:13:10
+Elapsed time: 247.045198 seconds (247) for nqueens:13:10
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nqueens:13:10,247.045198
+
+real	4m8.353s
+user	4m7.647s
+sys	0m0.176s
 
 Testing paraffins under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/paraffins.sps /tmp/larcenous/IronScheme/paraffins.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,paraffins,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running paraffins:23:10
+Elapsed time: 19.66909 seconds (19) for paraffins:23:10
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,paraffins:23:10,19.66909
+
+real	0m21.406s
+user	0m32.864s
+sys	0m3.696s
 
 Testing parsing under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/parsing.sps /tmp/larcenous/IronScheme/parsing.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,parsing,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running parsing:2500
+Elapsed time: 64.730093 seconds (65) for parsing:2500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,parsing:2500,64.730093
+
+real	1m6.408s
+user	1m6.105s
+sys	0m0.378s
 
 Testing peval under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/peval.sps /tmp/larcenous/IronScheme/peval.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,peval,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 116 handles
+
+Running peval:2000
+Elapsed time: 22.336648 seconds (23) for peval:2000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,peval:2000,22.336648
+
+real	0m23.728s
+user	0m23.620s
+sys	0m0.241s
 
 Testing primes under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/primes.sps /tmp/larcenous/IronScheme/primes.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,primes,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running primes:1000:10000
+/home/nex/bin/ironscheme: line 2: 37633 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.259s
+user	4m59.766s
+sys	0m0.535s
++!CSVLINE!+ironscheme,primes,ULIMITKILLED
 
 Testing quicksort under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/quicksort.sps /tmp/larcenous/IronScheme/quicksort.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a SIGSEGV while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+/proc/self/maps:
+40679000-4096b000 rwxp 00000000 00:00 0 
+41baa000-41bba000 rwxp 00000000 00:00 0 
+55f004a60000-55f004a8c000 r--p 00000000 08:02 2481455                    /usr/bin/mono-sgen
+55f004a8c000-55f004db2000 r-xp 0002c000 08:02 2481455                    /usr/bin/mono-sgen
+55f004db2000-55f004ef4000 r--p 00352000 08:02 2481455                    /usr/bin/mono-sgen
+55f004ef5000-55f004efc000 r--p 00494000 08:02 2481455                    /usr/bin/mono-sgen
+55f004efc000-55f004f01000 rw-p 0049b000 08:02 2481455                    /usr/bin/mono-sgen
+55f004f01000-55f004f18000 rw-p 00000000 00:00 0 
+55f006e18000-55f009bfa000 rw-p 00000000 00:00 0                          [heap]
+7fe1e0000000-7fe1e04c7000 rw-p 00000000 00:00 0 
+7fe1e04c7000-7fe1e4000000 ---p 00000000 00:00 0 
+7fe1e64e0000-7fe1e6560000 rw-p 00000000 00:00 0 
+7fe1e6564000-7fe1e65e4000 rw-p 00000000 00:00 0 
+7fe1e65e8000-7fe1e6668000 rw-p 00000000 00:00 0 
+7fe1e666c000-7fe1e66ec000 rw-p 00000000 00:00 0 
+7fe1e66f0000-7fe1e6770000 rw-p 00000000 00:00 0 
+7fe1e6774000-7fe1e67f4000 rw-p 00000000 00:00 0 
+7fe1e67f8000-7fe1e6878000 rw-p 00000000 00:00 0 
+7fe1e687c000-7fe1e68fc000 rw-p 00000000 00:00 0 
+7fe1e6900000-7fe1e6a00000 rw-p 00000000 00:00 0 
+7fe1e6a6c000-7fe1e6aec000 rw-p 00000000 00:00 0 
+7fe1e6af0000-7fe1e6b70000 rw-p 00000000 00:00 0 
+7fe1e6b74000-7fe1e6bf4000 rw-p 00000000 00:00 0 
+7fe1e6bf8000-7fe1e6c78000 rw-p 00000000 00:00 0 
+7fe1e6c7c000-7fe1e6cfc000 rw-p 00000000 00:00 0 
+
+=================================================================
+	Basic Fault Adddress Reporting
+=================================================================
+Memory around native instruction pointer (0x55f004d53b40):0x55f004d53b30  48 83 c2 23 48 83 e2 fc 48 8d 04 ca c3 0f 1f 00  H..#H...H.......
+0x55f004d53b40  48 8b 47 08 48 89 c2 83 e2 05 48 83 fa 01 74 20  H.G.H.....H...t 
+0x55f004d53b50  48 83 f8 0f 74 4a 48 89 c2 83 e2 07 48 83 fa 05  H...tJH.....H...
+0x55f004d53b60  74 1e 48 8b 3f e9 76 ff ff ff 66 0f 1f 44 00 00  t.H.?.v...f..D..
+
+=================================================================
+	Native stacktrace:
+=================================================================
+	0x55f004b8d00a - mono : (null)
+	0x55f004b1b17e - mono : (null)
+	0x55f004a8da37 - mono : (null)
+	0x7fe1ef6a9d00 - /usr/lib/libpthread.so.0 : (null)
+	0x55f004d53b40 - mono : (null)
+	0x55f004d54b8c - mono : (null)
+	0x55f004d56ca6 - mono : (null)
+	0x55f004d5a14d - mono : (null)
+	0x55f004d5a6e8 - mono : (null)
+	0x55f004d4a509 - mono : (null)
+	0x55f004d2e32c - mono : (null)
+	0x4067eade - Unknown
+
+=================================================================
+	Telemetry Dumper:
+=================================================================
+Pkilling 0x7fe1ef4b4780 from 0x7fe1e7a73700
+Pkilling 0x7fe1ec6ea700 from 0x7fe1e7a73700
+Entering thread summarizer pause from 0x7fe1e7a73700
+Finished thread summarizer pause from 0x7fe1e7a73700.
+/home/nex/bin/ironscheme: line 2: 37786 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	0m3.761s
+user	0m1.439s
+sys	0m0.139s
 +!CSVLINE!+ironscheme,quicksort,CRASHED
+Crash Reporter has timed out, sending SIGSEGV
 
 Testing scheme under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/scheme.sps /tmp/larcenous/IronScheme/scheme.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,scheme,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 483 handles
+
+Running scheme:100000
+Elapsed time: 40.015527 seconds (40) for scheme:100000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,scheme:100000,40.015527
+
+real	0m41.657s
+user	0m40.107s
+sys	0m0.847s
 
 Testing slatex under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/slatex.sps /tmp/larcenous/IronScheme/slatex.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,slatex,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 279 handles
+
+Running slatex:500
+Elapsed time: 37.667881 seconds (37) for slatex:500
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,slatex:500,37.667881
+
+real	0m39.348s
+user	0m36.123s
+sys	0m3.091s
 
 Testing chudnovsky under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/chudnovsky.sps /tmp/larcenous/IronScheme/chudnovsky.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.005s
-user	0m0.003s
-sys	0m0.002s
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running chudnovsky:50:500:50:1000
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a SIGSEGV while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+/proc/self/maps:
+40821000-40b13000 rwxp 00000000 00:00 0 
+412dd000-412ed000 rwxp 00000000 00:00 0 
+557bedec2000-557bedeee000 r--p 00000000 08:02 2481455                    /usr/bin/mono-sgen
+557bedeee000-557bee214000 r-xp 0002c000 08:02 2481455                    /usr/bin/mono-sgen
+557bee214000-557bee356000 r--p 00352000 08:02 2481455                    /usr/bin/mono-sgen
+557bee357000-557bee35e000 r--p 00494000 08:02 2481455                    /usr/bin/mono-sgen
+557bee35e000-557bee363000 rw-p 0049b000 08:02 2481455                    /usr/bin/mono-sgen
+557bee363000-557bee37a000 rw-p 00000000 00:00 0 
+557befdff000-557bf2be1000 rw-p 00000000 00:00 0                          [heap]
+7f3994000000-7f39944c6000 rw-p 00000000 00:00 0 
+7f39944c6000-7f3998000000 ---p 00000000 00:00 0 
+7f399a774000-7f399a7f4000 rw-p 00000000 00:00 0 
+7f399a7f8000-7f399a878000 rw-p 00000000 00:00 0 
+7f399a87c000-7f399a8fc000 rw-p 00000000 00:00 0 
+7f399a900000-7f399aa00000 rw-p 00000000 00:00 0 
+7f399aa6c000-7f399aaec000 rw-p 00000000 00:00 0 
+7f399aaf0000-7f399ab70000 rw-p 00000000 00:00 0 
+7f399ab74000-7f399abf4000 rw-p 00000000 00:00 0 
+7f399abf8000-7f399ac78000 rw-p 00000000 00:00 0 
+7f399ac7c000-7f399acfc000 rw-p 00000000 00:00 0 
+7f399ad00000-7f399ae00000 rw-p 00000000 00:00 0 
+7f399ae6c000-7f399aeec000 rw-p 00000000 00:00 0 
+7f399aef0000-7f399af70000 rw-p 00000000 00:00 0 
+7f399af74000-7f399aff4000 rw-p 00000000 00:00 0 
+7f399aff8000-7f399b078000 rw-p 00000000 00:00 0 
+
+=================================================================
+	Basic Fault Adddress Reporting
+=================================================================
+Memory around native instruction pointer (0x557bee1b5b40):0x557bee1b5b30  48 83 c2 23 48 83 e2 fc 48 8d 04 ca c3 0f 1f 00  H..#H...H.......
+0x557bee1b5b40  48 8b 47 08 48 89 c2 83 e2 05 48 83 fa 01 74 20  H.G.H.....H...t 
+0x557bee1b5b50  48 83 f8 0f 74 4a 48 89 c2 83 e2 07 48 83 fa 05  H...tJH.....H...
+0x557bee1b5b60  74 1e 48 8b 3f e9 76 ff ff ff 66 0f 1f 44 00 00  t.H.?.v...f..D..
+
+=================================================================
+	Native stacktrace:
+=================================================================
+	0x557bedfef00a - mono : (null)
+	0x557bedf7d17e - mono : (null)
+	0x557bedeefa37 - mono : (null)
+	0x7f39a3b3cd00 - /usr/lib/libpthread.so.0 : (null)
+	0x557bee1b5b40 - mono : (null)
+	0x557bee1b6b8c - mono : (null)
+	0x557bee1b8ca6 - mono : (null)
+	0x557bee1bc14d - mono : (null)
+	0x557bee1bc6e8 - mono : (null)
+	0x557bee1ac509 - mono : (null)
+	0x557bee19032c - mono : (null)
+	0x40826ade - Unknown
+
+=================================================================
+	Telemetry Dumper:
+=================================================================
+Pkilling 0x7f39a3947780 from 0x7f399bdff700
+Pkilling 0x7f39a0aea700 from 0x7f399bdff700
+Entering thread summarizer pause from 0x7f399bdff700
+Finished thread summarizer pause from 0x7f399bdff700.
+/home/nex/bin/ironscheme: line 2: 37864 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	0m3.605s
+user	0m1.282s
+sys	0m0.136s
 +!CSVLINE!+ironscheme,chudnovsky,CRASHED
+Crash Reporter has timed out, sending SIGSEGV
 
 Testing nboyer under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/nboyer.sps /tmp/larcenous/IronScheme/nboyer.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.000s
-sys	0m0.003s
-+!CSVLINE!+ironscheme,nboyer,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 150 handles
+
+Running nboyer:5:1
+Elapsed time: 125.175164 seconds (125) for nboyer:5:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nboyer:5:1,125.175164
+
+real	2m6.649s
+user	2m12.936s
+sys	0m0.383s
 
 Testing sboyer under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sboyer.sps /tmp/larcenous/IronScheme/sboyer.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,sboyer,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 150 handles
+
+Running sboyer:5:1
+Elapsed time: 20.542816 seconds (20) for sboyer:5:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,sboyer:5:1,20.542816
+
+real	0m21.979s
+user	0m22.436s
+sys	0m0.133s
 
 Testing gcbench under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/gcbench.sps /tmp/larcenous/IronScheme/gcbench.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,gcbench,CRASHED
+Unhandled exception during evaluation:
+&who: make-node-raw
+&message: "not a valid define-record-type keyword"
+&syntax:
+  form: make-node-raw
+  subform: #f
+&source-information:
+  file-name: "/tmp/larcenous/IronScheme/gcbench.sps"
+  character: "(95,8) - (95,21)"
+&trace: #<syntax make-node-raw ((95,8) - (95,21) of /tmp/larcenous/IronScheme/gcbench.sps)>
+
+real	0m1.186s
+user	0m1.124s
+sys	0m0.072s
 
 Testing mperm under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mperm.sps /tmp/larcenous/IronScheme/mperm.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.004s
-user	0m0.000s
-sys	0m0.004s
-+!CSVLINE!+ironscheme,mperm,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running mperm:20:10:2:1
+Elapsed time: 122.666219 seconds (122) for mperm:20:10:2:1
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mperm:20:10:2:1,122.666219
+
+real	2m9.930s
+user	2m23.779s
+sys	0m3.998s
 
 Testing equal under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/equal.sps /tmp/larcenous/IronScheme/equal.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,equal,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running equal:100:100:8:1000:2000:5000
+Elapsed time: 8.171467 seconds (8) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+ironscheme-1.0.101-0fdbfcf,equal:100:100:8:1000:2000:5000,8.171467
+
+real	0m9.509s
+user	0m9.872s
+sys	0m0.396s
 
 Testing bv2string under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/bv2string.sps /tmp/larcenous/IronScheme/bv2string.sps
 Running...
-/home/nex/bin/ironscheme: line 2: mono: command not found
+﻿﻿ves_icall_TypeBuilder_create_runtime_class_raw USED 271 handles
 
-real	0m0.003s
-user	0m0.003s
-sys	0m0.000s
-+!CSVLINE!+ironscheme,bv2string,CRASHED
+ves_icall_TypeBuilder_create_runtime_class_raw USED 124 handles
+
+ves_icall_TypeBuilder_create_runtime_class_raw USED 470 handles
+
+Running bv2string:1000:1000:100
+/home/nex/bin/ironscheme: line 2: 38151 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+
+real	5m0.491s
+user	4m59.729s
+sys	0m0.507s
++!CSVLINE!+ironscheme,bv2string,ULIMITKILLED
