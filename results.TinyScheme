@@ -1,17 +1,17 @@
 
 ****************************
-Benchmarking TinyScheme on Tue 10 Sep 01:42:31 CEST 2019 under Linux nexion 5.2.11-arch1-1-ARCH #1 SMP PREEMPT Thu Aug 29 08:09:36 UTC 2019 x86_64 GNU/Linux
+Benchmarking TinyScheme on Mon 22 Jun 01:19:44 CEST 2020 under Linux nexion-old 5.5.6-arch1-1 #1 SMP PREEMPT Mon, 24 Feb 2020 12:20:16 +0000 x86_64 GNU/Linux
 
 Testing browse under TinyScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/TinyScheme-prelude.scm
 Compiling...
 tinyscheme_comp /tmp/larcenous/TinyScheme/browse.scm /tmp/larcenous/TinyScheme/browse.scm
 Running...
-./bench: line 474: 42020 Segmentation fault      (core dumped) ${TINYSCHEME} "$1" < "$2"
+./bench: line 474: 2699808 Segmentation fault      (core dumped) ${TINYSCHEME} "$1" < "$2"
 
-real	0m1.588s
-user	0m1.356s
-sys	0m0.003s
+real	0m1.724s
+user	0m1.388s
+sys	0m0.000s
 +!CSVLINE!+tinyscheme,browse,CRASHED
 
 Testing deriv under TinyScheme
@@ -35,8 +35,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/destruc.scm
 Error: (/tmp/larcenous/TinyScheme/destruc.scm : 145) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,destruc,CRASHED
 
@@ -48,8 +48,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/diviter.scm
 Error: (/tmp/larcenous/TinyScheme/diviter.scm : 112) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,diviter,CRASHED
 
@@ -61,8 +61,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/divrec.scm
 Error: (/tmp/larcenous/TinyScheme/divrec.scm : 111) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,divrec,CRASHED
 
@@ -74,8 +74,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/puzzle.scm
 Error: (/tmp/larcenous/TinyScheme/puzzle.scm : 236) atom->string: bad base: 10 
 
-real	0m0.009s
-user	0m0.009s
+real	0m0.006s
+user	0m0.006s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,puzzle,CRASHED
 
@@ -87,9 +87,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/triangl.scm
 Error: (/tmp/larcenous/TinyScheme/triangl.scm : 152) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.003s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
 +!CSVLINE!+tinyscheme,triangl,CRASHED
 
 Testing tak under TinyScheme
@@ -100,8 +100,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/tak.scm
 Error: (/tmp/larcenous/TinyScheme/tak.scm : 112) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.006s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,tak,CRASHED
 
@@ -113,8 +113,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/takl.scm
 Error: (/tmp/larcenous/TinyScheme/takl.scm : 127) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,takl,CRASHED
 
@@ -126,9 +126,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/ntakl.scm
 Error: (/tmp/larcenous/TinyScheme/ntakl.scm : 141) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.003s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
 +!CSVLINE!+tinyscheme,ntakl,CRASHED
 
 Testing cpstak under TinyScheme
@@ -153,7 +153,7 @@ Errors encountered reading /tmp/larcenous/TinyScheme/ctak.scm
 Error: (/tmp/larcenous/TinyScheme/ctak.scm : 123) atom->string: bad base: 10 
 
 real	0m0.004s
-user	0m0.003s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,ctak,CRASHED
 
@@ -178,8 +178,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/fibc.scm
 Error: (/tmp/larcenous/TinyScheme/fibc.scm : 121) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.003s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,fibc,CRASHED
 
@@ -204,8 +204,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/sum.scm
 Error: (/tmp/larcenous/TinyScheme/sum.scm : 106) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.003s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,sum,CRASHED
 
@@ -231,8 +231,8 @@ Errors encountered reading /tmp/larcenous/TinyScheme/fft.scm
 Error: (/tmp/larcenous/TinyScheme/fft.scm : 192) atom->string: bad base: 10 
 
 real	0m0.004s
-user	0m0.004s
-sys	0m0.000s
+user	0m0.002s
+sys	0m0.002s
 +!CSVLINE!+tinyscheme,fft,CRASHED
 
 Testing mbrot under TinyScheme
@@ -243,8 +243,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/mbrot.scm
 Error: (/tmp/larcenous/TinyScheme/mbrot.scm : 140) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,mbrot,CRASHED
 
@@ -256,8 +256,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/mbrotZ.scm
 Error: (/tmp/larcenous/TinyScheme/mbrotZ.scm : 145) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,mbrotZ,CRASHED
 
@@ -282,9 +282,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/pi.scm
 Error: (/tmp/larcenous/TinyScheme/pi.scm : 204) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.003s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
 +!CSVLINE!+tinyscheme,pi,CRASHED
 
 Testing pnpoly under TinyScheme
@@ -295,8 +295,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/pnpoly.scm
 Error: (/tmp/larcenous/TinyScheme/pnpoly.scm : 138) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,pnpoly,CRASHED
 
@@ -308,8 +308,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/ray.scm
 Error: (/tmp/larcenous/TinyScheme/ray.scm : 270) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,ray,CRASHED
 
@@ -334,9 +334,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/ack.scm
 Error: (/tmp/larcenous/TinyScheme/ack.scm : 107) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.003s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
 +!CSVLINE!+tinyscheme,ack,CRASHED
 
 Testing array1 under TinyScheme
@@ -360,8 +360,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/string.scm
 Error: (/tmp/larcenous/TinyScheme/string.scm : 120) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,string,CRASHED
 
@@ -373,8 +373,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/sum1.scm
 Error: (/tmp/larcenous/TinyScheme/sum1.scm : 112) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,sum1,CRASHED
 
@@ -386,8 +386,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/cat.scm
 Error: (/tmp/larcenous/TinyScheme/cat.scm : 120) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,cat,CRASHED
 
@@ -399,8 +399,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/tail.scm
 Error: (/tmp/larcenous/TinyScheme/tail.scm : 130) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,tail,CRASHED
 
@@ -412,9 +412,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/wc.scm
 Error: (/tmp/larcenous/TinyScheme/wc.scm : 117) atom->string: bad base: 10 
 
-real	0m0.005s
+real	0m0.004s
 user	0m0.003s
-sys	0m0.003s
+sys	0m0.000s
 +!CSVLINE!+tinyscheme,wc,CRASHED
 
 Testing read1 under TinyScheme
@@ -425,8 +425,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/read1.scm
 Error: (/tmp/larcenous/TinyScheme/read1.scm : 134) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,read1,CRASHED
 
@@ -437,9 +437,9 @@ tinyscheme_comp /tmp/larcenous/TinyScheme/compiler.scm /tmp/larcenous/TinyScheme
 Running...
 No memory!
 
-real	0m0.380s
-user	0m0.377s
-sys	0m0.003s
+real	0m0.367s
+user	0m0.367s
+sys	0m0.000s
 
 Testing conform under TinyScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/TinyScheme-prelude.scm
@@ -449,8 +449,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/conform.scm
 Error: (/tmp/larcenous/TinyScheme/conform.scm : 553) atom->string: bad base: 10 
 
-real	0m0.007s
-user	0m0.007s
+real	0m0.005s
+user	0m0.005s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,conform,CRASHED
 
@@ -462,9 +462,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/dynamic.scm
 Error: (/tmp/larcenous/TinyScheme/dynamic.scm : 2412) atom->string: bad base: 10 
 
-real	0m0.058s
-user	0m0.055s
-sys	0m0.003s
+real	0m0.047s
+user	0m0.047s
+sys	0m0.000s
 +!CSVLINE!+tinyscheme,dynamic,CRASHED
 
 Testing earley under TinyScheme
@@ -488,8 +488,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/graphs.scm
 Error: (/tmp/larcenous/TinyScheme/graphs.scm : 694) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,graphs,CRASHED
 
@@ -501,9 +501,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/lattice.scm
 Error: (/tmp/larcenous/TinyScheme/lattice.scm : 321) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
-sys	0m0.000s
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
 +!CSVLINE!+tinyscheme,lattice,CRASHED
 
 Testing matrix under TinyScheme
@@ -514,8 +514,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/matrix.scm
 Error: (/tmp/larcenous/TinyScheme/matrix.scm : 889) atom->string: bad base: 10 
 
-real	0m0.007s
-user	0m0.005s
+real	0m0.005s
+user	0m0.003s
 sys	0m0.002s
 +!CSVLINE!+tinyscheme,matrix,CRASHED
 
@@ -537,10 +537,10 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/TinyScheme-prelude.scm
 Compiling...
 tinyscheme_comp /tmp/larcenous/TinyScheme/mazefun.scm /tmp/larcenous/TinyScheme/mazefun.scm
 Running...
-./bench: line 474: 42358 Segmentation fault      (core dumped) ${TINYSCHEME} "$1" < "$2"
+./bench: line 474: 2700196 Segmentation fault      (core dumped) ${TINYSCHEME} "$1" < "$2"
 
-real	0m0.194s
-user	0m0.007s
+real	0m0.248s
+user	0m0.005s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,mazefun,CRASHED
 
@@ -552,8 +552,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/nqueens.scm
 Error: (/tmp/larcenous/TinyScheme/nqueens.scm : 129) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,nqueens,CRASHED
 
@@ -565,9 +565,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/paraffins.scm
 Error: (/tmp/larcenous/TinyScheme/paraffins.scm : 274) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.003s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.002s
+sys	0m0.002s
 +!CSVLINE!+tinyscheme,paraffins,CRASHED
 
 Testing parsing under TinyScheme
@@ -578,8 +578,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/parsing.scm
 Error: (/tmp/larcenous/TinyScheme/parsing.scm : 1020) atom->string: bad base: 10 
 
-real	0m0.007s
-user	0m0.007s
+real	0m0.005s
+user	0m0.005s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,parsing,CRASHED
 
@@ -591,9 +591,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/peval.scm
 Error: (/tmp/larcenous/TinyScheme/peval.scm : 727) atom->string: bad base: 10 
 
-real	0m0.008s
-user	0m0.008s
-sys	0m0.000s
+real	0m0.005s
+user	0m0.003s
+sys	0m0.003s
 +!CSVLINE!+tinyscheme,peval,CRASHED
 
 Testing primes under TinyScheme
@@ -604,8 +604,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/primes.scm
 Error: (/tmp/larcenous/TinyScheme/primes.scm : 122) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,primes,CRASHED
 
@@ -617,8 +617,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/quicksort.scm
 Error: (/tmp/larcenous/TinyScheme/quicksort.scm : 237) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,quicksort,CRASHED
 
@@ -630,9 +630,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/scheme.scm
 Error: (/tmp/larcenous/TinyScheme/scheme.scm : 91) not enough arguments 
 
-real	0m0.006s
-user	0m0.006s
-sys	0m0.000s
+real	0m0.004s
+user	0m0.000s
+sys	0m0.003s
 +!CSVLINE!+tinyscheme,scheme,CRASHED
 
 Testing slatex under TinyScheme
@@ -643,9 +643,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/slatex.scm
 Error: (/tmp/larcenous/TinyScheme/slatex.scm : 2438) atom->string: bad base: 10 
 
-real	0m0.027s
-user	0m0.027s
-sys	0m0.000s
+real	0m0.020s
+user	0m0.013s
+sys	0m0.006s
 +!CSVLINE!+tinyscheme,slatex,CRASHED
 
 Testing chudnovsky under TinyScheme
@@ -656,8 +656,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/chudnovsky.scm
 Error: (/tmp/larcenous/TinyScheme/chudnovsky.scm : 150) atom->string: bad base: 10 
 
-real	0m0.005s
-user	0m0.005s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,chudnovsky,CRASHED
 
@@ -682,8 +682,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/sboyer.scm
 Error: (/tmp/larcenous/TinyScheme/sboyer.scm : 869) atom->string: bad base: 10 
 
-real	0m0.008s
-user	0m0.008s
+real	0m0.005s
+user	0m0.005s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,sboyer,CRASHED
 
@@ -695,9 +695,9 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/gcbench.scm
 Error: (/tmp/larcenous/TinyScheme/gcbench.scm : 279) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
-sys	0m0.000s
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
 +!CSVLINE!+tinyscheme,gcbench,CRASHED
 
 Testing mperm under TinyScheme
@@ -708,8 +708,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/mperm.scm
 Error: (/tmp/larcenous/TinyScheme/mperm.scm : 295) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,mperm,CRASHED
 
@@ -721,8 +721,8 @@ Running...
 Errors encountered reading /tmp/larcenous/TinyScheme/equal.scm
 Error: (/tmp/larcenous/TinyScheme/equal.scm : 242) atom->string: bad base: 10 
 
-real	0m0.006s
-user	0m0.006s
+real	0m0.004s
+user	0m0.004s
 sys	0m0.000s
 +!CSVLINE!+tinyscheme,equal,CRASHED
 
