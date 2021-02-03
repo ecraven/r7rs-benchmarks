@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon" #  chicken4 chicken4csi
+ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon" #  chicken4 chicken4csi
 ################################################################
 
 NB_RUNS=1
@@ -128,6 +128,7 @@ setup ()
     KAWA=${KAWA:-"kawa"}
     KAWAJAR=${KAWAJAR:-/usr/share/kawa/lib/kawa.jar}
     LARCENY=${LARCENY:-"larceny"}
+    LOKO=${LOKO:-"loko"}
     MIT=${MIT:-"mit-scheme"}
     MOSH=${MOSH:-"mosh-scheme"}
     PETIT=${PETIT:-"../../../../PetitGit/larceny"}
@@ -179,6 +180,7 @@ Usage: bench [-r runs] <system> <benchmark>
   ironscheme       for IronScheme
   kawa             for Kawa
   larceny          for Larceny
+  loko             for Loko Scheme
   mit              for MIT/GNU Scheme
   mosh             for Mosh
   petit            for Petit Larceny
@@ -847,6 +849,18 @@ sagittarius_exec ()
 }
 
 # -----------------------------------------------------------------------------
+# Definitions specific to Loko
+
+loko_comp ()
+{
+    ${LOKO} -std=r7rs -ftarget=linux --compile $1 --output $2
+}
+
+loko_exec ()
+{
+    time "$1" < "$2"
+}
+# -----------------------------------------------------------------------------
 
 ## Arg processing...
 if [ "$#" -lt 2 ]; then
@@ -1249,6 +1263,17 @@ for system in $systems ; do
                      COMPCOMMANDS=""
                      EXECCOMMANDS=""
                      ;;
+
+        loko) NAME='Loko'
+              COMP=loko_comp
+              EXEC=loko_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="exe"
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
+              ;;
+
         *) echo "Unknown Scheme"
            exit -1
            ;;
