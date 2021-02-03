@@ -655,7 +655,7 @@ chez_exec ()
 {
     # remove import statement
     # sed -i -e 's/^(import (scheme.*)$//g' $1
-    time "${CHEZ}" --optimize-level 3 --compile-imported-libraries --libdirs /home/nex/scheme/chez --program "$1" < "$2"
+    time "${CHEZ}" --optimize-level 2 --compile-imported-libraries --libdirs /home/nex/scheme/chez --program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
