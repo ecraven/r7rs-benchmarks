@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit petite picrin racket rhizome rscheme s9fes sagittarius scheme48 vicare ypsilon" #  chicken4 chicken4csi
+ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 vicare ypsilon" #  chicken4 chicken4csi
 ################################################################
 
 NB_RUNS=1
@@ -142,6 +142,7 @@ setup ()
     RHIZOME_PISL=${RHIZOME_PISL:-"pisl"}
     SAGITTARIUS=${SAGITTARIUS:-"sagittarius"}
     SCHEME48=${SCHEME48:-"scheme48"}
+    S7=${S7:-"s7"}
     S9fES=${S9fES:-"s9"}
     SISC=${SISC:-"sisc"}
     STALIN=${STALIN:-"chicken-stalin"}
@@ -191,6 +192,7 @@ Usage: bench [-r runs] <system> <benchmark>
   rscheme          for RScheme
   sagittarius      for Sagittarius
   scheme48         for Scheme48
+  s7               for S7
   s9fes            for S9fES (Scheme 9 from Empty Space)
   sisc             for SISC (Second Implementation of Scheme)
   stalin           for Stalin
@@ -434,6 +436,19 @@ stalin_exec ()
 {
     exe=${1%%.exe}
     time ( "$exe" < "$2" )
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to S7
+
+s7_comp ()
+{
+    :
+}
+
+s7_exec ()
+{
+    time ${S7} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -1003,6 +1018,16 @@ for system in $systems ; do
                 COMPCOMMANDS=""
                 EXECCOMMANDS=""
                 ;;
+
+        s7) NAME='S7'
+               COMP=s7_comp
+               EXEC=s7_exec
+               COMPOPTS=""
+               EXTENSION="scm"
+               EXTENSIONCOMP="scm"
+               COMPCOMMANDS=""
+               EXECCOMMANDS=""
+               ;;
 
         s9fes) NAME='S9fES'
                COMP=s9fes_comp
