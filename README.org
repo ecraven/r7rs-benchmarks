@@ -94,3 +94,8 @@ Before calling Stalin, the code is run through [[http://petrofsky.org/src/alexpa
 Missing a lot of necessary functions, =read= for example.
 *** TinyScheme
 Problems with redirecting input, =read= chokes. No timing functions.
+** Safety
+The benchmarking code does *not* use unsafe optimizations. These make code run even faster (but less safe ;)
+Specific options that could be used are:
+- Chez :: =--optimize-level 3=
+- Gerbil / Gambit :: =(declare (not safe))=
