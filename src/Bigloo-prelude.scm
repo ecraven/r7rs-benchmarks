@@ -12,6 +12,8 @@
 (define (error . args) args)
 (define (exact-integer? v)
   (and (integer? v) (exact? v)))
+(define (square x)
+  (* x x))
 (define (make-bytevector n) (make-u8vector n))
 (define (bytevector-u8-set! vec i x)
   (u8vector-set! vec i (if (integer? x) (fixnum->uint8 x) x)))
@@ -32,4 +34,22 @@
                 (set! pos (+ pos 1)))
               l)
     s))
+(define (integer-length n)
+  (inexact->exact (ceiling (/ (log n)
+                              (log 2)))))
+;; taken from mit-scheme, src/runtime/primitive-arithmetic.scm
+(define (exact-integer-sqrt n)
+  (if (= 0 n)
+      (values 0 0)
+      (let loop
+	  ((i
+	    (expt 2
+		  (let ((n-bits (integer-length n)))
+		    (if (= 0 (remainder n-bits 2))
+			(quotient n-bits 2)
+			(+ (quotient n-bits 2) 1))))))
+	(let ((j (quotient (+ i (quotient n i)) 2)))
+	  (if (>= j i)
+	      (values i (- n (* i i)))
+	      (loop j))))))
 #;
