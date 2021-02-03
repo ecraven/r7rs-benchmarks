@@ -371,7 +371,7 @@ chicken4_exec ()
 
 chicken5_comp ()
 {
-    OPTS="-R r7rs -X r7rs -optimize-leaf-routines -block -inline -inline-global -specialize -O2 -d0"
+    OPTS="-R r7rs -X r7rs -block -O3 -C -O3 -d0"
     ${CHICKEN5_CSC} ${OPTS} $1 -o $2
 }
 
