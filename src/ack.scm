@@ -7,7 +7,7 @@
         ((= n 0) (ack (- m 1) 1))
         (else (ack (- m 1) (ack m (- n 1))))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

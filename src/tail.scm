@@ -30,7 +30,7 @@
         (lambda (out)
           (echo-lines-in-reverse-order in out))))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

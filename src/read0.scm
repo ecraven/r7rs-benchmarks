@@ -454,7 +454,7 @@
                          (loop (+ cp 1) passed (+ failed 1))))))))
   (loop lo 0 0))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

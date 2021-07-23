@@ -223,7 +223,7 @@
               (count-maps l5 l5)))
       (else (error "run: unanticipated problem size" k)))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

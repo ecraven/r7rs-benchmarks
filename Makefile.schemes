@@ -1,3 +1,6 @@
+all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken5 results.Chicken5CSI results.Foment results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Loko results.MIT results.Petite results.Racket results.S7 results.S9fES results.Sagittarius results.Scheme48 results.Ypsilon results.Cyclone results.Femtolisp results.Gerbil results.Owl-Lisp
+# results.TinyScheme results.Stalin results.SISC results.Rhizome results.Picrin results.Vicare results.RScheme results.Larceny
+
 s7:
 	./bench s7 all
 
@@ -67,6 +70,9 @@ loko:
 mit:
 	./bench mit all
 
+owllisp:
+	./bench owllisp all
+
 petite:
 	./bench petite all
 
@@ -130,6 +136,8 @@ results.Kawa: kawa
 
 results.Larceny: larceny
 
+results.Loko: loko
+
 results.MIT: mit
 
 results.Petite: petite
@@ -166,4 +174,4 @@ results.Gerbil: gerbil
 
 results.SISC: sisc
 
-all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken5 results.Chicken5CSI results.Foment results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.Loko results.MIT results.Petite results.Picrin results.Racket results.Rhizome results.RScheme results.S7 results.S9fES results.Sagittarius results.Scheme48 results.Stalin results.TinyScheme results.Ypsilon results.Cyclone results.Femtolisp results.Gerbil results.SISC # results.Vicare
+

@@ -130,7 +130,7 @@
        (equality-benchmark4 n4)
        (equality-benchmark5 n5)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((input0 (read))
          (input1 (read))
          (input2 (read))

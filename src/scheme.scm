@@ -1039,7 +1039,7 @@
 (def-proc 'newline                        newline)
 (def-proc 'write-char                     write-char)
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

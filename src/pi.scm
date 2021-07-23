@@ -99,7 +99,7 @@
         (cons (list b2 (- bs b2) (- b4 b2))
               (pies (+ n s) m s)))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

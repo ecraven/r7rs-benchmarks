@@ -138,7 +138,6 @@
            (positive? k)
            (<= 0 ell k))
       (let ((id (string-append "mperm:"
-		
                                (number->string m)
                                ":"
                                (number->string n)
@@ -194,7 +193,7 @@
 (define (run-benchmark . args)
   (apply run-r7rs-benchmark args))
 
-(define (main)
+(define (run-benchmark)
   (let* ((input1 (read))
          (input2 (read))
          (input3 (read))

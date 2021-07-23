@@ -24,7 +24,7 @@
 (define (primes<= n)
   (sieve (interval-list 2 n)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

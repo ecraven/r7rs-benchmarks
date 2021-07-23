@@ -36,7 +36,7 @@
            (i 0 (+ i 1)))
           ((eof-object? x) y)))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

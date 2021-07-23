@@ -25,7 +25,7 @@
         (loop (- repeat 1) (my-try n))
         result)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

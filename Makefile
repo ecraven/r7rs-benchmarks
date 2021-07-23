@@ -9,8 +9,8 @@ all.csv:
 
 html: index.html benchmark.html csv
 
-index.html: all.csv
-	mit-scheme --load "graph.scm" --eval '(%exit 0)'
+index.html: all.csv graph.scm
+	chez-scheme --script "graph.scm"
 
 clean:
 	rm -f results.* all.csv outputs/*

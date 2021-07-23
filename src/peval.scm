@@ -625,7 +625,7 @@
          (list '(a b c d e f g h i j k l m n o p q r s t u v w x y z)))
         (try-peval input1 input2)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

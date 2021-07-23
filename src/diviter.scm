@@ -12,7 +12,7 @@
        (a '() (cons (car l) a)))
       ((null? l) a)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

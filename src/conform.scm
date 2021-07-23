@@ -456,7 +456,7 @@
   (map internal-node-name
        (graph-nodes (make-lattice (make-graph a b c d any-node none-node) #f))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

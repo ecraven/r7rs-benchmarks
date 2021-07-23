@@ -24,7 +24,7 @@
 
   (tak x y z (lambda (a) a)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

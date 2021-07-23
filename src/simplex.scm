@@ -188,7 +188,7 @@
                    (vector 0.0 0.0 0.0 0.0 0.0))
            2 1 1))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

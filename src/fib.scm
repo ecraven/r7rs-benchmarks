@@ -8,7 +8,7 @@
       (+ (fib (- n 1))
          (fib (- n 2)))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input (read))
          (output (read))

@@ -789,7 +789,7 @@
                                  csize
                                  state))))))))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

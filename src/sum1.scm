@@ -14,7 +14,7 @@
 (define (go input)
   (call-with-input-file input sum))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

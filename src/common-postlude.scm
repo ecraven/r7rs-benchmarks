@@ -1,1 +1,1 @@
-(main)
+(run-benchmark)

@@ -44,7 +44,7 @@
                                          x))
                                     (set-car! a i))))))))))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

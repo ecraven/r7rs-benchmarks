@@ -42,7 +42,7 @@
     (mbrot matrix -1.0 -0.5 0.005 n)
     (vector-ref (vector-ref matrix 0) 0)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

@@ -11,7 +11,7 @@
   (cond ((null? l) '())
         (else (cons (car l) (recursive-div2 (cddr l))))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

@@ -2338,7 +2338,7 @@
                  ((eq? typ 'input) (slatex.read-filename in))
                  (else (slatex.error 'slatex.inline-protected 1)))))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

@@ -23,7 +23,7 @@
                  (lambda (c) (fibc (pred (pred x)) c)))
                 c))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input (read))
          (output (read))

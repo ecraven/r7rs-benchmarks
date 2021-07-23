@@ -189,7 +189,7 @@
           ((null? p))
         (my-match (car pats) (car p) '())))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

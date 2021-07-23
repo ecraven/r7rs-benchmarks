@@ -19,7 +19,7 @@
 (define (go x)
   (call-with-input-file x wcport))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input (read))
          (output (read))

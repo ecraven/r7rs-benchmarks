@@ -121,7 +121,7 @@
                  ((>= i iNumIters))
                (MakeTree depth))))))
 
-      (define (main)
+      (define (run-benchmark)
         (display "Garbage Collector Test")
         (newline)
         (display (string-append
@@ -175,7 +175,7 @@
 
       (main))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

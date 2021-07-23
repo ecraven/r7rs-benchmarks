@@ -122,7 +122,7 @@
 ;;; quicksort benchmark, we generate a relatively small
 ;;; random vector and then sort many copies of it.
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

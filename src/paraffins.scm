@@ -176,7 +176,7 @@
     (+ (length (vector-ref x 0))
        (length (vector-ref x 1)))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

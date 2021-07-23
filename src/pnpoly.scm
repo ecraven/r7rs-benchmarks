@@ -39,7 +39,7 @@
     (when (pt-in-poly2 xp yp -.5 -2.5) (set! count (+ count 1)))
     count))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

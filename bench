@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 vicare ypsilon" #  chicken4 chicken4csi
+ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos vicare ypsilon" #  chicken4 chicken4csi
 ################################################################
 
 NB_RUNS=1
@@ -131,6 +131,7 @@ setup ()
     LOKO=${LOKO:-"loko"}
     MIT=${MIT:-"mit-scheme"}
     MOSH=${MOSH:-"mosh-scheme"}
+    OL=${OL:-"ol"}
     PETIT=${PETIT:-"../../../../PetitGit/larceny"}
     PETITE=${PETITE:-"petite"}
     PICRIN=${PICRIN:-"picrin"}
@@ -146,6 +147,7 @@ setup ()
     S9fES=${S9fES:-"s9"}
     SISC=${SISC:-"sisc"}
     STALIN=${STALIN:-"chicken-stalin"}
+    STKLOS=${STKLOS:-"stklos"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
     VICARE=${VICARE:-"vicare"}
     YPSILON=${YPSILON:-"ypsilon"}
@@ -184,6 +186,7 @@ Usage: bench [-r runs] <system> <benchmark>
   loko             for Loko Scheme
   mit              for MIT/GNU Scheme
   mosh             for Mosh
+  owllisp          for Owl-Lisp
   petit            for Petit Larceny
   petite           for Petite Chez
   picrin           for Picrin
@@ -196,6 +199,7 @@ Usage: bench [-r runs] <system> <benchmark>
   s9fes            for S9fES (Scheme 9 from Empty Space)
   sisc             for SISC (Second Implementation of Scheme)
   stalin           for Stalin
+  stklos           for STklos
   tinyscheme       for TinyScheme
   vicare           for Vicare
   ypsilon          for Ypsilon
@@ -480,6 +484,19 @@ sisc_exec ()
 # -----------------------------------------------------------------------------
 # Definitions specific to TinyScheme
 
+stklos_comp ()
+{
+    true
+}
+
+stklos_exec ()
+{
+    time ( ${STKLOS} -f "$1" < "$2" )
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to TinyScheme
+
 tinyscheme_comp ()
 {
     # remove import statement
@@ -488,7 +505,8 @@ tinyscheme_comp ()
 
 tinyscheme_exec ()
 {
-    time ( ${TINYSCHEME} "$1" < "$2" )
+    sed 's/^(run-benchmark)$/(with-input-from-file (car *args*) run-benchmark)/' -i "$1"
+    time ( ${TINYSCHEME} -1 "$1" "$2" )
 }
 
 # -----------------------------------------------------------------------------
@@ -500,7 +518,7 @@ rscheme_comp ()
     sed -i -e 's/^(import (scheme.*)$//g' $1
     filename=$(basename $1)
     dirname=$(dirname $1)
-    echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export main))" > $dirname/test.mcf
+    echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export run-benchmark))" > $dirname/test.mcf
     #    cd $dirname
     ${RSCHEME_RSC} -p $dirname/test.mcf
 }
@@ -560,10 +578,10 @@ ypsilon_exec ()
 
 scheme48_comp ()
 {
-    # don't execute main
-    sed -i -e 's/^(main)$//' -e 's/(main)/(main . unneeded-command-line-parameters)/' $1
-    echo "echo -e ,set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build main $2\n,exit | ( time ${SCHEME48} )"
-    echo -e ",set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build main $2\n,exit" | ( time ${SCHEME48} )
+    # don't execute run-benchmark
+    sed -i -e 's/^(run-benchmark)$//' -e 's/(run-benchmark)/(run-benchmark . unneeded-command-line-parameters)/' $1
+    echo "echo -e ,set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build run-benchmark $2\n,exit | ( time ${SCHEME48} )"
+    echo -e ",set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build run-benchmark $2\n,exit" | ( time ${SCHEME48} )
 }
 
 scheme48_exec ()
@@ -637,11 +655,13 @@ ironscheme_exec ()
 
 racket_comp ()
 {
+    echo ${RACKET_RACO} make "$1"
     ${RACKET_RACO} make "$1"
 }
 
 racket_exec ()
 {
+    echo time ${RACKET} "$1" < "$2"
     time ${RACKET} "$1" < "$2"
 }
 
@@ -773,7 +793,7 @@ gauche_exec ()
 
 gerbil_comp ()
 {
-    sed -i -e 's/^(main)$//' $1
+    sed -i -e 's/^(run-benchmark)$//' $1
     ${GERBIL} -d $(dirname "$1") -exe -static -O -prelude "(declare (not safe))" -o "${1%.scm}.exe" "$1"
 }
 
@@ -831,6 +851,20 @@ mosh_comp ()
 mosh_exec ()
 {
     time "${MOSH}" "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Owl-Lisp
+
+owllisp_comp ()
+{
+    :
+}
+
+owllisp_exec ()
+{
+    echo "${OL} $1 < $2"
+    time "${OL}" "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -1048,6 +1082,16 @@ for system in $systems ; do
               COMPCOMMANDS=""
               EXECCOMMANDS=""
               ;;
+
+        stklos) NAME='STklos'
+                    COMP=stklos_comp
+                    EXEC=stklos_exec
+                    COMPOPTS=""
+                    EXTENSION="scm"
+                    EXTENSIONCOMP="scm"
+                    COMPCOMMANDS=""
+                    EXECCOMMANDS=""
+                    ;;
 
         tinyscheme) NAME='TinyScheme'
                     COMP=tinyscheme_comp
@@ -1269,6 +1313,16 @@ for system in $systems ; do
               EXECCOMMANDS=""
               ;;
 
+        owllisp) NAME='Owl-Lisp'
+                COMP=owllisp_comp
+                EXEC=owllisp_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="scm"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
+
         picrin) NAME='Picrin'
                 COMP=picrin_comp
                 EXEC=picrin_exec
@@ -1299,7 +1353,7 @@ for system in $systems ; do
               EXECCOMMANDS=""
               ;;
 
-        *) echo "Unknown Scheme"
+        *) echo "Unknown Scheme $system"
            exit -1
            ;;
     esac

@@ -33,7 +33,7 @@
         (else
          (error #f "No derivation method available"))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

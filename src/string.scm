@@ -22,7 +22,7 @@
     (set! s "abcdef")
     (trial n)))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

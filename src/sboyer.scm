@@ -57,7 +57,7 @@
 
 (import (scheme base) (scheme cxr) (scheme read) (scheme write) (scheme time))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input (read))
          (output (read))

@@ -52,7 +52,7 @@
   (attempt i depth)
   (car *answer*))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (input2 (read))

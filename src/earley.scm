@@ -643,7 +643,7 @@
           (n (length input)))
       (length (parse->trees x 's 0 n)))))
 
-(define (main)
+(define (run-benchmark)
   (let* ((count (read))
          (input1 (read))
          (output (read))

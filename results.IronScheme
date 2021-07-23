@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking IronScheme on Sun 21 Jun 22:00:10 CEST 2020 under Linux nexion-old 5.5.6-arch1-1 #1 SMP PREEMPT Mon, 24 Feb 2020 12:20:16 +0000 x86_64 GNU/Linux
+Benchmarking IronScheme on Fri 23 Jul 19:16:56 UTC 2021 under Linux benchmarks 5.4.124-1-pve #1 SMP PVE 5.4.124-1 (Wed, 23 Jun 2021 13:47:09 +0200) x86_64 GNU/Linux
 
 Testing browse under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -8,12 +8,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/browse.sps /tmp/larcenous/IronScheme/browse.sps
 Running...
 ﻿﻿Running browse:2000
-Elapsed time: 20.636258 seconds (21) for browse:2000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,browse:2000,20.636258
+Elapsed time: 15.668744 seconds (16) for browse:2000
++!CSVLINE!+ironscheme-1.0.240-687cde5,browse:2000,15.668744
 
-real	0m22.764s
-user	0m22.149s
-sys	0m0.311s
+real	0m17.455s
+user	0m17.366s
+sys	0m0.266s
 
 Testing deriv under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -21,12 +21,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/deriv.sps /tmp/larcenous/IronScheme/deriv.sps
 Running...
 ﻿﻿Running deriv:10000000
-Elapsed time: 18.51932 seconds (19) for deriv:10000000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,deriv:10000000,18.51932
+Elapsed time: 16.569319 seconds (16) for deriv:10000000
++!CSVLINE!+ironscheme-1.0.240-687cde5,deriv:10000000,16.569319
 
-real	0m19.995s
-user	0m19.859s
-sys	0m0.164s
+real	0m18.311s
+user	0m18.198s
+sys	0m0.174s
 
 Testing destruc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -34,12 +34,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/destruc.sps /tmp/larcenous/IronScheme/destruc.sps
 Running...
 ﻿﻿Running destruc:600:50:4000
-/home/nex/bin/ironscheme: line 2: 2685323 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 96.096293 seconds (96) for destruc:600:50:4000
++!CSVLINE!+ironscheme-1.0.240-687cde5,destruc:600:50:4000,96.096293
 
-real	5m0.395s
-user	4m59.613s
-sys	0m0.694s
-+!CSVLINE!+ironscheme,destruc,ULIMITKILLED
+real	1m37.847s
+user	1m37.698s
+sys	0m0.197s
 
 Testing diviter under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -47,12 +47,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/diviter.sps /tmp/larcenous/IronScheme/diviter.sps
 Running...
 ﻿﻿Running diviter:1000:1000000
-Elapsed time: 9.862497 seconds (10) for diviter:1000:1000000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,diviter:1000:1000000,9.862497
+Elapsed time: 10.862029 seconds (11) for diviter:1000:1000000
++!CSVLINE!+ironscheme-1.0.240-687cde5,diviter:1000:1000000,10.862029
 
-real	0m11.215s
-user	0m11.110s
-sys	0m0.167s
+real	0m12.562s
+user	0m12.508s
+sys	0m0.126s
 
 Testing divrec under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -60,12 +60,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/divrec.sps /tmp/larcenous/IronScheme/divrec.sps
 Running...
 ﻿﻿Running divrec:1000:1000000
-Elapsed time: 13.816518 seconds (14) for divrec:1000:1000000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,divrec:1000:1000000,13.816518
+Elapsed time: 16.390445 seconds (17) for divrec:1000:1000000
++!CSVLINE!+ironscheme-1.0.240-687cde5,divrec:1000:1000000,16.390445
 
-real	0m15.174s
-user	0m15.085s
-sys	0m0.147s
+real	0m18.093s
+user	0m17.959s
+sys	0m0.206s
 
 Testing puzzle under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -73,12 +73,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/puzzle.sps /tmp/larcenous/IronScheme/puzzle.sps
 Running...
 ﻿﻿Running puzzle:1000
-/home/nex/bin/ironscheme: line 2: 2685659 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 127.755906 seconds (127) for puzzle:1000
++!CSVLINE!+ironscheme-1.0.240-687cde5,puzzle:1000,127.755906
 
-real	5m0.724s
-user	4m59.830s
-sys	0m0.113s
-+!CSVLINE!+ironscheme,puzzle,ULIMITKILLED
+real	2m9.535s
+user	2m9.443s
+sys	0m0.104s
 
 Testing triangl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -86,12 +86,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/triangl.sps /tmp/larcenous/IronScheme/triangl.sps
 Running...
 ﻿﻿Running triangl:22:1:50
-Elapsed time: 111.034006 seconds (111) for triangl:22:1:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,triangl:22:1:50,111.034006
+Elapsed time: 101.267033 seconds (101) for triangl:22:1:50
++!CSVLINE!+ironscheme-1.0.240-687cde5,triangl:22:1:50,101.267033
 
-real	1m52.413s
-user	1m52.308s
-sys	0m0.082s
+real	1m43.006s
+user	1m42.994s
+sys	0m0.024s
 
 Testing tak under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -99,12 +99,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/tak.sps /tmp/larcenous/IronScheme/tak.sps
 Running...
 ﻿﻿Running tak:40:20:11:1
-Elapsed time: 88.843237 seconds (89) for tak:40:20:11:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tak:40:20:11:1,88.843237
+Elapsed time: 79.882584 seconds (80) for tak:40:20:11:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,tak:40:20:11:1,79.882584
 
-real	1m30.204s
-user	1m30.122s
-sys	0m0.053s
+real	1m21.601s
+user	1m21.571s
+sys	0m0.036s
 
 Testing takl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -112,12 +112,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/takl.sps /tmp/larcenous/IronScheme/takl.sps
 Running...
 ﻿﻿Running takl:40:20:12:1
-Elapsed time: 16.143506 seconds (17) for takl:40:20:12:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,takl:40:20:12:1,16.143506
+Elapsed time: 14.905501 seconds (15) for takl:40:20:12:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,takl:40:20:12:1,14.905501
 
-real	0m17.518s
-user	0m17.469s
-sys	0m0.053s
+real	0m16.604s
+user	0m16.580s
+sys	0m0.032s
 
 Testing ntakl under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -125,12 +125,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/ntakl.sps /tmp/larcenous/IronScheme/ntakl.sps
 Running...
 ﻿﻿Running ntakl:40:20:12:1
-Elapsed time: 15.428299 seconds (15) for ntakl:40:20:12:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,ntakl:40:20:12:1,15.428299
+Elapsed time: 16.136557 seconds (16) for ntakl:40:20:12:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,ntakl:40:20:12:1,16.136557
 
-real	0m16.792s
-user	0m16.736s
-sys	0m0.063s
+real	0m17.844s
+user	0m17.828s
+sys	0m0.024s
 
 Testing cpstak under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -138,11 +138,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/cpstak.sps /tmp/larcenous/IronScheme/cpstak.sps
 Running...
 ﻿﻿Running cpstak:40:20:11:1
-Elapsed time: 202.902851 seconds (203) for cpstak:40:20:11:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,cpstak:40:20:11:1,202.902851
+Elapsed time: 204.630894 seconds (205) for cpstak:40:20:11:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,cpstak:40:20:11:1,204.630894
 
-real	3m24.253s
-user	3m23.146s
+real	3m26.372s
+user	3m25.511s
 sys	0m1.535s
 
 Testing ctak under IronScheme
@@ -151,12 +151,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/ctak.sps /tmp/larcenous/IronScheme/ctak.sps
 Running...
 ﻿﻿Running ctak:32:16:8:1
-/home/nex/bin/ironscheme: line 2: 2686705 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 115.629398 seconds (115) for ctak:32:16:8:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,ctak:32:16:8:1,115.629398
 
-real	5m0.153s
-user	4m59.918s
-sys	0m0.113s
-+!CSVLINE!+ironscheme,ctak,ULIMITKILLED
+real	1m57.335s
+user	1m57.112s
+sys	0m0.366s
 
 Testing fib under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -164,12 +164,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fib.sps /tmp/larcenous/IronScheme/fib.sps
 Running...
 ﻿﻿Running fib:40:5
-Elapsed time: 231.443796 seconds (232) for fib:40:5
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,fib:40:5,231.443796
+Elapsed time: 212.236782 seconds (212) for fib:40:5
++!CSVLINE!+ironscheme-1.0.240-687cde5,fib:40:5,212.236782
 
-real	3m52.820s
-user	3m52.568s
-sys	0m0.047s
+real	3m33.962s
+user	3m33.908s
+sys	0m0.058s
 
 Testing fibc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -177,12 +177,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fibc.sps /tmp/larcenous/IronScheme/fibc.sps
 Running...
 ﻿﻿Running fibc:30:10
-/home/nex/bin/ironscheme: line 2: 2687257 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 91.392135 seconds (91) for fibc:30:10
++!CSVLINE!+ironscheme-1.0.240-687cde5,fibc:30:10,91.392135
 
-real	5m0.255s
-user	4m59.898s
-sys	0m0.127s
-+!CSVLINE!+ironscheme,fibc,ULIMITKILLED
+real	1m33.116s
+user	1m32.836s
+sys	0m0.355s
 
 Testing fibfp under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -190,11 +190,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fibfp.sps /tmp/larcenous/IronScheme/fibfp.sps
 Running...
 ﻿﻿Running fibfp:35.0:10
-/home/nex/bin/ironscheme: line 2: 2687596 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2: 28338 Killed                  mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	5m0.509s
-user	4m59.813s
-sys	0m0.657s
+real	5m2.327s
+user	5m1.100s
+sys	0m1.793s
 +!CSVLINE!+ironscheme,fibfp,ULIMITKILLED
 
 Testing sum under IronScheme
@@ -203,11 +203,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sum.sps /tmp/larcenous/IronScheme/sum.sps
 Running...
 ﻿﻿Running sum:10000:200000
-/home/nex/bin/ironscheme: line 2: 2687764 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2:  4651 Killed                  mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	5m0.588s
-user	4m59.943s
-sys	0m0.577s
+real	5m0.774s
+user	5m0.426s
+sys	0m0.530s
 +!CSVLINE!+ironscheme,sum,ULIMITKILLED
 
 Testing sumfp under IronScheme
@@ -216,11 +216,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sumfp.sps /tmp/larcenous/IronScheme/sumfp.sps
 Running...
 ﻿﻿Running sumfp:1000000.0:500
-/home/nex/bin/ironscheme: line 2: 2688249 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2:  4697 Killed                  mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	5m0.675s
-user	4m59.617s
-sys	0m0.787s
+real	5m1.986s
+user	5m0.905s
+sys	0m1.544s
 +!CSVLINE!+ironscheme,sumfp,ULIMITKILLED
 
 Testing fft under IronScheme
@@ -229,12 +229,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/fft.sps /tmp/larcenous/IronScheme/fft.sps
 Running...
 ﻿﻿Running fft:65536:100
-Elapsed time: 81.090011 seconds (81) for fft:65536:100
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,fft:65536:100,81.090011
+Elapsed time: 37.669991 seconds (38) for fft:65536:100
++!CSVLINE!+ironscheme-1.0.240-687cde5,fft:65536:100,37.669991
 
-real	1m22.558s
-user	1m21.678s
-sys	0m0.894s
+real	0m39.376s
+user	0m39.647s
+sys	0m0.676s
 
 Testing mbrot under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -242,11 +242,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mbrot.sps /tmp/larcenous/IronScheme/mbrot.sps
 Running...
 ﻿﻿Running mbrot:75:1000
-/home/nex/bin/ironscheme: line 2: 2689615 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2:  4772 Killed                  mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	5m0.460s
-user	4m59.595s
-sys	0m0.623s
+real	5m2.627s
+user	5m1.482s
+sys	0m1.673s
 +!CSVLINE!+ironscheme,mbrot,ULIMITKILLED
 
 Testing mbrotZ under IronScheme
@@ -255,11 +255,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mbrotZ.sps /tmp/larcenous/IronScheme/mbrotZ.sps
 Running...
 ﻿﻿Running mbrotZ:75:1000
-/home/nex/bin/ironscheme: line 2: 2690264 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2:  4946 Killed                  mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	5m4.204s
-user	4m59.688s
-sys	0m0.483s
+real	5m2.354s
+user	5m1.211s
+sys	0m1.680s
 +!CSVLINE!+ironscheme,mbrotZ,ULIMITKILLED
 
 Testing nucleic under IronScheme
@@ -268,12 +268,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/nucleic.sps /tmp/larcenous/IronScheme/nucleic.sps
 Running...
 ﻿﻿Running nucleic:50
-/home/nex/bin/ironscheme: line 2: 2690718 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 56.572041 seconds (56) for nucleic:50
++!CSVLINE!+ironscheme-1.0.240-687cde5,nucleic:50,56.572041
 
-real	5m5.167s
-user	4m59.831s
-sys	0m0.527s
-+!CSVLINE!+ironscheme,nucleic,ULIMITKILLED
+real	0m59.289s
+user	0m59.114s
+sys	0m0.322s
 
 Testing pi under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -289,65 +289,30 @@ Got a SIGSEGV while executing native code. This usually indicates
 a fatal error in the mono runtime or one of the native libraries 
 used by your application.
 =================================================================
-/proc/self/maps:
-40c39000-40f9b000 rwxp 00000000 00:00 0 
-41467000-41477000 rwxp 00000000 00:00 0 
-555603745000-555603772000 r--p 00000000 08:02 2470720                    /usr/bin/mono-sgen
-555603772000-555603aaa000 r-xp 0002d000 08:02 2470720                    /usr/bin/mono-sgen
-555603aaa000-555603bec000 r--p 00365000 08:02 2470720                    /usr/bin/mono-sgen
-555603bed000-555603bf6000 r--p 004a7000 08:02 2470720                    /usr/bin/mono-sgen
-555603bf6000-555603bfb000 rw-p 004b0000 08:02 2470720                    /usr/bin/mono-sgen
-555603bfb000-555603c16000 rw-p 00000000 00:00 0 
-5556042f7000-5556071ab000 rw-p 00000000 00:00 0                          [heap]
-7ff954000000-7ff9544c6000 rw-p 00000000 00:00 0 
-7ff9544c6000-7ff958000000 ---p 00000000 00:00 0 
-7ff95c000000-7ff95c03a000 rw-p 00000000 00:00 0 
-7ff95c03a000-7ff960000000 ---p 00000000 00:00 0 
-7ff9604f0000-7ff960570000 rw-p 00000000 00:00 0 
-7ff960574000-7ff9605f4000 rw-p 00000000 00:00 0 
-7ff9605f8000-7ff960678000 rw-p 00000000 00:00 0 
-7ff96067c000-7ff9606fc000 rw-p 00000000 00:00 0 
-7ff960700000-7ff960800000 rw-p 00000000 00:00 0 
-7ff96086c000-7ff9608ec000 rw-p 00000000 00:00 0 
-7ff9608f0000-7ff960970000 rw-p 00000000 00:00 0 
-7ff960974000-7ff9609f4000 rw-p 00000000 00:00 0 
-7ff9609f8000-7ff960a78000 rw-p 00000000 00:00 0 
-7ff960a7c000-7ff960afc000 rw-p 00000000 00:00 0 
-7ff960b00000-7ff960c00000 rw-p 00000000 00:00 0 
-7ff960c74000-7ff960cf4000 rw-p 00000000 00:00 0 
 
 =================================================================
 	Native stacktrace:
 =================================================================
-	0x55560380c397 - mono : (null)
-	0x55560380c751 - mono : (null)
-	0x5556037b7e7b - mono : (null)
-	0x555603773ab7 - mono : (null)
-	0x7ff964ecf960 - /usr/lib/libpthread.so.0 : (null)
-	0x555603a48ae0 - mono : (null)
-	0x555603a48d78 - mono : (null)
-	0x555603a4affa - mono : (null)
-	0x555603a4ed5a - mono : (null)
-	0x555603a4f378 - mono : (null)
-	0x555603a3e9c0 - mono : (null)
-	0x555603a3edc1 - mono : (null)
-	0x555603a2226a - mono : (null)
-	0x40c415c7 - Unknown
+	0x559c43a62f73 - mono : 
+	0x559c43a63329 - mono : 
+	0x559c43a1037b - mono : 
+	0x559c43a5c419 - mono : 
+	0x559c43c8a280 - mono : 
 
 =================================================================
 	Telemetry Dumper:
 =================================================================
-Pkilling 0x7ff962797700 from 0x7ff961bc7700
-Pkilling 0x7ff964cd5780 from 0x7ff961bc7700
-Entering thread summarizer pause from 0x7ff961bc7700
-Finished thread summarizer pause from 0x7ff961bc7700.
-/home/nex/bin/ironscheme: line 2: 2691299 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Pkilling 0x140119454713664x from 0x140119391909440x
+Pkilling 0x140119405934144x from 0x140119391909440x
+Entering thread summarizer pause from 0x140119391909440x
+Finished thread summarizer pause from 0x140119391909440x.
+/home/nex/bin/ironscheme: line 2:  5062 Aborted                 (core dumped) mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	0m3.772s
-user	0m1.333s
-sys	0m0.166s
+real	0m3.788s
+user	0m1.697s
+sys	0m0.099s
 +!CSVLINE!+ironscheme,pi,CRASHED
-Crash Reporter has timed out, sending SIGSEGV
+Mono process hang detected, sending kill signal to pid 5062
 
 Testing pnpoly under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -355,11 +320,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/pnpoly.sps /tmp/larcenous/IronScheme/pnpoly.sps
 Running...
 ﻿﻿Running pnpoly:1000000
-/home/nex/bin/ironscheme: line 2: 2691362 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2:  5083 Killed                  mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	5m0.394s
-user	4m59.762s
-sys	0m0.557s
+real	5m3.121s
+user	5m2.131s
+sys	0m1.673s
 +!CSVLINE!+ironscheme,pnpoly,ULIMITKILLED
 
 Testing ray under IronScheme
@@ -376,65 +341,30 @@ Got a SIGSEGV while executing native code. This usually indicates
 a fatal error in the mono runtime or one of the native libraries 
 used by your application.
 =================================================================
-/proc/self/maps:
-40a60000-40dc2000 rwxp 00000000 00:00 0 
-41846000-41856000 rwxp 00000000 00:00 0 
-55b3bb2c6000-55b3bb2f3000 r--p 00000000 08:02 2470720                    /usr/bin/mono-sgen
-55b3bb2f3000-55b3bb62b000 r-xp 0002d000 08:02 2470720                    /usr/bin/mono-sgen
-55b3bb62b000-55b3bb76d000 r--p 00365000 08:02 2470720                    /usr/bin/mono-sgen
-55b3bb76e000-55b3bb777000 r--p 004a7000 08:02 2470720                    /usr/bin/mono-sgen
-55b3bb777000-55b3bb77c000 rw-p 004b0000 08:02 2470720                    /usr/bin/mono-sgen
-55b3bb77c000-55b3bb797000 rw-p 00000000 00:00 0 
-55b3bbaf1000-55b3be9a5000 rw-p 00000000 00:00 0                          [heap]
-7fd4d4000000-7fd4d44c4000 rw-p 00000000 00:00 0 
-7fd4d44c4000-7fd4d8000000 ---p 00000000 00:00 0 
-7fd4dc000000-7fd4dc03a000 rw-p 00000000 00:00 0 
-7fd4dc03a000-7fd4e0000000 ---p 00000000 00:00 0 
-7fd4e116c000-7fd4e11ec000 rw-p 00000000 00:00 0 
-7fd4e11f0000-7fd4e1270000 rw-p 00000000 00:00 0 
-7fd4e1274000-7fd4e12f4000 rw-p 00000000 00:00 0 
-7fd4e12f8000-7fd4e1378000 rw-p 00000000 00:00 0 
-7fd4e137c000-7fd4e13fc000 rw-p 00000000 00:00 0 
-7fd4e1400000-7fd4e1500000 rw-p 00000000 00:00 0 
-7fd4e156c000-7fd4e15ec000 rw-p 00000000 00:00 0 
-7fd4e15f0000-7fd4e1670000 rw-p 00000000 00:00 0 
-7fd4e1674000-7fd4e16f4000 rw-p 00000000 00:00 0 
-7fd4e16f8000-7fd4e1778000 rw-p 00000000 00:00 0 
-7fd4e177c000-7fd4e17fc000 rw-p 00000000 00:00 0 
-7fd4e1800000-7fd4e1900000 rw-p 00000000 00:00 0 
 
 =================================================================
 	Native stacktrace:
 =================================================================
-	0x55b3bb38d397 - mono : (null)
-	0x55b3bb38d751 - mono : (null)
-	0x55b3bb338e7b - mono : (null)
-	0x55b3bb2f4ab7 - mono : (null)
-	0x7fd4e5bc6960 - /usr/lib/libpthread.so.0 : (null)
-	0x55b3bb5c9ae0 - mono : (null)
-	0x55b3bb5c9d78 - mono : (null)
-	0x55b3bb5cbffa - mono : (null)
-	0x55b3bb5cfd5a - mono : (null)
-	0x55b3bb5d0378 - mono : (null)
-	0x55b3bb5bf9c0 - mono : (null)
-	0x55b3bb5bfdc1 - mono : (null)
-	0x55b3bb5a326a - mono : (null)
-	0x40a685c7 - Unknown
+	0x557b5e609f73 - mono : 
+	0x557b5e60a329 - mono : 
+	0x557b5e5b737b - mono : 
+	0x557b5e603419 - mono : 
+	0x557b5e831280 - mono : 
 
 =================================================================
 	Telemetry Dumper:
 =================================================================
-Pkilling 0x7fd4e3397700 from 0x7fd4e2857700
-Pkilling 0x7fd4e59cc780 from 0x7fd4e2857700
-Entering thread summarizer pause from 0x7fd4e2857700
-Finished thread summarizer pause from 0x7fd4e2857700.
-/home/nex/bin/ironscheme: line 2: 2691657 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Pkilling 0x140248613222208x from 0x140248550422080x
+Pkilling 0x140248565331520x from 0x140248550422080x
+Entering thread summarizer pause from 0x140248550422080x
+Finished thread summarizer pause from 0x140248550422080x.
+/home/nex/bin/ironscheme: line 2:  5121 Aborted                 (core dumped) mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	0m3.902s
-user	0m1.529s
-sys	0m0.146s
+real	0m3.812s
+user	0m1.708s
+sys	0m0.112s
 +!CSVLINE!+ironscheme,ray,CRASHED
-Crash Reporter has timed out, sending SIGSEGV
+Mono process hang detected, sending kill signal to pid 5121
 
 Testing simplex under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -442,12 +372,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/simplex.sps /tmp/larcenous/IronScheme/simplex.sps
 Running...
 ﻿﻿Running simplex:1000000
-/home/nex/bin/ironscheme: line 2: 2691716 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 180.009637 seconds (181) for simplex:1000000
++!CSVLINE!+ironscheme-1.0.240-687cde5,simplex:1000000,180.009637
 
-real	5m0.430s
-user	4m59.716s
-sys	0m0.620s
-+!CSVLINE!+ironscheme,simplex,ULIMITKILLED
+real	3m1.766s
+user	3m1.218s
+sys	0m0.918s
 
 Testing ack under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -455,12 +385,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/ack.sps /tmp/larcenous/IronScheme/ack.sps
 Running...
 ﻿﻿Running ack:3:12:2
-Elapsed time: 273.733125 seconds (274) for ack:3:12:2
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,ack:3:12:2,273.733125
+Elapsed time: 250.858857 seconds (251) for ack:3:12:2
++!CSVLINE!+ironscheme-1.0.240-687cde5,ack:3:12:2,250.858857
 
-real	4m35.059s
-user	4m34.466s
-sys	0m0.457s
+real	4m12.536s
+user	4m12.364s
+sys	0m0.253s
 
 Testing array1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -468,12 +398,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/array1.sps /tmp/larcenous/IronScheme/array1.sps
 Running...
 ﻿﻿Running array1:1000000:500
-Elapsed time: 187.044496 seconds (187) for array1:1000000:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,array1:1000000:500,187.044496
+Elapsed time: 171.588314 seconds (171) for array1:1000000:500
++!CSVLINE!+ironscheme-1.0.240-687cde5,array1:1000000:500,171.588314
 
-real	3m8.460s
-user	3m17.072s
-sys	0m7.352s
+real	2m53.281s
+user	2m58.253s
+sys	0m6.276s
 
 Testing string under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -481,12 +411,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/string.sps /tmp/larcenous/IronScheme/string.sps
 Running...
 ﻿﻿Running string:500000:100
-Elapsed time: 3.656333 seconds (4) for string:500000:100
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,string:500000:100,3.656333
+Elapsed time: 2.843257 seconds (3) for string:500000:100
++!CSVLINE!+ironscheme-1.0.240-687cde5,string:500000:100,2.843257
 
-real	0m5.072s
-user	0m4.653s
-sys	0m1.895s
+real	0m4.515s
+user	0m4.081s
+sys	0m1.577s
 
 Testing sum1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -494,11 +424,11 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sum1.sps /tmp/larcenous/IronScheme/sum1.sps
 Running...
 ﻿﻿Running sum1:25
-/home/nex/bin/ironscheme: line 2: 2692249 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+/home/nex/bin/ironscheme: line 2:  5252 Killed                  mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	4m58.659s
-user	4m56.287s
-sys	0m4.156s
+real	5m0.281s
+user	5m0.608s
+sys	0m1.280s
 +!CSVLINE!+ironscheme,sum1,ULIMITKILLED
 
 Testing cat under IronScheme
@@ -507,12 +437,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/cat.sps /tmp/larcenous/IronScheme/cat.sps
 Running...
 ﻿﻿Running cat:50
-Elapsed time: 102.530559 seconds (102) for cat:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,cat:50,102.530559
+Elapsed time: 75.754015 seconds (76) for cat:50
++!CSVLINE!+ironscheme-1.0.240-687cde5,cat:50,75.754015
 
-real	1m43.950s
-user	1m42.862s
-sys	0m1.219s
+real	1m17.448s
+user	1m16.426s
+sys	0m1.295s
 
 Testing tail under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -520,12 +450,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/tail.sps /tmp/larcenous/IronScheme/tail.sps
 Running...
 ﻿﻿Running tail:50
-Elapsed time: 3.077674 seconds (3) for tail:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,tail:50,3.077674
+Elapsed time: 4.259528 seconds (5) for tail:50
++!CSVLINE!+ironscheme-1.0.240-687cde5,tail:50,4.259528
 
-real	0m4.458s
-user	0m4.352s
-sys	0m0.386s
+real	0m6.056s
+user	0m4.388s
+sys	0m0.511s
 
 Testing wc under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -533,12 +463,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/wc.sps /tmp/larcenous/IronScheme/wc.sps
 Running...
 ﻿﻿Running wc:inputs/bib:50
-Elapsed time: 133.90673 seconds (134) for wc:inputs/bib:50
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,wc:inputs/bib:50,133.90673
+Elapsed time: 92.765088 seconds (93) for wc:inputs/bib:50
++!CSVLINE!+ironscheme-1.0.240-687cde5,wc:inputs/bib:50,92.765088
 
-real	2m15.290s
-user	2m14.266s
-sys	0m1.157s
+real	1m34.437s
+user	1m33.445s
+sys	0m1.292s
 
 Testing read1 under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -546,12 +476,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/read1.sps /tmp/larcenous/IronScheme/read1.sps
 Running...
 ﻿﻿Running read1:2500
-Elapsed time: 96.100379 seconds (96) for read1:2500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,read1:2500,96.100379
+Elapsed time: 35.553106 seconds (35) for read1:2500
++!CSVLINE!+ironscheme-1.0.240-687cde5,read1:2500,35.553106
 
-real	1m37.500s
-user	1m22.503s
-sys	0m15.774s
+real	0m37.266s
+user	0m37.458s
+sys	0m0.658s
 
 Testing compiler under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -559,39 +489,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/compiler.sps /tmp/larcenous/IronScheme/compiler.sps
 Running...
 ﻿﻿Running compiler:2000
-Unhandled CLR exception during evaluation:
-CLR Exception: System.InvalidProgramException
-System.InvalidProgramException: Invalid IL code in eval-core(067):::gen-label-entry (object,object,object,object,object,object): IL_03ef: call      0x06fff971
+Elapsed time: 21.591546 seconds (22) for compiler:2000
++!CSVLINE!+ironscheme-1.0.240-687cde5,compiler:2000,21.591546
 
-
-  at eval-core(067).::dump-procedure#1##loop$571 (System.Object prev-bb, System.Object prev-gvm-instr, System.Object l) [0x00092] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::dump-procedure (System.Object proc) [0x00145] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::dump##loop$564 (System.Object index) [0x0001c] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::dump (System.Object proc, System.Object filename, System.Object c-intf, System.Object options) [0x000ac] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::compile-program##compiler-body#anon$464 (IronScheme.Scripting.CodeContext $context, System.Object lst, System.Object env, System.Object c-intf) [0x00176] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::compile-program##compiler-body$462 (IronScheme.Scripting.CodeContext $context) [0x0008e] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at IronScheme.Runtime.Builtins.CallWithCurrentContinuation (System.Object fc1) [0x00031] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at eval-core(067).::with-exception-handling (System.Object proc) [0x0004c] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::compile-program (System.Object program, System.Object target-name, System.Object opts, System.Object module-name, System.Object dest, System.Object info-port) [0x00072] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::ce+ (System.Object source, System.Object target-name, System.Object opts) [0x00057] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::main#1#anon#1#2#3#4#5#6$711 (IronScheme.Scripting.CodeContext $context) [0x00046] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).::run-r7rs-benchmark (System.Object name, System.Object count, System.Object thunk, System.Object ok?) [0x00091] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at eval-core(067).$262 () [0x07a22] in <d6d6b6b1e5be4082a5724b8968ec7a6b>:0 
-  at IronScheme.Scripting.ScriptCode.Run (IronScheme.Scripting.CodeContext codeContext, System.Boolean tryEvaluate) [0x0004a] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at IronScheme.Scripting.ScriptCode.Run (IronScheme.Scripting.ScriptModule module) [0x00020] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at IronScheme.Runtime.Builtins+<>c__DisplayClass52_1.<CompileCore>b__1 () [0x00015] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at #.psyntax.expander::compile-r6rs-top-level#anon#1#2$2666 (IronScheme.Scripting.CodeContext $context) [0x00047] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at #.ironscheme.exceptions::dynamic-wind (System.Object in, System.Object proc, System.Object out) [0x0009c] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at #.ironscheme.exceptions::dynamic-wind (System.Object in, System.Object proc, System.Object out) [0x0009c] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at #.psyntax.main::load#1$2682 (IronScheme.Scripting.CodeContext $context) [0x00041] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at #.ironscheme.exceptions::dynamic-wind (System.Object in, System.Object proc, System.Object out) [0x0009c] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at IronScheme.Runtime.Builtins.CallWithCurrentContinuation (System.Object fc1) [0x00031] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-  at IronScheme.Runtime.R6RS.Exceptions.WithClrExceptionHandler (System.Object handler, System.Object thunk) [0x0000e] in <771e87d8b6a74adbafbc7dbf2c147db3>:0 
-
-
-real	0m4.409s
-user	0m4.337s
-sys	0m0.237s
+real	0m25.318s
+user	0m25.866s
+sys	0m0.161s
 
 Testing conform under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -599,12 +502,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/conform.sps /tmp/larcenous/IronScheme/conform.sps
 Running...
 ﻿﻿Running conform:500
-Elapsed time: 23.388005 seconds (23) for conform:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,conform:500,23.388005
+Elapsed time: 22.939345 seconds (22) for conform:500
++!CSVLINE!+ironscheme-1.0.240-687cde5,conform:500,22.939345
 
-real	0m24.820s
-user	0m24.745s
-sys	0m0.210s
+real	0m24.683s
+user	0m24.659s
+sys	0m0.137s
 
 Testing dynamic under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -612,12 +515,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/dynamic.sps /tmp/larcenous/IronScheme/dynamic.sps
 Running...
 ﻿﻿Running dynamic:500
-Elapsed time: 79.606508 seconds (79) for dynamic:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,dynamic:500,79.606508
+Elapsed time: 46.23495 seconds (47) for dynamic:500
++!CSVLINE!+ironscheme-1.0.240-687cde5,dynamic:500,46.23495
 
-real	1m21.242s
-user	1m14.683s
-sys	0m8.897s
+real	0m48.123s
+user	0m49.392s
+sys	0m1.004s
 
 Testing earley under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -625,12 +528,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/earley.sps /tmp/larcenous/IronScheme/earley.sps
 Running...
 ﻿﻿Running earley:1
-Elapsed time: 42.398131 seconds (42) for earley:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,earley:1,42.398131
+Elapsed time: 39.070852 seconds (39) for earley:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,earley:1,39.070852
 
-real	0m44.026s
-user	0m47.553s
-sys	0m0.917s
+real	0m41.039s
+user	0m45.194s
+sys	0m0.809s
 
 Testing graphs under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -638,12 +541,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/graphs.sps /tmp/larcenous/IronScheme/graphs.sps
 Running...
 ﻿﻿Running graphs:7:3
-Elapsed time: 72.040848 seconds (72) for graphs:7:3
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,graphs:7:3,72.040848
+Elapsed time: 68.305886 seconds (69) for graphs:7:3
++!CSVLINE!+ironscheme-1.0.240-687cde5,graphs:7:3,68.305886
 
-real	1m13.481s
-user	1m13.445s
-sys	0m0.358s
+real	1m10.057s
+user	1m9.931s
+sys	0m0.462s
 
 Testing lattice under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -651,26 +554,27 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/lattice.sps /tmp/larcenous/IronScheme/lattice.sps
 Running...
 ﻿﻿Running lattice:44:10
-Elapsed time: 39.955455 seconds (40) for lattice:44:10
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,lattice:44:10,39.955455
+Elapsed time: 40.567685 seconds (41) for lattice:44:10
++!CSVLINE!+ironscheme-1.0.240-687cde5,lattice:44:10,40.567685
 
-real	0m41.322s
-user	0m41.241s
-sys	0m0.083s
+real	0m42.269s
+user	0m42.188s
+sys	0m0.112s
 
 Testing matrix under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/matrix.sps /tmp/larcenous/IronScheme/matrix.sps
 Running...
-﻿﻿Unhandled exception during evaluation:
-&lexical
+﻿﻿&lexical
 &message: "invalid syntax"
 &irritants: ("2500\n5\n5\n\n(((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 -1 -1) (1 -1 1 -1 -1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 -1) (1 -1 1 -1 -1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 -1) (1 -1 1 -1 1) (1 -1 -1 1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 1) (1 -1 1 1 -1) (1 -1 -1 -1 1))\n ((1 1 1 1 1) (1 1 1 1 -1) (1 1 1 -1 1)\n  (1 1 -1 1 1) (1 -1 1 1 1) (1 -1 -1 -1 -1)))))\n")
 
-real	0m1.489s
-user	0m1.409s
-sys	0m0.080s
+
+real	0m1.817s
+user	0m1.802s
+sys	0m0.024s
++!CSVLINE!+ironscheme,matrix,CRASHED
 
 Testing maze under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -678,12 +582,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/maze.sps /tmp/larcenous/IronScheme/maze.sps
 Running...
 ﻿﻿Running maze:20:7:10000
-/home/nex/bin/ironscheme: line 2: 2693034 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 21.408003 seconds (21) for maze:20:7:10000
++!CSVLINE!+ironscheme-1.0.240-687cde5,maze:20:7:10000,21.408003
 
-real	5m0.261s
-user	4m59.253s
-sys	0m1.043s
-+!CSVLINE!+ironscheme,maze,ULIMITKILLED
+real	0m23.173s
+user	0m23.100s
+sys	0m0.214s
 
 Testing mazefun under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -691,12 +595,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mazefun.sps /tmp/larcenous/IronScheme/mazefun.sps
 Running...
 ﻿﻿Running mazefun:11:11:10000
-Elapsed time: 162.648491 seconds (163) for mazefun:11:11:10000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mazefun:11:11:10000,162.648491
+Elapsed time: 88.316388 seconds (88) for mazefun:11:11:10000
++!CSVLINE!+ironscheme-1.0.240-687cde5,mazefun:11:11:10000,88.316388
 
-real	2m44.219s
-user	2m43.750s
-sys	0m0.343s
+real	1m30.014s
+user	1m29.943s
+sys	0m0.140s
 
 Testing nqueens under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -704,12 +608,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/nqueens.sps /tmp/larcenous/IronScheme/nqueens.sps
 Running...
 ﻿﻿Running nqueens:13:10
-Elapsed time: 240.780698 seconds (241) for nqueens:13:10
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nqueens:13:10,240.780698
+Elapsed time: 222.057319 seconds (222) for nqueens:13:10
++!CSVLINE!+ironscheme-1.0.240-687cde5,nqueens:13:10,222.057319
 
-real	4m2.134s
-user	4m1.552s
-sys	0m0.163s
+real	3m43.739s
+user	3m43.648s
+sys	0m0.120s
 
 Testing paraffins under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -717,12 +621,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/paraffins.sps /tmp/larcenous/IronScheme/paraffins.sps
 Running...
 ﻿﻿Running paraffins:23:10
-Elapsed time: 19.921755 seconds (20) for paraffins:23:10
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,paraffins:23:10,19.921755
+Elapsed time: 16.721054 seconds (16) for paraffins:23:10
++!CSVLINE!+ironscheme-1.0.240-687cde5,paraffins:23:10,16.721054
 
-real	0m21.837s
-user	0m33.113s
-sys	0m3.890s
+real	0m18.653s
+user	0m28.825s
+sys	0m2.909s
 
 Testing parsing under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -730,12 +634,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/parsing.sps /tmp/larcenous/IronScheme/parsing.sps
 Running...
 ﻿﻿Running parsing:2500
-Elapsed time: 62.649931 seconds (62) for parsing:2500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,parsing:2500,62.649931
+Elapsed time: 59.269822 seconds (60) for parsing:2500
++!CSVLINE!+ironscheme-1.0.240-687cde5,parsing:2500,59.269822
 
-real	1m4.349s
-user	1m4.022s
-sys	0m0.475s
+real	1m1.030s
+user	1m0.957s
+sys	0m0.268s
 
 Testing peval under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -743,12 +647,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/peval.sps /tmp/larcenous/IronScheme/peval.sps
 Running...
 ﻿﻿Running peval:2000
-Elapsed time: 22.491333 seconds (22) for peval:2000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,peval:2000,22.491333
+Elapsed time: 23.155922 seconds (23) for peval:2000
++!CSVLINE!+ironscheme-1.0.240-687cde5,peval:2000,23.155922
 
-real	0m23.934s
-user	0m23.815s
-sys	0m0.265s
+real	0m24.905s
+user	0m24.727s
+sys	0m0.317s
 
 Testing primes under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -756,28 +660,50 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/primes.sps /tmp/larcenous/IronScheme/primes.sps
 Running...
 ﻿﻿Running primes:1000:10000
-/home/nex/bin/ironscheme: line 2: 2693985 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 111.465149 seconds (112) for primes:1000:10000
++!CSVLINE!+ironscheme-1.0.240-687cde5,primes:1000:10000,111.465149
 
-real	5m0.142s
-user	4m59.732s
-sys	0m0.506s
-+!CSVLINE!+ironscheme,primes,ULIMITKILLED
+real	1m53.163s
+user	1m53.139s
+sys	0m0.429s
 
 Testing quicksort under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/quicksort.sps /tmp/larcenous/IronScheme/quicksort.sps
 Running...
-﻿﻿Running quicksort:10000:2500
-Unhandled exception during evaluation:
-&assertion
-&who: ironscheme.lists::partition
-&message: "invalid argument count, expected 2 got 4"
-&irritants: (#(135 369865 723663 12165 256729 562632 8729 869851 195794 803609 697903 62187 444807 980918 667090 874830 414249 536779 111277 2899 254755 773589 866768 264402 607628 398 908864 51788 216320 173416 56485 188069 753050 848981 119529 747161 790446 801781 24111 72819 576776 662973 476839 432380 763526 953411 463716 9577 668295 634570 548787 620983 194095 88893 923367 751795 906640 974394 100072 294860 537980 848302 926746 824173 620114 990022 577621 217418 932467 762197 922065 307100 237135 755957 698586 200858 306641 404005 606293 478936 785959 435934 540459 246293 886755 191130 285841 325603 967555 584155 66688 462092 307373 660109 102055 288541 292834 362280 382595 512774 211454 6147 975241 376495 693117 810675 404113 140610 273623 829850 957635 933169 27790 528780 204836 741324 608835 198000 841853 223181 31124 428641 768782 360573 145683 448567 111484 958184 5986 262297 335284 696913 205447 392933 645166 946522 72927 904474 496214 710898 666119 483620 222100 414039 20246 105883 655536 465863 306868 113560 540040 638620 408968 143135 975392 822907 364070 864765 199355 203746 581973 936009 683917 650026 263556 427378 579876 635066 571409 251257 165268 724765 934125 883213 104460 672268 224561 169705 996195 265522 257970 6957 38816 971675 553632 275070 112692 493712 469910 859093 510353 713064 749647 680241 559443 384406 828078 319312 828066 630313 727152 479728 947532 824938 12827 447833 144137 475384 184829 716185 86256 281221 638687 961015 840819 630151 748640 3430 510174 836786 533715 354322 209009 50240 133804 546301 844762 757286 191003 314110 836474 372459 677106 802969 575446 13232 363488 894316 226022 897081 496515 591124 74571 285156 639680 618125 146019 392048 342249 162356 483928 652053 567305 931610 13566 639280 815868 239143 499937 182544 732832 650469 614180 865506 238925 164891 870424 498466 661636 109176 526286 511839 772253 754356 892205 958487 828992 359135 565975 816042 614290 287959 580054 682863 405081 92114 527529 264525 923969 597747 389893 830559 798635 365933 469772 407822 16339 187417 102466 8644 867159 668031 483497 949752 443296 793627 813923 528002 861385 832819 86378 491254 266900 496079 665468 185179 257024 230235 457558 867391 455138 258544 208479 488918 403156 557053 536338 97299 984056 131878 944177 889951 71904 943208 368983 178528 680829 970722 47951 943619 43431 840583 464231 549048 15509 231638 908690 723891 793636 394207 802103 518666 720024 32194 691113 701386 116339 427404 979659 94704 910400 737219 900922 424446 63884 673707 464182 126110 383351 259664 55193 247602 589411 664273 722615 19594 386179 200162 607837 38419 118801 674065 635695 327655 852991 514926 113166 448684 133161 422943 110907 668657 475547 727523 15559 337845 338860 640701 384925 966935 87637 837916 53337 287570 285173 636535 911194 47386 446644 210193 625233 174800 859072 820057 73251 736126 873919 468776 834276 253590 91176 310028 201258 575973 132467 804137 418463 703487 5053 598887 619966 144650 784737 93974 530627 557019 249112 205751 770046 163826 673552 318016 960883 846830 241364 192706 930142 968135 634922 16628 297989 863140 410412 369628 477673 800021 824698 46834 348869 269139 804286 657353 197528 966346 761058 568032 833271 486682 721 335605 472483 795842 94518 770427 581279 152895 209892 29978 73025 389348 683599 547481 160933 566586 528723 99580 620102 855303 862887 786273 224273 554763 294977 142100 976820 240704 424053 436455 585264 28903 763195 156732 697071 927622 918157 443511 434312 80158 528248 48158 603333 809454 179179 961646 568066 597086 423049 599642 207853 45310 772346 423251 151674 249368 271776 224570 649236 402861 646199 522786 119175 30557 367007 816127 81950 346257 990893 233384 991219 850227 239180 787193 52045 102985 396884 11610 743294 145708 993044 88147 751913 524374 638988 485891 568544 209585 141063 535341 378203 829790 205195 520155 451060 43149 361065 63082 64811 926478 592424 804186 459283 833017 207963 642346 126757 328837 80819 391224 374538 650360 703853 247718 212197 14314 722006 212572 838727 754943 735054 404723 225806 948077 285668 872782 608623 944755 258484 532553 527127 798846 397729 270715 411892 442672 679505 426021 862084 94600 56878 800416 436922 83150 41333 176239 791537 681647 400837 421599 295560 301705 939167 396949 407078 746432 236729 429867 556197 782941 787401 319979 458816 396693 936920 912116 432305 521842 566648 811617 285503 378687 29108 506743 939922 157810 189182 469170 986581 844576 892116 227850 421338 871102 505996 531701 835369 974893 58864 549993 778149 900329 694055 830867 376111 310415 692043 28809 29970 898144 515870 156158 799643 202841 77544 133112 570176 658759 461183 60868 620913 596742 459156 406999 184309 59485 101976 281229 678905 914007 951613 442516 265602 239949 171728 237150 732370 762243 324503 868621 646087 498847 434885 67996 224146 312004 613516 660577 353578 238750 216679 251538 980370 296838 168209 151285 775321 161552 507838 353679 89405 179449 776395 871595 116033 777219 668788 871779 841012 528948 682287 456548 175633 826621 608158 67630 584862 728516 76100 684517 686418 926445 257716 339618 438009 555602 648678 55121 862785 878195 844829 132226 206474 157508 302436 156522 779181 231153 106309 523308 750282 101063 982372 172969 250333 887607 982263 148768 757197 528139 368579 13631 160980 985070 827686 752094 376325 42423 184060 410985 318252 294038 68936 164825 564400 888832 942125 40458 267200 308521 546270 764204 379452 928143 273409 258807 642471 173053 15617 214282 396398 73396 237054 246018 105112 732058 834895 878627 377989 982777 478045 362078 228389 94566 954177 778479 303625 616441 126174 226169 870572 647126 353489 289155 932911 56558 713351 641986 761653 617370 524109 813377 293732 533637 299732 510682 639942 977730 813511 744220 584646 488283 836891 555248 95038 328803 377148 258688 759439 66609 164363 429383 879073 698181 540797 321993 546667 81132 423156 80576 483075 860535 559112 416801 288708 463543 144025 514249 494240 30757 900690 589959 399303 209541 624221 30894 260318 573511 462339 907378 393231 631868 296581 99067 879446 505003 438110 717698 751541 534878 524464 807849 962235 769808 475418 549692 244288 796781 810225 393358 389406 607509 446272 384214 377371 508164 312931 958833 720194 328923 613344 98738 760184 571195 953810 991954 207108 429554 518818 530079 273335 846083 710442 219171 332034 532406 723972 738382 42335 834293 945877 711546 748542 183164 570898 757676 659291 616190 330593 502853 888244 55996 56634 879848 661847 184795 922957 416267 65969 671493 382833 985814 413104 802607 391440 938011 527788 418159 91965 581713 337113 786428 268562 670151 622347 261375 790452 267545 508940 563375 681874 88806 323111 483285 102166 521206 621548 102504 274399 125857 268281 591627 65542 552302 670483 962233 115417 466873 131754 212135 686501 464892 937626 158897 32671 109671 690964 570574 995581 664287 774467 770352 48070 278828 387646 470035 48263 96468 494546 549785 625657 831620 859494 881575 462103 516526 480182 480515 622911 496819 50379 875885 41725 776116 938586 374869 857816 312948 64459 287696 467905 684189 71013 473685 460667 984829 621164 554296 572309 329497 40564 524559 257081 563951 29180 621818 447460 200270 579480 223361 58707 294427 133309 347890 810763 729989 692339 3226 403253 863211 326109 889294 759477 867457 429378 372074 618082 645900 567130 402646 76306 604357 302124 378806 895789 701997 556715 697512 988398 313541 997378 309540 939053 454900 17318 747883 227638 270331 611438 6800 465761 806888 60880 623369 927080 107614 506712 122944 960211 700255 107620 204747 665282 195653 235495 806749 633073 635309 637357 493621 590316 638543 550659 351237 676553 123966 173893 424396 341683 927249 371247 999331 469029 251430 32272 458960 273188 271212 579798 679238 596444 55495 937482 43302 491539 16853 292776 834773 406853 629959 649120 450 683450 469669 224723 984625 640384 284774 716834 514611 454739 451701 730319 198420 23243 871083 16294 718344 187893 453668 184538 794123 636387 845811 540347 751717 841144 685396 226024 589807 106110 93310 271304 380646 340940 253172 617293 885795 23255 922410 198985 616467 748662 855282 184843 71899 278214 837404 704122 327950 782362 788494 737657 531256 363515 567131 311420 659130 143771 566015 731415 416071 124687 229895 73248 814837 82070 582109 801660 680698 913248 607878 783088 350718 126230 615544 285226 619610 387016 721080 753419 746147 277656 931263 445084 523141 439601 373270 775835 115512 162855 600508 972958 765053 384416 589749 599438 622488 166478 60626 733656 44635 783696 717027 107915 473798 127775 106414 761945 330580 993045 937718 754373 52626 838701 121766 838755 69591 419813 203266 637844 76093 505592 389774 773380 276726 655436 412677 907682 321849 769530 45994 565726 21995 475890 170622 637090 683602 460970 495889 556541 382976 106657 936148 199752 757608 846911 273784 643521 258063 247060 974476 828376 665306 965780 79037 864005 47903 98632 7562 423436 615206 389156 52361 332491 322156 428732 755846 381184 702086 87805 613864 824335 372622 775995 569490 792039 436447 696714 828288 693752 831107 151404 779503 721496 214798 902687 528851 974522 182194 955823 494817 263876 978975 998570 30651 683408 749941 7740 197490 829008 749341 324521 505331 905746 655058 845143 585590 370672 392543 780248 498248 813093 839023 314410 303818 483254 976287 767866 919140 84647 357232 620871 464352 756567 473854 567143 879071 161988 120984 78997 516929 16719 778883 60217 395490 163403 778361 764357 928348 904044 312903 22094 715678 613134 630649 900011 327 797766 502288 628399 174153 63271 795935 209533 280252 225649 315055 97366 225946 738859 180167 620617 838190 519414 453775 753316 802686 961539 482615 637346 964468 152738 899677 55223 381035 518477 7879 184160 726494 291650 677853 577718 897771 193997 739303 935808 371282 153487 506203 655188 314405 916579 208601 727697 357225 584128 548294 209949 121830 911723 993471 124076 552681 371834 642200 550427 839078 3072 888011 787782 993264 729117 301872 13290 468816 577162 74525 896227 206893 806461 572712 768972 132907 938130 74085 79808 801576 180076 921053 84115 777168 680569 532613 403119 102527 580859 602275 864775 313052 255095 852736 520366 527203 134083 133601 19067 349427 72007 998151 115714 45782 342887 654696 898469 238736 451305 593440 880816 840480 780323 20403 772524 638815 25309 766996 40778 642584 459133 424538 874415 750765 939343 513881 815123 54344 368210 256758 676185 150087 683449 291430 55037 993365 671130 928967 860857 453189 369290 245062 562522 529127 859482 382244 962587 889240 397454 418225 631947 481579 690048 59269 738858 927687 745339 596353 262651 727503 212563 40899 363101 696670 471887 228715 386025 307462 46541 459135 360963 5378 990853 301969 114843 124064 516301 13405 907882 99678 97650 95979 981291 816154 712179 966660 267412 46752 78439 907692 341868 596505 111279 117872 857219 498471 25148 743456 274694 970561 8683 199264 558867 291536 967692 62024 784266 94204 813499 203663 911926 93430 446029 305402 730944 598231 457329 764316 910141 165730 279215 751956 462213 697733 854762 670428 691565 667821 900761 148042 691045 354376 129943 370239 558762 51376 961891 207489 533754 826592 129969 105616 220376 789132 162765 597706 768530 406159 266430 606283 980874 331915 630279 573717 452403 51163 72914 590014 22299 140746 389280 670348 692742 478717 23850 511551 533358 233654 95914 752661 673577 347619 382989 627046 290557 52706 784829 819383 488573 143138 496015 701579 929145 47116 487460 4761 612949 498693 586126 624453 337398 344946 953707 492049 870781 923248 63998 908661 222586 257238 72765 508629 904362 494931 437007 756692 659949 945884 207464 980810 225869 932103 287945 490064 845922 168225 776471 918547 978331 842743 127472 646661 714082 48578 639782 278934 924358 998716 751126 740937 135681 551133 153519 470335 155741 296301 406 353850 108798 27537 309733 710609 61015 413822 568751 572820 211875 456460 801378 731438 657124 821667 263191 87973 652327 960939 905488 52160 808251 557095 787000 203900 272422 39908 539259 591774 382383 808096 533781 260111 713311 47175 354398 488898 177674 789364 835739 411986 158826 266472 959010 9609 956097 901490 393578 455904 79754 938868 476913 708634 138433 525679 669755 646787 124309 446225 516113 888238 741280 352947 437331 710895 610212 892988 386272 320049 588705 255258 886772 323453 555110 194202 837179 203691 719887 108716 604410 982451 667311 884672 584932 790630 351464 904355 865984 544628 628697 828492 108306 572398 588324 869769 513632 488092 118295 139756 278231 533467 696163 655921 792248 337301 193466 343678 585798 843303 74842 86606 408708 47946 22661 58966 456523 16368 418002 823276 348524 286935 315588 737925 957512 258913 604032 916612 927519 187505 783936 943670 717266 103640 154369 496457 104853 254781 585375 664288 387737 200030 116937 396674 486984 740992 47337 318476 81023 487413 456203 55877 721228 624772 49621 938316 904463 272200 885255 164758 400206 634592 542192 395991 221688 374760 661939 767683 250153 631548 29200 388840 650677 103934 854402 134402 568376 740800 438526 450675 347109 212355 135421 448581 317725 187432 111313 287921 604050 229377 74628 253514 548439 857954 265985 365128 323274 473959 604979 57173 447671 259920 764781 277608 329931 135024 170743 251798 152060 265820 143542 849175 37848 347739 829874 198910 60042 207819 872511 779855 990981 777193 656656 776667 690685 755507 229800 324304 679429 174949 83955 863009 81108 327039 453028 387124 270727 589808 654695 167580 461040 757824 104589 236676 806530 856936 332040 600192 347068 241425 679539 643509 719967 251046 399519 135633 215455 630717 361025 469111 821345 964520 98279 597654 902117 373304 654998 945548 642873 659111 263562 199823 597826 820029 922867 940864 216074 399598 314007 540750 884962 993540 417973 726683 965703 625936 42728 756840 593627 850894 403900 649420 636738 791171 357999 407092 578614 970010 43903 229940 63674 501080 55864 786884 821392 895213 600728 981376 653893 139547 951329 678545 769310 62818 520543 810453 109374 92095 785166 749400 876111 639660 605460 734049 682603 228860 205627 268054 744344 939682 200892 413970 860604 159771 990797 915272 899277 840127 902638 456738 290213 683725 411855 129166 500481 308173 346633 19651 85867 998651 53208 424764 530689 838513 757831 660459 391645 94833 684890 478050 218402 299251 154486 644301 736006 30510 273460 380692 403149 849795 805429 900194 359866 797787 380320 579777 329989 486466 934760 395261 265258 147852 182135 143648 47689 404215 687945 700743 89989 999892 270581 715885 393149 456965 44926 185685 729817 964533 337665 7551 805562 915628 348182 705196 210730 889168 22632 989803 866644 525444 859708 709905 17434 535215 67496 545767 983444 292911 264148 995094 905898 466542 416283 393118 153456 326247 852121 883428 901378 442263 187172 395537 911805 858575 368924 202083 815290 564165 705614 333453 188389 899098 70205 367991 799823 740994 906853 630240 944121 113879 158092 979597 325335 586756 496115 24074 264240 351028 90149 251966 445438 679717 847295 332925 123127 17383 358478 619486 653493 809206 4084 216742 861124 369771 979596 163470 8813 785128 743039 792720 11713 675546 458132 441515 620098 986034 193786 557973 168559 141705 881689 313064 493793 154735 560689 400424 897305 152382 580439 79967 320567 219083 306186 142419 560486 455896 601970 558980 131774 712241 965810 335466 784357 808004 848434 247677 476718 743800 103820 395291 834163 183498 236748 482898 950677 357103 612560 992704 671046 175017 359485 454818 48668 903943 675264 542582 532617 92282 721356 108853 821815 996812 528040 333376 399068 991855 919012 377746 509706 317022 416611 674445 949349 636141 547523 172151 527767 33912 76317 441028 373060 275457 543166 49342 521063 921683 643701 873102 847206 99623 857320 480523 33216 332870 827054 963173 462735 104622 278769 852801 643044 368949 831720 252845 303041 232987 325032 513950 36108 52503 365037 463962 864842 207143 310036 185667 741034 52887 953395 332424 403348 557861 908640 932190 493132 331636 743309 706165 743363 664172 569554 426635 131157 661329 388909 802527 687505 689079 818512 3620 551722 462361 41749 409036 207504 501351 142035 12261 821912 119724 7683 407493 496427 316709 261521 797078 444615 200450 956756 332256 315432 104495 123947 242179 428411 569907 231024 552418 910750 840365 620545 118403 196427 985090 369068 996326 825540 358 923868 737262 404794 689395 681330 733869 111929 866427 902685 817610 823157 710021 937100 783643 20988 910680 922214 603409 131258 658804 365644 215351 742386 466888 47514 401688 591376 824472 283101 356180 773045 84944 399997 243510 141483 345138 966588 614938 806151 366355 659535 751161 338175 893395 474205 695547 64039 482251 225558 536770 518738 974266 471618 53190 375387 342166 783717 575664 69687 886921 846265 604588 23396 831161 801914 974870 978677 428763 265143 498931 98252 62517 505556 954075 664011 585061 801712 874483 713177 65866 702094 665515 351931 743909 757006 932270 65062 590932 167386 225065 777132 898830 511119 528104 69054 763259 184011 79720 829921 494789 549945 540718 590764 731533 659088 354018 218047 934090 186544 188476 774297 316334 993731 836392 826310 516899 95295 778587 490420 384993 529135 454521 289021 694381 711555 851253 966072 813584 524704 793653 899454 145495 867523 654723 795554 804218 467758 783236 696488 180505 755906 79130 231004 53198 322714 930908 912900 691015 911187 826150 843890 448268 767605 315996 586372 323303 729097 569005 416145 102529 687905 269110 719224 431096 701957 408989 969717 430543 450729 930924 953385 309480 600014 105369 769807 268096 664574 141667 277532 945569 622826 14969 439265 77054 30507 171511 538631 396229 165075 123609 887651 897326 802164 716190 63812 84242 59352 247070 764670 817106 306148 571320 411794 284836 132909 818732 419781 482587 224698 477204 390731 793615 224587 126078 616474 529199 384075 48288 175672 561753 826600 185176 679522 108735 814802 667233 810467 535681 337148 657760 91988 875360 827154 267050 902390 550796 255117 269102 409973 123921 150873 127720 751410 948908 773668 379632 716820 556768 602169 625197 433430 935081 54774 547819 120158 662910 778801 101401 346877 13835 699410 331526 919497 967785 773984 611016 351856 842585 938546 806369 783045 537707 741487 667253 216849 976150 336005 607183 53675 463623 945153 453103 912628 975074 947376 223737 337262 122661 743289 911803 926826 176542 256397 367195 521671 175544 268242 85620 818356 400478 566822 630168 784968 994422 851739 33086 606330 466132 753265 112109 696433 154824 271324 872230 151180 204245 821924 605650 979202 189493 14945 185291 633732 666755 376310 267210 532019 224972 532150 11506 32887 259291 888217 680378 327384 195972 533200 186073 885286 43478 222803 582528 416754 388561 735887 287849 138020 259199 301945 451726 649041 200214 833250 568303 104887 134095 19726 54793 334686 850015 699933 958277 64864 471230 841811 814318 629278 812071 293461 674257 291264 13239 805006 43222 65332 550869 24530 312592 860162 231984 287116 880433 846616 567334 405058 476465 450615 152492 124907 197964 152871 608827 134726 506882 625235 551104 769054 256724 935049 10556 55465 323445 28735 152543 539315 90844 318736 256713 840465 908977 58611 615632 312843 914259 392730 188809 794016 511173 136261 9112 624707 313700 275071 924994 283628 653880 699673 935841 431183 872295 250899 469419 787133 575636 358209 197586 13866 239449 788119 240618 691708 282831 588711 270800 126430 839844 733365 469437 774737 846374 348566 41080 262300 794404 461978 616364 442353 875816 85170 812567 465005 341583 205030 486052 150698 787616 865786 872699 257689 510317 895776 444884 370315 25977 464456 399280 742037 82495 475134 864086 43038 593749 346209 727142 900909 247057 18461 427727 586145 739994 648184 28530 453995 184854 807490 537030 665336 265428 807201 747558 543003 573904 94775 905062 198007 351869 600927 915428 894309 589071 389043 100667 769111 909040 83693 352603 273081 287084 652093 917520 310194 518868 41009 51954 993119 894892 163533 161304 295106 399779 696980 114567 727263 32096 216635 448858 954216 584912 820911 186263 262227 466915 953982 767821 889225 579391 918615 884110 594792 890660 999680 386122 300456 946746 544671 163584 540775 544503 652020 803271 677563 824549 471591 251779 872081 407419 115275 552761 553856 169136 226644 386500 426826 305092 772680 712845 726155 441963 418606 469423 648281 229858 970756 902645 975397 25 463445 639683 495323 55193 270203 806593 61710 842959 193668 634027 317906 794185 578534 126957 723831 795355 548093 723716 492677 703365 671292 263695 843880 967188 758178 754022 400243 123734 15217 530068 834821 44061 819951 738996 821879 217787 965042 936225 935752 130911 62835 346451 631366 803710 629401 284949 145740 35411 574565 873943 543924 264122 384302 891178 410766 824625 952694 786222 623907 214964 362265 974415 731688 461473 722083 714031 523448 192111 577125 269299 449389 967700 127819 587181 300968 88643 403656 489166 672340 91950 231273 772381 163779 897868 201793 87 250859 185004 238292 475028 536877 982616 489495 94405 872569 335783 20647 920530 488607 326772 371095 676744 239658 947525 291690 763587 699792 172271 29167 90903 195468 304521 957962 998428 652645 310108 881387 586254 358553 458697 731818 723826 319324 558305 394549 649956 981243 629805 432365 571646 761539 557893 103288 849938 646123 834556 606949 166491 150983 543632 568719 434172 142565 447413 810864 993268 997710 813735 711314 196221 734890 142620 668567 577610 821447 274574 1872 864229 146702 815795 163802 802578 905988 94691 793090 398944 742590 789390 118441 410107 867015 846886 382131 105023 379773 587008 674759 464548 72903 214934 19440 71353 135659 710858 949304 452099 118439 14130 28645 614705 372347 927906 453799 933506 801712 928813 27680 640012 300414 134531 523096 210631 494117 436889 526768 749208 642788 865013 278247 736693 915814 473926 779692 188158 961830 38824 768313 767273 38821 512286 501942 388155 873867 980310 814827 819771 493627 152898 513508 994438 312109 566773 145508 24363 805498 244247 628780 582211 184027 852146 469416 50952 327859 730723 189994 528251 899714 599021 7518 563356 368643 710065 338174 599562 134276 995539 180286 914301 274448 87110 902639 651489 577658 935757 496323 890646 805285 46472 24531 277274 572147 809399 19398 515809 575875 311154 134756 34836 288929 892901 266393 68964 823177 478800 858947 964295 592193 80465 903281 997031 537089 890412 795548 727943 347669 954139 748203 396308 796277 169022 191726 224381 125843 803985 133360 130342 166962 180 447202 893396 369015 736781 316393 996490 161467 910662 920293 607834 810856 110382 240380 655332 286779 724405 379582 618458 684419 781899 906837 989175 901285 537222 648503 399367 422581 740042 995301 980818 767187 460553 892473 28526 818381 278258 845512 798081 390548 261311 153243 290431 771852 522672 942179 425032 143912 296122 952751 916952 315750 322669 764899 322260 280180 898610 941783 237906 749925 332840 175357 733859 300738 705153 23787 628940 76855 379895 677210 831802 185183 97115 484660 643787 275183 935488 444304 83315 904187 25899 628127 428447 640819 873869 925830 76116 665884 329482 7609 51175 944500 588945 408476 722787 678704 75724 619626 729364 609934 38846 194032 113906 983511 800338 541269 157326 461563 440232 853313 299728 616706 682626 799196 245349 190886 623065 360262 895699 880488 734566 295842 78388 928872 705721 551839 965045 106005 806786 857024 854833 722253 455756 674920 680417 247425 645114 324862 998607 343812 39275 882078 307997 660353 176153 126636 354205 591484 390077 204119 124788 899685 788938 115789 21062 364112 945337 907174 759540 151391 277679 307040 796662 271848 268817 877604 396522 943063 773845 882094 474188 555449 633471 496253 591559 398704 893454 132792 694554 186802 289655 324752 52405 267001 734983 702082 947989 502197 769041 828418 699120 554219 215283 762962 41900 877023 779916 385470 422651 67444 623324 113067 522277 816370 599511 82758 952325 970587 675660 609435 79436 911684 54776 219473 995520 352522 811401 595002 132890 748176 23905 758931 946820 661686 52438 234992 658080 695679 849100 430634 494186 343302 118797 387189 661100 175168 501409 418415 496357 446462 192207 76327 87782 211282 336211 184692 998005 534514 650804 682966 634002 455429 164503 689824 538512 361387 740455 538586 203566 545927 397177 624591 925838 312241 671046 784275 282053 784047 80931 851652 649298 791550 11001 476520 157014 271334 658885 659576 981092 21414 735848 642321 446718 971294 327367 100514 503499 770436 279463 332145 549281 855519 804977 975702 297544 672690 748674 315753 594056 387683 733131 999532 738502 421656 638764 465683 519036 932104 209015 803054 128364 493046 898742 606939 178268 420207 943386 611047 768971 279459 63114 906229 749083 696931 392536 357739 236157 952378 221556 468453 563606 503724 461648 587988 737342 334523 627132 531189 41860 423243 775453 530651 732113 212484 702580 368570 66302 158632 983098 418830 617703 565997 600931 53012 631848 836524 396940 245710 372968 99364 528720 829698 749432 818182 32365 799567 5876 902451 200925 606969 81077 454397 491567 264560 361823 323519 408286 823440 854902 934353 27745 878107 422221 739905 570001 43178 78116 112925 149447 860716 798852 109119 751034 896226 308835 280706 702924 795470 624636 535412 317353 207707 936570 192979 514612 478532 189782 809015 665126 586473 135797 366847 870621 29276 935833 546611 47663 547736 181908 446149 387634 253206 759574 326453 645595 796479 337468 912760 968416 36441 87855 432103 368261 263675 262929 658576 582686 299562 448365 612775 68759 494420 500169 912535 29964 965428 695791 343338 40186 392755 553938 395204 702298 606659 967619 982039 338792 448787 752385 987970 723005 402968 886757 269541 289759 581657 532855 498381 69659 543470 171712 417399 784563 735270 340507 586088 278338 847224 412194 929314 921696 544058 382969 513790 70800 581581 910517 20950 479346 60358 111006 330001 227441 905003 849831 914178 825038 24655 54618 866931 326434 383904 135778 599361 105962 98971 97281 844592 494952 975475 790486 330841 65481 364190 675741 183102 563729 293868 839317 967940 547624 763913 7551 932123 706515 120652 243291 228069 179955 811320 533603 341897 719250 526042 442325 419485 881923 498072 144864 188723 436883 833595 720168 465116 119719 142032 40552 632583 106613 506309 901902 400992 358740 624989 513366 343193 711255 705581 524572 897187 623606 873976 583705 225407 424034 166143 392796 60031 215575 213035 139822 669174 416135 96358 94009 613340 523633 497370 562543 308607 575678 575838 355048 721909 247224 462780 873240 986545 719052 361147 146240 426262 416637 660215 748326 444291 618844 147353 901419 373829 574525 991767 243553 243859 226471 458368 556598 441380 835602 15756 317829 301645 682117 402296 387202 876175 740766 331052 340998 33569 790271 569873 205357 819218 439813 496122 877249 499896 659729 119839 923275 783787 389377 665939 215511 211593 55773 816554 604859 188174 163020 939113 731974 358072 184769 846849 540305 42854 309490 283059 351369 967127 214035 266212 917144 762070 626011 495954 753382 864718 811157 157252 858653 947525 189141 625621 64787 163238 544217 688357 702318 725692 915797 91051 553940 766418 712674 459214 306662 221262 638439 356909 319796 477047 353209 303038 205335 192834 487024 627264 677604 871042 580835 818119 866362 292833 114369 356647 131901 806735 449185 264080 296612 354583 354742 482406 920288 37338 859283 346858 889833 783443 830714 950327 698447 512092 553947 887106 469442 291245 973506 474607 359482 437312 839725 499607 241099 57928 360315 785131 658650 496978 875882 616626 586582 496109 469823 726635 140285 471150 854405 761508 710643 199502 192553 789012 763979 91897 256478 785556 613743 102557 883037 119769 660929 205610 123295 832871 349501 515453 945494 728797 996305 764373 360671 782170 473966 720086 992187 445761 388012 399449 862861 665724 17388 616581 713117 137015 419217 12158 735640 625286 628567 391498 623880 134909 145372 496065 776616 173308 885066 943414 793495 649063 417126 349757 892113 136908 542228 186657 992649 537598 983387 923044 62967 957632 570778 816331 208910 438863 535578 939996 8966 273082 523074 988191 418112 917994 42908 1579 705920 397572 563693 76176 786073 183850 975848 78229 519681 407939 93467 666991 911303 317540 993312 471976 245880 79343 118497 27707 502814 659363 459218 804583 87685 719059 71526 987013 843138 126615 601197 910833 138943 736024 95492 240606 201723 626147 192865 89175 312410 822763 458073 505516 133535 261669 689824 129361 699526 925063 178521 616895 158765 960500 338449 94879 434557 376281 852849 512057 576790 650812 496005 962745 255159 81898 691307 72947 548292 878973 620498 414903 732838 924373 638971 886225 680478 674311 543322 751729 77708 238222 813552 565755 650338 284476 943650 646902 341966 190742 580354 398263 770064 56217 479222 937437 797998 896466 346080 773252 981447 724619 749154 108414 887278 245229 283359 483070 624153 313421 196514 143330 586960 241488 80149 712604 17917 203099 233636 445363 158879 905197 126956 9309 450124 722821 885489 286465 585140 539313 154079 418690 939081 626837 821577 242260 172200 753192 336705 925975 611273 815436 972136 862604 779313 462532 702811 336915 643410 246174 368413 514568 839154 426455 677423 270729 386288 925407 176826 53245 159014 939609 792303 587377 503572 867647 142469 273251 947112 706910 871230 87999 361922 184069 780902 357100 115395 404904 602305 333682 737664 170665 681574 190074 264896 715259 650957 234763 334798 550979 83034 628426 600584 310930 451660 179962 31939 961311 576657 410017 626807 30544 564791 372423 569270 504989 241321 941131 59378 46744 976291 563389 330840 372176 954316 464691 248386 834207 997365 511711 601215 966437 76307 730461 750138 171014 971524 23462 638993 421631 410544 344180 60046 394307 68879 618170 997794 244564 174368 759158 275935 925763 301496 20529 627500 570151 20776 235871 265955 302932 96077 341364 203865 675256 451883 621928 449490 306663 452929 167198 915920 341669 675881 579504 898964 478911 968222 101481 828281 12797 917824 801201 920180 441746 325691 784825 449812 486197 855625 253745 182752 248296 509676 826045 586279 354440 611080 25163 444805 283444 952336 703413 812973 274880 397759 98300 548839 937538 764511 554139 486725 772668 140405 163106 439191 914853 321463 195335 997882 847717 537583 132357 104728 793944 790181 331340 307228 60463 74963 217209 432370 270993 194223 385803 644415 395277 656439 579561 106199 84806 676805 751839 688500 731414 388252 349265 907713 215447 797779 137534 696254 924764 723173 24693 269940 159082 388361 43333 241373 802453 834772 896908 71161 783559 953144 941974 932134 334322 303642 332665 691269 321560 907640 633021 132914 999607 514646 609298 809103 156077 920356 719139 751313 186790 433740 718522 33980 909323 136246 125018 389234 925335 605334 40903 554449 745926 592207 179557 909332 562592 674333 292907 878851 221864 487186 57864 828423 426673 664993 382891 457458 880917 733435 229721 890904 810227 12803 549922 309329 170441 603460 95424 164337 432478 386536 548696 507843 175305 170299 166993 875685 553203 821350 48054 202784 483019 799454 478836 489991 801814 746066 158117 197140 315886 326245 58697 252752 434527 708635 986204 16006 130445 170245 654348 730814 577546 219530 13911 835763 906029 878657 341854 968564 345649 672650 61539 309350 824391 993882 317539 888428 497389 18332 745645 226700 347480 568120 917742 873139 157723 482156 69229 712622 411741 374373 81754 420624 942322 582432 477091 651645 698628 723351 845719 95470 952968 351596 353114 150357 864750 436948 331567 663323 846696 897611 571536 449419 705964 244682 201572 852744 376891 24945 932238 705829 56288 776517 362935 300226 249583 961369 334457 290663 702473 362803 315349 952259 522893 150887 361000 186721 427575 479271 190817 563252 183546 403392 593636 931310 839537 901094 815359 478904 473489 174019 345148 784581 831525 685215 768399 66837 425750 34215 588604 834487 753089 779088 743248 951864 331482 196302 533929 767359 851422 123910 446902 30004 698653 26335 270045 809427 113840 169892 8372 474910 691639 943580 492582 65564 516599 63309 161225 141479 159019 7964 170508 389417 414380 534371 502793 782723 794924 366893 365285 461933 84274 346482 954499 665102 419233 626313 886148 77887 252817 910984 762532 892920 852186 267492 804821 787231 631838 177579 432050 633839 31589 672464 541156 917100 643072 436612 475594 949307 660210 27557 308859 87441 188318 990318 337819 23644 114906 990460 476494 113743 750450 168882 399060 823562 2966 609212 108421 934807 166530 503811 203640 49886 25079 901520 749823 77348 574281 186627 558435 627003 303316 298970 562392 547646 938408 924761 690933 589861 599133 954385 939611 460290 777951 222878 645621 369453 752146 666781 492428 800163 852935 825254 100778 731125 959166 416915 326484 32016 412634 333333 707583 804393 550422 557643 639093 5549 709206 54752 232526 977726 849856 253558 791129 623068 780788 586213 868029 928485 132117 992717 155022 530838 128990 763309 148548 420494 155051 610903 277584 993001 803823 364663 151963 213517 300851 759425 834892 294716 330824 375557 173839 130040 535288 964892 72748 791947 503575 999410 662013 733508 797206 884155 999732 819083 870630 359266 623061 38633 596342 829305 244444 728710 534329 847093 179181 848759 989823 605208 61724 278595 136864 657906 311811 672576 147560 231209 466361 594540 473705 477570 284426 356105 909435 213716 588584 727837 100715 556756 834730 438908 92320 283828 969236 747238 330305 457570 516455 338787 900783 940998 363102 26631 261190 446136 829313 200652 876682 857869 361792 460903 544284 63730 370780 593095 360220 495776 616581 988941 485960 35985 874891 898519 253289 599661 937269 120343 148761 26666 879445 656402 991569 541472 44225 755984 557341 188083 759302 436528 271566 644452 430185 322288 150922 597691 813119 777347 151517 111477 680229 69800 971813 851222 489054 702500 209490 931865 885516 61501 295392 821840 491493 543817 53656 594515 346561 578475 849139 985443 733240 309011 293188 208664 297303 896663 137948 115271 313246 415240 874797 45796 345246 747787 329273 108027 937559 228112 607011 784236 368179 142364 566764 293159 968731 694045 486393 581019 309904 711793 511700 826799 88690 273042 909753 253197 196839 781523 309094 876268 871023 548449 899502 966443 919131 12725 889544 802361 472737 808482 975177 351447 838546 761527 180426 723561 187695 665405 292031 26673 719336 460249 909320 254672 35469 786668 920992 503256 556589 400302 619154 468355 240250 132244 662589 415590 380045 471893 682173 487341 177956 860941 268593 644488 632305 328964 725357 808804 727744 516258 340627 465770 783266 433710 266575 246400 713701 394417 506891 321969 909733 622232 824141 389636 960692 665852 523957 150937 135343 901386 395557 482458 714538 302008 690965 382723 106261 568 37272 829529 662210 355487 224174 191248 889955 938080 986544 482333 543517 984127 575551 528462 312747 866743 298426 301524 995536 181263 234086 783869 480583 762757 104800 563757 207106 607276 263028 978805 832105 115411 841258 148048 90675 399883 741204 403415 495743 2598 890842 254970 478070 959992 179007 49945 778742 871041 747225 241786 461349 530574 983045 103342 966676 186822 242082 71918 769370 435281 696324 207937 795185 568623 938692 54445 290003 17094 960213 805358 480268 583719 51620 189584 64021 253584 666139 257402 814246 25920 23010 930679 905794 571214 70343 737689 101150 361994 832539 906341 52389 648857 147738 857846 760454 551195 758816 299513 815594 399396 515891 665438 712701 58328 362125 382468 785375 219700 491357 346986 241091 234094 285705 769230 661398 871027 610981 643677 268150 758329 711516 54937 455820 360424 94427 771098 854215 608377 329020 842136 445272 438449 355760 314758 159703 137712 915131 667270 777240 382319 442132 326075 356078 84507 978195 820668 432617 956937 163292 908638 422448 450496 310756 485722 516953 83201 349043 534683 741576 31097 875414 943997 642004 703212 263777 450299 48759 319394 483746 7811 972857 610985 561188 700164 837688 196985 243806 959245 38622 373027 34791 337710 63936 369259 996190 436110 535750 642248 246789 765381 936235 566617 725412 787605 227154 326558 565816 118597 245637 772550 895702 90892 99938 695036 502008 793438 920676 865843 159644 666055 105581 414199 732789 927422 510097 683516 150842 858137 72400 269545 68951 222674 807731 677376 718153 36545 673064 73067 791864 828150 114483 455108 185040 851204 379934 597679 195261 992559 477598 522986 493667 1398 651400 973890 62576 34290 303349 196041 979858 722749 73214 583538 663402 929496 103460 919135 845027 799384 98125 7005 804840 768077 929508 751756 189141 721909 411079 506127 439031 807473 248924 742481 558432 108554 776834 304961 717758 704181 511578 384480 333772 880205 73374 503160 151336 198878 981871 357414 894003 535749 720489 359299 297067 511083 60276 101504 242764 595786 996034 783725 831677 732621 628491 985098 215379 692972 481752 631964 951755 325389 144101 606530 495815 645655 27097 624359 850862 783809 955372 264224 511746 878845 391437 516874 282299 313704 136955 406383 552501 694148 878124 936322 475322 460695 691849 487180 756080 320239 680132 603213 636946 340581 129566 543675 420668 124555 87505 514158 949676 618782 365230 12264 780768 295095 182154 291806 39585 615890 607559 32262 770948 968097 554970 990490 562705 125555 290343 250033 408292 493956 809285 9084 902226 292074 418825 864396 958839 143078 94998 50953 506413 894357 451365 147481 715016 18227 443392 59819 96440 331504 920528 396613 440301 769724 802321 984529 104504 368454 290841 716713 776875 8406 808638 335258 601833 961064 308923 188525 106152 628635 896869 663959 670250 827008 37690 514545 662687 344753 427469 881856 922823 411470 480619 896383 982129 619516 719496 419653 945519 953878 255231 564717 448929 9904 378268 142305 294576 398244 412247 101048 177637 609625 701350 626870 279137 254599 207305 608704 205163 658817 498467 868333 955256 412061 758379 751786 768759 935911 869100 721443 616546 99002 144932 433791 417172 923365 629461 115947 137855 898029 476359 480488 145428 419178 899155 863867 850845 829204 2104 276051 422629 337028 148458 39626 937622 349201 413166 388773 880645 323678 293066 798406 574567 490468 508797 713899 378658 620513 680012 119628 464560 738390 682114 211084 275892 970863 381016 44670 58541 822678 340662 742422 901286 860736 748900 254260 832031 541233 393395 329300 719409 2078 506610 215005 362200 71127 422618 683693 414598 713178 937473 23788 345103 599201 534494 507510 602087 532609 608636 482896 700051 168908 50894 621469 672307 796417 285714 798660 774714 434602 477710 126252 616428 10169 115729 964496 1798 14771 999726 646101 302508 398115 51102 715410 83930 959723 150587 30929 4892 498130 156655 843314 318920 146097 697995 856162 837218 440393 897712 580064 268272 989120 888332 390038 166420 558255 761841 291967 717912 131660 483406 996749 582103 39725 698285 770698 497636 864913 306962 183618 756419 61771 398586 946720 446490 656636 621690 2502 599597 548831 734346 310395 600366 428132 466316 974711 782876 847801 870381 30043 374054 45259 147515 195081 467219 579642 213741 814860 970466 121361 796335 813602 140469 355978 587837 948976 31017 18201 847811 250983 784830 122666 809224 726042 724284 229249 479947 826571 864400 672991 956055 801675 463248 166503 4841 193562 383996 686317 807022 626759 559312 131976 239927 842702 453468 49874 550924 179819 766845 290560 339098 245438 299908 481524 521813 660857 132949 4415 454577 936496 564038 911160 397080 27595 330294 957210 270185 239581 747624 587989 544463 421773 67030 565249 521543 239808 43769 144577 916720 122108 383746 421737 736163 622297 971397 580703 344327 676914 986045 785682 697093 370262 311033 571434 347176 385615 767549 6834 417709 476285 304632 956442 942710 569625 264064 677076 789570 902254 498595 708619 109829 320387 71751 322045 83155 194023 212472 103521 334617 977641 70985 400975 932672 511497 322745 806023 578071 76541 316912 307117 319052 911973 511458 175516 801457 820221 966043 901269 270231 396481 548170 869392 237599 123919 621526 986801 107358 229341 856185 648284 447683 394660 536607 945472 384347 408761 201942 500252 490808 91129 302154 159281 498541 331455 351903 181605 436477 931206 99781 83388 107243 87147 658462 711982 9033 163512 574364 236793 63590 656634 823589 713168 403477 552929 669840 160473 372475 326217 790767 710866 474387 462042 90607 226630 429737 652192 942705 127510 373115 31677 302449 702915 989192 908883 725522 576723 684404 68818 842834 614964 215225 905829 402646 860812 832479 617239 682530 520903 582245 996266 708100 416269 593840 898920 104469 873039 620175 261377 258310 205757 184552 625734 308468 542190 668828 889928 884380 53149 174027 260321 651076 173940 492274 963985 391323 960460 802321 867472 657991 832207 520951 764466 298780 599850 887224 492455 22876 645055 568535 63359 577150 295670 727668 143900 416214 698188 568461 739954 616668 637664 693718 392336 403436 35453 800519 341686 662828 474648 286568 507412 37373 502397 964945 263335 976564 211261 722726 43584 203789 109565 552087 301265 956088 26918 261207 779440 520662 399179 961507 511517 253320 691020 851619 65483 604933 245306 423382 284081 964650 977723 199366 174007 718002 163077 97066 34008 605465 41700 403993 99662 104137 855153 574717 757194 802345 461459 833095 809873 764735 566695 866220 571980 161116 788012 808206 571539 293651 690404 460771 743219 113377 294625 382127 694206 669347 822841 234833 858403 966840 259946 614835 895548 726376 389686 260012 479714 382833 754816 794780 755013 514249 860351 176550 40401 627447 36880 25440 313724 235223 624200 161080 942065 689618 847005 438041 607467 597772 94626 250342 644158 937911 553450 12259 831467 31225 249864 383008 750147 402377 154345 342851 135062 150107 721152 684251 236051 842345 602876 424815 868922 89632 549127 315986 947208 902046 584003 403817 596545 458777 48736 805166 619199 346974 70411 886756 879085 167424 153402 887306 794280 209747 462174 506509 666813 38638 537655 79742 409006 361453 847615 76058 434048 513662 148410 944429 175112 818645 435560 916043 246078 480681 604400 845596 774137 44226 816933 795358 941579 829817 237447 241216 531451 686460 176128 491097 303651 124875 541212 625259 776168 966943 815093 930673 848367 963848 628289 755174 895257 844908 964482 668431 100153 215187 97621 282049 757958 59101 3887 654383 744710 827554 604158 469894 542569 945203 827019 149196 269885 713834 736071 226196 584126 658724 744768 183265 511976 969018 788044 426106 778226 592869 926754 338682 102056 707504 258524 294231 273412 414297 801576 272503 85871 854830 98898 144289 136257 399932 839299 641327 908036 509209 718851 697837 237528 843890 730372 812072 18046 869961 846413 518918 195745 153413 805668 421888 645141 438225 793512 342185 983124 805298 855316 368299 162368 75166 855402 696629 301696 791167 437042 888167 309773 975924 314527 240129 75584 416918 715869 613243 753256 56558 507717 542811 865846 42288 909722 387686 841693 548544 667575 150796 740802 186801 269156 407148 25925 332510 560961 30130 509149 106427 622357 351018 432525 264240 388852 898863 970127 485282 389059 748294 891682 891937 90748 305946 208735 878291 170961 622647 549238 392885 728839 167317 560209 999438 274058 730101 715470 397243 957977 828373 517123 108680 965808 305564 997482 969619 736390 330893 317770 342068 994376 667631 84563 910341 442540 727106 109118 88468 667183 660932 553092 308397 345425 672416 267405 484205 550654 76172 850707 82514 389218 355081 948514 446216 420735 90927 874715 929530 354900 945846 152257 997651 201188 829086 194944 727047 728186 483799 401829 226991 287183 32525 798172 837929 940107 216519 582630 73742 566772 700879 829118 448822 536224 216058 533469 641661 278475 848744 861872 944749 971284 412239 780243 612200 871877 178723 340056 116965 846286 418175 828367 25189 391589 803072 68716 548811 694042 822808 207294 13451 271759 511126 10158 105312 953403 179515 260357 461834 78535 458335 533247 639699 230108 269887 581948 367384 145168 423882 346558 771101 427687 649634 522842 447687 306596 220618 734005 202708 401251 554798 23354 895986 854012 717527 208401 506791 104116 679874 567933 80314 477790 929173 61208 662743 697157 557509 269189 973094 376582 185035 901864 503995 722494 954294 206759 618087 160417 342993 241573 98832 351689 956476 292052 981104 546533 368053 514282 9946 840586 616653 35539 714334 778741 656421 466109 683400 828508 50535 868010 922948 696933 38490 776516 579705 736950 929157 824119 868017 698923 723683 604556 940338 548757 493578 427450 101626 928869 650878 532539 906807 699565 249012 958732 339823 290855 350522 780527 694623 346243 34138 649060 133068 981683 626189 954335 856363 720931 831227 73819 719333 195692 576977 10778 277428 923651 515367 122849 81181 365714 216254 584274 307676 554571 347784 881163 61913 794750 776306 268808 516444 666710 538426 94613 742832 610846 345316 499923 511298 391293 431606 657770 821603 900320 764921 261957 519653 322391 542195 178636 97824 324644 672316 314224 668171 786049 965410 177020 879179 655176 267776 920447 213554 553322 219566 461934 689391 404240 113179 183311 580105 325289 221568 788993 68096 796412 401413 24866 816534 536949 936970 509417 588270 65683 508197 930725 760373 399796 850396 452461 581624 189231 919702 224222 180757 215028 939193 450510 921873 485483 850803 572270 684385 418743 239358 288875 933233 289957 964065 842696 535733 373548 655135 930196 564086 922554 871616 505506 914471 449566 804595 398133 70307 774881 312253 177946 58205 368372 314658 16047 634625 928994 686928 779401 622390 383111 991562 603871 236411 559416 355269 391128 51823 76446 922499 567389 475637 741543 385791 596114 196678 617395 725137 967499 221108 723499 106183 257187 151331 152875 101715 207430 604098 346092 768077 974398 827524 548979 580260 80575 889218 986775 33622 881002 259519 247738 34649 998166 25563 259423 502647 549005 490605 284724 591361 800581 444576 781236 346470 902151 466670 978763 911484 22059 717048 155365 260958 672169 111334 755199 48226 670231 948177 522205 278039 747219 22421 961496 534491 949821 503889 571856 116164 338909 700908 642271 881715 29463 83071 813743 210589 633324 883873 779933 260944 728538 941080 462228 193870 547134 115108 935427 73145 526974 191655 684915 208669 152224 16482 368613 448479 488615 408310 120769 168154 371779 733199 653002 218870 789427 674979 843344 929550 717299 696780 146304 14381 287770 350517 195577 66624 404974 451532 240888 779491 855479 213281 946802 559570 699512 943956 113217 378086 633046 334212 258525 177820 58584 470330 208364 867611 440751 155526 115478 942275 888703 907403 439354 815096 804930 85030 634136 688258 284147 856115 951267 686076 649961 971517 330384 250430 626720 30976 400589 194220 788393 546080 681014 855401 793386 858757 552069 366722 144392 855545 949662 663166 789164 51938 518811 8116 222708 58818 466182 554374 135114 197062 823694 937566 61888 303035 30186 799329 643149 27536 465406 740309 941482 498137 164141 525717 502428 293963 301915 52529 682687 885052 485991 83414 568688 895955 448324 655180 612881 422329 352129 223012 754735 831550 705214 963608 783693 352209 16276 974067 695509 212124 838678 507184 295899 287341 616068 609877 129832 17237 904853 6227 929916 41722 912520 919021 968406 238246 513240 821323 589000 668764 653838 476323 181458 314307 642633 246185 356886 57203 208128 825336 118425 292780 764621 954267 385797 869925 206372 799568 347416 359622 361157 920840 795219 260675 68331 595696 842702 931870 769306 310326 316389 534351 477538 430153 516944 856491 530346 75864 392406 34144 641401 940928 305236 402409 844824 156733 245715 519964 794563 224190 632908 553321 994785 390335 144155 106015 59495 722521 375313 451148 44606 672982 144733 715691 466488 756261 486361 480039 721592 191339 218843 450782 203117 439037 46330 947196 549309 766215 427334 326794 88209 497490 777546 884375 152173 14549 336324 362002 748089 580601 948882 896505 700433 413737 757149 858154 173592 694020 296964 193383 883028 278999 769745 197736 594584 102779 933634 713496 227599 574173 84063 625065 78787 673327 406170 74854 155163 908977 811108 912259 541040 6114 548558 124169 720126 93020 936129 156608 82035 903649 718219 32243 560707 551074 383923 337197 901955 793439 721169 78513 498266 352363 617938 300671 90712 881145 941534 374422 606274 616791 536579 818490 556023 87475 247334 503908 648660 996242 526030 83763 41808 244461 658363 37199 132084 75330 785136 299306 909510 501946 637338 351728 541911 42686 693357 855113 9333 843415 147213 927725 524323 829907 646053 779094 311893 825885 304851 326883 439758 52329 237039 432254 679350 147971 536636 376876 154044 178688 381800 92044 907241 677958 738714 957742 25552 281185 198235 407148 246734 535289 607783 208220 448977 877140 34471 594901 33858 886479 933804 479073 498759 12169 984287 556863 103176 408443 361731 998085 82051 3747 850904 447678 907242 809301 303924 834775 307942 441352 588343 683629 836572 809729 339749 366085 658717 614517 884875 182539 562581 956923 77433 84096 602605 172622 957962 244160 428056 530314 783990 215870 701909 293622 766967 574677 406661 718567 382808 836231 397178 667441 724508 844755 281616 218860 300388 998404 911062 954422 208468 232948 387299 858213 910239 620876 206550 687223 290799 512342 211959 715920 813705 245546 500651 905604 524165 389164 210877 289291 852317 832325 446104 69025 765139 684832 588848 944993 454299 761317 308104 442547 763555 588209 46752 276126 517132 793901 424000 413051 447942 912637 786095 186923 702224 69079 790376 921734 264258 350502 498149 648433 37940 867582 613315 37397 723640 966651 299952 272088 249315 377115 470713 638398 783201 493453 769381 326183 852723 440324 784188 684812 161917 977231 751698 924424 561758 191926 54727 889592 500722 92711 921381 613933 588710 796790 230721 467893 592746 928213 888059 804774 285068 742199 129104 796926 334516 587304 414751 714386 354026 805388 421312 119968 708988 875598 377402 215318 990064 671006 569845 30634 958060 313034 754435 694954 9606 357519 784769 428378 359594 110907 625508 183022 819261 120189 709121 782808 133911 139250 390697 967028 425397 631549 138161 734039 456018 624393 747042 4855 869753 154237 338298 934820 133547 103337 616497 714882 300543 927355 346860 769620 22375 911694 830704 638798 270125 376395 452468 47308 129286 399099 531989 214296 481652 835949 352786 514301 486166 755936 5558 499895 794247 385812 974233 242994 561908 43255 51052 734530 187402 876705 844243 189486 281899 483681 400286 493181 408689 381521 150437 370232 612077 107830 385656 707026 813522 799895 310013 913540 758298 915552 556153 941865 669599 690869 92509 721848 637437 76559 792279 787129 430304 35431 142364 38581 253595 58784 255234 938667 603788 881750 965964 580717 688969 572175 917901 542858 261016 23131 167950 758887 106158 828933 364079 525038 262537 773230 40399 505139 845259 273241 740994 222515 968247 643615 338667 673725 125270 250568 178562 959370 74300 124105 549121 890497 238851 878581 282279 996326 642381 32832 714671 772378 868384 659864 386329 630428 44315 84437 916057 250044 981242 705498 161404 284393 541798 971530 933016 189303 972628 308246 255808 953965 619702 593451 586717 177942 4906 188192 168912 839916 614406 138982 466823 948196 469442 98002 4678 130637 312159 666768 887687 16008 607208 886889 59039 197485 102259 194609 641509 607360 747716 678048 138630 319570 206059 151777 450575 448591 369228 325132 652331 99916 822026 42994 425790 319252 549296 604703 897365 702421 669894 563067 206624 872586 866014 229962 846688 412097 691561 562132 323431 530134 255246 624006 759299 988622 144939 121987 838996 611853 605740 653418 615221 418657 430410 263609 199113 708092 484588 374070 522087 344121 899541 124323 175048 135652 724923 776809 861346 106910 23126 210485 220487 605657 387686 113131 945202 431871 396681 226052 196940 156907 963006 821099 342072 908356 356972 384049 57209 221525 634840 290881 21228 406110 81715 948220 84201 453183 826994 676683 792193 456628 568148 547665 597265 715014 423540 37852 314754 42747 980082 562225 161665 658620 851284 305749 537807 822587 165246 954063 947892 682839 638932 708473 788479 708494 229609 703730 386039 829528 861946 225770 9305 807146 327698 376097 390643 151281 665250 445989 692268 35135 183453 960493 416982 901862 172456 190197 222266 66586 161467 12219 572876 415460 550387 615439 278078 631387 574359 994335 449595 318482 531950 738228 604442 290955 411091 681738 593636 229753 922693 650330 122039 227888 515307 764513 865956 170567 778577 627608 518321 244444 486251 922133 334127 866313 784964 840064 14167 522695 463412 339143 276786 439662 766438 779118 428385 502982 661783 511597 846 307656 449059 50672 284583 57534 601327 454336 95981 62945 614647 850178 804911 803094 617798 220361 364662 866536 435485 628440 556646 631531 747688 973002 269031 646973 129742 607656 676173 778889 483292 783572 483868 562576 538798 908391 957171 832069 846544 915466 135125 997065 98623 408929 581259 987580 127653 122684 584995 854576 40623 139121 259046 120027 304041 726163 533529 239416 241933 407706 527657 908367 547390 503724 75520 573377 493120 685007 606581 271703 350900 456617 320869 757618 87802 689073 408196 231226 353939 991 8450 948150 915415 686127 876795 518464 508818 692486 859921 61488 857901 614243 923126 666335 12025 849190 78169 162876 862762 660413 565185 6896 389606 401542 578547 507169 236381 702363 732536 573356 142544 5704 697132 222683 873185 985616 205343 38665 221976 18764 670884 345163 69288 395980 626873 111526 93374 854910 391665 486947 496183 241241 589126 112277 473975 582447 61072 801659 442434 563724 194621 734181 40096 941746 474426 120980 71346 550545 161518 412085 912309 885900 597677 271105 539257 709110 489580 500866 451208 820461 129289 941042 261209 577579 599459 916037 369606 159521 414346 724136 606599 536107 850535 796769 70768 601515 499708 969234 550470 399696 340242 214639 545487 55264 220403 71011 359127 955441 337141 651292 356262 735248 623330 929245 905944 568691 530087 19355 673921 75923 614284 490872 485323 953090 43706 792374 129799 968413 52481 209078 826709 585496 869356 199241 288012 84078 652157 664650 327758 329528 882227 592402 385044 920108 516255 664306 561487 165369 836153 143301 639875 961792 693081 80709 750952 281425 346841 194517 63168 141886 155351 907182 769570 851718 146949 597887 748888 150211 196366 181911 17699 125981 450497 149565 369213 667174 686470 501438 363836 630792 135369 61136 369429 399235 689522 11845 963514 504989 710465 642350 369304 3520 589466 492986 583551 248451 857623 439197 335667 113921 248312 999809 334285 357155 369843 670477 384775 939581 374967 712175 516262 479291 513976 830471 275347 502217 833444 693543 897022 746639 197547 64378 593149 34267 86614 593796 226313 381518 860489 578365 359821 600468 429775 485308 669663 982888 129834 15004 445633 918259 541983 654757 671968 129594 765218 881137 790541 241501 351699 235026 453559 934573 487430 714986 500893 128382 179899 501165 221764 313086 177718 431427 721577 326009 263224 435135 953080 399211 47159 216101 879865 861734 409109 885011 969548 411715 540784 303464 446099 211149 455863 248663 311629 898475 462003 291756 186147 91994 502888 751360 936446 154265 174859 456701 133605 235633 506312 249112 799304 796061 23154 596716 331185 505081 643939 741867 307988 463783 47265 731533 416331 185647 318711 352533 656637 774989 953447 662645 628133 901802 814610 202128 301702 871696 889770 373087 535700 994451 241824 836757 443588 363937 890026 455120 115287 633515 664723 567121 471063 376287 130341 69482 988467 941708 83946 375088 735379 675810 638569 918777 965259 702899 298518 109010 644161 408499 842641 36881 38740 70104 577242 146438 627216 9280 997932 303280 106796 993141 199489 562980 54974 347606 761469 113303 462040 136453 383468 730820 623149 462688 351638 93682 238968 441358 577837 837276 557162 514642 510680 755831 35697 647122 221267 491769 812184 96197 257964 432747 811805 35292 270594 648468 452101 224731 257903 56211 119140 710273 433654 71778 359123 982089 353930 992641 153925 230051 456899 378073 117548 359080 27058 444242 888057 41875 258795 788838 268397 393663 713408 661585 903708 808760 33733 270055 592429 559910 843453 527981 106724 819540 857919 683144 71607 230971 553935 533921 796234 147901 886900 844413 523112 621651 735915 401003 465228 926706 534893 476137 884407 2893 41285 908398 548228 320866 590237 365297 895383 632899 10522 969111 244989 913060 947736 755804 20303 184071 967109 102937 590547 257232 906282 118711 16886 413894 235772 145500 843977 383400 965420 890246 346098 588026 928463 630200 356254 409110 415318 4989 210688 575882 406549 197682 585311 130548 176834 229698 6956 4564 195116 172953 878625 851917 198783 642480 574540 724516 28872 995435 299521 458656 210418 905682 922544 628359 387243 277524 769383 383341 211902 788409 128918 427389 979640 624284 82075 530302 130461 719890 895480 477196 359562 409280 604597 589598 646920 819526 72861 258028 284477 132938 253852 14117 385567 493036 896110 300382 863730 402750 729360 995829 738751 527780 233440 934285 86905 919139 62722 895249 994929 61707 948463 187252 30350 93036 981861 17484 992589 81944 912432 26259 806157 478810 962562 433852 672877 733877 300495 557944 432659 244164 344398 513989 331913 329865 571269 163394 102664 831071 868817 635622 78426 155922 509277 630686 422123 147257 699769 501541 779403 580242 957092 531626 937644 927702 928403 20180 410480 88637 737229 732101 825208 197297 433783 102710 443295 371450 687369 206223 5493 236041 479222 793743 641740 887538 700190 824761 111005 990991 593787 374288 591709 686784 696050 354270 828745 793164 363405 665681 835191 126577 734776 429058 865024 816158 726604 440076 81966 971926 418356 109905 853219 812570 297851 14033 667979 994578 239737 786865 265136 227650 296936 952307 492679 469575 495414 185621 173504 484038 201515 266755 845648 584616 958248 600275 541893 662046 16134 6362 573493 975502 658281 927369 364074 78898 965734 797302 223567 312388 170966 592145 720437 548676 423466 819303 184880 101814 21995 547391 607612 538854 769382 370004 861489 560566 132665 866452 631413 791008 845598 355187 504048 102307 586713 37623 557196 239744 65911 512883 864256 425818 670700 483924 112822 22638 753161 128945 94828 90371 567728 360048 995830 281975 712343 106756 445132 321063 51838 954222 232525 398900 873522 479493 62583 270562 149260 384614 580292 863125 574408 450085 505150 433431 787411 476197 292436 220902 449281 467797 293186 930225 83114 990793 760275 577763 660200 561600 877709 899052 546003 442056 169678 514057 539644 930736 432881 813940 762196 571863 209301 776800 519195 118998 88096 114792 613733 59725 539901 972401 434728 754713 997528 357399 38387 404602 697564 621470 348210 212180 285043 30168 590445 739669 566281 696759 389859 155928 803373 366453 732640 441344 29376 863738 839469 840489 194775 112312 385616 323189 266795 641671 888148 944438 889491 370466 930171 304266 895925 432243 312245 771411 225730 357843 87805 394184 988019 669177 903926 821235 733611 457075 456393 320546 859269 849119 190991 732628 18961 40042 846168 20563 164420 895970 478191 669863 678612 341186 741309 392778 51140 808337 498764 900080 127345 28074 594858 15878 81526 126037 929989 492753 492050 938204 591982 861750 477659 643694 321142 991263 447880 24081 640322 353434 750535 15555 315072 973470 764685 624164 550939 877407 465314 285939 128263 88382 168209 452567 389735 306504 403892 655256 908189 22496 763903 475570 366368 496272 875339 5763 651520 884439 975528 807146 872505 883357 220704 53714 461482 402514 159789 714411 625578 778277 869867 86527 783739 960274 491218 843414 709790 653874 579003 311797 582794 231495 518214 559900 384269 841702 414777 812851 670158 93680 124457 486293 58732 790989 927328 48216 441718 642002 389761 853067 176182 125899 721649 425527 814015 606444 471417 471254 515867 841653 635400 711708 12162 275146 92400 349149 857241 220470 961019 1068 586165 548102 488047 64651 920923 796853 289984 583669 153845 880017 619602 581986 987189 543473 845089 532851 405965 461838 79248 27991 790118 488980 288847 368846 626200 450150 874823 860736 76349 344073 794159 920781 744284 370293 950471 427461 891272 253395 991263 648942 702898 561201 385657 959604 154392 702799 252153 801683 964919 888252 10266 544872 206502 465254 808290 664565 45250 239610 936831 436122 302606 824359 459712 355706 422834 668667 161238 477843 641561 688433 551121 259151 410098 258345 646379 400039 997784 949166 415882 669817 800611 241429 799699 555995 525578 687212 41202 917179 93205 274597 402876 775145 953149 638557 352018 463270 329963 245022 894089 197477 93814 243600 884314 931955 49676 372273 598588 437097 882057 618989 612659 222882 198659 308758 779963 98606 457152 594398 573796 516269 788725 650082 459907 935865 941927 627885 858216 894056 511572 378639 161611 377896 456585 621126 621473 257468 350518 876487 307011 166583 395552 109770 614471 512450 479228 792211 962045 712594 859634 460432 162912 811379 219568 797763 921132 900438 288445 687579 141054 539890 878980 80440 821527 225888 646014 270645 331001 964694 262720 849244 211374 846538 314678 440150 398752 441047 307885 701479 841412 947233 271942 451208 467105 410425 188466 977299 756483 958965 760943 282013 108579 407550 167983 831485 238996 670029 507255 445399 58723 182786 419961 938783 119165 530504 952534 184767 67746 154342 621556 256496 750235 894586 208884 63064 877322 551324 725889 410992 687252 68751 235442 696478 530105 131913 910801 905732 422439 197716 894210 647630 905796 417365 562066 605099 218219 694025 490064 892858 613549 838892 948001 228855 122721 378815 322743 292302 171580 316017 701702 720945 42801 141446 692377 11158 811500 448459 616446 289863 45077 474966 877411 677765 411280 356752 989032 458600 245663 144497 342366 934098 8428 5513 830296 63201 446839 417208 671214 351873 679128 532669 708348 497170 645021 275764 571601 740863 379937 674379 963865 782335 39738 267795 313994 459342 780691 860737 847593 966986 268722 579651 162708 916666 280630 88936 692808 153860 682910 452884 373789 547701 282469 684300 98646 416569 362688 459224 293432 853162 978953 193315 218858 368947 888794 106006 180763 524349 68559 932873 293943 874205 404760 645523 919365 376325 444125 654644 778095 14999 981647 761884 956191 27024 567836 454739 919951 767305 860427 310602 787310 549533 76028 815341 732939 684222 169355 835450 705502 608989 47829 811622 924336 134754 642899 74613 847141 610431 271713 792080 487884 289883 481534 643348 760271 240450 525677 309677 450543 865424 717888 397103 257951 458182 977490 552495 38397 850475 713238 707021 549094 838988 593884 23968 207047 990537 186739 787499 836328 501804 713770 703618 623316 995282 192379 901122 915151 330968 921108 620712 442926 747560 137927 761744 657399 581734 9025 188233 819611 978074 980306 455548 759419 220409 635842 775609 180612 157539 954396 226651 131847 382714 350027 197400 165046 50383 179188 253022 742792 109027 134765 793239 280255 351227 262062 149480 297458 412541 383687 956718 202666 947276 957071 309659 927683 646410 780054 391965 130919 261530 892475 461410 704934 796234 231290 167122 663566 128231 860231 360688 852357 838652 524593 331135 401937 633641 134824 750432 660251 633901 52058 696888 270765 656473 274201 105624 350356 222213 284746 436698 191142 452601 332049 111983 530277 381183 155488 782592 658136 516582 567611 761895 508240 461145 610082 264853 807034 611697 747307 660823 408084 314900 172521 505557 418545 321731 785463 80051 922834 691769 17170 170027 402090 851456 578972 605290 418836 689039 363477 681231 754601 351957 813090 430470 905544 293419 218531 346680 142462 909241 630438 902162 408642 859877 99174 967643 543031 970017 202807 523218 856799 606372 862219 836516 687137 562347 935865 255962 609526 262266 178028 283512 870239 749672 26389 638648 890021 190960 491108 32162 880774 396397 762070 997646 147216 964896 865897 676868 111053 210542 534134 612797 652903 597775 841954 589750 485874 906919 783091 345390 655052 267979 755435 921154 286349 118019 935171 848483 753952 174886 385266 195380 40669 225715 683430 966545 210741 649431 393734 207506 515187 241045 643510 41863 696683 983782 910569 951067 258657 60608 239451 212020 2074 76780 149228 19194 426305 494426 540107 757455 105082 102775 945022 929586 415791 353584 472624 332260 287434 742492 297522 457342 353044 929856 218504 277945 415123 152563 845202 70301 994187 664565 76093 556264 981482 34284 140575 814736 597161 541214 260996 266533 127734 326727 199332 167955 631595 705280 374314 135459 505820 62979 808544 399233 737412 658810 336701 558440 814610 965953 321007 695297 782347 573021 95220 120854 576864 459032 954352 730126 401810 183963 174566 38795 383260 235284 62472 219401 480251 542066 567295 195600 167970 497929 825690 120947 810782 704965 902214 776307 817420 224734 812218 626472 105800 486786 996679 443283 794321 248499 255010 321131 874909 578436 951645 89645 374995 406846 466378 328164 764514 895557 376721 223162 152504 765390 687942 111929 681328 490769 237757 2145 522546 475317 277143 973202 443176 724253 446585 2866 451834 925690 392302 490385 685144 663084 988649 737266 218683 182959 569357 617563 720664 955200 17451 759213 491436 987095 399952 680956 895690 927478 534161 424366 52297 10879 78381 83033 790804 351102 89963 13864 399297 314332 25570 767391 135332 260924 158142 861278 741003 409995 976307 880005 266929 789799 583128 40680 902758 596140 512190 353817 716633 135535 911112 550312 391032 462712 931834 901664 341692 766024 263717 80185 365574 150368 64425 799681 446218 447240 188457 527928 144333 125383 1979 544708 48110 856860 806331 245511 355829 37523 737155 113284 446573 600687 259131 198504 604661 390934 438246 829666 722353 579237 995697 990374 62161 4815 426671 532743 328317 7006 417967 43790 378013 755025 99321 754121 649070 168475 782124 407118 957011 88067 802375 396603 778285 659545 79733 950072 409432 430347 227625 595857 610452 864336 500756 532322 196657 912164 80713 802535 889959 110703 120163 475553 364953 568969 238501 390319 774186 589452 974758 44652 472802 589547 355426 50684 389580 425158 285199 200182 534517 298688 641032 313601 905344 89352 397630 795906 960776 800292 326532 970545 207408 472966 465311 180076 497218 315538 728859 179544 607466 669275 139943 359458 953537 865952 403521 599515 214690 157016 253106 204441 193740 292820 806088 596197 750358 319584 61053 170474 767148 673056 139974 892245 490704 401168 859527 777972 269577 956366 602169 635490 50665 199484 850246 562089 286460 23530 31963 823588 413399 618585 180646 285011 68502 671759 411254 151654 328170 699840 79842 35476 229978 262902 158908 951743 100373 855391 246745 251789 64897 227124 829615 35146 512400 546705 42728 32874 781955 536582 136283 692033 467501 187324 646909 624341 355643 634400 159946 765962 387555 485115 111450 182141 281587 722966 19462 72975 853792 935416 827328 101368 410135 486072 108066 69123 431833 919668 234268 340612 970139 280610 432665 433920 653639 245636 546919 340411 995796 610691 469202 298410 156092 58971 518435 213117 929828 259523 575142 811557 222673 858847 509006 584064 198224 729271 13453 568762 690938 930531 333109 689622 100481 669669 406198 909343 201132 225456 214316 617728 373975 340651 527204 967296 434502 298871 218710 101009 943818 214650 615468 419315 118933 981868 731576 256422 991422 531454 801988 48787 12114 737561 340997 357274 933766 362239 590992 329105 64522 43780 494587 171103 738297 99609 141758 794 882102 641714 254598 749506 949282 791961 378173 164340 436003 73026 550885 883907 301335 164785 79551 802767 354527 600783 649996 685475 993097 622743 571043 613475 375436 891658 537472 489917 404763 255176 959013 449552 267846 811395 689686 720923 248295 526950 600990 228479 748248 426007 960386 720905 129763 773350 197868 857085 52134 200692 462581 305455 750992 111048 803676 822101 491238 476439 252690 785854 749995 79200 941325 994372 54426 447708 846826 450361 483619 922005 439499 935970 463869 839305 278307 789249 514293 287374 381575 820133 27922 916805 998308 673614 845265 837792 142584 988876 2907 624570 112704 217026 742941 686530 269931 881731 882108 823963 302852 758652 168014 240891 620700 612020 841497 124898 151706 221978 301254 266666 629831 927759 976024 186618 490048 841304 36415 5446 875983 383365 47966 922892 988846 263891 566037 97110 141815 751599 909392 117843 763980 133542 191073 833294 204772 50319 885915 310195 965272 951700 570269 885202 892668 941011 976605 460405 386355 130534 658297 232045 810999 657312 908623 246446 971209 582980 870218 742239 890224 545716 10211 431127 337899 244277 938951 35307 698138 492551 287233 66717 691569 369044 179849 206469 701107 17480 150701 53078 512109 870028 298008 895202 473782 633210 996063 442703 948153 811580 884494 988005 624144) 0 9999 #<procedure main#1#anon#1#2#3#4#5#6#7#8#9$269>)
+﻿﻿
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a SIGSEGV while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
 
-real	0m2.032s
-user	0m1.945s
-sys	0m0.097s
+=================================================================
+	Native stacktrace:
+=================================================================
+	0x55b9cb45cf73 - mono : 
+	0x55b9cb45d329 - mono : 
+	0x55b9cb40a37b - mono : 
+	0x55b9cb456419 - mono : 
+	0x55b9cb684280 - mono : 
+
+=================================================================
+	Telemetry Dumper:
+=================================================================
+Pkilling 0x140327452268352x from 0x140327318976064x
+Pkilling 0x140327448000064x from 0x140327318976064x
+Entering thread summarizer pause from 0x140327318976064x
+Finished thread summarizer pause from 0x140327318976064x.
+/home/nex/bin/ironscheme: line 2:  5669 Aborted                 (core dumped) mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
+
+real	0m3.866s
+user	0m1.779s
+sys	0m0.096s
++!CSVLINE!+ironscheme,quicksort,CRASHED
+Mono process hang detected, sending kill signal to pid 5669
 
 Testing scheme under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -785,12 +711,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/scheme.sps /tmp/larcenous/IronScheme/scheme.sps
 Running...
 ﻿﻿Running scheme:100000
-Elapsed time: 35.412028 seconds (36) for scheme:100000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,scheme:100000,35.412028
+Elapsed time: 33.971789 seconds (34) for scheme:100000
++!CSVLINE!+ironscheme-1.0.240-687cde5,scheme:100000,33.971789
 
-real	0m36.931s
-user	0m36.816s
-sys	0m0.149s
+real	0m35.783s
+user	0m35.708s
+sys	0m0.124s
 
 Testing slatex under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -798,12 +724,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/slatex.sps /tmp/larcenous/IronScheme/slatex.sps
 Running...
 ﻿﻿Running slatex:500
-Elapsed time: 35.301025 seconds (36) for slatex:500
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,slatex:500,35.301025
+Elapsed time: 36.355349 seconds (37) for slatex:500
++!CSVLINE!+ironscheme-1.0.240-687cde5,slatex:500,36.355349
 
-real	0m36.957s
-user	0m34.002s
-sys	0m3.035s
+real	0m38.301s
+user	0m29.224s
+sys	0m5.288s
 
 Testing chudnovsky under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -819,64 +745,30 @@ Got a SIGSEGV while executing native code. This usually indicates
 a fatal error in the mono runtime or one of the native libraries 
 used by your application.
 =================================================================
-/proc/self/maps:
-40937000-40947000 rwxp 00000000 00:00 0 
-413de000-41740000 rwxp 00000000 00:00 0 
-5645d7a02000-5645d7a2f000 r--p 00000000 08:02 2470720                    /usr/bin/mono-sgen
-5645d7a2f000-5645d7d67000 r-xp 0002d000 08:02 2470720                    /usr/bin/mono-sgen
-5645d7d67000-5645d7ea9000 r--p 00365000 08:02 2470720                    /usr/bin/mono-sgen
-5645d7eaa000-5645d7eb3000 r--p 004a7000 08:02 2470720                    /usr/bin/mono-sgen
-5645d7eb3000-5645d7eb8000 rw-p 004b0000 08:02 2470720                    /usr/bin/mono-sgen
-5645d7eb8000-5645d7ed3000 rw-p 00000000 00:00 0 
-5645d861e000-5645db4d1000 rw-p 00000000 00:00 0                          [heap]
-7f3184000000-7f31844c4000 rw-p 00000000 00:00 0 
-7f31844c4000-7f3188000000 ---p 00000000 00:00 0 
-7f318c000000-7f318c03a000 rw-p 00000000 00:00 0 
-7f318c03a000-7f3190000000 ---p 00000000 00:00 0 
-7f31909f0000-7f3190a70000 rw-p 00000000 00:00 0 
-7f3190a74000-7f3190af4000 rw-p 00000000 00:00 0 
-7f3190af8000-7f3190b78000 rw-p 00000000 00:00 0 
-7f3190b7c000-7f3190bfc000 rw-p 00000000 00:00 0 
-7f3190c00000-7f3190d00000 rw-p 00000000 00:00 0 
-7f3190d6c000-7f3190dec000 rw-p 00000000 00:00 0 
-7f3190df0000-7f3190e70000 rw-p 00000000 00:00 0 
-7f3190e74000-7f3190ef4000 rw-p 00000000 00:00 0 
-7f3190ef8000-7f3190f78000 rw-p 00000000 00:00 0 
-7f3190f7c000-7f3190ffc000 rw-p 00000000 00:00 0 
-7f3191000000-7f3191100000 rw-p 00000000 00:00 0 
-7f3191174000-7f31911f4000 rw-p 00000000 00:00 0 
 
 =================================================================
 	Native stacktrace:
 =================================================================
-	0x5645d7ac9397 - mono : (null)
-	0x5645d7ac9751 - mono : (null)
-	0x5645d7a74e7b - mono : (null)
-	0x5645d7a30ab7 - mono : (null)
-	0x7f3195400960 - /usr/lib/libpthread.so.0 : (null)
-	0x5645d7d05ae0 - mono : (null)
-	0x5645d7d05d78 - mono : (null)
-	0x5645d7d07ffa - mono : (null)
-	0x5645d7d0bd5a - mono : (null)
-	0x5645d7d0c378 - mono : (null)
-	0x5645d7cfb9c0 - mono : (null)
-	0x5645d7cdf33c - mono : (null)
-	0x413ec92e - Unknown
+	0x55c71817df73 - mono : 
+	0x55c71817e329 - mono : 
+	0x55c71812b37b - mono : 
+	0x55c718177419 - mono : 
+	0x55c7183a5280 - mono : 
 
 =================================================================
 	Telemetry Dumper:
 =================================================================
-Pkilling 0x7f3194e33700 from 0x7f3192083700
-Pkilling 0x7f3195206780 from 0x7f3192083700
-Entering thread summarizer pause from 0x7f3192083700
-Finished thread summarizer pause from 0x7f3192083700.
-/home/nex/bin/ironscheme: line 2: 2694361 Segmentation fault      (core dumped) mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Pkilling 0x140508841355072x from 0x140508711056960x
+Pkilling 0x140508792534592x from 0x140508711056960x
+Entering thread summarizer pause from 0x140508711056960x
+Finished thread summarizer pause from 0x140508711056960x.
+/home/nex/bin/ironscheme: line 2:  5730 Aborted                 (core dumped) mono /home/nex/IronScheme/IronScheme.ConsoleCore.dll $*
 
-real	0m3.733s
-user	0m1.335s
-sys	0m0.171s
+real	0m3.770s
+user	0m1.662s
+sys	0m0.116s
 +!CSVLINE!+ironscheme,chudnovsky,CRASHED
-Crash Reporter has timed out, sending SIGSEGV
+Mono process hang detected, sending kill signal to pid 5730
 
 Testing nboyer under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -884,12 +776,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/nboyer.sps /tmp/larcenous/IronScheme/nboyer.sps
 Running...
 ﻿﻿Running nboyer:5:1
-Elapsed time: 13.497408 seconds (14) for nboyer:5:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,nboyer:5:1,13.497408
+Elapsed time: 12.25684 seconds (12) for nboyer:5:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,nboyer:5:1,12.25684
 
-real	0m15.019s
-user	0m17.740s
-sys	0m0.373s
+real	0m14.048s
+user	0m17.498s
+sys	0m0.301s
 
 Testing sboyer under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -897,20 +789,19 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/sboyer.sps /tmp/larcenous/IronScheme/sboyer.sps
 Running...
 ﻿﻿Running sboyer:5:1
-Elapsed time: 9.682798 seconds (10) for sboyer:5:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,sboyer:5:1,9.682798
+Elapsed time: 9.377573 seconds (9) for sboyer:5:1
++!CSVLINE!+ironscheme-1.0.240-687cde5,sboyer:5:1,9.377573
 
-real	0m11.154s
-user	0m11.279s
-sys	0m0.140s
+real	0m11.121s
+user	0m11.274s
+sys	0m0.127s
 
 Testing gcbench under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/gcbench.sps /tmp/larcenous/IronScheme/gcbench.sps
 Running...
-﻿﻿Unhandled exception during evaluation:
-&who: make-node-raw
+﻿﻿&who: make-node-raw
 &message: "not a valid define-record-type keyword"
 &syntax:
   form: make-node-raw
@@ -920,22 +811,32 @@ Running...
   character: "(95,8) - (95,21)"
 &trace: #<syntax make-node-raw ((95,8) - (95,21) of /tmp/larcenous/IronScheme/gcbench.sps)>
 
-real	0m1.251s
-user	0m1.187s
-sys	0m0.073s
+
+real	0m1.561s
+user	0m1.545s
+sys	0m0.024s
++!CSVLINE!+ironscheme,gcbench,CRASHED
 
 Testing mperm under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
 Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/mperm.sps /tmp/larcenous/IronScheme/mperm.sps
 Running...
-﻿﻿Running mperm:20:10:2:1
-Elapsed time: 119.138401 seconds (119) for mperm:20:10:2:1
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,mperm:20:10:2:1,119.138401
+﻿﻿&who: run-benchmark
+&message: "multiple definitions of identifier"
+&syntax:
+  form: run-benchmark
+  subform: #f
+&source-information:
+  file-name: "/tmp/larcenous/IronScheme/mperm.sps"
+  character: "(215,10) - (215,23)"
+&trace: #<syntax run-benchmark ((215,10) - (215,23) of /tmp/larcenous/IronScheme/mperm.sps)>
 
-real	2m6.355s
-user	2m19.211s
-sys	0m4.318s
+
+real	0m1.516s
+user	0m1.496s
+sys	0m0.028s
++!CSVLINE!+ironscheme,mperm,CRASHED
 
 Testing equal under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -943,12 +844,12 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/equal.sps /tmp/larcenous/IronScheme/equal.sps
 Running...
 ﻿﻿Running equal:100:100:8:1000:2000:5000
-Elapsed time: 8.189466 seconds (8) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+ironscheme-1.0.101-0fdbfcf,equal:100:100:8:1000:2000:5000,8.189466
+Elapsed time: 8.684421 seconds (9) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+ironscheme-1.0.240-687cde5,equal:100:100:8:1000:2000:5000,8.684421
 
-real	0m9.573s
-user	0m9.657s
-sys	0m0.406s
+real	0m10.391s
+user	0m10.614s
+sys	0m0.329s
 
 Testing bv2string under IronScheme
 Including prelude /home/nex/src/r7rs-benchmarks/src/IronScheme-prelude.scm
@@ -956,9 +857,9 @@ Compiling...
 ironscheme_comp /tmp/larcenous/IronScheme/bv2string.sps /tmp/larcenous/IronScheme/bv2string.sps
 Running...
 ﻿﻿Running bv2string:1000:1000:100
-/home/nex/bin/ironscheme: line 2: 2694629 Killed                  mono /home/nex/tmp/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+Elapsed time: 109.394273 seconds (109) for bv2string:1000:1000:100
++!CSVLINE!+ironscheme-1.0.240-687cde5,bv2string:1000:1000:100,109.394273
 
-real	5m0.431s
-user	4m59.690s
-sys	0m0.604s
-+!CSVLINE!+ironscheme,bv2string,ULIMITKILLED
+real	1m51.173s
+user	1m51.062s
+sys	0m0.168s

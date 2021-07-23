@@ -38,7 +38,7 @@
           (else
            (shorterp (cdr x) (cdr y)))))
 
-  (define (main)
+  (define (run-benchmark)
     (let* ((count (read))
            (input1 (read))
            (input2 (read))
