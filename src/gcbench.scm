@@ -173,7 +173,7 @@
                ))))
         (PrintDiagnostics))
 
-      (main))))
+      (run-benchmark))))
 
 (define (run-benchmark)
   (let* ((count (read))

@@ -168,7 +168,7 @@
               (loop (+ i 1)))))
 
         (fill-queue 0 (- k ell))
-        (run-benchmark id
+        (%run-benchmark id
                        m
                        (lambda ()
                          (fill-queue (- k ell) k)
@@ -190,7 +190,7 @@
       (begin (display "Incorrect arguments to MpermNKL-benchmark")
              (newline))))
 
-(define (run-benchmark . args)
+(define (%run-benchmark . args)
   (apply run-r7rs-benchmark args))
 
 (define (run-benchmark)
