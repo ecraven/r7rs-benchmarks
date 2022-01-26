@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile guile3 ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos vicare ypsilon" #  chicken4 chicken4csi
+ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile guile3 ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos tr7 vicare ypsilon" #  chicken4 chicken4csi
 ################################################################
 
 NB_RUNS=1
@@ -151,6 +151,7 @@ setup ()
     STALIN=${STALIN:-"chicken-stalin"}
     STKLOS=${STKLOS:-"stklos"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
+    TR7I=${TR7I:-"tr7i"}
     VICARE=${VICARE:-"vicare"}
     YPSILON=${YPSILON:-"ypsilon"}
 }
@@ -204,6 +205,7 @@ Usage: bench [-r runs] <system> <benchmark>
   stalin           for Stalin
   stklos           for STklos
   tinyscheme       for TinyScheme
+  tr7              for TR7
   vicare           for Vicare
   ypsilon          for Ypsilon
   all              for all of the above
@@ -512,6 +514,19 @@ tinyscheme_exec ()
 {
     sed 's/^(run-benchmark)$/(with-input-from-file (car *args*) run-benchmark)/' -i "$1"
     time ( ${TINYSCHEME} -1 "$1" "$2" )
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to TR7
+
+tr7_comp ()
+{
+    true
+}
+
+tr7_exec ()
+{
+    time ${TR7I} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -1114,6 +1129,16 @@ for system in $systems ; do
         tinyscheme) NAME='TinyScheme'
                     COMP=tinyscheme_comp
                     EXEC=tinyscheme_exec
+                    COMPOPTS=""
+                    EXTENSION="scm"
+                    EXTENSIONCOMP="scm"
+                    COMPCOMMANDS=""
+                    EXECCOMMANDS=""
+                    ;;
+
+        tr7) NAME='TR7'
+                    COMP=tr7_comp
+                    EXEC=tr7_exec
                     COMPOPTS=""
                     EXTENSION="scm"
                     EXTENSIONCOMP="scm"
