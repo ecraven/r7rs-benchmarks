@@ -58,10 +58,10 @@
                (display secs)
                (newline)
                (flush-output-port (current-output-port)))
-             result)
+             0)
             (else
              (display "ERROR: returned incorrect result: ")
              (write result)
              (newline)
              (flush-output-port (current-output-port))
-             result)))))
+             0)))))
