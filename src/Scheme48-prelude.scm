@@ -21,7 +21,7 @@
 (define exact inexact->exact)
 (define (flush-output-port x) x)
 (define (this-scheme-implementation-name)
-  (string-append "scheme48-" "unknown"))
+  (string-append "scheme48-" "1.9.2"))
 (define (exact-integer? x)
   (and (exact? x)
        (integer? x)))
