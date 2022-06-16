@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos vicare ypsilon" #  chicken4 chicken4csi
+ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile guile3 ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos vicare ypsilon" #  chicken4 chicken4csi
 ################################################################
 
 NB_RUNS=1
@@ -122,6 +122,8 @@ setup ()
     GERBIL=${GERBIL:-"gxc"}
     GUILD=${GUILD:-"guild"}
     GUILE=${GUILE:-"guile"}
+    GUILD3=${GUILD3:-"guild3"}
+    GUILE3=${GUILE3:-"guile3"}
     HUSKI=${HUSKI:-"huski"}
     JAVA=${JAVA:-"java"}
     IRONSCHEME=${IRONSCHEME:-"ironscheme"}
@@ -179,6 +181,7 @@ Usage: bench [-r runs] <system> <benchmark>
   gauche           for Gauche
   gerbil           for Gerbil Scheme
   guile            for Guile Scheme
+  guile3           for Guile Scheme 3
   husk             for Husk
   ironscheme       for IronScheme
   kawa             for Kawa
@@ -735,6 +738,19 @@ guile_exec ()
 }
 
 # -----------------------------------------------------------------------------
+# Definitions specific to Guile Scheme 3
+
+guile3_comp ()
+{
+    ${GUILD3} compile $1
+}
+
+guile3_exec ()
+{
+    time ${GUILE3} "$1" < "$2"
+}
+
+# -----------------------------------------------------------------------------
 # Definitions specific to Gambit Scheme
 
 gambitc_comp ()
@@ -1232,6 +1248,16 @@ for system in $systems ; do
                COMPCOMMANDS=""
                EXECCOMMANDS=""
                ;;
+
+        guile3) NAME='Guile3'
+                COMP=guile3_comp
+                EXEC=guile3_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="scm"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
 
         mit) NAME='MIT'
              COMP=mit_comp
