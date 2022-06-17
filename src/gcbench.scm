@@ -121,7 +121,7 @@
                  ((>= i iNumIters))
                (MakeTree depth))))))
 
-      (define (run-benchmark)
+      (define (run-benchmark-x)
         (display "Garbage Collector Test")
         (newline)
         (display (string-append
@@ -173,7 +173,7 @@
                ))))
         (PrintDiagnostics))
 
-      (main))))
+      (run-benchmark-x))))
 
 (define (run-benchmark)
   (let* ((count (read))

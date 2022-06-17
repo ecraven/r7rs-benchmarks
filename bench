@@ -583,13 +583,13 @@ scheme48_comp ()
 {
     # don't execute run-benchmark
     sed -i -e 's/^(run-benchmark)$//' -e 's/(run-benchmark)/(run-benchmark . unneeded-command-line-parameters)/' $1
-    echo "echo -e ,set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build run-benchmark $2\n,exit | ( time ${SCHEME48} )"
-    echo -e ",set inline-values\n,open srfi-19\n,open big-util\n(load \"$1\")\n,build run-benchmark $2\n,exit" | ( time ${SCHEME48} )
+    echo "echo -e ,set inline-values\n,open srfi-19\n,open big-util\n,open define-record-types\n(load \"$1\")\n,build run-benchmark $2\n,exit | ( time ${SCHEME48} )"
+    echo -e ",set inline-values\n,open srfi-19\n,open big-util\n,open define-record-types\n(load \"$1\")\n,build run-benchmark $2\n,exit" | ( time ${SCHEME48} )
 }
 
 scheme48_exec ()
 {
-    time ${SCHEME48} -i $1 < $2
+    time ${SCHEME48} -h 100000000  -i $1 < $2
 }
 
 # -----------------------------------------------------------------------------
