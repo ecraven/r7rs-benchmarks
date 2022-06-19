@@ -435,8 +435,10 @@ stalin_comp ()
 {
     # run through alexpander first
     expanded=${1%%scm}exp
-    csi src/alexpander.scm -e '(alexpander-repl)' < $1 > $expanded
-    ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+    echo "(print-brackets #f) (alexpander-repl)" | cat - $1 | sponge $1
+    chez-scheme -q src/alexpander.scm < $1 > $expanded
+    # ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
+    echo "(load \"/home/nex/scheme/chez/stalin/stalin.scm\") (load \"/home/nex/scheme/chez/stalin/stalin.scm\") (test \"$expanded\")" | chez-scheme -q 
 }
 
 stalin_exec ()
