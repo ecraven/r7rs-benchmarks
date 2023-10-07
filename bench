@@ -180,6 +180,7 @@ Usage: bench [-r runs] <system> <benchmark>
   gambitc          for GambitC Scheme
   gauche           for Gauche
   gerbil           for Gerbil Scheme
+  gerbil-unsafe    for Gerbil Scheme with unsafe optimizations enabled
   guile            for Guile Scheme
   guile3           for Guile Scheme 3
   husk             for Husk
@@ -1248,6 +1249,16 @@ for system in $systems ; do
 
         gerbil) NAME='Gerbil'
                 COMP=gerbil_comp
+                EXEC=gerbil_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="exe"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
+
+        gerbil-unsafe) NAME='Gerbil/unsafe'
+                COMP=gerbil_unsafe_comp
                 EXEC=gerbil_exec
                 COMPOPTS=""
                 EXTENSION="scm"
