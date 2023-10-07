@@ -438,7 +438,7 @@ stalin_comp ()
     echo "(print-brackets #f) (alexpander-repl)" | cat - $1 | sponge $1
     chez-scheme -q src/alexpander.scm < $1 > $expanded
     # ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
-    echo "(load \"/home/nex/scheme/chez/stalin/stalin.scm\") (load \"/home/nex/scheme/chez/stalin/stalin.scm\") (test \"$expanded\")" | chez-scheme -q 
+    echo "(load \"/home/nex/scheme/chez/stalin/stalin.scm\") (load \"/home/nex/scheme/chez/stalin/stalin.scm\") (test \"$expanded\")" | chez-scheme -q
 }
 
 stalin_exec ()
@@ -812,12 +812,17 @@ gauche_exec ()
 gerbil_comp ()
 {
     sed -i -e 's/^(run-benchmark)$//' $1
-    ${GERBIL} -d $(dirname "$1") -exe -static -O -prelude "(declare (not safe))" -o "${1%.scm}.exe" "$1"
+    ${GERBIL} -d $(dirname "$1") -exe -O -o "${1%.scm}.exe" "$1"
+}
+
+gerbil_unsafe_comp ()
+{
+    sed -i -e 's/^(run-benchmark)$//' $1
+    ${GERBIL} -d $(dirname "$1") -exe -O -full-program-optimization -prelude "(declare (not safe))" -o "${1%.scm}.exe" "$1"
 }
 
 gerbil_exec ()
 {
-    export GERBIL_HOME=/opt/gerbil-scheme-git/
     time "$1" < "$2"
 }
 
@@ -1240,6 +1245,16 @@ for system in $systems ; do
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
+
+        gerbil) NAME='Gerbil'
+                COMP=gerbil_comp
+                EXEC=gerbil_exec
+                COMPOPTS=""
+                EXTENSION="scm"
+                EXTENSIONCOMP="exe"
+                COMPCOMMANDS=""
+                EXECCOMMANDS=""
+                ;;
 
         guile) NAME='Guile'
                COMP=guile_comp
