@@ -2,15 +2,8 @@
 
 (import (scheme base) (scheme read) (scheme write) (scheme time))
 
-;;; This benchmark uses the following R6RS procedures.
-
-(define (div x y)
-  (quotient x y))
-
-;;; End of (faked) R6RS procedures.
-
 (define (gen n)
-  (let* ((n/2 (div n 2))
+  (let* ((n/2 (quotient n 2))
          (radicals (make-vector (+ n/2 1) '(H))))
 
     (define (rads-of-size n)
@@ -60,7 +53,7 @@
       (if (odd? j)
           '()
           (let loop1 ((rads1
-                       (vector-ref radicals (div j 2)))
+                       (vector-ref radicals (quotient j 2)))
                       (lst
                        '()))
             (if (null? rads1)
@@ -142,11 +135,11 @@
 
 (define (three-partitions m)
   (let loop1 ((lst '())
-              (nc1 (div m 3)))
+              (nc1 (quotient m 3)))
     (if (< nc1 0)
         lst
         (let loop2 ((lst lst)
-                    (nc2 (div (- m nc1) 2)))
+                    (nc2 (quotient (- m nc1) 2)))
           (if (< nc2 nc1)
               (loop1 lst
                      (- nc1 1))
@@ -155,17 +148,17 @@
 
 (define (four-partitions m)
   (let loop1 ((lst '())
-              (nc1 (div m 4)))
+              (nc1 (quotient m 4)))
     (if (< nc1 0)
         lst
         (let loop2 ((lst lst)
-                    (nc2 (div (- m nc1) 3)))
+                    (nc2 (quotient (- m nc1) 3)))
           (if (< nc2 nc1)
               (loop1 lst
                      (- nc1 1))
-              (let ((start (max nc2 (- (div (+ m 1) 2) (+ nc1 nc2)))))
+              (let ((start (max nc2 (- (quotient (+ m 1) 2) (+ nc1 nc2)))))
                 (let loop3 ((lst lst)
-                            (nc3 (div (- m (+ nc1 nc2)) 2)))
+                            (nc3 (quotient (- m (+ nc1 nc2)) 2)))
                   (if (< nc3 start)
                       (loop2 lst (- nc2 1))
                       (loop3 (cons (vector nc1 nc2 nc3 (- m (+ nc1 (+ nc2 nc3)))) lst)
