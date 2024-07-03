@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken5 chicken5csi cyclone femtolisp foment gambitc gauche gerbil guile guile3 ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos tr7 vicare ypsilon" #  chicken4 chicken4csi
+ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos tr7 vicare ypsilon"
 ################################################################
 
 NB_RUNS=1
@@ -108,12 +108,10 @@ setup ()
 
     BIGLOO=${BIGLOO:-"bigloo"}
     BONES=${BONES:-"bones"}
-    CHEZ=${CHEZ:-"chez-scheme"}
+    CHEZ=${CHEZ:-"chez"}
     CHIBI=${CHIBI:-"chibi-scheme"}
-    CHICKEN4_CSC=${CHICKEN4_CSC:-"chicken-csc"}
-    CHICKEN4_CSI=${CHICKEN4_CSI:-"chicken-csi"}
-    CHICKEN5_CSC=${CHICKEN5_CSC:-"chicken-csc"}
-    CHICKEN5_CSI=${CHICKEN5_CSI:-"chicken-csi"}
+    CHICKEN_CSC=${CHICKEN_CSC:-"chicken-csc"}
+    CHICKEN_CSI=${CHICKEN_CSI:-"chicken-csi"}
     CYCLONE=${CYCLONE:-"cyclone"}
     FEMTOLISP=${FEMTOLISP:-"flisp"}
     FOMENT=${FOMENT:-"foment"}
@@ -122,8 +120,6 @@ setup ()
     GERBIL=${GERBIL:-"gxc"}
     GUILD=${GUILD:-"guild"}
     GUILE=${GUILE:-"guile"}
-    GUILD3=${GUILD3:-"guild3"}
-    GUILE3=${GUILE3:-"guile3"}
     HUSKI=${HUSKI:-"huski"}
     JAVA=${JAVA:-"java"}
     IRONSCHEME=${IRONSCHEME:-"ironscheme"}
@@ -148,7 +144,7 @@ setup ()
     S7=${S7:-"s7"}
     S9fES=${S9fES:-"s9"}
     SISC=${SISC:-"sisc"}
-    STALIN=${STALIN:-"chicken-stalin"}
+    STALIN=${STALIN:-"stalin"}
     STKLOS=${STKLOS:-"stklos"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
     TR7I=${TR7I:-"tr7i"}
@@ -172,17 +168,14 @@ Usage: bench [-r runs] <system> <benchmark>
   bones            for Bones
   chez             for Chez Scheme
   chibi            for Chibi
-  chicken4         for Chicken 4 (compiled)
-  chicken4csi      for Chicken 4 (interpreted)
-  chicken5         for Chicken 5 (compiled)
-  chicken5csi      for Chicken 5(interpreted)
+  chicken          for Chicken (compiled)
+  chickencsi       for Chicken (interpreted)
   cyclone          for Cyclone
   foment           for Foment
   gambitc          for GambitC Scheme
   gauche           for Gauche
   gerbil           for Gerbil Scheme
   guile            for Guile Scheme
-  guile3           for Guile Scheme 3
   husk             for Husk
   ironscheme       for IronScheme
   kawa             for Kawa
@@ -364,57 +357,30 @@ chibi_exec ()
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Chicken4
-
-chicken4_comp ()
-{
-    OPTS="-M -optimize-leaf-routines -block -inline -inline-global -specialize -O3 -d0" # ecraven added -O3
-    ${CHICKEN4_CSC} ${OPTS} $1 -o $2 # ecraven removed -extend r7rs -require-extension r7rs which is very very bad for performance
-}
-
-chicken4_exec ()
-{
-    time "$1" < "$2"
-}
-
-# -----------------------------------------------------------------------------
 # Definitions specific to Chicken5
 
-chicken5_comp ()
+chicken_comp ()
 {
     OPTS="-R r7rs -X r7rs -block -O3 -C -O3 -d0"
-    ${CHICKEN5_CSC} ${OPTS} $1 -o $2
+    ${CHICKEN_CSC} ${OPTS} $1 -o $2
 }
 
-chicken5_exec ()
+chicken_exec ()
 {
     time "$1" < "$2"
-}
-
-# -----------------------------------------------------------------------------
-# Definitions specific to Chicken 4 CSI
-
-chicken4csi_comp ()
-{
-    :
-}
-
-chicken4csi_exec ()
-{
-    time ${CHICKEN4_CSI} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
 # Definitions specific to Chicken 5 CSI
 
-chicken5csi_comp ()
+chickencsi_comp ()
 {
     :
 }
 
-chicken5csi_exec ()
+chickencsi_exec ()
 {
-    time ${CHICKEN5_CSI} "$1" < "$2"
+    time ${CHICKEN_CSI} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -438,9 +404,9 @@ stalin_comp ()
     # run through alexpander first
     expanded=${1%%scm}exp
     echo "(print-brackets #f) (alexpander-repl)" | cat - $1 | sponge $1
-    chez-scheme -q src/alexpander.scm < $1 > $expanded
+    chez -q src/alexpander.scm < $1 > $expanded
     # ${STALIN} -On -Ob -Om -Or -Ot -d -d1 -k -copt -O3 $expanded
-    echo "(load \"/home/nex/scheme/chez/stalin/stalin.scm\") (load \"/home/nex/scheme/chez/stalin/stalin.scm\") (test \"$expanded\")" | chez-scheme -q 
+    echo "(load \"/home/nex/scheme/chez/stalin/stalin.scm\") (load \"/home/nex/scheme/chez/stalin/stalin.scm\") (test \"$expanded\")" | chez -q
 }
 
 stalin_exec ()
@@ -521,13 +487,14 @@ tinyscheme_exec ()
 
 tr7_comp ()
 {
-    true
+    :
 }
 
 tr7_exec ()
 {
     time ${TR7I} "$1" < "$2"
 }
+
 
 # -----------------------------------------------------------------------------
 # Definitions specific to RScheme
@@ -655,7 +622,7 @@ ironscheme_comp ()
 ironscheme_exec ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
+    sed -i -e 's/^(import (scheme.*)$/(import (rnrs base) (rnrs io simple))/g' $1
     # maybe a support lookup table can be added for these, and only inject if needed, like for read-line, square, exact-integer? too
     sed -i -e 's/^(define (bitwise-not[[:blank:]].*).*$/#;(excluded/g' $1
     sed -i -e 's/^(define (bitwise-and[[:blank:]].*).*$/#;(excluded/g' $1
@@ -742,32 +709,19 @@ mit_exec ()
 }
 
 # -----------------------------------------------------------------------------
-# Definitions specific to Guile Scheme
+# Definitions specific to Guile Scheme 3
 
 guile_comp ()
 {
     # Guile's default optimization level is more suited to interactive
     # development.  Explicitly selecting -O3 allows it to more
     # aggressively inline top-level definitions.
-    ${GUILD} compile -O3 $1
+    ${GUILD} compile -O3 "$1"
 }
 
 guile_exec ()
 {
     time ${GUILE} "$1" < "$2"
-}
-
-# -----------------------------------------------------------------------------
-# Definitions specific to Guile Scheme 3
-
-guile3_comp ()
-{
-    ${GUILD3} compile $1
-}
-
-guile3_exec ()
-{
-    time ${GUILE3} "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -830,7 +784,7 @@ gauche_exec ()
 gerbil_comp ()
 {
     sed -i -e 's/^(run-benchmark)$//' $1
-    ${GERBIL} -d $(dirname "$1") -exe -static -O -prelude "(declare (not safe))" -o "${1%.scm}.exe" "$1"
+    ${GERBIL} -d $(dirname "$1") -exe -O -prelude "(declare (not safe))" -o "${1%.scm}.exe" "$1"
 }
 
 gerbil_exec ()
@@ -1028,9 +982,9 @@ for system in $systems ; do
                EXECCOMMANDS=""
                ;;
 
-        chicken5) NAME='Chicken5'
-                 COMP=chicken5_comp
-                 EXEC=chicken5_exec
+        chicken) NAME='Chicken'
+                 COMP=chicken_comp
+                 EXEC=chicken_exec
                  COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
@@ -1038,29 +992,9 @@ for system in $systems ; do
                  EXECCOMMANDS=""
                  ;;
 
-        chicken5csi) NAME='Chicken5CSI'
-                    COMP=chicken5csi_comp
-                    EXEC=chicken5csi_exec
-                    COMPOPTS=""
-                    EXTENSION="scm"
-                    EXTENSIONCOMP="scm"
-                    COMPCOMMANDS=""
-                    EXECCOMMANDS=""
-                    ;;
-
-        chicken4) NAME='Chicken4'
-                 COMP=chicken4_comp
-                 EXEC=chicken4_exec
-                 COMPOPTS=""
-                 EXTENSION="scm"
-                 EXTENSIONCOMP="exe"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
-                 ;;
-
-        chicken4csi) NAME='Chicken4CSI'
-                    COMP=chicken4csi_comp
-                    EXEC=chicken4csi_exec
+        chickencsi) NAME='ChickenCSI'
+                    COMP=chickencsi_comp
+                    EXEC=chickencsi_exec
                     COMPOPTS=""
                     EXTENSION="scm"
                     EXTENSIONCOMP="scm"
@@ -1139,14 +1073,14 @@ for system in $systems ; do
                     ;;
 
         tr7) NAME='TR7'
-                    COMP=tr7_comp
-                    EXEC=tr7_exec
-                    COMPOPTS=""
-                    EXTENSION="scm"
-                    EXTENSIONCOMP="scm"
-                    COMPCOMMANDS=""
-                    EXECCOMMANDS=""
-                    ;;
+             COMP=tr7_comp
+             EXEC=tr7_exec
+             COMPOPTS=""
+             EXTENSION="scm"
+             EXTENSIONCOMP="scm"
+             COMPCOMMANDS=""
+             EXECCOMMANDS=""
+             ;;
 
         rscheme) NAME='RScheme'
                  COMP=rscheme_comp
@@ -1277,16 +1211,6 @@ for system in $systems ; do
                COMPCOMMANDS=""
                EXECCOMMANDS=""
                ;;
-
-        guile3) NAME='Guile3'
-                COMP=guile3_comp
-                EXEC=guile3_exec
-                COMPOPTS=""
-                EXTENSION="scm"
-                EXTENSIONCOMP="scm"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
-                ;;
 
         mit) NAME='MIT'
              COMP=mit_comp
