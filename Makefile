@@ -1,7 +1,7 @@
 .PHONY: csv clean all
 
 doc:
-	echo Run make all to run all tests
+	@echo Run "'make all'" to run all tests
 csv: all.csv
 
 all.csv: $(wildcard results.*)

@@ -1,1 +1,1 @@
-(define (this-scheme-implementation-name) "tr7")
+(define (this-scheme-implementation-name) "tr7-unknown")

@@ -1,6 +1,3 @@
-(define (jiffies-per-second) 1)
-(define (current-jiffy) 0)
-(define (current-second) 0)
 (define (call-with-values thunk receiver)
   (let ((values (thunk)))
     (apply receiver values)))
@@ -13,3 +10,17 @@
 (define (flush-output-port x) x)
 (define inexact exact->inexact)
 (define exact inexact->exact)
+(define (exact-integer? n) (and (exact? n) (integer? n)))
+;; TinyScheme has no way to tell time, so read /proc/uptime. Because there are two functions,
+;; current-jiffy and current-second, we have to *cache* the time. We rely on the fact that
+;; current-jiffy is only ever called *after* current-second has been called before :-/
+(define *current-jiffy* 0)
+(define (jiffies-per-second) 100)
+(define (current-second)
+  (let ((ut (uptime)))
+    (set! *current-jiffy* (inexact->exact (truncate (* ut 100))))
+    (inexact->exact (truncate ut))))
+(define (current-jiffy)
+  *current-jiffy*)
+(define (uptime)
+  (with-input-from-file "/proc/uptime" read))

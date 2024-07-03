@@ -6,3 +6,5 @@
             (string-append (car parts) "-" (cadr parts))
             (car parts))))
     (string-append "gerbil-" version)))
+(define (main)
+  (run-benchmark))

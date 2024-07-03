@@ -1,5 +1,5 @@
 ;;;; kindly provided by mgubi (https://github.com/ecraven/r7rs-benchmarks/issues/55)
-(define (this-scheme-implementation-name) "s7")
+(define (this-scheme-implementation-name) (string-append "s7-" (number->string (*s7* 'major-version)) "." (number->string (*s7* 'minor-version))))
 (define exact-integer? integer?)
 (define (exact-integer-sqrt i) (let ((sq (floor (sqrt i)))) (values sq (- i (* sq sq)))))
 (define inexact exact->inexact)
@@ -63,8 +63,8 @@
        (define (,? ,obj)
          (and (let? ,obj)
               (eq? (let-ref ,obj 'type) ',type)))
-       
-       (define ,make 
+
+       (define ,make
          (inlet 'type ',type ,@args))
 
        ,@(map

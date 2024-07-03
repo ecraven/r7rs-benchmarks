@@ -79,7 +79,8 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone femtolisp foment gambitc gauche gerbil guile ironscheme kawa larceny loko mit owllisp petite picrin racket rhizome rscheme s7 s9fes sagittarius scheme48 stklos tr7 vicare ypsilon"
+ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone femtolisp gambitc gauche guile ironscheme kawa larceny loko mit mosh petite-chez picrin racket s7 s9fes sagittarius tinyscheme tr7 ypsilon" # foment gerbil owllisp rhizome rscheme scheme48 stklos vicare
+# tinyscheme has no way to keep time, so there's no way to *measure* runtime...
 ################################################################
 
 NB_RUNS=1
@@ -131,7 +132,7 @@ setup ()
     MOSH=${MOSH:-"mosh-scheme"}
     OL=${OL:-"ol"}
     PETIT=${PETIT:-"../../../../PetitGit/larceny"}
-    PETITE=${PETITE:-"petite"}
+    PETITE_CHEZ=${PETITE_CHEZ:-"petite"}
     PICRIN=${PICRIN:-"picrin"}
     RACKET=${RACKET:-"racket"}
     RACKET_RACO=${RACKET_RACO:-"raco"}
@@ -185,7 +186,7 @@ Usage: bench [-r runs] <system> <benchmark>
   mosh             for Mosh
   owllisp          for Owl-Lisp
   petit            for Petit Larceny
-  petite           for Petite Chez
+  petite-chez      for Petite Chez
   picrin           for Picrin
   racket           for Racket
   rhizome          for Rhizome
@@ -683,16 +684,16 @@ chez_exec ()
 # -----------------------------------------------------------------------------
 # Definitions specific to Petite Chez
 
-petite_comp ()
+petite_chez_comp ()
 {
     :
 }
 
-petite_exec ()
+petite_chez_exec ()
 {
     # remove import statement
     sed -i -e 's/^(import (scheme.*)$//g' $1
-    time "${PETITE}" --program "$1" < "$2"
+    time "${PETITE_CHEZ}" --program "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -784,7 +785,7 @@ gauche_exec ()
 gerbil_comp ()
 {
     sed -i -e 's/^(run-benchmark)$//' $1
-    ${GERBIL} -d $(dirname "$1") -exe -O -prelude "(declare (not safe))" -o "${1%.scm}.exe" "$1"
+    ${GERBIL} -d $(dirname "$1") -exe -O -o "${1%.scm}.exe" "$1"
 }
 
 gerbil_exec ()
@@ -798,9 +799,9 @@ gerbil_exec ()
 
 # I could not get huskc to work:
 #
-# % ./huskc /tmp/larcenous/fib.scm
+# % ./huskc /tmp/r7rs-benchmarks/fib.scm
 #
-# /tmp/larcenous/fib.hs:14:8:
+# /tmp/r7rs-benchmarks/fib.hs:14:8:
 #     Could not find module `Language.Scheme.Variables'
 #     Use -v to see a list of the files searched for.
 
@@ -839,6 +840,7 @@ mosh_comp ()
 
 mosh_exec ()
 {
+    sed -i 's/(scheme time)/(only (scheme time) current-jiffy current-second)/' "$1"
     time "${MOSH}" "$1" < "$2"
 }
 
@@ -1182,15 +1184,15 @@ for system in $systems ; do
               EXECCOMMANDS=""
               ;;
 
-        petite) NAME='Petite'
-                COMP=petite_comp
-                EXEC=petite_exec
-                COMPOPTS=""
-                EXTENSION="scm"
-                EXTENSIONCOMP="scm"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
-                ;;
+        petite-chez) NAME='Petite-Chez'
+                     COMP=petite_chez_comp
+                     EXEC=petite_chez_exec
+                     COMPOPTS=""
+                     EXTENSION="scm"
+                     EXTENSIONCOMP="scm"
+                     COMPCOMMANDS=""
+                     EXECCOMMANDS=""
+                     ;;
 
         gambitc) NAME='GambitC'
                  COMP=gambitc_comp
@@ -1342,7 +1344,7 @@ for system in $systems ; do
         echo '****************************'
         echo Benchmarking ${NAME} on `date` under `uname -a`
     } >> results.${NAME}
-    TEMP="/tmp/larcenous/${NAME}"
+    TEMP="/tmp/r7rs-benchmarks/${NAME}"
     mkdir -p "${TEMP}" 2> /dev/null
 
     for program in $benchmarks ; do

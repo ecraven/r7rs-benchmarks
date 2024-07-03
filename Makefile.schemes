@@ -1,6 +1,14 @@
-all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.ChickenCSI results.GambitC results.Gauche results.Guile results.Loko results.MIT results.Petite results.Racket results.S7 results.S9fES results.Cyclone results.Owl-Lisp results.Stalin results.Ypsilon results.Mosh results.Picrin results.TR7
-# results.Foment results.IronScheme results.Sagittarius results.Scheme48  results.Femtolisp  results.Kawa results.TinyScheme 
-# results.Gerbil results.SISC   results.Vicare results.RScheme results.Larceny results.Rhizome
+all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.ChickenCSI results.Cyclone results.Femtolisp results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.Loko results.MIT results.Mosh results.Petite-Chez results.Picrin results.Racket results.S7 results.S9fES results.Sagittarius results.Stalin results.TinyScheme results.TR7 results.Ypsilon
+
+## not sure this can be made to work, it doesn't have read, begin, ...
+# results.Owl-Lisp
+## not packaged
+# results.Foment
+## does not build correctly
+#  results.Scheme48
+# results.Gerbil results.SISC results.Vicare results.RScheme results.Rhizome
+## missing
+# stklos
 
 results.TR7:
 	./bench tr7 all
@@ -74,8 +82,8 @@ results.Mosh:
 results.Owl-Lisp:
 	./bench owllisp all
 
-results.Petite:
-	./bench petite all
+results.Petite-Chez:
+	./bench petite-chez all
 
 results.Picrin:
 	./bench picrin all
@@ -141,7 +149,7 @@ mit: results.MIT
 
 mosh: results.Mosh
 
-petite: results.Petite
+petite-chez: results.Petite-Chez
 
 picrin: results.Picrin
 
