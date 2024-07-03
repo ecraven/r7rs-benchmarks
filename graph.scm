@@ -435,8 +435,8 @@
 (define (format-tables)
   `(div (@ (class "speed-rank"))
         (h3 "Detailed results")
-        (p "When showing " (emph "ranks") ", 1 is fastest.")
-        (p "When showing " (emph "percentages") ", 100% is the slowest implementation.")
+        (p "When showing " (strong "ranks") ", 1 is fastest.")
+        (p "When showing " (strong "percentages") ", 100% is the slowest implementation.")
         (button (@ (id "rankpercent"))
                 "Show Percentages")
         (table (thead (tr (th (@ (class "name")) "Test")
@@ -535,7 +535,7 @@ document.getElementById(\"rankpercent\").onclick = function(e) {
   color: #aaaaaa;
 }
 th.name {
-  width: 7em;
+  width: 8em;
   height: 5em;
 }
 div.scheme {
@@ -562,25 +562,19 @@ table {
 .sep {
   color: #666;
 }
-.warning {
-  background-color: #ddd;
-  border: 1px solid black;
-  padding: 1em;
-}
-.warning > h3 {
-  margin-top: 0;
-}
 </style>
 </head>
 <body>
-<h3>Scheme Benchmarks</h3>
+<h2>Scheme Benchmarks</h3>
 <p>Based on the <a href=\"http://www.larcenists.org/benchmarksGenuineR6Linux.html\">Larceny benchmarks</a>. Code on <a href=\"http://www.github.com/ecraven/r7rs-benchmarks\">GitHub</a></p>
-<div class=\"warning\">
+<p>Tests were run on an Intel(R) Core(TM) i3-N305 CPU @ 3.8GHz with 48GB of RAM by using the Arch Linux packages. No guarantees for any of the numbers. <a href=\"all.csv\">CSV raw data</a></p>
+<p><small>Generated at ~a, <a href=\"mailto:r7rs-benchmarks@nexoid.at\">e-mail</a></small></p>
 <h3>SAFE vs. UNSAFE optimizations</h3>
 <p>The benchmark results on this page are collected in <em>safe</em> mode. This means various optimisations are turned <em>off</em> for each implementation. If you need code to run as fast as possible, look into that, the Readme on <a href=\"http://www.github.com/ecraven/r7rs-benchmarks\">GitHub</a> contains a few pointers for the different implementations.</p>
 <p>Feel free to run the benchmarks yourself <em>without</em> safety turned on. You'll probably need to modify the <code>bench</code> file for that.</p>
-</div>
-<p>Tests were run on an Intel(R) Core(TM) i3-N305 CPU @ 3.8GHz with 48GB of RAM by using the Arch Linux packages. No guarantees for any of the numbers. <a href=\"all.csv\">CSV raw data</a></p>
+<h3>Actual R7RS Support</h3>
+<p>Many of these implementations do <strong>not</strong> fully implement R7RS, but instead there is a bit of \"shim\" code. You can find this by looking at <code>src/&lt;Name&gt;-prelude.scm</code> and <code>src/&lt;Name&gt;-postlude.scm</code>, to see which changes are necessary. Some changes are also made by the <code>bench</code> script, especially relating to <code>import</code>s.</p>
+<p>However, all of these implementations are \"close enough\" to R7RS to run a non-trivial amount of code.</p>
 <style>
 p { margin: 0; }
 div.testrun {
@@ -633,7 +627,8 @@ margin-right: 1em;
 .rank8 { background-color: ~a; }
 .rank9 { background-color: ~a; }
 
-</style><p><small>Generated at ~a, <a href=\"mailto:r7rs-benchmarks@nexoid.at\">e-mail</a></small></p>"
+</style>"
+          (format-date (time-utc->date (current-time)))
           (list-ref rank-colors 0)
           (list-ref rank-colors 1)
           (list-ref rank-colors 2)
@@ -642,8 +637,7 @@ margin-right: 1em;
           (list-ref rank-colors 5)
           (list-ref rank-colors 6)
           (list-ref rank-colors 7)
-          (list-ref rank-colors 8)
-          (format-date (time-utc->date (current-time))))
+          (list-ref rank-colors 8))
   (sxml->xml (format-ranks tests-ranks) #f #f)
   (sxml->xml (format-finished tests-finished) #f #f)
   (sxml->xml (format-tables) #f #f)

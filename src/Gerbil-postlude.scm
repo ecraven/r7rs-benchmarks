@@ -5,6 +5,6 @@
           (if (> (length parts) 1) ; it's a dev version
             (string-append (car parts) "-" (cadr parts))
             (car parts))))
-    (string-append "gerbil-" version)))
+    (string-append "gerbil-" version "+gambitc")))
 (define (main)
   (run-benchmark))

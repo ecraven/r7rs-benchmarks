@@ -79,8 +79,8 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone femtolisp gambitc gauche guile ironscheme kawa larceny loko mit mosh petite-chez picrin racket s7 s9fes sagittarius tinyscheme tr7 ypsilon" # foment gerbil owllisp rhizome rscheme scheme48 stklos vicare
-# tinyscheme has no way to keep time, so there's no way to *measure* runtime...
+ALL_SYSTEMS="bigloo bones chez chibi chicken chickencsi cyclone femtolisp gambitc gauche gerbil guile ironscheme kawa larceny loko mit mosh petite-chez picrin racket s7 s9fes sagittarius stklos tr7 ypsilon" # tinyscheme seems to run out of memory or time on *every* benchmark :-/
+# foment owllisp rhizome rscheme scheme48 vicare
 ################################################################
 
 NB_RUNS=1
@@ -118,7 +118,7 @@ setup ()
     FOMENT=${FOMENT:-"foment"}
     GAMBITC=${GAMBITC:-"gambitc"}
     GAUCHE=${GAUCHE:-"gosh"}
-    GERBIL=${GERBIL:-"gxc"}
+    GXC=${GXC:-"gxc"}
     GUILD=${GUILD:-"guild"}
     GUILE=${GUILE:-"guile"}
     HUSKI=${HUSKI:-"huski"}
@@ -785,12 +785,12 @@ gauche_exec ()
 gerbil_comp ()
 {
     sed -i -e 's/^(run-benchmark)$//' $1
-    ${GERBIL} -d $(dirname "$1") -exe -O -o "${1%.scm}.exe" "$1"
+    ${GXC} -d $(dirname "$1") -exe -O -o "${1%.scm}.exe" "$1"
 }
 
 gerbil_exec ()
 {
-    export GERBIL_HOME=/opt/gerbil-scheme-git/
+    export GERBIL_HOME=/opt/gerbil/
     time "$1" < "$2"
 }
 

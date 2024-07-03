@@ -1,14 +1,16 @@
-all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.ChickenCSI results.Cyclone results.Femtolisp results.GambitC results.Gauche results.Guile results.IronScheme results.Kawa results.Larceny results.Loko results.MIT results.Mosh results.Petite-Chez results.Picrin results.Racket results.S7 results.S9fES results.Sagittarius results.Stalin results.TinyScheme results.TR7 results.Ypsilon
-
+all: results.Bigloo results.Bones results.Chez results.Chibi results.Chicken results.ChickenCSI results.Cyclone results.Femtolisp results.GambitC results.Gauche results.Gerbil results.Guile results.IronScheme results.Kawa results.Larceny results.Loko results.MIT results.Mosh results.Petite-Chez results.Picrin results.Racket results.S7 results.S9fES results.Sagittarius results.Stalin results.STklos results.TR7 results.Ypsilon
+## too slow / too little memory
+# results.TinyScheme
 ## not sure this can be made to work, it doesn't have read, begin, ...
 # results.Owl-Lisp
 ## not packaged
 # results.Foment
 ## does not build correctly
 #  results.Scheme48
-# results.Gerbil results.SISC results.Vicare results.RScheme results.Rhizome
-## missing
-# stklos
+# results.SISC results.Vicare results.RScheme results.Rhizome
+
+results.STklos:
+	./bench stklos all
 
 results.TR7:
 	./bench tr7 all
@@ -186,3 +188,5 @@ sisc: results.SISC
 owllisp: results.Owl-Lisp
 
 tr7: results.TR7
+
+stklos: results.STklos

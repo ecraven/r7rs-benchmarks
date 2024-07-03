@@ -4,4 +4,4 @@
      #t)))
 
 (define (this-scheme-implementation-name)
-  "stklos")
+  (string-append "stklos-" (version)))
