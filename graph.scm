@@ -33,7 +33,7 @@
 (define-description "takl" "Gabriel" "The tak:32:16:8 benchmark using lists to represent integers, a Gabriel benchmark (with different arguments), 2 iterations.")
 (define-description "ntakl" "Gabriel" "The takl benchmark contains a peculiar boolean expression. Rewriting that expression into a more readable idiom allows some compilers to generate better code for it.")
 (define-description "cpstak" "Gabriel" "The tak:32:16:8 benchmark in continuation-passing style, 5 iterations. A test of closure creation.")
-(define-description "ctak" "Gabriel" "The tak:32:16:8 benchmark in continuation-capturing style, 1 iteration. A test of call-with-current-continuation. [Larceny's code for call-with-current-continuation is now written in C, and most of its time on this benchmark is spent crossing the Scheme/C barrier.]")
+(define-description "ctak" "Gabriel" "The tak:32:16:8 benchmark in continuation-capturing style, 1 iteration. A test of call-with-current-continuation.")
 
 (define-description "fib" "Numeric" "Doubly recursive computation of the 40th fibonacci number (102334155), using (< n 2) to terminate the recursion; 1 iteration.")
 (define-description "fibc" "Numeric" "A version of fib that uses first class continuations; written by Kent Dybvig. Calculates the 30th Fibonacci number (832040) 10 times.")
@@ -61,7 +61,7 @@
 (define-description "read3" "Input/Output" "Reads nboyer.sch 2500 times using UTF-16 transcoding.")
 (define-description "bibfreq" "Others" "Uses eq? hashtables to find the words that occur most frequently in the King James Bible.")
 (define-description "bibfreq2" "Others" "Uses symbol-hash hashtables to find the words that occur most frequently in the King James Bible.")
-(define-description "compiler" "Others" "A compiler kernel that looks as though it was written by Marc Feeley. 1000 iterations on a 47-line input. [Although Larceny/IA32 is able to run this benchmark, Larceny/SPARC cannot compile it due to its assumption that stack frames are smaller than 4096 bytes.]")
+(define-description "compiler" "Others" "A compiler kernel that looks as though it was written by Marc Feeley. 1000 iterations on a 47-line input.")
 (define-description "conform" "Others" "A type checker written by Jim Miller, 200 iterations.")
 (define-description "dynamic" "Others" "Dynamic type inference, self-applied, 200 iterations. Written by Fritz Henglein. A real program.")
 (define-description "earley" "Others" "Earley's parsing algorithm, parsing a 15-symbol input according to one of the simplest ambiguous grammars, 1 iteration. A real program, applied to toy data whose exponential behavior leads to a peak heap size of half a gigabyte or more.")
