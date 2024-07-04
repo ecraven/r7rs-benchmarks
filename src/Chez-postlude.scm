@@ -17,4 +17,5 @@
                                               (number->string b)
                                               "."
                                               (number->string c))))
-                            "-" threads bits "+r7rs")))
+                   ;; "-" threads bits
+                   "+r7rs")))
