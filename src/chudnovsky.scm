@@ -2,7 +2,7 @@
 ;;; the Chudnovsky brothers algorithm; see
 ;;; http://www.craig-wood.com/nick/articles/pi-chudnovsky/
 
-(import (scheme base) (scheme cxr) (scheme char) (scheme read) (scheme write) (scheme time))
+(import (scheme base) (scheme cxr) (scheme read) (scheme write) (scheme time))
 
 (define ch-A 13591409)
 (define ch-B 545140134)
