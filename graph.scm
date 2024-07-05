@@ -8,93 +8,93 @@
 (define (sort list predicate)
   (%sort predicate list))
 (define html-nl "&#10;")
-(define *descriptions* (make-hash-table))
-(define-record-type :description
-  (make-description name type description tags)
-  description?
-  (name description-name)
-  (type description-type)
-  (description description-description)
-  (tags description-tags))
-(define (define-description name type description . tags)
-  (hash-table-set! *descriptions* name (make-description name type description tags)))
-;;(define-description "total-accumulated-runtime" "Stats" "The total accumulated runtime of all tests that all Schemes finished.")
-(define-description "times-faster-than-any-other" "Stats" "The number of times an implementation was the fastest of all on a test.")
-(define-description "tests-finished" "Stats" "The number of tests an implementation has finished successfully.")
-(define-description "browse" "Gabriel" "Browsing a data base, a Gabriel benchmark, 1000 iterations. [May be a test of string->symbol and/or symbol->string.]")
-(define-description "deriv" "Gabriel" "Symbolic differentiation, a Gabriel benchmark, ten million iterations.")
-(define-description "dderiv" "Gabriel" "Table-driven symbolic differentiation, a Gabriel benchmark, ten million iterations. Uses hashtables and association lists instead of the original benchmark's property lists.")
-(define-description "destruc" "Gabriel" "Destructive list operations, a Gabriel benchmark, 1000 iterations of a 600x50 problem." 'destructive-list-operations)
-(define-description "diviter" "Gabriel" "Divides 1000 by 2 using lists as a unary notation for integers, a Gabriel benchmark, one million iterations. This benchmark tests null?, cons, car, cdr, and little else." 'list-operations)
-(define-description "divrec" "Gabriel" "This benchmark is the same as diviter except it uses deep recursion instead of iteration.")
-(define-description "puzzle" "Gabriel" "Combinatorial search of a state space, a Gabriel benchmark, 500 iterations. A test of arrays and classical compiler optimizations. This benchmark was originally written in Pascal by Forrest Baskett.")
-(define-description "triangl" "Gabriel" "Another combinatorial search similar to puzzle, a Gabriel benchmark, 50 iterations.")
-(define-description "tak" "Gabriel" "A triply recursive integer function related to the Takeuchi function, a Gabriel benchmark. 10 iterations of (tak 32 16 8). A test of non-tail calls and arithmetic. [Historical note: The Symbolics 3600 performed 1 iteration of (tak 18 12 6) in 0.43 seconds using generic arithmetic. On our test machine, Larceny runs that benchmark in 0.00016 seconds. That's 2500 times as fast.]")
-(define-description "takl" "Gabriel" "The tak:32:16:8 benchmark using lists to represent integers, a Gabriel benchmark (with different arguments), 2 iterations.")
-(define-description "ntakl" "Gabriel" "The takl benchmark contains a peculiar boolean expression. Rewriting that expression into a more readable idiom allows some compilers to generate better code for it.")
-(define-description "cpstak" "Gabriel" "The tak:32:16:8 benchmark in continuation-passing style, 5 iterations. A test of closure creation.")
-(define-description "ctak" "Gabriel" "The tak:32:16:8 benchmark in continuation-capturing style, 1 iteration. A test of call-with-current-continuation.")
+(define *benchmarks* (make-hash-table))
+(define-record-type :benchmark
+  (make-benchmark name type description tags)
+  benchmark?
+  (name benchmark-name)
+  (type benchmark-type)
+  (description benchmark-description)
+  (tags benchmark-tags))
+(define (define-benchmark name type description . tags)
+  (hash-table-set! *benchmarks* name (make-benchmark name type description tags)))
+;;(define-benchmark "total-accumulated-runtime" "Stats" "The total accumulated runtime of all tests that all Schemes finished.")
 
-(define-description "fib" "Numeric" "Doubly recursive computation of the 40th fibonacci number (102334155), using (< n 2) to terminate the recursion; 1 iteration.")
-(define-description "fibc" "Numeric" "A version of fib that uses first class continuations; written by Kent Dybvig. Calculates the 30th Fibonacci number (832040) 10 times.")
-(define-description "fibfp" "Numeric" "Calculation of the 35th Fibonacci number using inexact numbers; 10 iterations. A test of floating point arithmetic. Uses essentially the same code as the fib benchmark.")
-(define-description "sum" "Numeric" "Sums the integers from 0 to 10000, 100000 iterations.")
-(define-description "sumfp" "Numeric" "Sums the integers from 0 to 1e6, 250 iterations. A test of floating point arithmetic. Uses essentially the same code as the sum benchmark.")
-(define-description "fft" "Numeric" "Fast Fourier Transform on 65536 real-valued points, 50 iterations. A test of floating point arithmetic.")
-(define-description "mbrot" "Numeric" "Generation of a Mandelbrot set, 1000 iterations on a problem of size 75. A test of floating point arithmetic on reals.")
-(define-description "mbrotZ" "Numeric" "Same as the mbrot benchmark, but using complex instead of real arithmetic.")
-(define-description "mbrot" "Numeric" "Generation of a Mandelbrot set, 1000 iterations on a problem of size 75. A test of floating point arithmetic.")
-(define-description "nucleic" "Numeric" "Determination of a nucleic acid's spatial structure, 50 iterations. A test of floating point arithmetic, and a real program.")
-(define-description "pnpoly" "Numeric" "Testing to see whether a point is contained within a 2-dimensional polygon, 500000 iterations (with 12 tests per iteration). A test of floating point arithmetic.")
-(define-description "ack" "Kernighan-Van-Wyk" "A version of the Ackermann function, with arguments 3,12. One iteration.")
-(define-description "array1" "Kernighan-Van-Wyk" "This benchmark allocates, initializes, and copies some fairly large one-dimensional arrays. 100 iterations on a problem size of one million.")
-(define-description "string" "Kernighan-Van-Wyk" "This tests string-append and substring, and very little else. 10 iterations on a problem size of 500000.")
-(define-description "sum1" "Kernighan-Van-Wyk" "This benchmark reads and sums 100,000 floating point numbers ten times. It is primarily a test of floating point input.")
-(define-description "cat" "Kernighan-Van-Wyk" "This file-copying benchmark is a simple test of character I/O. It copies the King James Bible 25 times.")
-(define-description "cat2" "Kernighan-Van-Wyk" "Same as cat except it uses UTF-8 transcoding instead of Latin-1.")
-(define-description "cat3" "Kernighan-Van-Wyk" "Same as cat except it uses UTF-16 transcoding instead of Latin-1.")
-(define-description "tail" "Kernighan-Van-Wyk" "This benchmark performs considerable character i/o. It prints the King James Bible verse by verse, in reverse order of the verses, ten times.")
-(define-description "wc" "Kernighan-Van-Wyk" "Another character i/o benchmark. It counts the number of words in the King James Bible 25 times.")
-(define-description "read0" "Input/Output" "This synthetic benchmark tests the read procedure on all 1-character inputs and on all 2-character inputs that begin with #\a. Since most such inputs are illegal, this is largely a test of R6RS exception handling.")
-(define-description "read1" "Input/Output" "Reads nboyer.sch 2500 times using Latin-1 transcoding.")
-(define-description "read2" "Input/Output" "Reads nboyer.sch 2500 times using UTF-8 transcoding.")
-(define-description "read3" "Input/Output" "Reads nboyer.sch 2500 times using UTF-16 transcoding.")
-(define-description "bibfreq" "Others" "Uses eq? hashtables to find the words that occur most frequently in the King James Bible.")
-(define-description "bibfreq2" "Others" "Uses symbol-hash hashtables to find the words that occur most frequently in the King James Bible.")
-(define-description "compiler" "Others" "A compiler kernel that looks as though it was written by Marc Feeley. 1000 iterations on a 47-line input.")
-(define-description "conform" "Others" "A type checker written by Jim Miller, 200 iterations.")
-(define-description "dynamic" "Others" "Dynamic type inference, self-applied, 200 iterations. Written by Fritz Henglein. A real program.")
-(define-description "earley" "Others" "Earley's parsing algorithm, parsing a 15-symbol input according to one of the simplest ambiguous grammars, 1 iteration. A real program, applied to toy data whose exponential behavior leads to a peak heap size of half a gigabyte or more.")
-(define-description "graphs" "Others" "This program was provided by Andrew Wright, but we don't know much about it, and would appreciate more information. This higher order program creates closures almost as often as it performs non-tail procedure calls. One iteration on a problem of size 7.")
-(define-description "lattice" "Others" "Another program that was provided by Andrew Wright, though it may have been written by Jim Miller. It enumerates the order-preserving maps between finite lattices. 10 iterations.")
-(define-description "matrix" "Others" "Another program that was provided by Andrew Wright. Computes maximal matrices; similar to some puzzle programs. 1000 iterations on a problem of size 5.")
-(define-description "maze" "Others" "Constructs a maze on a hexagonal grid, 5000 iterations. Written by Olin Shivers.")
-(define-description "mazefun" "Others" "Constructs a maze on a rectangular grid using purely functional style, 5000 iterations on a problem of size 11. Written by Marc Feeley.")
-(define-description "nqueens" "Others" "Computes the number of solutions to the 13-queens problem, 10 times.")
-(define-description "paraffins" "Others" "Computes the number of paraffins that have 23 carbon atoms, 5 times.")
-(define-description "parsing" "Others" "Parses the nboyer benchmark 1000 times using a scanner and parser generated using Will Clinger's LexGen and ParseGen.")
-(define-description "peval" "Others" "Partial evaluation of Scheme code, 1000 iterations. Written by Marc Feeley.")
-(define-description "pi" "Others" "A bignum-intensive benchmark that calculates digits of pi.")
-(define-description "primes" "Others" "Computes the primes less than 1000, 5000 times, using a list-based Sieve of Eratosthenes. Written by Eric Mohr.")
-(define-description "quicksort" "Others" "This is a quicksort benchmark. (That isn't as obvious as it sounds. The quicksort benchmark distributed with Gambit is a bignum benchmark, not a quicksort benchmark. See the comments in the code.) Sorts a vector of 10000 random integers 2500 times. Written by Lars Hansen, and restored to its original glory by Will Clinger.")
-(define-description "ray" "Others" "Ray tracing a simple scene, 20 iterations. A test of floating point arithmetic. This program is translated from the Common Lisp code in Example 9.8 of Paul Graham's book on ANSI Common Lisp.")
-(define-description "scheme" "Others" "A Scheme interpreter evaluating a merge sort of 30 strings, 100000 iterations. Written by Marc Feeley.")
-(define-description "simplex" "Others" "Simplex algorithm, one million iterations. A test of floating point arithmetic, and a real program.")
-(define-description "slatex" "Others" "Scheme to LaTeX processor, 100 iterations. A test of file i/o and probably much else. Part of a real program written by Dorai Sitaram.")
-(define-description "nboyer" "Garbage Collection" "An updated and exponentially scalable version of the boyer benchmark. The nboyer benchmark's data structures are considerably more appropriate than the data structures used in the boyer benchmarks. These timings are for 1 iteration on a problem of size 4. A test of lists, vectors, and garbage collection.")
-(define-description "sboyer" "Garbage Collection" "A version of nboyer that has been tuned (by Henry Baker) to reduce storage allocation, making it less of a garbage collection benchmark and more of a compiler benchmark. Only 4 lines of code were changed, and another 7 lines of code were added. These timings are for 1 iteration on a problem of size 5.")
-(define-description "gcbench" "Garbage Collection" "This program was written to mimic the phase structure that has been conjectured for a class of application programs for which garbage collection may represent a significant fraction of the execution time. This benchmark warms up by allocating and then dropping a large binary tree. Then it allocates a large permanent tree and a permanent array of floating point numbers. Then it allocates considerable tree storage in seven phases, increasing the tree size in each phase but keeping the total storage allocation approximately the same for each phase. Each phase is divided into two subphases. The first subphase allocates trees top-down using side effects, while the second subphase allocates trees bottom-up without using side effects. This benchmark was written in Java by John Ellis and Pete Kovac, modified by Hans Boehm, and translated into Scheme, Standard ML, C++, and C by William Clinger. The timings shown are for 1 iteration on problem size 20.")
-(define-description "mperm" "Garbage Collection" "The mperm20:9:2:1 benchmark is a severe test of storage allocation and garbage collection. At the end of each of the 20 iterations, the oldest half of the live storage becomes garbage. This benchmark is particularly difficult for generational garbage collectors, since it violates their assumption that young objects have a shorter future life expectancy than older objects. The perm9 benchmark distributed with Gambit does not have that property.")
-(define-description "gcold" "Garbage Collection" "A synthetic garbage collection benchmark written by David Detlefs and translated to Scheme by Will Clinger and Lars Hansen.")
-(define-description "equal" "R6RS" "This benchmark tests the R6RS equal? predicate on some fairly large structures of various shapes.")
-(define-description "normalization" "R6RS" "This benchmark runs all of the Unicode 5.0.0 tests of string normalization.")
-(define-description "bv2string" "R6RS" "This benchmark tests conversions between bytevectors and Unicode.")
-(define-description "listsort" "R6RS" "This benchmark tests the list-sort procedure. Otherwise it is the same as the vecsort benchmark.")
-(define-description "vecsort" "R6RS" "This benchmark tests the vector-sort procedure. Otherwise it is the same as the listsort benchmark.")
-(define-description "hashtable0" "R6RS" "This is a synthetic benchmark designed to stress hashtables.")
+(define-benchmark "ack" "Kernighan-Van-Wyk" "A version of the Ackermann function, with arguments 3,12. One iteration." 'integers 'funcalls)
+(define-benchmark "array1" "Kernighan-Van-Wyk" "This benchmark allocates, initializes, and copies some fairly large one-dimensional arrays. 100 iterations on a problem size of one million." 'vectors)
+(define-benchmark "bibfreq" "Others" "Uses eq? hashtables to find the words that occur most frequently in the King James Bible.")
+(define-benchmark "bibfreq2" "Others" "Uses symbol-hash hashtables to find the words that occur most frequently in the King James Bible.")
+(define-benchmark "browse" "Gabriel" "Browsing a data base, a Gabriel benchmark, 1000 iterations. [May be a test of string->symbol and/or symbol->string.]" 'lists 'symbols)
+(define-benchmark "bv2string" "R6RS" "This benchmark tests conversions between bytevectors and Unicode." 'bytevectors)
+(define-benchmark "cat" "Kernighan-Van-Wyk" "This file-copying benchmark is a simple test of character I/O. It copies the King James Bible 25 times." 'io)
+(define-benchmark "cat2" "Kernighan-Van-Wyk" "Same as cat except it uses UTF-8 transcoding instead of Latin-1.")
+(define-benchmark "cat3" "Kernighan-Van-Wyk" "Same as cat except it uses UTF-16 transcoding instead of Latin-1.")
+(define-benchmark "chudnovsky" "Others" "Compute digits of PI using a straightforward implementation of the Chudnovsky brothers algorithm (see http://www.craig-wood.com/nick/articles/pi-chudnovsky/)." 'integers)
+(define-benchmark "compiler" "Others" "A compiler kernel that looks as though it was written by Marc Feeley. 1000 iterations on a 47-line input." 'program)
+(define-benchmark "conform" "Others" "A type checker written by Jim Miller, 200 iterations." 'lists 'vectors)
+(define-benchmark "cpstak" "Gabriel" "The tak:32:16:8 benchmark in continuation-passing style, 5 iterations. A test of closure creation." 'funcalls 'tailrec 'closures)
+(define-benchmark "ctak" "Gabriel" "The tak:32:16:8 benchmark in continuation-capturing style, 1 iteration. A test of call-with-current-continuation." 'continuations)
+(define-benchmark "dderiv" "Gabriel" "Table-driven symbolic differentiation, a Gabriel benchmark, ten million iterations. Uses association lists instead of the original benchmark's property lists." 'lists)
+(define-benchmark "deriv" "Gabriel" "Symbolic differentiation, a Gabriel benchmark, ten million iterations.")
+(define-benchmark "destruc" "Gabriel" "Destructive list operations, a Gabriel benchmark, 1000 iterations of a 600x50 problem." 'lists)
+(define-benchmark "diviter" "Gabriel" "Divides 1000 by 2 using lists as a unary notation for integers, a Gabriel benchmark, one million iterations. This benchmark tests null?, cons, car, cdr, and little else." 'lists)
+(define-benchmark "divrec" "Gabriel" "This benchmark is the same as diviter except it uses deep recursion instead of iteration." 'lists 'tailrec)
+(define-benchmark "dynamic" "Others" "Dynamic type inference, self-applied, 200 iterations. Written by Fritz Henglein. A real program." 'program)
+(define-benchmark "earley" "Others" "Earley's parsing algorithm, parsing a 15-symbol input according to one of the simplest ambiguous grammars, 1 iteration. A real program, applied to toy data whose exponential behavior leads to a peak heap size of half a gigabyte or more." 'program)
+(define-benchmark "equal" "R6RS" "This benchmark tests the R6RS equal? predicate on some fairly large structures of various shapes." 'lists)
+(define-benchmark "fft" "Numeric" "Fast Fourier Transform on 65536 real-valued points, 50 iterations. A test of floating point arithmetic." 'floats)
+(define-benchmark "fib" "Numeric" "Doubly recursive computation of the 40th fibonacci number (102334155), using (< n 2) to terminate the recursion; 1 iteration." 'funcalls)
+(define-benchmark "fibc" "Numeric" "A version of fib that uses first class continuations; written by Kent Dybvig. Calculates the 30th Fibonacci number (832040) 10 times." 'continuations)
+(define-benchmark "fibfp" "Numeric" "Calculation of the 35th Fibonacci number using inexact numbers; 10 iterations. A test of floating point arithmetic. Uses essentially the same code as the fib benchmark." 'floats)
+(define-benchmark "gcbench" "Garbage Collection" "This program was written to mimic the phase structure that has been conjectured for a class of application programs for which garbage collection may represent a significant fraction of the execution time. This benchmark warms up by allocating and then dropping a large binary tree. Then it allocates a large permanent tree and a permanent array of floating point numbers. Then it allocates considerable tree storage in seven phases, increasing the tree size in each phase but keeping the total storage allocation approximately the same for each phase. Each phase is divided into two subphases. The first subphase allocates trees top-down using side effects, while the second subphase allocates trees bottom-up without using side effects. This benchmark was written in Java by John Ellis and Pete Kovac, modified by Hans Boehm, and translated into Scheme, Standard ML, C++, and C by William Clinger. The timings shown are for 1 iteration on problem size 20." 'program)
+(define-benchmark "gcold" "Garbage Collection" "A synthetic garbage collection benchmark written by David Detlefs and translated to Scheme by Will Clinger and Lars Hansen.")
+(define-benchmark "graphs" "Others" "This program was provided by Andrew Wright, but we don't know much about it, and would appreciate more information. This higher order program creates closures almost as often as it performs non-tail procedure calls. One iteration on a problem of size 7." 'closures 'funcalls)
+(define-benchmark "hashtable0" "R6RS" "This is a synthetic benchmark designed to stress hashtables.")
+(define-benchmark "lattice" "Others" "Another program that was provided by Andrew Wright, though it may have been written by Jim Miller. It enumerates the order-preserving maps between finite lattices. 10 iterations." 'lists)
+(define-benchmark "listsort" "R6RS" "This benchmark tests the list-sort procedure. Otherwise it is the same as the vecsort benchmark.")
+(define-benchmark "matrix" "Others" "Another program that was provided by Andrew Wright. Computes maximal matrices; similar to some puzzle programs. 1000 iterations on a problem of size 5." 'integers 'lists 'vectors)
+(define-benchmark "maze" "Others" "Constructs a maze on a hexagonal grid, 5000 iterations. Written by Olin Shivers." 'integers 'lists 'program)
+(define-benchmark "mazefun" "Others" "Constructs a maze on a rectangular grid using purely functional style, 5000 iterations on a problem of size 11. Written by Marc Feeley." 'funcalls 'lists)
+(define-benchmark "mbrot" "Numeric" "Generation of a Mandelbrot set, 1000 iterations on a problem of size 75. A test of floating point arithmetic on reals." 'floats)
+(define-benchmark "mbrotz" "Numeric" "Same as the mbrot benchmark, but using complex instead of real arithmetic." 'complexnums)
+(define-benchmark "mperm" "Garbage Collection" "The mperm20:9:2:1 benchmark is a severe test of storage allocation and garbage collection. At the end of each of the 20 iterations, the oldest half of the live storage becomes garbage. This benchmark is particularly difficult for generational garbage collectors, since it violates their assumption that young objects have a shorter future life expectancy than older objects. The perm9 benchmark distributed with Gambit does not have that property." 'gc 'lists)
+(define-benchmark "nboyer" "Garbage Collection" "An updated and exponentially scalable version of the boyer benchmark. The nboyer benchmark's data structures are considerably more appropriate than the data structures used in the boyer benchmarks. These timings are for 1 iteration on a problem of size 4. A test of lists, vectors, and garbage collection." 'gc 'lists 'vectors)
+(define-benchmark "normalization" "R6RS" "This benchmark runs all of the Unicode 5.0.0 tests of string normalization.")
+(define-benchmark "nqueens" "Others" "Computes the number of solutions to the 13-queens problem, 10 times." 'funcalls 'lists)
+(define-benchmark "ntakl" "Gabriel" "The takl benchmark contains a peculiar boolean expression. Rewriting that expression into a more readable idiom allows some compilers to generate better code for it." 'funcalls)
+(define-benchmark "nucleic" "Numeric" "Determination of a nucleic acid's spatial structure, 50 iterations. A test of floating point arithmetic, and a real program." 'program 'floats)
+(define-benchmark "paraffins" "Others" "Computes the number of paraffins that have 23 carbon atoms, 5 times." 'vectors 'lists)
+(define-benchmark "parsing" "Others" "Parses the nboyer benchmark 1000 times using a scanner and parser generated using Will Clinger's LexGen and ParseGen." 'program 'funcalls)
+(define-benchmark "peval" "Others" "Partial evaluation of Scheme code, 1000 iterations. Written by Marc Feeley." 'lists 'funcalls)
+(define-benchmark "pi" "Others" "A bignum-intensive benchmark that calculates digits of pi." 'integers)
+(define-benchmark "pnpoly" "Numeric" "Testing to see whether a point is contained within a 2-dimensional polygon, 500000 iterations (with 12 tests per iteration). A test of floating point arithmetic." 'floats)
+(define-benchmark "primes" "Others" "Computes the primes less than 1000, 5000 times, using a list-based Sieve of Eratosthenes. Written by Eric Mohr." 'lists)
+(define-benchmark "puzzle" "Gabriel" "Combinatorial search of a state space, a Gabriel benchmark, 500 iterations. A test of arrays and classical compiler optimizations. This benchmark was originally written in Pascal by Forrest Baskett." 'vectors 'funcalls)
+(define-benchmark "quicksort" "Others" "This is a quicksort benchmark. (That isn't as obvious as it sounds. The quicksort benchmark distributed with Gambit is a bignum benchmark, not a quicksort benchmark. See the comments in the code.) Sorts a vector of 10000 random integers 2500 times. Written by Lars Hansen, and restored to its original glory by Will Clinger." 'funcalls)
+(define-benchmark "ray" "Others" "Ray tracing a simple scene, 20 iterations. A test of floating point arithmetic. This program is translated from the Common Lisp code in Example 9.8 of Paul Graham's book on ANSI Common Lisp." 'floats 'vectors)
+(define-benchmark "read0" "Input/Output" "This synthetic benchmark tests the read procedure on all 1-character inputs and on all 2-character inputs that begin with #\a. Since most such inputs are illegal, this is largely a test of R6RS exception handling.")
+(define-benchmark "read1" "Input/Output" "Reads nboyer.sch 2500 times encoded as ASCII." 'io)
+;;(define-benchmark "read2" "Input/Output" "Reads nboyer.sch 2500 times using UTF-8 transcoding.")
+;;(define-benchmark "read3" "Input/Output" "Reads nboyer.sch 2500 times using UTF-16 transcoding.")
+(define-benchmark "sboyer" "Garbage Collection" "A version of nboyer that has been tuned (by Henry Baker) to reduce storage allocation, making it less of a garbage collection benchmark and more of a compiler benchmark. Only 4 lines of code were changed, and another 7 lines of code were added. These timings are for 1 iteration on a problem of size 5." 'lists 'vectors 'gc)
+(define-benchmark "scheme" "Others" "A Scheme interpreter evaluating a merge sort of 30 strings, 100000 iterations. Written by Marc Feeley." 'program)
+(define-benchmark "simplex" "Others" "Simplex algorithm, one million iterations. A test of floating point arithmetic, and a real program." 'floats 'program 'vectors)
+(define-benchmark "slatex" "Others" "Scheme to LaTeX processor, 100 iterations. A test of file i/o and probably much else. Part of a real program written by Dorai Sitaram." 'program 'io)
+(define-benchmark "string" "Kernighan-Van-Wyk" "This tests string-append and substring, and very little else. 10 iterations on a problem size of 500000." 'strings)
+(define-benchmark "sum" "Numeric" "Sums the integers from 0 to 10000, 100000 iterations." 'integers)
+(define-benchmark "sum1" "Kernighan-Van-Wyk" "This benchmark reads and sums 100,000 floating point numbers ten times. It is primarily a test of floating point input." 'floats 'io)
+(define-benchmark "sumfp" "Numeric" "Sums the integers from 0 to 1e6, 250 iterations. A test of floating point arithmetic. Uses essentially the same code as the sum benchmark." 'floats)
+(define-benchmark "tail" "Kernighan-Van-Wyk" "This benchmark performs considerable character i/o. It prints the King James Bible verse by verse, in reverse order of the verses, ten times." 'io)
+(define-benchmark "tak" "Gabriel" "A triply recursive integer function related to the Takeuchi function, a Gabriel benchmark. 10 iterations of (tak 32 16 8). A test of non-tail calls and arithmetic. [Historical note: The Symbolics 3600 performed 1 iteration of (tak 18 12 6) in 0.43 seconds using generic arithmetic. On our test machine, Larceny runs that benchmark in 0.00016 seconds. That's 2500 times as fast.]" 'funcalls)
+(define-benchmark "takl" "Gabriel" "The tak:32:16:8 benchmark using lists to represent integers, a Gabriel benchmark (with different arguments), 2 iterations." 'lists 'funcalls)
+(define-benchmark "tests-finished" "Stats" "The number of tests an implementation has finished successfully.")
+(define-benchmark "times-faster-than-any-other" "Stats" "The number of times an implementation was the fastest of all on a test.")
+(define-benchmark "triangl" "Gabriel" "Another combinatorial search similar to puzzle, a Gabriel benchmark, 50 iterations." 'lists 'vectors)
+(define-benchmark "vecsort" "R6RS" "This benchmark tests the vector-sort procedure. Otherwise it is the same as the listsort benchmark.")
+(define-benchmark "wc" "Kernighan-Van-Wyk" "Another character i/o benchmark. It counts the number of words in the King James Bible 25 times." 'io)
 
-(define (get-description name)
-  (hash-table-ref/default *descriptions* name (make-description name "" "no description" '())))
+(define (get-benchmark name)
+  (hash-table-ref/default *benchmarks* name (make-benchmark name "" "no description" '())))
 
 (define (read-data)
   (map (lambda (line) (let ((parts (burst-string line #\, #f)))
@@ -281,14 +281,15 @@
                      (if (zero? m) 1 m))))
     (if (null? runs)
         ""
-        (let* ((d (get-description (car (burst-string (symbol->string name) #\: #f))))
-               (name (description-name d))
-               (type (description-type d))
-               (description (description-description d))
+        (let* ((d (get-benchmark (car (burst-string (symbol->string name) #\: #f))))
+               (name (benchmark-name d))
+               (type (benchmark-type d))
+               (description (benchmark-description d))
+               (tags (benchmark-tags d))
                (fastest-runtime (second (car (sort runs (lambda (a b) (< (second a) (second b))))))))
           (when (zero? fastest-runtime)
             (error "fastest run is 0" test))
-          `(div (@ (class "testrun")) ;; (@ (style ,(string "width: 440px; height: " (* 25 (length schemes)) "px")))
+          `(div (@ (class "testrun") (id ,name)) ;; (@ (style ,(string "width: 440px; height: " (* 25 (length schemes)) "px")))
                 (h4 (@ (title ,description))
                     ,name
                     " ["
@@ -296,6 +297,9 @@
                     "] "
                     (span (@ (title ,description))
                           " (?)"))
+                ,@(if (null? tags)
+                      '()
+                      `((ul (@ (class "tags")) ,@(map (lambda (tag) `(li (a (@ (href "#")) ,tag))) tags))))
                 (svg (@ (class "chart")
                         (width ,(number->string width))
                         (height ,(* 22 (length runs))))
@@ -446,7 +450,7 @@
                                                           ,scheme))))
                                  schemes)))
                (tbody ,@(map (lambda (test)
-                               `(tr (td ,test)
+                               `(tr (td (a (@ (href ,(format #f "#~a" test))) ,test))
                                     ,@(map (lambda (scheme)
                                              (let ((state (scheme-test-state scheme test)))
                                                (if (number? state)
@@ -470,17 +474,19 @@
                                                                      ((compileerror) "error when compiling")
                                                                      ((crashed) "crashed while running")
                                                                      ((ulimitkilled) "killed after time ran out")
+                                                                     ((incorrect) "returned incorrect result")
                                                                      (else "no result, something went wrong"))))
                                                         ,(case state
                                                            ((compileerror)
-                                                            `(span (@ (title "error when compiling")) (i (@ (class "fa fa-ban")))))
+                                                            `(span (@ (title "error when compiling")) (i (@ (class "mdi mdi-cancel")))))
                                                            ((crashed)
-                                                            `(span (@ (title "crashed while running")) (i (@ (class "fa fa-bolt")))))
+                                                            `(span (@ (title "crashed while running")) (i (@ (class "mdi mdi-lightning-bolt")))))
                                                            ((ulimitkilled)
-                                                            `(span (@ (title "killed after time ran out")) (i (@ (class "fa fa-hourglass"))))
-                                                            )
+                                                            `(span (@ (title "killed after time ran out")) (i (@ (class "mdi mdi-timer-sand-empty")))))
+                                                           ((incorrect)
+                                                            `(span (@ (title "returned incorrect result")) (i (@ (class "mdi mdi-close-circle-outline")))))
                                                            (else
-                                                            `(span (@ (title "no result, something went wrong")) (i (@ (class "fa fa-question-circle"))))))))))
+                                                            `(span (@ (title "no result, something went wrong")) (i (@ (class "mdi mdi-help-circle-outline"))))))))))
                                            schemes)
                                     "\n"))
                              tests)))
@@ -522,11 +528,14 @@ document.getElementById(\"rankpercent\").onclick = function(e) {
   (format #t "<!DOCTYPE html>~%<html>
 <head>
 <meta charset=\"utf-8\"/>
-<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css\">
+<link rel=\"stylesheet\" href=\"https://www.nexoid.at/fc/materialdesignicons.min.css\" type=\"text/css\">
 <script>
 </script>
 <style>
-.crashed, .compileerror, .ulimitkilled {
+.mdi {
+  font-size: 150%;
+}
+.crashed, .compileerror, .ulimitkilled, .incorrect {
   color: #822;
   background-color: #fcc;
 }
@@ -562,6 +571,26 @@ table {
 .sep {
   color: #666;
 }
+.tags {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+}
+.tags > li {
+  font-size: 70%;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: inline;
+  margin: 0.1em;
+}
+.tags > li:hover {
+  background-color: #ddd;
+}
+.tags > li > a {
+  padding: 0.3em;
+  text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -569,13 +598,35 @@ table {
 <p>Based on the <a href=\"http://www.larcenists.org/benchmarksGenuineR6Linux.html\">Larceny benchmarks</a>. Code on <a href=\"http://www.github.com/ecraven/r7rs-benchmarks\">GitHub</a></p>
 <p>Tests were run on an Intel(R) Core(TM) i3-N305 CPU @ 3.8GHz with 48GB of RAM by using the Arch Linux packages. No guarantees for any of the numbers. <a href=\"all.csv\">CSV raw data</a></p>
 <p><small>Generated at ~a, <a href=\"mailto:r7rs-benchmarks@nexoid.at\">e-mail</a></small></p>
+<div class=\"boxed\">
 <h3>SAFE vs. UNSAFE optimizations</h3>
 <p>The benchmark results on this page are collected in <em>safe</em> mode. This means various optimisations are turned <em>off</em> for each implementation. If you need code to run as fast as possible, look into that, the Readme on <a href=\"http://www.github.com/ecraven/r7rs-benchmarks\">GitHub</a> contains a few pointers for the different implementations.</p>
 <p>Feel free to run the benchmarks yourself <em>without</em> safety turned on. You'll probably need to modify the <code>bench</code> file for that.</p>
+</div>
+<div class=\"boxed\">
 <h3>Actual R7RS Support</h3>
 <p>Many of these implementations do <strong>not</strong> fully implement R7RS, but instead there is a bit of \"shim\" code. You can find this by looking at <code>src/&lt;Name&gt;-prelude.scm</code> and <code>src/&lt;Name&gt;-postlude.scm</code>, to see which changes are necessary. Some changes are also made by the <code>bench</code> script, especially relating to <code>import</code>s.</p>
 <p>However, all of these implementations are \"close enough\" to R7RS to run a non-trivial amount of code.</p>
+</div>
+<div class=\"boxed\">
+<h3>Missing implementations</h3>
+Some implementations are missing. This is a short explanation on why:
+<ul>
+<li>Owl-Lisp: dialect too far from Scheme to run the benchmarks, doesn't have e.g. <code>begin</code> or library <code>(scheme read)</code></li>
+<li>RScheme: cannot build.</li>
+<li>Rhizome/Pi: cannot build.</li>
+<li>TinyLisp: did not finish any of the benchmarks within 5 minutes.</li>
+</ul>
+</div>
 <style>
+.boxed {
+  margin: 0.3em;
+  padding: 0.3em;
+  border: 1px solid black;
+}
+.boxed > h3 {
+  margin-top: 0.3em;
+}
 p { margin: 0; }
 div.testrun {
   display: block;
@@ -585,8 +636,10 @@ div.testruns {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.testrun > h4 {
+}
 h4,h5 {
-  padding: none; margin: none;
+  padding: 0; margin: 0;
 }
 .chart rect {
   fill: steelblue;
