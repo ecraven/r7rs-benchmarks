@@ -1,537 +1,537 @@
 
 ****************************
-Benchmarking MIT on Sat 18 Jun 22:17:38 UTC 2022 under Linux benchmarks 5.4.157-1-pve #1 SMP PVE 5.4.157-1 (Mon, 29 Nov 2021 12:01:44 +0100) x86_64 GNU/Linux
+Benchmarking MIT on Sat 6 Jul 07:51:58 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
 
 Testing browse under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/browse.scm /tmp/larcenous/MIT/browse.com
-;Generating SCode for file: "/tmp/larcenous/MIT/browse.scm" => "/tmp/larcenous/MIT/browse.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/browse.scm /tmp/r7rs-benchmarks/MIT/browse.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/browse.scm" => "/tmp/r7rs-benchmarks/MIT/browse.bin"...
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/browse.bin" => "/tmp/larcenous/MIT/browse.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/browse.bin" => "/tmp/r7rs-benchmarks/MIT/browse.com"... done
 Running...
 Running browse:2000
-Elapsed time: 9.68 seconds (10.) for browse:2000
-+!CSVLINE!+mit-11.2,browse:2000,9.68
+Elapsed time: 7.85 seconds (8.) for browse:2000
++!CSVLINE!+mit-12.1,browse:2000,7.85
 
-real	0m9.766s
-user	0m9.288s
-sys	0m0.478s
+real	0m7.883s
+user	0m7.648s
+sys	0m0.228s
 
 Testing deriv under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/deriv.scm /tmp/larcenous/MIT/deriv.com
-;Generating SCode for file: "/tmp/larcenous/MIT/deriv.scm" => "/tmp/larcenous/MIT/deriv.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/deriv.bin" => "/tmp/larcenous/MIT/deriv.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/deriv.scm /tmp/r7rs-benchmarks/MIT/deriv.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/deriv.scm" => "/tmp/r7rs-benchmarks/MIT/deriv.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/deriv.bin" => "/tmp/r7rs-benchmarks/MIT/deriv.com"... done
 Running...
 Running deriv:10000000
-Elapsed time: 4.02 seconds (4.) for deriv:10000000
-+!CSVLINE!+mit-11.2,deriv:10000000,4.02
+Elapsed time: 4.4 seconds (4.) for deriv:10000000
++!CSVLINE!+mit-12.1,deriv:10000000,4.4
 
-real	0m4.160s
-user	0m3.252s
-sys	0m0.908s
+real	0m4.425s
+user	0m3.960s
+sys	0m0.452s
 
 Testing destruc under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/destruc.scm /tmp/larcenous/MIT/destruc.com
-;Generating SCode for file: "/tmp/larcenous/MIT/destruc.scm" => "/tmp/larcenous/MIT/destruc.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/destruc.bin" => "/tmp/larcenous/MIT/destruc.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/destruc.scm /tmp/r7rs-benchmarks/MIT/destruc.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/destruc.scm" => "/tmp/r7rs-benchmarks/MIT/destruc.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/destruc.bin" => "/tmp/r7rs-benchmarks/MIT/destruc.com"... done
 Running...
 Running destruc:600:50:4000
-Elapsed time: 6.19 seconds (6.) for destruc:600:50:4000
-+!CSVLINE!+mit-11.2,destruc:600:50:4000,6.19
+Elapsed time: 3.73 seconds (4.) for destruc:600:50:4000
++!CSVLINE!+mit-12.1,destruc:600:50:4000,3.73
 
-real	0m6.283s
-user	0m5.705s
-sys	0m0.576s
+real	0m3.753s
+user	0m3.436s
+sys	0m0.313s
 
 Testing diviter under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/diviter.scm /tmp/larcenous/MIT/diviter.com
-;Generating SCode for file: "/tmp/larcenous/MIT/diviter.scm" => "/tmp/larcenous/MIT/diviter.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/diviter.bin" => "/tmp/larcenous/MIT/diviter.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/diviter.scm /tmp/r7rs-benchmarks/MIT/diviter.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/diviter.scm" => "/tmp/r7rs-benchmarks/MIT/diviter.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/diviter.bin" => "/tmp/r7rs-benchmarks/MIT/diviter.com"... done
 Running...
 Running diviter:1000:1000000
-Elapsed time: 2.96 seconds (3.) for diviter:1000:1000000
-+!CSVLINE!+mit-11.2,diviter:1000:1000000,2.96
+Elapsed time: 2.25 seconds (3.) for diviter:1000:1000000
++!CSVLINE!+mit-12.1,diviter:1000:1000000,2.25
 
-real	0m3.100s
-user	0m2.220s
-sys	0m0.880s
+real	0m2.279s
+user	0m1.827s
+sys	0m0.446s
 
 Testing divrec under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/divrec.scm /tmp/larcenous/MIT/divrec.com
-;Generating SCode for file: "/tmp/larcenous/MIT/divrec.scm" => "/tmp/larcenous/MIT/divrec.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/divrec.bin" => "/tmp/larcenous/MIT/divrec.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/divrec.scm /tmp/r7rs-benchmarks/MIT/divrec.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/divrec.scm" => "/tmp/r7rs-benchmarks/MIT/divrec.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/divrec.bin" => "/tmp/r7rs-benchmarks/MIT/divrec.com"... done
 Running...
 Running divrec:1000:1000000
-Elapsed time: 7.11 seconds (7.) for divrec:1000:1000000
-+!CSVLINE!+mit-11.2,divrec:1000:1000000,7.11
+Elapsed time: 5.81 seconds (5.) for divrec:1000:1000000
++!CSVLINE!+mit-12.1,divrec:1000:1000000,5.81
 
-real	0m7.243s
-user	0m6.368s
-sys	0m0.876s
+real	0m5.828s
+user	0m5.341s
+sys	0m0.476s
 
 Testing puzzle under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/puzzle.scm /tmp/larcenous/MIT/puzzle.com
-;Generating SCode for file: "/tmp/larcenous/MIT/puzzle.scm" => "/tmp/larcenous/MIT/puzzle.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/puzzle.scm /tmp/r7rs-benchmarks/MIT/puzzle.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/puzzle.scm" => "/tmp/r7rs-benchmarks/MIT/puzzle.bin"...
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/puzzle.bin" => "/tmp/larcenous/MIT/puzzle.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/puzzle.bin" => "/tmp/r7rs-benchmarks/MIT/puzzle.com"... done
 Running...
 Running puzzle:1000
-Elapsed time: 15.44 seconds (16.) for puzzle:1000
-+!CSVLINE!+mit-11.2,puzzle:1000,15.44
+Elapsed time: 30.69 seconds (30.) for puzzle:1000
++!CSVLINE!+mit-12.1,puzzle:1000,30.69
 
-real	0m15.502s
-user	0m8.347s
-sys	0m7.152s
+real	0m30.710s
+user	0m27.837s
+sys	0m2.854s
 
 Testing triangl under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/triangl.scm /tmp/larcenous/MIT/triangl.com
-;Generating SCode for file: "/tmp/larcenous/MIT/triangl.scm" => "/tmp/larcenous/MIT/triangl.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/triangl.bin" => "/tmp/larcenous/MIT/triangl.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/triangl.scm /tmp/r7rs-benchmarks/MIT/triangl.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/triangl.scm" => "/tmp/r7rs-benchmarks/MIT/triangl.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/triangl.bin" => "/tmp/r7rs-benchmarks/MIT/triangl.com"... done
 Running...
 Running triangl:22:1:50
-Elapsed time: 3.46 seconds (3.) for triangl:22:1:50
-+!CSVLINE!+mit-11.2,triangl:22:1:50,3.46
+Elapsed time: 12.63 seconds (12.) for triangl:22:1:50
++!CSVLINE!+mit-12.1,triangl:22:1:50,12.63
 
-real	0m3.467s
-user	0m3.455s
-sys	0m0.012s
+real	0m12.641s
+user	0m12.628s
+sys	0m0.007s
 
 Testing tak under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/tak.scm /tmp/larcenous/MIT/tak.com
-;Generating SCode for file: "/tmp/larcenous/MIT/tak.scm" => "/tmp/larcenous/MIT/tak.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/tak.bin" => "/tmp/larcenous/MIT/tak.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/tak.scm /tmp/r7rs-benchmarks/MIT/tak.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/tak.scm" => "/tmp/r7rs-benchmarks/MIT/tak.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/tak.bin" => "/tmp/r7rs-benchmarks/MIT/tak.com"... done
 Running...
 Running tak:40:20:11:1
-Elapsed time: 2.81 seconds (3.) for tak:40:20:11:1
-+!CSVLINE!+mit-11.2,tak:40:20:11:1,2.81
+Elapsed time: 2.9 seconds (3.) for tak:40:20:11:1
++!CSVLINE!+mit-12.1,tak:40:20:11:1,2.9
 
-real	0m2.822s
-user	0m2.812s
-sys	0m0.011s
+real	0m2.912s
+user	0m2.903s
+sys	0m0.007s
 
 Testing takl under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/takl.scm /tmp/larcenous/MIT/takl.com
-;Generating SCode for file: "/tmp/larcenous/MIT/takl.scm" => "/tmp/larcenous/MIT/takl.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/takl.bin" => "/tmp/larcenous/MIT/takl.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/takl.scm /tmp/r7rs-benchmarks/MIT/takl.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/takl.scm" => "/tmp/r7rs-benchmarks/MIT/takl.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/takl.bin" => "/tmp/r7rs-benchmarks/MIT/takl.com"... done
 Running...
 Running takl:40:20:12:1
-Elapsed time: 7.1 seconds (7.) for takl:40:20:12:1
-+!CSVLINE!+mit-11.2,takl:40:20:12:1,7.1
+Elapsed time: 6.05 seconds (6.) for takl:40:20:12:1
++!CSVLINE!+mit-12.1,takl:40:20:12:1,6.05
 
-real	0m7.111s
-user	0m7.103s
-sys	0m0.008s
+real	0m6.062s
+user	0m6.052s
+sys	0m0.007s
 
 Testing ntakl under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/ntakl.scm /tmp/larcenous/MIT/ntakl.com
-;Generating SCode for file: "/tmp/larcenous/MIT/ntakl.scm" => "/tmp/larcenous/MIT/ntakl.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/ntakl.bin" => "/tmp/larcenous/MIT/ntakl.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/ntakl.scm /tmp/r7rs-benchmarks/MIT/ntakl.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/ntakl.scm" => "/tmp/r7rs-benchmarks/MIT/ntakl.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/ntakl.bin" => "/tmp/r7rs-benchmarks/MIT/ntakl.com"... done
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 7.15 seconds (8.) for ntakl:40:20:12:1
-+!CSVLINE!+mit-11.2,ntakl:40:20:12:1,7.15
+Elapsed time: 6.57 seconds (7.) for ntakl:40:20:12:1
++!CSVLINE!+mit-12.1,ntakl:40:20:12:1,6.57
 
-real	0m7.171s
-user	0m7.162s
+real	0m6.583s
+user	0m6.571s
 sys	0m0.009s
 
 Testing cpstak under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/cpstak.scm /tmp/larcenous/MIT/cpstak.com
-;Generating SCode for file: "/tmp/larcenous/MIT/cpstak.scm" => "/tmp/larcenous/MIT/cpstak.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/cpstak.bin" => "/tmp/larcenous/MIT/cpstak.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/cpstak.scm /tmp/r7rs-benchmarks/MIT/cpstak.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/cpstak.scm" => "/tmp/r7rs-benchmarks/MIT/cpstak.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/cpstak.bin" => "/tmp/r7rs-benchmarks/MIT/cpstak.com"... done
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 5.88 seconds (6.) for cpstak:40:20:11:1
-+!CSVLINE!+mit-11.2,cpstak:40:20:11:1,5.88
+Elapsed time: 4.91 seconds (5.) for cpstak:40:20:11:1
++!CSVLINE!+mit-12.1,cpstak:40:20:11:1,4.91
 
-real	0m6.012s
-user	0m5.216s
-sys	0m0.796s
+real	0m4.929s
+user	0m4.486s
+sys	0m0.429s
 
 Testing ctak under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/ctak.scm /tmp/larcenous/MIT/ctak.com
-;Generating SCode for file: "/tmp/larcenous/MIT/ctak.scm" => "/tmp/larcenous/MIT/ctak.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/ctak.bin" => "/tmp/larcenous/MIT/ctak.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/ctak.scm /tmp/r7rs-benchmarks/MIT/ctak.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/ctak.scm" => "/tmp/r7rs-benchmarks/MIT/ctak.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/ctak.bin" => "/tmp/r7rs-benchmarks/MIT/ctak.com"... done
 Running...
 Running ctak:32:16:8:1
-./bench: line 723:  3590 Killed                  ${MIT} --quiet --heap 500000 --load "$1" < "$2"
+./bench: line 709: 350973 Killed                  ${MIT} --quiet --heap 500000 --load "$1" < "$2"
 
-real	5m0.120s
-user	1m49.244s
-sys	3m10.871s
+real	5m0.175s
+user	3m2.560s
+sys	1m57.421s
 +!CSVLINE!+mit,ctak,ULIMITKILLED
 
 Testing fib under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/fib.scm /tmp/larcenous/MIT/fib.com
-;Generating SCode for file: "/tmp/larcenous/MIT/fib.scm" => "/tmp/larcenous/MIT/fib.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/fib.bin" => "/tmp/larcenous/MIT/fib.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/fib.scm /tmp/r7rs-benchmarks/MIT/fib.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/fib.scm" => "/tmp/r7rs-benchmarks/MIT/fib.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/fib.bin" => "/tmp/r7rs-benchmarks/MIT/fib.com"... done
 Running...
 Running fib:40:5
-Elapsed time: 6.28 seconds (6.) for fib:40:5
-+!CSVLINE!+mit-11.2,fib:40:5,6.28
+Elapsed time: 5.82 seconds (6.) for fib:40:5
++!CSVLINE!+mit-12.1,fib:40:5,5.82
 
-real	0m6.297s
-user	0m6.289s
-sys	0m0.008s
+real	0m5.832s
+user	0m5.822s
+sys	0m0.007s
 
 Testing fibc under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/fibc.scm /tmp/larcenous/MIT/fibc.com
-;Generating SCode for file: "/tmp/larcenous/MIT/fibc.scm" => "/tmp/larcenous/MIT/fibc.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/fibc.bin" => "/tmp/larcenous/MIT/fibc.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/fibc.scm /tmp/r7rs-benchmarks/MIT/fibc.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/fibc.scm" => "/tmp/r7rs-benchmarks/MIT/fibc.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/fibc.bin" => "/tmp/r7rs-benchmarks/MIT/fibc.com"... done
 Running...
 Running fibc:30:10
-Elapsed time: 214.93 seconds (215.) for fibc:30:10
-+!CSVLINE!+mit-11.2,fibc:30:10,214.93
+Elapsed time: 193.53 seconds (194.) for fibc:30:10
++!CSVLINE!+mit-12.1,fibc:30:10,193.53
 
-real	3m35.073s
-user	1m17.503s
-sys	2m17.567s
+real	3m13.556s
+user	1m58.565s
+sys	1m14.869s
 
 Testing fibfp under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/fibfp.scm /tmp/larcenous/MIT/fibfp.com
-;Generating SCode for file: "/tmp/larcenous/MIT/fibfp.scm" => "/tmp/larcenous/MIT/fibfp.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/fibfp.bin" => "/tmp/larcenous/MIT/fibfp.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/fibfp.scm /tmp/r7rs-benchmarks/MIT/fibfp.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/fibfp.scm" => "/tmp/r7rs-benchmarks/MIT/fibfp.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/fibfp.bin" => "/tmp/r7rs-benchmarks/MIT/fibfp.com"... done
 Running...
 Running fibfp:35.:10
-Elapsed time: 4.17 seconds (4.) for fibfp:35.:10
-+!CSVLINE!+mit-11.2,fibfp:35.:10,4.17
+Elapsed time: 4.32 seconds (4.) for fibfp:35.:10
++!CSVLINE!+mit-12.1,fibfp:35.:10,4.32
 
-real	0m4.308s
-user	0m3.494s
-sys	0m0.814s
+real	0m4.348s
+user	0m3.862s
+sys	0m0.475s
 
 Testing sum under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/sum.scm /tmp/larcenous/MIT/sum.com
-;Generating SCode for file: "/tmp/larcenous/MIT/sum.scm" => "/tmp/larcenous/MIT/sum.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/sum.bin" => "/tmp/larcenous/MIT/sum.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/sum.scm /tmp/r7rs-benchmarks/MIT/sum.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/sum.scm" => "/tmp/r7rs-benchmarks/MIT/sum.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/sum.bin" => "/tmp/r7rs-benchmarks/MIT/sum.com"... done
 Running...
 Running sum:10000:200000
-Elapsed time: 6.94 seconds (7.) for sum:10000:200000
-+!CSVLINE!+mit-11.2,sum:10000:200000,6.94
+Elapsed time: 5.37 seconds (6.) for sum:10000:200000
++!CSVLINE!+mit-12.1,sum:10000:200000,5.37
 
-real	0m6.963s
-user	0m6.939s
-sys	0m0.020s
+real	0m5.385s
+user	0m5.371s
+sys	0m0.010s
 
 Testing sumfp under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/sumfp.scm /tmp/larcenous/MIT/sumfp.com
-;Generating SCode for file: "/tmp/larcenous/MIT/sumfp.scm" => "/tmp/larcenous/MIT/sumfp.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/sumfp.bin" => "/tmp/larcenous/MIT/sumfp.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/sumfp.scm /tmp/r7rs-benchmarks/MIT/sumfp.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/sumfp.scm" => "/tmp/r7rs-benchmarks/MIT/sumfp.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/sumfp.bin" => "/tmp/r7rs-benchmarks/MIT/sumfp.com"... done
 Running...
 Running sumfp:1000000.:500
-Elapsed time: 6.62 seconds (7.) for sumfp:1000000.:500
-+!CSVLINE!+mit-11.2,sumfp:1000000.:500,6.62
+Elapsed time: 6.89 seconds (7.) for sumfp:1000000.:500
++!CSVLINE!+mit-12.1,sumfp:1000000.:500,6.89
 
-real	0m6.758s
-user	0m5.913s
-sys	0m0.846s
+real	0m6.920s
+user	0m6.583s
+sys	0m0.319s
 
 Testing fft under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/fft.scm /tmp/larcenous/MIT/fft.com
-;Generating SCode for file: "/tmp/larcenous/MIT/fft.scm" => "/tmp/larcenous/MIT/fft.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/fft.bin" => "/tmp/larcenous/MIT/fft.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/fft.scm /tmp/r7rs-benchmarks/MIT/fft.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/fft.scm" => "/tmp/r7rs-benchmarks/MIT/fft.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/fft.bin" => "/tmp/r7rs-benchmarks/MIT/fft.com"... done
 Running...
 Running fft:65536:100
-Elapsed time: 3.17 seconds (3.) for fft:65536:100
-+!CSVLINE!+mit-11.2,fft:65536:100,3.17
+Elapsed time: 6.24 seconds (6.) for fft:65536:100
++!CSVLINE!+mit-12.1,fft:65536:100,6.24
 
-real	0m3.315s
-user	0m2.455s
-sys	0m0.860s
+real	0m6.265s
+user	0m5.790s
+sys	0m0.462s
 
 Testing mbrot under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/mbrot.scm /tmp/larcenous/MIT/mbrot.com
-;Generating SCode for file: "/tmp/larcenous/MIT/mbrot.scm" => "/tmp/larcenous/MIT/mbrot.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/mbrot.bin" => "/tmp/larcenous/MIT/mbrot.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/mbrot.scm /tmp/r7rs-benchmarks/MIT/mbrot.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/mbrot.scm" => "/tmp/r7rs-benchmarks/MIT/mbrot.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/mbrot.bin" => "/tmp/r7rs-benchmarks/MIT/mbrot.com"... done
 Running...
 Running mbrot:75:1000
-Elapsed time: 7.75 seconds (8.) for mbrot:75:1000
-+!CSVLINE!+mit-11.2,mbrot:75:1000,7.75
+Elapsed time: 8.83 seconds (9.) for mbrot:75:1000
++!CSVLINE!+mit-12.1,mbrot:75:1000,8.83
 
-real	0m7.886s
-user	0m7.093s
-sys	0m0.792s
+real	0m8.853s
+user	0m8.470s
+sys	0m0.359s
 
 Testing mbrotZ under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/mbrotZ.scm /tmp/larcenous/MIT/mbrotZ.com
-;Generating SCode for file: "/tmp/larcenous/MIT/mbrotZ.scm" => "/tmp/larcenous/MIT/mbrotZ.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/mbrotZ.bin" => "/tmp/larcenous/MIT/mbrotZ.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/mbrotZ.scm /tmp/r7rs-benchmarks/MIT/mbrotZ.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/mbrotZ.scm" => "/tmp/r7rs-benchmarks/MIT/mbrotZ.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/mbrotZ.bin" => "/tmp/r7rs-benchmarks/MIT/mbrotZ.com"... done
 Running...
 Running mbrotZ:75:1000
-Elapsed time: 20.08 seconds (20.) for mbrotZ:75:1000
-+!CSVLINE!+mit-11.2,mbrotZ:75:1000,20.08
+Elapsed time: 19.65 seconds (20.) for mbrotZ:75:1000
++!CSVLINE!+mit-12.1,mbrotZ:75:1000,19.65
 
-real	0m20.217s
-user	0m19.312s
-sys	0m0.904s
+real	0m19.683s
+user	0m19.174s
+sys	0m0.469s
 
 Testing nucleic under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/nucleic.scm /tmp/larcenous/MIT/nucleic.com
-;Generating SCode for file: "/tmp/larcenous/MIT/nucleic.scm" => "/tmp/larcenous/MIT/nucleic.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/nucleic.scm /tmp/r7rs-benchmarks/MIT/nucleic.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/nucleic.scm" => "/tmp/r7rs-benchmarks/MIT/nucleic.bin"...
 ;Warning: Unreferenced bound variable: partial-inst (|#[unnamed-procedure]| reference)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/nucleic.bin" => "/tmp/larcenous/MIT/nucleic.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/nucleic.bin" => "/tmp/r7rs-benchmarks/MIT/nucleic.com"... done
 Running...
 Running nucleic:50
-Elapsed time: 4.36 seconds (4.) for nucleic:50
-+!CSVLINE!+mit-11.2,nucleic:50,4.36
+Elapsed time: 4.26 seconds (4.) for nucleic:50
++!CSVLINE!+mit-12.1,nucleic:50,4.26
 
-real	0m4.498s
-user	0m3.485s
-sys	0m1.012s
+real	0m4.301s
+user	0m3.832s
+sys	0m0.459s
 
 Testing pi under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/pi.scm /tmp/larcenous/MIT/pi.com
-;Generating SCode for file: "/tmp/larcenous/MIT/pi.scm" => "/tmp/larcenous/MIT/pi.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/pi.scm /tmp/r7rs-benchmarks/MIT/pi.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/pi.scm" => "/tmp/r7rs-benchmarks/MIT/pi.bin"...
 ;Warning: Unreferenced bound variable: r (|#[unnamed-procedure]| square-root)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/pi.bin" => "/tmp/larcenous/MIT/pi.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/pi.bin" => "/tmp/r7rs-benchmarks/MIT/pi.com"... done
 Running...
 Running pi:50:500:50:100
-Elapsed time: 1.96 seconds (1.) for pi:50:500:50:100
-+!CSVLINE!+mit-11.2,pi:50:500:50:100,1.96
+Elapsed time: 1.79 seconds (2.) for pi:50:500:50:100
++!CSVLINE!+mit-12.1,pi:50:500:50:100,1.79
 
-real	0m2.010s
-user	0m1.886s
-sys	0m0.124s
+real	0m1.811s
+user	0m1.762s
+sys	0m0.047s
 
 Testing pnpoly under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/pnpoly.scm /tmp/larcenous/MIT/pnpoly.com
-;Generating SCode for file: "/tmp/larcenous/MIT/pnpoly.scm" => "/tmp/larcenous/MIT/pnpoly.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/pnpoly.scm /tmp/r7rs-benchmarks/MIT/pnpoly.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/pnpoly.scm" => "/tmp/r7rs-benchmarks/MIT/pnpoly.bin"...
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/pnpoly.bin" => "/tmp/larcenous/MIT/pnpoly.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/pnpoly.bin" => "/tmp/r7rs-benchmarks/MIT/pnpoly.com"... done
 Running...
 Running pnpoly:1000000
-Elapsed time: 9.42 seconds (9.) for pnpoly:1000000
-+!CSVLINE!+mit-11.2,pnpoly:1000000,9.42
+Elapsed time: 18.92 seconds (19.) for pnpoly:1000000
++!CSVLINE!+mit-12.1,pnpoly:1000000,18.92
 
-real	0m9.559s
-user	0m8.701s
-sys	0m0.856s
+real	0m18.950s
+user	0m18.493s
+sys	0m0.443s
 
 Testing ray under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/ray.scm /tmp/larcenous/MIT/ray.com
-;Generating SCode for file: "/tmp/larcenous/MIT/ray.scm" => "/tmp/larcenous/MIT/ray.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/ray.scm /tmp/r7rs-benchmarks/MIT/ray.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/ray.scm" => "/tmp/r7rs-benchmarks/MIT/ray.bin"...
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/ray.bin" => "/tmp/larcenous/MIT/ray.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/ray.bin" => "/tmp/r7rs-benchmarks/MIT/ray.com"... done
 Running...
 Running ray:50
-Elapsed time: 10.77 seconds (11.) for ray:50
-+!CSVLINE!+mit-11.2,ray:50,10.77
+Elapsed time: 11.34 seconds (12.) for ray:50
++!CSVLINE!+mit-12.1,ray:50,11.34
 
-real	0m10.908s
-user	0m9.964s
-sys	0m0.944s
+real	0m11.373s
+user	0m10.860s
+sys	0m0.496s
 
 Testing simplex under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/simplex.scm /tmp/larcenous/MIT/simplex.com
-;Generating SCode for file: "/tmp/larcenous/MIT/simplex.scm" => "/tmp/larcenous/MIT/simplex.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/simplex.scm /tmp/r7rs-benchmarks/MIT/simplex.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/simplex.scm" => "/tmp/r7rs-benchmarks/MIT/simplex.bin"...
 ;Warning: Unreferenced bound variable: input (test)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/simplex.bin" => "/tmp/larcenous/MIT/simplex.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/simplex.bin" => "/tmp/r7rs-benchmarks/MIT/simplex.com"... done
 Running...
 Running simplex:1000000
-Elapsed time: 6.08 seconds (6.) for simplex:1000000
-+!CSVLINE!+mit-11.2,simplex:1000000,6.08
+Elapsed time: 13.97 seconds (14.) for simplex:1000000
++!CSVLINE!+mit-12.1,simplex:1000000,13.97
 
-real	0m6.212s
-user	0m5.407s
-sys	0m0.805s
+real	0m14.002s
+user	0m13.661s
+sys	0m0.329s
 
 Testing ack under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/ack.scm /tmp/larcenous/MIT/ack.com
-;Generating SCode for file: "/tmp/larcenous/MIT/ack.scm" => "/tmp/larcenous/MIT/ack.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/ack.bin" => "/tmp/larcenous/MIT/ack.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/ack.scm /tmp/r7rs-benchmarks/MIT/ack.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/ack.scm" => "/tmp/r7rs-benchmarks/MIT/ack.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/ack.bin" => "/tmp/r7rs-benchmarks/MIT/ack.com"... done
 Running...
 Running ack:3:12:2
-Elapsed time: 8.4 seconds (8.) for ack:3:12:2
-+!CSVLINE!+mit-11.2,ack:3:12:2,8.4
+Elapsed time: 10.92 seconds (11.) for ack:3:12:2
++!CSVLINE!+mit-12.1,ack:3:12:2,10.92
 
-real	0m8.418s
-user	0m8.407s
-sys	0m0.010s
+real	0m10.933s
+user	0m10.920s
+sys	0m0.007s
 
 Testing array1 under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/array1.scm /tmp/larcenous/MIT/array1.com
-;Generating SCode for file: "/tmp/larcenous/MIT/array1.scm" => "/tmp/larcenous/MIT/array1.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/array1.bin" => "/tmp/larcenous/MIT/array1.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/array1.scm /tmp/r7rs-benchmarks/MIT/array1.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/array1.scm" => "/tmp/r7rs-benchmarks/MIT/array1.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/array1.bin" => "/tmp/r7rs-benchmarks/MIT/array1.com"... done
 Running...
 Running array1:1000000:500
-Elapsed time: 8.71 seconds (9.) for array1:1000000:500
-+!CSVLINE!+mit-11.2,array1:1000000:500,8.71
+Elapsed time: 24.12 seconds (24.) for array1:1000000:500
++!CSVLINE!+mit-12.1,array1:1000000:500,24.12
 
-real	0m8.840s
-user	0m7.986s
-sys	0m0.852s
+real	0m24.146s
+user	0m23.666s
+sys	0m0.449s
 
 Testing string under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/string.scm /tmp/larcenous/MIT/string.com
-;Generating SCode for file: "/tmp/larcenous/MIT/string.scm" => "/tmp/larcenous/MIT/string.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/string.bin" => "/tmp/larcenous/MIT/string.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/string.scm /tmp/r7rs-benchmarks/MIT/string.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/string.scm" => "/tmp/r7rs-benchmarks/MIT/string.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/string.bin" => "/tmp/r7rs-benchmarks/MIT/string.com"... done
 Running...
 Running string:500000:100
-Elapsed time: 100.83 seconds (101.) for string:500000:100
-+!CSVLINE!+mit-11.2,string:500000:100,100.83
+Elapsed time: 136.16 seconds (137.) for string:500000:100
++!CSVLINE!+mit-12.1,string:500000:100,136.16
 
-real	1m40.968s
-user	1m40.119s
-sys	0m0.846s
+real	2m16.187s
+user	2m15.596s
+sys	0m0.430s
 
 Testing sum1 under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/sum1.scm /tmp/larcenous/MIT/sum1.com
-;Generating SCode for file: "/tmp/larcenous/MIT/sum1.scm" => "/tmp/larcenous/MIT/sum1.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/sum1.scm /tmp/r7rs-benchmarks/MIT/sum1.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/sum1.scm" => "/tmp/r7rs-benchmarks/MIT/sum1.bin"...
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/sum1.bin" => "/tmp/larcenous/MIT/sum1.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/sum1.bin" => "/tmp/r7rs-benchmarks/MIT/sum1.com"... done
 Running...
 Running sum1:25
-Elapsed time: 51.22 seconds (52.) for sum1:25
-+!CSVLINE!+mit-11.2,sum1:25,51.22
+Elapsed time: 54.12 seconds (54.) for sum1:25
++!CSVLINE!+mit-12.1,sum1:25,54.12
 
-real	0m51.357s
-user	0m50.267s
-sys	0m1.064s
+real	0m54.151s
+user	0m53.596s
+sys	0m0.495s
 
 Testing cat under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/cat.scm /tmp/larcenous/MIT/cat.com
-;Generating SCode for file: "/tmp/larcenous/MIT/cat.scm" => "/tmp/larcenous/MIT/cat.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/cat.scm /tmp/r7rs-benchmarks/MIT/cat.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/cat.scm" => "/tmp/r7rs-benchmarks/MIT/cat.bin"...
 ;Warning: Unreferenced bound variable: result (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| run-benchmark)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/cat.bin" => "/tmp/larcenous/MIT/cat.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/cat.bin" => "/tmp/r7rs-benchmarks/MIT/cat.com"... done
 Running...
 Running cat:50
-./bench: line 723:  3760 Killed                  ${MIT} --quiet --heap 500000 --load "$1" < "$2"
+./bench: line 709: 351878 Killed                  ${MIT} --quiet --heap 500000 --load "$1" < "$2"
 
-real	5m0.004s
-user	4m59.430s
-sys	0m0.568s
+real	5m0.162s
+user	4m59.672s
+sys	0m0.300s
 +!CSVLINE!+mit,cat,ULIMITKILLED
 
 Testing tail under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/tail.scm /tmp/larcenous/MIT/tail.com
-;Generating SCode for file: "/tmp/larcenous/MIT/tail.scm" => "/tmp/larcenous/MIT/tail.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/tail.scm /tmp/r7rs-benchmarks/MIT/tail.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/tail.scm" => "/tmp/r7rs-benchmarks/MIT/tail.bin"...
 ;Warning: Unreferenced bound variable: result (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| run-benchmark)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/tail.bin" => "/tmp/larcenous/MIT/tail.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/tail.bin" => "/tmp/r7rs-benchmarks/MIT/tail.com"... done
 Running...
 Running tail:50
-Elapsed time: 257.3 seconds (257.) for tail:50
-+!CSVLINE!+mit-11.2,tail:50,257.3
+Elapsed time: 236.47 seconds (237.) for tail:50
++!CSVLINE!+mit-12.1,tail:50,236.47
 
-real	4m17.443s
-user	4m15.492s
-sys	0m1.942s
+real	3m56.495s
+user	3m55.237s
+sys	0m1.076s
 
 Testing wc under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/wc.scm /tmp/larcenous/MIT/wc.com
-;Generating SCode for file: "/tmp/larcenous/MIT/wc.scm" => "/tmp/larcenous/MIT/wc.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/wc.bin" => "/tmp/larcenous/MIT/wc.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/wc.scm /tmp/r7rs-benchmarks/MIT/wc.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/wc.scm" => "/tmp/r7rs-benchmarks/MIT/wc.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/wc.bin" => "/tmp/r7rs-benchmarks/MIT/wc.com"... done
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 252.76 seconds (253.) for wc:inputs/bib:50
-+!CSVLINE!+mit-11.2,wc:inputs/bib:50,252.76
+Elapsed time: 228.12 seconds (228.) for wc:inputs/bib:50
++!CSVLINE!+mit-12.1,wc:inputs/bib:50,228.12
 
-real	4m12.778s
-user	4m12.537s
-sys	0m0.232s
+real	3m48.132s
+user	3m47.821s
+sys	0m0.050s
 
 Testing read1 under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/read1.scm /tmp/larcenous/MIT/read1.com
-;Generating SCode for file: "/tmp/larcenous/MIT/read1.scm" => "/tmp/larcenous/MIT/read1.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/read1.scm /tmp/r7rs-benchmarks/MIT/read1.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/read1.scm" => "/tmp/r7rs-benchmarks/MIT/read1.bin"...
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/read1.bin" => "/tmp/larcenous/MIT/read1.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/read1.bin" => "/tmp/r7rs-benchmarks/MIT/read1.com"... done
 Running...
 Running read1:2500
-Elapsed time: 76.2 seconds (76.) for read1:2500
-+!CSVLINE!+mit-11.2,read1:2500,76.2
+Elapsed time: 74.62 seconds (75.) for read1:2500
++!CSVLINE!+mit-12.1,read1:2500,74.62
 
-real	1m16.342s
-user	1m15.352s
-sys	0m0.988s
+real	1m14.647s
+user	1m13.929s
+sys	0m0.622s
 
 Testing compiler under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/compiler.scm /tmp/larcenous/MIT/compiler.com
-;Generating SCode for file: "/tmp/larcenous/MIT/compiler.scm" => "/tmp/larcenous/MIT/compiler.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/compiler.scm /tmp/r7rs-benchmarks/MIT/compiler.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/compiler.scm" => "/tmp/r7rs-benchmarks/MIT/compiler.bin"...
 ;Warning: Unreferenced bound variable: expr (scheme-global-eval)
 ;Warning: Unreferenced bound variable: err (scheme-global-eval)
 ;Warning: Unreferenced bound variable: filename (pinpoint-error)
@@ -563,7 +563,6 @@ mit_comp /tmp/larcenous/MIT/compiler.scm /tmp/larcenous/MIT/compiler.com
 ;Warning: Unreferenced bound variable: best-payoff (|#[unnamed-procedure]| loop |#[let-procedure]| |#[let-procedure]| free-vars-order)
 ;Warning: Unreferenced bound variable: ordered-args (|#[let-procedure]| free-vars-order)
 ;Warning: Unreferenced bound variable: all-live (|#[let-procedure]| gen-let)
-;Warning: Unreferenced bound variable: filename (asm-open-output-file)
 ;Warning: Unreferenced bound variable: asm-port (asm-close-output-port)
 ;Warning: Unreferenced bound variable: asm-port (asm-display)
 ;Warning: Unreferenced bound variable: m (|#[let-procedure]| |#[let-procedure]| ofile-wsym)
@@ -618,36 +617,36 @@ mit_comp /tmp/larcenous/MIT/compiler.scm /tmp/larcenous/MIT/compiler.com
 ;Warning: Unreferenced bound variable: sn-loc (|#[let-procedure]| |#[unnamed-procedure]|)
 ;Warning: Unreferenced bound variable: opnds (|#[unnamed-procedure]|)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/compiler.bin" => "/tmp/larcenous/MIT/compiler.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/compiler.bin" => "/tmp/r7rs-benchmarks/MIT/compiler.com"... done
 Running...
 Running compiler:2000
-Elapsed time: 9.21 seconds (10.) for compiler:2000
-+!CSVLINE!+mit-11.2,compiler:2000,9.21
+Elapsed time: 8.8 seconds (8.) for compiler:2000
++!CSVLINE!+mit-12.1,compiler:2000,8.8
 
-real	0m9.417s
-user	0m8.513s
-sys	0m0.904s
+real	0m8.897s
+user	0m8.367s
+sys	0m0.474s
 
 Testing conform under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/conform.scm /tmp/larcenous/MIT/conform.com
-;Generating SCode for file: "/tmp/larcenous/MIT/conform.scm" => "/tmp/larcenous/MIT/conform.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/conform.bin" => "/tmp/larcenous/MIT/conform.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/conform.scm /tmp/r7rs-benchmarks/MIT/conform.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/conform.scm" => "/tmp/r7rs-benchmarks/MIT/conform.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/conform.bin" => "/tmp/r7rs-benchmarks/MIT/conform.com"... done
 Running...
 Running conform:500
-Elapsed time: 8.51 seconds (9.) for conform:500
-+!CSVLINE!+mit-11.2,conform:500,8.51
+Elapsed time: 7.71 seconds (8.) for conform:500
++!CSVLINE!+mit-12.1,conform:500,7.71
 
-real	0m8.646s
-user	0m7.793s
-sys	0m0.851s
+real	0m7.741s
+user	0m7.327s
+sys	0m0.402s
 
 Testing dynamic under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/dynamic.scm /tmp/larcenous/MIT/dynamic.com
-;Generating SCode for file: "/tmp/larcenous/MIT/dynamic.scm" => "/tmp/larcenous/MIT/dynamic.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/dynamic.scm /tmp/r7rs-benchmarks/MIT/dynamic.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/dynamic.scm" => "/tmp/r7rs-benchmarks/MIT/dynamic.bin"...
 ;Warning: Unreferenced bound variable: env (dynamic-parse-quote)
 ;Warning: Unreferenced bound variable: env (dynamic-parse-do)
 ;Warning: Unreferenced bound variable: args (dynamic-parse-do)
@@ -655,159 +654,161 @@ mit_comp /tmp/larcenous/MIT/dynamic.scm /tmp/larcenous/MIT/dynamic.com
 ;Warning: Unreferenced bound variable: args (dynamic-parse-quasiquote)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/dynamic.bin" => "/tmp/larcenous/MIT/dynamic.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/dynamic.bin" => "/tmp/r7rs-benchmarks/MIT/dynamic.com"... done
 Running...
 Running dynamic:500
-Elapsed time: 53.43 seconds (54.) for dynamic:500
-+!CSVLINE!+mit-11.2,dynamic:500,53.43
+Elapsed time: 51.35 seconds (52.) for dynamic:500
++!CSVLINE!+mit-12.1,dynamic:500,51.35
 
-real	0m53.582s
-user	0m52.612s
-sys	0m0.968s
+real	0m51.387s
+user	0m50.794s
+sys	0m0.522s
 
 Testing earley under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/earley.scm /tmp/larcenous/MIT/earley.com
-;Generating SCode for file: "/tmp/larcenous/MIT/earley.scm" => "/tmp/larcenous/MIT/earley.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/earley.scm /tmp/r7rs-benchmarks/MIT/earley.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/earley.scm" => "/tmp/r7rs-benchmarks/MIT/earley.bin"...
 ;Warning: Unreferenced bound variable: toks (produce |#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: nb-nts (|#[let-procedure]| |#[let-procedure]| parsed? |#[unnamed-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/earley.bin" => "/tmp/larcenous/MIT/earley.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/earley.bin" => "/tmp/r7rs-benchmarks/MIT/earley.com"... done
 Running...
 Running earley:1
-;Aborting!: maximum recursion depth exceeded
-real	0m0.022s
-user	0m0.008s
-sys	0m0.014s
+Elapsed time: 3.11 seconds (3.) for earley:1
++!CSVLINE!+mit-12.1,earley:1,3.11
+
+real	0m3.127s
+user	0m2.936s
+sys	0m0.187s
 
 Testing graphs under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/graphs.scm /tmp/larcenous/MIT/graphs.com
-;Generating SCode for file: "/tmp/larcenous/MIT/graphs.scm" => "/tmp/larcenous/MIT/graphs.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/graphs.scm /tmp/r7rs-benchmarks/MIT/graphs.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/graphs.scm" => "/tmp/r7rs-benchmarks/MIT/graphs.bin"...
 ;Warning: Unreferenced bound variable: leaf-depth (|#[unnamed-procedure]| |#[unnamed-procedure]| |#[let-procedure]| make-minimal?)
 ;Warning: Unreferenced bound variable: from (|#[unnamed-procedure]| |#[let-procedure]| fold-over-rdg)
 ;Warning: Unreferenced bound variable: perm (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: state (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: state (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/graphs.bin" => "/tmp/larcenous/MIT/graphs.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/graphs.bin" => "/tmp/r7rs-benchmarks/MIT/graphs.com"... done
 Running...
 Running graphs:7:3
-Elapsed time: 4.85 seconds (4.) for graphs:7:3
-+!CSVLINE!+mit-11.2,graphs:7:3,4.85
+Elapsed time: 16.97 seconds (17.) for graphs:7:3
++!CSVLINE!+mit-12.1,graphs:7:3,16.97
 
-real	0m4.983s
-user	0m4.193s
-sys	0m0.788s
+real	0m16.994s
+user	0m16.478s
+sys	0m0.476s
 
 Testing lattice under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/lattice.scm /tmp/larcenous/MIT/lattice.com
-;Generating SCode for file: "/tmp/larcenous/MIT/lattice.scm" => "/tmp/larcenous/MIT/lattice.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/lattice.scm /tmp/r7rs-benchmarks/MIT/lattice.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/lattice.scm" => "/tmp/r7rs-benchmarks/MIT/lattice.bin"...
 ;Warning: Unreferenced bound variable: x (|#[unnamed-procedure]| count-maps)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/lattice.bin" => "/tmp/larcenous/MIT/lattice.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/lattice.bin" => "/tmp/r7rs-benchmarks/MIT/lattice.com"... done
 Running...
 Running lattice:44:10
-Elapsed time: 6.09 seconds (6.) for lattice:44:10
-+!CSVLINE!+mit-11.2,lattice:44:10,6.09
+Elapsed time: 5.84 seconds (6.) for lattice:44:10
++!CSVLINE!+mit-12.1,lattice:44:10,5.84
 
-real	0m6.163s
-user	0m5.745s
-sys	0m0.407s
+real	0m5.862s
+user	0m5.684s
+sys	0m0.173s
 
 Testing matrix under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/matrix.scm /tmp/larcenous/MIT/matrix.com
-;Generating SCode for file: "/tmp/larcenous/MIT/matrix.scm" => "/tmp/larcenous/MIT/matrix.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/matrix.scm /tmp/r7rs-benchmarks/MIT/matrix.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/matrix.scm" => "/tmp/r7rs-benchmarks/MIT/matrix.bin"...
 ;Warning: Unreferenced bound variable: gcd (|#[unnamed-procedure]| |#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: ignore (|#[unnamed-procedure]| |#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/matrix.bin" => "/tmp/larcenous/MIT/matrix.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/matrix.bin" => "/tmp/r7rs-benchmarks/MIT/matrix.com"... done
 Running...
 Running matrix:5:5:2500
-Elapsed time: 4.3 seconds (5.) for matrix:5:5:2500
-+!CSVLINE!+mit-11.2,matrix:5:5:2500,4.3
+Elapsed time: 4.14 seconds (4.) for matrix:5:5:2500
++!CSVLINE!+mit-12.1,matrix:5:5:2500,4.14
 
-real	0m4.439s
-user	0m3.587s
-sys	0m0.852s
+real	0m4.169s
+user	0m3.669s
+sys	0m0.493s
 
 Testing maze under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/maze.scm /tmp/larcenous/MIT/maze.com
-;Generating SCode for file: "/tmp/larcenous/MIT/maze.scm" => "/tmp/larcenous/MIT/maze.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/maze.scm /tmp/r7rs-benchmarks/MIT/maze.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/maze.scm" => "/tmp/r7rs-benchmarks/MIT/maze.bin"...
 ;Warning: Unreferenced bound variable: exit (|#[let-procedure]| |#[let-procedure]| pmaze)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/maze.bin" => "/tmp/larcenous/MIT/maze.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/maze.bin" => "/tmp/r7rs-benchmarks/MIT/maze.com"... done
 Running...
 Running maze:20:7:10000
-Elapsed time: 6.3 seconds (6.) for maze:20:7:10000
-+!CSVLINE!+mit-11.2,maze:20:7:10000,6.3
+Elapsed time: 3.48 seconds (3.) for maze:20:7:10000
++!CSVLINE!+mit-12.1,maze:20:7:10000,3.48
 
-real	0m6.356s
-user	0m6.139s
-sys	0m0.216s
+real	0m3.513s
+user	0m3.414s
+sys	0m0.095s
 
 Testing mazefun under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/mazefun.scm /tmp/larcenous/MIT/mazefun.com
-;Generating SCode for file: "/tmp/larcenous/MIT/mazefun.scm" => "/tmp/larcenous/MIT/mazefun.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/mazefun.scm /tmp/r7rs-benchmarks/MIT/mazefun.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/mazefun.scm" => "/tmp/r7rs-benchmarks/MIT/mazefun.bin"...
 ;Warning: Unreferenced bound variable: i (|#[let-procedure]| try-to-pierce)
 ;Warning: Unreferenced bound variable: j (|#[let-procedure]| try-to-pierce)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/mazefun.bin" => "/tmp/larcenous/MIT/mazefun.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/mazefun.bin" => "/tmp/r7rs-benchmarks/MIT/mazefun.com"... done
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 5.05 seconds (5.) for mazefun:11:11:10000
-+!CSVLINE!+mit-11.2,mazefun:11:11:10000,5.05
+Elapsed time: 23.66 seconds (24.) for mazefun:11:11:10000
++!CSVLINE!+mit-12.1,mazefun:11:11:10000,23.66
 
-real	0m5.167s
-user	0m4.497s
-sys	0m0.670s
+real	0m23.678s
+user	0m23.171s
+sys	0m0.472s
 
 Testing nqueens under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/nqueens.scm /tmp/larcenous/MIT/nqueens.com
-;Generating SCode for file: "/tmp/larcenous/MIT/nqueens.scm" => "/tmp/larcenous/MIT/nqueens.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/nqueens.bin" => "/tmp/larcenous/MIT/nqueens.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/nqueens.scm /tmp/r7rs-benchmarks/MIT/nqueens.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/nqueens.scm" => "/tmp/r7rs-benchmarks/MIT/nqueens.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/nqueens.bin" => "/tmp/r7rs-benchmarks/MIT/nqueens.com"... done
 Running...
 Running nqueens:13:10
-Elapsed time: 9.85 seconds (10.) for nqueens:13:10
-+!CSVLINE!+mit-11.2,nqueens:13:10,9.85
+Elapsed time: 9.3 seconds (10.) for nqueens:13:10
++!CSVLINE!+mit-12.1,nqueens:13:10,9.3
 
-real	0m9.992s
-user	0m9.163s
-sys	0m0.828s
+real	0m9.325s
+user	0m8.854s
+sys	0m0.460s
 
 Testing paraffins under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/paraffins.scm /tmp/larcenous/MIT/paraffins.com
-;Generating SCode for file: "/tmp/larcenous/MIT/paraffins.scm" => "/tmp/larcenous/MIT/paraffins.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/paraffins.bin" => "/tmp/larcenous/MIT/paraffins.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/paraffins.scm /tmp/r7rs-benchmarks/MIT/paraffins.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/paraffins.scm" => "/tmp/r7rs-benchmarks/MIT/paraffins.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/paraffins.bin" => "/tmp/r7rs-benchmarks/MIT/paraffins.com"... done
 Running...
 Running paraffins:23:10
-Elapsed time: 2.15 seconds (2.) for paraffins:23:10
-+!CSVLINE!+mit-11.2,paraffins:23:10,2.15
+Elapsed time: 1.52 seconds (1.) for paraffins:23:10
++!CSVLINE!+mit-12.1,paraffins:23:10,1.52
 
-real	0m2.280s
-user	0m1.541s
-sys	0m0.739s
+real	0m1.536s
+user	0m1.141s
+sys	0m0.391s
 
 Testing parsing under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/parsing.scm /tmp/larcenous/MIT/parsing.com
-;Generating SCode for file: "/tmp/larcenous/MIT/parsing.scm" => "/tmp/larcenous/MIT/parsing.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/parsing.scm /tmp/r7rs-benchmarks/MIT/parsing.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/parsing.scm" => "/tmp/r7rs-benchmarks/MIT/parsing.bin"...
 ;Warning: Unreferenced bound variable: #[uninterned-symbol 12 key] (|#[let-procedure]| state30 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: #[uninterned-symbol 13 key] (|#[let-procedure]| state31 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: #[uninterned-symbol 14 key] (|#[let-procedure]| state32 |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
@@ -835,72 +836,47 @@ mit_comp /tmp/larcenous/MIT/parsing.scm /tmp/larcenous/MIT/parsing.com
 ;Warning: Unreferenced bound variable: totalerrors (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/parsing.bin" => "/tmp/larcenous/MIT/parsing.com"... aborted
-;Aborting!: maximum recursion depth exceededRunning...
-;Unable to find file "/tmp/larcenous/MIT/parsing.com" because: File does not exist.
-;To continue, call RESTART with an option number:
-; (RESTART 3) => Try to find the same file again.
-; (RESTART 2) => Try to find a different file.
-; (RESTART 1) => Return to read-eval-print level 1.
-
-2 error> 2500
-;Value: 2500
-
-2 error> "inputs/parsing.data"
-;Value: "inputs/parsing.data"
-
-2 error> (should return this list)
-;Unbound variable: this
-;To continue, call RESTART with an option number:
-; (RESTART 4) => Specify a value to use instead of this.
-; (RESTART 3) => Define this to a given value.
-; (RESTART 2) => Return to read-eval-print level 2.
-; (RESTART 1) => Return to read-eval-print level 1.
-
-3 error> 
-End of input stream reached.
-real	0m0.019s
-user	0m0.004s
-sys	0m0.015s
-+!CSVLINE!+mit,parsing,CRASHED
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/parsing.bin" => "/tmp/r7rs-benchmarks/MIT/parsing.com"... aborted
+;Aborting!: out of memory
++!CSVLINE!+mit,parsing,COMPILEERROR
 
 Testing peval under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/peval.scm /tmp/larcenous/MIT/peval.com
-;Generating SCode for file: "/tmp/larcenous/MIT/peval.scm" => "/tmp/larcenous/MIT/peval.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/peval.scm /tmp/r7rs-benchmarks/MIT/peval.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/peval.scm" => "/tmp/r7rs-benchmarks/MIT/peval.bin"...
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/peval.bin" => "/tmp/larcenous/MIT/peval.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/peval.bin" => "/tmp/r7rs-benchmarks/MIT/peval.com"... done
 Running...
 Running peval:2000
-Elapsed time: 6.69 seconds (7.) for peval:2000
-+!CSVLINE!+mit-11.2,peval:2000,6.69
+Elapsed time: 26.76 seconds (27.) for peval:2000
++!CSVLINE!+mit-12.1,peval:2000,26.76
 
-real	0m6.836s
-user	0m5.992s
-sys	0m0.844s
+real	0m26.791s
+user	0m26.266s
+sys	0m0.472s
 
 Testing primes under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/primes.scm /tmp/larcenous/MIT/primes.com
-;Generating SCode for file: "/tmp/larcenous/MIT/primes.scm" => "/tmp/larcenous/MIT/primes.bin"... done
-;Compiling file: "/tmp/larcenous/MIT/primes.bin" => "/tmp/larcenous/MIT/primes.com"... done
+mit_comp /tmp/r7rs-benchmarks/MIT/primes.scm /tmp/r7rs-benchmarks/MIT/primes.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/primes.scm" => "/tmp/r7rs-benchmarks/MIT/primes.bin"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/primes.bin" => "/tmp/r7rs-benchmarks/MIT/primes.com"... done
 Running...
 Running primes:1000:10000
-Elapsed time: 7.29 seconds (7.) for primes:1000:10000
-+!CSVLINE!+mit-11.2,primes:1000:10000,7.29
+Elapsed time: 1.4 seconds (2.) for primes:1000:10000
++!CSVLINE!+mit-12.1,primes:1000:10000,1.4
 
-real	0m7.389s
-user	0m6.768s
-sys	0m0.620s
+real	0m1.420s
+user	0m1.137s
+sys	0m0.279s
 
 Testing quicksort under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/quicksort.scm /tmp/larcenous/MIT/quicksort.com
-;Generating SCode for file: "/tmp/larcenous/MIT/quicksort.scm" => "/tmp/larcenous/MIT/quicksort.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/quicksort.scm /tmp/r7rs-benchmarks/MIT/quicksort.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/quicksort.scm" => "/tmp/r7rs-benchmarks/MIT/quicksort.bin"...
 ;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| run-benchmark)
 ;Warning: Unreferenced bound variable: ignore2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[unnamed-procedure]| ...)
@@ -908,21 +884,21 @@ mit_comp /tmp/larcenous/MIT/quicksort.scm /tmp/larcenous/MIT/quicksort.com
 ;Warning: Unreferenced bound variable: ignore1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[unnamed-procedure]| |#[let-procedure]|)
 ;Warning: Unreferenced bound variable: ignore3 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[unnamed-procedure]| |#[let-procedure]|)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/quicksort.bin" => "/tmp/larcenous/MIT/quicksort.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/quicksort.bin" => "/tmp/r7rs-benchmarks/MIT/quicksort.com"... done
 Running...
 Running quicksort:10000:2500
-Elapsed time: 7.68 seconds (7.) for quicksort:10000:2500
-+!CSVLINE!+mit-11.2,quicksort:10000:2500,7.68
+Elapsed time: 18.64 seconds (19.) for quicksort:10000:2500
++!CSVLINE!+mit-12.1,quicksort:10000:2500,18.64
 
-real	0m7.771s
-user	0m7.303s
-sys	0m0.468s
+real	0m18.660s
+user	0m18.358s
+sys	0m0.288s
 
 Testing scheme under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/scheme.scm /tmp/larcenous/MIT/scheme.com
-;Generating SCode for file: "/tmp/larcenous/MIT/scheme.scm" => "/tmp/larcenous/MIT/scheme.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/scheme.scm /tmp/r7rs-benchmarks/MIT/scheme.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/scheme.scm" => "/tmp/r7rs-benchmarks/MIT/scheme.bin"...
 ;Warning: Unreferenced bound variable: env (comp-self-eval)
 ;Warning: Unreferenced bound variable: env (comp-quote)
 ;Warning: Unreferenced bound variable: env (comp-unquote)
@@ -942,21 +918,21 @@ mit_comp /tmp/larcenous/MIT/scheme.scm /tmp/larcenous/MIT/scheme.com
 ;Warning: Unreferenced bound variable: rte (|#[unnamed-procedure]| gen-macro)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/scheme.bin" => "/tmp/larcenous/MIT/scheme.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/scheme.bin" => "/tmp/r7rs-benchmarks/MIT/scheme.com"... done
 Running...
 Running scheme:100000
-Elapsed time: 11.57 seconds (12.) for scheme:100000
-+!CSVLINE!+mit-11.2,scheme:100000,11.57
+Elapsed time: 11.3 seconds (11.) for scheme:100000
++!CSVLINE!+mit-12.1,scheme:100000,11.3
 
-real	0m11.669s
-user	0m11.152s
-sys	0m0.512s
+real	0m11.327s
+user	0m11.068s
+sys	0m0.250s
 
 Testing slatex under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/slatex.scm /tmp/larcenous/MIT/slatex.com
-;Generating SCode for file: "/tmp/larcenous/MIT/slatex.scm" => "/tmp/larcenous/MIT/slatex.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/slatex.scm /tmp/r7rs-benchmarks/MIT/slatex.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/slatex.scm" => "/tmp/r7rs-benchmarks/MIT/slatex.bin"...
 ;Warning: Unreferenced bound variable: z (slatex.force-output)
 ;Warning: Unreferenced bound variable: i (slatex.ignore2)
 ;Warning: Unreferenced bound variable: ii (slatex.ignore2)
@@ -965,83 +941,83 @@ mit_comp /tmp/larcenous/MIT/slatex.scm /tmp/larcenous/MIT/slatex.com
 ;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| run-benchmark)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/slatex.bin" => "/tmp/larcenous/MIT/slatex.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/slatex.bin" => "/tmp/r7rs-benchmarks/MIT/slatex.com"... done
 Running...
 Running slatex:500
-Elapsed time: 79.33 seconds (79.) for slatex:500
-+!CSVLINE!+mit-11.2,slatex:500,79.33
+Elapsed time: 80.41 seconds (80.) for slatex:500
++!CSVLINE!+mit-12.1,slatex:500,80.41
 
-real	1m19.479s
-user	1m13.518s
-sys	0m5.953s
+real	1m20.447s
+user	1m16.335s
+sys	0m3.739s
 
 Testing chudnovsky under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/chudnovsky.scm /tmp/larcenous/MIT/chudnovsky.com
-;Generating SCode for file: "/tmp/larcenous/MIT/chudnovsky.scm" => "/tmp/larcenous/MIT/chudnovsky.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/chudnovsky.scm /tmp/r7rs-benchmarks/MIT/chudnovsky.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/chudnovsky.scm" => "/tmp/r7rs-benchmarks/MIT/chudnovsky.bin"...
 ;Warning: Unreferenced bound variable: r (|#[unnamed-procedure]| integer-sqrt)
 ;Warning: Unreferenced bound variable: g (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| pi)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/chudnovsky.bin" => "/tmp/larcenous/MIT/chudnovsky.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/chudnovsky.bin" => "/tmp/r7rs-benchmarks/MIT/chudnovsky.com"... done
 Running...
 Running chudnovsky:50:500:50:1000
-Elapsed time: .68 seconds (1.) for chudnovsky:50:500:50:1000
-+!CSVLINE!+mit-11.2,chudnovsky:50:500:50:1000,.68
+Elapsed time: .58 seconds (1.) for chudnovsky:50:500:50:1000
++!CSVLINE!+mit-12.1,chudnovsky:50:500:50:1000,.58
 
-real	0m0.715s
-user	0m0.667s
-sys	0m0.048s
+real	0m0.598s
+user	0m0.557s
+sys	0m0.040s
 
 Testing nboyer under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/nboyer.scm /tmp/larcenous/MIT/nboyer.com
-;Generating SCode for file: "/tmp/larcenous/MIT/nboyer.scm" => "/tmp/larcenous/MIT/nboyer.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/nboyer.scm /tmp/r7rs-benchmarks/MIT/nboyer.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/nboyer.scm" => "/tmp/r7rs-benchmarks/MIT/nboyer.bin"...
 ;Warning: Unreferenced bound variable: args (setup-boyer)
 ;Warning: Unreferenced bound variable: args (test-boyer)
 ;Warning: Unreferenced bound variable: property (put |#[let-procedure]|)
 ;Warning: Unreferenced bound variable: property (get |#[let-procedure]|)
 ;Warning: Unreferenced defined variable: trans-of-implies
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/nboyer.bin" => "/tmp/larcenous/MIT/nboyer.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/nboyer.bin" => "/tmp/r7rs-benchmarks/MIT/nboyer.com"... done
 Running...
 Running nboyer:5:1
-Elapsed time: 2.33 seconds (2.) for nboyer:5:1
-+!CSVLINE!+mit-11.2,nboyer:5:1,2.33
+Elapsed time: 2.12 seconds (2.) for nboyer:5:1
++!CSVLINE!+mit-12.1,nboyer:5:1,2.12
 
-real	0m2.405s
-user	0m2.057s
-sys	0m0.347s
+real	0m2.139s
+user	0m1.891s
+sys	0m0.243s
 
 Testing sboyer under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/sboyer.scm /tmp/larcenous/MIT/sboyer.com
-;Generating SCode for file: "/tmp/larcenous/MIT/sboyer.scm" => "/tmp/larcenous/MIT/sboyer.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/sboyer.scm /tmp/r7rs-benchmarks/MIT/sboyer.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/sboyer.scm" => "/tmp/r7rs-benchmarks/MIT/sboyer.bin"...
 ;Warning: Unreferenced bound variable: property (put |#[let-procedure]|)
 ;Warning: Unreferenced bound variable: property (get |#[let-procedure]|)
 ;Warning: Unreferenced defined variable: trans-of-implies
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/sboyer.bin" => "/tmp/larcenous/MIT/sboyer.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/sboyer.bin" => "/tmp/r7rs-benchmarks/MIT/sboyer.com"... done
 Running...
 Running sboyer:5:1
-Elapsed time: 2.22 seconds (2.) for sboyer:5:1
-+!CSVLINE!+mit-11.2,sboyer:5:1,2.22
+Elapsed time: 2.07 seconds (2.) for sboyer:5:1
++!CSVLINE!+mit-12.1,sboyer:5:1,2.07
 
-real	0m2.250s
-user	0m2.182s
-sys	0m0.068s
+real	0m2.087s
+user	0m2.022s
+sys	0m0.063s
 
 Testing gcbench under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/gcbench.scm /tmp/larcenous/MIT/gcbench.com
-;Generating SCode for file: "/tmp/larcenous/MIT/gcbench.scm" => "/tmp/larcenous/MIT/gcbench.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/gcbench.scm /tmp/r7rs-benchmarks/MIT/gcbench.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/gcbench.scm" => "/tmp/r7rs-benchmarks/MIT/gcbench.bin"...
 ;Warning: Unreferenced bound variable: result (|#[unnamed-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| run-benchmark)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/gcbench.bin" => "/tmp/larcenous/MIT/gcbench.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/gcbench.bin" => "/tmp/r7rs-benchmarks/MIT/gcbench.com"... done
 Running...
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
@@ -1078,18 +1054,18 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 2.49 seconds (3.) for gcbench:20:1
-+!CSVLINE!+mit-11.2,gcbench:20:1,2.49
+Elapsed time: 2.06 seconds (2.) for gcbench:20:1
++!CSVLINE!+mit-12.1,gcbench:20:1,2.06
 
-real	0m2.605s
-user	0m1.905s
-sys	0m0.700s
+real	0m2.083s
+user	0m1.652s
+sys	0m0.425s
 
 Testing mperm under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/mperm.scm /tmp/larcenous/MIT/mperm.com
-;Generating SCode for file: "/tmp/larcenous/MIT/mperm.scm" => "/tmp/larcenous/MIT/mperm.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/mperm.scm /tmp/r7rs-benchmarks/MIT/mperm.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/mperm.scm" => "/tmp/r7rs-benchmarks/MIT/mperm.bin"...
 ;Warning: Unreferenced bound variable: name (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s1 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: s2 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
@@ -1097,48 +1073,48 @@ mit_comp /tmp/larcenous/MIT/mperm.scm /tmp/larcenous/MIT/mperm.com
 ;Warning: Unreferenced bound variable: s4 (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/mperm.bin" => "/tmp/larcenous/MIT/mperm.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/mperm.bin" => "/tmp/r7rs-benchmarks/MIT/mperm.com"... done
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 3.77 seconds (4.) for mperm:20:10:2:1
-+!CSVLINE!+mit-11.2,mperm:20:10:2:1,3.77
+Elapsed time: 3.09 seconds (3.) for mperm:20:10:2:1
++!CSVLINE!+mit-12.1,mperm:20:10:2:1,3.09
 
-real	0m4.087s
-user	0m3.083s
-sys	0m1.004s
+real	0m3.234s
+user	0m2.731s
+sys	0m0.495s
 
 Testing equal under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/equal.scm /tmp/larcenous/MIT/equal.com
-;Generating SCode for file: "/tmp/larcenous/MIT/equal.scm" => "/tmp/larcenous/MIT/equal.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/equal.scm /tmp/r7rs-benchmarks/MIT/equal.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/equal.scm" => "/tmp/r7rs-benchmarks/MIT/equal.bin"...
 ;Warning: Unreferenced bound variable: n0 (equality-benchmarks)
 ;Warning: Unreferenced bound variable: output (|#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| |#[let-procedure]| ...)
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/equal.bin" => "/tmp/larcenous/MIT/equal.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/equal.bin" => "/tmp/r7rs-benchmarks/MIT/equal.com"... done
 Running...
 Running equal:100:100:8:1000:2000:5000
-./bench: line 723:  4008 Killed                  ${MIT} --quiet --heap 500000 --load "$1" < "$2"
+Elapsed time: 19.47 seconds (19.) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+mit-12.1,equal:100:100:8:1000:2000:5000,19.47
 
-real	4m59.998s
-user	4m59.984s
-sys	0m0.012s
-+!CSVLINE!+mit,equal,ULIMITKILLED
+real	0m19.502s
+user	0m18.973s
+sys	0m0.505s
 
 Testing bv2string under MIT
 Including prelude /home/nex/src/r7rs-benchmarks/src/MIT-prelude.scm
 Compiling...
-mit_comp /tmp/larcenous/MIT/bv2string.scm /tmp/larcenous/MIT/bv2string.com
-;Generating SCode for file: "/tmp/larcenous/MIT/bv2string.scm" => "/tmp/larcenous/MIT/bv2string.bin"...
+mit_comp /tmp/r7rs-benchmarks/MIT/bv2string.scm /tmp/r7rs-benchmarks/MIT/bv2string.com
+;Generating SCode for file: "/tmp/r7rs-benchmarks/MIT/bv2string.scm" => "/tmp/r7rs-benchmarks/MIT/bv2string.bin"...
 ;Warning: Unreferenced defined variable: random-bytevector2
 ;Warning: Unreferenced defined variable: random-bytevector4
 ;... done
-;Compiling file: "/tmp/larcenous/MIT/bv2string.bin" => "/tmp/larcenous/MIT/bv2string.com"... done
+;Compiling file: "/tmp/r7rs-benchmarks/MIT/bv2string.bin" => "/tmp/r7rs-benchmarks/MIT/bv2string.com"... done
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 20.85 seconds (21.) for bv2string:1000:1000:100
-+!CSVLINE!+mit-11.2,bv2string:1000:1000:100,20.85
+Elapsed time: 19.02 seconds (19.) for bv2string:1000:1000:100
++!CSVLINE!+mit-12.1,bv2string:1000:1000:100,19.02
 
-real	0m20.932s
-user	0m20.486s
-sys	0m0.444s
+real	0m19.047s
+user	0m18.804s
+sys	0m0.230s

@@ -1,816 +1,828 @@
 
 ****************************
-Benchmarking S7 on Sat 18 Jun 23:24:22 UTC 2022 under Linux benchmarks 5.4.157-1-pve #1 SMP PVE 5.4.157-1 (Mon, 29 Nov 2021 12:01:44 +0100) x86_64 GNU/Linux
+Benchmarking S7 on Sat 6 Jul 10:55:44 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
 
 Testing browse under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/browse.scm /tmp/larcenous/S7/browse.scm
+s7_comp /tmp/r7rs-benchmarks/S7/browse.scm /tmp/r7rs-benchmarks/S7/browse.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/browse.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/browse.scm
 Running browse:2000
-Elapsed time: 14.74 seconds (14) for browse:2000
-+!CSVLINE!+s7,browse:2000,14.74
+Elapsed time: 25.434 seconds (25) for browse:2000
++!CSVLINE!+s7-10.12,browse:2000,25.434
 
-real	0m14.748s
-user	0m14.740s
-sys	0m0.008s
+real	0m25.492s
+user	0m25.440s
+sys	0m0.003s
 
 Testing deriv under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/deriv.scm /tmp/larcenous/S7/deriv.scm
+s7_comp /tmp/r7rs-benchmarks/S7/deriv.scm /tmp/r7rs-benchmarks/S7/deriv.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/deriv.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/deriv.scm
 Running deriv:10000000
-Elapsed time: 16.339 seconds (16) for deriv:10000000
-+!CSVLINE!+s7,deriv:10000000,16.339
+Elapsed time: 27.688 seconds (27) for deriv:10000000
++!CSVLINE!+s7-10.12,deriv:10000000,27.688
 
-real	0m16.346s
-user	0m16.342s
-sys	0m0.004s
+real	0m27.760s
+user	0m27.687s
+sys	0m0.007s
 
 Testing destruc under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/destruc.scm /tmp/larcenous/S7/destruc.scm
+s7_comp /tmp/r7rs-benchmarks/S7/destruc.scm /tmp/r7rs-benchmarks/S7/destruc.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/destruc.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/destruc.scm
 Running destruc:600:50:4000
-Elapsed time: 11.835 seconds (11) for destruc:600:50:4000
-+!CSVLINE!+s7,destruc:600:50:4000,11.835
+Elapsed time: 13.885 seconds (13) for destruc:600:50:4000
++!CSVLINE!+s7-10.12,destruc:600:50:4000,13.885
 
-real	0m11.840s
-user	0m11.834s
-sys	0m0.004s
+real	0m13.904s
+user	0m13.885s
+sys	0m0.007s
 
 Testing diviter under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/diviter.scm /tmp/larcenous/S7/diviter.scm
+s7_comp /tmp/r7rs-benchmarks/S7/diviter.scm /tmp/r7rs-benchmarks/S7/diviter.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/diviter.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/diviter.scm
 Running diviter:1000:1000000
-Elapsed time: 5.715 seconds (5) for diviter:1000:1000000
-+!CSVLINE!+s7,diviter:1000:1000000,5.715
+Elapsed time: 10.351 seconds (10) for diviter:1000:1000000
++!CSVLINE!+s7-10.12,diviter:1000:1000000,10.351
 
-real	0m5.720s
-user	0m5.715s
-sys	0m0.004s
+real	0m10.368s
+user	0m10.356s
+sys	0m0.003s
 
 Testing divrec under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/divrec.scm /tmp/larcenous/S7/divrec.scm
+s7_comp /tmp/r7rs-benchmarks/S7/divrec.scm /tmp/r7rs-benchmarks/S7/divrec.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/divrec.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/divrec.scm
 Running divrec:1000:1000000
-Elapsed time: 9.335 seconds (9) for divrec:1000:1000000
-+!CSVLINE!+s7,divrec:1000:1000000,9.335
+Elapsed time: 13.142 seconds (13) for divrec:1000:1000000
++!CSVLINE!+s7-10.12,divrec:1000:1000000,13.142
 
-real	0m9.341s
-user	0m9.328s
-sys	0m0.012s
+real	0m13.163s
+user	0m13.144s
+sys	0m0.007s
 
 Testing puzzle under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/puzzle.scm /tmp/larcenous/S7/puzzle.scm
+s7_comp /tmp/r7rs-benchmarks/S7/puzzle.scm /tmp/r7rs-benchmarks/S7/puzzle.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/puzzle.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/puzzle.scm
 Running puzzle:1000
-Elapsed time: 12.768 seconds (12) for puzzle:1000
-+!CSVLINE!+s7,puzzle:1000,12.768
+Elapsed time: 12.297 seconds (12) for puzzle:1000
++!CSVLINE!+s7-10.12,puzzle:1000,12.297
 
-real	0m12.773s
-user	0m12.764s
-sys	0m0.008s
+real	0m12.318s
+user	0m12.302s
+sys	0m0.003s
 
 Testing triangl under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/triangl.scm /tmp/larcenous/S7/triangl.scm
+s7_comp /tmp/r7rs-benchmarks/S7/triangl.scm /tmp/r7rs-benchmarks/S7/triangl.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/triangl.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/triangl.scm
 Running triangl:22:1:50
-Elapsed time: 23.208 seconds (23) for triangl:22:1:50
-+!CSVLINE!+s7,triangl:22:1:50,23.208
+Elapsed time: 33.277 seconds (33) for triangl:22:1:50
++!CSVLINE!+s7-10.12,triangl:22:1:50,33.277
 
-real	0m23.212s
-user	0m23.212s
+real	0m33.313s
+user	0m33.283s
 sys	0m0.000s
 
 Testing tak under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/tak.scm /tmp/larcenous/S7/tak.scm
+s7_comp /tmp/r7rs-benchmarks/S7/tak.scm /tmp/r7rs-benchmarks/S7/tak.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/tak.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/tak.scm
 Running tak:40:20:11:1
-Elapsed time: 10.748 seconds (10) for tak:40:20:11:1
-+!CSVLINE!+s7,tak:40:20:11:1,10.748
+Elapsed time: 7.25 seconds (7) for tak:40:20:11:1
++!CSVLINE!+s7-10.12,tak:40:20:11:1,7.25
 
-real	0m10.751s
-user	0m10.747s
+real	0m7.260s
+user	0m7.253s
 sys	0m0.004s
 
 Testing takl under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/takl.scm /tmp/larcenous/S7/takl.scm
+s7_comp /tmp/r7rs-benchmarks/S7/takl.scm /tmp/r7rs-benchmarks/S7/takl.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/takl.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/takl.scm
 Running takl:40:20:12:1
-Elapsed time: 12.477 seconds (12) for takl:40:20:12:1
-+!CSVLINE!+s7,takl:40:20:12:1,12.477
+Elapsed time: 20.164 seconds (20) for takl:40:20:12:1
++!CSVLINE!+s7-10.12,takl:40:20:12:1,20.164
 
-real	0m12.481s
-user	0m12.475s
-sys	0m0.004s
+real	0m20.214s
+user	0m20.165s
+sys	0m0.007s
 
 Testing ntakl under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/ntakl.scm /tmp/larcenous/S7/ntakl.scm
+s7_comp /tmp/r7rs-benchmarks/S7/ntakl.scm /tmp/r7rs-benchmarks/S7/ntakl.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/ntakl.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/ntakl.scm
 Running ntakl:40:20:12:1
-Elapsed time: 12.543 seconds (12) for ntakl:40:20:12:1
-+!CSVLINE!+s7,ntakl:40:20:12:1,12.543
+Elapsed time: 20.753 seconds (20) for ntakl:40:20:12:1
++!CSVLINE!+s7-10.12,ntakl:40:20:12:1,20.753
 
-real	0m12.544s
-user	0m12.544s
-sys	0m0.000s
+real	0m20.776s
+user	0m20.754s
+sys	0m0.004s
 
 Testing cpstak under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/cpstak.scm /tmp/larcenous/S7/cpstak.scm
+s7_comp /tmp/r7rs-benchmarks/S7/cpstak.scm /tmp/r7rs-benchmarks/S7/cpstak.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/cpstak.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/cpstak.scm
 Running cpstak:40:20:11:1
-Elapsed time: 64.882 seconds (64) for cpstak:40:20:11:1
-+!CSVLINE!+s7,cpstak:40:20:11:1,64.882
+Elapsed time: 151.024 seconds (151) for cpstak:40:20:11:1
++!CSVLINE!+s7-10.12,cpstak:40:20:11:1,151.024
 
-real	1m4.887s
-user	1m4.886s
-sys	0m0.000s
+real	2m31.160s
+user	2m31.024s
+sys	0m0.003s
 
 Testing ctak under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/ctak.scm /tmp/larcenous/S7/ctak.scm
+s7_comp /tmp/r7rs-benchmarks/S7/ctak.scm /tmp/r7rs-benchmarks/S7/ctak.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/ctak.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/ctak.scm
 Running ctak:32:16:8:1
-Elapsed time: 20.515 seconds (20) for ctak:32:16:8:1
-+!CSVLINE!+s7,ctak:32:16:8:1,20.515
+Elapsed time: 21.233 seconds (21) for ctak:32:16:8:1
++!CSVLINE!+s7-10.12,ctak:32:16:8:1,21.233
 
-real	0m20.523s
-user	0m20.506s
-sys	0m0.016s
+real	0m21.298s
+user	0m21.227s
+sys	0m0.014s
 
 Testing fib under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/fib.scm /tmp/larcenous/S7/fib.scm
+s7_comp /tmp/r7rs-benchmarks/S7/fib.scm /tmp/r7rs-benchmarks/S7/fib.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/fib.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/fib.scm
 Running fib:40:5
-Elapsed time: 7.611 seconds (7) for fib:40:5
-+!CSVLINE!+s7,fib:40:5,7.611
+Elapsed time: 7.141 seconds (7) for fib:40:5
++!CSVLINE!+s7-10.12,fib:40:5,7.141
 
-real	0m7.614s
-user	0m7.614s
-sys	0m0.000s
+real	0m7.150s
+user	0m7.141s
+sys	0m0.007s
 
 Testing fibc under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/fibc.scm /tmp/larcenous/S7/fibc.scm
+s7_comp /tmp/r7rs-benchmarks/S7/fibc.scm /tmp/r7rs-benchmarks/S7/fibc.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/fibc.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/fibc.scm
 Running fibc:30:10
-Elapsed time: 12.784 seconds (12) for fibc:30:10
-+!CSVLINE!+s7,fibc:30:10,12.784
+Elapsed time: 20.123 seconds (20) for fibc:30:10
++!CSVLINE!+s7-10.12,fibc:30:10,20.123
 
-real	0m12.789s
-user	0m12.785s
-sys	0m0.004s
+real	0m20.167s
+user	0m20.124s
+sys	0m0.007s
 
 Testing fibfp under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/fibfp.scm /tmp/larcenous/S7/fibfp.scm
+s7_comp /tmp/r7rs-benchmarks/S7/fibfp.scm /tmp/r7rs-benchmarks/S7/fibfp.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/fibfp.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/fibfp.scm
 Running fibfp:35.0:10
-Elapsed time: 1.428 seconds (1) for fibfp:35.0:10
-+!CSVLINE!+s7,fibfp:35.0:10,1.428
+Elapsed time: 1.196 seconds (1) for fibfp:35.0:10
++!CSVLINE!+s7-10.12,fibfp:35.0:10,1.196
 
-real	0m1.430s
-user	0m1.422s
-sys	0m0.008s
+real	0m1.204s
+user	0m1.197s
+sys	0m0.007s
 
 Testing sum under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/sum.scm /tmp/larcenous/S7/sum.scm
+s7_comp /tmp/r7rs-benchmarks/S7/sum.scm /tmp/r7rs-benchmarks/S7/sum.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/sum.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/sum.scm
 Running sum:10000:200000
-Elapsed time: 4.622 seconds (4) for sum:10000:200000
-+!CSVLINE!+s7,sum:10000:200000,4.622
+Elapsed time: 4.521 seconds (4) for sum:10000:200000
++!CSVLINE!+s7-10.12,sum:10000:200000,4.521
 
-real	0m4.639s
-user	0m4.625s
+real	0m4.530s
+user	0m4.527s
 sys	0m0.000s
 
 Testing sumfp under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/sumfp.scm /tmp/larcenous/S7/sumfp.scm
+s7_comp /tmp/r7rs-benchmarks/S7/sumfp.scm /tmp/r7rs-benchmarks/S7/sumfp.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/sumfp.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/sumfp.scm
 Running sumfp:1000000.0:500
-Elapsed time: 1.992 seconds (1) for sumfp:1000000.0:500
-+!CSVLINE!+s7,sumfp:1000000.0:500,1.992
+Elapsed time: 2.652 seconds (2) for sumfp:1000000.0:500
++!CSVLINE!+s7-10.12,sumfp:1000000.0:500,2.652
 
-real	0m1.994s
-user	0m1.990s
-sys	0m0.004s
+real	0m2.661s
+user	0m2.656s
+sys	0m0.003s
 
 Testing fft under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/fft.scm /tmp/larcenous/S7/fft.scm
+s7_comp /tmp/r7rs-benchmarks/S7/fft.scm /tmp/r7rs-benchmarks/S7/fft.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/fft.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/fft.scm
 Running fft:65536:100
-Elapsed time: 15.687 seconds (15) for fft:65536:100
-+!CSVLINE!+s7,fft:65536:100,15.687
+Elapsed time: 13.14 seconds (13) for fft:65536:100
++!CSVLINE!+s7-10.12,fft:65536:100,13.14
 
-real	0m15.693s
-user	0m15.685s
-sys	0m0.008s
+real	0m13.190s
+user	0m13.130s
+sys	0m0.020s
 
 Testing mbrot under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/mbrot.scm /tmp/larcenous/S7/mbrot.scm
+s7_comp /tmp/r7rs-benchmarks/S7/mbrot.scm /tmp/r7rs-benchmarks/S7/mbrot.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/mbrot.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/mbrot.scm
 Running mbrot:75:1000
-Elapsed time: 18.047 seconds (18) for mbrot:75:1000
-+!CSVLINE!+s7,mbrot:75:1000,18.047
+Elapsed time: 30.746 seconds (30) for mbrot:75:1000
++!CSVLINE!+s7-10.12,mbrot:75:1000,30.746
 
-real	0m18.051s
-user	0m18.047s
-sys	0m0.004s
+real	0m30.778s
+user	0m30.749s
+sys	0m0.001s
 
 Testing mbrotZ under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/mbrotZ.scm /tmp/larcenous/S7/mbrotZ.scm
+s7_comp /tmp/r7rs-benchmarks/S7/mbrotZ.scm /tmp/r7rs-benchmarks/S7/mbrotZ.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/mbrotZ.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/mbrotZ.scm
 Running mbrotZ:75:1000
-Elapsed time: 11.417 seconds (11) for mbrotZ:75:1000
-+!CSVLINE!+s7,mbrotZ:75:1000,11.417
+Elapsed time: 25.68 seconds (25) for mbrotZ:75:1000
++!CSVLINE!+s7-10.12,mbrotZ:75:1000,25.68
 
-real	0m11.423s
-user	0m11.412s
-sys	0m0.008s
+real	0m25.710s
+user	0m25.680s
+sys	0m0.007s
 
 Testing nucleic under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/nucleic.scm /tmp/larcenous/S7/nucleic.scm
+s7_comp /tmp/r7rs-benchmarks/S7/nucleic.scm /tmp/r7rs-benchmarks/S7/nucleic.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/nucleic.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/nucleic.scm
 Running nucleic:50
-Elapsed time: 13.232 seconds (13) for nucleic:50
-+!CSVLINE!+s7,nucleic:50,13.232
+Elapsed time: 13.612 seconds (13) for nucleic:50
++!CSVLINE!+s7-10.12,nucleic:50,13.612
 
-real	0m13.237s
-user	0m13.237s
-sys	0m0.000s
+real	0m13.662s
+user	0m13.611s
+sys	0m0.010s
 
 Testing pi under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/pi.scm /tmp/larcenous/S7/pi.scm
+s7_comp /tmp/r7rs-benchmarks/S7/pi.scm /tmp/r7rs-benchmarks/S7/pi.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/pi.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/pi.scm
 Running pi:50:500:50:100
 
 ;quotient argument, 5.000000000000001e+99, is out of range (it is too large)
 ;    (let loop ((a one) (b (square-root...
-;    /tmp/larcenous/S7/pi.scm, line 106, position: 3483
+;    /tmp/r7rs-benchmarks/S7/pi.scm, line 106, position: 3560
 ; pi-brent-salamin: (let loop ((a one) (b (... ; one: 1e+50
 ; pi-brent-salamin: ((t (quotient one 4)) (...
 ; pies: ((b2 (pi-borwein2 n)) (b4 (pi-borwe... ; n: 50
 
 
-real	0m0.003s
+real	0m0.007s
 user	0m0.000s
-sys	0m0.002s
+sys	0m0.006s
 
 Testing pnpoly under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/pnpoly.scm /tmp/larcenous/S7/pnpoly.scm
+s7_comp /tmp/r7rs-benchmarks/S7/pnpoly.scm /tmp/r7rs-benchmarks/S7/pnpoly.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/pnpoly.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/pnpoly.scm
 Running pnpoly:1000000
-Elapsed time: 13.467 seconds (13) for pnpoly:1000000
-+!CSVLINE!+s7,pnpoly:1000000,13.467
+Elapsed time: 16.84 seconds (16) for pnpoly:1000000
++!CSVLINE!+s7-10.12,pnpoly:1000000,16.84
 
-real	0m13.473s
-user	0m13.465s
-sys	0m0.008s
+real	0m16.877s
+user	0m16.843s
+sys	0m0.000s
 
 Testing ray under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/ray.scm /tmp/larcenous/S7/ray.scm
+s7_comp /tmp/r7rs-benchmarks/S7/ray.scm /tmp/r7rs-benchmarks/S7/ray.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/ray.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/ray.scm
 Running ray:50
-Elapsed time: 13.72 seconds (13) for ray:50
-+!CSVLINE!+s7,ray:50,13.72
+Elapsed time: 24.821 seconds (24) for ray:50
++!CSVLINE!+s7-10.12,ray:50,24.821
 
-real	0m13.722s
-user	0m13.718s
-sys	0m0.004s
+real	0m24.851s
+user	0m24.819s
+sys	0m0.007s
 
 Testing simplex under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/simplex.scm /tmp/larcenous/S7/simplex.scm
+s7_comp /tmp/r7rs-benchmarks/S7/simplex.scm /tmp/r7rs-benchmarks/S7/simplex.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/simplex.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/simplex.scm
 Running simplex:1000000
-Elapsed time: 34.778 seconds (34) for simplex:1000000
-+!CSVLINE!+s7,simplex:1000000,34.778
+Elapsed time: 39.173 seconds (39) for simplex:1000000
++!CSVLINE!+s7-10.12,simplex:1000000,39.173
 
-real	0m34.780s
-user	0m34.775s
-sys	0m0.004s
+real	0m39.217s
+user	0m39.177s
+sys	0m0.000s
 
 Testing ack under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/ack.scm /tmp/larcenous/S7/ack.scm
+s7_comp /tmp/r7rs-benchmarks/S7/ack.scm /tmp/r7rs-benchmarks/S7/ack.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/ack.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/ack.scm
 Running ack:3:12:2
-Elapsed time: 13.167 seconds (13) for ack:3:12:2
-+!CSVLINE!+s7,ack:3:12:2,13.167
+Elapsed time: 13.316 seconds (13) for ack:3:12:2
++!CSVLINE!+s7-10.12,ack:3:12:2,13.316
 
-real	0m13.176s
-user	0m13.164s
-sys	0m0.004s
+real	0m13.328s
+user	0m13.314s
+sys	0m0.007s
 
 Testing array1 under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/array1.scm /tmp/larcenous/S7/array1.scm
+s7_comp /tmp/r7rs-benchmarks/S7/array1.scm /tmp/r7rs-benchmarks/S7/array1.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/array1.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/array1.scm
 Running array1:1000000:500
-Elapsed time: 8.48 seconds (8) for array1:1000000:500
-+!CSVLINE!+s7,array1:1000000:500,8.48
+Elapsed time: 6.532 seconds (6) for array1:1000000:500
++!CSVLINE!+s7-10.12,array1:1000000:500,6.532
 
-real	0m8.506s
-user	0m7.865s
-sys	0m0.640s
+real	0m6.565s
+user	0m6.321s
+sys	0m0.222s
 
 Testing string under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/string.scm /tmp/larcenous/S7/string.scm
+s7_comp /tmp/r7rs-benchmarks/S7/string.scm /tmp/r7rs-benchmarks/S7/string.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/string.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/string.scm
 Running string:500000:100
-Elapsed time: 0.594 seconds (0) for string:500000:100
-+!CSVLINE!+s7,string:500000:100,0.594
+Elapsed time: 0.779 seconds (0) for string:500000:100
++!CSVLINE!+s7-10.12,string:500000:100,0.779
 
-real	0m0.667s
-user	0m0.144s
-sys	0m0.523s
+real	0m0.805s
+user	0m0.173s
+sys	0m0.627s
 
 Testing sum1 under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/sum1.scm /tmp/larcenous/S7/sum1.scm
+s7_comp /tmp/r7rs-benchmarks/S7/sum1.scm /tmp/r7rs-benchmarks/S7/sum1.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/sum1.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/sum1.scm
 Running sum1:25
-Elapsed time: 0.272 seconds (0) for sum1:25
-+!CSVLINE!+s7,sum1:25,0.272
+Elapsed time: 0.556 seconds (0) for sum1:25
++!CSVLINE!+s7-10.12,sum1:25,0.556
 
-real	0m0.276s
-user	0m0.268s
-sys	0m0.008s
+real	0m0.564s
+user	0m0.556s
+sys	0m0.007s
 
 Testing cat under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/cat.scm /tmp/larcenous/S7/cat.scm
+s7_comp /tmp/r7rs-benchmarks/S7/cat.scm /tmp/r7rs-benchmarks/S7/cat.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/cat.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/cat.scm
 Running cat:50
-Elapsed time: 0.779 seconds (0) for cat:50
-+!CSVLINE!+s7,cat:50,0.779
+Elapsed time: 0.395 seconds (0) for cat:50
++!CSVLINE!+s7-10.12,cat:50,0.395
 
-real	0m3.150s
-user	0m0.612s
-sys	0m0.172s
+real	0m0.406s
+user	0m0.260s
+sys	0m0.143s
 
 Testing tail under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/tail.scm /tmp/larcenous/S7/tail.scm
+s7_comp /tmp/r7rs-benchmarks/S7/tail.scm /tmp/r7rs-benchmarks/S7/tail.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/tail.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/tail.scm
 Running tail:50
-Elapsed time: 0.384 seconds (0) for tail:50
-+!CSVLINE!+s7,tail:50,0.384
+Elapsed time: 0.315 seconds (0) for tail:50
++!CSVLINE!+s7-10.12,tail:50,0.315
 
-real	0m1.671s
-user	0m0.213s
-sys	0m0.173s
+real	0m0.326s
+user	0m0.145s
+sys	0m0.179s
 
 Testing wc under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/wc.scm /tmp/larcenous/S7/wc.scm
+s7_comp /tmp/r7rs-benchmarks/S7/wc.scm /tmp/r7rs-benchmarks/S7/wc.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/wc.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/wc.scm
 Running wc:inputs/bib:50
-Elapsed time: 7.346 seconds (7) for wc:inputs/bib:50
-+!CSVLINE!+s7,wc:inputs/bib:50,7.346
+Elapsed time: 9.466 seconds (9) for wc:inputs/bib:50
++!CSVLINE!+s7-10.12,wc:inputs/bib:50,9.466
 
-real	0m7.348s
-user	0m7.332s
-sys	0m0.016s
+real	0m9.483s
+user	0m9.436s
+sys	0m0.037s
 
 Testing read1 under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/read1.scm /tmp/larcenous/S7/read1.scm
+s7_comp /tmp/r7rs-benchmarks/S7/read1.scm /tmp/r7rs-benchmarks/S7/read1.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/read1.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/read1.scm
 Running read1:2500
-Elapsed time: 0.271 seconds (0) for read1:2500
-+!CSVLINE!+s7,read1:2500,0.271
+Elapsed time: 0.329 seconds (0) for read1:2500
++!CSVLINE!+s7-10.12,read1:2500,0.329
 
-real	0m0.275s
-user	0m0.235s
-sys	0m0.040s
+real	0m0.337s
+user	0m0.313s
+sys	0m0.024s
 
 Testing compiler under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/compiler.scm /tmp/larcenous/S7/compiler.scm
+s7_comp /tmp/r7rs-benchmarks/S7/compiler.scm /tmp/r7rs-benchmarks/S7/compiler.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/compiler.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/compiler.scm
 Running compiler:2000
-Elapsed time: 25.507 seconds (25) for compiler:2000
-+!CSVLINE!+s7,compiler:2000,25.507
+Elapsed time: 27.767 seconds (27) for compiler:2000
++!CSVLINE!+s7-10.12,compiler:2000,27.767
 
-real	0m25.520s
-user	0m25.515s
-sys	0m0.004s
+real	0m27.951s
+user	0m27.775s
+sys	0m0.014s
 
 Testing conform under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/conform.scm /tmp/larcenous/S7/conform.scm
+s7_comp /tmp/r7rs-benchmarks/S7/conform.scm /tmp/r7rs-benchmarks/S7/conform.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/conform.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/conform.scm
 Running conform:500
-Elapsed time: 41.959 seconds (41) for conform:500
-+!CSVLINE!+s7,conform:500,41.959
+Elapsed time: 42.532 seconds (42) for conform:500
++!CSVLINE!+s7-10.12,conform:500,42.532
 
-real	0m41.965s
-user	0m41.956s
-sys	0m0.008s
+real	0m42.668s
+user	0m42.529s
+sys	0m0.011s
 
 Testing dynamic under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/dynamic.scm /tmp/larcenous/S7/dynamic.scm
+s7_comp /tmp/r7rs-benchmarks/S7/dynamic.scm /tmp/r7rs-benchmarks/S7/dynamic.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/dynamic.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/dynamic.scm
 Running dynamic:500
-Elapsed time: 15.78 seconds (15) for dynamic:500
-+!CSVLINE!+s7,dynamic:500,15.78
 
-real	0m15.787s
-user	0m15.715s
-sys	0m0.072s
+;Unknown datum: #_quote
+;    (cond ((null? e) (dynamic-parse-acti...
+;    /tmp/r7rs-benchmarks/S7/dynamic.scm, line 197, position: 6373
+; dynamic-parse-datum: (cond ((null? e) (dy... ; e: #_quote
+; dynamic-parse-procedure-call: (dynamic-pa... ; env: ((binding 8 (() 0 203) . binding))
+;                                              op: #_quote
+;                                              args: (:)
+; dynamic-parse-expressions: ((fst-res (dyn... ; fst-expr: ':
+;                                              rem-exprs: ((value-show (binding-value bin...
+; dynamic-parse-procedure-call: (10 (() 0 2...
+
+
+real	0m0.004s
+user	0m0.005s
+sys	0m0.000s
 
 Testing earley under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/earley.scm /tmp/larcenous/S7/earley.scm
+s7_comp /tmp/r7rs-benchmarks/S7/earley.scm /tmp/r7rs-benchmarks/S7/earley.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/earley.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/earley.scm
 Running earley:1
-./bench: line 457:  5147 Killed                  ${S7} "$1" < "$2"
+Elapsed time: 43.108 seconds (43) for earley:1
++!CSVLINE!+s7-10.12,earley:1,43.108
 
-real	0m9.201s
-user	0m7.876s
-sys	0m1.312s
-+!CSVLINE!+s7,earley,ULIMITKILLED
+real	0m43.256s
+user	0m42.173s
+sys	0m0.957s
 
 Testing graphs under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/graphs.scm /tmp/larcenous/S7/graphs.scm
+s7_comp /tmp/r7rs-benchmarks/S7/graphs.scm /tmp/r7rs-benchmarks/S7/graphs.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/graphs.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/graphs.scm
 Running graphs:7:3
-Elapsed time: 91.521 seconds (91) for graphs:7:3
-+!CSVLINE!+s7,graphs:7:3,91.521
+Elapsed time: 99.852 seconds (99) for graphs:7:3
++!CSVLINE!+s7-10.12,graphs:7:3,99.852
 
-real	1m31.548s
-user	1m31.449s
-sys	0m0.092s
+real	1m40.234s
+user	1m39.773s
+sys	0m0.086s
 
 Testing lattice under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/lattice.scm /tmp/larcenous/S7/lattice.scm
+s7_comp /tmp/r7rs-benchmarks/S7/lattice.scm /tmp/r7rs-benchmarks/S7/lattice.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/lattice.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/lattice.scm
 Running lattice:44:10
-Elapsed time: 86.505 seconds (86) for lattice:44:10
-+!CSVLINE!+s7,lattice:44:10,86.505
+Elapsed time: 162.645 seconds (162) for lattice:44:10
++!CSVLINE!+s7-10.12,lattice:44:10,162.645
 
-real	1m26.517s
-user	1m26.499s
-sys	0m0.008s
+real	2m42.824s
+user	2m42.646s
+sys	0m0.007s
 
 Testing matrix under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/matrix.scm /tmp/larcenous/S7/matrix.scm
+s7_comp /tmp/r7rs-benchmarks/S7/matrix.scm /tmp/r7rs-benchmarks/S7/matrix.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/matrix.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/matrix.scm
 Running matrix:5:5:2500
-Elapsed time: 29.662 seconds (29) for matrix:5:5:2500
-+!CSVLINE!+s7,matrix:5:5:2500,29.662
+Elapsed time: 58.76 seconds (58) for matrix:5:5:2500
++!CSVLINE!+s7-10.12,matrix:5:5:2500,58.76
 
-real	0m29.663s
-user	0m29.663s
-sys	0m0.000s
+real	0m58.871s
+user	0m58.761s
+sys	0m0.007s
 
 Testing maze under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/maze.scm /tmp/larcenous/S7/maze.scm
+s7_comp /tmp/r7rs-benchmarks/S7/maze.scm /tmp/r7rs-benchmarks/S7/maze.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/maze.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/maze.scm
 Running maze:20:7:10000
-Elapsed time: 15.855 seconds (15) for maze:20:7:10000
-+!CSVLINE!+s7,maze:20:7:10000,15.855
+Elapsed time: 25.788 seconds (25) for maze:20:7:10000
++!CSVLINE!+s7-10.12,maze:20:7:10000,25.788
 
-real	0m15.859s
-user	0m15.859s
-sys	0m0.000s
+real	0m25.829s
+user	0m25.793s
+sys	0m0.003s
 
 Testing mazefun under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/mazefun.scm /tmp/larcenous/S7/mazefun.scm
+s7_comp /tmp/r7rs-benchmarks/S7/mazefun.scm /tmp/r7rs-benchmarks/S7/mazefun.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/mazefun.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/mazefun.scm
 Running mazefun:11:11:10000
-Elapsed time: 13.811 seconds (13) for mazefun:11:11:10000
-+!CSVLINE!+s7,mazefun:11:11:10000,13.811
+Elapsed time: 18.038 seconds (18) for mazefun:11:11:10000
++!CSVLINE!+s7-10.12,mazefun:11:11:10000,18.038
 
-real	0m13.814s
-user	0m13.813s
-sys	0m0.000s
+real	0m18.063s
+user	0m18.037s
+sys	0m0.007s
 
 Testing nqueens under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/nqueens.scm /tmp/larcenous/S7/nqueens.scm
+s7_comp /tmp/r7rs-benchmarks/S7/nqueens.scm /tmp/r7rs-benchmarks/S7/nqueens.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/nqueens.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/nqueens.scm
 Running nqueens:13:10
-Elapsed time: 36.759 seconds (36) for nqueens:13:10
-+!CSVLINE!+s7,nqueens:13:10,36.759
+Elapsed time: 47.342 seconds (47) for nqueens:13:10
++!CSVLINE!+s7-10.12,nqueens:13:10,47.342
 
-real	0m36.769s
-user	0m36.761s
-sys	0m0.000s
+real	0m47.389s
+user	0m47.341s
+sys	0m0.007s
 
 Testing paraffins under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/paraffins.scm /tmp/larcenous/S7/paraffins.scm
+s7_comp /tmp/r7rs-benchmarks/S7/paraffins.scm /tmp/r7rs-benchmarks/S7/paraffins.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/paraffins.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/paraffins.scm
 Running paraffins:23:10
-./bench: line 457:  5199 Killed                  ${S7} "$1" < "$2"
+Elapsed time: 4.546 seconds (4) for paraffins:23:10
++!CSVLINE!+s7-10.12,paraffins:23:10,4.546
 
-real	0m3.637s
-user	0m2.501s
-sys	0m1.133s
-+!CSVLINE!+s7,paraffins,ULIMITKILLED
+real	0m4.598s
+user	0m4.247s
+sys	0m0.336s
 
 Testing parsing under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/parsing.scm /tmp/larcenous/S7/parsing.scm
+s7_comp /tmp/r7rs-benchmarks/S7/parsing.scm /tmp/r7rs-benchmarks/S7/parsing.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/parsing.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/parsing.scm
 Running parsing:2500
-Elapsed time: 27.659 seconds (27) for parsing:2500
-+!CSVLINE!+s7,parsing:2500,27.659
+Elapsed time: 25.119 seconds (25) for parsing:2500
++!CSVLINE!+s7-10.12,parsing:2500,25.119
 
-real	0m27.664s
-user	0m27.660s
-sys	0m0.004s
+real	0m25.180s
+user	0m25.116s
+sys	0m0.010s
 
 Testing peval under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/peval.scm /tmp/larcenous/S7/peval.scm
+s7_comp /tmp/r7rs-benchmarks/S7/peval.scm /tmp/r7rs-benchmarks/S7/peval.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/peval.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/peval.scm
 Running peval:2000
-Elapsed time: 21.643 seconds (21) for peval:2000
-+!CSVLINE!+s7,peval:2000,21.643
+ERROR: returned incorrect result: ((lambda (b_2) (quote 11)) (lambda (x_4) (if (< x_4 (quote 0)) (- x_4) (- (quote 10) x_4))) (lambda (l_11) (letrec ((add-list_13_16 (lambda (l_14) (if (null? l_14) ((quote #_quote) (quote ())) (cons (+ (quote 1) (car l_14)) (add-list_13_16 (cdr l_14))))))) (add-list_13_16 l_11))) (lambda (n_18) (cons (+ (quote 1) n_18) (cons (+ (quote 2) n_18) (cons (+ (quote 3) n_18) ((quote #_quote) (quote ())))))) (lambda (env_27) (lookup (quote x) env_27)) (lambda (env_36) (if (eq? (quote f) ((quote #_quote) quote)) (quote 1) (apply (lookup (quote f) env_36) (cons (quote 1) (cons (quote 2) (cons (quote 3) ((quote #_quote) (quote ())))))))) (lambda (b_53) (+ (quote 15) b_53 b_53 b_53 b_53 b_53 b_53)) (lambda () (quote 55)) (lambda () (list (quote a) (quote b) (quote c) (quote d) (quote e) (quote f) (quote g) (quote h) (quote i) (quote j) (quote k) (quote l) (quote m) (quote n) (quote o) (quote p) (quote q) (quote r) (quote s) (quote t) (quote u) (quote v) (quote w) (quote x) (quote y) (quote z))) (lambda () (cons (quote z) (cons (quote y) (cons (quote x) (cons (quote w) (cons (quote v) (cons (quote u) (cons (quote t) (cons (quote s) (cons (quote r) (cons (quote q) (cons (quote p) (cons (quote o) (cons (quote n) (cons (quote m) (cons (quote l) (cons (quote k) (cons (quote j) (cons (quote i) (cons (quote h) (cons (quote g) (cons (quote f) (cons (quote e) (cons (quote d) (cons (quote c) (cons (quote b) (cons (quote a) ((quote #_quote) (quote ()))))))))))))))))))))))))))))))
++!CSVLINE!+s7-10.12,peval:2000,INCORRECT
 
-real	0m21.649s
-user	0m21.645s
-sys	0m0.004s
+real	0m41.959s
+user	0m41.849s
+sys	0m0.007s
 
 Testing primes under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/primes.scm /tmp/larcenous/S7/primes.scm
+s7_comp /tmp/r7rs-benchmarks/S7/primes.scm /tmp/r7rs-benchmarks/S7/primes.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/primes.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/primes.scm
 Running primes:1000:10000
-Elapsed time: 4.995 seconds (4) for primes:1000:10000
-+!CSVLINE!+s7,primes:1000:10000,4.995
+Elapsed time: 7.084 seconds (7) for primes:1000:10000
++!CSVLINE!+s7-10.12,primes:1000:10000,7.084
 
-real	0m5.002s
-user	0m4.989s
-sys	0m0.012s
+real	0m7.096s
+user	0m7.090s
+sys	0m0.000s
 
 Testing quicksort under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/quicksort.scm /tmp/larcenous/S7/quicksort.scm
+s7_comp /tmp/r7rs-benchmarks/S7/quicksort.scm /tmp/r7rs-benchmarks/S7/quicksort.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/quicksort.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/quicksort.scm
 Running quicksort:10000:2500
-Elapsed time: 61.49 seconds (61) for quicksort:10000:2500
-+!CSVLINE!+s7,quicksort:10000:2500,61.49
+Elapsed time: 152.19 seconds (152) for quicksort:10000:2500
++!CSVLINE!+s7-10.12,quicksort:10000:2500,152.19
 
-real	1m1.513s
-user	1m1.492s
-sys	0m0.012s
+real	2m32.394s
+user	2m32.207s
+sys	0m0.007s
 
 Testing scheme under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/scheme.scm /tmp/larcenous/S7/scheme.scm
+s7_comp /tmp/r7rs-benchmarks/S7/scheme.scm /tmp/r7rs-benchmarks/S7/scheme.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/scheme.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/scheme.scm
 Running scheme:100000
-Elapsed time: 42.263 seconds (42) for scheme:100000
-+!CSVLINE!+s7,scheme:100000,42.263
+ERROR: returned incorrect result: (arg1 rte)
++!CSVLINE!+s7-10.12,scheme:100000,INCORRECT
 
-real	0m42.268s
-user	0m42.263s
-sys	0m0.004s
+real	0m17.026s
+user	0m16.999s
+sys	0m0.007s
 
 Testing slatex under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/slatex.scm /tmp/larcenous/S7/slatex.scm
+s7_comp /tmp/r7rs-benchmarks/S7/slatex.scm /tmp/r7rs-benchmarks/S7/slatex.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/slatex.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/slatex.scm
 Running slatex:500
-Elapsed time: 8.947 seconds (8) for slatex:500
-+!CSVLINE!+s7,slatex:500,8.947
+Elapsed time: 7.748 seconds (7) for slatex:500
++!CSVLINE!+s7-10.12,slatex:500,7.748
 
-real	0m12.444s
-user	0m5.024s
-sys	0m3.926s
+real	0m7.817s
+user	0m5.831s
+sys	0m1.925s
 
 Testing chudnovsky under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/chudnovsky.scm /tmp/larcenous/S7/chudnovsky.scm
+s7_comp /tmp/r7rs-benchmarks/S7/chudnovsky.scm /tmp/r7rs-benchmarks/S7/chudnovsky.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/chudnovsky.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/chudnovsky.scm
 
-;define: pi is immutable
-;    #f
-;    /tmp/larcenous/S7/chudnovsky.scm, line 124, position: 4353
+;can't define pi: it is immutable
+;    (define (pi digits) (let*...
+;    /tmp/r7rs-benchmarks/S7/chudnovsky.scm, line 119, position: 4133
+; (define (pi digits) (let* ((num-terms (ex...
 
-real	0m0.002s
-user	0m0.000s
-sys	0m0.002s
+
+real	0m0.006s
+user	0m0.004s
+sys	0m0.003s
 
 Testing nboyer under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/nboyer.scm /tmp/larcenous/S7/nboyer.scm
+s7_comp /tmp/r7rs-benchmarks/S7/nboyer.scm /tmp/r7rs-benchmarks/S7/nboyer.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/nboyer.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/nboyer.scm
 Running nboyer:5:1
-Elapsed time: 24.027 seconds (24) for nboyer:5:1
-+!CSVLINE!+s7,nboyer:5:1,24.027
+Elapsed time: 26.13 seconds (26) for nboyer:5:1
++!CSVLINE!+s7-10.12,nboyer:5:1,26.13
 
-real	0m24.161s
-user	0m23.285s
-sys	0m0.876s
+real	0m26.223s
+user	0m25.658s
+sys	0m0.489s
 
 Testing sboyer under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/sboyer.scm /tmp/larcenous/S7/sboyer.scm
+s7_comp /tmp/r7rs-benchmarks/S7/sboyer.scm /tmp/r7rs-benchmarks/S7/sboyer.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/sboyer.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/sboyer.scm
 Running sboyer:5:1
-Elapsed time: 24.17 seconds (24) for sboyer:5:1
-+!CSVLINE!+s7,sboyer:5:1,24.17
+Elapsed time: 24.452 seconds (24) for sboyer:5:1
++!CSVLINE!+s7-10.12,sboyer:5:1,24.452
 
-real	0m24.244s
-user	0m23.803s
-sys	0m0.440s
+real	0m24.536s
+user	0m24.370s
+sys	0m0.093s
 
 Testing gcbench under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/gcbench.scm /tmp/larcenous/S7/gcbench.scm
+s7_comp /tmp/r7rs-benchmarks/S7/gcbench.scm /tmp/r7rs-benchmarks/S7/gcbench.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/gcbench.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/gcbench.scm
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
 Running gcbench:20:1
@@ -846,54 +858,54 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 16.834 seconds (16) for gcbench:20:1
-+!CSVLINE!+s7,gcbench:20:1,16.834
+Elapsed time: 12.209 seconds (12) for gcbench:20:1
++!CSVLINE!+s7-10.12,gcbench:20:1,12.209
 
-real	0m16.952s
-user	0m16.206s
-sys	0m0.740s
+real	0m12.254s
+user	0m11.728s
+sys	0m0.492s
 
 Testing mperm under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/mperm.scm /tmp/larcenous/S7/mperm.scm
+s7_comp /tmp/r7rs-benchmarks/S7/mperm.scm /tmp/r7rs-benchmarks/S7/mperm.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/mperm.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/mperm.scm
 Running mperm:20:10:2:1
-./bench: line 457:  5273 Killed                  ${S7} "$1" < "$2"
+Elapsed time: 26.344 seconds (26) for mperm:20:10:2:1
++!CSVLINE!+s7-10.12,mperm:20:10:2:1,26.344
 
-real	0m3.450s
-user	0m2.104s
-sys	0m1.319s
-+!CSVLINE!+s7,mperm,ULIMITKILLED
+real	0m27.749s
+user	0m27.151s
+sys	0m0.518s
 
 Testing equal under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/equal.scm /tmp/larcenous/S7/equal.scm
+s7_comp /tmp/r7rs-benchmarks/S7/equal.scm /tmp/r7rs-benchmarks/S7/equal.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/equal.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/equal.scm
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 0.696 seconds (0) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+s7,equal:100:100:8:1000:2000:5000,0.696
+Elapsed time: 0.676 seconds (0) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+s7-10.12,equal:100:100:8:1000:2000:5000,0.676
 
-real	0m0.703s
-user	0m0.679s
-sys	0m0.024s
+real	0m0.684s
+user	0m0.663s
+sys	0m0.021s
 
 Testing bv2string under S7
 Including prelude /home/nex/src/r7rs-benchmarks/src/S7-prelude.scm
 Compiling...
-s7_comp /tmp/larcenous/S7/bv2string.scm /tmp/larcenous/S7/bv2string.scm
+s7_comp /tmp/r7rs-benchmarks/S7/bv2string.scm /tmp/r7rs-benchmarks/S7/bv2string.scm
 Running...
-s7: 19-Jul-2021
-load /tmp/larcenous/S7/bv2string.scm
+s7: 4-July-2024
+load /tmp/r7rs-benchmarks/S7/bv2string.scm
 Running bv2string:1000:1000:100
-Elapsed time: 6.623 seconds (6) for bv2string:1000:1000:100
-+!CSVLINE!+s7,bv2string:1000:1000:100,6.623
+Elapsed time: 9.876 seconds (9) for bv2string:1000:1000:100
++!CSVLINE!+s7-10.12,bv2string:1000:1000:100,9.876
 
-real	0m6.627s
-user	0m6.627s
+real	0m9.891s
+user	0m9.881s
 sys	0m0.000s

@@ -1,809 +1,809 @@
 
 ****************************
-Benchmarking Racket on Sat 18 Jun 23:18:17 UTC 2022 under Linux benchmarks 5.4.157-1-pve #1 SMP PVE 5.4.157-1 (Mon, 29 Nov 2021 12:01:44 +0100) x86_64 GNU/Linux
+Benchmarking Racket on Sat 6 Jul 10:49:20 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
 
 Testing browse under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/browse.scm /tmp/larcenous/Racket/browse.scm
-raco make /tmp/larcenous/Racket/browse.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/browse.scm /tmp/r7rs-benchmarks/Racket/browse.scm
+raco make /tmp/r7rs-benchmarks/Racket/browse.scm
 Running...
-time racket /tmp/larcenous/Racket/browse.scm
+time racket /tmp/r7rs-benchmarks/Racket/browse.scm
 Running browse:2000
-Elapsed time: 2.376 seconds (2.376) for browse:2000
-+!CSVLINE!+racket-8.5/r7rs,browse:2000,2.376
+Elapsed time: 2.594 seconds (2.594) for browse:2000
++!CSVLINE!+racket-8.13/r7rs+chez,browse:2000,2.594
 
-real	0m2.710s
-user	0m2.629s
-sys	0m0.080s
+real	0m2.871s
+user	0m2.823s
+sys	0m0.040s
 
 Testing deriv under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/deriv.scm /tmp/larcenous/Racket/deriv.scm
-raco make /tmp/larcenous/Racket/deriv.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/deriv.scm /tmp/r7rs-benchmarks/Racket/deriv.scm
+raco make /tmp/r7rs-benchmarks/Racket/deriv.scm
 Running...
-time racket /tmp/larcenous/Racket/deriv.scm
+time racket /tmp/r7rs-benchmarks/Racket/deriv.scm
 Running deriv:10000000
-Elapsed time: 1.345 seconds (1.345) for deriv:10000000
-+!CSVLINE!+racket-8.5/r7rs,deriv:10000000,1.345
+Elapsed time: 1.527 seconds (1.526) for deriv:10000000
++!CSVLINE!+racket-8.13/r7rs+chez,deriv:10000000,1.527
 
-real	0m1.674s
-user	0m1.586s
-sys	0m0.088s
+real	0m1.806s
+user	0m1.766s
+sys	0m0.033s
 
 Testing destruc under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/destruc.scm /tmp/larcenous/Racket/destruc.scm
-raco make /tmp/larcenous/Racket/destruc.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/destruc.scm /tmp/r7rs-benchmarks/Racket/destruc.scm
+raco make /tmp/r7rs-benchmarks/Racket/destruc.scm
 Running...
-time racket /tmp/larcenous/Racket/destruc.scm
+time racket /tmp/r7rs-benchmarks/Racket/destruc.scm
 Running destruc:600:50:4000
-Elapsed time: 3.002 seconds (3.002) for destruc:600:50:4000
-+!CSVLINE!+racket-8.5/r7rs,destruc:600:50:4000,3.002
+Elapsed time: 2.599 seconds (2.6) for destruc:600:50:4000
++!CSVLINE!+racket-8.13/r7rs+chez,destruc:600:50:4000,2.599
 
-real	0m3.335s
-user	0m3.274s
-sys	0m0.060s
+real	0m2.876s
+user	0m2.829s
+sys	0m0.040s
 
 Testing diviter under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/diviter.scm /tmp/larcenous/Racket/diviter.scm
-raco make /tmp/larcenous/Racket/diviter.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/diviter.scm /tmp/r7rs-benchmarks/Racket/diviter.scm
+raco make /tmp/r7rs-benchmarks/Racket/diviter.scm
 Running...
-time racket /tmp/larcenous/Racket/diviter.scm
+time racket /tmp/r7rs-benchmarks/Racket/diviter.scm
 Running diviter:1000:1000000
-Elapsed time: 3.134 seconds (3.133) for diviter:1000:1000000
-+!CSVLINE!+racket-8.5/r7rs,diviter:1000:1000000,3.134
+Elapsed time: 1.893 seconds (1.893) for diviter:1000:1000000
++!CSVLINE!+racket-8.13/r7rs+chez,diviter:1000:1000000,1.893
 
-real	0m3.461s
-user	0m3.377s
-sys	0m0.084s
+real	0m2.171s
+user	0m2.123s
+sys	0m0.040s
 
 Testing divrec under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/divrec.scm /tmp/larcenous/Racket/divrec.scm
-raco make /tmp/larcenous/Racket/divrec.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/divrec.scm /tmp/r7rs-benchmarks/Racket/divrec.scm
+raco make /tmp/r7rs-benchmarks/Racket/divrec.scm
 Running...
-time racket /tmp/larcenous/Racket/divrec.scm
+time racket /tmp/r7rs-benchmarks/Racket/divrec.scm
 Running divrec:1000:1000000
-Elapsed time: 3.748 seconds (3.748) for divrec:1000:1000000
-+!CSVLINE!+racket-8.5/r7rs,divrec:1000:1000000,3.748
+Elapsed time: 2.772 seconds (2.772) for divrec:1000:1000000
++!CSVLINE!+racket-8.13/r7rs+chez,divrec:1000:1000000,2.772
 
-real	0m4.074s
-user	0m3.978s
-sys	0m0.096s
+real	0m3.048s
+user	0m3.008s
+sys	0m0.030s
 
 Testing puzzle under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/puzzle.scm /tmp/larcenous/Racket/puzzle.scm
-raco make /tmp/larcenous/Racket/puzzle.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/puzzle.scm /tmp/r7rs-benchmarks/Racket/puzzle.scm
+raco make /tmp/r7rs-benchmarks/Racket/puzzle.scm
 Running...
-time racket /tmp/larcenous/Racket/puzzle.scm
+time racket /tmp/r7rs-benchmarks/Racket/puzzle.scm
 Running puzzle:1000
-Elapsed time: 2.76 seconds (2.76) for puzzle:1000
-+!CSVLINE!+racket-8.5/r7rs,puzzle:1000,2.76
+Elapsed time: 2.66 seconds (2.66) for puzzle:1000
++!CSVLINE!+racket-8.13/r7rs+chez,puzzle:1000,2.66
 
-real	0m3.086s
-user	0m3.010s
-sys	0m0.076s
+real	0m2.937s
+user	0m2.894s
+sys	0m0.040s
 
 Testing triangl under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/triangl.scm /tmp/larcenous/Racket/triangl.scm
-raco make /tmp/larcenous/Racket/triangl.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/triangl.scm /tmp/r7rs-benchmarks/Racket/triangl.scm
+raco make /tmp/r7rs-benchmarks/Racket/triangl.scm
 Running...
-time racket /tmp/larcenous/Racket/triangl.scm
+time racket /tmp/r7rs-benchmarks/Racket/triangl.scm
 Running triangl:22:1:50
-Elapsed time: 2.382 seconds (2.382) for triangl:22:1:50
-+!CSVLINE!+racket-8.5/r7rs,triangl:22:1:50,2.382
+Elapsed time: 2.093 seconds (2.093) for triangl:22:1:50
++!CSVLINE!+racket-8.13/r7rs+chez,triangl:22:1:50,2.093
 
-real	0m2.708s
-user	0m2.648s
-sys	0m0.060s
+real	0m2.370s
+user	0m2.331s
+sys	0m0.036s
 
 Testing tak under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/tak.scm /tmp/larcenous/Racket/tak.scm
-raco make /tmp/larcenous/Racket/tak.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/tak.scm /tmp/r7rs-benchmarks/Racket/tak.scm
+raco make /tmp/r7rs-benchmarks/Racket/tak.scm
 Running...
-time racket /tmp/larcenous/Racket/tak.scm
+time racket /tmp/r7rs-benchmarks/Racket/tak.scm
 Running tak:40:20:11:1
-Elapsed time: 1.424 seconds (1.424) for tak:40:20:11:1
-+!CSVLINE!+racket-8.5/r7rs,tak:40:20:11:1,1.424
+Elapsed time: 1.572 seconds (1.572) for tak:40:20:11:1
++!CSVLINE!+racket-8.13/r7rs+chez,tak:40:20:11:1,1.572
 
-real	0m1.761s
-user	0m1.692s
-sys	0m0.068s
+real	0m1.848s
+user	0m1.825s
+sys	0m0.020s
 
 Testing takl under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/takl.scm /tmp/larcenous/Racket/takl.scm
-raco make /tmp/larcenous/Racket/takl.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/takl.scm /tmp/r7rs-benchmarks/Racket/takl.scm
+raco make /tmp/r7rs-benchmarks/Racket/takl.scm
 Running...
-time racket /tmp/larcenous/Racket/takl.scm
+time racket /tmp/r7rs-benchmarks/Racket/takl.scm
 Running takl:40:20:12:1
-Elapsed time: 3.849 seconds (3.849) for takl:40:20:12:1
-+!CSVLINE!+racket-8.5/r7rs,takl:40:20:12:1,3.849
+Elapsed time: 3.398 seconds (3.399) for takl:40:20:12:1
++!CSVLINE!+racket-8.13/r7rs+chez,takl:40:20:12:1,3.398
 
-real	0m4.177s
-user	0m4.101s
-sys	0m0.076s
+real	0m3.679s
+user	0m3.629s
+sys	0m0.047s
 
 Testing ntakl under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/ntakl.scm /tmp/larcenous/Racket/ntakl.scm
-raco make /tmp/larcenous/Racket/ntakl.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/ntakl.scm /tmp/r7rs-benchmarks/Racket/ntakl.scm
+raco make /tmp/r7rs-benchmarks/Racket/ntakl.scm
 Running...
-time racket /tmp/larcenous/Racket/ntakl.scm
+time racket /tmp/r7rs-benchmarks/Racket/ntakl.scm
 Running ntakl:40:20:12:1
-Elapsed time: 3.345 seconds (3.345) for ntakl:40:20:12:1
-+!CSVLINE!+racket-8.5/r7rs,ntakl:40:20:12:1,3.345
+Elapsed time: 3.646 seconds (3.645) for ntakl:40:20:12:1
++!CSVLINE!+racket-8.13/r7rs+chez,ntakl:40:20:12:1,3.646
 
-real	0m3.672s
-user	0m3.600s
-sys	0m0.072s
+real	0m3.923s
+user	0m3.868s
+sys	0m0.050s
 
 Testing cpstak under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/cpstak.scm /tmp/larcenous/Racket/cpstak.scm
-raco make /tmp/larcenous/Racket/cpstak.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/cpstak.scm /tmp/r7rs-benchmarks/Racket/cpstak.scm
+raco make /tmp/r7rs-benchmarks/Racket/cpstak.scm
 Running...
-time racket /tmp/larcenous/Racket/cpstak.scm
+time racket /tmp/r7rs-benchmarks/Racket/cpstak.scm
 Running cpstak:40:20:11:1
-Elapsed time: 2.737 seconds (2.737) for cpstak:40:20:11:1
-+!CSVLINE!+racket-8.5/r7rs,cpstak:40:20:11:1,2.737
+Elapsed time: 3.919 seconds (3.92) for cpstak:40:20:11:1
++!CSVLINE!+racket-8.13/r7rs+chez,cpstak:40:20:11:1,3.919
 
-real	0m3.067s
-user	0m2.971s
-sys	0m0.096s
+real	0m4.198s
+user	0m4.151s
+sys	0m0.033s
 
 Testing ctak under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/ctak.scm /tmp/larcenous/Racket/ctak.scm
-raco make /tmp/larcenous/Racket/ctak.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/ctak.scm /tmp/r7rs-benchmarks/Racket/ctak.scm
+raco make /tmp/r7rs-benchmarks/Racket/ctak.scm
 Running...
-time racket /tmp/larcenous/Racket/ctak.scm
+time racket /tmp/r7rs-benchmarks/Racket/ctak.scm
 Running ctak:32:16:8:1
-Elapsed time: 2.008 seconds (2.009) for ctak:32:16:8:1
-+!CSVLINE!+racket-8.5/r7rs,ctak:32:16:8:1,2.008
+Elapsed time: 2.365 seconds (2.364) for ctak:32:16:8:1
++!CSVLINE!+racket-8.13/r7rs+chez,ctak:32:16:8:1,2.365
 
-real	0m2.341s
-user	0m2.249s
-sys	0m0.092s
+real	0m2.640s
+user	0m2.599s
+sys	0m0.033s
 
 Testing fib under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/fib.scm /tmp/larcenous/Racket/fib.scm
-raco make /tmp/larcenous/Racket/fib.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/fib.scm /tmp/r7rs-benchmarks/Racket/fib.scm
+raco make /tmp/r7rs-benchmarks/Racket/fib.scm
 Running...
-time racket /tmp/larcenous/Racket/fib.scm
+time racket /tmp/r7rs-benchmarks/Racket/fib.scm
 Running fib:40:5
-Elapsed time: 3.176 seconds (3.175) for fib:40:5
-+!CSVLINE!+racket-8.5/r7rs,fib:40:5,3.176
+Elapsed time: 3.892 seconds (3.891) for fib:40:5
++!CSVLINE!+racket-8.13/r7rs+chez,fib:40:5,3.892
 
-real	0m3.506s
-user	0m3.430s
-sys	0m0.076s
+real	0m4.174s
+user	0m4.124s
+sys	0m0.046s
 
 Testing fibc under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/fibc.scm /tmp/larcenous/Racket/fibc.scm
-raco make /tmp/larcenous/Racket/fibc.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/fibc.scm /tmp/r7rs-benchmarks/Racket/fibc.scm
+raco make /tmp/r7rs-benchmarks/Racket/fibc.scm
 Running...
-time racket /tmp/larcenous/Racket/fibc.scm
+time racket /tmp/r7rs-benchmarks/Racket/fibc.scm
 Running fibc:30:10
-Elapsed time: 1.404 seconds (1.404) for fibc:30:10
-+!CSVLINE!+racket-8.5/r7rs,fibc:30:10,1.404
+Elapsed time: 1.454 seconds (1.453) for fibc:30:10
++!CSVLINE!+racket-8.13/r7rs+chez,fibc:30:10,1.454
 
-real	0m1.736s
-user	0m1.668s
-sys	0m0.068s
+real	0m1.730s
+user	0m1.682s
+sys	0m0.043s
 
 Testing fibfp under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/fibfp.scm /tmp/larcenous/Racket/fibfp.scm
-raco make /tmp/larcenous/Racket/fibfp.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/fibfp.scm /tmp/r7rs-benchmarks/Racket/fibfp.scm
+raco make /tmp/r7rs-benchmarks/Racket/fibfp.scm
 Running...
-time racket /tmp/larcenous/Racket/fibfp.scm
+time racket /tmp/r7rs-benchmarks/Racket/fibfp.scm
 Running fibfp:35.0:10
-Elapsed time: 2.395 seconds (2.396) for fibfp:35.0:10
-+!CSVLINE!+racket-8.5/r7rs,fibfp:35.0:10,2.395
+Elapsed time: 3.17 seconds (3.17) for fibfp:35.0:10
++!CSVLINE!+racket-8.13/r7rs+chez,fibfp:35.0:10,3.17
 
-real	0m2.727s
-user	0m2.639s
-sys	0m0.088s
+real	0m3.446s
+user	0m3.401s
+sys	0m0.036s
 
 Testing sum under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/sum.scm /tmp/larcenous/Racket/sum.scm
-raco make /tmp/larcenous/Racket/sum.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/sum.scm /tmp/r7rs-benchmarks/Racket/sum.scm
+raco make /tmp/r7rs-benchmarks/Racket/sum.scm
 Running...
-time racket /tmp/larcenous/Racket/sum.scm
+time racket /tmp/r7rs-benchmarks/Racket/sum.scm
 Running sum:10000:200000
-Elapsed time: 2.741 seconds (2.741) for sum:10000:200000
-+!CSVLINE!+racket-8.5/r7rs,sum:10000:200000,2.741
+Elapsed time: 2.631 seconds (2.631) for sum:10000:200000
++!CSVLINE!+racket-8.13/r7rs+chez,sum:10000:200000,2.631
 
-real	0m3.068s
-user	0m3.000s
-sys	0m0.068s
+real	0m2.910s
+user	0m2.873s
+sys	0m0.033s
 
 Testing sumfp under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/sumfp.scm /tmp/larcenous/Racket/sumfp.scm
-raco make /tmp/larcenous/Racket/sumfp.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/sumfp.scm /tmp/r7rs-benchmarks/Racket/sumfp.scm
+raco make /tmp/r7rs-benchmarks/Racket/sumfp.scm
 Running...
-time racket /tmp/larcenous/Racket/sumfp.scm
+time racket /tmp/r7rs-benchmarks/Racket/sumfp.scm
 Running sumfp:1000000.0:500
-Elapsed time: 3.681 seconds (3.681) for sumfp:1000000.0:500
-+!CSVLINE!+racket-8.5/r7rs,sumfp:1000000.0:500,3.681
+Elapsed time: 6.05 seconds (6.049) for sumfp:1000000.0:500
++!CSVLINE!+racket-8.13/r7rs+chez,sumfp:1000000.0:500,6.05
 
-real	0m4.010s
-user	0m3.902s
-sys	0m0.108s
+real	0m6.326s
+user	0m6.251s
+sys	0m0.060s
 
 Testing fft under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/fft.scm /tmp/larcenous/Racket/fft.scm
-raco make /tmp/larcenous/Racket/fft.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/fft.scm /tmp/r7rs-benchmarks/Racket/fft.scm
+raco make /tmp/r7rs-benchmarks/Racket/fft.scm
 Running...
-time racket /tmp/larcenous/Racket/fft.scm
+time racket /tmp/r7rs-benchmarks/Racket/fft.scm
 Running fft:65536:100
-Elapsed time: 2.579 seconds (2.58) for fft:65536:100
-+!CSVLINE!+racket-8.5/r7rs,fft:65536:100,2.579
+Elapsed time: 2.612 seconds (2.612) for fft:65536:100
++!CSVLINE!+racket-8.13/r7rs+chez,fft:65536:100,2.612
 
-real	0m2.909s
-user	0m2.841s
-sys	0m0.068s
+real	0m2.889s
+user	0m2.828s
+sys	0m0.053s
 
 Testing mbrot under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/mbrot.scm /tmp/larcenous/Racket/mbrot.scm
-raco make /tmp/larcenous/Racket/mbrot.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/mbrot.scm /tmp/r7rs-benchmarks/Racket/mbrot.scm
+raco make /tmp/r7rs-benchmarks/Racket/mbrot.scm
 Running...
-time racket /tmp/larcenous/Racket/mbrot.scm
+time racket /tmp/r7rs-benchmarks/Racket/mbrot.scm
 Running mbrot:75:1000
-Elapsed time: 4.631 seconds (4.631) for mbrot:75:1000
-+!CSVLINE!+racket-8.5/r7rs,mbrot:75:1000,4.631
+Elapsed time: 7.102 seconds (7.101) for mbrot:75:1000
++!CSVLINE!+racket-8.13/r7rs+chez,mbrot:75:1000,7.102
 
-real	0m4.964s
-user	0m4.907s
-sys	0m0.056s
+real	0m7.376s
+user	0m7.327s
+sys	0m0.030s
 
 Testing mbrotZ under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/mbrotZ.scm /tmp/larcenous/Racket/mbrotZ.scm
-raco make /tmp/larcenous/Racket/mbrotZ.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/mbrotZ.scm /tmp/r7rs-benchmarks/Racket/mbrotZ.scm
+raco make /tmp/r7rs-benchmarks/Racket/mbrotZ.scm
 Running...
-time racket /tmp/larcenous/Racket/mbrotZ.scm
+time racket /tmp/r7rs-benchmarks/Racket/mbrotZ.scm
 Running mbrotZ:75:1000
-Elapsed time: 4.228 seconds (4.228) for mbrotZ:75:1000
-+!CSVLINE!+racket-8.5/r7rs,mbrotZ:75:1000,4.228
+Elapsed time: 7.186 seconds (7.186) for mbrotZ:75:1000
++!CSVLINE!+racket-8.13/r7rs+chez,mbrotZ:75:1000,7.186
 
-real	0m4.558s
-user	0m4.466s
-sys	0m0.092s
+real	0m7.462s
+user	0m7.387s
+sys	0m0.053s
 
 Testing nucleic under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/nucleic.scm /tmp/larcenous/Racket/nucleic.scm
-raco make /tmp/larcenous/Racket/nucleic.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/nucleic.scm /tmp/r7rs-benchmarks/Racket/nucleic.scm
+raco make /tmp/r7rs-benchmarks/Racket/nucleic.scm
 Running...
-time racket /tmp/larcenous/Racket/nucleic.scm
+time racket /tmp/r7rs-benchmarks/Racket/nucleic.scm
 Running nucleic:50
-Elapsed time: 1.899 seconds (1.9) for nucleic:50
-+!CSVLINE!+racket-8.5/r7rs,nucleic:50,1.899
+Elapsed time: 2.208 seconds (2.209) for nucleic:50
++!CSVLINE!+racket-8.13/r7rs+chez,nucleic:50,2.208
 
-real	0m2.230s
-user	0m2.166s
-sys	0m0.064s
+real	0m2.486s
+user	0m2.441s
+sys	0m0.037s
 
 Testing pi under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/pi.scm /tmp/larcenous/Racket/pi.scm
-raco make /tmp/larcenous/Racket/pi.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/pi.scm /tmp/r7rs-benchmarks/Racket/pi.scm
+raco make /tmp/r7rs-benchmarks/Racket/pi.scm
 Running...
-time racket /tmp/larcenous/Racket/pi.scm
+time racket /tmp/r7rs-benchmarks/Racket/pi.scm
 Running pi:50:500:50:100
-Elapsed time: 0.658 seconds (0.658) for pi:50:500:50:100
-+!CSVLINE!+racket-8.5/r7rs,pi:50:500:50:100,0.658
+Elapsed time: 0.555 seconds (0.555) for pi:50:500:50:100
++!CSVLINE!+racket-8.13/r7rs+chez,pi:50:500:50:100,0.555
 
-real	0m0.991s
-user	0m0.919s
-sys	0m0.072s
+real	0m0.832s
+user	0m0.792s
+sys	0m0.037s
 
 Testing pnpoly under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/pnpoly.scm /tmp/larcenous/Racket/pnpoly.scm
-raco make /tmp/larcenous/Racket/pnpoly.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/pnpoly.scm /tmp/r7rs-benchmarks/Racket/pnpoly.scm
+raco make /tmp/r7rs-benchmarks/Racket/pnpoly.scm
 Running...
-time racket /tmp/larcenous/Racket/pnpoly.scm
+time racket /tmp/r7rs-benchmarks/Racket/pnpoly.scm
 Running pnpoly:1000000
-Elapsed time: 4.506 seconds (4.505) for pnpoly:1000000
-+!CSVLINE!+racket-8.5/r7rs,pnpoly:1000000,4.506
+Elapsed time: 4.588 seconds (4.588) for pnpoly:1000000
++!CSVLINE!+racket-8.13/r7rs+chez,pnpoly:1000000,4.588
 
-real	0m4.846s
-user	0m4.781s
-sys	0m0.064s
+real	0m4.865s
+user	0m4.823s
+sys	0m0.033s
 
 Testing ray under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/ray.scm /tmp/larcenous/Racket/ray.scm
-raco make /tmp/larcenous/Racket/ray.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/ray.scm /tmp/r7rs-benchmarks/Racket/ray.scm
+raco make /tmp/r7rs-benchmarks/Racket/ray.scm
 Running...
-time racket /tmp/larcenous/Racket/ray.scm
+time racket /tmp/r7rs-benchmarks/Racket/ray.scm
 Running ray:50
-Elapsed time: 4.31 seconds (4.311) for ray:50
-+!CSVLINE!+racket-8.5/r7rs,ray:50,4.31
+Elapsed time: 5.427 seconds (5.427) for ray:50
++!CSVLINE!+racket-8.13/r7rs+chez,ray:50,5.427
 
-real	0m4.643s
-user	0m4.415s
-sys	0m0.228s
+real	0m5.706s
+user	0m5.530s
+sys	0m0.160s
 
 Testing simplex under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/simplex.scm /tmp/larcenous/Racket/simplex.scm
-raco make /tmp/larcenous/Racket/simplex.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/simplex.scm /tmp/r7rs-benchmarks/Racket/simplex.scm
+raco make /tmp/r7rs-benchmarks/Racket/simplex.scm
 Running...
-time racket /tmp/larcenous/Racket/simplex.scm
+time racket /tmp/r7rs-benchmarks/Racket/simplex.scm
 Running simplex:1000000
-Elapsed time: 2.634 seconds (2.635) for simplex:1000000
-+!CSVLINE!+racket-8.5/r7rs,simplex:1000000,2.634
+Elapsed time: 2.349 seconds (2.348) for simplex:1000000
++!CSVLINE!+racket-8.13/r7rs+chez,simplex:1000000,2.349
 
-real	0m2.971s
-user	0m2.887s
-sys	0m0.084s
+real	0m2.632s
+user	0m2.585s
+sys	0m0.040s
 
 Testing ack under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/ack.scm /tmp/larcenous/Racket/ack.scm
-raco make /tmp/larcenous/Racket/ack.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/ack.scm /tmp/r7rs-benchmarks/Racket/ack.scm
+raco make /tmp/r7rs-benchmarks/Racket/ack.scm
 Running...
-time racket /tmp/larcenous/Racket/ack.scm
+time racket /tmp/r7rs-benchmarks/Racket/ack.scm
 Running ack:3:12:2
-Elapsed time: 2.82 seconds (2.82) for ack:3:12:2
-+!CSVLINE!+racket-8.5/r7rs,ack:3:12:2,2.82
+Elapsed time: 2.999 seconds (2.999) for ack:3:12:2
++!CSVLINE!+racket-8.13/r7rs+chez,ack:3:12:2,2.999
 
-real	0m3.152s
-user	0m3.076s
-sys	0m0.076s
+real	0m3.278s
+user	0m3.218s
+sys	0m0.053s
 
 Testing array1 under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/array1.scm /tmp/larcenous/Racket/array1.scm
-raco make /tmp/larcenous/Racket/array1.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/array1.scm /tmp/r7rs-benchmarks/Racket/array1.scm
+raco make /tmp/r7rs-benchmarks/Racket/array1.scm
 Running...
-time racket /tmp/larcenous/Racket/array1.scm
+time racket /tmp/r7rs-benchmarks/Racket/array1.scm
 Running array1:1000000:500
-Elapsed time: 6.405 seconds (6.405) for array1:1000000:500
-+!CSVLINE!+racket-8.5/r7rs,array1:1000000:500,6.405
+Elapsed time: 5.763 seconds (5.763) for array1:1000000:500
++!CSVLINE!+racket-8.13/r7rs+chez,array1:1000000:500,5.763
 
-real	0m6.734s
-user	0m3.791s
-sys	0m2.943s
+real	0m6.044s
+user	0m4.065s
+sys	0m1.950s
 
 Testing string under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/string.scm /tmp/larcenous/Racket/string.scm
-raco make /tmp/larcenous/Racket/string.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/string.scm /tmp/r7rs-benchmarks/Racket/string.scm
+raco make /tmp/r7rs-benchmarks/Racket/string.scm
 Running...
-time racket /tmp/larcenous/Racket/string.scm
+time racket /tmp/r7rs-benchmarks/Racket/string.scm
 Running string:500000:100
-Elapsed time: 5.097 seconds (5.097) for string:500000:100
-+!CSVLINE!+racket-8.5/r7rs,string:500000:100,5.097
+Elapsed time: 3.208 seconds (3.208) for string:500000:100
++!CSVLINE!+racket-8.13/r7rs+chez,string:500000:100,3.208
 
-real	0m5.447s
-user	0m4.027s
-sys	0m1.420s
+real	0m3.483s
+user	0m3.423s
+sys	0m0.050s
 
 Testing sum1 under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/sum1.scm /tmp/larcenous/Racket/sum1.scm
-raco make /tmp/larcenous/Racket/sum1.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/sum1.scm /tmp/r7rs-benchmarks/Racket/sum1.scm
+raco make /tmp/r7rs-benchmarks/Racket/sum1.scm
 Running...
-time racket /tmp/larcenous/Racket/sum1.scm
+time racket /tmp/r7rs-benchmarks/Racket/sum1.scm
 Running sum1:25
-Elapsed time: 14.382 seconds (14.382) for sum1:25
-+!CSVLINE!+racket-8.5/r7rs,sum1:25,14.382
+Elapsed time: 17.105 seconds (17.105) for sum1:25
++!CSVLINE!+racket-8.13/r7rs+chez,sum1:25,17.105
 
-real	0m14.708s
-user	0m14.004s
-sys	0m0.704s
+real	0m17.385s
+user	0m16.784s
+sys	0m0.566s
 
 Testing cat under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/cat.scm /tmp/larcenous/Racket/cat.scm
-raco make /tmp/larcenous/Racket/cat.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/cat.scm /tmp/r7rs-benchmarks/Racket/cat.scm
+raco make /tmp/r7rs-benchmarks/Racket/cat.scm
 Running...
-time racket /tmp/larcenous/Racket/cat.scm
+time racket /tmp/r7rs-benchmarks/Racket/cat.scm
 Running cat:50
-Elapsed time: 7.959 seconds (7.959) for cat:50
-+!CSVLINE!+racket-8.5/r7rs,cat:50,7.959
+Elapsed time: 4.693 seconds (4.693) for cat:50
++!CSVLINE!+racket-8.13/r7rs+chez,cat:50,4.693
 
-real	0m8.296s
-user	0m5.199s
-sys	0m0.672s
+real	0m4.971s
+user	0m4.561s
+sys	0m0.403s
 
 Testing tail under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/tail.scm /tmp/larcenous/Racket/tail.scm
-raco make /tmp/larcenous/Racket/tail.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/tail.scm /tmp/r7rs-benchmarks/Racket/tail.scm
+raco make /tmp/r7rs-benchmarks/Racket/tail.scm
 Running...
-time racket /tmp/larcenous/Racket/tail.scm
+time racket /tmp/r7rs-benchmarks/Racket/tail.scm
 Running tail:50
-Elapsed time: 5.536 seconds (5.536) for tail:50
-+!CSVLINE!+racket-8.5/r7rs,tail:50,5.536
+Elapsed time: 2.843 seconds (2.843) for tail:50
++!CSVLINE!+racket-8.13/r7rs+chez,tail:50,2.843
 
-real	0m5.870s
-user	0m2.495s
-sys	0m0.684s
+real	0m3.120s
+user	0m2.717s
+sys	0m0.396s
 
 Testing wc under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/wc.scm /tmp/larcenous/Racket/wc.scm
-raco make /tmp/larcenous/Racket/wc.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/wc.scm /tmp/r7rs-benchmarks/Racket/wc.scm
+raco make /tmp/r7rs-benchmarks/Racket/wc.scm
 Running...
-time racket /tmp/larcenous/Racket/wc.scm
+time racket /tmp/r7rs-benchmarks/Racket/wc.scm
 Running wc:inputs/bib:50
-Elapsed time: 3.413 seconds (3.413) for wc:inputs/bib:50
-+!CSVLINE!+racket-8.5/r7rs,wc:inputs/bib:50,3.413
+Elapsed time: 3.034 seconds (3.035) for wc:inputs/bib:50
++!CSVLINE!+racket-8.13/r7rs+chez,wc:inputs/bib:50,3.034
 
-real	0m3.742s
-user	0m3.602s
-sys	0m0.140s
+real	0m3.314s
+user	0m3.260s
+sys	0m0.050s
 
 Testing read1 under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/read1.scm /tmp/larcenous/Racket/read1.scm
-raco make /tmp/larcenous/Racket/read1.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/read1.scm /tmp/r7rs-benchmarks/Racket/read1.scm
+raco make /tmp/r7rs-benchmarks/Racket/read1.scm
 Running...
-time racket /tmp/larcenous/Racket/read1.scm
+time racket /tmp/r7rs-benchmarks/Racket/read1.scm
 Running read1:2500
-Elapsed time: 13.451 seconds (13.451) for read1:2500
-+!CSVLINE!+racket-8.5/r7rs,read1:2500,13.451
+Elapsed time: 15.448 seconds (15.448) for read1:2500
++!CSVLINE!+racket-8.13/r7rs+chez,read1:2500,15.448
 
-real	0m13.781s
-user	0m11.911s
-sys	0m1.868s
+real	0m15.727s
+user	0m14.369s
+sys	0m1.335s
 
 Testing compiler under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/compiler.scm /tmp/larcenous/Racket/compiler.scm
-raco make /tmp/larcenous/Racket/compiler.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/compiler.scm /tmp/r7rs-benchmarks/Racket/compiler.scm
+raco make /tmp/r7rs-benchmarks/Racket/compiler.scm
 Running...
-time racket /tmp/larcenous/Racket/compiler.scm
+time racket /tmp/r7rs-benchmarks/Racket/compiler.scm
 Running compiler:2000
-Elapsed time: 4.314 seconds (4.315) for compiler:2000
-+!CSVLINE!+racket-8.5/r7rs,compiler:2000,4.314
+Elapsed time: 3.928 seconds (3.927) for compiler:2000
++!CSVLINE!+racket-8.13/r7rs+chez,compiler:2000,3.928
 
-real	0m4.665s
-user	0m4.583s
-sys	0m0.080s
+real	0m4.249s
+user	0m4.200s
+sys	0m0.040s
 
 Testing conform under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/conform.scm /tmp/larcenous/Racket/conform.scm
-raco make /tmp/larcenous/Racket/conform.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/conform.scm /tmp/r7rs-benchmarks/Racket/conform.scm
+raco make /tmp/r7rs-benchmarks/Racket/conform.scm
 Running...
-time racket /tmp/larcenous/Racket/conform.scm
+time racket /tmp/r7rs-benchmarks/Racket/conform.scm
 Running conform:500
-Elapsed time: 4.124 seconds (4.124) for conform:500
-+!CSVLINE!+racket-8.5/r7rs,conform:500,4.124
+Elapsed time: 4.179 seconds (4.179) for conform:500
++!CSVLINE!+racket-8.13/r7rs+chez,conform:500,4.179
 
-real	0m4.455s
-user	0m4.362s
-sys	0m0.092s
+real	0m4.457s
+user	0m4.410s
+sys	0m0.040s
 
 Testing dynamic under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/dynamic.scm /tmp/larcenous/Racket/dynamic.scm
-raco make /tmp/larcenous/Racket/dynamic.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/dynamic.scm /tmp/r7rs-benchmarks/Racket/dynamic.scm
+raco make /tmp/r7rs-benchmarks/Racket/dynamic.scm
 Running...
-time racket /tmp/larcenous/Racket/dynamic.scm
+time racket /tmp/r7rs-benchmarks/Racket/dynamic.scm
 Running dynamic:500
-Elapsed time: 11.626 seconds (11.626) for dynamic:500
-+!CSVLINE!+racket-8.5/r7rs,dynamic:500,11.626
+Elapsed time: 12.363 seconds (12.363) for dynamic:500
++!CSVLINE!+racket-8.13/r7rs+chez,dynamic:500,12.363
 
-real	0m11.959s
-user	0m10.926s
-sys	0m1.027s
+real	0m12.643s
+user	0m11.806s
+sys	0m0.805s
 
 Testing earley under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/earley.scm /tmp/larcenous/Racket/earley.scm
-raco make /tmp/larcenous/Racket/earley.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/earley.scm /tmp/r7rs-benchmarks/Racket/earley.scm
+raco make /tmp/r7rs-benchmarks/Racket/earley.scm
 Running...
-time racket /tmp/larcenous/Racket/earley.scm
+time racket /tmp/r7rs-benchmarks/Racket/earley.scm
 Running earley:1
-Elapsed time: 8.245 seconds (8.244) for earley:1
-+!CSVLINE!+racket-8.5/r7rs,earley:1,8.245
+Elapsed time: 9.838 seconds (9.838) for earley:1
++!CSVLINE!+racket-8.13/r7rs+chez,earley:1,9.838
 
-real	0m8.640s
-user	0m8.079s
-sys	0m0.560s
+real	0m10.125s
+user	0m9.801s
+sys	0m0.296s
 
 Testing graphs under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/graphs.scm /tmp/larcenous/Racket/graphs.scm
-raco make /tmp/larcenous/Racket/graphs.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/graphs.scm /tmp/r7rs-benchmarks/Racket/graphs.scm
+raco make /tmp/r7rs-benchmarks/Racket/graphs.scm
 Running...
-time racket /tmp/larcenous/Racket/graphs.scm
+time racket /tmp/r7rs-benchmarks/Racket/graphs.scm
 Running graphs:7:3
-Elapsed time: 2.604 seconds (2.604) for graphs:7:3
-+!CSVLINE!+racket-8.5/r7rs,graphs:7:3,2.604
+Elapsed time: 2.787 seconds (2.787) for graphs:7:3
++!CSVLINE!+racket-8.13/r7rs+chez,graphs:7:3,2.787
 
-real	0m2.936s
-user	0m2.839s
-sys	0m0.096s
+real	0m3.067s
+user	0m3.020s
+sys	0m0.037s
 
 Testing lattice under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/lattice.scm /tmp/larcenous/Racket/lattice.scm
-raco make /tmp/larcenous/Racket/lattice.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/lattice.scm /tmp/r7rs-benchmarks/Racket/lattice.scm
+raco make /tmp/r7rs-benchmarks/Racket/lattice.scm
 Running...
-time racket /tmp/larcenous/Racket/lattice.scm
+time racket /tmp/r7rs-benchmarks/Racket/lattice.scm
 Running lattice:44:10
-Elapsed time: 3.419 seconds (3.419) for lattice:44:10
-+!CSVLINE!+racket-8.5/r7rs,lattice:44:10,3.419
+Elapsed time: 3.692 seconds (3.693) for lattice:44:10
++!CSVLINE!+racket-8.13/r7rs+chez,lattice:44:10,3.692
 
-real	0m3.760s
-user	0m3.663s
-sys	0m0.096s
+real	0m3.973s
+user	0m3.930s
+sys	0m0.037s
 
 Testing matrix under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/matrix.scm /tmp/larcenous/Racket/matrix.scm
-raco make /tmp/larcenous/Racket/matrix.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/matrix.scm /tmp/r7rs-benchmarks/Racket/matrix.scm
+raco make /tmp/r7rs-benchmarks/Racket/matrix.scm
 Running...
-time racket /tmp/larcenous/Racket/matrix.scm
+time racket /tmp/r7rs-benchmarks/Racket/matrix.scm
 Running matrix:5:5:2500
-Elapsed time: 1.557 seconds (1.557) for matrix:5:5:2500
-+!CSVLINE!+racket-8.5/r7rs,matrix:5:5:2500,1.557
+Elapsed time: 1.451 seconds (1.451) for matrix:5:5:2500
++!CSVLINE!+racket-8.13/r7rs+chez,matrix:5:5:2500,1.451
 
-real	0m1.888s
-user	0m1.815s
-sys	0m0.072s
+real	0m1.730s
+user	0m1.674s
+sys	0m0.050s
 
 Testing maze under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/maze.scm /tmp/larcenous/Racket/maze.scm
-raco make /tmp/larcenous/Racket/maze.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/maze.scm /tmp/r7rs-benchmarks/Racket/maze.scm
+raco make /tmp/r7rs-benchmarks/Racket/maze.scm
 Running...
-time racket /tmp/larcenous/Racket/maze.scm
+time racket /tmp/r7rs-benchmarks/Racket/maze.scm
 Running maze:20:7:10000
-Elapsed time: 1.518 seconds (1.518) for maze:20:7:10000
-+!CSVLINE!+racket-8.5/r7rs,maze:20:7:10000,1.518
+Elapsed time: 0.936 seconds (0.936) for maze:20:7:10000
++!CSVLINE!+racket-8.13/r7rs+chez,maze:20:7:10000,0.936
 
-real	0m1.846s
-user	0m1.753s
-sys	0m0.092s
+real	0m1.225s
+user	0m1.176s
+sys	0m0.039s
 
 Testing mazefun under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/mazefun.scm /tmp/larcenous/Racket/mazefun.scm
-raco make /tmp/larcenous/Racket/mazefun.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/mazefun.scm /tmp/r7rs-benchmarks/Racket/mazefun.scm
+raco make /tmp/r7rs-benchmarks/Racket/mazefun.scm
 Running...
-time racket /tmp/larcenous/Racket/mazefun.scm
+time racket /tmp/r7rs-benchmarks/Racket/mazefun.scm
 Running mazefun:11:11:10000
-Elapsed time: 2.833 seconds (2.834) for mazefun:11:11:10000
-+!CSVLINE!+racket-8.5/r7rs,mazefun:11:11:10000,2.833
+Elapsed time: 2.634 seconds (2.634) for mazefun:11:11:10000
++!CSVLINE!+racket-8.13/r7rs+chez,mazefun:11:11:10000,2.634
 
-real	0m3.164s
-user	0m3.092s
-sys	0m0.072s
+real	0m2.914s
+user	0m2.846s
+sys	0m0.060s
 
 Testing nqueens under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/nqueens.scm /tmp/larcenous/Racket/nqueens.scm
-raco make /tmp/larcenous/Racket/nqueens.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/nqueens.scm /tmp/r7rs-benchmarks/Racket/nqueens.scm
+raco make /tmp/r7rs-benchmarks/Racket/nqueens.scm
 Running...
-time racket /tmp/larcenous/Racket/nqueens.scm
+time racket /tmp/r7rs-benchmarks/Racket/nqueens.scm
 Running nqueens:13:10
-Elapsed time: 5.212 seconds (5.212) for nqueens:13:10
-+!CSVLINE!+racket-8.5/r7rs,nqueens:13:10,5.212
+Elapsed time: 5.386 seconds (5.386) for nqueens:13:10
++!CSVLINE!+racket-8.13/r7rs+chez,nqueens:13:10,5.386
 
-real	0m5.545s
-user	0m5.449s
-sys	0m0.096s
+real	0m5.664s
+user	0m5.589s
+sys	0m0.056s
 
 Testing paraffins under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/paraffins.scm /tmp/larcenous/Racket/paraffins.scm
-raco make /tmp/larcenous/Racket/paraffins.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/paraffins.scm /tmp/r7rs-benchmarks/Racket/paraffins.scm
+raco make /tmp/r7rs-benchmarks/Racket/paraffins.scm
 Running...
-time racket /tmp/larcenous/Racket/paraffins.scm
+time racket /tmp/r7rs-benchmarks/Racket/paraffins.scm
 Running paraffins:23:10
-Elapsed time: 9.164 seconds (9.164) for paraffins:23:10
-+!CSVLINE!+racket-8.5/r7rs,paraffins:23:10,9.164
+Elapsed time: 9.993 seconds (9.992) for paraffins:23:10
++!CSVLINE!+racket-8.13/r7rs+chez,paraffins:23:10,9.993
 
-real	0m9.516s
-user	0m8.711s
-sys	0m0.804s
+real	0m10.272s
+user	0m9.696s
+sys	0m0.538s
 
 Testing parsing under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/parsing.scm /tmp/larcenous/Racket/parsing.scm
-raco make /tmp/larcenous/Racket/parsing.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/parsing.scm /tmp/r7rs-benchmarks/Racket/parsing.scm
+raco make /tmp/r7rs-benchmarks/Racket/parsing.scm
 Running...
-time racket /tmp/larcenous/Racket/parsing.scm
+time racket /tmp/r7rs-benchmarks/Racket/parsing.scm
 Running parsing:2500
-Elapsed time: 2.309 seconds (2.308) for parsing:2500
-+!CSVLINE!+racket-8.5/r7rs,parsing:2500,2.309
+Elapsed time: 1.95 seconds (1.95) for parsing:2500
++!CSVLINE!+racket-8.13/r7rs+chez,parsing:2500,1.95
 
-real	0m2.641s
-user	0m2.533s
-sys	0m0.108s
+real	0m2.239s
+user	0m2.191s
+sys	0m0.043s
 
 Testing peval under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/peval.scm /tmp/larcenous/Racket/peval.scm
-raco make /tmp/larcenous/Racket/peval.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/peval.scm /tmp/r7rs-benchmarks/Racket/peval.scm
+raco make /tmp/r7rs-benchmarks/Racket/peval.scm
 Running...
-time racket /tmp/larcenous/Racket/peval.scm
+time racket /tmp/r7rs-benchmarks/Racket/peval.scm
 Running peval:2000
-Elapsed time: 2.139 seconds (2.139) for peval:2000
-+!CSVLINE!+racket-8.5/r7rs,peval:2000,2.139
+Elapsed time: 2.222 seconds (2.222) for peval:2000
++!CSVLINE!+racket-8.13/r7rs+chez,peval:2000,2.222
 
-real	0m2.478s
-user	0m2.390s
-sys	0m0.088s
+real	0m2.499s
+user	0m2.453s
+sys	0m0.040s
 
 Testing primes under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/primes.scm /tmp/larcenous/Racket/primes.scm
-raco make /tmp/larcenous/Racket/primes.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/primes.scm /tmp/r7rs-benchmarks/Racket/primes.scm
+raco make /tmp/r7rs-benchmarks/Racket/primes.scm
 Running...
-time racket /tmp/larcenous/Racket/primes.scm
+time racket /tmp/r7rs-benchmarks/Racket/primes.scm
 Running primes:1000:10000
-Elapsed time: 2.404 seconds (2.404) for primes:1000:10000
-+!CSVLINE!+racket-8.5/r7rs,primes:1000:10000,2.404
+Elapsed time: 1.002 seconds (1.002) for primes:1000:10000
++!CSVLINE!+racket-8.13/r7rs+chez,primes:1000:10000,1.002
 
-real	0m2.734s
-user	0m2.642s
-sys	0m0.092s
+real	0m1.279s
+user	0m1.244s
+sys	0m0.030s
 
 Testing quicksort under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/quicksort.scm /tmp/larcenous/Racket/quicksort.scm
-raco make /tmp/larcenous/Racket/quicksort.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/quicksort.scm /tmp/r7rs-benchmarks/Racket/quicksort.scm
+raco make /tmp/r7rs-benchmarks/Racket/quicksort.scm
 Running...
-time racket /tmp/larcenous/Racket/quicksort.scm
+time racket /tmp/r7rs-benchmarks/Racket/quicksort.scm
 Running quicksort:10000:2500
-Elapsed time: 10.606 seconds (10.606) for quicksort:10000:2500
-+!CSVLINE!+racket-8.5/r7rs,quicksort:10000:2500,10.606
+Elapsed time: 9.9 seconds (9.901) for quicksort:10000:2500
++!CSVLINE!+racket-8.13/r7rs+chez,quicksort:10000:2500,9.9
 
-real	0m10.940s
-user	0m10.856s
-sys	0m0.084s
+real	0m10.229s
+user	0m10.138s
+sys	0m0.060s
 
 Testing scheme under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/scheme.scm /tmp/larcenous/Racket/scheme.scm
-raco make /tmp/larcenous/Racket/scheme.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/scheme.scm /tmp/r7rs-benchmarks/Racket/scheme.scm
+raco make /tmp/r7rs-benchmarks/Racket/scheme.scm
 Running...
-time racket /tmp/larcenous/Racket/scheme.scm
+time racket /tmp/r7rs-benchmarks/Racket/scheme.scm
 Running scheme:100000
-Elapsed time: 3.245 seconds (3.245) for scheme:100000
-+!CSVLINE!+racket-8.5/r7rs,scheme:100000,3.245
+Elapsed time: 3.168 seconds (3.168) for scheme:100000
++!CSVLINE!+racket-8.13/r7rs+chez,scheme:100000,3.168
 
-real	0m3.585s
-user	0m3.492s
-sys	0m0.092s
+real	0m3.452s
+user	0m3.406s
+sys	0m0.040s
 
 Testing slatex under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/slatex.scm /tmp/larcenous/Racket/slatex.scm
-raco make /tmp/larcenous/Racket/slatex.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/slatex.scm /tmp/r7rs-benchmarks/Racket/slatex.scm
+raco make /tmp/r7rs-benchmarks/Racket/slatex.scm
 Running...
-time racket /tmp/larcenous/Racket/slatex.scm
+time racket /tmp/r7rs-benchmarks/Racket/slatex.scm
 Running slatex:500
-Elapsed time: 13.917 seconds (13.917) for slatex:500
-+!CSVLINE!+racket-8.5/r7rs,slatex:500,13.917
+Elapsed time: 12.374 seconds (12.375) for slatex:500
++!CSVLINE!+racket-8.13/r7rs+chez,slatex:500,12.374
 
-real	0m14.256s
-user	0m9.222s
-sys	0m4.607s
+real	0m12.655s
+user	0m10.007s
+sys	0m2.579s
 
 Testing chudnovsky under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/chudnovsky.scm /tmp/larcenous/Racket/chudnovsky.scm
-raco make /tmp/larcenous/Racket/chudnovsky.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/chudnovsky.scm /tmp/r7rs-benchmarks/Racket/chudnovsky.scm
+raco make /tmp/r7rs-benchmarks/Racket/chudnovsky.scm
 Running...
-time racket /tmp/larcenous/Racket/chudnovsky.scm
+time racket /tmp/r7rs-benchmarks/Racket/chudnovsky.scm
 Running chudnovsky:50:500:50:1000
-Elapsed time: 0.295 seconds (0.295) for chudnovsky:50:500:50:1000
-+!CSVLINE!+racket-8.5/r7rs,chudnovsky:50:500:50:1000,0.295
+Elapsed time: 0.261 seconds (0.261) for chudnovsky:50:500:50:1000
++!CSVLINE!+racket-8.13/r7rs+chez,chudnovsky:50:500:50:1000,0.261
 
-real	0m0.625s
-user	0m0.549s
-sys	0m0.076s
+real	0m0.541s
+user	0m0.502s
+sys	0m0.037s
 
 Testing nboyer under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/nboyer.scm /tmp/larcenous/Racket/nboyer.scm
-raco make /tmp/larcenous/Racket/nboyer.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/nboyer.scm /tmp/r7rs-benchmarks/Racket/nboyer.scm
+raco make /tmp/r7rs-benchmarks/Racket/nboyer.scm
 Running...
-time racket /tmp/larcenous/Racket/nboyer.scm
+time racket /tmp/r7rs-benchmarks/Racket/nboyer.scm
 Running nboyer:5:1
-Elapsed time: 5.323 seconds (5.323) for nboyer:5:1
-+!CSVLINE!+racket-8.5/r7rs,nboyer:5:1,5.323
+Elapsed time: 5.309 seconds (5.309) for nboyer:5:1
++!CSVLINE!+racket-8.13/r7rs+chez,nboyer:5:1,5.309
 
-real	0m5.682s
-user	0m5.390s
-sys	0m0.292s
+real	0m5.591s
+user	0m5.412s
+sys	0m0.159s
 
 Testing sboyer under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/sboyer.scm /tmp/larcenous/Racket/sboyer.scm
-raco make /tmp/larcenous/Racket/sboyer.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/sboyer.scm /tmp/r7rs-benchmarks/Racket/sboyer.scm
+raco make /tmp/r7rs-benchmarks/Racket/sboyer.scm
 Running...
-time racket /tmp/larcenous/Racket/sboyer.scm
+time racket /tmp/r7rs-benchmarks/Racket/sboyer.scm
 Running sboyer:5:1
-Elapsed time: 1.237 seconds (1.237) for sboyer:5:1
-+!CSVLINE!+racket-8.5/r7rs,sboyer:5:1,1.237
+Elapsed time: 1.268 seconds (1.268) for sboyer:5:1
++!CSVLINE!+racket-8.13/r7rs+chez,sboyer:5:1,1.268
 
-real	0m1.572s
-user	0m1.448s
-sys	0m0.124s
+real	0m1.544s
+user	0m1.489s
+sys	0m0.050s
 
 Testing gcbench under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/gcbench.scm /tmp/larcenous/Racket/gcbench.scm
-raco make /tmp/larcenous/Racket/gcbench.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/gcbench.scm /tmp/r7rs-benchmarks/Racket/gcbench.scm
+raco make /tmp/r7rs-benchmarks/Racket/gcbench.scm
 Running...
-time racket /tmp/larcenous/Racket/gcbench.scm
+time racket /tmp/r7rs-benchmarks/Racket/gcbench.scm
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
 Running gcbench:20:1
@@ -839,54 +839,54 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 3.509 seconds (3.509) for gcbench:20:1
-+!CSVLINE!+racket-8.5/r7rs,gcbench:20:1,3.509
+Elapsed time: 3.749 seconds (3.749) for gcbench:20:1
++!CSVLINE!+racket-8.13/r7rs+chez,gcbench:20:1,3.749
 
-real	0m3.841s
-user	0m3.721s
-sys	0m0.120s
+real	0m4.030s
+user	0m3.938s
+sys	0m0.080s
 
 Testing mperm under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/mperm.scm /tmp/larcenous/Racket/mperm.scm
-raco make /tmp/larcenous/Racket/mperm.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/mperm.scm /tmp/r7rs-benchmarks/Racket/mperm.scm
+raco make /tmp/r7rs-benchmarks/Racket/mperm.scm
 Running...
-time racket /tmp/larcenous/Racket/mperm.scm
+time racket /tmp/r7rs-benchmarks/Racket/mperm.scm
 Running mperm:20:10:2:1
-Elapsed time: 28.002 seconds (28.002) for mperm:20:10:2:1
-+!CSVLINE!+racket-8.5/r7rs,mperm:20:10:2:1,28.002
+Elapsed time: 31.214 seconds (31.214) for mperm:20:10:2:1
++!CSVLINE!+racket-8.13/r7rs+chez,mperm:20:10:2:1,31.214
 
-real	0m29.562s
-user	0m27.816s
-sys	0m1.744s
+real	0m32.671s
+user	0m31.692s
+sys	0m0.829s
 
 Testing equal under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/equal.scm /tmp/larcenous/Racket/equal.scm
-raco make /tmp/larcenous/Racket/equal.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/equal.scm /tmp/r7rs-benchmarks/Racket/equal.scm
+raco make /tmp/r7rs-benchmarks/Racket/equal.scm
 Running...
-time racket /tmp/larcenous/Racket/equal.scm
+time racket /tmp/r7rs-benchmarks/Racket/equal.scm
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 2.664 seconds (2.664) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+racket-8.5/r7rs,equal:100:100:8:1000:2000:5000,2.664
+Elapsed time: 2.322 seconds (2.322) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+racket-8.13/r7rs+chez,equal:100:100:8:1000:2000:5000,2.322
 
-real	0m2.992s
-user	0m2.891s
-sys	0m0.100s
+real	0m2.600s
+user	0m2.560s
+sys	0m0.033s
 
 Testing bv2string under Racket
 Including prelude /home/nex/src/r7rs-benchmarks/src/Racket-prelude.scm
 Compiling...
-racket_comp /tmp/larcenous/Racket/bv2string.scm /tmp/larcenous/Racket/bv2string.scm
-raco make /tmp/larcenous/Racket/bv2string.scm
+racket_comp /tmp/r7rs-benchmarks/Racket/bv2string.scm /tmp/r7rs-benchmarks/Racket/bv2string.scm
+raco make /tmp/r7rs-benchmarks/Racket/bv2string.scm
 Running...
-time racket /tmp/larcenous/Racket/bv2string.scm
+time racket /tmp/r7rs-benchmarks/Racket/bv2string.scm
 Running bv2string:1000:1000:100
-Elapsed time: 2.961 seconds (2.961) for bv2string:1000:1000:100
-+!CSVLINE!+racket-8.5/r7rs,bv2string:1000:1000:100,2.961
+Elapsed time: 1.816 seconds (1.817) for bv2string:1000:1000:100
++!CSVLINE!+racket-8.13/r7rs+chez,bv2string:1000:1000:100,1.816
 
-real	0m3.287s
-user	0m3.219s
-sys	0m0.068s
+real	0m2.098s
+user	0m2.051s
+sys	0m0.043s

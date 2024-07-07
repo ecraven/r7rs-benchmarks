@@ -1,805 +1,808 @@
 
 ****************************
-Benchmarking Loko on Sat 18 Jun 22:02:07 UTC 2022 under Linux benchmarks 5.4.157-1-pve #1 SMP PVE 5.4.157-1 (Mon, 29 Nov 2021 12:01:44 +0100) x86_64 GNU/Linux
+Benchmarking Loko on Sat 6 Jul 07:38:39 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
 
 Testing browse under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/browse.scm /tmp/larcenous/Loko/browse.exe
-/tmp/larcenous/Loko/browse.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/browse.scm /tmp/r7rs-benchmarks/Loko/browse.exe
+/tmp/r7rs-benchmarks/Loko/browse.exe
 Running...
 Running browse:2000
-Elapsed time: 1.9980000257492065 seconds (999/500) for browse:2000
-+!CSVLINE!+loko-0.11.0,browse:2000,1.9980000257492065
+Elapsed time: 1.5169999599456787 seconds (1517/1000) for browse:2000
++!CSVLINE!+loko-0.12.1,browse:2000,1.5169999599456787
 
-real	0m2.037s
-user	0m1.777s
-sys	0m0.260s
+real	0m1.522s
+user	0m1.381s
+sys	0m0.137s
 
 Testing deriv under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/deriv.scm /tmp/larcenous/Loko/deriv.exe
-/tmp/larcenous/Loko/deriv.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/deriv.scm /tmp/r7rs-benchmarks/Loko/deriv.exe
+/tmp/r7rs-benchmarks/Loko/deriv.exe
 Running...
 Running deriv:10000000
-Elapsed time: 3.197000026702881 seconds (3197/1000) for deriv:10000000
-+!CSVLINE!+loko-0.11.0,deriv:10000000,3.197000026702881
+Elapsed time: 2.0889999866485596 seconds (261/125) for deriv:10000000
++!CSVLINE!+loko-0.12.1,deriv:10000000,2.0889999866485596
 
-real	0m3.235s
-user	0m3.015s
-sys	0m0.220s
+real	0m2.093s
+user	0m1.957s
+sys	0m0.130s
 
 Testing destruc under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/destruc.scm /tmp/larcenous/Loko/destruc.exe
-/tmp/larcenous/Loko/destruc.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/destruc.scm /tmp/r7rs-benchmarks/Loko/destruc.exe
+/tmp/r7rs-benchmarks/Loko/destruc.exe
 Running...
 Running destruc:600:50:4000
-Elapsed time: 2.2330000400543213 seconds (2233/1000) for destruc:600:50:4000
-+!CSVLINE!+loko-0.11.0,destruc:600:50:4000,2.2330000400543213
+Elapsed time: 1.6319999694824219 seconds (204/125) for destruc:600:50:4000
++!CSVLINE!+loko-0.12.1,destruc:600:50:4000,1.6319999694824219
 
-real	0m2.271s
-user	0m2.047s
-sys	0m0.225s
+real	0m1.636s
+user	0m1.517s
+sys	0m0.116s
 
 Testing diviter under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/diviter.scm /tmp/larcenous/Loko/diviter.exe
-/tmp/larcenous/Loko/diviter.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/diviter.scm /tmp/r7rs-benchmarks/Loko/diviter.exe
+/tmp/r7rs-benchmarks/Loko/diviter.exe
 Running...
 Running diviter:1000:1000000
-Elapsed time: 2.315999984741211 seconds (579/250) for diviter:1000:1000000
-+!CSVLINE!+loko-0.11.0,diviter:1000:1000000,2.315999984741211
+Elapsed time: 1.8109999895095825 seconds (181/100) for diviter:1000:1000000
++!CSVLINE!+loko-0.12.1,diviter:1000:1000000,1.8109999895095825
 
-real	0m2.354s
-user	0m2.118s
-sys	0m0.236s
+real	0m1.815s
+user	0m1.720s
+sys	0m0.090s
 
 Testing divrec under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/divrec.scm /tmp/larcenous/Loko/divrec.exe
-/tmp/larcenous/Loko/divrec.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/divrec.scm /tmp/r7rs-benchmarks/Loko/divrec.exe
+/tmp/r7rs-benchmarks/Loko/divrec.exe
 Running...
 Running divrec:1000:1000000
-Elapsed time: 5.64900016784668 seconds (5649/1000) for divrec:1000:1000000
-+!CSVLINE!+loko-0.11.0,divrec:1000:1000000,5.64900016784668
+Elapsed time: 3.9590001106262207 seconds (3959/1000) for divrec:1000:1000000
++!CSVLINE!+loko-0.12.1,divrec:1000:1000000,3.9590001106262207
 
-real	0m5.687s
-user	0m5.410s
-sys	0m0.276s
+real	0m3.964s
+user	0m3.850s
+sys	0m0.103s
 
 Testing puzzle under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/puzzle.scm /tmp/larcenous/Loko/puzzle.exe
-/tmp/larcenous/Loko/puzzle.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/puzzle.scm /tmp/r7rs-benchmarks/Loko/puzzle.exe
+/tmp/r7rs-benchmarks/Loko/puzzle.exe
 Running...
 Running puzzle:1000
-Elapsed time: 2.2709999084472656 seconds (2271/1000) for puzzle:1000
-+!CSVLINE!+loko-0.11.0,puzzle:1000,2.2709999084472656
+Elapsed time: 2.065999984741211 seconds (1033/500) for puzzle:1000
++!CSVLINE!+loko-0.12.1,puzzle:1000,2.065999984741211
 
-real	0m2.309s
-user	0m2.044s
-sys	0m0.264s
+real	0m2.070s
+user	0m1.944s
+sys	0m0.123s
 
 Testing triangl under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/triangl.scm /tmp/larcenous/Loko/triangl.exe
-/tmp/larcenous/Loko/triangl.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/triangl.scm /tmp/r7rs-benchmarks/Loko/triangl.exe
+/tmp/r7rs-benchmarks/Loko/triangl.exe
 Running...
 Running triangl:22:1:50
-Elapsed time: 1.7669999599456787 seconds (1767/1000) for triangl:22:1:50
-+!CSVLINE!+loko-0.11.0,triangl:22:1:50,1.7669999599456787
+Elapsed time: 1.3930000066757202 seconds (1393/1000) for triangl:22:1:50
++!CSVLINE!+loko-0.12.1,triangl:22:1:50,1.3930000066757202
 
-real	0m1.768s
-user	0m1.768s
+real	0m1.395s
+user	0m1.395s
 sys	0m0.000s
 
 Testing tak under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/tak.scm /tmp/larcenous/Loko/tak.exe
-/tmp/larcenous/Loko/tak.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/tak.scm /tmp/r7rs-benchmarks/Loko/tak.exe
+/tmp/r7rs-benchmarks/Loko/tak.exe
 Running...
 Running tak:40:20:11:1
-Elapsed time: 1.7050000429153442 seconds (341/200) for tak:40:20:11:1
-+!CSVLINE!+loko-0.11.0,tak:40:20:11:1,1.7050000429153442
+Elapsed time: 1.6660000085830688 seconds (833/500) for tak:40:20:11:1
++!CSVLINE!+loko-0.12.1,tak:40:20:11:1,1.6660000085830688
 
-real	0m1.706s
-user	0m1.702s
-sys	0m0.004s
+real	0m1.668s
+user	0m1.667s
+sys	0m0.000s
 
 Testing takl under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/takl.scm /tmp/larcenous/Loko/takl.exe
-/tmp/larcenous/Loko/takl.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/takl.scm /tmp/r7rs-benchmarks/Loko/takl.exe
+/tmp/r7rs-benchmarks/Loko/takl.exe
 Running...
 Running takl:40:20:12:1
-Elapsed time: 2. seconds (2) for takl:40:20:12:1
-+!CSVLINE!+loko-0.11.0,takl:40:20:12:1,2.
+Elapsed time: 1.9500000476837158 seconds (1949/1000) for takl:40:20:12:1
++!CSVLINE!+loko-0.12.1,takl:40:20:12:1,1.9500000476837158
 
-real	0m2.001s
-user	0m2.001s
+real	0m1.951s
+user	0m1.950s
 sys	0m0.000s
 
 Testing ntakl under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/ntakl.scm /tmp/larcenous/Loko/ntakl.exe
-/tmp/larcenous/Loko/ntakl.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/ntakl.scm /tmp/r7rs-benchmarks/Loko/ntakl.exe
+/tmp/r7rs-benchmarks/Loko/ntakl.exe
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 1.9980000257492065 seconds (999/500) for ntakl:40:20:12:1
-+!CSVLINE!+loko-0.11.0,ntakl:40:20:12:1,1.9980000257492065
+Elapsed time: 1.9320000410079956 seconds (1931/1000) for ntakl:40:20:12:1
++!CSVLINE!+loko-0.12.1,ntakl:40:20:12:1,1.9320000410079956
 
-real	0m1.999s
-user	0m1.999s
-sys	0m0.000s
+real	0m1.934s
+user	0m1.930s
+sys	0m0.003s
 
 Testing cpstak under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/cpstak.scm /tmp/larcenous/Loko/cpstak.exe
-/tmp/larcenous/Loko/cpstak.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/cpstak.scm /tmp/r7rs-benchmarks/Loko/cpstak.exe
+/tmp/r7rs-benchmarks/Loko/cpstak.exe
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 6.546000003814697 seconds (1309/200) for cpstak:40:20:11:1
-+!CSVLINE!+loko-0.11.0,cpstak:40:20:11:1,6.546000003814697
+Elapsed time: 4.186999797821045 seconds (4187/1000) for cpstak:40:20:11:1
++!CSVLINE!+loko-0.12.1,cpstak:40:20:11:1,4.186999797821045
 
-real	0m6.584s
-user	0m6.348s
-sys	0m0.236s
+real	0m4.191s
+user	0m4.083s
+sys	0m0.097s
 
 Testing ctak under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/ctak.scm /tmp/larcenous/Loko/ctak.exe
-/tmp/larcenous/Loko/ctak.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/ctak.scm /tmp/r7rs-benchmarks/Loko/ctak.exe
+/tmp/r7rs-benchmarks/Loko/ctak.exe
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 17.743999481201172 seconds (2218/125) for ctak:32:16:8:1
-+!CSVLINE!+loko-0.11.0,ctak:32:16:8:1,17.743999481201172
+Elapsed time: 19.756000518798828 seconds (4939/250) for ctak:32:16:8:1
++!CSVLINE!+loko-0.12.1,ctak:32:16:8:1,19.756000518798828
 
-real	0m17.782s
-user	0m17.506s
-sys	0m0.272s
+real	0m19.760s
+user	0m19.571s
+sys	0m0.133s
 
 Testing fib under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/fib.scm /tmp/larcenous/Loko/fib.exe
-/tmp/larcenous/Loko/fib.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/fib.scm /tmp/r7rs-benchmarks/Loko/fib.exe
+/tmp/r7rs-benchmarks/Loko/fib.exe
 Running...
 Running fib:40:5
-Elapsed time: 3.2929999828338623 seconds (3293/1000) for fib:40:5
-+!CSVLINE!+loko-0.11.0,fib:40:5,3.2929999828338623
+Elapsed time: 3.63100004196167 seconds (454/125) for fib:40:5
++!CSVLINE!+loko-0.12.1,fib:40:5,3.63100004196167
 
-real	0m3.294s
-user	0m3.290s
-sys	0m0.004s
+real	0m3.634s
+user	0m3.629s
+sys	0m0.003s
 
 Testing fibc under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/fibc.scm /tmp/larcenous/Loko/fibc.exe
-/tmp/larcenous/Loko/fibc.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/fibc.scm /tmp/r7rs-benchmarks/Loko/fibc.exe
+/tmp/r7rs-benchmarks/Loko/fibc.exe
 Running...
 Running fibc:30:10
-Elapsed time: 8.590999603271484 seconds (1074/125) for fibc:30:10
-+!CSVLINE!+loko-0.11.0,fibc:30:10,8.590999603271484
+Elapsed time: 9.602999687194824 seconds (2401/250) for fibc:30:10
++!CSVLINE!+loko-0.12.1,fibc:30:10,9.602999687194824
 
-real	0m8.631s
-user	0m8.384s
-sys	0m0.244s
+real	0m9.608s
+user	0m9.461s
+sys	0m0.120s
 
 Testing fibfp under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/fibfp.scm /tmp/larcenous/Loko/fibfp.exe
-/tmp/larcenous/Loko/fibfp.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/fibfp.scm /tmp/r7rs-benchmarks/Loko/fibfp.exe
+/tmp/r7rs-benchmarks/Loko/fibfp.exe
 Running...
 Running fibfp:35.:10
-Elapsed time: 2.760999917984009 seconds (2761/1000) for fibfp:35.:10
-+!CSVLINE!+loko-0.11.0,fibfp:35.:10,2.760999917984009
+Elapsed time: 2.99399995803833 seconds (1497/500) for fibfp:35.:10
++!CSVLINE!+loko-0.12.1,fibfp:35.:10,2.99399995803833
 
-real	0m2.762s
-user	0m2.762s
-sys	0m0.000s
+real	0m2.996s
+user	0m2.991s
+sys	0m0.003s
 
 Testing sum under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/sum.scm /tmp/larcenous/Loko/sum.exe
-/tmp/larcenous/Loko/sum.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/sum.scm /tmp/r7rs-benchmarks/Loko/sum.exe
+/tmp/r7rs-benchmarks/Loko/sum.exe
 Running...
 Running sum:10000:200000
-Elapsed time: 2.936000108718872 seconds (367/125) for sum:10000:200000
-+!CSVLINE!+loko-0.11.0,sum:10000:200000,2.936000108718872
+Elapsed time: 3.180999994277954 seconds (1591/500) for sum:10000:200000
++!CSVLINE!+loko-0.12.1,sum:10000:200000,3.180999994277954
 
-real	0m2.937s
-user	0m2.933s
+real	0m3.184s
+user	0m3.179s
 sys	0m0.004s
 
 Testing sumfp under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/sumfp.scm /tmp/larcenous/Loko/sumfp.exe
-/tmp/larcenous/Loko/sumfp.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/sumfp.scm /tmp/r7rs-benchmarks/Loko/sumfp.exe
+/tmp/r7rs-benchmarks/Loko/sumfp.exe
 Running...
 Running sumfp:1000000.:500
 ERROR: returned incorrect result: 4.99873677312e11
++!CSVLINE!+loko-0.12.1,sumfp:1000000.:500,INCORRECT
 
-real	0m4.900s
-user	0m4.899s
+real	0m4.916s
+user	0m4.913s
 sys	0m0.000s
 
 Testing fft under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/fft.scm /tmp/larcenous/Loko/fft.exe
-/tmp/larcenous/Loko/fft.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/fft.scm /tmp/r7rs-benchmarks/Loko/fft.exe
+/tmp/r7rs-benchmarks/Loko/fft.exe
 Running...
 Running fft:65536:100
-Elapsed time: 1.3539999723434448 seconds (677/500) for fft:65536:100
-+!CSVLINE!+loko-0.11.0,fft:65536:100,1.3539999723434448
+Elapsed time: 1.3339999914169312 seconds (667/500) for fft:65536:100
++!CSVLINE!+loko-0.12.1,fft:65536:100,1.3339999914169312
 
-real	0m1.357s
-user	0m1.345s
-sys	0m0.012s
+real	0m1.336s
+user	0m1.331s
+sys	0m0.004s
 
 Testing mbrot under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/mbrot.scm /tmp/larcenous/Loko/mbrot.exe
-/tmp/larcenous/Loko/mbrot.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/mbrot.scm /tmp/r7rs-benchmarks/Loko/mbrot.exe
+/tmp/r7rs-benchmarks/Loko/mbrot.exe
 Running...
 Running mbrot:75:1000
-Elapsed time: 5.01200008392334 seconds (1253/250) for mbrot:75:1000
-+!CSVLINE!+loko-0.11.0,mbrot:75:1000,5.01200008392334
+Elapsed time: 6.334000110626221 seconds (3167/500) for mbrot:75:1000
++!CSVLINE!+loko-0.12.1,mbrot:75:1000,6.334000110626221
 
-real	0m5.015s
-user	0m5.002s
-sys	0m0.012s
+real	0m6.336s
+user	0m6.329s
+sys	0m0.004s
 
 Testing mbrotZ under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/mbrotZ.scm /tmp/larcenous/Loko/mbrotZ.exe
-/tmp/larcenous/Loko/mbrotZ.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/mbrotZ.scm /tmp/r7rs-benchmarks/Loko/mbrotZ.exe
+/tmp/r7rs-benchmarks/Loko/mbrotZ.exe
 Running...
 Running mbrotZ:75:1000
-Elapsed time: 16.23200035095215 seconds (2029/125) for mbrotZ:75:1000
-+!CSVLINE!+loko-0.11.0,mbrotZ:75:1000,16.23200035095215
+Elapsed time: 18.062000274658203 seconds (9031/500) for mbrotZ:75:1000
++!CSVLINE!+loko-0.12.1,mbrotZ:75:1000,18.062000274658203
 
-real	0m16.270s
-user	0m16.030s
-sys	0m0.232s
+real	0m18.066s
+user	0m17.921s
+sys	0m0.110s
 
 Testing nucleic under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/nucleic.scm /tmp/larcenous/Loko/nucleic.exe
-/tmp/larcenous/Loko/nucleic.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/nucleic.scm /tmp/r7rs-benchmarks/Loko/nucleic.exe
+/tmp/r7rs-benchmarks/Loko/nucleic.exe
 Running...
 Running nucleic:50
 ERROR: returned incorrect result: 33.797950744628906
++!CSVLINE!+loko-0.12.1,nucleic:50,INCORRECT
 
-real	0m4.716s
-user	0m4.532s
-sys	0m0.184s
+real	0m5.302s
+user	0m5.194s
+sys	0m0.103s
 
 Testing pi under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/pi.scm /tmp/larcenous/Loko/pi.exe
-/tmp/larcenous/Loko/pi.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/pi.scm /tmp/r7rs-benchmarks/Loko/pi.exe
+/tmp/r7rs-benchmarks/Loko/pi.exe
 Running...
 Running pi:50:500:50:100
-Elapsed time: 164.08900451660156 seconds (164089/1000) for pi:50:500:50:100
-+!CSVLINE!+loko-0.11.0,pi:50:500:50:100,164.08900451660156
+Elapsed time: 155.85699462890625 seconds (155857/1000) for pi:50:500:50:100
++!CSVLINE!+loko-0.12.1,pi:50:500:50:100,155.85699462890625
 
-real	2m44.129s
-user	2m43.901s
-sys	0m0.224s
+real	2m35.862s
+user	2m35.498s
+sys	0m0.140s
 
 Testing pnpoly under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/pnpoly.scm /tmp/larcenous/Loko/pnpoly.exe
-/tmp/larcenous/Loko/pnpoly.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/pnpoly.scm /tmp/r7rs-benchmarks/Loko/pnpoly.exe
+/tmp/r7rs-benchmarks/Loko/pnpoly.exe
 Running...
 Running pnpoly:1000000
-Elapsed time: 4.817999839782715 seconds (2409/500) for pnpoly:1000000
-+!CSVLINE!+loko-0.11.0,pnpoly:1000000,4.817999839782715
+Elapsed time: 5.210999965667725 seconds (5211/1000) for pnpoly:1000000
++!CSVLINE!+loko-0.12.1,pnpoly:1000000,5.210999965667725
 
-real	0m4.856s
-user	0m4.612s
-sys	0m0.244s
+real	0m5.216s
+user	0m5.074s
+sys	0m0.137s
 
 Testing ray under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/ray.scm /tmp/larcenous/Loko/ray.exe
-/tmp/larcenous/Loko/ray.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/ray.scm /tmp/r7rs-benchmarks/Loko/ray.exe
+/tmp/r7rs-benchmarks/Loko/ray.exe
 Running...
 Running ray:50
-Elapsed time: 3.3269999027252197 seconds (3327/1000) for ray:50
-+!CSVLINE!+loko-0.11.0,ray:50,3.3269999027252197
+Elapsed time: 2.628000020980835 seconds (657/250) for ray:50
++!CSVLINE!+loko-0.12.1,ray:50,2.628000020980835
 
-real	0m3.360s
-user	0m3.084s
-sys	0m0.276s
+real	0m2.632s
+user	0m2.562s
+sys	0m0.067s
 
 Testing simplex under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/simplex.scm /tmp/larcenous/Loko/simplex.exe
-/tmp/larcenous/Loko/simplex.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/simplex.scm /tmp/r7rs-benchmarks/Loko/simplex.exe
+/tmp/r7rs-benchmarks/Loko/simplex.exe
 Running...
 Running simplex:1000000
-Elapsed time: 1.9630000591278076 seconds (981/500) for simplex:1000000
-+!CSVLINE!+loko-0.11.0,simplex:1000000,1.9630000591278076
+Elapsed time: 1.8179999589920044 seconds (1817/1000) for simplex:1000000
++!CSVLINE!+loko-0.12.1,simplex:1000000,1.8179999589920044
 
-real	0m1.999s
-user	0m1.790s
-sys	0m0.208s
+real	0m1.822s
+user	0m1.713s
+sys	0m0.107s
 
 Testing ack under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/ack.scm /tmp/larcenous/Loko/ack.exe
-/tmp/larcenous/Loko/ack.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/ack.scm /tmp/r7rs-benchmarks/Loko/ack.exe
+/tmp/r7rs-benchmarks/Loko/ack.exe
 Running...
 Running ack:3:12:2
-Elapsed time: 6.560999870300293 seconds (6561/1000) for ack:3:12:2
-+!CSVLINE!+loko-0.11.0,ack:3:12:2,6.560999870300293
+Elapsed time: 8.164999961853027 seconds (1633/200) for ack:3:12:2
++!CSVLINE!+loko-0.12.1,ack:3:12:2,8.164999961853027
 
-real	0m6.562s
-user	0m6.558s
-sys	0m0.004s
+real	0m8.167s
+user	0m8.160s
+sys	0m0.003s
 
 Testing array1 under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/array1.scm /tmp/larcenous/Loko/array1.exe
-/tmp/larcenous/Loko/array1.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/array1.scm /tmp/r7rs-benchmarks/Loko/array1.exe
+/tmp/r7rs-benchmarks/Loko/array1.exe
 Running...
 Running array1:1000000:500
-Elapsed time: 2.3489999771118164 seconds (47/20) for array1:1000000:500
-+!CSVLINE!+loko-0.11.0,array1:1000000:500,2.3489999771118164
+Elapsed time: 2.2119998931884766 seconds (553/250) for array1:1000000:500
++!CSVLINE!+loko-0.12.1,array1:1000000:500,2.2119998931884766
 
-real	0m2.388s
-user	0m2.144s
-sys	0m0.244s
+real	0m2.216s
+user	0m2.077s
+sys	0m0.133s
 
 Testing string under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/string.scm /tmp/larcenous/Loko/string.exe
-/tmp/larcenous/Loko/string.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/string.scm /tmp/r7rs-benchmarks/Loko/string.exe
+/tmp/r7rs-benchmarks/Loko/string.exe
 Running...
 Running string:500000:100
-Elapsed time: 5.836999893188477 seconds (5837/1000) for string:500000:100
-+!CSVLINE!+loko-0.11.0,string:500000:100,5.836999893188477
+Elapsed time: 5.289999961853027 seconds (5289/1000) for string:500000:100
++!CSVLINE!+loko-0.12.1,string:500000:100,5.289999961853027
 
-real	0m5.875s
-user	0m5.615s
-sys	0m0.260s
+real	0m5.294s
+user	0m5.166s
+sys	0m0.113s
 
 Testing sum1 under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/sum1.scm /tmp/larcenous/Loko/sum1.exe
-/tmp/larcenous/Loko/sum1.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/sum1.scm /tmp/r7rs-benchmarks/Loko/sum1.exe
+/tmp/r7rs-benchmarks/Loko/sum1.exe
 Running...
 Running sum1:25
 ERROR: returned incorrect result: 15794.6416015625
++!CSVLINE!+loko-0.12.1,sum1:25,INCORRECT
 
-real	0m8.048s
-user	0m7.692s
-sys	0m0.356s
+real	0m3.583s
+user	0m3.467s
+sys	0m0.110s
 
 Testing cat under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/cat.scm /tmp/larcenous/Loko/cat.exe
-/tmp/larcenous/Loko/cat.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/cat.scm /tmp/r7rs-benchmarks/Loko/cat.exe
+/tmp/r7rs-benchmarks/Loko/cat.exe
 Running...
 Running cat:50
-Elapsed time: 8.272000312805176 seconds (1034/125) for cat:50
-+!CSVLINE!+loko-0.11.0,cat:50,8.272000312805176
+Elapsed time: 3.4670000076293945 seconds (3467/1000) for cat:50
++!CSVLINE!+loko-0.12.1,cat:50,3.4670000076293945
 
-real	0m8.283s
-user	0m3.686s
-sys	0m2.159s
+real	0m3.470s
+user	0m2.690s
+sys	0m0.776s
 
 Testing tail under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/tail.scm /tmp/larcenous/Loko/tail.exe
-/tmp/larcenous/Loko/tail.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/tail.scm /tmp/r7rs-benchmarks/Loko/tail.exe
+/tmp/r7rs-benchmarks/Loko/tail.exe
 Running...
 Running tail:50
-Elapsed time: 9.713000297546387 seconds (4857/500) for tail:50
-+!CSVLINE!+loko-0.11.0,tail:50,9.713000297546387
+Elapsed time: 5.184000015258789 seconds (648/125) for tail:50
++!CSVLINE!+loko-0.12.1,tail:50,5.184000015258789
 
-real	0m9.752s
-user	0m5.874s
-sys	0m2.319s
+real	0m5.189s
+user	0m4.427s
+sys	0m0.752s
 
 Testing wc under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/wc.scm /tmp/larcenous/Loko/wc.exe
-/tmp/larcenous/Loko/wc.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/wc.scm /tmp/r7rs-benchmarks/Loko/wc.exe
+/tmp/r7rs-benchmarks/Loko/wc.exe
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 3.309999942779541 seconds (331/100) for wc:inputs/bib:50
-+!CSVLINE!+loko-0.11.0,wc:inputs/bib:50,3.309999942779541
+Elapsed time: 2.2690000534057617 seconds (2269/1000) for wc:inputs/bib:50
++!CSVLINE!+loko-0.12.1,wc:inputs/bib:50,2.2690000534057617
 
-real	0m3.321s
-user	0m2.677s
-sys	0m0.644s
+real	0m2.272s
+user	0m2.210s
+sys	0m0.060s
 
 Testing read1 under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/read1.scm /tmp/larcenous/Loko/read1.exe
-/tmp/larcenous/Loko/read1.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/read1.scm /tmp/r7rs-benchmarks/Loko/read1.exe
+/tmp/r7rs-benchmarks/Loko/read1.exe
 Running...
 Running read1:2500
-Elapsed time: 5.935999870300293 seconds (742/125) for read1:2500
-+!CSVLINE!+loko-0.11.0,read1:2500,5.935999870300293
+Elapsed time: 2.614000082015991 seconds (1307/500) for read1:2500
++!CSVLINE!+loko-0.12.1,read1:2500,2.614000082015991
 
-real	0m5.974s
-user	0m5.518s
-sys	0m0.456s
+real	0m2.619s
+user	0m2.451s
+sys	0m0.156s
 
 Testing compiler under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/compiler.scm /tmp/larcenous/Loko/compiler.exe
-/tmp/larcenous/Loko/compiler.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/compiler.scm /tmp/r7rs-benchmarks/Loko/compiler.exe
+/tmp/r7rs-benchmarks/Loko/compiler.exe
 Running...
 Running compiler:2000
-Elapsed time: 1.9789999723434448 seconds (1979/1000) for compiler:2000
-+!CSVLINE!+loko-0.11.0,compiler:2000,1.9789999723434448
+Elapsed time: 1.402999997138977 seconds (1403/1000) for compiler:2000
++!CSVLINE!+loko-0.12.1,compiler:2000,1.402999997138977
 
-real	0m2.019s
-user	0m1.796s
-sys	0m0.224s
+real	0m1.409s
+user	0m1.268s
+sys	0m0.136s
 
 Testing conform under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/conform.scm /tmp/larcenous/Loko/conform.exe
-/tmp/larcenous/Loko/conform.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/conform.scm /tmp/r7rs-benchmarks/Loko/conform.exe
+/tmp/r7rs-benchmarks/Loko/conform.exe
 Running...
 Running conform:500
-Elapsed time: 2.1480000019073486 seconds (2149/1000) for conform:500
-+!CSVLINE!+loko-0.11.0,conform:500,2.1480000019073486
+Elapsed time: 1.7020000219345093 seconds (851/500) for conform:500
++!CSVLINE!+loko-0.12.1,conform:500,1.7020000219345093
 
-real	0m2.187s
-user	0m1.967s
-sys	0m0.220s
+real	0m1.707s
+user	0m1.590s
+sys	0m0.113s
 
 Testing dynamic under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/dynamic.scm /tmp/larcenous/Loko/dynamic.exe
-/tmp/larcenous/Loko/dynamic.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/dynamic.scm /tmp/r7rs-benchmarks/Loko/dynamic.exe
+/tmp/r7rs-benchmarks/Loko/dynamic.exe
 Running...
 Running dynamic:500
-Elapsed time: 5.9770002365112305 seconds (5977/1000) for dynamic:500
-+!CSVLINE!+loko-0.11.0,dynamic:500,5.9770002365112305
+Elapsed time: 3.2179999351501465 seconds (1609/500) for dynamic:500
++!CSVLINE!+loko-0.12.1,dynamic:500,3.2179999351501465
 
-real	0m6.016s
-user	0m5.579s
-sys	0m0.436s
+real	0m3.223s
+user	0m3.067s
+sys	0m0.146s
 
 Testing earley under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/earley.scm /tmp/larcenous/Loko/earley.exe
-/tmp/larcenous/Loko/earley.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/earley.scm /tmp/r7rs-benchmarks/Loko/earley.exe
+/tmp/r7rs-benchmarks/Loko/earley.exe
 Running...
 Running earley:1
 Fatal error: out of heap memory
 
-real	0m19.150s
-user	0m18.921s
-sys	0m0.228s
+real	0m17.831s
+user	0m17.648s
+sys	0m0.137s
 +!CSVLINE!+loko,earley,CRASHED
 
 Testing graphs under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/graphs.scm /tmp/larcenous/Loko/graphs.exe
-/tmp/larcenous/Loko/graphs.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/graphs.scm /tmp/r7rs-benchmarks/Loko/graphs.exe
+/tmp/r7rs-benchmarks/Loko/graphs.exe
 Running...
 Running graphs:7:3
-Elapsed time: 3.140000104904175 seconds (157/50) for graphs:7:3
-+!CSVLINE!+loko-0.11.0,graphs:7:3,3.140000104904175
+Elapsed time: 2.2339999675750732 seconds (2233/1000) for graphs:7:3
++!CSVLINE!+loko-0.12.1,graphs:7:3,2.2339999675750732
 
-real	0m3.180s
-user	0m2.952s
-sys	0m0.228s
+real	0m2.238s
+user	0m2.105s
+sys	0m0.126s
 
 Testing lattice under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/lattice.scm /tmp/larcenous/Loko/lattice.exe
-/tmp/larcenous/Loko/lattice.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/lattice.scm /tmp/r7rs-benchmarks/Loko/lattice.exe
+/tmp/r7rs-benchmarks/Loko/lattice.exe
 Running...
 Running lattice:44:10
-Elapsed time: 3.0160000324249268 seconds (377/125) for lattice:44:10
-+!CSVLINE!+loko-0.11.0,lattice:44:10,3.0160000324249268
+Elapsed time: 3.007999897003174 seconds (376/125) for lattice:44:10
++!CSVLINE!+loko-0.12.1,lattice:44:10,3.007999897003174
 
-real	0m3.045s
-user	0m2.865s
-sys	0m0.180s
+real	0m3.012s
+user	0m2.893s
+sys	0m0.117s
 
 Testing matrix under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/matrix.scm /tmp/larcenous/Loko/matrix.exe
-/tmp/larcenous/Loko/matrix.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/matrix.scm /tmp/r7rs-benchmarks/Loko/matrix.exe
+/tmp/r7rs-benchmarks/Loko/matrix.exe
 Running...
 Running matrix:5:5:2500
-Elapsed time: 2.2950000762939453 seconds (287/125) for matrix:5:5:2500
-+!CSVLINE!+loko-0.11.0,matrix:5:5:2500,2.2950000762939453
+Elapsed time: 1.7879999876022339 seconds (447/250) for matrix:5:5:2500
++!CSVLINE!+loko-0.12.1,matrix:5:5:2500,1.7879999876022339
 
-real	0m2.335s
-user	0m2.059s
-sys	0m0.276s
+real	0m1.792s
+user	0m1.684s
+sys	0m0.103s
 
 Testing maze under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/maze.scm /tmp/larcenous/Loko/maze.exe
-/tmp/larcenous/Loko/maze.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/maze.scm /tmp/r7rs-benchmarks/Loko/maze.exe
+/tmp/r7rs-benchmarks/Loko/maze.exe
 Running...
 Running maze:20:7:10000
-Elapsed time: 2.0810000896453857 seconds (2081/1000) for maze:20:7:10000
-+!CSVLINE!+loko-0.11.0,maze:20:7:10000,2.0810000896453857
+Elapsed time: 1.4149999618530273 seconds (283/200) for maze:20:7:10000
++!CSVLINE!+loko-0.12.1,maze:20:7:10000,1.4149999618530273
 
-real	0m2.111s
-user	0m1.918s
-sys	0m0.192s
+real	0m1.419s
+user	0m1.344s
+sys	0m0.073s
 
 Testing mazefun under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/mazefun.scm /tmp/larcenous/Loko/mazefun.exe
-/tmp/larcenous/Loko/mazefun.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/mazefun.scm /tmp/r7rs-benchmarks/Loko/mazefun.exe
+/tmp/r7rs-benchmarks/Loko/mazefun.exe
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 3.7730000019073486 seconds (943/250) for mazefun:11:11:10000
-+!CSVLINE!+loko-0.11.0,mazefun:11:11:10000,3.7730000019073486
+Elapsed time: 2.8980000019073486 seconds (2897/1000) for mazefun:11:11:10000
++!CSVLINE!+loko-0.12.1,mazefun:11:11:10000,2.8980000019073486
 
-real	0m3.811s
-user	0m3.571s
-sys	0m0.240s
+real	0m2.902s
+user	0m2.779s
+sys	0m0.116s
 
 Testing nqueens under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/nqueens.scm /tmp/larcenous/Loko/nqueens.exe
-/tmp/larcenous/Loko/nqueens.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/nqueens.scm /tmp/r7rs-benchmarks/Loko/nqueens.exe
+/tmp/r7rs-benchmarks/Loko/nqueens.exe
 Running...
 Running nqueens:13:10
-Elapsed time: 7.434000015258789 seconds (3717/500) for nqueens:13:10
-+!CSVLINE!+loko-0.11.0,nqueens:13:10,7.434000015258789
+Elapsed time: 6.660999774932861 seconds (6661/1000) for nqueens:13:10
++!CSVLINE!+loko-0.12.1,nqueens:13:10,6.660999774932861
 
-real	0m7.472s
-user	0m7.228s
-sys	0m0.244s
+real	0m6.666s
+user	0m6.535s
+sys	0m0.123s
 
 Testing paraffins under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/paraffins.scm /tmp/larcenous/Loko/paraffins.exe
-/tmp/larcenous/Loko/paraffins.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/paraffins.scm /tmp/r7rs-benchmarks/Loko/paraffins.exe
+/tmp/r7rs-benchmarks/Loko/paraffins.exe
 Running...
 Running paraffins:23:10
-Elapsed time: 2.1429998874664307 seconds (2143/1000) for paraffins:23:10
-+!CSVLINE!+loko-0.11.0,paraffins:23:10,2.1429998874664307
+Elapsed time: 1.746999979019165 seconds (1747/1000) for paraffins:23:10
++!CSVLINE!+loko-0.12.1,paraffins:23:10,1.746999979019165
 
-real	0m2.181s
-user	0m1.913s
-sys	0m0.268s
+real	0m1.751s
+user	0m1.617s
+sys	0m0.129s
 
 Testing parsing under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/parsing.scm /tmp/larcenous/Loko/parsing.exe
-/tmp/larcenous/Loko/parsing.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/parsing.scm /tmp/r7rs-benchmarks/Loko/parsing.exe
+/tmp/r7rs-benchmarks/Loko/parsing.exe
 Running...
 Running parsing:2500
-Elapsed time: 3.803999900817871 seconds (761/200) for parsing:2500
-+!CSVLINE!+loko-0.11.0,parsing:2500,3.803999900817871
+Elapsed time: 2.138000011444092 seconds (2137/1000) for parsing:2500
++!CSVLINE!+loko-0.12.1,parsing:2500,2.138000011444092
 
-real	0m3.830s
-user	0m3.673s
-sys	0m0.156s
+real	0m2.141s
+user	0m2.079s
+sys	0m0.060s
 
 Testing peval under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/peval.scm /tmp/larcenous/Loko/peval.exe
-/tmp/larcenous/Loko/peval.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/peval.scm /tmp/r7rs-benchmarks/Loko/peval.exe
+/tmp/r7rs-benchmarks/Loko/peval.exe
 Running...
 Running peval:2000
-Elapsed time: 3.1589999198913574 seconds (3159/1000) for peval:2000
-+!CSVLINE!+loko-0.11.0,peval:2000,3.1589999198913574
+Elapsed time: 2.615000009536743 seconds (523/200) for peval:2000
++!CSVLINE!+loko-0.12.1,peval:2000,2.615000009536743
 
-real	0m3.198s
-user	0m2.982s
-sys	0m0.216s
+real	0m2.620s
+user	0m2.481s
+sys	0m0.133s
 
 Testing primes under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/primes.scm /tmp/larcenous/Loko/primes.exe
-/tmp/larcenous/Loko/primes.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/primes.scm /tmp/r7rs-benchmarks/Loko/primes.exe
+/tmp/r7rs-benchmarks/Loko/primes.exe
 Running...
 Running primes:1000:10000
-Elapsed time: 3.2709999084472656 seconds (409/125) for primes:1000:10000
-+!CSVLINE!+loko-0.11.0,primes:1000:10000,3.2709999084472656
+Elapsed time: 1.0700000524520874 seconds (1071/1000) for primes:1000:10000
++!CSVLINE!+loko-0.12.1,primes:1000:10000,1.0700000524520874
 
-real	0m3.312s
-user	0m3.036s
-sys	0m0.276s
+real	0m1.075s
+user	0m0.932s
+sys	0m0.140s
 
 Testing quicksort under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/quicksort.scm /tmp/larcenous/Loko/quicksort.exe
-/tmp/larcenous/Loko/quicksort.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/quicksort.scm /tmp/r7rs-benchmarks/Loko/quicksort.exe
+/tmp/r7rs-benchmarks/Loko/quicksort.exe
 Running...
 Running quicksort:10000:2500
-Elapsed time: 3.4739999771118164 seconds (1737/500) for quicksort:10000:2500
-+!CSVLINE!+loko-0.11.0,quicksort:10000:2500,3.4739999771118164
+Elapsed time: 2.8380000591278076 seconds (1419/500) for quicksort:10000:2500
++!CSVLINE!+loko-0.12.1,quicksort:10000:2500,2.8380000591278076
 
-real	0m3.558s
-user	0m3.327s
-sys	0m0.232s
+real	0m2.855s
+user	0m2.720s
+sys	0m0.130s
 
 Testing scheme under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/scheme.scm /tmp/larcenous/Loko/scheme.exe
-/tmp/larcenous/Loko/scheme.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/scheme.scm /tmp/r7rs-benchmarks/Loko/scheme.exe
+/tmp/r7rs-benchmarks/Loko/scheme.exe
 Running...
 Running scheme:100000
-Elapsed time: 2.361999988555908 seconds (1181/500) for scheme:100000
-+!CSVLINE!+loko-0.11.0,scheme:100000,2.361999988555908
+Elapsed time: 1.8760000467300415 seconds (1877/1000) for scheme:100000
++!CSVLINE!+loko-0.12.1,scheme:100000,1.8760000467300415
 
-real	0m2.401s
-user	0m2.145s
-sys	0m0.256s
+real	0m1.881s
+user	0m1.755s
+sys	0m0.123s
 
 Testing slatex under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/slatex.scm /tmp/larcenous/Loko/slatex.exe
-/tmp/larcenous/Loko/slatex.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/slatex.scm /tmp/r7rs-benchmarks/Loko/slatex.exe
+/tmp/r7rs-benchmarks/Loko/slatex.exe
 Running...
 Running slatex:500
-Elapsed time: 13.687000274658203 seconds (13687/1000) for slatex:500
-+!CSVLINE!+loko-0.11.0,slatex:500,13.687000274658203
+Elapsed time: 2.8550000190734863 seconds (571/200) for slatex:500
++!CSVLINE!+loko-0.12.1,slatex:500,2.8550000190734863
 
-real	0m13.733s
-user	0m1.425s
-sys	0m3.923s
+real	0m2.860s
+user	0m0.961s
+sys	0m1.854s
 
 Testing chudnovsky under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/chudnovsky.scm /tmp/larcenous/Loko/chudnovsky.exe
-/tmp/larcenous/Loko/chudnovsky.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/chudnovsky.scm /tmp/r7rs-benchmarks/Loko/chudnovsky.exe
+/tmp/r7rs-benchmarks/Loko/chudnovsky.exe
 Running...
 Running chudnovsky:50:500:50:1000
-Elapsed time: 29.17099952697754 seconds (29171/1000) for chudnovsky:50:500:50:1000
-+!CSVLINE!+loko-0.11.0,chudnovsky:50:500:50:1000,29.17099952697754
+Elapsed time: 27.819000244140625 seconds (13909/500) for chudnovsky:50:500:50:1000
++!CSVLINE!+loko-0.12.1,chudnovsky:50:500:50:1000,27.819000244140625
 
-real	0m29.210s
-user	0m28.973s
-sys	0m0.224s
+real	0m27.823s
+user	0m27.657s
+sys	0m0.123s
 
 Testing nboyer under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/nboyer.scm /tmp/larcenous/Loko/nboyer.exe
-/tmp/larcenous/Loko/nboyer.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/nboyer.scm /tmp/r7rs-benchmarks/Loko/nboyer.exe
+/tmp/r7rs-benchmarks/Loko/nboyer.exe
 Running...
 Running nboyer:5:1
-Elapsed time: 2.0869998931884766 seconds (2087/1000) for nboyer:5:1
-+!CSVLINE!+loko-0.11.0,nboyer:5:1,2.0869998931884766
+Elapsed time: 2.1029999256134033 seconds (1051/500) for nboyer:5:1
++!CSVLINE!+loko-0.12.1,nboyer:5:1,2.1029999256134033
 
-real	0m2.126s
-user	0m1.894s
-sys	0m0.232s
+real	0m2.107s
+user	0m1.972s
+sys	0m0.130s
 
 Testing sboyer under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/sboyer.scm /tmp/larcenous/Loko/sboyer.exe
-/tmp/larcenous/Loko/sboyer.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/sboyer.scm /tmp/r7rs-benchmarks/Loko/sboyer.exe
+/tmp/r7rs-benchmarks/Loko/sboyer.exe
 Running...
 Running sboyer:5:1
-Elapsed time: 1.0180000066757202 seconds (1017/1000) for sboyer:5:1
-+!CSVLINE!+loko-0.11.0,sboyer:5:1,1.0180000066757202
+Elapsed time: .843999981880188 seconds (211/250) for sboyer:5:1
++!CSVLINE!+loko-0.12.1,sboyer:5:1,.843999981880188
 
-real	0m1.031s
-user	0m0.975s
-sys	0m0.056s
+real	0m0.846s
+user	0m0.802s
+sys	0m0.043s
 
 Testing gcbench under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/gcbench.scm /tmp/larcenous/Loko/gcbench.exe
-/tmp/larcenous/Loko/gcbench.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/gcbench.scm /tmp/r7rs-benchmarks/Loko/gcbench.exe
+/tmp/r7rs-benchmarks/Loko/gcbench.exe
 Running...
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
@@ -836,54 +839,54 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 1.055999994277954 seconds (132/125) for gcbench:20:1
-+!CSVLINE!+loko-0.11.0,gcbench:20:1,1.055999994277954
+Elapsed time: .6800000071525574 seconds (681/1000) for gcbench:20:1
++!CSVLINE!+loko-0.12.1,gcbench:20:1,.6800000071525574
 
-real	0m1.096s
-user	0m0.896s
-sys	0m0.200s
+real	0m0.685s
+user	0m0.576s
+sys	0m0.107s
 
 Testing mperm under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/mperm.scm /tmp/larcenous/Loko/mperm.exe
-/tmp/larcenous/Loko/mperm.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/mperm.scm /tmp/r7rs-benchmarks/Loko/mperm.exe
+/tmp/r7rs-benchmarks/Loko/mperm.exe
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 7.98799991607666 seconds (1997/250) for mperm:20:10:2:1
-+!CSVLINE!+loko-0.11.0,mperm:20:10:2:1,7.98799991607666
+Elapsed time: 6.447000026702881 seconds (6447/1000) for mperm:20:10:2:1
++!CSVLINE!+loko-0.12.1,mperm:20:10:2:1,6.447000026702881
 
-real	0m8.168s
-user	0m7.952s
-sys	0m0.216s
+real	0m6.554s
+user	0m6.419s
+sys	0m0.116s
 
 Testing equal under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/equal.scm /tmp/larcenous/Loko/equal.exe
-/tmp/larcenous/Loko/equal.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/equal.scm /tmp/r7rs-benchmarks/Loko/equal.exe
+/tmp/r7rs-benchmarks/Loko/equal.exe
 Running...
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 3.2230000495910645 seconds (403/125) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+loko-0.11.0,equal:100:100:8:1000:2000:5000,3.2230000495910645
+Elapsed time: 2.3980000019073486 seconds (2399/1000) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+loko-0.12.1,equal:100:100:8:1000:2000:5000,2.3980000019073486
 
-real	0m3.264s
-user	0m3.028s
-sys	0m0.236s
+real	0m2.403s
+user	0m2.303s
+sys	0m0.097s
 
 Testing bv2string under Loko
 Including prelude /home/nex/src/r7rs-benchmarks/src/Loko-prelude.scm
 Including postlude /home/nex/src/r7rs-benchmarks/src/Loko-postlude.scm
 Compiling...
-loko_comp /tmp/larcenous/Loko/bv2string.scm /tmp/larcenous/Loko/bv2string.exe
-/tmp/larcenous/Loko/bv2string.exe
+loko_comp /tmp/r7rs-benchmarks/Loko/bv2string.scm /tmp/r7rs-benchmarks/Loko/bv2string.exe
+/tmp/r7rs-benchmarks/Loko/bv2string.exe
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 2.071000099182129 seconds (259/125) for bv2string:1000:1000:100
-+!CSVLINE!+loko-0.11.0,bv2string:1000:1000:100,2.071000099182129
+Elapsed time: 1.305999994277954 seconds (653/500) for bv2string:1000:1000:100
++!CSVLINE!+loko-0.12.1,bv2string:1000:1000:100,1.305999994277954
 
-real	0m2.107s
-user	0m1.855s
-sys	0m0.252s
+real	0m1.311s
+user	0m1.150s
+sys	0m0.160s

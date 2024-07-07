@@ -1,161 +1,202 @@
 
 ****************************
-Benchmarking Kawa on Sat 18 Jun 21:03:31 UTC 2022 under Linux benchmarks 5.4.157-1-pve #1 SMP PVE 5.4.157-1 (Mon, 29 Nov 2021 12:01:44 +0100) x86_64 GNU/Linux
+Benchmarking Kawa on Sat 6 Jul 07:06:55 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
 
 Testing browse under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/browse.scm /tmp/larcenous/Kawa/browse.scm
-(compiling /tmp/larcenous/Kawa/browse.scm to browse)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/browse.scm /tmp/r7rs-benchmarks/Kawa/browse.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/browse.scm to browse)
 Running...
 Running browse:2000
-Elapsed time: 28.263494505 seconds (28.264) for browse:2000
-+!CSVLINE!+kawa-3.1.1,browse:2000,28.263494505
+Elapsed time: 4.717278111 seconds (4.717) for browse:2000
++!CSVLINE!+kawa-3.1.1,browse:2000,4.717278111
 
-real	0m28.542s
-user	0m29.135s
-sys	0m0.056s
+real	0m5.009s
+user	0m5.483s
+sys	0m0.149s
 
 Testing deriv under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/deriv.scm /tmp/larcenous/Kawa/deriv.scm
-(compiling /tmp/larcenous/Kawa/deriv.scm to deriv)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/deriv.scm /tmp/r7rs-benchmarks/Kawa/deriv.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/deriv.scm to deriv)
 Running...
 Running deriv:10000000
-Elapsed time: 22.84827983 seconds (22.848) for deriv:10000000
-+!CSVLINE!+kawa-3.1.1,deriv:10000000,22.84827983
+Elapsed time: 17.671698195 seconds (17.672) for deriv:10000000
++!CSVLINE!+kawa-3.1.1,deriv:10000000,17.671698195
 
-real	0m23.150s
-user	0m57.509s
-sys	0m3.573s
+real	0m17.949s
+user	1m20.536s
+sys	0m5.614s
 
 Testing destruc under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/destruc.scm /tmp/larcenous/Kawa/destruc.scm
-(compiling /tmp/larcenous/Kawa/destruc.scm to destruc)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/destruc.scm /tmp/r7rs-benchmarks/Kawa/destruc.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/destruc.scm to destruc)
 Running...
 Running destruc:600:50:4000
-Elapsed time: 63.731853906 seconds (63.732) for destruc:600:50:4000
-+!CSVLINE!+kawa-3.1.1,destruc:600:50:4000,63.731853906
+Elapsed time: 19.425225995 seconds (19.426) for destruc:600:50:4000
++!CSVLINE!+kawa-3.1.1,destruc:600:50:4000,19.425225995
 
-real	1m3.984s
-user	1m4.299s
-sys	0m0.093s
+real	0m19.700s
+user	0m20.002s
+sys	0m0.097s
 
 Testing diviter under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/diviter.scm /tmp/larcenous/Kawa/diviter.scm
-(compiling /tmp/larcenous/Kawa/diviter.scm to diviter)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/diviter.scm /tmp/r7rs-benchmarks/Kawa/diviter.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/diviter.scm to diviter)
 Running...
 Running diviter:1000:1000000
-Elapsed time: 42.845867588 seconds (42.845) for diviter:1000:1000000
-+!CSVLINE!+kawa-3.1.1,diviter:1000:1000000,42.845867588
+Elapsed time: 8.968066024 seconds (8.968) for diviter:1000:1000000
++!CSVLINE!+kawa-3.1.1,diviter:1000:1000000,8.968066024
 
-real	0m43.112s
-user	0m43.382s
-sys	0m0.048s
+real	0m9.257s
+user	0m9.481s
+sys	0m0.117s
 
 Testing divrec under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/divrec.scm /tmp/larcenous/Kawa/divrec.scm
-(compiling /tmp/larcenous/Kawa/divrec.scm to divrec)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/divrec.scm /tmp/r7rs-benchmarks/Kawa/divrec.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/divrec.scm to divrec)
 Running...
 Running divrec:1000:1000000
-Elapsed time: 35.384174516 seconds (35.384) for divrec:1000:1000000
-+!CSVLINE!+kawa-3.1.1,divrec:1000:1000000,35.384174516
+Elapsed time: 10.389854494 seconds (10.39) for divrec:1000:1000000
++!CSVLINE!+kawa-3.1.1,divrec:1000:1000000,10.389854494
 
-real	0m35.645s
-user	0m35.926s
-sys	0m0.068s
+real	0m10.663s
+user	0m10.897s
+sys	0m0.117s
 
 Testing puzzle under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/puzzle.scm /tmp/larcenous/Kawa/puzzle.scm
-(compiling /tmp/larcenous/Kawa/puzzle.scm to puzzle)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/puzzle.scm /tmp/r7rs-benchmarks/Kawa/puzzle.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/puzzle.scm to puzzle)
 Running...
 Running puzzle:1000
-Elapsed time: 73.894402481 seconds (73.895) for puzzle:1000
-+!CSVLINE!+kawa-3.1.1,puzzle:1000,73.894402481
+Elapsed time: 7.670046997 seconds (7.67) for puzzle:1000
++!CSVLINE!+kawa-3.1.1,puzzle:1000,7.670046997
 
-real	1m14.166s
-user	1m14.525s
-sys	0m0.061s
+real	0m7.942s
+user	0m8.353s
+sys	0m0.064s
 
 Testing triangl under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/triangl.scm /tmp/larcenous/Kawa/triangl.scm
-(compiling /tmp/larcenous/Kawa/triangl.scm to triangl)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/triangl.scm /tmp/r7rs-benchmarks/Kawa/triangl.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/triangl.scm to triangl)
 Running...
 Running triangl:22:1:50
-Elapsed time: 46.520395478 seconds (46.521) for triangl:22:1:50
-+!CSVLINE!+kawa-3.1.1,triangl:22:1:50,46.520395478
+Elapsed time: 5.701153779 seconds (5.701) for triangl:22:1:50
++!CSVLINE!+kawa-3.1.1,triangl:22:1:50,5.701153779
 
-real	0m46.774s
-user	0m47.117s
-sys	0m0.072s
+real	0m5.971s
+user	0m6.293s
+sys	0m0.047s
 
 Testing tak under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/tak.scm /tmp/larcenous/Kawa/tak.scm
-(compiling /tmp/larcenous/Kawa/tak.scm to tak)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/tak.scm /tmp/r7rs-benchmarks/Kawa/tak.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/tak.scm to tak)
 Running...
 Running tak:40:20:11:1
-Elapsed time: 45.643135195 seconds (45.643) for tak:40:20:11:1
-+!CSVLINE!+kawa-3.1.1,tak:40:20:11:1,45.643135195
+Elapsed time: 6.374016592 seconds (6.374) for tak:40:20:11:1
++!CSVLINE!+kawa-3.1.1,tak:40:20:11:1,6.374016592
 
-real	0m45.908s
-user	0m46.083s
-sys	0m0.032s
+real	0m6.646s
+user	0m6.833s
+sys	0m0.037s
 
 Testing takl under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/takl.scm /tmp/larcenous/Kawa/takl.scm
-(compiling /tmp/larcenous/Kawa/takl.scm to takl)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/takl.scm /tmp/r7rs-benchmarks/Kawa/takl.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/takl.scm to takl)
 Running...
 Running takl:40:20:12:1
-Elapsed time: 134.383069297 seconds (134.383) for takl:40:20:12:1
-+!CSVLINE!+kawa-3.1.1,takl:40:20:12:1,134.383069297
+Elapsed time: 3.198461038 seconds (3.199) for takl:40:20:12:1
++!CSVLINE!+kawa-3.1.1,takl:40:20:12:1,3.198461038
 
-real	2m14.655s
-user	2m14.856s
-sys	0m0.052s
+real	0m3.484s
+user	0m3.665s
+sys	0m0.053s
 
 Testing ntakl under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/ntakl.scm /tmp/larcenous/Kawa/ntakl.scm
-(compiling /tmp/larcenous/Kawa/ntakl.scm to ntakl)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/ntakl.scm /tmp/r7rs-benchmarks/Kawa/ntakl.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/ntakl.scm to ntakl)
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 134.99677452 seconds (134.997) for ntakl:40:20:12:1
-+!CSVLINE!+kawa-3.1.1,ntakl:40:20:12:1,134.99677452
+Elapsed time: 3.042785136 seconds (3.042) for ntakl:40:20:12:1
++!CSVLINE!+kawa-3.1.1,ntakl:40:20:12:1,3.042785136
 
-real	2m15.260s
-user	2m15.463s
-sys	0m0.040s
+real	0m3.320s
+user	0m3.539s
+sys	0m0.030s
 
 Testing cpstak under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/cpstak.scm /tmp/larcenous/Kawa/cpstak.scm
-(compiling /tmp/larcenous/Kawa/cpstak.scm to cpstak)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/cpstak.scm /tmp/r7rs-benchmarks/Kawa/cpstak.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/cpstak.scm to cpstak)
 Running...
 Running cpstak:40:20:11:1
 java.lang.StackOverflowError
-	at gnu.mapping.ProcedureN.<init>(ProcedureN.java:25)
-	at gnu.mapping.MethodProc.<init>(MethodProc.java:20)
-	at gnu.expr.CompiledProc.<init>(CompiledProc.java:35)
-	at gnu.expr.CompiledProc.makeResultToObject(CompiledProc.java:47)
-	at cpstak$frame1.<init>(cpstak.scm)
-	at cpstak$frame0.lambda2(cpstak.scm:31)
+	at gnu.math.IntNum.valueOf(IntNum.java:1307)
+	at gnu.math.IntNum.make(IntNum.java:1294)
+	at gnu.math.IntNum.add(IntNum.java:381)
+	at gnu.kawa.functions.AddOp.apply2(AddOp.java:63)
+	at cpstak$frame1.lambda3(cpstak.scm:36)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
 	at cpstak$frame0.lambda2$check(cpstak.scm:31)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
 	at gnu.mapping.Procedure.apply1(Procedure.java:154)
@@ -439,294 +480,6 @@ java.lang.StackOverflowError
 	at cpstak$frame.lambda1tak(cpstak.scm:27)
 	at cpstak$frame0.lambda2(cpstak.scm:35)
 	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
 	at gnu.mapping.Procedure.apply1(Procedure.java:154)
 	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
@@ -935,6 +688,294 @@ java.lang.StackOverflowError
 	at gnu.mapping.Procedure.apply1(Procedure.java:154)
 	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
 	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame2.lambda4(cpstak.scm:40)
+	at cpstak$frame2.lambda4$check(cpstak.scm:39)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame1.lambda3(cpstak.scm:39)
+	at cpstak$frame1.lambda3$check(cpstak.scm:35)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
+	at cpstak$frame0.lambda2(cpstak.scm:35)
+	at cpstak$frame0.lambda2$check(cpstak.scm:31)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at cpstak$frame.lambda1tak(cpstak.scm:27)
 	at cpstak$frame1.lambda3(cpstak.scm:39)
 	at cpstak$frame1.lambda3$check(cpstak.scm:35)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
@@ -1133,254 +1174,213 @@ java.lang.StackOverflowError
 	at gnu.mapping.Procedure.apply1(Procedure.java:154)
 	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
 	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame1.lambda3(cpstak.scm:39)
-	at cpstak$frame1.lambda3$check(cpstak.scm:35)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame0.lambda2(cpstak.scm:35)
-	at cpstak$frame0.lambda2$check(cpstak.scm:31)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at cpstak$frame.lambda1tak(cpstak.scm:27)
-	at cpstak$frame2.lambda4(cpstak.scm:40)
-	at cpstak$frame2.lambda4$check(cpstak.scm:39)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
 
-real	0m0.285s
-user	0m0.472s
-sys	0m0.016s
+real	0m0.291s
+user	0m0.515s
+sys	0m0.040s
 +!CSVLINE!+kawa,cpstak,CRASHED
 
 Testing ctak under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/ctak.scm /tmp/larcenous/Kawa/ctak.scm
-(compiling /tmp/larcenous/Kawa/ctak.scm to ctak)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/ctak.scm /tmp/r7rs-benchmarks/Kawa/ctak.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/ctak.scm to ctak)
 Running...
 Running ctak:32:16:8:1
-Elapsed time: 107.575723465 seconds (107.576) for ctak:32:16:8:1
-+!CSVLINE!+kawa-3.1.1,ctak:32:16:8:1,107.575723465
+Elapsed time: 81.6485689 seconds (81.648) for ctak:32:16:8:1
++!CSVLINE!+kawa-3.1.1,ctak:32:16:8:1,81.6485689
 
-real	1m47.843s
-user	1m48.178s
-sys	0m0.385s
+real	1m21.919s
+user	1m22.062s
+sys	0m0.173s
 
 Testing fib under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/fib.scm /tmp/larcenous/Kawa/fib.scm
-(compiling /tmp/larcenous/Kawa/fib.scm to fib)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/fib.scm /tmp/r7rs-benchmarks/Kawa/fib.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/fib.scm to fib)
 Running...
 Running fib:40:5
-Elapsed time: 115.601437868 seconds (115.601) for fib:40:5
-+!CSVLINE!+kawa-3.1.1,fib:40:5,115.601437868
+Elapsed time: 16.630813266 seconds (16.631) for fib:40:5
++!CSVLINE!+kawa-3.1.1,fib:40:5,16.630813266
 
-real	1m55.862s
-user	1m56.070s
-sys	0m0.028s
+real	0m16.907s
+user	0m17.079s
+sys	0m0.063s
 
 Testing fibc under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/fibc.scm /tmp/larcenous/Kawa/fibc.scm
-(compiling /tmp/larcenous/Kawa/fibc.scm to fibc)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/fibc.scm /tmp/r7rs-benchmarks/Kawa/fibc.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/fibc.scm to fibc)
 Running...
 Running fibc:30:10
-Elapsed time: 75.096176822 seconds (75.096) for fibc:30:10
-+!CSVLINE!+kawa-3.1.1,fibc:30:10,75.096176822
+Elapsed time: 53.28753056 seconds (53.287) for fibc:30:10
++!CSVLINE!+kawa-3.1.1,fibc:30:10,53.28753056
 
-real	1m15.358s
-user	1m15.983s
-sys	0m0.145s
+real	0m53.566s
+user	0m53.868s
+sys	0m0.163s
 
 Testing fibfp under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/fibfp.scm /tmp/larcenous/Kawa/fibfp.scm
-(compiling /tmp/larcenous/Kawa/fibfp.scm to fibfp)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/fibfp.scm /tmp/r7rs-benchmarks/Kawa/fibfp.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/fibfp.scm to fibfp)
 Running...
 Running fibfp:35.0:10
-Elapsed time: 21.555957342 seconds (21.556) for fibfp:35.0:10
-+!CSVLINE!+kawa-3.1.1,fibfp:35.0:10,21.555957342
+Elapsed time: 3.399630559 seconds (3.399) for fibfp:35.0:10
++!CSVLINE!+kawa-3.1.1,fibfp:35.0:10,3.399630559
 
-real	0m21.825s
-user	0m22.029s
-sys	0m0.068s
+real	0m3.680s
+user	0m3.764s
+sys	0m0.232s
 
 Testing sum under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/sum.scm /tmp/larcenous/Kawa/sum.scm
-(compiling /tmp/larcenous/Kawa/sum.scm to sum)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/sum.scm /tmp/r7rs-benchmarks/Kawa/sum.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/sum.scm to sum)
 Running...
 Running sum:10000:200000
-Elapsed time: 163.084551886 seconds (163.085) for sum:10000:200000
-+!CSVLINE!+kawa-3.1.1,sum:10000:200000,163.084551886
+Elapsed time: 24.399157656 seconds (24.399) for sum:10000:200000
++!CSVLINE!+kawa-3.1.1,sum:10000:200000,24.399157656
 
-real	2m43.348s
-user	2m43.876s
-sys	0m0.169s
+real	0m24.680s
+user	0m24.827s
+sys	0m0.197s
 
 Testing sumfp under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/sumfp.scm /tmp/larcenous/Kawa/sumfp.scm
-(compiling /tmp/larcenous/Kawa/sumfp.scm to sumfp)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/sumfp.scm /tmp/r7rs-benchmarks/Kawa/sumfp.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/sumfp.scm to sumfp)
 Running...
 Running sumfp:1000000.0:500
-Elapsed time: 70.351769538 seconds (70.352) for sumfp:1000000.0:500
-+!CSVLINE!+kawa-3.1.1,sumfp:1000000.0:500,70.351769538
+Elapsed time: 36.627939475 seconds (36.628) for sumfp:1000000.0:500
++!CSVLINE!+kawa-3.1.1,sumfp:1000000.0:500,36.627939475
 
-real	1m10.605s
-user	1m10.829s
-sys	0m0.104s
+real	0m36.896s
+user	0m36.990s
+sys	0m0.219s
 
 Testing fft under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/fft.scm /tmp/larcenous/Kawa/fft.scm
-(compiling /tmp/larcenous/Kawa/fft.scm to fft)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/fft.scm /tmp/r7rs-benchmarks/Kawa/fft.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/fft.scm to fft)
 Running...
 Running fft:65536:100
-Elapsed time: 103.193265054 seconds (103.193) for fft:65536:100
-+!CSVLINE!+kawa-3.1.1,fft:65536:100,103.193265054
+Elapsed time: 63.745505703 seconds (63.745) for fft:65536:100
++!CSVLINE!+kawa-3.1.1,fft:65536:100,63.745505703
 
-real	1m43.448s
-user	1m44.240s
-sys	0m0.084s
+real	1m4.016s
+user	1m4.351s
+sys	0m0.186s
 
 Testing mbrot under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/mbrot.scm /tmp/larcenous/Kawa/mbrot.scm
-(compiling /tmp/larcenous/Kawa/mbrot.scm to mbrot)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/mbrot.scm /tmp/r7rs-benchmarks/Kawa/mbrot.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/mbrot.scm to mbrot)
 Running...
 Running mbrot:75:1000
-Elapsed time: 97.453110145 seconds (97.453) for mbrot:75:1000
-+!CSVLINE!+kawa-3.1.1,mbrot:75:1000,97.453110145
+Elapsed time: 24.344051611 seconds (24.344) for mbrot:75:1000
++!CSVLINE!+kawa-3.1.1,mbrot:75:1000,24.344051611
 
-real	1m37.709s
-user	1m38.180s
-sys	0m0.137s
+real	0m24.612s
+user	0m24.883s
+sys	0m0.200s
 
 Testing mbrotZ under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/mbrotZ.scm /tmp/larcenous/Kawa/mbrotZ.scm
-(compiling /tmp/larcenous/Kawa/mbrotZ.scm to mbrotZ)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/mbrotZ.scm /tmp/r7rs-benchmarks/Kawa/mbrotZ.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/mbrotZ.scm to mbrotZ)
 Running...
 Running mbrotZ:75:1000
-Elapsed time: 82.746802534 seconds (82.746) for mbrotZ:75:1000
-+!CSVLINE!+kawa-3.1.1,mbrotZ:75:1000,82.746802534
+Elapsed time: 23.160284885 seconds (23.16) for mbrotZ:75:1000
++!CSVLINE!+kawa-3.1.1,mbrotZ:75:1000,23.160284885
 
-real	1m23.006s
-user	1m23.523s
-sys	0m0.136s
+real	0m23.437s
+user	0m23.724s
+sys	0m0.190s
 
 Testing nucleic under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/nucleic.scm /tmp/larcenous/Kawa/nucleic.scm
-(compiling /tmp/larcenous/Kawa/nucleic.scm to nucleic)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/nucleic.scm /tmp/r7rs-benchmarks/Kawa/nucleic.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/nucleic.scm to nucleic)
 Running...
 Running nucleic:50
-Elapsed time: 35.688683901 seconds (35.689) for nucleic:50
-+!CSVLINE!+kawa-3.1.1,nucleic:50,35.688683901
+Elapsed time: 8.035949239 seconds (8.036) for nucleic:50
++!CSVLINE!+kawa-3.1.1,nucleic:50,8.035949239
 
-real	0m35.960s
-user	0m38.067s
-sys	0m0.148s
+real	0m8.340s
+user	0m9.606s
+sys	0m0.192s
 
 Testing pi under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/pi.scm /tmp/larcenous/Kawa/pi.scm
-(compiling /tmp/larcenous/Kawa/pi.scm to pi)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/pi.scm /tmp/r7rs-benchmarks/Kawa/pi.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/pi.scm to pi)
 Running...
 Running pi:50:500:50:100
-./bench: line 853:   939 Killed                  "${JAVA}" -cp $KAWAJAR:$(dirname $0)/out $classname < "$2"
+./bench: line 829: 344958 Killed                  "${JAVA}" -cp $KAWAJAR:$(dirname $0)/out $classname < "$2"
 
-real	4m59.112s
-user	5m0.114s
-sys	0m0.180s
+real	4m59.210s
+user	4m59.797s
+sys	0m0.283s
 +!CSVLINE!+kawa,pi,ULIMITKILLED
 
 Testing pnpoly under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/pnpoly.scm /tmp/larcenous/Kawa/pnpoly.scm
-(compiling /tmp/larcenous/Kawa/pnpoly.scm to pnpoly)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/pnpoly.scm /tmp/r7rs-benchmarks/Kawa/pnpoly.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/pnpoly.scm to pnpoly)
 Running...
 Running pnpoly:1000000
-Elapsed time: 106.727501594 seconds (106.727) for pnpoly:1000000
-+!CSVLINE!+kawa-3.1.1,pnpoly:1000000,106.727501594
+Elapsed time: 17.289703151 seconds (17.289) for pnpoly:1000000
++!CSVLINE!+kawa-3.1.1,pnpoly:1000000,17.289703151
 
-real	1m46.986s
-user	1m50.176s
-sys	0m0.268s
+real	0m17.561s
+user	0m22.078s
+sys	0m1.399s
 
 Testing ray under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/ray.scm /tmp/larcenous/Kawa/ray.scm
-(compiling /tmp/larcenous/Kawa/ray.scm to ray)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/ray.scm /tmp/r7rs-benchmarks/Kawa/ray.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/ray.scm to ray)
 Running...
 Running ray:50
-Elapsed time: 41.746560707 seconds (41.746) for ray:50
-+!CSVLINE!+kawa-3.1.1,ray:50,41.746560707
+Elapsed time: 10.401770854 seconds (10.402) for ray:50
++!CSVLINE!+kawa-3.1.1,ray:50,10.401770854
 
-real	0m42.004s
-user	0m43.081s
-sys	0m0.113s
+real	0m10.666s
+user	0m11.847s
+sys	0m0.186s
 
 Testing simplex under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/simplex.scm /tmp/larcenous/Kawa/simplex.scm
-(compiling /tmp/larcenous/Kawa/simplex.scm to simplex)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/simplex.scm /tmp/r7rs-benchmarks/Kawa/simplex.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/simplex.scm to simplex)
 Running...
 Running simplex:1000000
-Elapsed time: 55.716515181 seconds (55.717) for simplex:1000000
-+!CSVLINE!+kawa-3.1.1,simplex:1000000,55.716515181
+Elapsed time: 12.648663693 seconds (12.649) for simplex:1000000
++!CSVLINE!+kawa-3.1.1,simplex:1000000,12.648663693
 
-real	0m55.983s
-user	0m57.086s
-sys	0m0.080s
+real	0m12.925s
+user	0m13.715s
+sys	0m0.154s
 
 Testing ack under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/ack.scm /tmp/larcenous/Kawa/ack.scm
-(compiling /tmp/larcenous/Kawa/ack.scm to ack)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/ack.scm /tmp/r7rs-benchmarks/Kawa/ack.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/ack.scm to ack)
 Running...
 Running ack:3:12:2
 java.lang.StackOverflowError
@@ -2409,131 +2409,130 @@ java.lang.StackOverflowError
 	at ack.ack(ack.scm:25)
 	at ack.ack(ack.scm:25)
 
-real	0m26.406s
-user	0m26.667s
-sys	0m0.068s
+real	0m4.464s
+user	0m4.703s
+sys	0m0.096s
 +!CSVLINE!+kawa,ack,CRASHED
 
 Testing array1 under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/array1.scm /tmp/larcenous/Kawa/array1.scm
-(compiling /tmp/larcenous/Kawa/array1.scm to array1)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/array1.scm /tmp/r7rs-benchmarks/Kawa/array1.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/array1.scm to array1)
 Running...
 Running array1:1000000:500
-./bench: line 853:  1239 Killed                  "${JAVA}" -cp $KAWAJAR:$(dirname $0)/out $classname < "$2"
+Elapsed time: 148.618069624 seconds (148.618) for array1:1000000:500
++!CSVLINE!+kawa-3.1.1,array1:1000000:500,148.618069624
 
-real	4m24.365s
-user	5m0.276s
-sys	0m0.357s
-+!CSVLINE!+kawa,array1,ULIMITKILLED
+real	2m28.906s
+user	2m29.713s
+sys	0m0.561s
 
 Testing string under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/string.scm /tmp/larcenous/Kawa/string.scm
-(compiling /tmp/larcenous/Kawa/string.scm to string)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/string.scm /tmp/r7rs-benchmarks/Kawa/string.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/string.scm to string)
 Running...
 Running string:500000:100
-Elapsed time: 4.030897564 seconds (4.031) for string:500000:100
-+!CSVLINE!+kawa-3.1.1,string:500000:100,4.030897564
+Elapsed time: 3.660043816 seconds (3.66) for string:500000:100
++!CSVLINE!+kawa-3.1.1,string:500000:100,3.660043816
 
-real	0m4.293s
-user	0m4.867s
-sys	0m0.150s
+real	0m3.928s
+user	0m4.341s
+sys	0m0.095s
 
 Testing sum1 under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/sum1.scm /tmp/larcenous/Kawa/sum1.scm
-(compiling /tmp/larcenous/Kawa/sum1.scm to sum1)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/sum1.scm /tmp/r7rs-benchmarks/Kawa/sum1.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/sum1.scm to sum1)
 Running...
 Running sum1:25
-Elapsed time: 1.020826531 seconds (1.021) for sum1:25
-+!CSVLINE!+kawa-3.1.1,sum1:25,1.020826531
+Elapsed time: 1.198263228 seconds (1.198) for sum1:25
++!CSVLINE!+kawa-3.1.1,sum1:25,1.198263228
 
-real	0m1.278s
-user	0m1.737s
-sys	0m0.105s
+real	0m1.465s
+user	0m1.882s
+sys	0m0.145s
 
 Testing cat under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/cat.scm /tmp/larcenous/Kawa/cat.scm
-(compiling /tmp/larcenous/Kawa/cat.scm to cat)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/cat.scm /tmp/r7rs-benchmarks/Kawa/cat.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/cat.scm to cat)
 Running...
 Running cat:50
-Elapsed time: 13.017775103 seconds (13.018) for cat:50
-+!CSVLINE!+kawa-3.1.1,cat:50,13.017775103
+Elapsed time: 7.86434006 seconds (7.864) for cat:50
++!CSVLINE!+kawa-3.1.1,cat:50,7.86434006
 
-real	0m13.275s
-user	0m13.479s
-sys	0m0.349s
+real	0m8.150s
+user	0m8.534s
+sys	0m0.217s
 
 Testing tail under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/tail.scm /tmp/larcenous/Kawa/tail.scm
-(compiling /tmp/larcenous/Kawa/tail.scm to tail)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/tail.scm /tmp/r7rs-benchmarks/Kawa/tail.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/tail.scm to tail)
 Running...
 Running tail:50
-Elapsed time: 5.423389799 seconds (5.424) for tail:50
-+!CSVLINE!+kawa-3.1.1,tail:50,5.423389799
+Elapsed time: 2.00841039 seconds (2.008) for tail:50
++!CSVLINE!+kawa-3.1.1,tail:50,2.00841039
 
-real	0m5.689s
-user	0m3.578s
-sys	0m0.442s
+real	0m2.285s
+user	0m3.462s
+sys	0m0.916s
 
 Testing wc under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/wc.scm /tmp/larcenous/Kawa/wc.scm
-(compiling /tmp/larcenous/Kawa/wc.scm to wc)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/wc.scm /tmp/r7rs-benchmarks/Kawa/wc.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/wc.scm to wc)
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 8.399509749 seconds (8.4) for wc:inputs/bib:50
-+!CSVLINE!+kawa-3.1.1,wc:inputs/bib:50,8.399509749
+Elapsed time: 5.407734849 seconds (5.408) for wc:inputs/bib:50
++!CSVLINE!+kawa-3.1.1,wc:inputs/bib:50,5.407734849
 
-real	0m8.674s
-user	0m8.960s
-sys	0m0.212s
+real	0m5.676s
+user	0m5.953s
+sys	0m0.139s
 
 Testing read1 under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/read1.scm /tmp/larcenous/Kawa/read1.scm
-(compiling /tmp/larcenous/Kawa/read1.scm to read1)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/read1.scm /tmp/r7rs-benchmarks/Kawa/read1.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/read1.scm to read1)
 Running...
 Running read1:2500
-Elapsed time: 2.50484596 seconds (2.505) for read1:2500
-+!CSVLINE!+kawa-3.1.1,read1:2500,2.50484596
+Elapsed time: 3.555754942 seconds (3.555) for read1:2500
++!CSVLINE!+kawa-3.1.1,read1:2500,3.555754942
 
-real	0m2.762s
-user	0m3.565s
-sys	0m0.106s
+real	0m3.837s
+user	0m4.475s
+sys	0m0.146s
 
 Testing compiler under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/compiler.scm /tmp/larcenous/Kawa/compiler.scm
-(compiling /tmp/larcenous/Kawa/compiler.scm to compiler)
-/tmp/larcenous/Kawa/compiler.scm:6991:15: warning - void-valued expression where value is needed
-/tmp/larcenous/Kawa/compiler.scm:2947:10: warning - unreachable procedure call
-/tmp/larcenous/Kawa/compiler.scm:2948:16: note - this operand never finishes
+kawa_comp /tmp/r7rs-benchmarks/Kawa/compiler.scm /tmp/r7rs-benchmarks/Kawa/compiler.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/compiler.scm to compiler)
+/tmp/r7rs-benchmarks/Kawa/compiler.scm:2947:10: warning - unreachable procedure call
+/tmp/r7rs-benchmarks/Kawa/compiler.scm:2948:16: note - this operand never finishes
 Running...
 Running compiler:2000
-Elapsed time: 30.742687156 seconds (30.742) for compiler:2000
-+!CSVLINE!+kawa-3.1.1,compiler:2000,30.742687156
+Elapsed time: 18.417157613 seconds (18.417) for compiler:2000
++!CSVLINE!+kawa-3.1.1,compiler:2000,18.417157613
 
-real	0m31.217s
-user	0m50.712s
-sys	0m0.828s
+real	0m19.072s
+user	0m39.348s
+sys	0m1.437s
 
 Testing conform under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/conform.scm /tmp/larcenous/Kawa/conform.scm
-(compiling /tmp/larcenous/Kawa/conform.scm to conform)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/conform.scm /tmp/r7rs-benchmarks/Kawa/conform.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/conform.scm to conform)
 Running...
 Running conform:500
 java.lang.VerifyError: Bad type on operand stack
@@ -2557,8 +2556,6 @@ Exception Details:
     bci [8, 11] => handler: 45
     bci [22, 25] => handler: 58
   Stackmap Table:
-    full_frame(@11,{Object[#2],Object[#4]},{Object[#89]})
-    full_frame(@25,{Object[#2],Object[#4]},{Object[#4],Object[#89]})
     full_frame(@45,{Object[#2],Object[#4],Object[#4]},{Object[#91]})
     same_locals_1_stack_item_frame(@58,Object[#91])
 
@@ -2587,157 +2584,47 @@ Exception Details:
 	at gnu.expr.ModuleBody.runAsMain(ModuleBody.java:149)
 	at conform.main(conform.scm)
 
-real	0m0.311s
-user	0m0.532s
-sys	0m0.028s
+real	0m0.313s
+user	0m0.520s
+sys	0m0.050s
 +!CSVLINE!+kawa,conform,CRASHED
 
 Testing dynamic under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/dynamic.scm /tmp/larcenous/Kawa/dynamic.scm
-(compiling /tmp/larcenous/Kawa/dynamic.scm to dynamic)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/dynamic.scm /tmp/r7rs-benchmarks/Kawa/dynamic.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/dynamic.scm to dynamic)
 Running...
 Running dynamic:500
-Elapsed time: 46.206785049 seconds (46.207) for dynamic:500
-+!CSVLINE!+kawa-3.1.1,dynamic:500,46.206785049
+Elapsed time: 20.343194968 seconds (20.344) for dynamic:500
++!CSVLINE!+kawa-3.1.1,dynamic:500,20.343194968
 
-real	0m46.497s
-user	1m0.055s
-sys	0m0.979s
+real	0m20.637s
+user	0m40.232s
+sys	0m2.326s
 
 Testing earley under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/earley.scm /tmp/larcenous/Kawa/earley.scm
-(compiling /tmp/larcenous/Kawa/earley.scm to earley)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/earley.scm /tmp/r7rs-benchmarks/Kawa/earley.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/earley.scm to earley)
 Running...
 Running earley:1
-Elapsed time: 24.31459483 seconds (24.315) for earley:1
-+!CSVLINE!+kawa-3.1.1,earley:1,24.31459483
+Elapsed time: 6.474092522 seconds (6.474) for earley:1
++!CSVLINE!+kawa-3.1.1,earley:1,6.474092522
 
-real	0m27.417s
-user	0m46.717s
-sys	0m1.077s
+real	0m6.749s
+user	0m16.897s
+sys	0m1.038s
 
 Testing graphs under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/graphs.scm /tmp/larcenous/Kawa/graphs.scm
-(compiling /tmp/larcenous/Kawa/graphs.scm to graphs)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/graphs.scm /tmp/r7rs-benchmarks/Kawa/graphs.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/graphs.scm to graphs)
 Running...
 Running graphs:7:3
 java.lang.StackOverflowError
-	at graphs.cmpNextVertex(graphs.scm:334)
-	at graphs$frame3.lambda7(graphs.scm:308)
-	at graphs$frame3.lambda7$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
-	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
-	at graphs$frame1.lambda4(graphs.scm:253)
-	at graphs$frame1.lambda4$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:160)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at graphs$frame3.lambda7(graphs.scm:314)
-	at graphs$frame3.lambda7$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
-	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
-	at graphs$frame1.lambda4(graphs.scm:253)
-	at graphs$frame1.lambda4$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:160)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at graphs$frame3.lambda7(graphs.scm:314)
-	at graphs$frame3.lambda7$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
-	at graphs$frame1.lambda3(graphs.scm:245)
-	at graphs$frame1.lambda3$check(graphs.scm:242)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at graphs$frame4.lambda10cont(graphs.scm:404)
-	at graphs$frame4.lambda10cont$check(graphs.scm:401)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply3(Procedure.java:167)
-	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
-	at graphs$frame3.lambda8(graphs.scm:325)
-	at graphs$frame3.lambda8$check(graphs.scm:321)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply3(Procedure.java:167)
-	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
-	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:227)
-	at graphs$frame1.lambda4(graphs.scm:253)
-	at graphs$frame1.lambda4$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:160)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at graphs$frame3.lambda7(graphs.scm:314)
-	at graphs$frame3.lambda7$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
-	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
-	at graphs$frame1.lambda4(graphs.scm:253)
-	at graphs$frame1.lambda4$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:160)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at graphs$frame3.lambda7(graphs.scm:314)
-	at graphs$frame3.lambda7$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
-	at graphs$frame1.lambda3(graphs.scm:245)
-	at graphs$frame1.lambda3$check(graphs.scm:242)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply1(Procedure.java:154)
-	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
-	at graphs$frame4.lambda10cont(graphs.scm:404)
-	at graphs$frame4.lambda10cont$check(graphs.scm:401)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply3(Procedure.java:167)
-	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
-	at graphs$frame3.lambda8(graphs.scm:325)
-	at graphs$frame3.lambda8$check(graphs.scm:321)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply3(Procedure.java:167)
-	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
-	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:227)
-	at graphs$frame1.lambda4(graphs.scm:253)
-	at graphs$frame1.lambda4$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:160)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at graphs$frame3.lambda7(graphs.scm:314)
-	at graphs$frame3.lambda7$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
-	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
-	at graphs$frame1.lambda4(graphs.scm:253)
-	at graphs$frame1.lambda4$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:160)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at graphs$frame3.lambda7(graphs.scm:314)
 	at graphs$frame3.lambda7$check(graphs.scm:307)
 	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
 	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
@@ -3461,19 +3348,6 @@ java.lang.StackOverflowError
 	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
 	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
-	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
-	at graphs$frame1.lambda4(graphs.scm:253)
-	at graphs$frame1.lambda4$check(graphs.scm:249)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
-	at gnu.mapping.Procedure.apply2(Procedure.java:160)
-	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
-	at graphs$frame3.lambda7(graphs.scm:314)
-	at graphs$frame3.lambda7$check(graphs.scm:307)
-	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
-	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
-	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
-	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
-	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
 	at graphs$frame1.lambda3(graphs.scm:245)
 	at graphs$frame1.lambda3$check(graphs.scm:242)
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
@@ -3652,102 +3526,225 @@ java.lang.StackOverflowError
 	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
 	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
 	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:160)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at graphs$frame3.lambda7(graphs.scm:314)
+	at graphs$frame3.lambda7$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
+	at graphs$frame1.lambda3(graphs.scm:245)
+	at graphs$frame1.lambda3$check(graphs.scm:242)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at graphs$frame4.lambda10cont(graphs.scm:404)
+	at graphs$frame4.lambda10cont$check(graphs.scm:401)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply3(Procedure.java:167)
+	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
+	at graphs$frame3.lambda8(graphs.scm:325)
+	at graphs$frame3.lambda8$check(graphs.scm:321)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply3(Procedure.java:167)
+	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
+	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:227)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:160)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at graphs$frame3.lambda7(graphs.scm:314)
+	at graphs$frame3.lambda7$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
+	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:160)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at graphs$frame3.lambda7(graphs.scm:314)
+	at graphs$frame3.lambda7$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
+	at graphs$frame1.lambda3(graphs.scm:245)
+	at graphs$frame1.lambda3$check(graphs.scm:242)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply1(Procedure.java:154)
+	at gnu.kawa.functions.ApplyToArgs.apply2(ApplyToArgs.java:52)
+	at graphs$frame4.lambda10cont(graphs.scm:404)
+	at graphs$frame4.lambda10cont$check(graphs.scm:401)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply3(Procedure.java:167)
+	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
+	at graphs$frame3.lambda8(graphs.scm:325)
+	at graphs$frame3.lambda8$check(graphs.scm:321)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply3(Procedure.java:167)
+	at gnu.kawa.functions.ApplyToArgs.apply4(ApplyToArgs.java:66)
+	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:227)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:160)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at graphs$frame3.lambda7(graphs.scm:314)
+	at graphs$frame3.lambda7$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
+	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:160)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at graphs$frame3.lambda7(graphs.scm:314)
+	at graphs$frame3.lambda7$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
+	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:160)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at graphs$frame3.lambda7(graphs.scm:314)
+	at graphs$frame3.lambda7$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
+	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:656)
+	at gnu.mapping.Procedure.apply2(Procedure.java:160)
+	at gnu.kawa.functions.ApplyToArgs.apply3(ApplyToArgs.java:59)
+	at graphs$frame3.lambda7(graphs.scm:314)
+	at graphs$frame3.lambda7$check(graphs.scm:307)
+	at gnu.mapping.Procedure.applyToConsumerDefault(Procedure.java:75)
+	at gnu.kawa.functions.ApplyToArgs.applyToConsumerA2A(ApplyToArgs.java:132)
+	at gnu.mapping.CallContext.runUntilDone(CallContext.java:586)
+	at gnu.mapping.CallContext.runUntilValue(CallContext.java:669)
+	at graphs$frame0.lambda2_$Mn$St$St$Mn(graphs.scm:254)
+	at graphs$frame.lambda1_$Mn$St$Mn(graphs.scm:234)
+	at graphs$frame1.lambda4(graphs.scm:253)
+	at graphs$frame1.lambda4$check(graphs.scm:249)
 
-real	0m0.297s
-user	0m0.481s
-sys	0m0.036s
+real	0m0.306s
+user	0m0.508s
+sys	0m0.062s
 +!CSVLINE!+kawa,graphs,CRASHED
 
 Testing lattice under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/lattice.scm /tmp/larcenous/Kawa/lattice.scm
-(compiling /tmp/larcenous/Kawa/lattice.scm to lattice)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/lattice.scm /tmp/r7rs-benchmarks/Kawa/lattice.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/lattice.scm to lattice)
 Running...
 Running lattice:44:10
-Elapsed time: 104.485261481 seconds (104.485) for lattice:44:10
-+!CSVLINE!+kawa-3.1.1,lattice:44:10,104.485261481
+Elapsed time: 20.583176627 seconds (20.583) for lattice:44:10
++!CSVLINE!+kawa-3.1.1,lattice:44:10,20.583176627
 
-real	1m44.768s
-user	1m46.743s
-sys	0m0.212s
+real	0m20.859s
+user	0m25.279s
+sys	0m0.923s
 
 Testing matrix under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/matrix.scm /tmp/larcenous/Kawa/matrix.scm
-(compiling /tmp/larcenous/Kawa/matrix.scm to matrix)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/matrix.scm /tmp/r7rs-benchmarks/Kawa/matrix.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/matrix.scm to matrix)
 Running...
 Running matrix:5:5:2500
-Elapsed time: 35.05670301 seconds (35.056) for matrix:5:5:2500
-+!CSVLINE!+kawa-3.1.1,matrix:5:5:2500,35.05670301
+Elapsed time: 10.038638369 seconds (10.039) for matrix:5:5:2500
++!CSVLINE!+kawa-3.1.1,matrix:5:5:2500,10.038638369
 
-real	0m35.318s
-user	0m41.272s
-sys	0m0.610s
+real	0m10.329s
+user	0m22.962s
+sys	0m2.050s
 
 Testing maze under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/maze.scm /tmp/larcenous/Kawa/maze.scm
-(compiling /tmp/larcenous/Kawa/maze.scm to maze)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/maze.scm /tmp/r7rs-benchmarks/Kawa/maze.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/maze.scm to maze)
 Running...
 Running maze:20:7:10000
-Elapsed time: 29.098761441 seconds (29.099) for maze:20:7:10000
-+!CSVLINE!+kawa-3.1.1,maze:20:7:10000,29.098761441
+Elapsed time: 5.831169889 seconds (5.831) for maze:20:7:10000
++!CSVLINE!+kawa-3.1.1,maze:20:7:10000,5.831169889
 
-real	0m29.375s
-user	0m31.917s
-sys	0m0.152s
+real	0m6.118s
+user	0m8.047s
+sys	0m0.607s
 
 Testing mazefun under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/mazefun.scm /tmp/larcenous/Kawa/mazefun.scm
-(compiling /tmp/larcenous/Kawa/mazefun.scm to mazefun)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/mazefun.scm /tmp/r7rs-benchmarks/Kawa/mazefun.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/mazefun.scm to mazefun)
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 77.236829082 seconds (77.237) for mazefun:11:11:10000
-+!CSVLINE!+kawa-3.1.1,mazefun:11:11:10000,77.236829082
+Elapsed time: 10.572681984 seconds (10.573) for mazefun:11:11:10000
++!CSVLINE!+kawa-3.1.1,mazefun:11:11:10000,10.572681984
 
-real	1m17.505s
-user	1m19.072s
-sys	0m0.144s
+real	0m10.849s
+user	0m13.443s
+sys	0m0.478s
 
 Testing nqueens under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/nqueens.scm /tmp/larcenous/Kawa/nqueens.scm
-(compiling /tmp/larcenous/Kawa/nqueens.scm to nqueens)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/nqueens.scm /tmp/r7rs-benchmarks/Kawa/nqueens.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/nqueens.scm to nqueens)
 Running...
 Running nqueens:13:10
-Elapsed time: 185.677576455 seconds (185.677) for nqueens:13:10
-+!CSVLINE!+kawa-3.1.1,nqueens:13:10,185.677576455
+Elapsed time: 24.523178233 seconds (24.523) for nqueens:13:10
++!CSVLINE!+kawa-3.1.1,nqueens:13:10,24.523178233
 
-real	3m5.928s
-user	3m6.165s
-sys	0m0.092s
+real	0m24.787s
+user	0m24.994s
+sys	0m0.130s
 
 Testing paraffins under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/paraffins.scm /tmp/larcenous/Kawa/paraffins.scm
-(compiling /tmp/larcenous/Kawa/paraffins.scm to paraffins)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/paraffins.scm /tmp/r7rs-benchmarks/Kawa/paraffins.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/paraffins.scm to paraffins)
 Running...
 Running paraffins:23:10
-Elapsed time: 26.869592992 seconds (26.87) for paraffins:23:10
-+!CSVLINE!+kawa-3.1.1,paraffins:23:10,26.869592992
+Elapsed time: 17.938856864 seconds (17.939) for paraffins:23:10
++!CSVLINE!+kawa-3.1.1,paraffins:23:10,17.938856864
 
-real	0m28.201s
-user	1m27.088s
-sys	0m0.552s
+real	0m18.221s
+user	1m37.347s
+sys	0m6.984s
 
 Testing parsing under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/parsing.scm /tmp/larcenous/Kawa/parsing.scm
-(compiling /tmp/larcenous/Kawa/parsing.scm to parsing)
-/tmp/larcenous/Kawa/parsing.scm:808:7: warning - unreachable code
+kawa_comp /tmp/r7rs-benchmarks/Kawa/parsing.scm /tmp/r7rs-benchmarks/Kawa/parsing.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/parsing.scm to parsing)
+/tmp/r7rs-benchmarks/Kawa/parsing.scm:808:7: warning - unreachable code
 Running...
 Running parsing:2500
 java.lang.VerifyError: Inconsistent stackmap frames at branch target 3410
@@ -4265,22 +4262,14 @@ Exception Details:
     bci [1822, 1825] => handler: 7825
     bci [7740, 7743] => handler: 7840
   Stackmap Table:
-    same_frame(@7)
     same_frame(@14)
     same_frame(@24)
     same_locals_1_stack_item_frame(@29,Object[#4])
-    full_frame(@40,{Object[#2],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@46)
-    same_frame(@68)
-    same_frame(@86)
+    append_frame(@68,Object[#4])
     same_frame(@92)
     same_locals_1_stack_item_frame(@96,Object[#723])
-    full_frame(@110,{Object[#2],Object[#4],Object[#4],Object[#723]},{})
-    full_frame(@123,{Object[#2],Object[#4],Object[#4],Object[#723]},{Object[#2],Object[#110]})
-    full_frame(@134,{Object[#2],Object[#4],Object[#4],Object[#723]},{Object[#2],Object[#110],Integer,Integer})
-    same_frame(@140)
+    full_frame(@140,{Object[#2],Object[#4],Object[#4],Object[#723]},{})
     full_frame(@154,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    same_locals_1_stack_item_frame(@159,Integer)
     same_frame_extended(@548)
     same_frame(@561)
     same_frame(@586)
@@ -4372,73 +4361,55 @@ Exception Details:
     same_frame(@1790)
     same_frame(@1800)
     same_frame(@1815)
-    full_frame(@1825,{Object[#2],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@1831)
     same_frame(@1846)
     same_locals_1_stack_item_frame(@1856,Object[#4])
-    full_frame(@1863,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@1871)
+    append_frame(@1871,Object[#4])
     same_frame(@1895)
-    full_frame(@1912,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     full_frame(@1927,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     full_frame(@1937,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@1944,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@1988)
+    full_frame(@1988,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@2002)
     same_frame(@2013)
     same_frame(@2026)
     same_frame(@2050)
     same_frame(@2076)
     same_locals_1_stack_item_frame(@2086,Object[#4])
-    full_frame(@2093,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2120)
+    append_frame(@2120,Object[#4])
     same_frame(@2146)
     same_frame(@2172)
-    same_frame(@2180)
     same_frame(@2193)
     same_locals_1_stack_item_frame(@2203,Object[#4])
-    full_frame(@2210,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2218)
+    append_frame(@2218,Object[#4])
     same_frame(@2244)
     same_locals_1_stack_item_frame(@2254,Object[#4])
-    full_frame(@2261,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2269)
+    append_frame(@2269,Object[#4])
     same_frame(@2295)
     same_locals_1_stack_item_frame(@2305,Object[#4])
-    full_frame(@2312,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2320)
+    append_frame(@2320,Object[#4])
     same_frame(@2346)
     same_locals_1_stack_item_frame(@2356,Object[#4])
-    full_frame(@2363,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2371)
+    append_frame(@2371,Object[#4])
     same_frame(@2395)
     full_frame(@2405,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@2412,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2420)
+    full_frame(@2420,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@2446)
     same_locals_1_stack_item_frame(@2456,Object[#4])
-    full_frame(@2463,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2471)
+    full_frame(@2471,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@2497)
     same_locals_1_stack_item_frame(@2507,Object[#4])
-    full_frame(@2514,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2522)
+    full_frame(@2522,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@2548)
     same_locals_1_stack_item_frame(@2558,Object[#4])
-    full_frame(@2565,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2573)
+    full_frame(@2573,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@2599)
     same_locals_1_stack_item_frame(@2609,Object[#4])
-    full_frame(@2616,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2624)
+    append_frame(@2624,Object[#4])
     same_frame(@2650)
     full_frame(@2660,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@2667,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2675)
+    full_frame(@2675,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@2699)
     full_frame(@2705,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@2712,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@2776)
+    full_frame(@2776,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@2790)
     same_frame(@2804)
     same_frame(@2818)
@@ -4452,8 +4423,7 @@ Exception Details:
     same_frame(@2928)
     same_frame(@2954)
     same_locals_1_stack_item_frame(@2960,Object[#4])
-    full_frame(@2967,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@3020)
+    full_frame(@3020,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@3034)
     same_frame(@3048)
     same_frame(@3062)
@@ -4466,8 +4436,7 @@ Exception Details:
     same_frame(@3157)
     same_frame(@3172)
     full_frame(@3182,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@3189,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Object[#4]},{Integer})
-    same_frame_extended(@3328)
+    full_frame(@3328,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Object[#4]},{})
     full_frame(@3354,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@3368)
     same_frame(@3382)
@@ -4487,8 +4456,7 @@ Exception Details:
     same_frame(@3573)
     full_frame(@3588,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Object[#4]},{})
     full_frame(@3594,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@3601,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4]},{Integer})
-    same_frame(@3660)
+    full_frame(@3660,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4]},{})
     full_frame(@3674,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@3700)
     same_frame(@3714)
@@ -4497,8 +4465,7 @@ Exception Details:
     full_frame(@3753,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4]},{})
     same_frame(@3768)
     full_frame(@3774,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@3781,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4]},{Integer})
-    same_frame_extended(@3856)
+    full_frame(@3856,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4]},{})
     full_frame(@3870,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@3884)
     same_frame(@3898)
@@ -4514,8 +4481,7 @@ Exception Details:
     same_frame(@4033)
     full_frame(@4048,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4]},{})
     same_locals_1_stack_item_frame(@4058,Object[#4])
-    full_frame(@4065,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4],Object[#4]},{Integer})
-    same_frame(@4120)
+    full_frame(@4120,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4],Object[#4]},{})
     full_frame(@4134,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@4148)
     same_frame(@4162)
@@ -4528,8 +4494,7 @@ Exception Details:
     full_frame(@4257,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Top,Top,Object[#4],Object[#4]},{})
     same_frame(@4272)
     full_frame(@4278,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@4285,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@4340)
+    full_frame(@4340,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@4354)
     same_frame(@4368)
     same_frame(@4382)
@@ -4542,8 +4507,7 @@ Exception Details:
     same_frame(@4477)
     same_frame(@4492)
     full_frame(@4502,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@4509,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@4572)
+    full_frame(@4572,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@4586)
     same_frame(@4600)
     same_frame(@4614)
@@ -4557,12 +4521,10 @@ Exception Details:
     same_frame(@4724)
     same_frame(@4750)
     same_locals_1_stack_item_frame(@4756,Object[#4])
-    full_frame(@4763,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@4771)
+    full_frame(@4771,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@4795)
     full_frame(@4805,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@4812,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame_extended(@4968)
+    full_frame(@4968,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@4994)
     same_frame(@5008)
     same_frame(@5022)
@@ -4584,8 +4546,7 @@ Exception Details:
     same_frame(@5265)
     same_frame(@5280)
     same_locals_1_stack_item_frame(@5286,Object[#4])
-    full_frame(@5293,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame_extended(@5368)
+    full_frame(@5368,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@5394)
     same_frame(@5408)
     same_frame(@5422)
@@ -4596,8 +4557,7 @@ Exception Details:
     same_frame(@5502)
     same_frame(@5528)
     full_frame(@5534,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@5541,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@5596)
+    full_frame(@5596,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@5610)
     same_frame(@5624)
     same_frame(@5638)
@@ -4610,8 +4570,7 @@ Exception Details:
     same_frame(@5733)
     same_frame(@5748)
     same_locals_1_stack_item_frame(@5758,Object[#4])
-    full_frame(@5765,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame_extended(@5872)
+    full_frame(@5872,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@5886)
     same_frame(@5900)
     same_frame(@5914)
@@ -4625,18 +4584,14 @@ Exception Details:
     same_frame(@6035)
     same_frame(@6050)
     same_locals_1_stack_item_frame(@6056,Object[#4])
-    full_frame(@6063,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@6071)
+    full_frame(@6071,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@6097)
     full_frame(@6103,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@6110,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@6118)
+    full_frame(@6118,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@6151)
-    same_frame(@6168)
-    full_frame(@6183,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
+    same_frame(@6183)
     full_frame(@6193,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@6200,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame_extended(@6592)
+    full_frame(@6592,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     same_frame(@6606)
     same_frame(@6620)
     same_frame(@6634)
@@ -4719,9 +4674,7 @@ Exception Details:
     same_frame(@7709)
     same_frame(@7724)
     full_frame(@7730,{Object[#2],Object[#4],Object[#4],Object[#4]},{Object[#4]})
-    full_frame(@7743,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Integer})
-    same_frame(@7749)
-    same_frame(@7764)
+    full_frame(@7764,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{})
     full_frame(@7779,{Object[#2],Object[#4],Object[#4]},{Object[#4]})
     full_frame(@7780,{Object[#2],Object[#4],Object[#4],Object[#4],Object[#4]},{Object[#162]})
     full_frame(@7795,{Object[#2],Object[#4],Object[#4],Object[#723],Object[#4]},{Object[#162]})
@@ -4744,133 +4697,133 @@ Exception Details:
 	at gnu.expr.ModuleBody.runAsMain(ModuleBody.java:149)
 	at parsing.main(parsing.scm)
 
-real	0m0.360s
-user	0m0.530s
-sys	0m0.056s
+real	0m0.377s
+user	0m0.596s
+sys	0m0.028s
 +!CSVLINE!+kawa,parsing,CRASHED
 
 Testing peval under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/peval.scm /tmp/larcenous/Kawa/peval.scm
-(compiling /tmp/larcenous/Kawa/peval.scm to peval)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/peval.scm /tmp/r7rs-benchmarks/Kawa/peval.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/peval.scm to peval)
 Running...
 Running peval:2000
-Elapsed time: 45.292084204 seconds (45.292) for peval:2000
-+!CSVLINE!+kawa-3.1.1,peval:2000,45.292084204
+Elapsed time: 24.638012194 seconds (24.638) for peval:2000
++!CSVLINE!+kawa-3.1.1,peval:2000,24.638012194
 
-real	0m45.668s
-user	1m31.635s
-sys	0m4.060s
+real	0m24.939s
+user	1m46.257s
+sys	0m5.484s
 
 Testing primes under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/primes.scm /tmp/larcenous/Kawa/primes.scm
-(compiling /tmp/larcenous/Kawa/primes.scm to primes)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/primes.scm /tmp/r7rs-benchmarks/Kawa/primes.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/primes.scm to primes)
 Running...
 Running primes:1000:10000
-Elapsed time: 23.299989521 seconds (23.3) for primes:1000:10000
-+!CSVLINE!+kawa-3.1.1,primes:1000:10000,23.299989521
+Elapsed time: 2.872392526 seconds (2.872) for primes:1000:10000
++!CSVLINE!+kawa-3.1.1,primes:1000:10000,2.872392526
 
-real	0m23.554s
-user	0m23.848s
-sys	0m0.064s
+real	0m3.145s
+user	0m3.404s
+sys	0m0.140s
 
 Testing quicksort under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/quicksort.scm /tmp/larcenous/Kawa/quicksort.scm
-(compiling /tmp/larcenous/Kawa/quicksort.scm to quicksort)
-/tmp/larcenous/Kawa/quicksort.scm:115:30: warning - void-valued expression where value is needed
-/tmp/larcenous/Kawa/quicksort.scm:116:30: warning - void-valued expression where value is needed
-/tmp/larcenous/Kawa/quicksort.scm:119:32: warning - void-valued expression where value is needed
-/tmp/larcenous/Kawa/quicksort.scm:120:32: warning - void-valued expression where value is needed
+kawa_comp /tmp/r7rs-benchmarks/Kawa/quicksort.scm /tmp/r7rs-benchmarks/Kawa/quicksort.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/quicksort.scm to quicksort)
+/tmp/r7rs-benchmarks/Kawa/quicksort.scm:115:30: warning - void-valued expression where value is needed
+/tmp/r7rs-benchmarks/Kawa/quicksort.scm:116:30: warning - void-valued expression where value is needed
+/tmp/r7rs-benchmarks/Kawa/quicksort.scm:119:32: warning - void-valued expression where value is needed
+/tmp/r7rs-benchmarks/Kawa/quicksort.scm:120:32: warning - void-valued expression where value is needed
 Running...
 Running quicksort:10000:2500
-Elapsed time: 106.743395255 seconds (106.744) for quicksort:10000:2500
-+!CSVLINE!+kawa-3.1.1,quicksort:10000:2500,106.743395255
+Elapsed time: 18.211939446 seconds (18.212) for quicksort:10000:2500
++!CSVLINE!+kawa-3.1.1,quicksort:10000:2500,18.211939446
 
-real	1m47.088s
-user	1m47.808s
-sys	0m0.092s
+real	0m18.545s
+user	0m19.167s
+sys	0m0.153s
 
 Testing scheme under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/scheme.scm /tmp/larcenous/Kawa/scheme.scm
-(compiling /tmp/larcenous/Kawa/scheme.scm to scheme)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/scheme.scm /tmp/r7rs-benchmarks/Kawa/scheme.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/scheme.scm to scheme)
 Running...
 Running scheme:100000
-Elapsed time: 91.499538035 seconds (91.499) for scheme:100000
-+!CSVLINE!+kawa-3.1.1,scheme:100000,91.499538035
+Elapsed time: 42.241849036 seconds (42.241) for scheme:100000
++!CSVLINE!+kawa-3.1.1,scheme:100000,42.241849036
 
-real	1m31.797s
-user	1m32.884s
-sys	0m0.076s
+real	0m42.547s
+user	0m43.457s
+sys	0m0.136s
 
 Testing slatex under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/slatex.scm /tmp/larcenous/Kawa/slatex.scm
-(compiling /tmp/larcenous/Kawa/slatex.scm to slatex)
-/tmp/larcenous/Kawa/slatex.scm:2262:25: warning - void-valued expression where value is needed
+kawa_comp /tmp/r7rs-benchmarks/Kawa/slatex.scm /tmp/r7rs-benchmarks/Kawa/slatex.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/slatex.scm to slatex)
+/tmp/r7rs-benchmarks/Kawa/slatex.scm:2262:25: warning - void-valued expression where value is needed
 Running...
 Running slatex:500
-Elapsed time: 14.994191148 seconds (14.994) for slatex:500
-+!CSVLINE!+kawa-3.1.1,slatex:500,14.994191148
+Elapsed time: 9.96181228 seconds (9.962) for slatex:500
++!CSVLINE!+kawa-3.1.1,slatex:500,9.96181228
 
-real	0m15.309s
-user	0m15.125s
-sys	0m5.535s
+real	0m10.275s
+user	0m12.655s
+sys	0m4.425s
 
 Testing chudnovsky under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/chudnovsky.scm /tmp/larcenous/Kawa/chudnovsky.scm
-(compiling /tmp/larcenous/Kawa/chudnovsky.scm to chudnovsky)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/chudnovsky.scm /tmp/r7rs-benchmarks/Kawa/chudnovsky.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/chudnovsky.scm to chudnovsky)
 Running...
 Running chudnovsky:50:500:50:1000
-Elapsed time: 68.462737317 seconds (68.463) for chudnovsky:50:500:50:1000
-+!CSVLINE!+kawa-3.1.1,chudnovsky:50:500:50:1000,68.462737317
+Elapsed time: 59.05723788 seconds (59.057) for chudnovsky:50:500:50:1000
++!CSVLINE!+kawa-3.1.1,chudnovsky:50:500:50:1000,59.05723788
 
-real	1m8.716s
-user	1m9.689s
-sys	0m0.116s
+real	0m59.335s
+user	1m0.020s
+sys	0m0.193s
 
 Testing nboyer under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/nboyer.scm /tmp/larcenous/Kawa/nboyer.scm
-(compiling /tmp/larcenous/Kawa/nboyer.scm to nboyer)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/nboyer.scm /tmp/r7rs-benchmarks/Kawa/nboyer.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/nboyer.scm to nboyer)
 Running...
 Running nboyer:5:1
-Elapsed time: 20.92810584 seconds (20.928) for nboyer:5:1
-+!CSVLINE!+kawa-3.1.1,nboyer:5:1,20.92810584
+Elapsed time: 9.205958666 seconds (9.206) for nboyer:5:1
++!CSVLINE!+kawa-3.1.1,nboyer:5:1,9.205958666
 
-real	0m21.215s
-user	0m29.149s
-sys	0m0.308s
+real	0m9.496s
+user	0m11.187s
+sys	0m1.057s
 
 Testing sboyer under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/sboyer.scm /tmp/larcenous/Kawa/sboyer.scm
-(compiling /tmp/larcenous/Kawa/sboyer.scm to sboyer)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/sboyer.scm /tmp/r7rs-benchmarks/Kawa/sboyer.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/sboyer.scm to sboyer)
 Running...
 Running sboyer:5:1
-Elapsed time: 21.662573817 seconds (21.662) for sboyer:5:1
-+!CSVLINE!+kawa-3.1.1,sboyer:5:1,21.662573817
+Elapsed time: 8.45369694 seconds (8.454) for sboyer:5:1
++!CSVLINE!+kawa-3.1.1,sboyer:5:1,8.45369694
 
-real	0m21.935s
-user	0m25.406s
-sys	0m0.124s
+real	0m8.735s
+user	0m9.384s
+sys	0m0.362s
 
 Testing gcbench under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/gcbench.scm /tmp/larcenous/Kawa/gcbench.scm
-(compiling /tmp/larcenous/Kawa/gcbench.scm to gcbench)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/gcbench.scm /tmp/r7rs-benchmarks/Kawa/gcbench.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/gcbench.scm to gcbench)
 Running...
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
@@ -4907,32 +4860,32 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 7.066622515 seconds (7.067) for gcbench:20:1
-+!CSVLINE!+kawa-3.1.1,gcbench:20:1,7.066622515
+Elapsed time: 1.348543337 seconds (1.349) for gcbench:20:1
++!CSVLINE!+kawa-3.1.1,gcbench:20:1,1.348543337
 
-real	0m7.337s
-user	0m7.798s
-sys	0m0.185s
+real	0m1.616s
+user	0m2.085s
+sys	0m0.586s
 
 Testing mperm under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/mperm.scm /tmp/larcenous/Kawa/mperm.scm
-(compiling /tmp/larcenous/Kawa/mperm.scm to mperm)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/mperm.scm /tmp/r7rs-benchmarks/Kawa/mperm.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/mperm.scm to mperm)
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 92.973003033 seconds (92.973) for mperm:20:10:2:1
-+!CSVLINE!+kawa-3.1.1,mperm:20:10:2:1,92.973003033
+Elapsed time: 39.174105312 seconds (39.174) for mperm:20:10:2:1
++!CSVLINE!+kawa-3.1.1,mperm:20:10:2:1,39.174105312
 
-real	1m37.229s
-user	3m17.706s
-sys	0m0.652s
+real	0m41.268s
+user	2m33.016s
+sys	0m4.905s
 
 Testing equal under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/equal.scm /tmp/larcenous/Kawa/equal.scm
-(compiling /tmp/larcenous/Kawa/equal.scm to equal)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/equal.scm /tmp/r7rs-benchmarks/Kawa/equal.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/equal.scm to equal)
 Running...
 Running equal:100:100:8:1000:2000:5000
 java.lang.StackOverflowError
@@ -5961,21 +5914,21 @@ java.lang.StackOverflowError
 	at equal.makeTestTree5(equal.scm:76)
 	at equal.makeTestTree5(equal.scm:76)
 
-real	0m2.054s
-user	0m3.224s
-sys	0m0.171s
+real	0m1.431s
+user	0m2.669s
+sys	0m0.400s
 +!CSVLINE!+kawa,equal,CRASHED
 
 Testing bv2string under Kawa
 Including prelude /home/nex/src/r7rs-benchmarks/src/Kawa-prelude.scm
 Compiling...
-kawa_comp /tmp/larcenous/Kawa/bv2string.scm /tmp/larcenous/Kawa/bv2string.scm
-(compiling /tmp/larcenous/Kawa/bv2string.scm to bv2string)
+kawa_comp /tmp/r7rs-benchmarks/Kawa/bv2string.scm /tmp/r7rs-benchmarks/Kawa/bv2string.scm
+(compiling /tmp/r7rs-benchmarks/Kawa/bv2string.scm to bv2string)
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 17.958714082 seconds (17.959) for bv2string:1000:1000:100
-+!CSVLINE!+kawa-3.1.1,bv2string:1000:1000:100,17.958714082
+Elapsed time: 4.244080112 seconds (4.245) for bv2string:1000:1000:100
++!CSVLINE!+kawa-3.1.1,bv2string:1000:1000:100,4.244080112
 
-real	0m18.215s
-user	0m18.699s
-sys	0m0.132s
+real	0m4.520s
+user	0m4.991s
+sys	0m0.113s
