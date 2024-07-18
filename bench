@@ -630,7 +630,6 @@ ironscheme_exec ()
     sed -i -e 's/^(define (bitwise-and[[:blank:]].*).*$/#;(excluded/g' $1
     sed -i -e 's/^(define (div[[:blank:]].*).*$/#;(excluded/g' $1
     sed -i -e 's/^(define (mod[[:blank:]].*).*$/#;(excluded/g' $1
-    sed -i -e 's/^(define (partition[[:blank:]].*).*$/#;(excluded/g' $1
 
     # R6RS compat failure: gcbench
     # failures due to Mono: cpstak, fft, pi, pnpoly, quicksort
