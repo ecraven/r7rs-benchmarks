@@ -1,6 +1,6 @@
 (import 
   (except (ironscheme) time define-record-type partition)
-  (only (rename (ironscheme) (define-record-type r6rs:define-record-type)))
+  (rename (only (ironscheme) define-record-type) (define-record-type r6rs:define-record-type))
   (srfi :19) 
   (srfi :112))
 
