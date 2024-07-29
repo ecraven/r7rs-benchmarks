@@ -466,7 +466,9 @@ stklos_comp ()
 
 stklos_exec ()
 {
-    time ( ${STKLOS} -f "$1" < "$2" )
+    # The "-s 10000000" parameter, which sets a larger stack size, is necessary
+    # for at least one benchmark (ack) 
+    time ( ${STKLOS} -s 10000000 -f "$1" < "$2" )
 }
 
 # -----------------------------------------------------------------------------
