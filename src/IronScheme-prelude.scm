@@ -1,4 +1,26 @@
-(import (except (ironscheme) time) (srfi :19) (srfi :112))
+(import 
+  (except (ironscheme) time define-record-type partition)
+  (rename (only (ironscheme) define-record-type) (define-record-type r6rs:define-record-type))
+  (srfi :19) 
+  (srfi :112))
+
+(define-syntax define-record-type
+  ;; Simplistic R7RS to R6RS define-record-type transformation.
+  (syntax-rules ()
+    ((define-record-type name
+      (make-name param ...)
+      name?
+      (field-name field-ref field-set!)
+      ...)
+     (r6rs:define-record-type (name make-name name?)
+       (protocol
+         (lambda (new)
+           (lambda (param ...)
+             (new param ...))))
+       (fields
+         (mutable field-name field-ref field-set!)
+         ...)))))
+
 (define (exact-integer? i)
   (and (integer? i) (exact? i)))
 (define (square x)

@@ -18,7 +18,7 @@ Schemes that should work:
 - [[http://gambitscheme.org/wiki/index.php/Main_Page][GambitC]] (=gambitc=)
 - [[http://practical-scheme.net/gauche/][Gauche]] (=gauche=)
 - [[http://www.gnu.org/software/guile/][Guile]] (=guile=)
-- [[https://github.com/leppie/IronScheme][IronScheme]] (=ironscheme=)
+- [[https://github.com/IronScheme/IronScheme][IronScheme]] (=ironscheme=)
 - [[http://www.gnu.org/software/kawa/][Kawa]] (=kawa=)
 - [[http://www.larcenists.org/][Larceny]] (=larceny=)
 - [[https://scheme.fail/][Loko]] (=loko=)
@@ -76,16 +76,15 @@ sudo raco pkg install --scope installation r7rs
 #+END_SRC
 
 *** IronScheme
-Precompile system libraries (optional). It is still going to be slow.
-#+BEGIN_SRC
-echo "(compile-system-libraries)" | mono IronScheme.Console-v4.exe
-#+END_SRC
+Install the latest version of .NET Runtime (currently 9.0-preview, requires at least IronScheme 1.0.357) from https://dotnet.microsoft.com/en-us/download/dotnet .
+
 The default binary for IronScheme (can be changed by exporting IRONSCHEME in your shell before running bench) is called =ironscheme=.
 
 If you unpack IronScheme in your home, you can create a shell script like the following:
 #+BEGIN_SRC
 #!/bin/bash
-mono ~/IronScheme/IronScheme.Console-v4.exe -nologo -emacs $*
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+dotnet ~/IronScheme/IronScheme.ConsoleCore.dll $*
 #+END_SRC
 and put that somewhere in your =$PATH=.
 *** Stalin
