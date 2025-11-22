@@ -40,7 +40,7 @@ fi
 for i in $SCHEMES; do
   guile -L "$(dirname "$(realpath "$0")")" --language=wisp -x .w -e '(graph-gmean)' -c '' "$TMPDIR/all.csv" "$i" "--for-gnuplot" >> $TMPDIR/r7rs-gmean.csv || die "ERROR: cannot summarize data $i"
 done
-gnuplot -e 'set term png size 1920,1920; set output "'$GRAPH'"; set ylabel "geometric mean slowdown vs. fastest"; set logscale y; set grid; unset xtics; plot "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:3:4:xtic(1) with errorbars lw 3 ps 8 pt 5 title "geometric mean and stddev 68% range", "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:($1) with labels left rotate offset first -0.15,character 1.6 notitle, "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:(sprintf("%5.2f", $2)) with labels font "Mono,14" center offset first 0,character -2.2 notitle;'
+gnuplot -e 'set term png size 1920,1920; set output "'$GRAPH'"; set title "R7RS benchmarks evaluated for different Implementations with Geometric Mean"; set ylabel "geometric mean slowdown vs. fastest / unitless"; set logscale y; set grid; unset xtics; plot "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:3:4:xtic(1) with errorbars lw 3 ps 8 pt 5 title "geometric mean and stddev 68% range", "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:($1) with labels left rotate offset first -0.15,character 1.6 notitle, "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:(sprintf("%5.2f", $2)) with labels font "Mono,14" center offset first 0,character -2.2 notitle;'
 exec echo $GRAPH
 
 !#
