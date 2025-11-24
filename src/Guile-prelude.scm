@@ -13,6 +13,7 @@
 (define (square x) (* x x))
 (define (write-string str out) (display str out)) ; sufficient for tail.scm
 (define (this-scheme-implementation-name) (string-append "guile-" (version)))
+(define arithmetic-shift ash)
 (read-enable 'r7rs-symbols)
 (print-enable 'r7rs-symbols)
 (use-modules (rnrs bytevectors)
