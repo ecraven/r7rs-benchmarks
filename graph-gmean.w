@@ -40,7 +40,7 @@ fi
 for i in $SCHEMES; do
   guile -L "$(dirname "$(realpath "$0")")" --language=wisp -x .w -e '(graph-gmean)' -c '' "$TMPDIR/all.csv" "$i" "--for-gnuplot" >> $TMPDIR/r7rs-gmean.csv || die "ERROR: cannot summarize data $i"
 done
-gnuplot -e 'set term png size 1920,1920; set output "'$GRAPH'"; set key font "Sans,24"; set title "R7RS benchmarks evaluated for different Implementations with Geometric Mean" font "Sans,32"; set ylabel "geometric mean of elapsed seconds / fastest" font "Sans,24"; set logscale y; set grid; unset xtics; plot "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:3:4:xtic(1) with errorbars lw 3 ps 8 pt 5 title "geometric mean and separate lower and upper stddev 68% ranges", "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:($1) with labels font "Serif,18" left rotate offset first -0.15,character 1.6 notitle, "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:(sprintf("%5.2f", $2)) with labels font "Mono,16" center offset first 0.05,character -2.2 notitle;'
+gnuplot -e 'set term png size 1920,1920; set output "'$GRAPH'"; set key font "Sans,24"; set title "R7RS benchmarks evaluated for different Implementations with Geometric Mean" font "Sans,32"; set ylabel "slowdown / elapsed seconds divided by fastest" font "Sans,24"; set logscale y; set grid; unset xtics; plot "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:3:4:xtic(1) with errorbars lw 3 ps 8 pt 5 title "geometric mean and separate lower and upper stddev 68% ranges", "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:7:xtic(1) lw 3 ps 5 pt 13 title "median", "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:($1) with labels font "Serif,18" left rotate offset character -1,character 1.6 notitle, "< LANG=C sort -gk2 '$TMPDIR'/r7rs-gmean.csv" using 0:2:(sprintf("%5.2f", $2)) with labels font "Mono,16" center offset character 0.2,character -2.2 notitle;'
 exec echo $GRAPH
 
 !#
@@ -248,13 +248,15 @@ define : main args
             title : format-title : project-prefix args
             success-count : length : remove (λ(x) (equal? #f (string->number (car (cdr x))))) guile-data
             total-count : length guile-data
-          format err "~a (~a / ~a)\n"
+            median : exact->inexact : list-ref (sort data <) : floor/ success-count 2
+          format err "~a (~a / ~a), median: ~a\n"
              . g
              length : remove (λ(x) (equal? #f (string->number (car (cdr x))))) guile-data
              length guile-data
+             . median
           let-values : : (s_lower s_upper) : geometric-std/twosided data
             if : member "--for-gnuplot" args
-               format #t "~a ~a ~a ~a ~a ~a\n"
-                 . title g {g / s_lower} {g * s_upper} success-count total-count
+               format #t "~a ~a ~a ~a ~a ~a ~a\n"
+                 . title g {g / s_lower} {g * s_upper} success-count total-count median
                format #t "~a -- ~a -- (~a / ~a)\n"
                  . gstr title success-count total-count
