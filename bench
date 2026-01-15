@@ -831,7 +831,7 @@ kawa_comp ()
 kawa_exec ()
 {
     classname=$(basename -s .scm $1)
-    # -XX:CompileThreshold=5 causes JIT-compilation functions after 5 calls, otherwise it takes 1000 or 10000 invocations before it gets compiled.  
+    # -XX:CompileThreshold=5 causes JIT-compilation functions after 5 calls, otherwise it takes 1000 or 10000 invocations before it gets compiled.
     time "${JAVA}" -XX:CompileThreshold=5 -XX:MaxInlineSize=9999 -XX:FreqInlineSize=9999 -cp $KAWAJAR:$(dirname $0)/out $classname < "$2"
 }
 
