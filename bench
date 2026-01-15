@@ -79,7 +79,7 @@ SYNTH_BENCHMARKS="equal bv2string"
 
 ALL_BENCHMARKS="$GABRIEL_BENCHMARKS $NUM_BENCHMARKS $KVW_BENCHMARKS $IO_BENCHMARKS $OTHER_BENCHMARKS $GC_BENCHMARKS $SYNTH_BENCHMARKS"
 
-ALL_SYSTEMS="bigloo bones chez chibi chicken cyclone femtolisp gambitc gauche gerbil guile ironscheme kawa larceny loko mit mosh picrin racket s7 s9fes sagittarius stklos tr7 ypsilon" # tinyscheme seems to run out of memory or time on *every* benchmark :-/
+ALL_SYSTEMS="bigloo bones chez chibi chicken cyclone femtolisp gambitc gauche gerbil guile ironscheme kawa larceny loko mit mosh picrin racket s7 s9fes sagittarius stak stklos tr7 ypsilon" # tinyscheme seems to run out of memory or time on *every* benchmark :-/
 # petite-chez  chickencsi
 # foment owllisp rhizome rscheme scheme48 vicare
 ################################################################
@@ -146,6 +146,7 @@ setup ()
     S7=${S7:-"s7"}
     S9fES=${S9fES:-"s9"}
     SISC=${SISC:-"sisc"}
+    STAK=${STAK:-stak}
     STALIN=${STALIN:-"stalin"}
     STKLOS=${STKLOS:-"stklos"}
     TINYSCHEME=${TINYSCHEME:-"tinyscheme"}
@@ -197,6 +198,7 @@ Usage: bench [-r runs] <system> <benchmark>
   s7               for S7
   s9fes            for S9fES (Scheme 9 from Empty Space)
   sisc             for SISC (Second Implementation of Scheme)
+  stak             for Stak
   stalin           for Stalin
   stklos           for STklos
   tinyscheme       for TinyScheme
@@ -396,6 +398,19 @@ cyclone_comp ()
 cyclone_exec ()
 {
   time `dirname $1`/`basename $1 .scm` < "$2"
+}
+
+# -----------------------------------------------------------------------------
+# Definitions specific to Stak
+
+stak_comp ()
+{
+    :
+}
+
+stak_exec ()
+{
+    time "$STAK" "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -1018,6 +1033,16 @@ for system in $systems ; do
                  COMPCOMMANDS=""
                  EXECCOMMANDS=""
                  ;;
+
+        stak) NAME=Stak
+              COMP=stak_comp
+              EXEC=stak_exec
+              COMPOPTS=""
+              EXTENSION="scm"
+              EXTENSIONCOMP="scm"
+              COMPCOMMANDS=""
+              EXECCOMMANDS=""
+              ;;
 
         stalin) NAME='Stalin'
                 COMP=stalin_comp
