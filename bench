@@ -26,7 +26,7 @@
 # inputs subdirectory of the directory in which this script
 # is run.
 
-OSNAME="`( uname )`"
+OSNAME="$(uname)"
 
 # If a benchmark takes longer than an hour to run, then it's
 # probably in some kind of infinite loop.
@@ -38,7 +38,7 @@ CPU_LIMIT=${CPU_LIMIT:-"300"}
 # The following definitions are not in use, but using them
 # might improve the script.
 
-HOME="`( pwd )`"
+HOME="$(pwd)"
 SRC="${HOME}/src"
 INPUTS="${HOME}/inputs"
 
@@ -96,7 +96,6 @@ setup ()
 
         "Linux")
 
-            APPS="/usr/local/bin"
             HENCHMAN="/home/henchman/bin/larceny"
             ;;
 
@@ -160,7 +159,7 @@ setup
 
 error ()
 {
-    echo $1
+    echo "$1"
     echo '
 Usage: bench [-r runs] <system> <benchmark>
 
@@ -230,8 +229,8 @@ cleanup ()
         # we delete files newer than the mark file that evaluate () makes.
 
         for x in * ; do
-            if [ $x -nt clean_newer_than_me ] ; then
-                rm $x
+            if [ "$x" -nt clean_newer_than_me ] ; then
+                rm "$x"
             fi
         done
     fi
@@ -244,13 +243,14 @@ evaluate ()
     sleep 1
     {
         echo
-        echo Testing $1 under ${NAME}
-        make_src_code $1
+        echo Testing "$1" under ${NAME}
+        make_src_code "$1"
         echo Compiling...
-        ulimit -t ${CPU_LIMIT}
+        # ulimit -t ${CPU_LIMIT}
         echo $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
         $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
-        if [ $? -ne 0 ]
+        status=$?
+        if [ $status -ne 0 ]
         then
             echo "+!CSVLINE!+${2},$1,COMPILEERROR"
             skiprun="true"
@@ -261,17 +261,17 @@ evaluate ()
             while [ "$i" -lt "$NB_RUNS" ]
             do
                 echo Running...
-                ulimit -t ${CPU_LIMIT}
+                # ulimit -t ${CPU_LIMIT}
                 $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
                 status=$?
-                if [ $status -eq 137 ] # killed by ulimit timeout
+                if [[ $status -eq 137 || $status -eq 124 ]] # killed by ulimit timeout
                 then
                     echo "+!CSVLINE!+${2},$1,ULIMITKILLED"
                 elif [ $status -ne 0 ]
                 then
                     echo "+!CSVLINE!+${2},$1,CRASHED"
                 fi
-                i=`expr $i + 1`
+                i=$((i + 1))
             done
         fi
     } 2>&1 | tee -a results.${NAME}
@@ -314,17 +314,17 @@ larceny_comp ()
 larceny_exec ()
 {
     # add srfi 112 for (implementation-version)
-    sed -i 's/^(import /(import (srfi 112) /' $1
+    sed -i 's/^(import /(import (srfi 112) /' "$1"
     time "${LARCENY}" --nocontract --r7rs --program "$1" < "$2"
 }
 
 petit_comp ()
 {
-    rm "`dirname "$1"`"/*.slfasl
-    rm "`dirname "$1"`"/*.slfasl.c
-    rm "`dirname "$1"`"/*.slfasl.o
-    rm "`dirname "$1"`"/*.slfasl.so
-    rm "`dirname "$1"`"/*.slfasl.*.so
+    rm "$(dirname "$1")"/*.slfasl
+    rm "$(dirname "$1")"/*.slfasl.c
+    rm "$(dirname "$1")"/*.slfasl.o
+    rm "$(dirname "$1")"/*.slfasl.so
+    rm "$(dirname "$1")"/*.slfasl.*.so
     echo "(import (larceny compiler)) (compile-file \"$1\")" \
         | time "${PETIT}" -err5rs -- -e "(repl-prompt values)"
 }
@@ -364,7 +364,7 @@ chibi_exec ()
 chicken_comp ()
 {
     OPTS="-R r7rs -X r7rs -block -O3 -C -O3 -d0"
-    ${CHICKEN_CSC} ${OPTS} $1 -o $2
+    ${CHICKEN_CSC} "${OPTS}" "$1" -o "$2"
 }
 
 chicken_exec ()
@@ -390,12 +390,12 @@ chickencsi_exec ()
 
 cyclone_comp ()
 {
-  ${CYCLONE} -no-memoization-optimizations $1
+  ${CYCLONE} -no-memoization-optimizations "$1"
 }
 
 cyclone_exec ()
 {
-  time `dirname $1`/`basename $1 .scm` < "$2"
+  time $(dirname $1)/$(basename $1 .scm) < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -467,7 +467,7 @@ stklos_comp ()
 stklos_exec ()
 {
     # The "-s 10000000" parameter, which sets a larger stack size, is necessary
-    # for at least one benchmark (ack) 
+    # for at least one benchmark (ack)
     time ( ${STKLOS} -s 10000000 -f "$1" < "$2" )
 }
 
@@ -477,7 +477,7 @@ stklos_exec ()
 tinyscheme_comp ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
 }
 
 tinyscheme_exec ()
@@ -506,19 +506,19 @@ tr7_exec ()
 rscheme_comp ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
-    filename=$(basename $1)
-    dirname=$(dirname $1)
-    echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export run-benchmark))" > $dirname/test.mcf
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
+    filename=$(basename "$1")
+    dirname=$(dirname "$1")
+    echo "((test \".\" \".\") (open primops *scheme* iolib low-scheme objsys mathlib high-scheme syscalls) (files ${filename%%.scm}) (export run-benchmark))" > "$dirname/test.mcf"
     #    cd $dirname
-    ${RSCHEME_RSC} -p $dirname/test.mcf
+    ${RSCHEME_RSC} -p "$dirname/test.mcf"
 }
 
 rscheme_exec ()
 {
-    dirname=$(dirname $1)
-    cp -R inputs $dirname/
-    cd $dirname
+    dirname=$(dirname "$1")
+    cp -R inputs "$dirname/"
+    cd "$dirname" || true
     echo "(with-module mlink (push-module-search-path! \".\")) ,(use test)" > run-current-test.scm
     time ( ${RSCHEME} run-current-test.scm < "$2" )
     rm -Rf test.mif test.mx test.mcf test.doc
@@ -530,18 +530,18 @@ rscheme_exec ()
 rhizome_comp ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
     dir=$(dirname "$1")
-    cd $dir
+    cd "$dir" || true
     infile=$(basename "$1")
     outfile=$(basename "$2")
     tmpfile=${outfile%exe}c
     modulename=${infile%.scm}
     echo "${RHIZOME_PISC} -output $tmpfile $infile"
-    ${RHIZOME_PISC} -output $tmpfile $infile
+    ${RHIZOME_PISC} -output "$tmpfile" "$infile"
     echo "${RHIZOME_PISL} $modulename -o $outfile"
-    ${RHIZOME_PISL} $modulename -o $outfile
-    chmod +x $outfile
+    ${RHIZOME_PISL} "$modulename" -o "$outfile"
+    chmod +x "$outfile"
 }
 
 rhizome_exec ()
@@ -556,7 +556,7 @@ rhizome_exec ()
 ypsilon_comp ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
 }
 
 ypsilon_exec ()
@@ -570,14 +570,14 @@ ypsilon_exec ()
 scheme48_comp ()
 {
     # don't execute run-benchmark
-    sed -i -e 's/^(run-benchmark)$//' -e 's/(run-benchmark)/(run-benchmark . unneeded-command-line-parameters)/' $1
+    sed -i -e 's/^(run-benchmark)$//' -e 's/(run-benchmark)/(run-benchmark . unneeded-command-line-parameters)/' "$1"
     echo "echo -e ,set inline-values\n,open srfi-19\n,open big-util\n,open define-record-types\n(load \"$1\")\n,build run-benchmark $2\n,exit | ( time ${SCHEME48} )"
     echo -e ",set inline-values\n,open srfi-19\n,open big-util\n,open define-record-types\n(load \"$1\")\n,build run-benchmark $2\n,exit" | ( time ${SCHEME48} )
 }
 
 scheme48_exec ()
 {
-    time ${SCHEME48} -h 100000000  -i $1 < $2
+    time ${SCHEME48} -h 100000000  -i "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -586,13 +586,13 @@ scheme48_exec ()
 bones_comp ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
     echo "${BONES} $1 > $1.s"
-    ${BONES} $1 > $1.s
+    ${BONES} "$1" > "$1.s"
     echo "nasm -I/usr/share/bones -f elf64 $1.s -o $1.o"
-    nasm -I/usr/share/bones/ -f elf64 $1.s -o $1.o
+    nasm -I/usr/share/bones/ -f elf64 "$1.s" -o "$1.o"
     echo "gcc $1.o -o $2"
-    gcc -no-pie $1.o -o $2
+    gcc -no-pie "$1.o" -o "$2"
 }
 
 bones_exec ()
@@ -606,8 +606,8 @@ bones_exec ()
 vicare_comp ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
-    ${VICARE} -c $1 -o $2
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
+    ${VICARE} -c "$1" -o "$2"
 }
 
 vicare_exec ()
@@ -626,12 +626,12 @@ ironscheme_comp ()
 ironscheme_exec ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$/(import (rnrs base) (rnrs io simple))/g' $1
+    sed -i -e 's/^(import (scheme.*)$/(import (rnrs base) (rnrs io simple))/g' "$1"
     # maybe a support lookup table can be added for these, and only inject if needed, like for read-line, square, exact-integer? too
-    sed -i -e 's/^(define (bitwise-not[[:blank:]].*).*$/#;(excluded/g' $1
-    sed -i -e 's/^(define (bitwise-and[[:blank:]].*).*$/#;(excluded/g' $1
-    sed -i -e 's/^(define (div[[:blank:]].*).*$/#;(excluded/g' $1
-    sed -i -e 's/^(define (mod[[:blank:]].*).*$/#;(excluded/g' $1
+    sed -i -e 's/^(define (bitwise-not[[:blank:]].*).*$/#;(excluded/g' "$1"
+    sed -i -e 's/^(define (bitwise-and[[:blank:]].*).*$/#;(excluded/g' "$1"
+    sed -i -e 's/^(define (div[[:blank:]].*).*$/#;(excluded/g' "$1"
+    sed -i -e 's/^(define (mod[[:blank:]].*).*$/#;(excluded/g' "$1"
 
     # R6RS compat failure: gcbench
     # failures due to Mono: cpstak, fft, pi, pnpoly, quicksort
@@ -645,13 +645,13 @@ ironscheme_exec ()
 
 racket_comp ()
 {
-    echo ${RACKET_RACO} make "$1"
+    echo "${RACKET_RACO}" make "$1"
     ${RACKET_RACO} make "$1"
 }
 
 racket_exec ()
 {
-    echo time ${RACKET} "$1" < "$2"
+    echo time "${RACKET} $1 < $2"
     time ${RACKET} "$1" < "$2"
 }
 
@@ -660,12 +660,12 @@ racket_exec ()
 
 bigloo_comp ()
 {
-    ${BIGLOO} $1 -O6 -call/cc -copt -O3 -o $2
+    timeout "${CPU_LIMIT}" "${BIGLOO}" "$1" -O6 -call/cc -copt -O3 -o "$2"
 }
 
 bigloo_exec ()
 {
-    time "$1" < "$2"
+    time timeout "${CPU_LIMIT}" "$1" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -694,7 +694,7 @@ petite_chez_comp ()
 petite_chez_exec ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
     time "${PETITE_CHEZ}" --program "$1" < "$2"
 }
 
@@ -735,8 +735,8 @@ guile_exec ()
 gambitc_comp ()
 {
     # remove import statement
-    sed -i -e 's/^(import (scheme.*)$//g' $1
-    ${GAMBITC} -o $2 -exe $1
+    sed -i -e 's/^(import (scheme.*)$//g' "$1"
+    ${GAMBITC} -o "$2" -exe "$1"
 }
 
 gambitc_exec ()
@@ -788,7 +788,7 @@ gauche_exec ()
 
 gerbil_comp ()
 {
-    sed -i -e 's/^(run-benchmark)$//' $1
+    sed -i -e 's/^(run-benchmark)$//' "$1"
     ${GXC} -d $(dirname "$1") -exe -O -o "${1%.scm}.exe" "$1"
 }
 
@@ -824,15 +824,15 @@ husk_exec ()
 
 kawa_comp ()
 {
-    classname=$(basename -s .scm $1)
-    "${KAWA}" --r7rs --no-warn-unused -d out --main -T $classname -C $1
+    classname=$(basename -s .scm "$1")
+    "${KAWA}" --r7rs --no-warn-unused -d out --main -T "$classname" -C "$1"
 }
 
 kawa_exec ()
 {
-    classname=$(basename -s .scm $1)
+    classname=$(basename -s .scm "$1")
     # -XX:CompileThreshold=5 causes JIT-compilation functions after 5 calls, otherwise it takes 1000 or 10000 invocations before it gets compiled.
-    time "${JAVA}" -XX:CompileThreshold=5 -XX:MaxInlineSize=9999 -XX:FreqInlineSize=9999 -cp $KAWAJAR:$(dirname $0)/out $classname < "$2"
+    time "${JAVA}" -XX:CompileThreshold=5 -XX:MaxInlineSize=9999 -XX:FreqInlineSize=9999 -cp "$KAWAJAR:$(dirname "$0")"/out "$classname" < "$2"
 }
 
 # -----------------------------------------------------------------------------
@@ -898,7 +898,7 @@ sagittarius_exec ()
 
 loko_comp ()
 {
-    ${LOKO} -std=r7rs -ftarget=linux --compile $1 --output $2
+    ${LOKO} -std=r7rs -ftarget=linux --compile "$1" --output "$2"
 }
 
 loko_exec ()
@@ -952,407 +952,290 @@ for system in $systems ; do
         larceny) NAME='Larceny'
                  COMP=larceny_comp
                  EXEC=larceny_exec
-                 COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="scm"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
                  ;;
 
         petit) NAME='Petit'
                COMP=petit_comp
                EXEC=petit_exec
-               COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="slfasl"
-               COMPCOMMANDS=""
-               EXECCOMMANDS=""
                ;;
 
         henchman) NAME='Henchman'
                   COMP=henchman_comp
                   EXEC=henchman_exec
-                  COMPOPTS=""
                   EXTENSION="scm"
                   EXTENSIONCOMP="slfasl"
-                  COMPCOMMANDS=""
-                  EXECCOMMANDS=""
                   ;;
 
         chibi) NAME='Chibi'
                COMP=chibi_comp
                EXEC=chibi_exec
-               COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="scm"
-               COMPCOMMANDS=""
-               EXECCOMMANDS=""
                ;;
 
         chicken) NAME='Chicken'
                  COMP=chicken_comp
                  EXEC=chicken_exec
-                 COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
                  ;;
 
         chickencsi) NAME='ChickenCSI'
                     COMP=chickencsi_comp
                     EXEC=chickencsi_exec
-                    COMPOPTS=""
                     EXTENSION="scm"
                     EXTENSIONCOMP="scm"
-                    COMPCOMMANDS=""
-                    EXECCOMMANDS=""
                     ;;
 
         cyclone) NAME='Cyclone'
                  COMP=cyclone_comp
                  EXEC=cyclone_exec
-                 COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="scm"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
                  ;;
 
         stalin) NAME='Stalin'
                 COMP=stalin_comp
                 EXEC=stalin_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="exe"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         s7) NAME='S7'
                COMP=s7_comp
                EXEC=s7_exec
-               COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="scm"
-               COMPCOMMANDS=""
-               EXECCOMMANDS=""
                ;;
 
         s9fes) NAME='S9fES'
                COMP=s9fes_comp
                EXEC=s9fes_exec
-               COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="scm"
-               COMPCOMMANDS=""
-               EXECCOMMANDS=""
                ;;
 
         sisc) NAME='SISC'
               COMP=sisc_comp
               EXEC=sisc_exec
-              COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-              COMPCOMMANDS=""
-              EXECCOMMANDS=""
               ;;
 
         stklos) NAME='STklos'
                     COMP=stklos_comp
                     EXEC=stklos_exec
-                    COMPOPTS=""
                     EXTENSION="scm"
                     EXTENSIONCOMP="scm"
-                    COMPCOMMANDS=""
-                    EXECCOMMANDS=""
                     ;;
 
         tinyscheme) NAME='TinyScheme'
                     COMP=tinyscheme_comp
                     EXEC=tinyscheme_exec
-                    COMPOPTS=""
                     EXTENSION="scm"
                     EXTENSIONCOMP="scm"
-                    COMPCOMMANDS=""
-                    EXECCOMMANDS=""
                     ;;
 
         tr7) NAME='TR7'
              COMP=tr7_comp
              EXEC=tr7_exec
-             COMPOPTS=""
              EXTENSION="scm"
              EXTENSIONCOMP="scm"
-             COMPCOMMANDS=""
-             EXECCOMMANDS=""
              ;;
 
         rscheme) NAME='RScheme'
                  COMP=rscheme_comp
                  EXEC=rscheme_exec
-                 COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="scm"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
                  ;;
 
         rhizome) NAME='Rhizome'
                  COMP=rhizome_comp
                  EXEC=rhizome_exec
-                 COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe" # should be exe
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
                  ;;
 
         ypsilon) NAME='Ypsilon'
                  COMP=ypsilon_comp
                  EXEC=ypsilon_exec
-                 COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="scm"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
                  ;;
 
         scheme48) NAME='Scheme48'
                   COMP=scheme48_comp
                   EXEC=scheme48_exec
-                  COMPOPTS=""
                   EXTENSION="scm"
                   EXTENSIONCOMP="s48img"
-                  COMPCOMMANDS=""
-                  EXECCOMMANDS=""
                   ;;
 
         bones) NAME='Bones'
                COMP=bones_comp
                EXEC=bones_exec
-               COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="exe"
-               COMPCOMMANDS=""
-               EXECCOMMANDS=""
                ;;
 
         vicare) NAME='Vicare'
                 COMP=vicare_comp
                 EXEC=vicare_exec
-                COMPOPTS=""
                 EXTENSION="sps"
                 EXTENSIONCOMP="sps"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         ironscheme) NAME='IronScheme'
                     COMP=ironscheme_comp
                     EXEC=ironscheme_exec
-                    COMPOPTS=""
                     EXTENSION="sps"
                     EXTENSIONCOMP="sps"
-                    COMPCOMMANDS=""
-                    EXECCOMMANDS=""
                     ;;
 
         racket) NAME='Racket'
                 COMP=racket_comp
                 EXEC=racket_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         bigloo) NAME='Bigloo'
                 COMP=bigloo_comp
                 EXEC=bigloo_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="exe"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         chez) NAME='Chez'
               COMP=chez_comp
               EXEC=chez_exec
-              COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-              COMPCOMMANDS=""
-              EXECCOMMANDS=""
               ;;
 
         petite-chez) NAME='Petite-Chez'
                      COMP=petite_chez_comp
                      EXEC=petite_chez_exec
-                     COMPOPTS=""
                      EXTENSION="scm"
                      EXTENSIONCOMP="scm"
-                     COMPCOMMANDS=""
-                     EXECCOMMANDS=""
                      ;;
 
         gambitc) NAME='GambitC'
                  COMP=gambitc_comp
                  EXEC=gambitc_exec
-                 COMPOPTS=""
                  EXTENSION="scm"
                  EXTENSIONCOMP="exe"
-                 COMPCOMMANDS=""
-                 EXECCOMMANDS=""
                  ;;
 
         guile) NAME='Guile'
                COMP=guile_comp
                EXEC=guile_exec
-               COMPOPTS=""
                EXTENSION="scm"
                EXTENSIONCOMP="scm"
-               COMPCOMMANDS=""
-               EXECCOMMANDS=""
                ;;
 
         mit) NAME='MIT'
              COMP=mit_comp
              EXEC=mit_exec
-             COMPOPTS=""
              EXTENSION="scm"
              EXTENSIONCOMP="com"
-             COMPCOMMANDS=""
-             EXECCOMMANDS=""
              ;;
 
         femtolisp) NAME='Femtolisp'
                    COMP=femtolisp_comp
                    EXEC=femtolisp_exec
-                   COMPOPTS=""
                    EXTENSION="scm"
                    EXTENSIONCOMP="scm"
-                   COMPCOMMANDS=""
-                   EXECCOMMANDS=""
                    ;;
 
         foment) NAME='Foment'
                 COMP=foment_comp
                 EXEC=foment_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         gauche) NAME='Gauche'
                 COMP=gauche_comp
                 EXEC=gauche_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         gerbil) NAME='Gerbil'
                 COMP=gerbil_comp
                 EXEC=gerbil_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="exe"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         husk) NAME='Husk'
               COMP=husk_comp
               EXEC=husk_exec
-              COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-              COMPCOMMANDS=""
-              EXECCOMMANDS=""
               ;;
 
         kawa) NAME='Kawa'
               COMP=kawa_comp
               EXEC=kawa_exec
-              COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-              COMPCOMMANDS=""
-              EXECCOMMANDS=""
               ;;
 
         mosh) NAME='Mosh'
               COMP=mosh_comp
               EXEC=mosh_exec
-              COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="scm"
-              COMPCOMMANDS=""
-              EXECCOMMANDS=""
               ;;
 
         owllisp) NAME='Owl-Lisp'
                 COMP=owllisp_comp
                 EXEC=owllisp_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         picrin) NAME='Picrin'
                 COMP=picrin_comp
                 EXEC=picrin_exec
-                COMPOPTS=""
                 EXTENSION="scm"
                 EXTENSIONCOMP="scm"
-                COMPCOMMANDS=""
-                EXECCOMMANDS=""
                 ;;
 
         sagittarius) NAME='Sagittarius'
                      COMP=sagittarius_comp
                      EXEC=sagittarius_exec
-                     COMPOPTS=""
                      EXTENSION="scm"
                      EXTENSIONCOMP="scm"
-                     COMPCOMMANDS=""
-                     EXECCOMMANDS=""
                      ;;
 
         loko) NAME='Loko'
               COMP=loko_comp
               EXEC=loko_exec
-              COMPOPTS=""
               EXTENSION="scm"
               EXTENSIONCOMP="exe"
-              COMPCOMMANDS=""
-              EXECCOMMANDS=""
               ;;
 
         *) echo "Unknown Scheme $system"
-           exit -1
+           exit 255
            ;;
     esac
 
     {
         echo
         echo '****************************'
-        echo Benchmarking ${NAME} on `date` under `uname -a`
+        echo "Benchmarking ${NAME} on $(date) under $(uname -a)"
     } >> results.${NAME}
     TEMP="/tmp/r7rs-benchmarks/${NAME}"
     mkdir -p "${TEMP}" 2> /dev/null
 
     for program in $benchmarks ; do
-        evaluate $program $system
+        evaluate "$program" "$system"
     done
 done
