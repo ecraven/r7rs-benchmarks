@@ -13,7 +13,7 @@ if echo "$@" | grep -- --help; then
   echo $0 ~/Downloads/all.csv chez loko guile kawa
   echo
   echo evaluate chez loko guile kawa against result.* in the current folder
-  echo $0 chez loko guile kawa  
+  echo $0 chez loko guile kawa
   exit 0
 fi
 # requires guile 3.0.10+, grep, sed, and gnuplot
@@ -65,7 +65,7 @@ exec echo $GRAPH
            (loop (cons (read-line port) lines)))))
 
 (define (min-alist-by-test data-by-project)
-    (let lp 
+    (let lp
         ((min-data '())
           (data-by-project data-by-project))
         (if (null? data-by-project)
@@ -89,7 +89,7 @@ exec echo $GRAPH
        (map cdr (only-project data-by-project)))
 
 (define (get-multiples guile-data data-min-by-test)
-  (let lp 
+  (let lp
       ((gd guile-data)
         (multiples-of-best '()))
       (if (null? gd)
@@ -109,7 +109,7 @@ exec echo $GRAPH
 
 
 (define (get-multiples-alist guile-data data-min-by-test)
-  (let lp 
+  (let lp
       ((gd guile-data)
         (multiples-of-best '()))
       (if (null? gd)
@@ -120,7 +120,7 @@ exec echo $GRAPH
                (multiple
                  (if (not guile)
                     (cons test guile)
-                    (cons test 
+                    (cons test
                       (/ guile
                         (or (assoc-ref data-min-by-test test) guile))))))
              (lp (cdr gd)
@@ -224,7 +224,7 @@ exec echo $GRAPH
                       (apply * (get-multiples guile-data data-min-by-test))
                       (/ 1 (length (get-multiples guile-data data-min-by-test))))))
           (exit 0))
-          
+
       (format err "=== Best times ===\n\n")
       (pretty-print (sort data-min-by-test (λ (x y) (string<? (car x) (car y))))
         err)
