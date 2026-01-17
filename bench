@@ -246,7 +246,7 @@ evaluate ()
         echo Testing "$1" under ${NAME}
         make_src_code "$1"
         echo Compiling...
-        # ulimit -t ${CPU_LIMIT}
+        ulimit -t ${CPU_LIMIT}
         echo $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
         $COMP "${TEMP}/$1.${EXTENSION}" "${TEMP}/$1.${EXTENSIONCOMP}"
         status=$?
@@ -261,7 +261,7 @@ evaluate ()
             while [ "$i" -lt "$NB_RUNS" ]
             do
                 echo Running...
-                # ulimit -t ${CPU_LIMIT}
+                ulimit -t ${CPU_LIMIT}
                 $EXEC "${TEMP}/$1.${EXTENSIONCOMP}" "${INPUTS}/$1.input"
                 status=$?
                 if [[ $status -eq 137 || $status -eq 124 ]] # killed by ulimit timeout
@@ -364,7 +364,7 @@ chibi_exec ()
 chicken_comp ()
 {
     OPTS="-R r7rs -X r7rs -block -O3 -C -O3 -d0"
-    ${CHICKEN_CSC} "${OPTS}" "$1" -o "$2"
+    ${CHICKEN_CSC} ${OPTS} "$1" -o "$2"
 }
 
 chicken_exec ()

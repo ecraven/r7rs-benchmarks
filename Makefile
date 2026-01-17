@@ -2,6 +2,7 @@
 
 doc:
 	@echo Run "'make all'" to run all tests
+
 csv: all.csv
 
 all.csv: $(wildcard results.*)
@@ -20,5 +21,8 @@ chicken-dependencies:
 
 racket-dependencies:
 	sudo raco pkg install --scope installation r7rs
+
+r7rs-plot.png:
+	./graph-gmean.scm
 
 include Makefile.schemes
