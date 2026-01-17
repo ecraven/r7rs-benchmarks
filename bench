@@ -390,7 +390,8 @@ chickencsi_exec ()
 
 cyclone_comp ()
 {
-  ${CYCLONE} -no-memoization-optimizations "$1"
+  # 2026-01-17: added -COPT -std=gnu17 (thanks ArneBab), otherwise this fails on GCC 15
+  ${CYCLONE} -COPT -std=gnu17 -no-memoization-optimizations "$1"
 }
 
 cyclone_exec ()
