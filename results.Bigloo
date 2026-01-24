@@ -1,30 +1,44 @@
 
 ****************************
-Benchmarking Bigloo on Fri 5 Jul 11:47:25 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
+Benchmarking Bigloo on Fri 16 Jan 12:07:28 CET 2026 under Linux h4nex 6.16.8-arch3-1 #1 SMP PREEMPT_DYNAMIC Mon, 22 Sep 2025 22:08:35 +0000 x86_64 GNU/Linux
 
 Testing browse under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/browse.scm /tmp/r7rs-benchmarks/Bigloo/browse.exe
 
+File "/tmp/r7rs-benchmarks/Bigloo/browse.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
+
 File "/tmp/r7rs-benchmarks/Bigloo/browse.scm", line 12, character 375:
 #(define (error . args) args)
 #^
 *** WARNING: top-level
 Disabling optimization for library function -- error
+Peephole/walk.scm,151:var=global s=global
+Peephole/walk.scm,151:var=global s=global
 Running...
 Running browse:2000
-Elapsed time: 4.123171072 seconds (#e4) for browse:2000
-+!CSVLINE!+bigloo-4.5b,browse:2000,4.123171072
+Elapsed time: 2.367849216 seconds (#e2) for browse:2000
++!CSVLINE!+bigloo-4.6a,browse:2000,2.367849216
 
-real	0m4.128s
-user	0m4.122s
-sys	0m0.000s
+real	0m2.373s
+user	0m2.360s
+sys	0m0.006s
 
 Testing deriv under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/deriv.scm /tmp/r7rs-benchmarks/Bigloo/deriv.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/deriv.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/deriv.scm", line 12, character 375:
 #(define (error . args) args)
@@ -33,17 +47,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/deriv.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running deriv:10000000
-Elapsed time: 6.06724608 seconds (#e6) for deriv:10000000
-+!CSVLINE!+bigloo-4.5b,deriv:10000000,6.06724608
+Elapsed time: 6.564134144 seconds (#e6) for deriv:10000000
++!CSVLINE!+bigloo-4.6a,deriv:10000000,6.564134144
 
-real	0m6.071s
-user	0m6.061s
+real	0m6.569s
+user	0m6.536s
 sys	0m0.004s
 
 Testing destruc under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/destruc.scm /tmp/r7rs-benchmarks/Bigloo/destruc.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/destruc.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/destruc.scm", line 12, character 375:
 #(define (error . args) args)
@@ -52,17 +72,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/destruc.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running destruc:600:50:4000
-Elapsed time: 3.372224 seconds (#e4) for destruc:600:50:4000
-+!CSVLINE!+bigloo-4.5b,destruc:600:50:4000,3.372224
+Elapsed time: 3.347457024 seconds (#e3) for destruc:600:50:4000
++!CSVLINE!+bigloo-4.6a,destruc:600:50:4000,3.347457024
 
-real	0m3.376s
-user	0m3.370s
-sys	0m0.004s
+real	0m3.353s
+user	0m3.339s
+sys	0m0.005s
 
 Testing diviter under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/diviter.scm /tmp/r7rs-benchmarks/Bigloo/diviter.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/diviter.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/diviter.scm", line 12, character 375:
 #(define (error . args) args)
@@ -71,17 +97,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/diviter.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running diviter:1000:1000000
-Elapsed time: 6.024243968 seconds (#e6) for diviter:1000:1000000
-+!CSVLINE!+bigloo-4.5b,diviter:1000:1000000,6.024243968
+Elapsed time: 5.57740416 seconds (#e6) for diviter:1000:1000000
++!CSVLINE!+bigloo-4.6a,diviter:1000:1000000,5.57740416
 
-real	0m6.028s
-user	0m6.019s
+real	0m5.582s
+user	0m5.565s
 sys	0m0.004s
 
 Testing divrec under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/divrec.scm /tmp/r7rs-benchmarks/Bigloo/divrec.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/divrec.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/divrec.scm", line 12, character 375:
 #(define (error . args) args)
@@ -90,17 +122,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/divrec.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running divrec:1000:1000000
-Elapsed time: 9.8305088 seconds (#e10) for divrec:1000:1000000
-+!CSVLINE!+bigloo-4.5b,divrec:1000:1000000,9.8305088
+Elapsed time: 10.109253888 seconds (#e10) for divrec:1000:1000000
++!CSVLINE!+bigloo-4.6a,divrec:1000:1000000,10.109253888
 
-real	0m9.834s
-user	0m9.822s
-sys	0m0.003s
+real	0m10.114s
+user	0m10.091s
+sys	0m0.004s
 
 Testing puzzle under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/puzzle.scm /tmp/r7rs-benchmarks/Bigloo/puzzle.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/puzzle.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/puzzle.scm", line 12, character 375:
 #(define (error . args) args)
@@ -109,17 +147,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/puzzle.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running puzzle:1000
-Elapsed time: 8.449673984 seconds (#e8) for puzzle:1000
-+!CSVLINE!+bigloo-4.5b,puzzle:1000,8.449673984
+Elapsed time: 8.047062016 seconds (#e8) for puzzle:1000
++!CSVLINE!+bigloo-4.6a,puzzle:1000,8.047062016
 
-real	0m8.454s
-user	0m8.442s
-sys	0m0.000s
+real	0m8.053s
+user	0m8.024s
+sys	0m0.005s
 
 Testing triangl under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/triangl.scm /tmp/r7rs-benchmarks/Bigloo/triangl.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/triangl.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/triangl.scm", line 12, character 375:
 #(define (error . args) args)
@@ -128,17 +172,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/triangl.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running triangl:22:1:50
-Elapsed time: 1.90927616 seconds (#e1) for triangl:22:1:50
-+!CSVLINE!+bigloo-4.5b,triangl:22:1:50,1.90927616
+Elapsed time: 1.849641984 seconds (#e2) for triangl:22:1:50
++!CSVLINE!+bigloo-4.6a,triangl:22:1:50,1.849641984
 
-real	0m1.913s
-user	0m1.909s
+real	0m1.854s
+user	0m1.848s
 sys	0m0.004s
 
 Testing tak under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/tak.scm /tmp/r7rs-benchmarks/Bigloo/tak.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/tak.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/tak.scm", line 12, character 375:
 #(define (error . args) args)
@@ -147,17 +197,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/tak.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running tak:40:20:11:1
-Elapsed time: 1.776318976 seconds (#e1) for tak:40:20:11:1
-+!CSVLINE!+bigloo-4.5b,tak:40:20:11:1,1.776318976
+Elapsed time: 1.762351104 seconds (#e2) for tak:40:20:11:1
++!CSVLINE!+bigloo-4.6a,tak:40:20:11:1,1.762351104
 
-real	0m1.780s
-user	0m1.773s
-sys	0m0.007s
+real	0m1.767s
+user	0m1.763s
+sys	0m0.001s
 
 Testing takl under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/takl.scm /tmp/r7rs-benchmarks/Bigloo/takl.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/takl.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/takl.scm", line 12, character 375:
 #(define (error . args) args)
@@ -166,17 +222,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/takl.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running takl:40:20:12:1
-Elapsed time: 1.792151808 seconds (#e2) for takl:40:20:12:1
-+!CSVLINE!+bigloo-4.5b,takl:40:20:12:1,1.792151808
+Elapsed time: 1.842432 seconds (#e2) for takl:40:20:12:1
++!CSVLINE!+bigloo-4.6a,takl:40:20:12:1,1.842432
 
-real	0m1.796s
-user	0m1.795s
-sys	0m0.000s
+real	0m1.847s
+user	0m1.842s
+sys	0m0.003s
 
 Testing ntakl under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/ntakl.scm /tmp/r7rs-benchmarks/Bigloo/ntakl.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/ntakl.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/ntakl.scm", line 12, character 375:
 #(define (error . args) args)
@@ -185,17 +247,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/ntakl.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 1.811191808 seconds (#e2) for ntakl:40:20:12:1
-+!CSVLINE!+bigloo-4.5b,ntakl:40:20:12:1,1.811191808
+Elapsed time: 1.849004032 seconds (#e1) for ntakl:40:20:12:1
++!CSVLINE!+bigloo-4.6a,ntakl:40:20:12:1,1.849004032
 
-real	0m1.815s
-user	0m1.814s
-sys	0m0.000s
+real	0m1.854s
+user	0m1.850s
+sys	0m0.002s
 
 Testing cpstak under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/cpstak.scm /tmp/r7rs-benchmarks/Bigloo/cpstak.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/cpstak.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/cpstak.scm", line 12, character 375:
 #(define (error . args) args)
@@ -204,17 +272,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/cpstak.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 18.795060992 seconds (#e19) for cpstak:40:20:11:1
-+!CSVLINE!+bigloo-4.5b,cpstak:40:20:11:1,18.795060992
+Elapsed time: 18.77020288 seconds (#e18) for cpstak:40:20:11:1
++!CSVLINE!+bigloo-4.6a,cpstak:40:20:11:1,18.77020288
 
-real	0m18.799s
-user	0m18.747s
-sys	0m0.004s
+real	0m18.775s
+user	0m18.719s
+sys	0m0.006s
 
 Testing ctak under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/ctak.scm /tmp/r7rs-benchmarks/Bigloo/ctak.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/ctak.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/ctak.scm", line 12, character 375:
 #(define (error . args) args)
@@ -223,17 +297,22 @@ File "/tmp/r7rs-benchmarks/Bigloo/ctak.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running ctak:32:16:8:1
-./bench: line 665: 163782 Killed                  "$1" < "$2"
 
-real	5m0.516s
-user	4m59.609s
-sys	0m0.366s
+real	5m0.002s
+user	4m58.562s
+sys	0m0.450s
 +!CSVLINE!+bigloo,ctak,ULIMITKILLED
 
 Testing fib under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/fib.scm /tmp/r7rs-benchmarks/Bigloo/fib.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/fib.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/fib.scm", line 12, character 375:
 #(define (error . args) args)
@@ -242,17 +321,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/fib.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running fib:40:5
-Elapsed time: 2.54911488 seconds (#e2) for fib:40:5
-+!CSVLINE!+bigloo-4.5b,fib:40:5,2.54911488
+Elapsed time: 2.564524032 seconds (#e3) for fib:40:5
++!CSVLINE!+bigloo-4.6a,fib:40:5,2.564524032
 
-real	0m2.553s
-user	0m2.549s
-sys	0m0.003s
+real	0m2.569s
+user	0m2.564s
+sys	0m0.002s
 
 Testing fibc under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/fibc.scm /tmp/r7rs-benchmarks/Bigloo/fibc.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/fibc.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/fibc.scm", line 12, character 375:
 #(define (error . args) args)
@@ -261,17 +346,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/fibc.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running fibc:30:10
-Elapsed time: 98.32371584 seconds (#e98) for fibc:30:10
-+!CSVLINE!+bigloo-4.5b,fibc:30:10,98.32371584
+Elapsed time: 107.210278912 seconds (#e107) for fibc:30:10
++!CSVLINE!+bigloo-4.6a,fibc:30:10,107.210278912
 
-real	1m38.328s
-user	1m38.117s
-sys	0m0.053s
+real	1m47.216s
+user	1m46.806s
+sys	0m0.045s
 
 Testing fibfp under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/fibfp.scm /tmp/r7rs-benchmarks/Bigloo/fibfp.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/fibfp.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/fibfp.scm", line 12, character 375:
 #(define (error . args) args)
@@ -280,17 +371,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/fibfp.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running fibfp:35.0:10
-Elapsed time: 5.405159936 seconds (#e6) for fibfp:35.0:10
-+!CSVLINE!+bigloo-4.5b,fibfp:35.0:10,5.405159936
+Elapsed time: 5.067183872 seconds (#e5) for fibfp:35.0:10
++!CSVLINE!+bigloo-4.6a,fibfp:35.0:10,5.067183872
 
-real	0m5.409s
-user	0m5.404s
-sys	0m0.000s
+real	0m5.072s
+user	0m5.056s
+sys	0m0.004s
 
 Testing sum under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/sum.scm /tmp/r7rs-benchmarks/Bigloo/sum.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/sum.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/sum.scm", line 12, character 375:
 #(define (error . args) args)
@@ -299,17 +396,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/sum.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running sum:10000:200000
-Elapsed time: 1.18743296 seconds (#e1) for sum:10000:200000
-+!CSVLINE!+bigloo-4.5b,sum:10000:200000,1.18743296
+Elapsed time: 1.17079808 seconds (#e1) for sum:10000:200000
++!CSVLINE!+bigloo-4.6a,sum:10000:200000,1.17079808
 
-real	0m1.191s
-user	0m1.191s
-sys	0m0.000s
+real	0m1.175s
+user	0m1.171s
+sys	0m0.003s
 
 Testing sumfp under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/sumfp.scm /tmp/r7rs-benchmarks/Bigloo/sumfp.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/sumfp.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/sumfp.scm", line 12, character 375:
 #(define (error . args) args)
@@ -318,17 +421,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/sumfp.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running sumfp:1000000.0:500
-Elapsed time: 11.553824 seconds (#e12) for sumfp:1000000.0:500
-+!CSVLINE!+bigloo-4.5b,sumfp:1000000.0:500,11.553824
+Elapsed time: 11.621094912 seconds (#e12) for sumfp:1000000.0:500
++!CSVLINE!+bigloo-4.6a,sumfp:1000000.0:500,11.621094912
 
-real	0m11.558s
-user	0m11.547s
-sys	0m0.000s
+real	0m11.626s
+user	0m11.593s
+sys	0m0.006s
 
 Testing fft under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/fft.scm /tmp/r7rs-benchmarks/Bigloo/fft.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/fft.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/fft.scm", line 12, character 375:
 #(define (error . args) args)
@@ -337,17 +446,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/fft.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running fft:65536:100
-Elapsed time: 4.16944896 seconds (#e5) for fft:65536:100
-+!CSVLINE!+bigloo-4.5b,fft:65536:100,4.16944896
+Elapsed time: 1.82669312 seconds (#e2) for fft:65536:100
++!CSVLINE!+bigloo-4.6a,fft:65536:100,1.82669312
 
-real	0m4.174s
-user	0m4.164s
-sys	0m0.000s
+real	0m1.831s
+user	0m1.826s
+sys	0m0.002s
 
 Testing mbrot under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/mbrot.scm /tmp/r7rs-benchmarks/Bigloo/mbrot.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/mbrot.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/mbrot.scm", line 12, character 375:
 #(define (error . args) args)
@@ -356,17 +471,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/mbrot.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running mbrot:75:1000
-Elapsed time: 15.216185088 seconds (#e15) for mbrot:75:1000
-+!CSVLINE!+bigloo-4.5b,mbrot:75:1000,15.216185088
+Elapsed time: 15.49738496 seconds (#e16) for mbrot:75:1000
++!CSVLINE!+bigloo-4.6a,mbrot:75:1000,15.49738496
 
-real	0m15.220s
-user	0m15.184s
+real	0m15.502s
+user	0m15.463s
 sys	0m0.004s
 
 Testing mbrotZ under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/mbrotZ.scm /tmp/r7rs-benchmarks/Bigloo/mbrotZ.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/mbrotZ.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/mbrotZ.scm", line 12, character 375:
 #(define (error . args) args)
@@ -377,19 +498,19 @@ Disabling optimization for library function -- error
 File "/tmp/r7rs-benchmarks/Bigloo/mbrotZ.scm", line 74, character 2173:
 #                   (zi (imag-part z))
 #                       ^
-*** ERROR:<@anonymous:1071>
+*** ERROR:<@anonymous:1066>
 Unbound variable -- imag-part
 
 File "/tmp/r7rs-benchmarks/Bigloo/mbrotZ.scm", line 73, character 2135:
 #            (let* ((zr (real-part z))
 #                       ^
-*** ERROR:<@anonymous:1071>
+*** ERROR:<@anonymous:1066>
 Unbound variable -- real-part
 
 File "/tmp/r7rs-benchmarks/Bigloo/mbrotZ.scm", line 91, character 2728:
 #                                   (make-rectangular (inexact x)
 #                                   ^
-*** ERROR:<@anonymous:1098>
+*** ERROR:<@anonymous:1081>
 Unbound variable -- make-rectangular
 
 File "/tmp/r7rs-benchmarks/Bigloo/mbrotZ.scm", line 102, character 3081:
@@ -405,6 +526,12 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/nucleic.scm /tmp/r7rs-benchmarks/Bigloo/nucleic.exe
 
+File "/tmp/r7rs-benchmarks/Bigloo/nucleic.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
+
 File "/tmp/r7rs-benchmarks/Bigloo/nucleic.scm", line 12, character 375:
 #(define (error . args) args)
 #^
@@ -412,17 +539,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/nucleic.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running nucleic:50
-Elapsed time: 4.874744064 seconds (#e5) for nucleic:50
-+!CSVLINE!+bigloo-4.5b,nucleic:50,4.874744064
+Elapsed time: 4.74981504 seconds (#e5) for nucleic:50
++!CSVLINE!+bigloo-4.6a,nucleic:50,4.74981504
 
-real	0m4.880s
-user	0m4.866s
-sys	0m0.007s
+real	0m4.755s
+user	0m4.740s
+sys	0m0.003s
 
 Testing pi under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/pi.scm /tmp/r7rs-benchmarks/Bigloo/pi.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/pi.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/pi.scm", line 12, character 375:
 #(define (error . args) args)
@@ -434,15 +567,21 @@ Running pi:50:500:50:100
 *** ERROR:arithmetic procedure:
 `floating point' exception -- raised
 
-real	0m0.004s
-user	0m0.000s
-sys	0m0.004s
+real	0m0.005s
+user	0m0.003s
+sys	0m0.002s
 +!CSVLINE!+bigloo,pi,CRASHED
 
 Testing pnpoly under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/pnpoly.scm /tmp/r7rs-benchmarks/Bigloo/pnpoly.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/pnpoly.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/pnpoly.scm", line 12, character 375:
 #(define (error . args) args)
@@ -451,17 +590,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/pnpoly.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running pnpoly:1000000
-Elapsed time: 14.0869312 seconds (#e14) for pnpoly:1000000
-+!CSVLINE!+bigloo-4.5b,pnpoly:1000000,14.0869312
+Elapsed time: 15.02186112 seconds (#e15) for pnpoly:1000000
++!CSVLINE!+bigloo-4.6a,pnpoly:1000000,15.02186112
 
-real	0m14.091s
-user	0m14.063s
-sys	0m0.003s
+real	0m15.026s
+user	0m14.974s
+sys	0m0.005s
 
 Testing ray under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/ray.scm /tmp/r7rs-benchmarks/Bigloo/ray.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/ray.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/ray.scm", line 12, character 375:
 #(define (error . args) args)
@@ -470,17 +615,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/ray.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running ray:50
-Elapsed time: 6.789004032 seconds (#e7) for ray:50
-+!CSVLINE!+bigloo-4.5b,ray:50,6.789004032
+Elapsed time: 6.315830016 seconds (#e6) for ray:50
++!CSVLINE!+bigloo-4.6a,ray:50,6.315830016
 
-real	0m6.793s
-user	0m6.781s
-sys	0m0.004s
+real	0m6.321s
+user	0m6.292s
+sys	0m0.014s
 
 Testing simplex under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/simplex.scm /tmp/r7rs-benchmarks/Bigloo/simplex.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/simplex.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/simplex.scm", line 12, character 375:
 #(define (error . args) args)
@@ -489,17 +640,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/simplex.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running simplex:1000000
-Elapsed time: 3.879106816 seconds (#e4) for simplex:1000000
-+!CSVLINE!+bigloo-4.5b,simplex:1000000,3.879106816
+Elapsed time: 3.552194816 seconds (#e4) for simplex:1000000
++!CSVLINE!+bigloo-4.6a,simplex:1000000,3.552194816
 
-real	0m3.883s
-user	0m3.876s
+real	0m3.557s
+user	0m3.545s
 sys	0m0.004s
 
 Testing ack under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/ack.scm /tmp/r7rs-benchmarks/Bigloo/ack.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/ack.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/ack.scm", line 12, character 375:
 #(define (error . args) args)
@@ -508,17 +665,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/ack.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running ack:3:12:2
-Elapsed time: 9.442713856 seconds (#e9) for ack:3:12:2
-+!CSVLINE!+bigloo-4.5b,ack:3:12:2,9.442713856
+Elapsed time: 11.37304192 seconds (#e11) for ack:3:12:2
++!CSVLINE!+bigloo-4.6a,ack:3:12:2,11.37304192
 
-real	0m9.447s
-user	0m9.437s
-sys	0m0.004s
+real	0m11.378s
+user	0m11.357s
+sys	0m0.005s
 
 Testing array1 under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/array1.scm /tmp/r7rs-benchmarks/Bigloo/array1.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/array1.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/array1.scm", line 12, character 375:
 #(define (error . args) args)
@@ -527,17 +690,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/array1.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running array1:1000000:500
-Elapsed time: 3.054644992 seconds (#e3) for array1:1000000:500
-+!CSVLINE!+bigloo-4.5b,array1:1000000:500,3.054644992
+Elapsed time: 2.624116992 seconds (#e2) for array1:1000000:500
++!CSVLINE!+bigloo-4.6a,array1:1000000:500,2.624116992
 
-real	0m3.059s
-user	0m3.047s
-sys	0m0.003s
+real	0m2.629s
+user	0m2.600s
+sys	0m0.010s
 
 Testing string under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/string.scm /tmp/r7rs-benchmarks/Bigloo/string.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/string.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/string.scm", line 12, character 375:
 #(define (error . args) args)
@@ -546,17 +715,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/string.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running string:500000:100
-Elapsed time: 0.402252032 seconds (#e0) for string:500000:100
-+!CSVLINE!+bigloo-4.5b,string:500000:100,0.402252032
+Elapsed time: 0.438892032 seconds (#e0) for string:500000:100
++!CSVLINE!+bigloo-4.6a,string:500000:100,0.438892032
 
-real	0m0.406s
-user	0m0.406s
-sys	0m0.000s
+real	0m0.443s
+user	0m0.440s
+sys	0m0.001s
 
 Testing sum1 under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/sum1.scm /tmp/r7rs-benchmarks/Bigloo/sum1.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/sum1.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/sum1.scm", line 12, character 375:
 #(define (error . args) args)
@@ -565,17 +740,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/sum1.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running sum1:25
-Elapsed time: 0.563922176 seconds (#e0) for sum1:25
-+!CSVLINE!+bigloo-4.5b,sum1:25,0.563922176
+Elapsed time: 0.335073792 seconds (#e1) for sum1:25
++!CSVLINE!+bigloo-4.6a,sum1:25,0.335073792
 
-real	0m0.568s
-user	0m0.551s
-sys	0m0.010s
+real	0m0.340s
+user	0m0.336s
+sys	0m0.002s
 
 Testing cat under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/cat.scm /tmp/r7rs-benchmarks/Bigloo/cat.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/cat.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/cat.scm", line 12, character 375:
 #(define (error . args) args)
@@ -584,17 +765,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/cat.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running cat:50
-Elapsed time: 2.131376128 seconds (#e3) for cat:50
-+!CSVLINE!+bigloo-4.5b,cat:50,2.131376128
+Elapsed time: 1.918521088 seconds (#e2) for cat:50
++!CSVLINE!+bigloo-4.6a,cat:50,1.918521088
 
-real	0m2.135s
-user	0m1.910s
-sys	0m0.223s
+real	0m1.923s
+user	0m1.661s
+sys	0m0.257s
 
 Testing tail under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/tail.scm /tmp/r7rs-benchmarks/Bigloo/tail.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/tail.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/tail.scm", line 12, character 375:
 #(define (error . args) args)
@@ -603,17 +790,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/tail.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running tail:50
-Elapsed time: 1.341984 seconds (#e1) for tail:50
-+!CSVLINE!+bigloo-4.5b,tail:50,1.341984
+Elapsed time: 1.2992512 seconds (#e1) for tail:50
++!CSVLINE!+bigloo-4.6a,tail:50,1.2992512
 
-real	0m1.346s
-user	0m1.093s
-sys	0m0.250s
+real	0m1.304s
+user	0m1.055s
+sys	0m0.244s
 
 Testing wc under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/wc.scm /tmp/r7rs-benchmarks/Bigloo/wc.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/wc.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/wc.scm", line 12, character 375:
 #(define (error . args) args)
@@ -622,17 +815,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/wc.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 1.39401216 seconds (#e2) for wc:inputs/bib:50
-+!CSVLINE!+bigloo-4.5b,wc:inputs/bib:50,1.39401216
+Elapsed time: 1.379439104 seconds (#e1) for wc:inputs/bib:50
++!CSVLINE!+bigloo-4.6a,wc:inputs/bib:50,1.379439104
 
-real	0m1.398s
-user	0m1.377s
-sys	0m0.020s
+real	0m1.384s
+user	0m1.355s
+sys	0m0.027s
 
 Testing read1 under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/read1.scm /tmp/r7rs-benchmarks/Bigloo/read1.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/read1.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/read1.scm", line 12, character 375:
 #(define (error . args) args)
@@ -641,17 +840,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/read1.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running read1:2500
-Elapsed time: 0.439247872 seconds (#e1) for read1:2500
-+!CSVLINE!+bigloo-4.5b,read1:2500,0.439247872
+Elapsed time: 0.405249024 seconds (#e1) for read1:2500
++!CSVLINE!+bigloo-4.6a,read1:2500,0.405249024
 
-real	0m0.443s
-user	0m0.423s
-sys	0m0.020s
+real	0m0.410s
+user	0m0.396s
+sys	0m0.013s
 
 Testing compiler under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/compiler.scm /tmp/r7rs-benchmarks/Bigloo/compiler.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/compiler.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/compiler.scm", line 12, character 375:
 #(define (error . args) args)
@@ -744,6 +949,12 @@ Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/conform.scm /tmp/r7rs-benchmarks/Bigloo/conform.exe
 
+File "/tmp/r7rs-benchmarks/Bigloo/conform.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
+
 File "/tmp/r7rs-benchmarks/Bigloo/conform.scm", line 12, character 375:
 #(define (error . args) args)
 #^
@@ -751,17 +962,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/conform.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running conform:500
-Elapsed time: 2.19873408 seconds (#e2) for conform:500
-+!CSVLINE!+bigloo-4.5b,conform:500,2.19873408
+Elapsed time: 2.079911936 seconds (#e2) for conform:500
++!CSVLINE!+bigloo-4.6a,conform:500,2.079911936
 
-real	0m2.203s
-user	0m2.198s
-sys	0m0.003s
+real	0m2.085s
+user	0m2.079s
+sys	0m0.002s
 
 Testing dynamic under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/dynamic.scm /tmp/r7rs-benchmarks/Bigloo/dynamic.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/dynamic.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/dynamic.scm", line 12, character 375:
 #(define (error . args) args)
@@ -770,17 +987,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/dynamic.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running dynamic:500
-Elapsed time: 3.839855104 seconds (#e4) for dynamic:500
-+!CSVLINE!+bigloo-4.5b,dynamic:500,3.839855104
+Elapsed time: 3.842724864 seconds (#e4) for dynamic:500
++!CSVLINE!+bigloo-4.6a,dynamic:500,3.842724864
 
-real	0m3.845s
-user	0m3.833s
-sys	0m0.007s
+real	0m3.848s
+user	0m3.813s
+sys	0m0.025s
 
 Testing earley under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/earley.scm /tmp/r7rs-benchmarks/Bigloo/earley.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/earley.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/earley.scm", line 12, character 375:
 #(define (error . args) args)
@@ -791,21 +1014,27 @@ Disabling optimization for library function -- error
 File "/tmp/r7rs-benchmarks/Bigloo/earley.scm", line 683, character 29631:
 #    (deriv-trees* nt i j nts enders steps names toks states)))
 #    ^
-*** WARNING: &<@anonymous:1850>
+*** WARNING: &<@anonymous:1852>
 Possible funcall arity error -- 1 arg(s) expected, 9 provided
 Running...
 Running earley:1
-Elapsed time: 7.635079936 seconds (#e7) for earley:1
-+!CSVLINE!+bigloo-4.5b,earley:1,7.635079936
+Elapsed time: 7.237217024 seconds (#e7) for earley:1
++!CSVLINE!+bigloo-4.6a,earley:1,7.237217024
 
-real	0m7.647s
-user	0m7.483s
-sys	0m0.146s
+real	0m7.262s
+user	0m7.049s
+sys	0m0.190s
 
 Testing graphs under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/graphs.scm /tmp/r7rs-benchmarks/Bigloo/graphs.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/graphs.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/graphs.scm", line 12, character 375:
 #(define (error . args) args)
@@ -814,17 +1043,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/graphs.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running graphs:7:3
-Elapsed time: 27.847474944 seconds (#e28) for graphs:7:3
-+!CSVLINE!+bigloo-4.5b,graphs:7:3,27.847474944
+Elapsed time: 20.211041024 seconds (#e20) for graphs:7:3
++!CSVLINE!+bigloo-4.6a,graphs:7:3,20.211041024
 
-real	0m27.853s
-user	0m27.756s
-sys	0m0.027s
+real	0m20.217s
+user	0m20.140s
+sys	0m0.011s
 
 Testing lattice under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/lattice.scm /tmp/r7rs-benchmarks/Bigloo/lattice.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/lattice.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/lattice.scm", line 12, character 375:
 #(define (error . args) args)
@@ -833,17 +1068,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/lattice.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running lattice:44:10
-Elapsed time: 2.906141184 seconds (#e3) for lattice:44:10
-+!CSVLINE!+bigloo-4.5b,lattice:44:10,2.906141184
+Elapsed time: 2.864886016 seconds (#e3) for lattice:44:10
++!CSVLINE!+bigloo-4.6a,lattice:44:10,2.864886016
 
-real	0m2.910s
-user	0m2.905s
-sys	0m0.003s
+real	0m2.869s
+user	0m2.859s
+sys	0m0.006s
 
 Testing matrix under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/matrix.scm /tmp/r7rs-benchmarks/Bigloo/matrix.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/matrix.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/matrix.scm", line 12, character 375:
 #(define (error . args) args)
@@ -852,17 +1093,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/matrix.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running matrix:5:5:2500
-Elapsed time: 4.148606976 seconds (#e4) for matrix:5:5:2500
-+!CSVLINE!+bigloo-4.5b,matrix:5:5:2500,4.148606976
+Elapsed time: 4.119396864 seconds (#e4) for matrix:5:5:2500
++!CSVLINE!+bigloo-4.6a,matrix:5:5:2500,4.119396864
 
-real	0m4.153s
-user	0m4.142s
-sys	0m0.000s
+real	0m4.125s
+user	0m4.105s
+sys	0m0.003s
 
 Testing maze under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/maze.scm /tmp/r7rs-benchmarks/Bigloo/maze.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/maze.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/maze.scm", line 12, character 375:
 #(define (error . args) args)
@@ -871,17 +1118,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/maze.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running maze:20:7:10000
-Elapsed time: 1.472590848 seconds (#e2) for maze:20:7:10000
-+!CSVLINE!+bigloo-4.5b,maze:20:7:10000,1.472590848
+Elapsed time: 1.457696 seconds (#e2) for maze:20:7:10000
++!CSVLINE!+bigloo-4.6a,maze:20:7:10000,1.457696
 
-real	0m1.477s
-user	0m1.476s
-sys	0m0.000s
+real	0m1.463s
+user	0m1.457s
+sys	0m0.003s
 
 Testing mazefun under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/mazefun.scm /tmp/r7rs-benchmarks/Bigloo/mazefun.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/mazefun.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/mazefun.scm", line 12, character 375:
 #(define (error . args) args)
@@ -890,17 +1143,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/mazefun.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 3.636752896 seconds (#e4) for mazefun:11:11:10000
-+!CSVLINE!+bigloo-4.5b,mazefun:11:11:10000,3.636752896
+Elapsed time: 3.405499904 seconds (#e4) for mazefun:11:11:10000
++!CSVLINE!+bigloo-4.6a,mazefun:11:11:10000,3.405499904
 
-real	0m3.641s
-user	0m3.631s
-sys	0m0.007s
+real	0m3.410s
+user	0m3.399s
+sys	0m0.004s
 
 Testing nqueens under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/nqueens.scm /tmp/r7rs-benchmarks/Bigloo/nqueens.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/nqueens.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/nqueens.scm", line 12, character 375:
 #(define (error . args) args)
@@ -909,17 +1168,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/nqueens.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running nqueens:13:10
-Elapsed time: 8.10352384 seconds (#e8) for nqueens:13:10
-+!CSVLINE!+bigloo-4.5b,nqueens:13:10,8.10352384
+Elapsed time: 7.747773952 seconds (#e8) for nqueens:13:10
++!CSVLINE!+bigloo-4.6a,nqueens:13:10,7.747773952
 
-real	0m8.108s
-user	0m8.095s
-sys	0m0.000s
+real	0m7.753s
+user	0m7.736s
+sys	0m0.001s
 
 Testing paraffins under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/paraffins.scm /tmp/r7rs-benchmarks/Bigloo/paraffins.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/paraffins.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/paraffins.scm", line 12, character 375:
 #(define (error . args) args)
@@ -928,17 +1193,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/paraffins.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running paraffins:23:10
-Elapsed time: 4.572438784 seconds (#e4) for paraffins:23:10
-+!CSVLINE!+bigloo-4.5b,paraffins:23:10,4.572438784
+Elapsed time: 2.734034176 seconds (#e3) for paraffins:23:10
++!CSVLINE!+bigloo-4.6a,paraffins:23:10,2.734034176
 
-real	0m4.582s
-user	0m4.463s
-sys	0m0.110s
+real	0m2.746s
+user	0m2.674s
+sys	0m0.064s
 
 Testing parsing under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/parsing.scm /tmp/r7rs-benchmarks/Bigloo/parsing.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/parsing.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/parsing.scm", line 12, character 375:
 #(define (error . args) args)
@@ -947,17 +1218,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/parsing.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running parsing:2500
-Elapsed time: 1.72106112 seconds (#e2) for parsing:2500
-+!CSVLINE!+bigloo-4.5b,parsing:2500,1.72106112
+Elapsed time: 1.68720896 seconds (#e1) for parsing:2500
++!CSVLINE!+bigloo-4.6a,parsing:2500,1.68720896
 
-real	0m1.725s
-user	0m1.720s
-sys	0m0.004s
+real	0m1.692s
+user	0m1.687s
+sys	0m0.002s
 
 Testing peval under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/peval.scm /tmp/r7rs-benchmarks/Bigloo/peval.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/peval.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/peval.scm", line 12, character 375:
 #(define (error . args) args)
@@ -966,17 +1243,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/peval.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running peval:2000
-Elapsed time: 2.053824 seconds (#e2) for peval:2000
-+!CSVLINE!+bigloo-4.5b,peval:2000,2.053824
+Elapsed time: 2.026139136 seconds (#e2) for peval:2000
++!CSVLINE!+bigloo-4.6a,peval:2000,2.026139136
 
-real	0m2.058s
-user	0m2.056s
-sys	0m0.000s
+real	0m2.031s
+user	0m2.022s
+sys	0m0.004s
 
 Testing primes under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/primes.scm /tmp/r7rs-benchmarks/Bigloo/primes.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/primes.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/primes.scm", line 12, character 375:
 #(define (error . args) args)
@@ -985,17 +1268,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/primes.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running primes:1000:10000
-Elapsed time: 2.725286912 seconds (#e2) for primes:1000:10000
-+!CSVLINE!+bigloo-4.5b,primes:1000:10000,2.725286912
+Elapsed time: 2.808909056 seconds (#e3) for primes:1000:10000
++!CSVLINE!+bigloo-4.6a,primes:1000:10000,2.808909056
 
-real	0m2.729s
-user	0m2.717s
-sys	0m0.010s
+real	0m2.814s
+user	0m2.804s
+sys	0m0.004s
 
 Testing quicksort under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/quicksort.scm /tmp/r7rs-benchmarks/Bigloo/quicksort.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/quicksort.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/quicksort.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1004,17 +1293,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/quicksort.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running quicksort:10000:2500
-Elapsed time: 2.96009088 seconds (#e3) for quicksort:10000:2500
-+!CSVLINE!+bigloo-4.5b,quicksort:10000:2500,2.96009088
+Elapsed time: 3.013993984 seconds (#e3) for quicksort:10000:2500
++!CSVLINE!+bigloo-4.6a,quicksort:10000:2500,3.013993984
 
-real	0m2.968s
-user	0m2.963s
-sys	0m0.003s
+real	0m3.023s
+user	0m3.015s
+sys	0m0.004s
 
 Testing scheme under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/scheme.scm /tmp/r7rs-benchmarks/Bigloo/scheme.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/scheme.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/scheme.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1025,45 +1320,51 @@ Disabling optimization for library function -- error
 File "/tmp/r7rs-benchmarks/Bigloo/scheme.scm", line 755, character 24264:
 #          ((code2 rte) temp)
 #          ^
-*** WARNING: &<@anonymous:2052>
+*** WARNING: &<@anonymous:2049>
 Possible funcall arity error -- -6 arg(s) expected, 1 provided
 
 File "/tmp/r7rs-benchmarks/Bigloo/scheme.scm", line 853, character 27131:
 #  (lambda (rte) ((oper rte) (arg1 rte) (arg2 rte) (arg3 rte))))
 #                ^
-*** WARNING: &<@anonymous:2046>
+*** WARNING: &<@anonymous:2043>
 Possible funcall arity error -- 2 arg(s) expected, 3 provided
 
 File "/tmp/r7rs-benchmarks/Bigloo/scheme.scm", line 850, character 27029:
 #  (lambda (rte) ((oper rte) (arg1 rte) (arg2 rte))))
 #                ^
-*** WARNING: &<@anonymous:2052>
+*** WARNING: &<@anonymous:2049>
 Possible funcall arity error -- -6 arg(s) expected, 2 provided
 
 File "/tmp/r7rs-benchmarks/Bigloo/scheme.scm", line 847, character 26943:
 #  (lambda (rte) ((oper rte) (arg1 rte))))
 #                ^
-*** WARNING: &<@anonymous:2052>
+*** WARNING: &<@anonymous:2049>
 Possible funcall arity error -- -6 arg(s) expected, 1 provided
 
 File "/tmp/r7rs-benchmarks/Bigloo/scheme.scm", line 844, character 26873:
 #  (lambda (rte) ((oper rte))))
 #                ^
-*** WARNING: &<@anonymous:2052>
+*** WARNING: &<@anonymous:2049>
 Possible funcall arity error -- -6 arg(s) expected, 0 provided
 Running...
 Running scheme:100000
-Elapsed time: 4.113993216 seconds (#e4) for scheme:100000
-+!CSVLINE!+bigloo-4.5b,scheme:100000,4.113993216
+Elapsed time: 4.093149952 seconds (#e4) for scheme:100000
++!CSVLINE!+bigloo-4.6a,scheme:100000,4.093149952
 
-real	0m4.119s
-user	0m4.115s
-sys	0m0.000s
+real	0m4.099s
+user	0m4.086s
+sys	0m0.005s
 
 Testing slatex under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/slatex.scm /tmp/r7rs-benchmarks/Bigloo/slatex.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/slatex.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/slatex.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1076,14 +1377,20 @@ Running slatex:500
 not a number --  
 
 real	0m0.006s
-user	0m0.000s
-sys	0m0.006s
+user	0m0.003s
+sys	0m0.004s
 +!CSVLINE!+bigloo,slatex,CRASHED
 
 Testing chudnovsky under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/chudnovsky.scm /tmp/r7rs-benchmarks/Bigloo/chudnovsky.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/chudnovsky.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/chudnovsky.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1092,17 +1399,24 @@ File "/tmp/r7rs-benchmarks/Bigloo/chudnovsky.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running chudnovsky:50:500:50:1000
-ERROR: returned incorrect result: (#z0 #z0 #z0 #z0 #z0 #z0 #z0 #z0 #z0 #z0)
-+!CSVLINE!+bigloo-4.5b,chudnovsky:50:500:50:1000,INCORRECT
+*** ERROR:arithmetic procedure:
+`floating point' exception -- raised
 
-real	0m0.103s
-user	0m0.099s
-sys	0m0.003s
+real	0m0.004s
+user	0m0.002s
+sys	0m0.002s
++!CSVLINE!+bigloo,chudnovsky,CRASHED
 
 Testing nboyer under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/nboyer.scm /tmp/r7rs-benchmarks/Bigloo/nboyer.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/nboyer.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/nboyer.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1111,17 +1425,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/nboyer.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running nboyer:5:1
-Elapsed time: 3.99379712 seconds (#e4) for nboyer:5:1
-+!CSVLINE!+bigloo-4.5b,nboyer:5:1,3.99379712
+Elapsed time: 4.039776 seconds (#e4) for nboyer:5:1
++!CSVLINE!+bigloo-4.6a,nboyer:5:1,4.039776
 
-real	0m4.001s
-user	0m3.942s
-sys	0m0.050s
+real	0m4.052s
+user	0m3.971s
+sys	0m0.069s
 
 Testing sboyer under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/sboyer.scm /tmp/r7rs-benchmarks/Bigloo/sboyer.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/sboyer.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/sboyer.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1132,21 +1452,27 @@ Disabling optimization for library function -- error
 File "/tmp/r7rs-benchmarks/Bigloo/sboyer.scm", line 127, character 4888:
 #       (test-boyer alist term (hide count input)))
 #       ^
-*** WARNING: &<@test-boyer:1042>
+*** WARNING: &<@test-boyer:1040>
 Possible funcall arity error -- 0 arg(s) expected, 3 provided
 Running...
 Running sboyer:5:1
-Elapsed time: 1.248068096 seconds (#e1) for sboyer:5:1
-+!CSVLINE!+bigloo-4.5b,sboyer:5:1,1.248068096
+Elapsed time: 1.218628096 seconds (#e1) for sboyer:5:1
++!CSVLINE!+bigloo-4.6a,sboyer:5:1,1.218628096
 
-real	0m1.253s
-user	0m1.241s
-sys	0m0.010s
+real	0m1.226s
+user	0m1.199s
+sys	0m0.023s
 
 Testing gcbench under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/gcbench.scm /tmp/r7rs-benchmarks/Bigloo/gcbench.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/gcbench.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/gcbench.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1189,17 +1515,23 @@ Creating 8 trees of depth 18
 GCBench: Top down construction
 GCBench: Bottom up construction
  Total memory available= ???????? bytes  Free memory= ???????? bytes
-Elapsed time: 2.232797184 seconds (#e2) for gcbench:20:1
-+!CSVLINE!+bigloo-4.5b,gcbench:20:1,2.232797184
+Elapsed time: 2.250951936 seconds (#e2) for gcbench:20:1
++!CSVLINE!+bigloo-4.6a,gcbench:20:1,2.250951936
 
-real	0m2.239s
-user	0m2.199s
-sys	0m0.033s
+real	0m2.260s
+user	0m2.217s
+sys	0m0.034s
 
 Testing mperm under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/mperm.scm /tmp/r7rs-benchmarks/Bigloo/mperm.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/mperm.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/mperm.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1208,17 +1540,23 @@ File "/tmp/r7rs-benchmarks/Bigloo/mperm.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 7.750855936 seconds (#e7) for mperm:20:10:2:1
-+!CSVLINE!+bigloo-4.5b,mperm:20:10:2:1,7.750855936
+Elapsed time: 7.436758016 seconds (#e7) for mperm:20:10:2:1
++!CSVLINE!+bigloo-4.6a,mperm:20:10:2:1,7.436758016
 
-real	0m8.319s
-user	0m8.196s
-sys	0m0.110s
+real	0m8.024s
+user	0m7.869s
+sys	0m0.134s
 
 Testing equal under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/equal.scm /tmp/r7rs-benchmarks/Bigloo/equal.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/equal.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/equal.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1227,17 +1565,22 @@ File "/tmp/r7rs-benchmarks/Bigloo/equal.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running equal:100:100:8:1000:2000:5000
-./bench: line 665: 164687 Killed                  "$1" < "$2"
 
-real	5m0.108s
-user	4m59.999s
-sys	0m0.000s
+real	5m0.001s
+user	4m59.623s
+sys	0m0.004s
 +!CSVLINE!+bigloo,equal,ULIMITKILLED
 
 Testing bv2string under Bigloo
 Including prelude /home/nex/src/r7rs-benchmarks/src/Bigloo-prelude.scm
 Compiling...
 bigloo_comp /tmp/r7rs-benchmarks/Bigloo/bv2string.scm /tmp/r7rs-benchmarks/Bigloo/bv2string.exe
+
+File "/tmp/r7rs-benchmarks/Bigloo/bv2string.scm", line 11, character 327:
+#(define call-with-current-continuation call/cc)
+#^
+*** WARNING: define
+Disabling optimization for library function -- call-with-current-continuation
 
 File "/tmp/r7rs-benchmarks/Bigloo/bv2string.scm", line 12, character 375:
 #(define (error . args) args)
@@ -1246,9 +1589,9 @@ File "/tmp/r7rs-benchmarks/Bigloo/bv2string.scm", line 12, character 375:
 Disabling optimization for library function -- error
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 2.263058176 seconds (#e2) for bv2string:1000:1000:100
-+!CSVLINE!+bigloo-4.5b,bv2string:1000:1000:100,2.263058176
+Elapsed time: 2.334014976 seconds (#e2) for bv2string:1000:1000:100
++!CSVLINE!+bigloo-4.6a,bv2string:1000:1000:100,2.334014976
 
-real	0m2.268s
-user	0m2.265s
-sys	0m0.000s
+real	0m2.339s
+user	0m2.330s
+sys	0m0.004s

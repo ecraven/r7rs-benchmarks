@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking Chibi on Fri 5 Jul 12:30:49 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
+Benchmarking Chibi on Fri 16 Jan 12:50:42 CET 2026 under Linux h4nex 6.16.8-arch3-1 #1 SMP PREEMPT_DYNAMIC Mon, 22 Sep 2025 22:08:35 +0000 x86_64 GNU/Linux
 
 Testing browse under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -9,11 +9,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/browse.scm /tmp/r7rs-benchmarks/Chibi/browse.scm
 Running...
 Running browse:2000
-./bench: line 356: 166682 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 368799 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.325s
-user	4m59.950s
-sys	0m0.027s
+real	5m0.683s
+user	4m59.905s
+sys	0m0.056s
 +!CSVLINE!+chibi,browse,ULIMITKILLED
 
 Testing deriv under Chibi
@@ -23,12 +23,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/deriv.scm /tmp/r7rs-benchmarks/Chibi/deriv.scm
 Running...
 Running deriv:10000000
-Elapsed time: 82.413 seconds (82.413) for deriv:10000000
-+!CSVLINE!+chibi-0.11.0,deriv:10000000,82.413
+Elapsed time: 81.092 seconds (81.092) for deriv:10000000
++!CSVLINE!+chibi-0.11.0,deriv:10000000,81.092
 
-real	1m22.717s
-user	1m22.461s
-sys	0m0.030s
+real	1m21.394s
+user	1m21.133s
+sys	0m0.027s
 
 Testing destruc under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -37,12 +37,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/destruc.scm /tmp/r7rs-benchmarks/Chibi/destruc.scm
 Running...
 Running destruc:600:50:4000
-Elapsed time: 70.377 seconds (70.377) for destruc:600:50:4000
-+!CSVLINE!+chibi-0.11.0,destruc:600:50:4000,70.377
+Elapsed time: 69.594 seconds (69.594) for destruc:600:50:4000
++!CSVLINE!+chibi-0.11.0,destruc:600:50:4000,69.594
 
-real	1m10.695s
-user	1m10.557s
-sys	0m0.027s
+real	1m9.924s
+user	1m9.738s
+sys	0m0.018s
 
 Testing diviter under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -51,12 +51,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/diviter.scm /tmp/r7rs-benchmarks/Chibi/diviter.scm
 Running...
 Running diviter:1000:1000000
-Elapsed time: 45.12 seconds (45.119) for diviter:1000:1000000
-+!CSVLINE!+chibi-0.11.0,diviter:1000:1000000,45.12
+Elapsed time: 44.549 seconds (44.549) for diviter:1000:1000000
++!CSVLINE!+chibi-0.11.0,diviter:1000:1000000,44.549
 
-real	0m45.441s
-user	0m45.309s
-sys	0m0.023s
+real	0m44.848s
+user	0m44.728s
+sys	0m0.013s
 
 Testing divrec under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -65,12 +65,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/divrec.scm /tmp/r7rs-benchmarks/Chibi/divrec.scm
 Running...
 Running divrec:1000:1000000
-Elapsed time: 46.382 seconds (46.382) for divrec:1000:1000000
-+!CSVLINE!+chibi-0.11.0,divrec:1000:1000000,46.382
+Elapsed time: 46.355 seconds (46.355) for divrec:1000:1000000
++!CSVLINE!+chibi-0.11.0,divrec:1000:1000000,46.355
 
-real	0m46.682s
-user	0m46.602s
-sys	0m0.017s
+real	0m46.669s
+user	0m46.493s
+sys	0m0.013s
 
 Testing puzzle under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -79,12 +79,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/puzzle.scm /tmp/r7rs-benchmarks/Chibi/puzzle.scm
 Running...
 Running puzzle:1000
-Elapsed time: 192.028 seconds (192.028) for puzzle:1000
-+!CSVLINE!+chibi-0.11.0,puzzle:1000,192.028
+Elapsed time: 190.382 seconds (190.382) for puzzle:1000
++!CSVLINE!+chibi-0.11.0,puzzle:1000,190.382
 
-real	3m12.337s
-user	3m11.822s
-sys	0m0.143s
+real	3m10.691s
+user	3m10.047s
+sys	0m0.124s
 
 Testing triangl under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -93,12 +93,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/triangl.scm /tmp/r7rs-benchmarks/Chibi/triangl.scm
 Running...
 Running triangl:22:1:50
-Elapsed time: 19.104 seconds (19.104) for triangl:22:1:50
-+!CSVLINE!+chibi-0.11.0,triangl:22:1:50,19.104
+Elapsed time: 66.117 seconds (66.117) for triangl:22:1:50
++!CSVLINE!+chibi-0.11.0,triangl:22:1:50,66.117
 
-real	0m19.420s
-user	1m8.016s
-sys	0m0.033s
+real	1m6.436s
+user	1m6.150s
+sys	0m0.052s
 
 Testing tak under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -107,12 +107,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/tak.scm /tmp/r7rs-benchmarks/Chibi/tak.scm
 Running...
 Running tak:40:20:11:1
-Elapsed time: 42.69 seconds (42.691) for tak:40:20:11:1
-+!CSVLINE!+chibi-0.11.0,tak:40:20:11:1,42.69
+Elapsed time: 42.478 seconds (42.478) for tak:40:20:11:1
++!CSVLINE!+chibi-0.11.0,tak:40:20:11:1,42.478
 
-real	0m42.993s
-user	0m42.966s
-sys	0m0.000s
+real	0m42.776s
+user	0m42.722s
+sys	0m0.004s
 
 Testing takl under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -121,11 +121,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/takl.scm /tmp/r7rs-benchmarks/Chibi/takl.scm
 Running...
 Running takl:40:20:12:1
-./bench: line 356: 170269 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 369769 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.421s
-user	4m59.863s
-sys	0m0.107s
+real	5m0.652s
+user	4m59.922s
+sys	0m0.045s
 +!CSVLINE!+chibi,takl,ULIMITKILLED
 
 Testing ntakl under Chibi
@@ -135,12 +135,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/ntakl.scm /tmp/r7rs-benchmarks/Chibi/ntakl.scm
 Running...
 Running ntakl:40:20:12:1
-Elapsed time: 74.311 seconds (74.312) for ntakl:40:20:12:1
-+!CSVLINE!+chibi-0.11.0,ntakl:40:20:12:1,74.311
+Elapsed time: 74.49 seconds (74.49) for ntakl:40:20:12:1
++!CSVLINE!+chibi-0.11.0,ntakl:40:20:12:1,74.49
 
-real	1m14.615s
-user	1m14.568s
-sys	0m0.000s
+real	1m14.813s
+user	1m14.693s
+sys	0m0.009s
 
 Testing cpstak under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -149,12 +149,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/cpstak.scm /tmp/r7rs-benchmarks/Chibi/cpstak.scm
 Running...
 Running cpstak:40:20:11:1
-Elapsed time: 157.788 seconds (157.788) for cpstak:40:20:11:1
-+!CSVLINE!+chibi-0.11.0,cpstak:40:20:11:1,157.788
+Elapsed time: 152.56 seconds (152.56) for cpstak:40:20:11:1
++!CSVLINE!+chibi-0.11.0,cpstak:40:20:11:1,152.56
 
-real	2m38.091s
-user	2m37.790s
-sys	0m0.053s
+real	2m32.893s
+user	2m32.472s
+sys	0m0.038s
 
 Testing ctak under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -163,11 +163,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/ctak.scm /tmp/r7rs-benchmarks/Chibi/ctak.scm
 Running...
 Running ctak:32:16:8:1
-./bench: line 356: 171594 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 370334 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.304s
-user	4m59.925s
-sys	0m0.047s
+real	5m0.870s
+user	4m59.832s
+sys	0m0.140s
 +!CSVLINE!+chibi,ctak,ULIMITKILLED
 
 Testing fib under Chibi
@@ -177,12 +177,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/fib.scm /tmp/r7rs-benchmarks/Chibi/fib.scm
 Running...
 Running fib:40:5
-Elapsed time: 57.804 seconds (57.804) for fib:40:5
-+!CSVLINE!+chibi-0.11.0,fib:40:5,57.804
+Elapsed time: 60.473 seconds (60.473) for fib:40:5
++!CSVLINE!+chibi-0.11.0,fib:40:5,60.473
 
-real	0m58.111s
-user	0m58.059s
-sys	0m0.007s
+real	1m0.779s
+user	1m0.522s
+sys	0m0.039s
 
 Testing fibc under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -191,12 +191,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/fibc.scm /tmp/r7rs-benchmarks/Chibi/fibc.scm
 Running...
 Running fibc:30:10
-Elapsed time: 276.117 seconds (276.118) for fibc:30:10
-+!CSVLINE!+chibi-0.11.0,fibc:30:10,276.117
+Elapsed time: 295.808 seconds (295.808) for fibc:30:10
++!CSVLINE!+chibi-0.11.0,fibc:30:10,295.808
 
-real	4m36.420s
-user	4m35.996s
-sys	0m0.056s
+real	4m56.126s
+user	4m55.037s
+sys	0m0.097s
 
 Testing fibfp under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -205,12 +205,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/fibfp.scm /tmp/r7rs-benchmarks/Chibi/fibfp.scm
 Running...
 Running fibfp:35.0:10
-Elapsed time: 35.523 seconds (35.523) for fibfp:35.0:10
-+!CSVLINE!+chibi-0.11.0,fibfp:35.0:10,35.523
+Elapsed time: 34.441 seconds (34.441) for fibfp:35.0:10
++!CSVLINE!+chibi-0.11.0,fibfp:35.0:10,34.441
 
-real	0m35.831s
-user	0m35.705s
-sys	0m0.044s
+real	0m34.761s
+user	0m34.575s
+sys	0m0.022s
 
 Testing sum under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -219,12 +219,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/sum.scm /tmp/r7rs-benchmarks/Chibi/sum.scm
 Running...
 Running sum:10000:200000
-Elapsed time: 68.543 seconds (68.544) for sum:10000:200000
-+!CSVLINE!+chibi-0.11.0,sum:10000:200000,68.543
+Elapsed time: 72.722 seconds (72.722) for sum:10000:200000
++!CSVLINE!+chibi-0.11.0,sum:10000:200000,72.722
 
-real	1m8.848s
-user	1m8.771s
-sys	0m0.007s
+real	1m13.053s
+user	1m12.769s
+sys	0m0.033s
 
 Testing sumfp under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -233,12 +233,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/sumfp.scm /tmp/r7rs-benchmarks/Chibi/sumfp.scm
 Running...
 Running sumfp:1000000.0:500
-Elapsed time: 67.835 seconds (67.835) for sumfp:1000000.0:500
-+!CSVLINE!+chibi-0.11.0,sumfp:1000000.0:500,67.835
+Elapsed time: 70.141 seconds (70.14) for sumfp:1000000.0:500
++!CSVLINE!+chibi-0.11.0,sumfp:1000000.0:500,70.141
 
-real	1m8.134s
-user	1m7.878s
-sys	0m0.093s
+real	1m10.464s
+user	1m10.070s
+sys	0m0.072s
 
 Testing fft under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -247,12 +247,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/fft.scm /tmp/r7rs-benchmarks/Chibi/fft.scm
 Running...
 Running fft:65536:100
-Elapsed time: 38.267 seconds (38.267) for fft:65536:100
-+!CSVLINE!+chibi-0.11.0,fft:65536:100,38.267
+Elapsed time: 41.142 seconds (41.142) for fft:65536:100
++!CSVLINE!+chibi-0.11.0,fft:65536:100,41.142
 
-real	0m38.588s
-user	0m38.473s
-sys	0m0.030s
+real	0m41.457s
+user	0m41.264s
+sys	0m0.009s
 
 Testing mbrot under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -261,12 +261,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/mbrot.scm /tmp/r7rs-benchmarks/Chibi/mbrot.scm
 Running...
 Running mbrot:75:1000
-Elapsed time: 161.476 seconds (161.476) for mbrot:75:1000
-+!CSVLINE!+chibi-0.11.0,mbrot:75:1000,161.476
+Elapsed time: 158.424 seconds (158.424) for mbrot:75:1000
++!CSVLINE!+chibi-0.11.0,mbrot:75:1000,158.424
 
-real	2m41.802s
-user	2m41.368s
-sys	0m0.107s
+real	2m38.787s
+user	2m37.780s
+sys	0m0.199s
 
 Testing mbrotZ under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -275,11 +275,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/mbrotZ.scm /tmp/r7rs-benchmarks/Chibi/mbrotZ.scm
 Running...
 Running mbrotZ:75:1000
-./bench: line 356: 175887 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 373534 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.528s
-user	4m59.801s
-sys	0m0.170s
+real	5m0.985s
+user	4m59.826s
+sys	0m0.142s
 +!CSVLINE!+chibi,mbrotZ,ULIMITKILLED
 
 Testing nucleic under Chibi
@@ -289,12 +289,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/nucleic.scm /tmp/r7rs-benchmarks/Chibi/nucleic.scm
 Running...
 Running nucleic:50
-Elapsed time: 66.527 seconds (66.526) for nucleic:50
-+!CSVLINE!+chibi-0.11.0,nucleic:50,66.527
+Elapsed time: 66.902 seconds (66.902) for nucleic:50
++!CSVLINE!+chibi-0.11.0,nucleic:50,66.902
 
-real	1m6.946s
-user	1m6.780s
-sys	0m0.036s
+real	1m7.300s
+user	1m7.026s
+sys	0m0.026s
 
 Testing pi under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -303,11 +303,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/pi.scm /tmp/r7rs-benchmarks/Chibi/pi.scm
 Running...
 Running pi:50:500:50:100
-./bench: line 356: 177414 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 373990 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.372s
-user	4m59.918s
-sys	0m0.053s
+real	5m0.744s
+user	4m59.907s
+sys	0m0.060s
 +!CSVLINE!+chibi,pi,ULIMITKILLED
 
 Testing pnpoly under Chibi
@@ -317,12 +317,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/pnpoly.scm /tmp/r7rs-benchmarks/Chibi/pnpoly.scm
 Running...
 Running pnpoly:1000000
-Elapsed time: 183.535 seconds (183.535) for pnpoly:1000000
-+!CSVLINE!+chibi-0.11.0,pnpoly:1000000,183.535
+Elapsed time: 180.092 seconds (180.092) for pnpoly:1000000
++!CSVLINE!+chibi-0.11.0,pnpoly:1000000,180.092
 
-real	3m3.855s
-user	3m3.375s
-sys	0m0.110s
+real	3m0.415s
+user	2m59.734s
+sys	0m0.068s
 
 Testing ray under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -331,12 +331,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/ray.scm /tmp/r7rs-benchmarks/Chibi/ray.scm
 Running...
 Running ray:50
-Elapsed time: 173.436 seconds (173.437) for ray:50
-+!CSVLINE!+chibi-0.11.0,ray:50,173.436
+Elapsed time: 172.739 seconds (172.739) for ray:50
++!CSVLINE!+chibi-0.11.0,ray:50,172.739
 
-real	2m53.746s
-user	2m53.173s
-sys	0m0.188s
+real	2m53.049s
+user	2m52.516s
+sys	0m0.071s
 
 Testing simplex under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -345,12 +345,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/simplex.scm /tmp/r7rs-benchmarks/Chibi/simplex.scm
 Running...
 Running simplex:1000000
-Elapsed time: 136.803 seconds (136.804) for simplex:1000000
-+!CSVLINE!+chibi-0.11.0,simplex:1000000,136.803
+Elapsed time: 137.806 seconds (137.806) for simplex:1000000
++!CSVLINE!+chibi-0.11.0,simplex:1000000,137.806
 
-real	2m17.120s
-user	2m16.831s
-sys	0m0.020s
+real	2m18.143s
+user	2m17.699s
+sys	0m0.034s
 
 Testing ack under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -359,12 +359,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/ack.scm /tmp/r7rs-benchmarks/Chibi/ack.scm
 Running...
 Running ack:3:12:2
-Elapsed time: 49.752 seconds (49.751) for ack:3:12:2
-+!CSVLINE!+chibi-0.11.0,ack:3:12:2,49.752
+Elapsed time: 49.748 seconds (49.748) for ack:3:12:2
++!CSVLINE!+chibi-0.11.0,ack:3:12:2,49.748
 
-real	0m50.053s
-user	0m50.013s
-sys	0m0.010s
+real	0m50.046s
+user	0m49.971s
+sys	0m0.003s
 
 Testing array1 under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -373,12 +373,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/array1.scm /tmp/r7rs-benchmarks/Chibi/array1.scm
 Running...
 Running array1:1000000:500
-Elapsed time: 47.093 seconds (47.093) for array1:1000000:500
-+!CSVLINE!+chibi-0.11.0,array1:1000000:500,47.093
+Elapsed time: 45.651 seconds (45.651) for array1:1000000:500
++!CSVLINE!+chibi-0.11.0,array1:1000000:500,45.651
 
-real	0m47.404s
-user	0m47.281s
-sys	0m0.027s
+real	0m45.951s
+user	0m45.833s
+sys	0m0.019s
 
 Testing string under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -387,12 +387,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/string.scm /tmp/r7rs-benchmarks/Chibi/string.scm
 Running...
 Running string:500000:100
-Elapsed time: 11.174 seconds (11.174) for string:500000:100
-+!CSVLINE!+chibi-0.11.0,string:500000:100,11.174
+Elapsed time: 10.826 seconds (10.827) for string:500000:100
++!CSVLINE!+chibi-0.11.0,string:500000:100,10.826
 
-real	0m11.476s
-user	0m11.452s
-sys	0m0.007s
+real	0m11.126s
+user	0m11.098s
+sys	0m0.004s
 
 Testing sum1 under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -401,12 +401,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/sum1.scm /tmp/r7rs-benchmarks/Chibi/sum1.scm
 Running...
 Running sum1:25
-Elapsed time: 92.088 seconds (92.087) for sum1:25
-+!CSVLINE!+chibi-0.11.0,sum1:25,92.088
+Elapsed time: 93.96 seconds (93.96) for sum1:25
++!CSVLINE!+chibi-0.11.0,sum1:25,93.96
 
-real	1m32.391s
-user	1m31.824s
-sys	0m0.443s
+real	1m34.278s
+user	1m33.636s
+sys	0m0.414s
 
 Testing cat under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -415,12 +415,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/cat.scm /tmp/r7rs-benchmarks/Chibi/cat.scm
 Running...
 Running cat:50
-Elapsed time: 39.869 seconds (39.87) for cat:50
-+!CSVLINE!+chibi-0.11.0,cat:50,39.869
+Elapsed time: 38.594 seconds (38.594) for cat:50
++!CSVLINE!+chibi-0.11.0,cat:50,38.594
 
-real	0m40.186s
-user	0m39.800s
-sys	0m0.293s
+real	0m38.913s
+user	0m38.577s
+sys	0m0.239s
 
 Testing tail under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -429,12 +429,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/tail.scm /tmp/r7rs-benchmarks/Chibi/tail.scm
 Running...
 Running tail:50
-Elapsed time: 5.502 seconds (5.502) for tail:50
-+!CSVLINE!+chibi-0.11.0,tail:50,5.502
+Elapsed time: 5.597 seconds (5.597) for tail:50
++!CSVLINE!+chibi-0.11.0,tail:50,5.597
 
-real	0m5.810s
-user	0m5.401s
-sys	0m0.396s
+real	0m5.923s
+user	0m5.560s
+sys	0m0.342s
 
 Testing wc under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -443,11 +443,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/wc.scm /tmp/r7rs-benchmarks/Chibi/wc.scm
 Running...
 Running wc:inputs/bib:50
-./bench: line 356: 181589 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 376416 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.457s
-user	4m59.621s
-sys	0m0.350s
+real	5m0.720s
+user	4m59.777s
+sys	0m0.187s
 +!CSVLINE!+chibi,wc,ULIMITKILLED
 
 Testing read1 under Chibi
@@ -457,12 +457,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/read1.scm /tmp/r7rs-benchmarks/Chibi/read1.scm
 Running...
 Running read1:2500
-Elapsed time: 214.554 seconds (214.554) for read1:2500
-+!CSVLINE!+chibi-0.11.0,read1:2500,214.554
+Elapsed time: 213.841 seconds (213.841) for read1:2500
++!CSVLINE!+chibi-0.11.0,read1:2500,213.841
 
-real	3m34.854s
-user	3m33.409s
-sys	0m1.018s
+real	3m34.146s
+user	3m32.601s
+sys	0m0.883s
 
 Testing compiler under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -471,12 +471,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/compiler.scm /tmp/r7rs-benchmarks/Chibi/compiler.scm
 Running...
 Running compiler:2000
-Elapsed time: 86.598 seconds (86.598) for compiler:2000
-+!CSVLINE!+chibi-0.11.0,compiler:2000,86.598
+Elapsed time: 90.287 seconds (90.287) for compiler:2000
++!CSVLINE!+chibi-0.11.0,compiler:2000,90.287
 
-real	1m27.695s
-user	1m27.448s
-sys	0m0.050s
+real	1m31.439s
+user	1m31.016s
+sys	0m0.026s
 
 Testing conform under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -485,12 +485,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/conform.scm /tmp/r7rs-benchmarks/Chibi/conform.scm
 Running...
 Running conform:500
-Elapsed time: 123.281 seconds (123.281) for conform:500
-+!CSVLINE!+chibi-0.11.0,conform:500,123.281
+Elapsed time: 123.982 seconds (123.982) for conform:500
++!CSVLINE!+chibi-0.11.0,conform:500,123.982
 
-real	2m3.609s
-user	2m3.274s
-sys	0m0.075s
+real	2m4.315s
+user	2m3.815s
+sys	0m0.033s
 
 Testing dynamic under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -499,12 +499,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/dynamic.scm /tmp/r7rs-benchmarks/Chibi/dynamic.scm
 Running...
 Running dynamic:500
-Elapsed time: 191.388 seconds (191.388) for dynamic:500
-+!CSVLINE!+chibi-0.11.0,dynamic:500,191.388
+Elapsed time: 196.854 seconds (196.854) for dynamic:500
++!CSVLINE!+chibi-0.11.0,dynamic:500,196.854
 
-real	3m11.759s
-user	3m10.936s
-sys	0m0.476s
+real	3m17.319s
+user	3m16.108s
+sys	0m0.458s
 
 Testing earley under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -513,11 +513,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/earley.scm /tmp/r7rs-benchmarks/Chibi/earley.scm
 Running...
 Running earley:1
-./bench: line 356: 185090 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 380677 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.727s
-user	4m59.946s
-sys	0m0.027s
+real	5m1.435s
+user	4m59.919s
+sys	0m0.047s
 +!CSVLINE!+chibi,earley,ULIMITKILLED
 
 Testing graphs under Chibi
@@ -527,10 +527,10 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/graphs.scm /tmp/r7rs-benchmarks/Chibi/graphs.scm
 Running...
 Running graphs:7:3
-./bench: line 356: 185622 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 381461 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.481s
-user	4m59.938s
+real	5m0.884s
+user	4m59.935s
 sys	0m0.031s
 +!CSVLINE!+chibi,graphs,ULIMITKILLED
 
@@ -541,11 +541,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/lattice.scm /tmp/r7rs-benchmarks/Chibi/lattice.scm
 Running...
 Running lattice:44:10
-./bench: line 356: 186455 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 382150 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.414s
-user	4m59.876s
-sys	0m0.093s
+real	5m0.747s
+user	4m59.894s
+sys	0m0.073s
 +!CSVLINE!+chibi,lattice,ULIMITKILLED
 
 Testing matrix under Chibi
@@ -555,12 +555,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/matrix.scm /tmp/r7rs-benchmarks/Chibi/matrix.scm
 Running...
 Running matrix:5:5:2500
-Elapsed time: 177.617 seconds (177.617) for matrix:5:5:2500
-+!CSVLINE!+chibi-0.11.0,matrix:5:5:2500,177.617
+Elapsed time: 171.651 seconds (171.65) for matrix:5:5:2500
++!CSVLINE!+chibi-0.11.0,matrix:5:5:2500,171.651
 
-real	2m57.953s
-user	2m57.597s
-sys	0m0.090s
+real	2m52.003s
+user	2m51.547s
+sys	0m0.050s
 
 Testing maze under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -569,12 +569,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/maze.scm /tmp/r7rs-benchmarks/Chibi/maze.scm
 Running...
 Running maze:20:7:10000
-Elapsed time: 67.835 seconds (67.835) for maze:20:7:10000
-+!CSVLINE!+chibi-0.11.0,maze:20:7:10000,67.835
+Elapsed time: 66.72 seconds (66.72) for maze:20:7:10000
++!CSVLINE!+chibi-0.11.0,maze:20:7:10000,66.72
 
-real	1m8.177s
-user	1m8.056s
-sys	0m0.027s
+real	1m7.081s
+user	1m6.912s
+sys	0m0.014s
 
 Testing mazefun under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -583,12 +583,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/mazefun.scm /tmp/r7rs-benchmarks/Chibi/mazefun.scm
 Running...
 Running mazefun:11:11:10000
-Elapsed time: 94.861 seconds (94.861) for mazefun:11:11:10000
-+!CSVLINE!+chibi-0.11.0,mazefun:11:11:10000,94.861
+Elapsed time: 92.327 seconds (92.327) for mazefun:11:11:10000
++!CSVLINE!+chibi-0.11.0,mazefun:11:11:10000,92.327
 
-real	1m35.184s
-user	1m34.919s
-sys	0m0.024s
+real	1m32.660s
+user	1m32.412s
+sys	0m0.023s
 
 Testing nqueens under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -597,12 +597,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/nqueens.scm /tmp/r7rs-benchmarks/Chibi/nqueens.scm
 Running...
 Running nqueens:13:10
-Elapsed time: 133.658 seconds (133.658) for nqueens:13:10
-+!CSVLINE!+chibi-0.11.0,nqueens:13:10,133.658
+Elapsed time: 131.019 seconds (131.018) for nqueens:13:10
++!CSVLINE!+chibi-0.11.0,nqueens:13:10,131.019
 
-real	2m13.962s
-user	2m13.664s
-sys	0m0.023s
+real	2m11.318s
+user	2m11.052s
+sys	0m0.019s
 
 Testing paraffins under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -611,11 +611,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/paraffins.scm /tmp/r7rs-benchmarks/Chibi/paraffins.scm
 Running...
 Running paraffins:23:10
-./bench: line 356: 187301 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 382856 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.785s
-user	4m59.934s
-sys	0m0.047s
+real	5m1.043s
+user	4m59.915s
+sys	0m0.057s
 +!CSVLINE!+chibi,paraffins,ULIMITKILLED
 
 Testing parsing under Chibi
@@ -625,11 +625,11 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/parsing.scm /tmp/r7rs-benchmarks/Chibi/parsing.scm
 Running...
 Running parsing:2500
-./bench: line 356: 187665 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 383202 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.198s
-user	4m59.929s
-sys	0m0.040s
+real	5m0.470s
+user	4m59.946s
+sys	0m0.022s
 +!CSVLINE!+chibi,parsing,ULIMITKILLED
 
 Testing peval under Chibi
@@ -639,12 +639,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/peval.scm /tmp/r7rs-benchmarks/Chibi/peval.scm
 Running...
 Running peval:2000
-Elapsed time: 145.024 seconds (145.024) for peval:2000
-+!CSVLINE!+chibi-0.11.0,peval:2000,145.024
+Elapsed time: 143.878 seconds (143.878) for peval:2000
++!CSVLINE!+chibi-0.11.0,peval:2000,143.878
 
-real	2m25.354s
-user	2m25.058s
-sys	0m0.080s
+real	2m24.228s
+user	2m23.860s
+sys	0m0.035s
 
 Testing primes under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -653,12 +653,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/primes.scm /tmp/r7rs-benchmarks/Chibi/primes.scm
 Running...
 Running primes:1000:10000
-Elapsed time: 17.534 seconds (17.534) for primes:1000:10000
-+!CSVLINE!+chibi-0.11.0,primes:1000:10000,17.534
+Elapsed time: 17.146 seconds (17.147) for primes:1000:10000
++!CSVLINE!+chibi-0.11.0,primes:1000:10000,17.146
 
-real	0m17.839s
-user	0m17.804s
-sys	0m0.011s
+real	0m17.451s
+user	0m17.405s
+sys	0m0.006s
 
 Testing quicksort under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -667,12 +667,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/quicksort.scm /tmp/r7rs-benchmarks/Chibi/quicksort.scm
 Running...
 Running quicksort:10000:2500
-Elapsed time: 204.741 seconds (204.741) for quicksort:10000:2500
-+!CSVLINE!+chibi-0.11.0,quicksort:10000:2500,204.741
+Elapsed time: 200.587 seconds (200.587) for quicksort:10000:2500
++!CSVLINE!+chibi-0.11.0,quicksort:10000:2500,200.587
 
-real	3m25.073s
-user	3m24.691s
-sys	0m0.093s
+real	3m20.917s
+user	3m20.328s
+sys	0m0.071s
 
 Testing scheme under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -681,12 +681,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/scheme.scm /tmp/r7rs-benchmarks/Chibi/scheme.scm
 Running...
 Running scheme:100000
-Elapsed time: 91.107 seconds (91.106) for scheme:100000
-+!CSVLINE!+chibi-0.11.0,scheme:100000,91.107
+Elapsed time: 89.77 seconds (89.771) for scheme:100000
++!CSVLINE!+chibi-0.11.0,scheme:100000,89.77
 
-real	1m31.457s
-user	1m31.277s
-sys	0m0.040s
+real	1m30.143s
+user	1m29.900s
+sys	0m0.015s
 
 Testing slatex under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -695,12 +695,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/slatex.scm /tmp/r7rs-benchmarks/Chibi/slatex.scm
 Running...
 Running slatex:500
-Elapsed time: 99.337 seconds (99.337) for slatex:500
-+!CSVLINE!+chibi-0.11.0,slatex:500,99.337
+Elapsed time: 96.881 seconds (96.881) for slatex:500
++!CSVLINE!+chibi-0.11.0,slatex:500,96.881
 
-real	1m39.721s
-user	1m36.514s
-sys	0m2.867s
+real	1m37.347s
+user	1m34.270s
+sys	0m2.626s
 
 Testing chudnovsky under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -709,12 +709,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/chudnovsky.scm /tmp/r7rs-benchmarks/Chibi/chudnovsky.scm
 Running...
 Running chudnovsky:50:500:50:1000
-Elapsed time: 223.623 seconds (223.623) for chudnovsky:50:500:50:1000
-+!CSVLINE!+chibi-0.11.0,chudnovsky:50:500:50:1000,223.623
+Elapsed time: 223.509 seconds (223.508) for chudnovsky:50:500:50:1000
++!CSVLINE!+chibi-0.11.0,chudnovsky:50:500:50:1000,223.509
 
-real	3m43.937s
-user	3m43.542s
-sys	0m0.077s
+real	3m43.814s
+user	3m42.971s
+sys	0m0.034s
 
 Testing nboyer under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -723,12 +723,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/nboyer.scm /tmp/r7rs-benchmarks/Chibi/nboyer.scm
 Running...
 Running nboyer:5:1
-Elapsed time: 27.95 seconds (27.95) for nboyer:5:1
-+!CSVLINE!+chibi-0.11.0,nboyer:5:1,27.95
+Elapsed time: 27.989 seconds (27.989) for nboyer:5:1
++!CSVLINE!+chibi-0.11.0,nboyer:5:1,27.989
 
-real	0m28.658s
-user	0m28.480s
-sys	0m0.126s
+real	0m28.707s
+user	0m28.539s
+sys	0m0.104s
 
 Testing sboyer under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -737,12 +737,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/sboyer.scm /tmp/r7rs-benchmarks/Chibi/sboyer.scm
 Running...
 Running sboyer:5:1
-Elapsed time: 26.36 seconds (26.36) for sboyer:5:1
-+!CSVLINE!+chibi-0.11.0,sboyer:5:1,26.36
+Elapsed time: 26.367 seconds (26.367) for sboyer:5:1
++!CSVLINE!+chibi-0.11.0,sboyer:5:1,26.367
 
-real	0m26.776s
-user	0m26.689s
-sys	0m0.040s
+real	0m26.789s
+user	0m26.710s
+sys	0m0.029s
 
 Testing gcbench under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -753,11 +753,11 @@ Running...
 The garbage collector should touch about 128 megabytes of heap storage.
 The use of more or less memory will skew the results.
 Running gcbench:20:1
-./bench: line 356: 189640 Killed                  "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
+./bench: line 357: 384808 Killed                     "${CHIBI}" -m scheme.load -e "(load \"$1\")" < "$2"
 
-real	5m0.951s
-user	4m59.929s
-sys	0m0.049s
+real	5m1.334s
+user	4m59.952s
+sys	0m0.016s
 +!CSVLINE!+chibi,gcbench,ULIMITKILLED
 
 Testing mperm under Chibi
@@ -767,12 +767,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/mperm.scm /tmp/r7rs-benchmarks/Chibi/mperm.scm
 Running...
 Running mperm:20:10:2:1
-Elapsed time: 119.795 seconds (119.795) for mperm:20:10:2:1
-+!CSVLINE!+chibi-0.11.0,mperm:20:10:2:1,119.795
+Elapsed time: 125.003 seconds (125.004) for mperm:20:10:2:1
++!CSVLINE!+chibi-0.11.0,mperm:20:10:2:1,125.003
 
-real	2m7.735s
-user	2m7.214s
-sys	0m0.299s
+real	2m13.063s
+user	2m12.440s
+sys	0m0.262s
 
 Testing equal under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -781,12 +781,12 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/equal.scm /tmp/r7rs-benchmarks/Chibi/equal.scm
 Running...
 Running equal:100:100:8:1000:2000:5000
-Elapsed time: 37.124 seconds (37.124) for equal:100:100:8:1000:2000:5000
-+!CSVLINE!+chibi-0.11.0,equal:100:100:8:1000:2000:5000,37.124
+Elapsed time: 39.793 seconds (39.793) for equal:100:100:8:1000:2000:5000
++!CSVLINE!+chibi-0.11.0,equal:100:100:8:1000:2000:5000,39.793
 
-real	0m37.519s
-user	0m37.431s
-sys	0m0.017s
+real	0m40.201s
+user	0m40.024s
+sys	0m0.032s
 
 Testing bv2string under Chibi
 Including prelude /home/nex/src/r7rs-benchmarks/src/Chibi-prelude.scm
@@ -795,9 +795,9 @@ Compiling...
 chibi_comp /tmp/r7rs-benchmarks/Chibi/bv2string.scm /tmp/r7rs-benchmarks/Chibi/bv2string.scm
 Running...
 Running bv2string:1000:1000:100
-Elapsed time: 7.459 seconds (7.459) for bv2string:1000:1000:100
-+!CSVLINE!+chibi-0.11.0,bv2string:1000:1000:100,7.459
+Elapsed time: 7.237 seconds (7.237) for bv2string:1000:1000:100
++!CSVLINE!+chibi-0.11.0,bv2string:1000:1000:100,7.237
 
-real	0m7.766s
-user	0m7.744s
-sys	0m0.000s
+real	0m7.544s
+user	0m7.521s
+sys	0m0.004s

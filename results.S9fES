@@ -1,6 +1,6 @@
 
 ****************************
-Benchmarking S9fES on Sat 6 Jul 11:21:15 CEST 2024 under Linux h4nex 6.9.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 28 Jun 2024 04:32:50 +0000 x86_64 GNU/Linux
+Benchmarking S9fES on Fri 16 Jan 21:44:44 CET 2026 under Linux h4nex 6.16.8-arch3-1 #1 SMP PREEMPT_DYNAMIC Mon, 22 Sep 2025 22:08:35 +0000 x86_64 GNU/Linux
 
 Testing browse under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -8,12 +8,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/browse.scm /tmp/r7rs-benchmarks/S9fES/browse.scm
 Running...
 Running browse:2000
-Elapsed time: 31.16 seconds (31.16) for browse:2000
-+!CSVLINE!+s9fes-2018-12-05,browse:2000,31.16
+Elapsed time: 31.17 seconds (31.17) for browse:2000
++!CSVLINE!+s9fes-2018-12-05,browse:2000,31.17
 
-real	0m31.216s
-user	0m31.172s
-sys	0m0.010s
+real	0m31.234s
+user	0m31.148s
+sys	0m0.009s
 
 Testing deriv under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -21,11 +21,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/deriv.scm /tmp/r7rs-benchmarks/S9fES/deriv.scm
 Running...
 Running deriv:10000000
-./bench: line 442: 365419 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 458823 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.299s
-user	4m59.976s
-sys	0m0.004s
+real	5m0.628s
+user	4m59.963s
+sys	0m0.006s
 +!CSVLINE!+s9fes,deriv,ULIMITKILLED
 
 Testing destruc under S9fES
@@ -34,11 +34,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/destruc.scm /tmp/r7rs-benchmarks/S9fES/destruc.scm
 Running...
 Running destruc:600:50:4000
-./bench: line 442: 365707 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 459065 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.305s
-user	4m59.969s
-sys	0m0.010s
+real	5m0.616s
+user	4m59.961s
+sys	0m0.005s
 +!CSVLINE!+s9fes,destruc,ULIMITKILLED
 
 Testing diviter under S9fES
@@ -47,12 +47,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/diviter.scm /tmp/r7rs-benchmarks/S9fES/diviter.scm
 Running...
 Running diviter:1000:1000000
-Elapsed time: 80.31 seconds (80.31) for diviter:1000:1000000
-+!CSVLINE!+s9fes-2018-12-05,diviter:1000:1000000,80.31
+Elapsed time: 79.0 seconds (79.0) for diviter:1000:1000000
++!CSVLINE!+s9fes-2018-12-05,diviter:1000:1000000,79.0
 
-real	1m20.330s
-user	1m20.241s
-sys	0m0.010s
+real	1m19.015s
+user	1m18.854s
+sys	0m0.004s
 
 Testing divrec under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -60,12 +60,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/divrec.scm /tmp/r7rs-benchmarks/S9fES/divrec.scm
 Running...
 Running divrec:1000:1000000
-Elapsed time: 91.74 seconds (91.74) for divrec:1000:1000000
-+!CSVLINE!+s9fes-2018-12-05,divrec:1000:1000000,91.74
+Elapsed time: 92.6 seconds (92.6) for divrec:1000:1000000
++!CSVLINE!+s9fes-2018-12-05,divrec:1000:1000000,92.6
 
-real	1m31.759s
-user	1m31.667s
-sys	0m0.000s
+real	1m32.610s
+user	1m32.413s
+sys	0m0.006s
 
 Testing puzzle under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -73,11 +73,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/puzzle.scm /tmp/r7rs-benchmarks/S9fES/puzzle.scm
 Running...
 Running puzzle:1000
-./bench: line 442: 366158 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 459474 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.307s
-user	4m59.974s
-sys	0m0.007s
+real	5m0.990s
+user	4m59.965s
+sys	0m0.004s
 +!CSVLINE!+s9fes,puzzle,ULIMITKILLED
 
 Testing triangl under S9fES
@@ -86,11 +86,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/triangl.scm /tmp/r7rs-benchmarks/S9fES/triangl.scm
 Running...
 Running triangl:22:1:50
-Elapsed time: 196.03 seconds (196.03) for triangl:22:1:50
-+!CSVLINE!+s9fes-2018-12-05,triangl:22:1:50,196.03
+Elapsed time: 194.17 seconds (194.17) for triangl:22:1:50
++!CSVLINE!+s9fes-2018-12-05,triangl:22:1:50,194.17
 
-real	3m16.038s
-user	3m15.834s
+real	3m14.182s
+user	3m13.574s
 sys	0m0.004s
 
 Testing tak under S9fES
@@ -99,11 +99,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/tak.scm /tmp/r7rs-benchmarks/S9fES/tak.scm
 Running...
 Running tak:40:20:11:1
-./bench: line 442: 366645 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 459954 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.280s
-user	4m59.974s
-sys	0m0.007s
+real	5m0.603s
+user	4m59.964s
+sys	0m0.006s
 +!CSVLINE!+s9fes,tak,ULIMITKILLED
 
 Testing takl under S9fES
@@ -112,12 +112,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/takl.scm /tmp/r7rs-benchmarks/S9fES/takl.scm
 Running...
 Running takl:40:20:12:1
-Elapsed time: 294.84 seconds (294.84) for takl:40:20:12:1
-+!CSVLINE!+s9fes-2018-12-05,takl:40:20:12:1,294.84
+Elapsed time: 289.62 seconds (289.62) for takl:40:20:12:1
++!CSVLINE!+s9fes-2018-12-05,takl:40:20:12:1,289.62
 
-real	4m54.853s
-user	4m54.546s
-sys	0m0.010s
+real	4m49.628s
+user	4m49.083s
+sys	0m0.009s
 
 Testing ntakl under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -125,12 +125,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/ntakl.scm /tmp/r7rs-benchmarks/S9fES/ntakl.scm
 Running...
 Running ntakl:40:20:12:1
-./bench: line 442: 367200 Killed                  ${S9fES} "$1" < "$2"
+Elapsed time: 296.08 seconds (296.08) for ntakl:40:20:12:1
++!CSVLINE!+s9fes-2018-12-05,ntakl:40:20:12:1,296.08
 
-real	5m0.270s
-user	4m59.974s
-sys	0m0.004s
-+!CSVLINE!+s9fes,ntakl,ULIMITKILLED
+real	4m56.100s
+user	4m55.524s
+sys	0m0.009s
 
 Testing cpstak under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -138,11 +138,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/cpstak.scm /tmp/r7rs-benchmarks/S9fES/cpstak.scm
 Running...
 Running cpstak:40:20:11:1
-./bench: line 442: 367479 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 460670 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.348s
-user	4m59.967s
-sys	0m0.007s
+real	5m0.658s
+user	4m59.961s
+sys	0m0.006s
 +!CSVLINE!+s9fes,cpstak,ULIMITKILLED
 
 Testing ctak under S9fES
@@ -151,11 +151,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/ctak.scm /tmp/r7rs-benchmarks/S9fES/ctak.scm
 Running...
 Running ctak:32:16:8:1
-./bench: line 442: 367773 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 460922 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.516s
-user	4m59.970s
-sys	0m0.007s
+real	5m0.835s
+user	4m59.963s
+sys	0m0.005s
 +!CSVLINE!+s9fes,ctak,ULIMITKILLED
 
 Testing fib under S9fES
@@ -164,10 +164,10 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/fib.scm /tmp/r7rs-benchmarks/S9fES/fib.scm
 Running...
 Running fib:40:5
-./bench: line 442: 368050 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 461180 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.382s
-user	4m59.975s
+real	5m0.607s
+user	4m59.962s
 sys	0m0.007s
 +!CSVLINE!+s9fes,fib,ULIMITKILLED
 
@@ -177,11 +177,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/fibc.scm /tmp/r7rs-benchmarks/S9fES/fibc.scm
 Running...
 Running fibc:30:10
-./bench: line 442: 368343 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 461481 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.492s
-user	4m59.972s
-sys	0m0.007s
+real	5m0.830s
+user	4m59.959s
+sys	0m0.008s
 +!CSVLINE!+s9fes,fibc,ULIMITKILLED
 
 Testing fibfp under S9fES
@@ -190,12 +190,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/fibfp.scm /tmp/r7rs-benchmarks/S9fES/fibfp.scm
 Running...
 Running fibfp:35.0:10
-Elapsed time: 266.17 seconds (266.17) for fibfp:35.0:10
-+!CSVLINE!+s9fes-2018-12-05,fibfp:35.0:10,266.17
+Elapsed time: 264.23 seconds (264.23) for fibfp:35.0:10
++!CSVLINE!+s9fes-2018-12-05,fibfp:35.0:10,264.23
 
-real	4m26.185s
-user	4m25.900s
-sys	0m0.017s
+real	4m24.244s
+user	4m23.652s
+sys	0m0.005s
 
 Testing sum under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -203,11 +203,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/sum.scm /tmp/r7rs-benchmarks/S9fES/sum.scm
 Running...
 Running sum:10000:200000
-./bench: line 442: 368901 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 461938 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.289s
-user	4m59.975s
-sys	0m0.007s
+real	5m0.615s
+user	4m59.965s
+sys	0m0.004s
 +!CSVLINE!+s9fes,sum,ULIMITKILLED
 
 Testing sumfp under S9fES
@@ -216,11 +216,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/sumfp.scm /tmp/r7rs-benchmarks/S9fES/sumfp.scm
 Running...
 Running sumfp:1000000.0:500
-./bench: line 442: 369171 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 462162 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.345s
-user	4m59.957s
-sys	0m0.007s
+real	5m0.647s
+user	4m59.962s
+sys	0m0.006s
 +!CSVLINE!+s9fes,sumfp,ULIMITKILLED
 
 Testing fft under S9fES
@@ -229,11 +229,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/fft.scm /tmp/r7rs-benchmarks/S9fES/fft.scm
 Running...
 Running fft:65536:100
-./bench: line 442: 369463 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 462395 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.642s
-user	4m59.959s
-sys	0m0.013s
+real	5m1.118s
+user	4m59.958s
+sys	0m0.009s
 +!CSVLINE!+s9fes,fft,ULIMITKILLED
 
 Testing mbrot under S9fES
@@ -242,11 +242,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/mbrot.scm /tmp/r7rs-benchmarks/S9fES/mbrot.scm
 Running...
 Running mbrot:75:1000
-./bench: line 442: 369755 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 462637 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.315s
-user	4m59.973s
-sys	0m0.010s
+real	5m0.692s
+user	4m59.962s
+sys	0m0.007s
 +!CSVLINE!+s9fes,mbrot,ULIMITKILLED
 
 Testing mbrotZ under S9fES
@@ -259,9 +259,9 @@ Running mbrotZ:75:1000
 *** file "/tmp/r7rs-benchmarks/S9fES/mbrotZ.scm", line 162
 *** trace: loop n matrix loop n
 
-real	0m0.017s
-user	0m0.013s
-sys	0m0.003s
+real	0m0.014s
+user	0m0.009s
+sys	0m0.005s
 +!CSVLINE!+s9fes,mbrotZ,CRASHED
 
 Testing nucleic under S9fES
@@ -270,11 +270,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/nucleic.scm /tmp/r7rs-benchmarks/S9fES/nucleic.scm
 Running...
 Running nucleic:50
-./bench: line 442: 370052 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 462899 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.330s
-user	4m59.976s
-sys	0m0.007s
+real	5m0.727s
+user	4m59.961s
+sys	0m0.006s
 +!CSVLINE!+s9fes,nucleic,ULIMITKILLED
 
 Testing pi under S9fES
@@ -287,9 +287,9 @@ Running pi:50:500:50:100
 *** file "/tmp/r7rs-benchmarks/S9fES/pi.scm", line 253
 *** trace: square one^2 square-root call-with-values x
 
-real	0m0.017s
-user	0m0.013s
-sys	0m0.003s
+real	0m0.014s
+user	0m0.010s
+sys	0m0.004s
 +!CSVLINE!+s9fes,pi,CRASHED
 
 Testing pnpoly under S9fES
@@ -298,11 +298,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/pnpoly.scm /tmp/r7rs-benchmarks/S9fES/pnpoly.scm
 Running...
 Running pnpoly:1000000
-./bench: line 442: 370327 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 463194 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.301s
-user	4m59.974s
-sys	0m0.011s
+real	5m0.636s
+user	4m59.965s
+sys	0m0.005s
 +!CSVLINE!+s9fes,pnpoly,ULIMITKILLED
 
 Testing ray under S9fES
@@ -311,10 +311,10 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/ray.scm /tmp/r7rs-benchmarks/S9fES/ray.scm
 Running...
 Running ray:50
-./bench: line 442: 370618 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 463422 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.320s
-user	4m59.974s
+real	5m0.656s
+user	4m59.962s
 sys	0m0.007s
 +!CSVLINE!+s9fes,ray,ULIMITKILLED
 
@@ -324,11 +324,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/simplex.scm /tmp/r7rs-benchmarks/S9fES/simplex.scm
 Running...
 Running simplex:1000000
-./bench: line 442: 370897 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 463650 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.353s
-user	4m59.970s
-sys	0m0.007s
+real	5m0.658s
+user	4m59.962s
+sys	0m0.005s
 +!CSVLINE!+s9fes,simplex,ULIMITKILLED
 
 Testing ack under S9fES
@@ -337,11 +337,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/ack.scm /tmp/r7rs-benchmarks/S9fES/ack.scm
 Running...
 Running ack:3:12:2
-./bench: line 442: 371172 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 463879 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.516s
-user	4m59.952s
-sys	0m0.013s
+real	5m0.970s
+user	4m59.954s
+sys	0m0.014s
 +!CSVLINE!+s9fes,ack,ULIMITKILLED
 
 Testing array1 under S9fES
@@ -350,11 +350,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/array1.scm /tmp/r7rs-benchmarks/S9fES/array1.scm
 Running...
 Running array1:1000000:500
-./bench: line 442: 371485 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 464106 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.616s
-user	4m59.955s
-sys	0m0.024s
+real	5m1.027s
+user	4m59.944s
+sys	0m0.025s
 +!CSVLINE!+s9fes,array1,ULIMITKILLED
 
 Testing string under S9fES
@@ -363,12 +363,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/string.scm /tmp/r7rs-benchmarks/S9fES/string.scm
 Running...
 Running string:500000:100
-Elapsed time: 2.6 seconds (2.6) for string:500000:100
-+!CSVLINE!+s9fes-2018-12-05,string:500000:100,2.6
+Elapsed time: 2.62 seconds (2.62) for string:500000:100
++!CSVLINE!+s9fes-2018-12-05,string:500000:100,2.62
 
-real	0m2.621s
-user	0m2.607s
-sys	0m0.007s
+real	0m2.631s
+user	0m2.612s
+sys	0m0.008s
 
 Testing sum1 under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -376,12 +376,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/sum1.scm /tmp/r7rs-benchmarks/S9fES/sum1.scm
 Running...
 Running sum1:25
-Elapsed time: 5.25 seconds (5.25) for sum1:25
-+!CSVLINE!+s9fes-2018-12-05,sum1:25,5.25
+Elapsed time: 5.3 seconds (5.3) for sum1:25
++!CSVLINE!+s9fes-2018-12-05,sum1:25,5.3
 
-real	0m5.266s
-user	0m5.247s
-sys	0m0.014s
+real	0m5.313s
+user	0m5.289s
+sys	0m0.011s
 
 Testing cat under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -389,12 +389,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/cat.scm /tmp/r7rs-benchmarks/S9fES/cat.scm
 Running...
 Running cat:50
-Elapsed time: 81.51 seconds (81.51) for cat:50
-+!CSVLINE!+s9fes-2018-12-05,cat:50,81.51
+Elapsed time: 80.2 seconds (80.2) for cat:50
++!CSVLINE!+s9fes-2018-12-05,cat:50,80.2
 
-real	1m21.530s
-user	1m21.159s
-sys	0m0.280s
+real	1m20.210s
+user	1m19.751s
+sys	0m0.282s
 
 Testing tail under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -406,9 +406,9 @@ Running tail:50
 *** file "/tmp/r7rs-benchmarks/S9fES/tail.scm", line 148
 *** trace: mapcar1 f mapcar1 f out
 
-real	0m2.514s
-user	0m2.489s
-sys	0m0.020s
+real	0m2.537s
+user	0m2.513s
+sys	0m0.010s
 +!CSVLINE!+s9fes,tail,CRASHED
 
 Testing wc under S9fES
@@ -417,12 +417,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/wc.scm /tmp/r7rs-benchmarks/S9fES/wc.scm
 Running...
 Running wc:inputs/bib:50
-Elapsed time: 148.39 seconds (148.39) for wc:inputs/bib:50
-+!CSVLINE!+s9fes-2018-12-05,wc:inputs/bib:50,148.39
+Elapsed time: 148.5 seconds (148.5) for wc:inputs/bib:50
++!CSVLINE!+s9fes-2018-12-05,wc:inputs/bib:50,148.5
 
-real	2m28.414s
-user	2m28.185s
-sys	0m0.083s
+real	2m28.514s
+user	2m27.962s
+sys	0m0.079s
 
 Testing read1 under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -430,12 +430,12 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/read1.scm /tmp/r7rs-benchmarks/S9fES/read1.scm
 Running...
 Running read1:2500
-Elapsed time: 1.1 seconds (1.1) for read1:2500
-+!CSVLINE!+s9fes-2018-12-05,read1:2500,1.1
+Elapsed time: 1.08 seconds (1.08) for read1:2500
++!CSVLINE!+s9fes-2018-12-05,read1:2500,1.08
 
-real	0m1.115s
-user	0m1.084s
-sys	0m0.024s
+real	0m1.090s
+user	0m1.068s
+sys	0m0.020s
 
 Testing compiler under S9fES
 Including prelude /home/nex/src/r7rs-benchmarks/src/S9fES-prelude.scm
@@ -446,9 +446,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/compiler.scm", line 86
 *** trace: bs split3 list open-input-file char->integer
 
-real	0m0.015s
-user	0m0.008s
-sys	0m0.007s
+real	0m0.011s
+user	0m0.007s
+sys	0m0.004s
 +!CSVLINE!+s9fes,compiler,CRASHED
 
 Testing conform under S9fES
@@ -460,9 +460,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/conform.scm", line 345
 *** trace: split-bindings bs split3 split3 list
 
-real	0m0.033s
-user	0m0.029s
-sys	0m0.004s
+real	0m0.030s
+user	0m0.024s
+sys	0m0.006s
 +!CSVLINE!+s9fes,conform,CRASHED
 
 Testing dynamic under S9fES
@@ -474,9 +474,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/dynamic.scm", line 155
 *** trace: expand expand cons car cdr
 
-real	0m0.014s
+real	0m0.011s
 user	0m0.007s
-sys	0m0.007s
+sys	0m0.003s
 +!CSVLINE!+s9fes,dynamic,CRASHED
 
 Testing earley under S9fES
@@ -485,11 +485,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/earley.scm /tmp/r7rs-benchmarks/S9fES/earley.scm
 Running...
 Running earley:1
-./bench: line 442: 372044 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 464586 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.823s
-user	4m59.954s
-sys	0m0.030s
+real	5m1.491s
+user	4m59.939s
+sys	0m0.031s
 +!CSVLINE!+s9fes,earley,ULIMITKILLED
 
 Testing graphs under S9fES
@@ -498,11 +498,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/graphs.scm /tmp/r7rs-benchmarks/S9fES/graphs.scm
 Running...
 Running graphs:7:3
-./bench: line 442: 372336 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 464878 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.624s
-user	4m59.951s
-sys	0m0.027s
+real	5m1.016s
+user	4m59.949s
+sys	0m0.020s
 +!CSVLINE!+s9fes,graphs,ULIMITKILLED
 
 Testing lattice under S9fES
@@ -514,9 +514,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/lattice.scm", line 248
 *** trace: split-bindings bs split3 split3 list
 
-real	0m0.016s
-user	0m0.009s
-sys	0m0.007s
+real	0m0.014s
+user	0m0.007s
+sys	0m0.006s
 +!CSVLINE!+s9fes,lattice,CRASHED
 
 Testing matrix under S9fES
@@ -528,9 +528,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/matrix.scm", line 275
 *** trace: split-bindings bs split3 split3 list
 
-real	0m0.021s
-user	0m0.011s
-sys	0m0.010s
+real	0m0.018s
+user	0m0.014s
+sys	0m0.004s
 +!CSVLINE!+s9fes,matrix,CRASHED
 
 Testing maze under S9fES
@@ -542,9 +542,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/maze.scm", line 322
 *** trace: bs split3 split3 split3 list
 
-real	0m0.020s
-user	0m0.013s
-sys	0m0.007s
+real	0m0.018s
+user	0m0.014s
+sys	0m0.004s
 +!CSVLINE!+s9fes,maze,CRASHED
 
 Testing mazefun under S9fES
@@ -553,11 +553,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/mazefun.scm /tmp/r7rs-benchmarks/S9fES/mazefun.scm
 Running...
 Running mazefun:11:11:10000
-./bench: line 442: 372629 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 465121 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.289s
-user	4m59.966s
-sys	0m0.017s
+real	5m0.605s
+user	4m59.963s
+sys	0m0.005s
 +!CSVLINE!+s9fes,mazefun,ULIMITKILLED
 
 Testing nqueens under S9fES
@@ -566,11 +566,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/nqueens.scm /tmp/r7rs-benchmarks/S9fES/nqueens.scm
 Running...
 Running nqueens:13:10
-./bench: line 442: 372923 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 465358 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.288s
-user	4m59.972s
-sys	0m0.010s
+real	5m0.927s
+user	4m59.965s
+sys	0m0.004s
 +!CSVLINE!+s9fes,nqueens,ULIMITKILLED
 
 Testing paraffins under S9fES
@@ -581,9 +581,9 @@ Running...
 Running paraffins:23:10
 S9core: fatal error: new_vec: hit memory limit
 
-real	0m2.195s
-user	0m2.152s
-sys	0m0.036s
+real	0m2.262s
+user	0m2.210s
+sys	0m0.033s
 +!CSVLINE!+s9fes,paraffins,CRASHED
 
 Testing parsing under S9fES
@@ -595,9 +595,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/parsing.scm", line 947
 *** trace: split-bindings bs split3 split3 list
 
-real	0m0.038s
-user	0m0.028s
-sys	0m0.009s
+real	0m0.035s
+user	0m0.031s
+sys	0m0.004s
 +!CSVLINE!+s9fes,parsing,CRASHED
 
 Testing peval under S9fES
@@ -606,11 +606,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/peval.scm /tmp/r7rs-benchmarks/S9fES/peval.scm
 Running...
 Running peval:2000
-./bench: line 442: 373230 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 465609 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.609s
-user	4m59.957s
-sys	0m0.007s
+real	5m1.049s
+user	4m59.963s
+sys	0m0.004s
 +!CSVLINE!+s9fes,peval,ULIMITKILLED
 
 Testing primes under S9fES
@@ -619,11 +619,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/primes.scm /tmp/r7rs-benchmarks/S9fES/primes.scm
 Running...
 Running primes:1000:10000
-./bench: line 442: 373511 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 465852 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.485s
-user	4m59.961s
-sys	0m0.013s
+real	5m1.026s
+user	4m59.962s
+sys	0m0.006s
 +!CSVLINE!+s9fes,primes,ULIMITKILLED
 
 Testing quicksort under S9fES
@@ -632,11 +632,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/quicksort.scm /tmp/r7rs-benchmarks/S9fES/quicksort.scm
 Running...
 Running quicksort:10000:2500
-./bench: line 442: 373877 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 466072 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.365s
+real	5m0.655s
 user	4m59.961s
-sys	0m0.010s
+sys	0m0.007s
 +!CSVLINE!+s9fes,quicksort,ULIMITKILLED
 
 Testing scheme under S9fES
@@ -648,9 +648,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/scheme.scm", line 45
 *** trace: split-bindings bs split3 split3 list
 
-real	0m0.011s
+real	0m0.007s
 user	0m0.003s
-sys	0m0.008s
+sys	0m0.003s
 +!CSVLINE!+s9fes,scheme,CRASHED
 
 Testing slatex under S9fES
@@ -663,9 +663,9 @@ Running slatex:500
 *** file "/tmp/r7rs-benchmarks/S9fES/slatex.scm", line 2456
 *** trace: delim-char loop in delim-char out
 
-real	0m0.167s
-user	0m0.164s
-sys	0m0.003s
+real	0m0.164s
+user	0m0.156s
+sys	0m0.007s
 +!CSVLINE!+s9fes,slatex,CRASHED
 
 Testing chudnovsky under S9fES
@@ -678,9 +678,9 @@ Running chudnovsky:50:500:50:1000
 *** file "/tmp/r7rs-benchmarks/S9fES/chudnovsky.scm", line 179
 *** trace: square ch-c integer-sqrt call-with-values x
 
-real	0m0.021s
-user	0m0.015s
-sys	0m0.006s
+real	0m0.018s
+user	0m0.013s
+sys	0m0.005s
 +!CSVLINE!+s9fes,chudnovsky,CRASHED
 
 Testing nboyer under S9fES
@@ -692,9 +692,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/nboyer.scm", line 796
 *** trace: list list list list list
 
-real	0m0.030s
-user	0m0.013s
-sys	0m0.016s
+real	0m0.018s
+user	0m0.015s
+sys	0m0.003s
 +!CSVLINE!+s9fes,nboyer,CRASHED
 
 Testing sboyer under S9fES
@@ -706,9 +706,9 @@ Running...
 *** file "/tmp/r7rs-benchmarks/S9fES/sboyer.scm", line 809
 *** trace: list list list list list
 
-real	0m0.023s
-user	0m0.015s
-sys	0m0.007s
+real	0m0.018s
+user	0m0.014s
+sys	0m0.004s
 +!CSVLINE!+s9fes,sboyer,CRASHED
 
 Testing gcbench under S9fES
@@ -723,9 +723,9 @@ Running gcbench:20:1
 *** file "/tmp/r7rs-benchmarks/S9fES/gcbench.scm", line 296
 *** trace: square square square square klonglivedtreedepth
 
-real	0m0.027s
-user	0m0.014s
-sys	0m0.013s
+real	0m0.014s
+user	0m0.010s
+sys	0m0.004s
 +!CSVLINE!+s9fes,gcbench,CRASHED
 
 Testing mperm under S9fES
@@ -735,9 +735,9 @@ s9fes_comp /tmp/r7rs-benchmarks/S9fES/mperm.scm /tmp/r7rs-benchmarks/S9fES/mperm
 Running...
 S9core: fatal error: s9_cons3: hit memory limit
 
-real	1m6.555s
-user	1m6.339s
-sys	0m0.027s
+real	1m2.622s
+user	1m2.214s
+sys	0m0.023s
 +!CSVLINE!+s9fes,mperm,CRASHED
 
 Testing equal under S9fES
@@ -746,11 +746,11 @@ Compiling...
 s9fes_comp /tmp/r7rs-benchmarks/S9fES/equal.scm /tmp/r7rs-benchmarks/S9fES/equal.scm
 Running...
 Running equal:100:100:8:1000:2000:5000
-./bench: line 442: 374467 Killed                  ${S9fES} "$1" < "$2"
+./bench: line 442: 466464 Killed                     ${S9fES} "$1" < "$2"
 
-real	5m0.266s
-user	4m59.959s
-sys	0m0.011s
+real	5m0.589s
+user	4m59.956s
+sys	0m0.012s
 +!CSVLINE!+s9fes,equal,ULIMITKILLED
 
 Testing bv2string under S9fES
@@ -763,7 +763,7 @@ Running bv2string:1000:1000:100
 *** file "/tmp/r7rs-benchmarks/S9fES/bv2string.scm", line 235
 *** trace: values vector values x string-bytevector-tests
 
-real	0m0.018s
+real	0m0.014s
 user	0m0.009s
-sys	0m0.009s
+sys	0m0.005s
 +!CSVLINE!+s9fes,bv2string,CRASHED
